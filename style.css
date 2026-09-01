@@ -1,1487 +1,818 @@
-/* =========================================================
-   EK RAHENGE TO NEK RAHENGE
-   MAIN WEBSITE STYLES
-========================================================= */
+<!doctype html>
+<html lang="en">
 
-* {
-  box-sizing: border-box;
-}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 82px;
-}
+  <title>एक रहेंगे • नेक रहेंगे — Ek Rahenge To Nek Rahenge</title>
 
-body {
-  margin: 0;
-  background: #05090a;
-  color: #eeeeee;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.55;
-}
+  <meta
+    name="description"
+    content="A journey through the history and civilisation of Bharat — from sources, traditions and evidence that shaped it."
+  >
 
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* =========================================================
-   HEADER
-========================================================= */
+<body>
 
-.site-header {
-  height: 78px;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
-  background: rgba(2, 3, 3, 0.96);
-  border-bottom: 1px solid #171b1c;
+  <header class="site-header">
 
-  display: flex;
-  align-items: center;
+    <a class="brand" href="#top">
 
-  padding: 0 4%;
-  gap: 30px;
-}
+      <img
+        src="haindaveeyam-logo.jpeg"
+        alt="Haindaveeyam Foundation"
+        class="header-logo"
+      >
 
+      <span class="brand-text">
+        <b>एक रहेंगे • नेक रहेंगे</b>
+        <small>EK RAHENGE TO NEK RAHENGE</small>
+      </span>
 
-/* BRAND */
+    </a>
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    <nav class="main-nav">
 
-  color: #eeeeee;
-  text-decoration: none;
+      <a href="#history">HISTORY</a>
+      <a href="#civilisation">CIVILISATION</a>
+      <a href="#map">MAP</a>
+      <a href="#timeline">TIMELINE</a>
+      <a href="#sources">SOURCES</a>
+      <a href="#stories">STORIES</a>
+      <a href="#atlas">ATLAS</a>
 
-  min-width: 250px;
-}
+    </nav>
 
-.site-logo {
-  display: block;
+    <a class="search" href="#search">
+      ⌕ &nbsp; SEARCH
+    </a>
 
-  width: 52px;
-  height: 52px;
+  </header>
 
-  object-fit: contain;
-  object-position: center;
 
-  flex-shrink: 0;
-}
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
 
-.brand-text {
-  display: block;
-}
+  <main id="top">
 
-.brand-text b {
-  display: block;
 
-  font-size: 20px;
-  line-height: 1.1;
-}
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
-.brand-text small {
-  display: block;
+    <section class="hero">
 
-  margin-top: 3px;
+      <!-- LEFT SIDE -->
 
-  font-size: 10px;
-  letter-spacing: 1px;
+      <div class="hero-copy">
 
-  color: #dddddd;
-}
+        <div class="kicker">
+          HISTORY • EVIDENCE • CIVILISATION
+        </div>
 
+        <h1>
+          WHO WERE WE<span>?</span><br>
+          WHAT HAPPENED<span>?</span><br>
+          WHAT CAN WE LEARN<span>?</span>
+        </h1>
 
-/* NAVIGATION */
+        <p>
+          A journey through the history and civilisation of Bharat —
+          <br>
+          from the sources, traditions and evidence that shaped it.
+        </p>
 
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+        <a class="cta" href="#history">
+          EXPLORE HISTORY →
+        </a>
 
-  gap: 26px;
+        <small>
+          No blind belief. No selective memory.
+          <em>Follow the evidence.</em>
+        </small>
 
-  flex: 1;
-}
+      </div>
 
-.main-nav a {
-  color: #eeeeee;
-  text-decoration: none;
 
-  font-size: 11px;
-  letter-spacing: 0.4px;
+      <!-- RIGHT SIDE — TEMPLE -->
 
-  white-space: nowrap;
+      <div class="hero-art">
 
-  transition: color 0.2s ease;
-}
+        <div class="temple-glow"></div>
 
-.main-nav a:hover {
-  color: #f58a13;
-}
+        <div class="temple-arch">
 
+          <div class="temple-symbols">
 
-/* SEARCH */
+            <!-- TEMPLE -->
 
-.search {
-  color: #eeeeee;
-  text-decoration: none;
+            <div class="temple-shikhara">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-  font-size: 11px;
 
-  border: 1px solid #76500d;
-  border-radius: 5px;
+            <!-- OM -->
 
-  padding: 8px 13px;
+            <div class="om-symbol">
+              ॐ
+            </div>
 
-  white-space: nowrap;
-}
 
-.search:hover {
-  color: #f58a13;
-}
+            <!-- SUN -->
 
+            <div class="temple-sun">
+              <span></span>
+            </div>
 
-/* =========================================================
-   HERO
-========================================================= */
 
-.hero {
-  min-height: 650px;
+            <!-- STAR -->
 
-  padding: 130px 6% 50px;
+            <div class="temple-star">
+              ✦
+            </div>
 
-  position: relative;
-  overflow: hidden;
+          </div>
 
-  background:
-    radial-gradient(
-      circle at 75% 48%,
-      #5c3a18 0,
-      #19120a 20%,
-      #030607 55%
-    );
-}
+        </div>
 
-.hero-copy {
-  position: relative;
-  z-index: 2;
+      </div>
 
-  max-width: 760px;
-}
 
-.kicker {
-  color: #e87b0b;
+      <!-- SLIDER DOTS -->
 
-  font-size: 11px;
-  letter-spacing: 3px;
-}
+      <div class="dots">
 
-.hero h1 {
-  margin: 25px 0 10px;
+        <i class="active"></i>
+        <i></i>
+        <i></i>
+        <i></i>
 
-  font-size: 52px;
-  line-height: 1.03;
+      </div>
 
-  letter-spacing: -1px;
-}
+    </section>
 
-.hero h1 span {
-  color: #e97909;
-}
 
-.hero p {
-  font-size: 15px;
+    <!-- ===================================================
+         MAP
+         =================================================== -->
 
-  max-width: 650px;
-}
+    <section id="map" class="map-section">
 
-.cta {
-  display: inline-block;
+      <h2>
+        HOW FAR DID THE WORLD OF BHARAT REACH?
+      </h2>
 
-  background: #f47d0b;
-  color: #ffffff;
+      <div class="timeline-strip">
 
-  text-decoration: none;
+        <span>MAHABHARATA</span>
+        <i>500 BCE</i>
+        <i>0</i>
+        <i>500 CE</i>
+        <i>1000</i>
+        <i>1500</i>
+        <i>1800</i>
+        <i>TODAY</i>
 
-  padding: 12px 28px;
-  margin-top: 12px;
+      </div>
 
-  font-size: 12px;
 
-  transition: background 0.2s ease;
-}
+      <div class="map-art">
 
-.cta:hover {
-  background: #ff922b;
-}
+        <div class="route r1">
+          PĀRASĪKA
+          <br>
+          <small>(Persia)</small>
+        </div>
 
-.hero-note {
-  display: block;
+        <div class="route r2">
+          PAHLAVA
+          <br>
+          <small>(Parthia)</small>
+        </div>
 
-  margin-top: 12px;
-}
+        <div class="route r3">
+          KAMBOJA
+          <br>
+          <small>(Bactria)</small>
+        </div>
 
-.hero em,
-.closing-text em {
-  color: #f38b13;
-  font-style: normal;
-}
+        <div class="route r4">
+          BAHLĪKA
+          <br>
+          <small>(Bactria)</small>
+        </div>
 
+        <strong class="bharat">
+          BHARAT
+        </strong>
 
-/* HERO ART */
+        <strong class="sea">
+          SOUTHEAST ASIA
+        </strong>
 
-.hero-art {
-  position: absolute;
+      </div>
 
-  right: 3%;
-  top: 80px;
 
-  width: 58%;
-  height: 570px;
+      <a class="outline-btn" href="#atlas">
+        ◉ &nbsp; EXPLORE MAP
+      </a>
 
-  background:
-    radial-gradient(
-      ellipse at center,
-      #9a5b1c,
-      #21170d 35%,
-      transparent 68%
-    );
+    </section>
 
-  opacity: 0.85;
-}
 
-.arch {
-  position: absolute;
+    <!-- ===================================================
+         TIMELINE
+         =================================================== -->
 
-  right: 12%;
-  top: 45px;
+    <section id="timeline" class="dark-section">
 
-  width: 48%;
-  height: 480px;
+      <h2>
+        BHARAT — A TIMELINE
+      </h2>
 
-  border: 45px solid #17130e;
-  border-bottom: 0;
+      <div class="timeline-strip">
 
-  border-radius: 260px 260px 0 0;
+        <span>MAHABHARATA</span>
+        <i>500 BCE</i>
+        <i>0</i>
+        <i>500 CE</i>
+        <i>1000</i>
+        <i>1500</i>
+        <i>1800</i>
+        <i>TODAY</i>
 
-  text-align: center;
+      </div>
 
-  padding-top: 100px;
 
-  font-size: 50px;
-  color: #ffad3a;
-}
+      <div class="timeline-content">
 
-.temple {
-  font-size: 100px;
+        <article>
 
-  text-shadow: 0 0 40px #f5a33b;
-}
+          <h3>
+            ANCIENT BHARAT
+          </h3>
 
+          <p>
+            Explore the historical sequence, sources and traditions
+            of the civilisation of Bharat.
+          </p>
 
-/* HERO DOTS */
+        </article>
 
-.dots {
-  position: absolute;
 
-  right: 2%;
-  top: 230px;
+        <article>
 
-  display: grid;
-  gap: 13px;
-}
+          <h3>
+            MEDIEVAL PERIOD
+          </h3>
 
-.dots i {
-  width: 11px;
-  height: 11px;
+          <p>
+            Examine kingdoms, invasions, resistance, trade and
+            cultural developments through documented sources.
+          </p>
 
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-}
+        </article>
 
-.dots .active {
-  background: #f47d0b;
-}
 
+        <article>
 
-/* =========================================================
-   COMMON SECTION HEADINGS
-========================================================= */
+          <h3>
+            COLONIAL PERIOD
+          </h3>
 
-.map-section h2,
-.dark-section h2,
-.civil h2 {
-  font-size: 21px;
-  letter-spacing: 0.5px;
-}
+          <p>
+            Trace the major developments that shaped modern India
+            and examine the evidence behind competing interpretations.
+          </p>
 
+        </article>
 
-/* =========================================================
-   MAP
-========================================================= */
 
-.map-section {
-  padding: 15px 4% 25px;
+        <article>
 
-  background:
-    linear-gradient(
-      #061014,
-      #071214
-    );
+          <h3>
+            MODERN BHARAT
+          </h3>
 
-  text-align: center;
+          <p>
+            Understand the events, ideas and transformations that
+            brought us to the present.
+          </p>
 
-  border-top: 1px solid #171d1e;
-}
+        </article>
 
-.timeline-strip {
-  display: flex;
+      </div>
 
-  justify-content: space-around;
+    </section>
 
-  max-width: 900px;
 
-  margin: 0 auto 8px;
+    <!-- ===================================================
+         HISTORY TOPICS
+         =================================================== -->
 
-  color: #dddddd;
+    <section id="history" class="dark-section">
 
-  font-size: 11px;
+      <h2>
+        HISTORY IS NOT A COMFORT ZONE.
+      </h2>
 
-  border-bottom: 2px solid #8a5314;
 
-  padding-bottom: 8px;
-}
+      <div class="topic-grid">
 
-.timeline-strip span {
-  color: #ff8610;
-}
+        <article>
+          <b>⚔</b>
+          <span>INVASIONS</span>
+        </article>
 
-.timeline-strip i {
-  font-style: normal;
-}
+        <article>
+          <b>♜</b>
+          <span>
+            TEMPLE
+            <br>
+            DESTRUCTION
+          </span>
+        </article>
 
+        <article>
+          <b>⛓</b>
+          <span>
+            CAPTIVITY &
+            <br>
+            SLAVERY
+          </span>
+        </article>
 
-/* MAP ART */
+        <article>
+          <b>⚒</b>
+          <span>RESISTANCE</span>
+        </article>
 
-.map-art {
-  height: 190px;
+        <article>
+          <b>♜</b>
+          <span>KINGDOMS</span>
+        </article>
 
-  max-width: 1050px;
+        <article>
+          <b>♟</b>
+          <span>
+            INTERNAL
+            <br>
+            DIVISIONS
+          </span>
+        </article>
 
-  margin: auto;
+        <article>
+          <b>◉</b>
+          <span>WOMEN</span>
+        </article>
 
-  position: relative;
+        <article>
+          <b>▤</b>
+          <span>KNOWLEDGE</span>
+        </article>
 
-  background:
-    radial-gradient(
-      ellipse,
-      #55381e 0,
-      #191713 32%,
-      #071014 70%
-    );
+        <article>
+          <b>⚓</b>
+          <span>TRADE</span>
+        </article>
 
-  clip-path: polygon(
-    0 20%,
-    100% 0,
-    96% 100%,
-    4% 95%
-  );
-}
+        <article>
+          <b>⌂</b>
+          <span>
+            COLONIAL
+            <br>
+            RULE
+          </span>
+        </article>
 
-.route {
-  position: absolute;
+      </div>
 
-  color: #dddddd;
 
-  font-weight: bold;
+      <a class="outline-btn" href="#stories">
+        EXPLORE ALL TOPICS →
+      </a>
 
-  font-size: 12px;
+    </section>
 
-  text-shadow: 0 1px 4px #000;
-}
 
-.route small {
-  color: #e78a27;
-}
+    <!-- ===================================================
+         SOURCES + ATLAS
+         =================================================== -->
 
-.r1 {
-  left: 7%;
-  top: 35%;
-}
+    <section class="two-col">
 
-.r2 {
-  left: 17%;
-  top: 55%;
-}
 
-.r3 {
-  left: 32%;
-  top: 38%;
-}
+      <!-- SOURCES -->
 
-.r4 {
-  left: 44%;
-  top: 28%;
-}
+      <article id="sources" class="panel">
 
-.bharat {
-  position: absolute;
+        <h2>
+          DON’T TAKE OUR WORD FOR IT.
+        </h2>
 
-  left: 52%;
-  top: 55%;
 
-  font-size: 19px;
-}
+        <div class="source-flow">
 
-.sea {
-  position: absolute;
+          <span>
+            CLAIM
+          </span>
 
-  right: 15%;
-  bottom: 35%;
+          <span>
+            ORIGINAL
+            <br>
+            SOURCE
+          </span>
 
-  font-size: 13px;
-}
+          <span>
+            TRANSLATION
+          </span>
 
+          <span>
+            HISTORICAL
+            <br>
+            CONTEXT
+          </span>
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+          <span>
+            OTHER
+            <br>
+            SCHOLARSHIP
+          </span>
 
-.outline-btn {
-  display: inline-block;
+        </div>
 
-  color: #f58a13;
 
-  border: 1px solid #a65e0b;
-  border-radius: 3px;
+        <div class="establish">
+          ♢ &nbsp;
+          WHAT CAN WE ACTUALLY ESTABLISH?
+        </div>
 
-  padding: 9px 18px;
 
-  text-decoration: none;
+        <a class="outline-btn" href="#methodology">
+          READ OUR METHODOLOGY →
+        </a>
 
-  font-size: 11px;
+      </article>
 
-  margin-top: 10px;
 
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
+      <!-- TEMPLE ATLAS -->
 
-.outline-btn:hover {
-  background: #f58a13;
-  color: #ffffff;
-}
+      <article id="atlas" class="panel atlas">
 
+        <div>
 
-/* =========================================================
-   DARK SECTIONS
-========================================================= */
+          <h2>
+            THE TEMPLE ATLAS
+          </h2>
 
-.dark-section {
-  text-align: center;
+          <p>
+            A searchable historical record of sites documented
+            in our source collections.
+          </p>
 
-  padding: 10px 2% 25px;
+          <strong>
+            2,000+
+          </strong>
 
-  background: #04090a;
-}
+          <small>
+            SOURCE ENTRIES
+          </small>
 
 
-/* =========================================================
-   TIMELINE
-========================================================= */
+          <ul>
 
-.timeline-section {
-  border-top: 1px solid #101719;
-}
+            <li>◈ MAP VIEW</li>
+            <li>☷ VIEW</li>
+            <li>⌕ SEARCH</li>
+            <li>⚱ FILTER</li>
 
-.timeline-content {
-  display: grid;
+          </ul>
 
-  grid-template-columns:
-    repeat(4, 1fr);
 
-  gap: 10px;
+          <a class="cta" href="#atlas">
+            EXPLORE THE ATLAS →
+          </a>
 
-  max-width: 1200px;
+        </div>
 
-  margin: 15px auto 0;
-}
 
-.timeline-content article {
-  min-height: 150px;
+        <div class="mini-map">
+          ✦
+        </div>
 
-  border: 1px solid #273034;
+      </article>
 
-  background:
-    linear-gradient(
-      #101619,
-      #080b0c
-    );
+    </section>
 
-  padding: 20px;
 
-  text-align: left;
-}
+    <!-- ===================================================
+         HISTORY FOR GEN Z
+         =================================================== -->
 
-.timeline-content h3 {
-  margin: 0 0 10px;
+    <section id="stories" class="genz">
 
-  font-size: 13px;
+      <div class="genz-title">
 
-  color: #f58a13;
-}
+        <b>
+          HISTORY FOR
+          <br>
+          GEN Z
+        </b>
 
-.timeline-content p {
-  margin: 0;
+        <span>
+          ϟ
+        </span>
 
-  font-size: 11px;
+      </div>
 
-  color: #bbbbbb;
-}
 
+      <article>
 
-/* =========================================================
-   HISTORY TOPIC GRID
-========================================================= */
+        <b>
+          ◷ &nbsp; 30 SECONDS
+        </b>
 
-.topic-grid {
-  display: grid;
+        <p>
+          The short version.
+        </p>
 
-  grid-template-columns:
-    repeat(10, 1fr);
+        <a href="#">
+          VIEW →
+        </a>
 
-  gap: 8px;
-}
+      </article>
 
-.topic-card {
-  min-height: 120px;
 
-  border: 1px solid #273034;
+      <article>
 
-  background:
-    linear-gradient(
-      #101619,
-      #080b0c
-    );
+        <b>
+          ⌛ &nbsp; 2 MINUTES
+        </b>
 
-  display: flex;
+        <p>
+          The historical sequence.
+        </p>
 
-  flex-direction: column;
+        <a href="#">
+          VIEW →
+        </a>
 
-  justify-content: center;
-  align-items: center;
+      </article>
 
-  gap: 12px;
 
-  color: #eeeeee;
+      <article>
 
-  text-decoration: none;
+        <b>
+          ▤ &nbsp; 10 MINUTES
+        </b>
 
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    background 0.2s ease;
-}
+        <p>
+          Sources and interpretations.
+        </p>
 
-.topic-card:hover {
-  border-color: #9a5a0d;
+        <a href="#">
+          VIEW →
+        </a>
 
-  background:
-    linear-gradient(
-      #171c1e,
-      #0b0e0f
-    );
+      </article>
 
-  transform: translateY(-2px);
-}
 
-.topic-card b {
-  font-size: 27px;
+      <article>
 
-  color: #e57d0d;
-}
+        <b>
+          ▤ &nbsp; GO DEEP
+        </b>
 
-.topic-card span {
-  font-size: 10px;
+        <p>
+          Primary-source documentation.
+        </p>
 
-  font-weight: bold;
+        <a href="#">
+          VIEW →
+        </a>
 
-  text-align: center;
-}
+      </article>
 
 
-/* =========================================================
-   SOURCES + ATLAS
-========================================================= */
+      <article class="story-card">
 
-.two-col {
-  display: grid;
+        <small>
+          EXAMPLE
+        </small>
 
-  grid-template-columns:
-    1fr 1.08fr;
+        <b>
+          WHAT HAPPENED
+          <br>
+          TO SOMNATH?
+        </b>
 
-  gap: 18px;
+        <a href="#">
+          EXPLORE →
+        </a>
 
-  padding: 0 3% 10px;
+      </article>
 
-  background: #04090a;
-}
+    </section>
 
-.panel {
-  min-height: 245px;
 
-  border: 1px solid #242b2d;
+    <!-- ===================================================
+         CIVILISATION
+         =================================================== -->
 
-  background: #080e10;
+    <section id="civilisation" class="civil">
 
-  padding: 14px;
+      <h2>
+        NOT JUST WHAT WE LOST.
+        WHAT DID WE BUILD?
+      </h2>
 
-  text-align: center;
-}
 
-.panel h2 {
-  font-size: 20px;
+      <div class="civil-grid">
 
-  margin: 0 0 12px;
-}
+        <span>
+          ⚛
+          <small>SCIENCE</small>
+        </span>
 
+        <span>
+          π
+          <small>MATHEMATICS</small>
+        </span>
 
-/* SOURCE FLOW */
+        <span>
+          ♨
+          <small>MEDICINE</small>
+        </span>
 
-.source-flow {
-  display: flex;
+        <span>
+          ॐ
+          <small>PHILOSOPHY</small>
+        </span>
 
-  justify-content: center;
+        <span>
+          ◉
+          <small>ART</small>
+        </span>
 
-  gap: 7px;
-}
+        <span>
+          ♜
+          <small>ARCHITECTURE</small>
+        </span>
 
-.source-flow span {
-  border: 1px solid #252d30;
+        <span>
+          ▤
+          <small>LITERATURE</small>
+        </span>
 
-  padding: 25px 10px;
+        <span>
+          ⚓
+          <small>TRADE</small>
+        </span>
 
-  font-size: 9px;
+        <span>
+          ♛
+          <small>KINGDOMS</small>
+        </span>
 
-  flex: 1;
-}
+        <span>
+          ♧
+          <small>CULTURE</small>
+        </span>
 
-.establish {
-  border: 1px solid #6e430c;
+      </div>
 
-  color: #f18a0b;
+    </section>
 
-  padding: 10px;
 
-  margin: 12px auto;
+    <!-- ===================================================
+         METHODOLOGY / CLOSING
+         =================================================== -->
 
-  max-width: 390px;
-}
+    <section id="methodology" class="closing">
 
+      <div class="silhouette">
+        ⚑
+      </div>
 
-/* ATLAS */
 
-.atlas {
-  text-align: left;
+      <h2>
+        REMEMBER.
+        <br>
+        UNDERSTAND.
+        <br>
+        LEARN.
+        <br>
+        UNITE.
+      </h2>
 
-  display: flex;
 
-  overflow: hidden;
-}
+      <div class="devanagari">
 
-.atlas > div:first-child {
-  flex: 1;
-}
+        एक रहेंगे
+        <br>
+        नेक रहेंगे
 
-.atlas strong {
-  font-size: 27px;
+        <small>
+          EK RAHENGE TO NEK RAHENGE
+        </small>
 
-  color: #f5810c;
+      </div>
 
-  display: block;
-}
 
-.atlas > div:first-child > small {
-  color: #f5810c;
-}
+      <div class="closing-text">
 
-.atlas ul {
-  list-style: none;
+        Our past is not to create hatred.
+        <br>
+        It is to create clarity.
+        <br>
+        Our future is not to repeat history.
+        <br>
+        It is to rise above it.
 
-  padding: 4px 0;
+        <br>
+        <br>
 
-  font-size: 10px;
+        <em>
+          TOGETHER.
+          <br>
+          FOR BHARAT.
+        </em>
 
-  line-height: 1.8;
-}
+      </div>
 
-.atlas ul li {
-  margin: 2px 0;
-}
+    </section>
 
+  </main>
 
-/* MINI MAP */
 
-.mini-map {
-  width: 45%;
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
-  background:
-    radial-gradient(
-      circle,
-      #b96710,
-      #15191a 50%
-    );
+  <footer>
 
-  clip-path: polygon(
-    20% 0,
-    100% 15%,
-    90% 100%,
-    0 80%
-  );
+    <div class="footer-logo-wrap">
 
-  font-size: 80px;
+      <img
+        src="haindaveeyam-logo.jpeg"
+        alt="Haindaveeyam Foundation"
+        class="footer-logo"
+      >
 
-  color: #e98a17;
+    </div>
 
-  text-align: center;
 
-  padding-top: 55px;
-}
+    <div class="footer-links">
 
+      <a href="#">
+        ABOUT US
+      </a>
 
-/* =========================================================
-   HISTORY FOR GEN Z
-========================================================= */
+      <a href="#sources">
+        OUR SOURCES
+      </a>
 
-.genz {
-  display: grid;
+      <a href="#methodology">
+        RESEARCH POLICY
+      </a>
 
-  grid-template-columns:
-    1.1fr
-    repeat(4, 1fr)
-    1.2fr;
+      <a href="#">
+        GET INVOLVED
+      </a>
 
-  gap: 8px;
+      <a href="#">
+        CONTACT
+      </a>
 
-  padding: 8px 3%;
+    </div>
 
-  background: #061011;
-}
 
-.genz > * {
-  border: 1px solid #202a2c;
+    <div class="footer-social">
 
-  padding: 13px;
+      <span>◉</span>
+      <span>◎</span>
+      <span>♥</span>
 
-  min-height: 105px;
-}
+    </div>
 
-.genz-title {
-  font-size: 17px;
 
-  display: flex;
+    <div class="copyright">
 
-  justify-content: space-between;
-}
+      © Haindaveeyam Foundation
 
-.genz-title span {
-  color: #f58a0c;
-}
+    </div>
 
-.genz article b {
-  font-size: 12px;
-}
+  </footer>
 
-.genz article p {
-  font-size: 11px;
-
-  color: #bbbbbb;
-}
-
-.genz article a {
-  display: inline-block;
-
-  font-size: 10px;
-
-  color: #f58a0c;
-
-  text-decoration: none;
-
-  border: 1px solid #92500b;
-
-  padding: 5px 10px;
-}
-
-.genz article a:hover {
-  background: #f58a0c;
-
-  color: #ffffff;
-}
-
-.story-card {
-  background:
-    linear-gradient(
-      135deg,
-      #0c1112,
-      #4a2b11
-    );
-}
-
-.story-card small {
-  display: block;
-
-  color: #999999;
-
-  margin-bottom: 8px;
-}
-
-
-/* =========================================================
-   CIVILISATION
-========================================================= */
-
-.civil {
-  text-align: center;
-
-  padding: 8px 3% 20px;
-
-  background: #05090a;
-}
-
-.civil-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(10, 1fr);
-
-  border-bottom: 1px solid #39240d;
-}
-
-.civil-grid span {
-  font-size: 28px;
-
-  color: #ef850d;
-
-  padding: 8px;
-
-  border-right: 1px solid #222222;
-}
-
-.civil-grid small {
-  display: block;
-
-  color: #eeeeee;
-
-  font-size: 9px;
-
-  margin-top: 3px;
-}
-
-
-/* =========================================================
-   CLOSING
-========================================================= */
-
-.closing {
-  min-height: 220px;
-
-  display: grid;
-
-  grid-template-columns:
-    1.1fr
-    1fr
-    1.1fr
-    1fr;
-
-  align-items: center;
-
-  padding: 20px 6%;
-
-  background:
-    radial-gradient(
-      circle at 20% 50%,
-      #6d3b12,
-      #081011 42%
-    );
-
-  border-top: 1px solid #6b3d0b;
-}
-
-.silhouette {
-  font-size: 75px;
-
-  color: #f0800a;
-}
-
-.closing h2 {
-  font-size: 26px;
-
-  line-height: 1.05;
-}
-
-.devanagari {
-  font-size: 42px;
-
-  color: #f0800a;
-
-  line-height: 1;
-}
-
-.devanagari small {
-  display: block;
-
-  color: #eeeeee;
-
-  font-size: 10px;
-
-  margin-top: 8px;
-}
-
-.closing-text {
-  font-size: 10px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 25px;
-
-  padding: 18px 4%;
-
-  background: #020506;
-
-  border-top: 1px solid #1b2021;
-
-  font-size: 9px;
-}
-
-
-/* FOOTER LOGO */
-
-.footer-logo-wrap {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-logo {
-  display: block;
-
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-}
-
-
-/* FOOTER LINKS */
-
-.footer-nav {
-  display: flex;
-
-  align-items: center;
-
-  gap: 28px;
-
-  flex-wrap: wrap;
-}
-
-.footer-nav a {
-  color: #dddddd;
-
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: #f58a13;
-}
-
-
-/* FOOTER ICONS */
-
-.footer-icons {
-  color: #dddddd;
-
-  white-space: nowrap;
-}
-
-
-/* COPYRIGHT */
-
-.copyright {
-  width: 100%;
-
-  text-align: center;
-
-  color: #888888;
-
-  font-size: 9px;
-
-  padding-top: 4px;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
-
-  .site-header {
-    gap: 15px;
-  }
-
-  .brand {
-    min-width: 220px;
-  }
-
-  .main-nav {
-    gap: 15px;
-  }
-
-  .main-nav a {
-    font-size: 10px;
-  }
-
-  .topic-grid {
-    grid-template-columns:
-      repeat(5, 1fr);
-  }
-
-  .civil-grid {
-    grid-template-columns:
-      repeat(5, 1fr);
-  }
-
-  .genz {
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
-
-}
-
-
-/* =========================================================
-   TABLET / SMALL LAPTOP
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .site-header {
-    padding: 0 3%;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .brand {
-    flex: 1;
-  }
-
-  .hero {
-    min-height: 620px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-art {
-    width: 60%;
-
-    opacity: 0.35;
-  }
-
-  .timeline-content {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .topic-grid {
-    grid-template-columns:
-      repeat(5, 1fr);
-  }
-
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .closing {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .genz {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .civil-grid {
-    grid-template-columns:
-      repeat(5, 1fr);
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-  html {
-    scroll-padding-top: 70px;
-  }
-
-  body {
-    font-size: 13px;
-  }
-
-
-  /* HEADER */
-
-  .site-header {
-    height: 70px;
-
-    padding: 0 14px;
-
-    gap: 8px;
-  }
-
-  .brand {
-    min-width: 0;
-
-    gap: 8px;
-  }
-
-  .site-logo {
-    width: 42px;
-    height: 42px;
-  }
-
-  .brand-text b {
-    font-size: 14px;
-  }
-
-  .brand-text small {
-    font-size: 8px;
-
-    letter-spacing: 0.6px;
-  }
-
-  .search {
-    display: none;
-  }
-
-
-  /* HERO */
-
-  .hero {
-    min-height: 620px;
-
-    padding:
-      110px
-      20px
-      45px;
-  }
-
-  .kicker {
-    font-size: 9px;
-
-    letter-spacing: 2px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-
-    line-height: 1.06;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .hero p br {
-    display: none;
-  }
-
-  .hero-art {
-    width: 100%;
-
-    right: -25%;
-
-    top: 110px;
-
-    opacity: 0.18;
-  }
-
-  .arch {
-    right: 10%;
-
-    width: 55%;
-
-    border-width: 28px;
-  }
-
-  .dots {
-    display: none;
-  }
-
-
-  /* MAP */
-
-  .map-section {
-    padding:
-      20px
-      15px
-      25px;
-  }
-
-  .map-section h2,
-  .dark-section h2,
-  .civil h2 {
-    font-size: 18px;
-  }
-
-  .timeline-strip {
-    font-size: 8px;
-
-    gap: 4px;
-
-    overflow: hidden;
-  }
-
-  .timeline-strip i,
-  .timeline-strip span {
-    white-space: nowrap;
-  }
-
-  .map-art {
-    height: 160px;
-  }
-
-  .route {
-    font-size: 9px;
-  }
-
-  .bharat {
-    font-size: 15px;
-  }
-
-  .sea {
-    font-size: 9px;
-  }
-
-
-  /* TIMELINE */
-
-  .timeline-content {
-    grid-template-columns: 1fr;
-
-    gap: 8px;
-  }
-
-  .timeline-content article {
-    min-height: auto;
-
-    padding: 16px;
-  }
-
-
-  /* HISTORY */
-
-  .dark-section {
-    padding:
-      15px
-      12px
-      25px;
-  }
-
-  .topic-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 7px;
-  }
-
-  .topic-card {
-    min-height: 105px;
-  }
-
-
-  /* SOURCES */
-
-  .two-col {
-    padding:
-      0
-      12px
-      10px;
-  }
-
-  .source-flow {
-    flex-wrap: wrap;
-  }
-
-  .source-flow span {
-    min-width: 28%;
-
-    padding: 18px 8px;
-  }
-
-
-  /* ATLAS */
-
-  .atlas {
-    flex-direction: column;
-  }
-
-  .mini-map {
-    width: 100%;
-
-    height: 100px;
-
-    padding-top: 15px;
-
-    margin-top: 15px;
-  }
-
-
-  /* GEN Z */
-
-  .genz {
-    grid-template-columns: 1fr;
-
-    padding:
-      8px
-      12px;
-  }
-
-
-  /* CIVILISATION */
-
-  .civil {
-    padding:
-      15px
-      12px
-      25px;
-  }
-
-  .civil-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .civil-grid span {
-    border-bottom: 1px solid #222222;
-  }
-
-
-  /* CLOSING */
-
-  .closing {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-
-    padding:
-      30px
-      20px;
-  }
-
-  .silhouette {
-    font-size: 55px;
-  }
-
-  .closing h2 {
-    font-size: 25px;
-  }
-
-  .devanagari {
-    font-size: 34px;
-  }
-
-
-  /* FOOTER */
-
-  .site-footer {
-    flex-direction: column;
-
-    gap: 14px;
-
-    padding:
-      20px
-      15px;
-  }
-
-  .footer-logo {
-    width: 65px;
-    height: 65px;
-  }
-
-  .footer-nav {
-    justify-content: center;
-
-    gap: 12px 20px;
-
-    text-align: center;
-  }
-
-  .footer-icons {
-    margin-top: 2px;
-  }
-
-  .copyright {
-    font-size: 9px;
-  }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-
-  .brand-text b {
-    font-size: 13px;
-  }
-
-  .brand-text small {
-    font-size: 7px;
-  }
-
-  .site-logo {
-    width: 38px;
-    height: 38px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .topic-card {
-    min-height: 95px;
-  }
-
-  .topic-card b {
-    font-size: 23px;
-  }
-
-}
+</body>
+</html>
