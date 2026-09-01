@@ -1,109 +1,145 @@
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* =========================
+   HAINDAVEEYAM LOGO
+========================= */
 
-.site-footer {
-  width: 100%;
-  background: #020506;
-  border-top: 1px solid #1b2021;
-  padding: 28px 20px 18px;
-  text-align: center;
-}
-
-/* Logo */
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 18px;
-}
-
-.footer-logo img {
-  display: block;
+.site-logo {
   width: 58px;
   height: 58px;
   object-fit: contain;
-  background: white;
+  display: block;
 }
 
-/* Navigation */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text b {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.brand-text small {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: #020506;
+  border-top: 1px solid #1b2021;
+  font-size: 9px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 90px;
+  height: 55px;
+  object-fit: contain;
+}
+
 .footer-links {
   display: flex;
+  gap: 30px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 28px;
-  margin-bottom: 17px;
+  flex: 1;
 }
 
 .footer-links a {
   color: #ddd;
   text-decoration: none;
   font-size: 10px;
-  line-height: 1;
+}
+
+.footer-social {
+  color: #aaa;
   white-space: nowrap;
 }
 
-.footer-links a:hover {
-  color: #f47d0b;
-}
-
-/* Social icons */
-.footer-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 17px;
-}
-
-.footer-social span {
-  color: #f47d0b;
-  font-size: 11px;
-}
-
-/* Copyright */
 .copyright {
-  color: #777;
-  font-size: 9px;
-  line-height: 1.4;
+  color: #aaa;
+  white-space: nowrap;
+  font-size: 10px;
 }
 
 
-/* =========================================================
-   MOBILE FOOTER
-   ========================================================= */
+/* =========================
+   MOBILE
+========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
-  .site-footer {
-    padding: 24px 15px 16px;
+  .site-logo {
+    width: 48px;
+    height: 48px;
   }
 
-  .footer-logo {
-    margin-bottom: 16px;
+  .brand-text b {
+    font-size: 15px;
   }
 
-  .footer-logo img {
-    width: 55px;
-    height: 55px;
+  .brand-text small {
+    font-size: 8px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
 
   .footer-links {
-    gap: 16px 20px;
-    margin-bottom: 16px;
-  }
-
-  .footer-links a {
-    font-size: 9px;
-  }
-
-  .footer-social {
-    gap: 16px;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .copyright {
-    font-size: 8px;
+    white-space: normal;
   }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .site-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-text b {
+    font-size: 13px;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .footer-logo {
+    width: 85px;
+    height: 50px;
+  }
+
 }
