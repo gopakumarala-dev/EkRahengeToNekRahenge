@@ -1,12 +1,7 @@
 /* =========================================================
    EK RAHENGE TO NEK RAHENGE
-   MAIN WEBSITE CSS
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
+   MASTER CSS
+========================================================= */
 
 * {
   margin: 0;
@@ -20,9 +15,8 @@ html {
 
 body {
   background: #050708;
-  color: #f2f2f2;
+  color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -31,176 +25,173 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+button {
+  font: inherit;
 }
 
 
 /* =========================================================
    COLOURS
-   ========================================================= */
+========================================================= */
 
 :root {
   --black: #050708;
   --black-soft: #0a0d0e;
-  --black-warm: #120d08;
-  --panel: #0c1113;
-
-  --orange: #f58213;
-  --orange-light: #f2a33b;
-  --gold: #e79a2f;
-
+  --dark: #071114;
+  --orange: #f58a00;
+  --orange-light: #f6a32a;
   --white: #f4f4f4;
-  --muted: #a9adb0;
-  --border: #273033;
-
-  --max-width: 1680px;
+  --muted: #a9adaf;
+  --border: rgba(255,255,255,0.12);
 }
 
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 .site-header {
-  height: 82px;
   width: 100%;
-  background: #030506;
-  border-bottom: 1px solid #202527;
+  height: 82px;
 
   display: flex;
   align-items: center;
 
   padding: 0 5.5%;
 
+  background: #030506;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+
   position: relative;
-  z-index: 100;
+  z-index: 1000;
 }
 
 
-/* BRAND */
+/* =========================================================
+   BRAND
+========================================================= */
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
 
-  min-width: 390px;
+  flex-shrink: 0;
+
+  height: 100%;
 }
 
 
-/* HEADER LOGO */
+/* IMPORTANT:
+   This prevents the uploaded logo from becoming huge.
+*/
 
-.header-logo {
-  width: 64px;
-  height: 52px;
+.brand-logo {
+  width: 64px !important;
+  height: 54px !important;
 
-  object-fit: cover;
+  object-fit: contain;
 
-  background: #ffffff;
+  display: block;
+
+  margin-right: 12px;
 
   flex-shrink: 0;
 }
 
 
-/* BRAND TEXT */
-
 .brand-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  white-space: nowrap;
 }
 
-.brand-text b {
-  color: #f0f0f0;
 
-  font-family:
-    "Noto Sans Devanagari",
-    "Mangal",
-    Arial,
-    sans-serif;
+.brand-text strong {
+  font-size: 22px;
+  line-height: 1.1;
 
-  font-size: 21px;
   font-weight: 700;
 
-  line-height: 1.1;
+  color: var(--white);
 }
+
 
 .brand-text small {
-  margin-top: 3px;
-
-  color: #b9b9b9;
+  margin-top: 5px;
 
   font-size: 12px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.8px;
+
+  color: #d4d4d4;
 }
 
 
-/* MAIN NAV */
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
 
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  gap: 34px;
+  gap: 32px;
 
-  flex: 1;
+  margin-left: auto;
+  margin-right: 32px;
 }
+
 
 .main-nav a {
-  color: #dddddd;
-
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 
-  white-space: nowrap;
+  color: #eeeeee;
 
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
+
 
 .main-nav a:hover {
   color: var(--orange);
 }
 
 
-/* SEARCH */
+/* =========================================================
+   SEARCH
+========================================================= */
 
-.search {
-  border: 1px solid #8a570b;
+.search-btn {
+  height: 44px;
 
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(245,138,0,0.65);
   border-radius: 7px;
 
-  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
 
-  color: #eeeeee;
+  color: #ffffff;
 
-  font-size: 13px;
-
-  white-space: nowrap;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
+  flex-shrink: 0;
 }
 
-.search:hover {
-  background: rgba(245, 130, 19, 0.08);
-  border-color: var(--orange);
+
+.search-btn:hover {
+  background: var(--orange);
+  color: #000;
 }
 
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero {
   min-height: 705px;
@@ -208,246 +199,211 @@ a {
   position: relative;
 
   display: flex;
-  align-items: stretch;
+  align-items: center;
+
+  padding: 55px 5.5% 70px;
 
   overflow: hidden;
 
   background:
-    linear-gradient(
-      90deg,
-      #050708 0%,
-      #050708 42%,
-      #080909 58%,
-      #120d08 100%
-    );
+    radial-gradient(
+      circle at 73% 48%,
+      rgba(245,138,0,0.15),
+      rgba(245,138,0,0.04) 25%,
+      transparent 46%
+    ),
+    #050708;
 }
 
 
-/* LEFT HERO */
+/* =========================================================
+   HERO LEFT
+========================================================= */
 
 .hero-copy {
-  width: 55%;
-
-  padding:
-    65px
-    0
-    70px
-    5.5%;
+  width: 54%;
 
   position: relative;
   z-index: 10;
 }
 
 
-/* KICKER */
-
 .kicker {
+  margin-bottom: 30px;
+
   color: var(--orange);
 
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
 
-  letter-spacing: 4px;
-
-  margin-bottom: 30px;
+  letter-spacing: 5px;
 }
 
-
-/* MAIN HEADING */
 
 .hero h1 {
+  font-size: clamp(52px, 5.2vw, 82px);
+
+  line-height: 0.97;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
   color: var(--white);
 
-  font-size: clamp(52px, 4.3vw, 76px);
-
-  line-height: 0.99;
-
-  font-weight: 800;
-
-  letter-spacing: -2.5px;
-
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
+
 
 .hero h1 span {
   color: var(--orange);
 }
 
 
-/* HERO DESCRIPTION */
+.hero-description {
+  max-width: 610px;
 
-.hero-copy > p {
-  color: #e0e2e3;
+  margin-bottom: 34px;
 
-  font-size: 18px;
+  color: #e2e2e2;
 
-  line-height: 1.6;
+  font-size: 20px;
 
-  margin-bottom: 32px;
+  line-height: 1.55;
 }
 
 
-/* CTA */
+/* =========================================================
+   CTA
+========================================================= */
 
 .cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  min-width: 225px;
+  min-height: 54px;
 
-  padding: 16px 28px;
+  padding: 0 38px;
 
   background: var(--orange);
 
   color: #ffffff;
 
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 
   transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
+
 .cta:hover {
-  background: #ff921f;
+  background: #ff9c16;
 
   transform: translateY(-2px);
 }
 
 
-/* HERO SMALL TEXT */
-
-.hero-copy > small {
-  display: block;
-
+.hero-note {
   margin-top: 17px;
 
-  color: #d4d4d4;
-
   font-size: 14px;
+
+  color: #e0e0e0;
 }
 
-.hero-copy > small em {
+
+.hero-note em {
   color: var(--orange);
   font-style: normal;
 }
 
 
 /* =========================================================
-   HERO TEMPLE AREA
-   ========================================================= */
+   TEMPLE AREA
+========================================================= */
 
 .hero-art {
-  width: 45%;
-  min-height: 705px;
+  position: absolute;
 
-  position: relative;
+  right: 5%;
+  top: 0;
+
+  width: 46%;
+  height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  z-index: 2;
 }
 
 
-/* ORANGE GLOW */
+/* Warm light behind temple */
 
 .temple-glow {
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 460px;
+  height: 460px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(183, 91, 15, 0.58) 0%,
-      rgba(130, 61, 9, 0.38) 24%,
-      rgba(80, 38, 9, 0.20) 48%,
-      rgba(30, 18, 9, 0.08) 65%,
-      transparent 76%
+      rgba(245,138,0,0.32) 0%,
+      rgba(245,138,0,0.15) 30%,
+      rgba(245,138,0,0.04) 55%,
+      transparent 72%
     );
 
-  filter: blur(12px);
-
-  transform: translateY(-10px);
-
-  z-index: 0;
+  filter: blur(15px);
 }
 
 
 /* =========================================================
    TEMPLE ARCH
-   ========================================================= */
+========================================================= */
 
 .temple-arch {
   position: relative;
 
-  width: 510px;
-  height: 590px;
+  width: 470px;
+  height: 600px;
 
-  border-left: 56px solid #17130f;
-  border-right: 56px solid #17130f;
-  border-top: 56px solid #17130f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 
-  border-radius: 270px 270px 0 0;
+  border-left: 56px solid #171513;
+  border-right: 56px solid #171513;
 
-  z-index: 2;
+  border-top: 56px solid #171513;
 
-  background:
-    radial-gradient(
-      ellipse at center 40%,
-      rgba(170, 83, 13, 0.40) 0%,
-      rgba(112, 54, 10, 0.24) 28%,
-      rgba(42, 25, 12, 0.28) 52%,
-      rgba(10, 9, 8, 0.94) 80%
-    );
+  border-radius: 245px 245px 0 0;
 
-  box-shadow:
-    0 0 80px rgba(150, 75, 13, 0.08);
-}
-
-
-/* INNER ARCH */
-
-.temple-arch::before {
-  content: "";
-
-  position: absolute;
-
-  left: 28px;
-  right: 28px;
-  top: 28px;
-  bottom: 0;
-
-  border-radius: 215px 215px 0 0;
-
-  border-left: 2px solid rgba(231, 154, 47, 0.025);
-  border-right: 2px solid rgba(231, 154, 47, 0.025);
-
-  pointer-events: none;
+  z-index: 3;
 }
 
 
 /* =========================================================
-   TEMPLE SYMBOL STACK
-   ========================================================= */
+   TEMPLE BUILDING
+========================================================= */
 
-.temple-symbols {
+.temple-building {
   position: absolute;
 
-  top: 66px;
   left: 50%;
+  bottom: 0;
 
   transform: translateX(-50%);
 
-  width: 180px;
-  height: 440px;
+  width: 250px;
+  height: 430px;
 
   display: flex;
   flex-direction: column;
@@ -458,230 +414,178 @@ a {
 
 
 /* =========================================================
-   TEMPLE / SHIKHARA
-   ========================================================= */
+   TEMPLE SHIKHARA
+========================================================= */
 
 .temple-shikhara {
-  width: 48px;
-  height: 62px;
-
   position: relative;
 
-  margin-bottom: 22px;
+  width: 105px;
+  height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
-/* TEMPLE BODY */
+.shikhara-top {
+  width: 0;
+  height: 0;
 
-.temple-shikhara::before {
-  content: "";
-
-  position: absolute;
-
-  left: 6px;
-  top: 14px;
-
-  width: 36px;
-  height: 40px;
-
-  background: var(--gold);
-
-  clip-path: polygon(
-    18% 18%,
-    82% 18%,
-    82% 32%,
-    92% 32%,
-    92% 100%,
-    8% 100%,
-    8% 32%,
-    18% 32%
-  );
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 48px solid var(--orange-light);
 }
 
 
-/* TEMPLE TOP */
+.shikhara-body {
+  width: 82px;
 
-.temple-shikhara::after {
-  content: "";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  position: absolute;
 
-  left: 13px;
-  top: 0;
+.shikhara-body span {
+  display: block;
 
-  width: 22px;
   height: 15px;
 
-  background: var(--gold);
+  margin-top: 3px;
 
-  clip-path: polygon(
-    50% 0,
-    100% 100%,
-    0 100%
-  );
+  background: var(--orange-light);
 }
 
 
-/* THREE DECORATIVE LINES */
-
-.temple-shikhara span {
-  position: absolute;
-
-  width: 30px;
-  height: 2px;
-
-  left: 9px;
-
-  background: #f0a33c;
-
-  z-index: 2;
+.shikhara-body span:nth-child(1) {
+  width: 75px;
 }
 
-.temple-shikhara span:nth-child(1) {
-  top: 27px;
+.shikhara-body span:nth-child(2) {
+  width: 70px;
 }
 
-.temple-shikhara span:nth-child(2) {
-  top: 35px;
+.shikhara-body span:nth-child(3) {
+  width: 64px;
 }
 
-.temple-shikhara span:nth-child(3) {
-  top: 43px;
+.shikhara-body span:nth-child(4) {
+  width: 58px;
 }
 
 
 /* =========================================================
-   OM
-   ========================================================= */
+   TEMPLE DOME
+========================================================= */
+
+.temple-dome {
+  width: 150px;
+  height: 70px;
+
+  margin-top: -2px;
+
+  border-radius: 150px 150px 0 0;
+
+  border: 7px solid var(--orange-light);
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   TEMPLE COLUMNS
+========================================================= */
+
+.temple-columns {
+  width: 190px;
+  height: 155px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: 3px;
+}
+
+
+.column {
+  width: 18px;
+  height: 145px;
+
+  background: var(--orange-light);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   TEMPLE DOOR
+========================================================= */
+
+.temple-door {
+  position: absolute;
+
+  bottom: 28px;
+
+  width: 120px;
+  height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(245,138,0,0.10),
+      rgba(0,0,0,0.35)
+    );
+
+  border-radius: 65px 65px 0 0;
+
+  border: 2px solid rgba(245,138,0,0.45);
+}
+
 
 .om-symbol {
-  font-family:
-    "Noto Sans Devanagari",
-    "Mangal",
-    "Arial Unicode MS",
-    sans-serif;
+  color: var(--orange-light);
 
-  color: var(--gold);
-
-  font-size: 72px;
-
-  line-height: 1;
-
-  margin-bottom: 30px;
-
-  text-shadow:
-    0 0 20px rgba(231, 154, 47, 0.16);
-}
-
-
-/* =========================================================
-   SUN
-   ========================================================= */
-
-.temple-sun {
-  width: 58px;
-  height: 58px;
-
-  position: relative;
-
-  border: 4px solid var(--gold);
-
-  border-radius: 50%;
-
-  margin-bottom: 48px;
-}
-
-
-/* HORIZONTAL RAY */
-
-.temple-sun::before {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 92px;
-  height: 3px;
-
-  background: var(--gold);
-
-  transform: translate(-50%, -50%);
-}
-
-
-/* VERTICAL RAY */
-
-.temple-sun::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 3px;
-  height: 92px;
-
-  background: var(--gold);
-
-  transform: translate(-50%, -50%);
-}
-
-
-/* DIAGONAL RAYS */
-
-.temple-sun span::before,
-.temple-sun span::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 86px;
-  height: 3px;
-
-  background: var(--gold);
-
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg);
-}
-
-.temple-sun span::after {
-  transform:
-    translate(-50%, -50%)
-    rotate(-45deg);
-}
-
-
-/* =========================================================
-   STAR
-   ========================================================= */
-
-.temple-star {
-  color: var(--gold);
-
-  font-size: 50px;
+  font-size: 78px;
 
   line-height: 1;
 
   text-shadow:
-    0 0 20px rgba(231, 154, 47, 0.22);
+    0 0 20px rgba(245,138,0,0.25);
 }
 
 
 /* =========================================================
-   HERO SLIDER DOTS
-   ========================================================= */
+   TEMPLE BASE
+========================================================= */
 
-.dots {
+.temple-base {
   position: absolute;
 
-  right: 28px;
+  bottom: 0;
+
+  width: 250px;
+  height: 28px;
+
+  background: #211a14;
+
+  border-top: 2px solid rgba(245,138,0,0.35);
+}
+
+
+/* =========================================================
+   HERO DOTS
+========================================================= */
+
+.hero-dots {
+  position: absolute;
+
+  right: 2.8%;
   top: 50%;
 
   transform: translateY(-50%);
@@ -689,50 +593,45 @@ a {
   display: flex;
   flex-direction: column;
 
-  gap: 15px;
+  gap: 16px;
 
   z-index: 20;
 }
 
-.dots i {
+
+.hero-dots button {
   width: 14px;
   height: 14px;
 
-  border: 1px solid #eeeeee;
-
   border-radius: 50%;
 
-  display: block;
+  border: 1px solid #ffffff;
+
+  background: transparent;
+
+  cursor: pointer;
 }
 
-.dots i.active {
+
+.hero-dots button.active {
   background: var(--orange);
+
   border-color: #ffffff;
 }
 
 
 /* =========================================================
    MAP SECTION
-   ========================================================= */
+========================================================= */
 
 .map-section {
-  min-height: 570px;
+  min-height: 600px;
 
-  padding:
-    45px
-    5.5%
-    70px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #061014,
-      #071216
-    );
+  padding: 70px 5.5%;
 
   text-align: center;
 
-  border-top: 1px solid #152226;
+  background: #061115;
 }
 
 
@@ -740,208 +639,231 @@ a {
 .dark-section h2,
 .panel h2,
 .civil h2 {
-  font-size: 28px;
+  font-size: 30px;
 
-  line-height: 1.2;
+  letter-spacing: 1px;
 
-  font-weight: 700;
-
-  letter-spacing: 0.5px;
+  font-weight: 800;
 }
 
-
-/* TIMELINE STRIP */
 
 .timeline-strip {
-  max-width: 1100px;
-
-  margin: 28px auto 0;
+  margin-top: 38px;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
-  gap: 20px;
+  max-width: 1100px;
 
-  color: #d7d7d7;
-
-  font-size: 13px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .timeline-strip span {
   color: var(--orange);
+
+  font-size: 13px;
+  font-weight: 700;
 }
+
 
 .timeline-strip i {
   font-style: normal;
+
+  font-size: 13px;
+
+  color: #eeeeee;
 }
 
 
-/* MAP ART */
+/* =========================================================
+   MAP ART
+========================================================= */
 
 .map-art {
+  height: 340px;
+
+  max-width: 1100px;
+
+  margin: 40px auto;
+
   position: relative;
 
-  max-width: 1050px;
-  height: 290px;
-
-  margin: 15px auto 25px;
+  border: 1px solid var(--border);
 
   background:
     radial-gradient(
-      ellipse at center,
-      rgba(109, 63, 17, 0.20),
-      transparent 65%
+      circle at 50% 50%,
+      rgba(245,138,0,0.12),
+      transparent 50%
     );
 }
 
 
-/* MAP LABELS */
-
 .route {
   position: absolute;
 
-  color: #e6a348;
+  color: var(--orange);
+
+  font-weight: 700;
 
   font-size: 14px;
-
-  text-align: center;
 }
+
 
 .route small {
-  color: #c87820;
+  display: block;
+
+  color: #999;
 
   font-size: 11px;
+
+  margin-top: 3px;
 }
 
+
 .r1 {
-  left: 8%;
-  top: 55px;
+  top: 60px;
+  left: 12%;
 }
 
 .r2 {
-  left: 23%;
-  top: 155px;
+  top: 125px;
+  left: 20%;
 }
 
 .r3 {
-  left: 39%;
-  top: 70px;
+  top: 190px;
+  left: 28%;
 }
 
 .r4 {
-  left: 51%;
-  top: 30px;
+  top: 90px;
+  left: 38%;
 }
+
 
 .bharat {
   position: absolute;
 
-  left: 65%;
-  top: 115px;
+  left: 55%;
+  top: 48%;
 
-  color: #f0a23b;
+  transform: translate(-50%, -50%);
 
-  font-size: 25px;
+  font-size: 42px;
+
+  letter-spacing: 5px;
+
+  color: var(--orange);
 }
+
 
 .sea {
   position: absolute;
 
-  left: 73%;
-  top: 155px;
+  right: 10%;
+  bottom: 35px;
 
-  color: #d0d0d0;
-
-  font-size: 16px;
-}
-
-
-/* OUTLINE BUTTON */
-
-.outline-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #8d5b16;
-
-  padding: 13px 22px;
-
-  color: var(--orange);
+  color: #888;
 
   font-size: 13px;
 
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  letter-spacing: 2px;
 }
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.outline-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 25px;
+
+  border: 1px solid rgba(245,138,0,0.6);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
 
 .outline-btn:hover {
   background: var(--orange);
-  color: #ffffff;
+
+  color: #000;
 }
 
 
 /* =========================================================
    DARK SECTIONS
-   ========================================================= */
+========================================================= */
 
 .dark-section {
-  padding:
-    75px
-    5.5%
-    85px;
+  padding: 90px 5.5%;
 
-  background: #070a0c;
+  background: #050708;
 
-  border-top: 1px solid #11191b;
+  text-align: center;
 }
+
 
 .dark-section h2 {
-  text-align: center;
-
-  margin-bottom: 38px;
+  margin-bottom: 30px;
 }
 
 
-/* TIMELINE CONTENT */
+/* =========================================================
+   TIMELINE CONTENT
+========================================================= */
 
 .timeline-content {
-  max-width: 1250px;
+  max-width: 1200px;
 
-  margin: 50px auto 0;
+  margin: 70px auto 0;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-  gap: 18px;
+  gap: 20px;
 }
+
 
 .timeline-content article {
-  min-height: 190px;
-
   padding: 28px;
 
-  border: 1px solid #252d30;
+  border: 1px solid var(--border);
 
-  background: #0b1012;
+  text-align: left;
+
+  background: rgba(255,255,255,0.02);
 }
+
 
 .timeline-content h3 {
+  margin-bottom: 15px;
+
   color: var(--orange);
 
-  font-size: 15px;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 15px;
+  font-size: 17px;
 }
 
+
 .timeline-content p {
-  color: #bfc3c5;
+  color: #b8b8b8;
 
   font-size: 14px;
 
@@ -950,506 +872,436 @@ a {
 
 
 /* =========================================================
-   HISTORY TOPICS
-   ========================================================= */
-
-#history {
-  text-align: center;
-}
+   TOPICS
+========================================================= */
 
 .topic-grid {
-  max-width: 1250px;
+  max-width: 1200px;
 
-  margin: 0 auto 40px;
+  margin: 55px auto;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
-  gap: 10px;
+  gap: 12px;
 }
 
-.topic-grid article {
-  min-height: 135px;
+
+.topic-grid a {
+  min-height: 130px;
 
   padding: 25px 15px;
 
-  border: 1px solid #263034;
-
-  background: #0b1012;
-
   display: flex;
+
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
 
-  gap: 15px;
+  align-items: center;
 
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  gap: 12px;
+
+  border: 1px solid var(--border);
+
+  background: #0a0d0e;
+
+  transition: 0.2s ease;
 }
 
-.topic-grid article:hover {
-  border-color: #a96a1d;
+
+.topic-grid a:hover {
+  border-color: var(--orange);
 
   transform: translateY(-3px);
 }
 
+
 .topic-grid b {
+  font-size: 27px;
+
   color: var(--orange);
-
-  font-size: 28px;
-
-  font-weight: normal;
 }
 
-.topic-grid span {
-  color: #dedede;
 
+.topic-grid span {
   font-size: 12px;
 
-  letter-spacing: 1px;
-
   line-height: 1.4;
+
+  text-align: center;
+
+  font-weight: 700;
 }
 
 
 /* =========================================================
-   TWO COLUMN SECTION
-   ========================================================= */
+   TWO COLUMN
+========================================================= */
 
 .two-col {
   display: grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-  background: #081013;
+  background: #061115;
 }
 
-
-/* PANELS */
 
 .panel {
-  min-height: 480px;
+  padding: 80px 8%;
 
-  padding:
-    65px
-    6%;
+  min-height: 470px;
 
-  border: 1px solid #172125;
-
-  background: #0a1012;
+  border: 1px solid var(--border);
 }
+
 
 .panel h2 {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
-
-/* SOURCE FLOW */
 
 .source-flow {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
 
   gap: 10px;
 
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
+
 .source-flow span {
-  color: #d6d6d6;
+  flex: 1;
 
-  font-size: 11px;
+  padding: 18px 8px;
 
-  letter-spacing: 0.7px;
+  border: 1px solid var(--border);
 
   text-align: center;
 
-  flex: 1;
+  font-size: 10px;
 
-  padding: 15px 8px;
-
-  border: 1px solid #333b3e;
-
-  background: #0d1315;
+  color: #ddd;
 }
 
 
-/* ESTABLISH */
-
 .establish {
-  padding: 20px;
-
-  border-top: 1px solid #8b5918;
-  border-bottom: 1px solid #8b5918;
+  margin-bottom: 30px;
 
   color: var(--orange);
 
   font-size: 13px;
 
-  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 
 /* =========================================================
    ATLAS
-   ========================================================= */
+========================================================= */
 
 .atlas {
   display: flex;
 
   justify-content: space-between;
 
-  gap: 35px;
+  gap: 40px;
 }
 
-.atlas > div:first-child {
-  flex: 1;
-}
 
 .atlas p {
-  color: #aeb5b7;
-
-  max-width: 470px;
+  max-width: 430px;
 
   margin-bottom: 25px;
+
+  color: #aaa;
+
+  line-height: 1.7;
 }
 
-.atlas strong {
+
+.atlas-number {
   display: block;
 
   color: var(--orange);
 
-  font-size: 52px;
-
-  line-height: 1;
+  font-size: 55px;
 }
 
-.atlas > div:first-child > small {
-  color: #858c8f;
 
-  font-size: 11px;
+.atlas > div > small {
+  display: block;
 
-  letter-spacing: 1px;
+  color: #888;
+
+  margin-bottom: 25px;
 }
+
 
 .atlas ul {
   list-style: none;
 
-  display: grid;
+  display: flex;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  gap: 15px;
 
-  gap: 10px;
+  flex-wrap: wrap;
 
-  margin: 25px 0;
+  margin-bottom: 30px;
 }
+
 
 .atlas li {
-  color: #bfc4c5;
-
-  border: 1px solid #283135;
-
-  padding: 12px;
-
   font-size: 11px;
+
+  color: #ddd;
 }
 
-.mini-map {
-  width: 190px;
-  height: 250px;
 
-  border: 1px solid #30383b;
+.mini-map {
+  min-width: 130px;
+  min-height: 180px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
+  border: 1px solid var(--border);
+
   color: var(--orange);
 
-  font-size: 45px;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(173, 85, 14, 0.25),
-      transparent 65%
-    );
+  font-size: 50px;
 }
 
 
 /* =========================================================
-   GEN Z SECTION
-   ========================================================= */
+   GEN Z
+========================================================= */
 
 .genz {
-  padding: 75px 5.5%;
-
-  background: #050708;
+  padding: 80px 5.5%;
 
   display: grid;
 
-  grid-template-columns:
-    1.3fr
-    repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
-  gap: 10px;
-}
+  gap: 12px;
 
-
-.genz-title,
-.genz article {
-  min-height: 190px;
-
-  border: 1px solid #252d30;
-
-  background: #0b1012;
-
-  padding: 25px;
+  background: #050708;
 }
 
 
 .genz-title {
+  padding: 35px;
+
+  background: var(--orange);
+
+  color: #000;
+
   display: flex;
+
   justify-content: space-between;
 
-  color: var(--white);
-
-  font-size: 25px;
+  font-size: 22px;
 
   line-height: 1.1;
 }
 
-.genz-title span {
-  color: var(--orange);
 
+.genz-title span {
   font-size: 40px;
 }
 
 
 .genz article {
-  display: flex;
-  flex-direction: column;
+  min-height: 190px;
+
+  padding: 30px;
+
+  border: 1px solid var(--border);
+
+  background: #0a0d0e;
 }
 
-.genz article > b {
+
+.genz article b {
   color: var(--orange);
 
-  font-size: 11px;
-
-  letter-spacing: 0.7px;
+  font-size: 12px;
 }
+
 
 .genz article p {
-  color: #aeb4b6;
+  margin: 20px 0;
 
-  font-size: 13px;
-
-  margin-top: 15px;
-
-  flex: 1;
+  color: #bbb;
 }
+
 
 .genz article a {
-  color: var(--orange);
+  font-size: 12px;
 
-  font-size: 11px;
+  font-weight: 700;
 }
 
 
-/* STORY CARD */
-
-.genz .story-card {
-  grid-column: 1 / -1;
-
-  min-height: 210px;
-
+.story-card {
   background:
     linear-gradient(
-      110deg,
-      #12100d,
-      #0b1012
-    );
+      135deg,
+      rgba(245,138,0,0.15),
+      rgba(245,138,0,0.02)
+    ) !important;
 }
+
 
 .story-card small {
-  color: #888;
+  display: block;
 
-  font-size: 10px;
+  color: var(--orange);
 
-  letter-spacing: 2px;
-}
-
-.story-card > b {
-  font-size: 28px !important;
-
-  color: #eeeeee !important;
-
-  margin-top: 18px;
-
-  letter-spacing: 0.5px;
+  margin-bottom: 20px;
 }
 
 
 /* =========================================================
    CIVILISATION
-   ========================================================= */
+========================================================= */
 
 .civil {
-  padding:
-    80px
-    5.5%
-    90px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #10100d,
-      #090b0c
-    );
+  padding: 90px 5.5%;
 
   text-align: center;
-}
 
-.civil h2 {
-  margin-bottom: 50px;
+  background: #071114;
 }
 
 
 .civil-grid {
-  max-width: 1150px;
+  max-width: 1000px;
 
-  margin: auto;
+  margin: 60px auto 0;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
-  gap: 10px;
+  gap: 15px;
 }
 
 
 .civil-grid span {
   min-height: 125px;
 
-  border: 1px solid #302a22;
+  padding: 25px;
 
-  background: #101111;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border: 1px solid var(--border);
 
   color: var(--orange);
 
-  font-size: 31px;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
+  font-size: 30px;
 }
 
 
 .civil-grid small {
-  color: #bcbcbc;
+  color: #ddd;
 
-  font-size: 10px;
+  font-size: 11px;
+
+  font-weight: 700;
 
   letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   CLOSING SECTION
-   ========================================================= */
+   CLOSING
+========================================================= */
 
 .closing {
   min-height: 650px;
 
+  padding: 100px 5.5%;
+
   position: relative;
 
-  padding:
-    90px 5.5%;
-
-  overflow: hidden;
+  text-align: center;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(128, 65, 13, 0.22),
-      transparent 52%
+      rgba(245,138,0,0.12),
+      transparent 48%
     ),
     #050708;
-
-  text-align: center;
 }
 
 
-.silhouette {
+.closing-symbol {
   color: var(--orange);
 
-  font-size: 32px;
+  font-size: 75px;
 
   margin-bottom: 25px;
 }
 
 
 .closing h2 {
-  font-size: 52px;
+  font-size: clamp(38px, 5vw, 70px);
 
-  line-height: 1.05;
+  line-height: 1;
 
   letter-spacing: 2px;
-
-  margin-bottom: 35px;
 }
 
 
 .devanagari {
-  font-family:
-    "Noto Sans Devanagari",
-    "Mangal",
-    Arial,
-    sans-serif;
+  margin-top: 45px;
 
   color: var(--orange);
 
-  font-size: 28px;
+  font-size: 35px;
 
-  line-height: 1.4;
-
-  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 
 .devanagari small {
   display: block;
 
-  color: #8e9395;
+  margin-top: 10px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  color: #aaa;
 
   font-size: 11px;
 
-  letter-spacing: 1px;
-
-  margin-top: 8px;
+  letter-spacing: 2px;
 }
 
 
 .closing-text {
-  color: #bfc3c4;
+  margin-top: 35px;
 
-  font-size: 15px;
+  color: #c7c7c7;
 
   line-height: 1.7;
+
+  font-size: 16px;
 }
 
 
@@ -1466,68 +1318,57 @@ a {
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer {
-  min-height: 175px;
+  min-height: 170px;
 
-  padding:
-    25px
-    5.5%
-    20px;
+  padding: 30px 5.5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  position: relative;
 
   background: #020405;
 
-  border-top: 1px solid #1d2426;
-
-  display: flex;
-  align-items: center;
-
-  gap: 35px;
-
-  position: relative;
+  border-top: 1px solid var(--border);
 }
 
 
-/* FOOTER LOGO */
-
 .footer-logo-wrap {
-  flex-shrink: 0;
-
   display: flex;
+
   align-items: center;
-  justify-content: center;
 }
 
 
 .footer-logo {
-  width: 82px;
-  height: 62px;
+  width: 58px !important;
+  height: 48px !important;
 
   object-fit: contain;
 
-  background: #ffffff;
-
-  border: 0;
+  display: block;
 }
 
 
-/* FOOTER LINKS */
-
 .footer-links {
   display: flex;
-  align-items: center;
 
-  gap: 28px;
+  gap: 25px;
 }
 
 
 .footer-links a {
-  color: #d8d8d8;
-
   font-size: 11px;
 
-  white-space: nowrap;
+  color: #ddd;
 }
 
 
@@ -1536,66 +1377,41 @@ footer {
 }
 
 
-/* SOCIAL */
-
 .footer-social {
-  display: flex;
-
-  gap: 12px;
-
-  margin-left: auto;
-}
-
-
-.footer-social span {
   color: var(--orange);
 
   font-size: 13px;
 }
 
 
-/* COPYRIGHT */
-
-.copyright {
+footer p {
   position: absolute;
 
+  bottom: 15px;
+
   left: 50%;
-  bottom: 18px;
 
   transform: translateX(-50%);
 
-  color: #737a7d;
+  color: #777;
 
   font-size: 10px;
-
-  white-space: nowrap;
 }
 
 
 /* =========================================================
-   TABLET
-   ========================================================= */
+   RESPONSIVE
+========================================================= */
 
-@media (max-width: 1200px) {
-
-  .site-header {
-    padding: 0 3%;
-  }
-
-  .brand {
-    min-width: 310px;
-  }
+@media (max-width: 1100px) {
 
   .main-nav {
     gap: 18px;
+    margin-right: 18px;
   }
 
   .main-nav a {
     font-size: 12px;
-  }
-
-  .hero-copy {
-    padding-left: 5%;
   }
 
   .hero h1 {
@@ -1603,38 +1419,29 @@ footer {
   }
 
   .temple-arch {
-    width: 430px;
-    height: 540px;
+    transform: scale(0.85);
   }
 
   .topic-grid {
-    grid-template-columns:
-      repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .genz {
-    grid-template-columns:
-      repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .genz-title {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .civil-grid {
-    grid-template-columns:
-      repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  /* HEADER */
+@media (max-width: 800px) {
 
   .site-header {
     height: auto;
@@ -1645,22 +1452,16 @@ footer {
 
     flex-wrap: wrap;
 
-    gap: 15px;
+    gap: 12px;
   }
 
-  .brand {
-    min-width: 0;
-
-    flex: 1;
+  .brand-logo {
+    width: 50px !important;
+    height: 44px !important;
   }
 
-  .header-logo {
-    width: 55px;
-    height: 48px;
-  }
-
-  .brand-text b {
-    font-size: 16px;
+  .brand-text strong {
+    font-size: 17px;
   }
 
   .brand-text small {
@@ -1672,235 +1473,112 @@ footer {
 
     width: 100%;
 
+    margin: 0;
+
+    justify-content: center;
+
     overflow-x: auto;
 
-    justify-content: flex-start;
-
     padding-bottom: 5px;
-
-    gap: 22px;
   }
 
-  .main-nav a {
-    font-size: 11px;
+  .search-btn {
+    margin-left: auto;
+
+    height: 38px;
+
+    padding: 0 12px;
   }
-
-  .search {
-    padding: 9px 12px;
-
-    font-size: 11px;
-  }
-
-
-  /* HERO */
 
   .hero {
-    flex-direction: column;
+    min-height: 850px;
 
-    min-height: auto;
+    padding: 70px 25px;
+
+    display: block;
   }
 
   .hero-copy {
     width: 100%;
-
-    padding:
-      55px
-      25px
-      25px;
   }
 
   .hero h1 {
-    font-size: clamp(40px, 10vw, 58px);
+    font-size: 48px;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
   }
 
-  .hero-copy > p {
-    font-size: 16px;
+  .hero-description {
+    font-size: 17px;
   }
 
   .hero-art {
+    position: absolute;
+
     width: 100%;
 
-    min-height: 560px;
+    height: 420px;
+
+    right: 0;
+
+    top: auto;
+
+    bottom: 0;
   }
 
   .temple-arch {
-    width: 390px;
-    height: 500px;
-
-    border-width: 48px;
-
-    border-radius:
-      220px
-      220px
-      0
-      0;
+    transform: scale(0.65);
   }
 
-  .dots {
+  .hero-dots {
     right: 15px;
   }
 
-
-  /* TIMELINE */
-
-  .timeline-strip {
-    overflow-x: auto;
-
-    justify-content: flex-start;
-
-    padding-bottom: 8px;
-
-    white-space: nowrap;
-  }
-
   .timeline-content {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
-
-
-  /* HISTORY */
-
-  .topic-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-
-  /* TWO COLUMN */
 
   .two-col {
     grid-template-columns: 1fr;
   }
 
-
-  /* GEN Z */
-
-  .genz {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .genz-title {
-    grid-column: span 2;
-  }
-
-
-  /* CIVIL */
-
   .civil-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
-
-  /* FOOTER */
 
   footer {
-    min-height: 230px;
-
     flex-direction: column;
 
-    justify-content: flex-start;
-
     padding-bottom: 55px;
-
-    gap: 20px;
   }
 
   .footer-links {
     flex-wrap: wrap;
 
     justify-content: center;
-
-    gap: 15px;
-  }
-
-  .footer-social {
-    margin-left: 0;
   }
 
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+@media (max-width: 520px) {
 
-@media (max-width: 600px) {
-
-  .hero-copy {
-    padding:
-      45px
-      20px
-      20px;
+  .main-nav {
+    gap: 15px;
   }
 
-  .kicker {
+  .main-nav a {
     font-size: 10px;
-
-    letter-spacing: 2.5px;
   }
 
   .hero h1 {
     font-size: 39px;
-
-    line-height: 1.02;
   }
 
-  .hero-copy > p {
-    font-size: 14px;
-  }
+  .kicker {
+    font-size: 11px;
 
-  .hero-art {
-    min-height: 450px;
-  }
-
-  .temple-arch {
-    width: 300px;
-    height: 390px;
-
-    border-width: 40px;
-
-    border-radius:
-      170px
-      170px
-      0
-      0;
-  }
-
-  .temple-symbols {
-    top: 48px;
-
-    transform:
-      translateX(-50%)
-      scale(0.76);
-
-    transform-origin: top center;
-  }
-
-  .temple-glow {
-    width: 390px;
-    height: 390px;
-  }
-
-
-  /* SECTIONS */
-
-  .map-section,
-  .dark-section,
-  .civil {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .map-section h2,
-  .dark-section h2,
-  .panel h2,
-  .civil h2 {
-    font-size: 23px;
+    letter-spacing: 3px;
   }
 
   .timeline-content {
@@ -1908,82 +1586,23 @@ footer {
   }
 
   .topic-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .genz {
+    grid-template-columns: 1fr;
+  }
 
-  /* PANELS */
+  .genz-title {
+    grid-column: span 1;
+  }
 
-  .panel {
-    padding:
-      45px 20px;
+  .civil-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .source-flow {
     flex-direction: column;
-  }
-
-  .source-flow span {
-    width: 100%;
-  }
-
-  .atlas {
-    flex-direction: column;
-  }
-
-  .mini-map {
-    width: 100%;
-    height: 180px;
-  }
-
-
-  /* GEN Z */
-
-  .genz {
-    grid-template-columns: 1fr;
-
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .genz-title {
-    grid-column: auto;
-  }
-
-  .genz .story-card {
-    grid-column: auto;
-  }
-
-
-  /* CIVILISATION */
-
-  .civil-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-
-  /* CLOSING */
-
-  .closing {
-    padding:
-      70px 20px;
-  }
-
-  .closing h2 {
-    font-size: 39px;
-  }
-
-
-  /* FOOTER */
-
-  .footer-logo {
-    width: 75px;
-    height: 58px;
-  }
-
-  .copyright {
-    bottom: 15px;
   }
 
 }
