@@ -60,9 +60,7 @@ a {
 }
 
 
-/* =========================================================
-   HEADER BRAND / LOGO
-   ========================================================= */
+/* BRAND */
 
 .brand {
   display: flex;
@@ -113,9 +111,7 @@ a {
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* NAVIGATION */
 
 .site-header nav {
   display: flex;
@@ -146,9 +142,7 @@ a {
 }
 
 
-/* =========================================================
-   SEARCH
-   ========================================================= */
+/* SEARCH */
 
 .search {
   border: 1px solid #76500d;
@@ -232,9 +226,7 @@ a {
 }
 
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* HERO BUTTON */
 
 .cta {
   display: inline-block;
@@ -260,36 +252,8 @@ a {
   transform: translateY(-1px);
 }
 
-.outline-btn {
-  display: inline-block;
 
-  color: #f58a13;
-
-  border: 1px solid #a65e0b;
-  border-radius: 3px;
-
-  padding: 9px 18px;
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  margin-top: 10px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.outline-btn:hover {
-  background: #f47d0b;
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   HERO ART
-   ========================================================= */
+/* HERO ART */
 
 .hero-art {
   position: absolute;
@@ -340,9 +304,7 @@ a {
 }
 
 
-/* =========================================================
-   HERO DOTS
-   ========================================================= */
+/* HERO DOTS */
 
 .dots {
   position: absolute;
@@ -388,7 +350,7 @@ a {
 
 
 /* =========================================================
-   MAP SECTION
+   MAP
    ========================================================= */
 
 .map-section {
@@ -404,11 +366,6 @@ a {
 
   border-top: 1px solid #171d1e;
 }
-
-
-/* =========================================================
-   TIMELINE STRIP
-   ========================================================= */
 
 .timeline-strip {
   display: flex;
@@ -440,9 +397,7 @@ a {
 }
 
 
-/* =========================================================
-   MAP ART
-   ========================================================= */
+/* MAP ART */
 
 .map-art {
   height: 190px;
@@ -524,6 +479,35 @@ a {
 }
 
 
+/* OUTLINE BUTTON */
+
+.outline-btn {
+  display: inline-block;
+
+  color: #f58a13;
+
+  border: 1px solid #a65e0b;
+  border-radius: 3px;
+
+  padding: 9px 18px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  margin-top: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.outline-btn:hover {
+  background: #f47d0b;
+  color: #ffffff;
+}
+
+
 /* =========================================================
    DARK SECTIONS
    ========================================================= */
@@ -538,7 +522,7 @@ a {
 
 
 /* =========================================================
-   TIMELINE CONTENT
+   TIMELINE
    ========================================================= */
 
 .timeline-content {
@@ -700,9 +684,7 @@ a {
 }
 
 
-/* =========================================================
-   SOURCES
-   ========================================================= */
+/* SOURCES */
 
 .source-flow {
   display: flex;
@@ -736,7 +718,7 @@ a {
 
 
 /* =========================================================
-   TEMPLE ATLAS
+   ATLAS
    ========================================================= */
 
 .atlas {
@@ -1019,183 +1001,88 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
-.site-footer {
-  width: 100%;
+footer {
   background: #020506;
+
   border-top: 1px solid #1b2021;
-  padding: 18px 4% 14px;
-}
 
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+  padding: 18px 4%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 28px;
-}
+  gap: 25px;
 
-/* LOGO */
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 58px;
-  height: 58px;
-
-  flex-shrink: 0;
-
-  text-decoration: none;
-  overflow: hidden;
-}
-
-.footer-logo img {
-  display: block;
-
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-}
-
-/* NAVIGATION */
-
-.footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 28px;
-}
-
-.footer-nav a {
-  color: #ddd;
-  text-decoration: none;
-
-  font-size: 10px;
-  line-height: 1;
-
-  white-space: nowrap;
-
-  transition: color 0.2s ease;
-}
-
-.footer-nav a:hover {
-  color: #f47d0b;
-}
-
-/* SOCIAL */
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  color: #f47d0b;
-  font-size: 11px;
-
-  white-space: nowrap;
-}
-
-.footer-social span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* COPYRIGHT */
-
-.footer-copy {
-  text-align: center;
-
-  margin-top: 18px;
-
-  color: #777;
+  flex-wrap: wrap;
 
   font-size: 9px;
-  line-height: 1.4;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+.footer-brand {
+  display: flex;
 
-@media (max-width: 900px) {
-
-  .footer-inner {
-    gap: 20px;
-  }
-
-  .footer-nav {
-    gap: 18px;
-  }
-
-  .footer-nav a {
-    font-size: 9px;
-  }
-
-  .footer-logo,
-  .footer-logo img {
-    width: 50px;
-    height: 50px;
-  }
-
+  align-items: center;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+.footer-logo {
+  width: 42px;
 
-@media (max-width: 600px) {
+  height: 42px;
 
-  .site-footer {
-    padding: 18px 20px 14px;
-  }
+  object-fit: contain;
 
-  .footer-inner {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .footer-logo,
-  .footer-logo img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .footer-nav {
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 14px 20px;
-  }
-
-  .footer-nav a {
-    font-size: 9px;
-  }
-
-  .footer-social {
-    margin-top: 2px;
-  }
-
-  .footer-copy {
-    margin-top: 14px;
-    font-size: 8px;
-  }
-
+  display: block;
 }
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #dddddd;
+
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #f47d0b;
+}
+
+.footer-social {
+  color: #f0800a;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.copyright {
+  width: 100%;
+
+  text-align: center;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  margin-top: 2px;
+}
+
 
 /* =========================================================
    TABLET
@@ -1205,7 +1092,6 @@ a {
 
   .site-header {
     gap: 15px;
-
     padding: 0 3%;
   }
 
@@ -1248,6 +1134,7 @@ a {
   .genz-title {
     grid-column: span 3;
   }
+
 }
 
 
@@ -1271,7 +1158,6 @@ a {
 
   .hero-art {
     width: 60%;
-
     opacity: 0.35;
   }
 
@@ -1297,6 +1183,7 @@ a {
     grid-template-columns:
       repeat(5, 1fr);
   }
+
 }
 
 
@@ -1404,9 +1291,6 @@ a {
   .hero-copy > small {
     font-size: 10px;
   }
-
-
-  /* HERO ART */
 
   .hero-art {
     width: 100%;
@@ -1726,30 +1610,26 @@ a {
   }
 
 
-  /* =====================================================
-     FOOTER - MOBILE
-     ===================================================== */
+  /* FOOTER */
 
   footer {
     padding:
-      25px
-      15px
-      20px;
+      20px
+      15px;
 
     gap: 15px;
+
+    flex-direction: column;
   }
 
   .footer-logo {
-    width: 140px;
-    height: 75px;
-  }
+    width: 45px;
 
-  .footer-logo img {
-    width: 140px;
+    height: 45px;
   }
 
   .footer-links {
-    gap: 14px 20px;
+    gap: 12px 18px;
   }
 
   .footer-links a {
@@ -1765,6 +1645,7 @@ a {
 
     margin-top: 3px;
   }
+
 }
 
 
@@ -1802,4 +1683,5 @@ a {
   .timeline-content article {
     padding: 14px;
   }
+
 }
