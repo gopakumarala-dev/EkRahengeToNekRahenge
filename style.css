@@ -1,7 +1,7 @@
 /* =========================================================
    EK RAHENGE TO NEK RAHENGE
-   COMPLETE WEBSITE CSS
-   ========================================================= */
+   MAIN WEBSITE STYLES
+========================================================= */
 
 * {
   box-sizing: border-box;
@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 82px;
 }
 
 body {
@@ -20,40 +21,36 @@ body {
   line-height: 1.55;
 }
 
-a {
-  color: inherit;
-}
-
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 .site-header {
   height: 78px;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
 
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  padding: 0 4%;
-
   background: rgba(2, 3, 3, 0.96);
   border-bottom: 1px solid #171b1c;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4%;
+  gap: 30px;
 }
 
 
-/* Brand */
+/* BRAND */
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
 
   color: #eeeeee;
   text-decoration: none;
@@ -61,81 +58,102 @@ a {
   min-width: 250px;
 }
 
-.brand .flag {
-  color: #f47b08;
-  font-size: 34px;
-  line-height: 1;
+.site-logo {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+  object-position: center;
+
+  flex-shrink: 0;
 }
 
 .brand-text {
   display: block;
 }
 
-.brand b {
+.brand-text b {
   display: block;
+
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
-.brand small {
+.brand-text small {
   display: block;
+
   margin-top: 3px;
 
   font-size: 10px;
   letter-spacing: 1px;
-  color: #cccccc;
+
+  color: #dddddd;
 }
 
 
-/* Navigation */
+/* NAVIGATION */
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: 25px;
+  gap: 26px;
+
   flex: 1;
 }
 
-.main-nav a,
+.main-nav a {
+  color: #eeeeee;
+  text-decoration: none;
+
+  font-size: 11px;
+  letter-spacing: 0.4px;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #f58a13;
+}
+
+
+/* SEARCH */
+
 .search {
   color: #eeeeee;
   text-decoration: none;
 
   font-size: 11px;
-  letter-spacing: 0.3px;
 
-  transition: color 0.2s ease;
+  border: 1px solid #76500d;
+  border-radius: 5px;
+
+  padding: 8px 13px;
+
+  white-space: nowrap;
 }
 
-.main-nav a:hover,
 .search:hover {
   color: #f58a13;
 }
 
 
-/* Search */
-
-.search {
-  border: 1px solid #76500d;
-  border-radius: 5px;
-
-  padding: 8px 13px;
-}
-
-
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero {
   min-height: 650px;
 
+  padding: 130px 6% 50px;
+
   position: relative;
   overflow: hidden;
-
-  padding: 135px 6% 55px;
 
   background:
     radial-gradient(
@@ -148,7 +166,7 @@ a {
 
 .hero-copy {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 
   max-width: 760px;
 }
@@ -161,10 +179,11 @@ a {
 }
 
 .hero h1 {
-  margin: 25px 0 12px;
+  margin: 25px 0 10px;
 
   font-size: 52px;
   line-height: 1.03;
+
   letter-spacing: -1px;
 }
 
@@ -173,41 +192,35 @@ a {
 }
 
 .hero p {
-  max-width: 650px;
-
   font-size: 15px;
-  color: #dddddd;
+
+  max-width: 650px;
 }
 
 .cta {
   display: inline-block;
 
-  margin-top: 12px;
-  padding: 12px 28px;
-
   background: #f47d0b;
   color: #ffffff;
 
   text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
 
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  padding: 12px 28px;
+  margin-top: 12px;
+
+  font-size: 12px;
+
+  transition: background 0.2s ease;
 }
 
 .cta:hover {
-  background: #ff9225;
-  transform: translateY(-1px);
+  background: #ff922b;
 }
 
 .hero-note {
   display: block;
-  margin-top: 12px;
 
-  color: #bbbbbb;
-  font-size: 11px;
+  margin-top: 12px;
 }
 
 .hero em,
@@ -217,7 +230,7 @@ a {
 }
 
 
-/* Hero artwork */
+/* HERO ART */
 
 .hero-art {
   position: absolute;
@@ -268,7 +281,7 @@ a {
 }
 
 
-/* Hero dots */
+/* HERO DOTS */
 
 .dots {
   position: absolute;
@@ -295,13 +308,11 @@ a {
 
 /* =========================================================
    COMMON SECTION HEADINGS
-   ========================================================= */
+========================================================= */
 
 .map-section h2,
 .dark-section h2,
 .civil h2 {
-  margin: 0 0 14px;
-
   font-size: 21px;
   letter-spacing: 0.5px;
 }
@@ -309,10 +320,10 @@ a {
 
 /* =========================================================
    MAP
-   ========================================================= */
+========================================================= */
 
 .map-section {
-  padding: 18px 4% 28px;
+  padding: 15px 4% 25px;
 
   background:
     linear-gradient(
@@ -325,41 +336,41 @@ a {
   border-top: 1px solid #171d1e;
 }
 
-
-/* Timeline strip */
-
 .timeline-strip {
   display: flex;
+
   justify-content: space-around;
-  align-items: center;
 
   max-width: 900px;
 
-  margin: 0 auto 10px;
-
-  padding-bottom: 8px;
+  margin: 0 auto 8px;
 
   color: #dddddd;
 
   font-size: 11px;
 
   border-bottom: 2px solid #8a5314;
+
+  padding-bottom: 8px;
 }
 
 .timeline-strip span {
   color: #ff8610;
-  font-weight: bold;
+}
+
+.timeline-strip i {
+  font-style: normal;
 }
 
 
-/* Map */
+/* MAP ART */
 
 .map-art {
   height: 190px;
 
   max-width: 1050px;
 
-  margin: 0 auto;
+  margin: auto;
 
   position: relative;
 
@@ -384,10 +395,11 @@ a {
 
   color: #dddddd;
 
-  font-size: 12px;
   font-weight: bold;
 
-  text-shadow: 0 1px 4px #000000;
+  font-size: 12px;
+
+  text-shadow: 0 1px 4px #000;
 }
 
 .route small {
@@ -433,23 +445,25 @@ a {
 }
 
 
-/* Outline buttons */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .outline-btn {
   display: inline-block;
 
-  margin-top: 10px;
-  padding: 9px 18px;
-
   color: #f58a13;
-  background: transparent;
 
   border: 1px solid #a65e0b;
   border-radius: 3px;
 
+  padding: 9px 18px;
+
   text-decoration: none;
 
   font-size: 11px;
+
+  margin-top: 10px;
 
   transition:
     background 0.2s ease,
@@ -464,41 +478,40 @@ a {
 
 /* =========================================================
    DARK SECTIONS
-   ========================================================= */
+========================================================= */
 
 .dark-section {
-  padding: 22px 3% 30px;
+  text-align: center;
+
+  padding: 10px 2% 25px;
 
   background: #04090a;
-
-  text-align: center;
 }
 
 
 /* =========================================================
    TIMELINE
-   ========================================================= */
+========================================================= */
 
 .timeline-section {
-  border-top: 1px solid #11191b;
+  border-top: 1px solid #101719;
 }
 
 .timeline-content {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 
   gap: 10px;
 
   max-width: 1200px;
 
-  margin: 18px auto 0;
+  margin: 15px auto 0;
 }
 
 .timeline-content article {
-  min-height: 145px;
-
-  padding: 18px;
+  min-height: 150px;
 
   border: 1px solid #273034;
 
@@ -508,47 +521,43 @@ a {
       #080b0c
     );
 
+  padding: 20px;
+
   text-align: left;
 }
 
 .timeline-content h3 {
   margin: 0 0 10px;
 
-  color: #f58a13;
-
   font-size: 13px;
-  letter-spacing: 0.5px;
+
+  color: #f58a13;
 }
 
 .timeline-content p {
   margin: 0;
 
-  color: #bbbbbb;
-
   font-size: 11px;
+
+  color: #bbbbbb;
 }
 
 
 /* =========================================================
-   HISTORY TOPICS
-   ========================================================= */
+   HISTORY TOPIC GRID
+========================================================= */
 
 .topic-grid {
   display: grid;
 
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns:
+    repeat(10, 1fr);
 
   gap: 8px;
-
-  max-width: 1400px;
-
-  margin: 0 auto;
 }
 
 .topic-card {
   min-height: 120px;
-
-  padding: 12px;
 
   border: 1px solid #273034;
 
@@ -559,6 +568,7 @@ a {
     );
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: center;
@@ -567,41 +577,55 @@ a {
   gap: 12px;
 
   color: #eeeeee;
+
   text-decoration: none;
 
   transition:
     border-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .topic-card:hover {
-  border-color: #f58a13;
+  border-color: #9a5a0d;
+
+  background:
+    linear-gradient(
+      #171c1e,
+      #0b0e0f
+    );
+
   transform: translateY(-2px);
 }
 
 .topic-card b {
   font-size: 27px;
+
   color: #e57d0d;
 }
 
 .topic-card span {
   font-size: 10px;
+
   font-weight: bold;
+
+  text-align: center;
 }
 
 
 /* =========================================================
-   TWO COLUMN SECTION
-   ========================================================= */
+   SOURCES + ATLAS
+========================================================= */
 
 .two-col {
   display: grid;
 
-  grid-template-columns: 1fr 1.08fr;
+  grid-template-columns:
+    1fr 1.08fr;
 
   gap: 18px;
 
-  padding: 0 3% 12px;
+  padding: 0 3% 10px;
 
   background: #04090a;
 }
@@ -609,23 +633,23 @@ a {
 .panel {
   min-height: 245px;
 
-  padding: 18px;
-
   border: 1px solid #242b2d;
 
   background: #080e10;
+
+  padding: 14px;
 
   text-align: center;
 }
 
 .panel h2 {
-  margin: 0 0 14px;
-
   font-size: 20px;
+
+  margin: 0 0 12px;
 }
 
 
-/* Source flow */
+/* SOURCE FLOW */
 
 .source-flow {
   display: flex;
@@ -636,43 +660,36 @@ a {
 }
 
 .source-flow span {
-  flex: 1;
+  border: 1px solid #252d30;
 
   padding: 25px 10px;
 
-  border: 1px solid #252d30;
-
   font-size: 9px;
+
+  flex: 1;
 }
 
-
-/* Establish */
-
 .establish {
-  max-width: 390px;
-
-  margin: 12px auto;
-
-  padding: 10px;
-
   border: 1px solid #6e430c;
 
   color: #f18a0b;
 
-  font-size: 11px;
+  padding: 10px;
+
+  margin: 12px auto;
+
+  max-width: 390px;
 }
 
 
-/* =========================================================
-   ATLAS
-   ========================================================= */
+/* ATLAS */
 
 .atlas {
+  text-align: left;
+
   display: flex;
 
   overflow: hidden;
-
-  text-align: left;
 }
 
 .atlas > div:first-child {
@@ -680,38 +697,33 @@ a {
 }
 
 .atlas strong {
-  display: block;
+  font-size: 27px;
 
   color: #f5810c;
 
-  font-size: 27px;
-  line-height: 1.1;
+  display: block;
 }
 
 .atlas > div:first-child > small {
   color: #f5810c;
-
-  font-size: 9px;
 }
 
 .atlas ul {
-  margin: 8px 0;
-
-  padding: 0;
-
   list-style: none;
+
+  padding: 4px 0;
 
   font-size: 10px;
 
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 .atlas ul li {
-  color: #cccccc;
+  margin: 2px 0;
 }
 
 
-/* Mini map */
+/* MINI MAP */
 
 .mini-map {
   width: 45%;
@@ -741,8 +753,8 @@ a {
 
 
 /* =========================================================
-   GEN Z
-   ========================================================= */
+   HISTORY FOR GEN Z
+========================================================= */
 
 .genz {
   display: grid;
@@ -754,32 +766,29 @@ a {
 
   gap: 8px;
 
-  padding: 10px 3%;
+  padding: 8px 3%;
 
   background: #061011;
 }
 
 .genz > * {
-  min-height: 105px;
+  border: 1px solid #202a2c;
 
   padding: 13px;
 
-  border: 1px solid #202a2c;
+  min-height: 105px;
 }
 
 .genz-title {
+  font-size: 17px;
+
   display: flex;
 
   justify-content: space-between;
-  align-items: flex-start;
-
-  font-size: 17px;
 }
 
 .genz-title span {
   color: #f58a0c;
-
-  font-size: 24px;
 }
 
 .genz article b {
@@ -787,13 +796,15 @@ a {
 }
 
 .genz article p {
-  color: #bbbbbb;
-
   font-size: 11px;
+
+  color: #bbbbbb;
 }
 
 .genz article a {
   display: inline-block;
+
+  font-size: 10px;
 
   color: #f58a0c;
 
@@ -802,17 +813,13 @@ a {
   border: 1px solid #92500b;
 
   padding: 5px 10px;
-
-  font-size: 10px;
 }
 
 .genz article a:hover {
   background: #f58a0c;
+
   color: #ffffff;
 }
-
-
-/* Story card */
 
 .story-card {
   background:
@@ -828,71 +835,58 @@ a {
 
   color: #999999;
 
-  margin-bottom: 10px;
-}
-
-.story-card b {
-  display: block;
-
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 
 /* =========================================================
    CIVILISATION
-   ========================================================= */
+========================================================= */
 
 .civil {
-  padding: 18px 3% 25px;
+  text-align: center;
+
+  padding: 8px 3% 20px;
 
   background: #05090a;
-
-  text-align: center;
 }
 
 .civil-grid {
   display: grid;
 
-  grid-template-columns: repeat(10, 1fr);
-
-  max-width: 1300px;
-
-  margin: 0 auto;
+  grid-template-columns:
+    repeat(10, 1fr);
 
   border-bottom: 1px solid #39240d;
 }
 
 .civil-grid span {
-  padding: 10px 6px;
+  font-size: 28px;
 
   color: #ef850d;
 
-  font-size: 28px;
+  padding: 8px;
 
-  border-right: 1px solid #222;
-}
-
-.civil-grid span:last-child {
-  border-right: 0;
+  border-right: 1px solid #222222;
 }
 
 .civil-grid small {
   display: block;
 
-  margin-top: 4px;
-
   color: #eeeeee;
 
   font-size: 9px;
+
+  margin-top: 3px;
 }
 
 
 /* =========================================================
    CLOSING
-   ========================================================= */
+========================================================= */
 
 .closing {
-  min-height: 200px;
+  min-height: 220px;
 
   display: grid;
 
@@ -904,9 +898,7 @@ a {
 
   align-items: center;
 
-  gap: 20px;
-
-  padding: 25px 6%;
+  padding: 20px 6%;
 
   background:
     radial-gradient(
@@ -925,17 +917,15 @@ a {
 }
 
 .closing h2 {
-  margin: 0;
-
   font-size: 26px;
 
   line-height: 1.05;
 }
 
 .devanagari {
-  color: #f0800a;
-
   font-size: 42px;
+
+  color: #f0800a;
 
   line-height: 1;
 }
@@ -943,98 +933,77 @@ a {
 .devanagari small {
   display: block;
 
-  margin-top: 8px;
-
   color: #eeeeee;
 
   font-size: 10px;
 
-  line-height: 1.3;
+  margin-top: 8px;
 }
 
 .closing-text {
-  color: #cccccc;
-
   font-size: 10px;
 }
 
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 .site-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  padding: 18px 4%;
+
   background: #020506;
 
   border-top: 1px solid #1b2021;
 
-  padding: 28px 20px 20px;
-
-  text-align: center;
-}
-
-.footer-inner {
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
+  font-size: 9px;
 }
 
 
-/* Foundation logo */
+/* FOOTER LOGO */
 
 .footer-logo-wrap {
   display: flex;
 
-  justify-content: center;
   align-items: center;
-
-  width: 100%;
-
-  margin-bottom: 18px;
+  justify-content: center;
 }
 
 .footer-logo {
   display: block;
 
-  width: 78px;
-  height: 78px;
+  width: 58px;
+  height: 58px;
 
   object-fit: contain;
-
-  margin: 0 auto;
 }
 
 
-/* Footer navigation */
+/* FOOTER LINKS */
 
 .footer-nav {
   display: flex;
 
-  justify-content: center;
   align-items: center;
-
-  flex-wrap: wrap;
 
   gap: 28px;
 
-  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
   color: #dddddd;
 
   text-decoration: none;
-
-  font-size: 10px;
-  letter-spacing: 0.3px;
-
-  transition: color 0.2s ease;
 }
 
 .footer-nav a:hover {
@@ -1042,90 +1011,65 @@ a {
 }
 
 
-/* Footer icons */
+/* FOOTER ICONS */
 
 .footer-icons {
-  display: flex;
+  color: #dddddd;
 
-  justify-content: center;
-
-  gap: 18px;
-
-  margin-bottom: 14px;
-}
-
-.footer-icons a {
-  color: #f58a13;
-
-  text-decoration: none;
-
-  font-size: 15px;
-}
-
-.footer-icons a:hover {
-  color: #ffffff;
+  white-space: nowrap;
 }
 
 
-/* Copyright */
+/* COPYRIGHT */
 
 .copyright {
+  width: 100%;
+
+  text-align: center;
+
   color: #888888;
 
-  font-size: 10px;
+  font-size: 9px;
 
-  padding-top: 8px;
-
-  border-top: 1px solid #1b2021;
-
-  width: 100%;
+  padding-top: 4px;
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
-  .main-nav {
-    gap: 16px;
+  .site-header {
+    gap: 15px;
   }
 
   .brand {
     min-width: 220px;
   }
 
-  .brand b {
-    font-size: 17px;
+  .main-nav {
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
   }
 
   .topic-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+      repeat(5, 1fr);
   }
 
   .civil-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .civil-grid span:nth-child(5) {
-    border-right: 1px solid #222;
-  }
-
-  .timeline-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(5, 1fr);
   }
 
   .genz {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .genz-title {
-    grid-column: span 3;
-  }
-
-  .closing {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      repeat(3, 1fr);
   }
 
 }
@@ -1133,13 +1077,11 @@ a {
 
 /* =========================================================
    TABLET / SMALL LAPTOP
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
   .site-header {
-    gap: 15px;
-
     padding: 0 3%;
   }
 
@@ -1153,13 +1095,10 @@ a {
 
   .hero {
     min-height: 620px;
-
-    padding-left: 5%;
-    padding-right: 5%;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .hero-art {
@@ -1168,28 +1107,33 @@ a {
     opacity: 0.35;
   }
 
+  .timeline-content {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
   .topic-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+      repeat(5, 1fr);
   }
 
   .two-col {
     grid-template-columns: 1fr;
   }
 
-  .genz {
-    grid-template-columns: repeat(2, 1fr);
+  .closing {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
-  .genz-title {
-    grid-column: span 2;
+  .genz {
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .civil-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .closing {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      repeat(5, 1fr);
   }
 
 }
@@ -1197,41 +1141,48 @@ a {
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
+
+  html {
+    scroll-padding-top: 70px;
+  }
 
   body {
     font-size: 13px;
   }
 
 
-  /* Header */
+  /* HEADER */
 
   .site-header {
-    height: 68px;
+    height: 70px;
 
-    padding: 0 15px;
+    padding: 0 14px;
+
+    gap: 8px;
   }
 
   .brand {
     min-width: 0;
 
-    gap: 7px;
+    gap: 8px;
   }
 
-  .brand .flag {
-    font-size: 27px;
+  .site-logo {
+    width: 42px;
+    height: 42px;
   }
 
-  .brand b {
+  .brand-text b {
     font-size: 14px;
   }
 
-  .brand small {
-    font-size: 7px;
+  .brand-text small {
+    font-size: 8px;
 
-    letter-spacing: 0.7px;
+    letter-spacing: 0.6px;
   }
 
   .search {
@@ -1239,14 +1190,14 @@ a {
   }
 
 
-  /* Hero */
+  /* HERO */
 
   .hero {
     min-height: 620px;
 
     padding:
-      105px
-      22px
+      110px
+      20px
       45px;
   }
 
@@ -1257,19 +1208,13 @@ a {
   }
 
   .hero h1 {
-    font-size: 31px;
+    font-size: 32px;
 
     line-height: 1.06;
-
-    letter-spacing: -0.5px;
-
-    margin-top: 20px;
   }
 
   .hero p {
-    font-size: 13px;
-
-    line-height: 1.5;
+    font-size: 14px;
   }
 
   .hero p br {
@@ -1281,11 +1226,13 @@ a {
 
     right: -25%;
 
-    opacity: 0.22;
+    top: 110px;
+
+    opacity: 0.18;
   }
 
   .arch {
-    right: 8%;
+    right: 10%;
 
     width: 55%;
 
@@ -1297,44 +1244,32 @@ a {
   }
 
 
-  /* Section headings */
+  /* MAP */
+
+  .map-section {
+    padding:
+      20px
+      15px
+      25px;
+  }
 
   .map-section h2,
   .dark-section h2,
   .civil h2 {
-    font-size: 17px;
-
-    line-height: 1.25;
+    font-size: 18px;
   }
 
-
-  /* Timeline strip */
-
   .timeline-strip {
-    overflow-x: auto;
-
-    justify-content: flex-start;
-
-    gap: 18px;
-
-    padding: 0 5px 8px;
-
-    white-space: nowrap;
-
     font-size: 8px;
+
+    gap: 4px;
+
+    overflow: hidden;
   }
 
   .timeline-strip i,
   .timeline-strip span {
-    flex-shrink: 0;
-  }
-
-
-  /* Map */
-
-  .map-section {
-    padding-left: 15px;
-    padding-right: 15px;
+    white-space: nowrap;
   }
 
   .map-art {
@@ -1345,12 +1280,8 @@ a {
     font-size: 9px;
   }
 
-  .route small {
-    font-size: 8px;
-  }
-
   .bharat {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .sea {
@@ -1358,26 +1289,33 @@ a {
   }
 
 
-  /* Timeline */
+  /* TIMELINE */
 
   .timeline-content {
     grid-template-columns: 1fr;
+
+    gap: 8px;
   }
 
   .timeline-content article {
     min-height: auto;
+
+    padding: 16px;
   }
 
 
-  /* History */
+  /* HISTORY */
 
   .dark-section {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:
+      15px
+      12px
+      25px;
   }
 
   .topic-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
 
     gap: 7px;
   }
@@ -1387,23 +1325,14 @@ a {
   }
 
 
-  /* Two columns */
+  /* SOURCES */
 
   .two-col {
-    grid-template-columns: 1fr;
-
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:
+      0
+      12px
+      10px;
   }
-
-  .panel {
-    min-height: auto;
-
-    padding: 15px;
-  }
-
-
-  /* Sources */
 
   .source-flow {
     flex-wrap: wrap;
@@ -1412,67 +1341,67 @@ a {
   .source-flow span {
     min-width: 28%;
 
-    padding: 18px 7px;
+    padding: 18px 8px;
   }
 
 
-  /* Atlas */
+  /* ATLAS */
 
   .atlas {
-    display: block;
+    flex-direction: column;
   }
 
   .mini-map {
-    display: none;
+    width: 100%;
+
+    height: 100px;
+
+    padding-top: 15px;
+
+    margin-top: 15px;
   }
 
 
-  /* Gen Z */
+  /* GEN Z */
 
   .genz {
     grid-template-columns: 1fr;
 
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .genz-title {
-    grid-column: auto;
-  }
-
-  .genz > * {
-    min-height: 100px;
+    padding:
+      8px
+      12px;
   }
 
 
-  /* Civilisation */
+  /* CIVILISATION */
 
   .civil {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:
+      15px
+      12px
+      25px;
   }
 
   .civil-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .civil-grid span {
-    border-right: 1px solid #222;
-
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #222222;
   }
 
 
-  /* Closing */
+  /* CLOSING */
 
   .closing {
     grid-template-columns: 1fr;
 
-    gap: 15px;
+    gap: 18px;
 
     padding:
       30px
-      22px;
+      20px;
   }
 
   .silhouette {
@@ -1480,44 +1409,41 @@ a {
   }
 
   .closing h2 {
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .devanagari {
-    font-size: 35px;
-  }
-
-  .closing-text {
-    font-size: 11px;
+    font-size: 34px;
   }
 
 
-  /* Footer */
+  /* FOOTER */
 
   .site-footer {
+    flex-direction: column;
+
+    gap: 14px;
+
     padding:
-      25px
-      15px
-      18px;
+      20px
+      15px;
   }
 
   .footer-logo {
-    width: 72px;
-    height: 72px;
+    width: 65px;
+    height: 65px;
   }
 
   .footer-nav {
+    justify-content: center;
+
     gap: 12px 20px;
 
-    margin-bottom: 15px;
-  }
-
-  .footer-nav a {
-    font-size: 9px;
+    text-align: center;
   }
 
   .footer-icons {
-    margin-bottom: 12px;
+    margin-top: 2px;
   }
 
   .copyright {
@@ -1529,20 +1455,25 @@ a {
 
 /* =========================================================
    VERY SMALL PHONES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .brand b {
+  .brand-text b {
     font-size: 13px;
   }
 
-  .brand small {
-    font-size: 6.5px;
+  .brand-text small {
+    font-size: 7px;
+  }
+
+  .site-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
   }
 
   .topic-card {
@@ -1551,10 +1482,6 @@ a {
 
   .topic-card b {
     font-size: 23px;
-  }
-
-  .topic-card span {
-    font-size: 9px;
   }
 
 }
