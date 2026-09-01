@@ -1019,109 +1019,183 @@ a {
 }
 
 
-/* =========================================================
-   HAINDAVEEYAM FOUNDATION FOOTER
-   ========================================================= */
+/* =========================
+   FOOTER
+   ========================= */
 
-footer {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 16px;
-
-  padding: 28px 20px 22px;
-
+.site-footer {
+  width: 100%;
   background: #020506;
-
   border-top: 1px solid #1b2021;
-
-  text-align: center;
+  padding: 18px 4% 14px;
 }
 
-
-/* FOOTER LOGO */
-
-.footer-logo {
-  width: 150px;
-  height: 85px;
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  overflow: hidden;
-}
-
-.footer-logo img {
-  width: 150px;
-
-  height: auto;
-
-  display: block;
-
-  object-fit: contain;
-}
-
-
-/* FOOTER LINKS */
-
-.footer-links {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  align-items: center;
 
   gap: 28px;
 }
 
-.footer-links a {
-  color: #dddddd;
+/* LOGO */
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.footer-logo img {
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+}
+
+/* NAVIGATION */
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+}
+
+.footer-nav a {
+  color: #ddd;
   text-decoration: none;
 
   font-size: 10px;
+  line-height: 1;
 
-  letter-spacing: 0.3px;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-nav a:hover {
   color: #f47d0b;
 }
-
 
 /* SOCIAL */
 
 .footer-social {
   display: flex;
-
-  gap: 18px;
+  align-items: center;
+  gap: 14px;
 
   color: #f47d0b;
+  font-size: 11px;
 
-  font-size: 12px;
+  white-space: nowrap;
 }
 
+.footer-social span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* COPYRIGHT */
 
-.copyright {
-  color: #777777;
+.footer-copy {
+  text-align: center;
+
+  margin-top: 18px;
+
+  color: #777;
 
   font-size: 9px;
-
-  margin-top: 2px;
+  line-height: 1.4;
 }
 
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .footer-inner {
+    gap: 20px;
+  }
+
+  .footer-nav {
+    gap: 18px;
+  }
+
+  .footer-nav a {
+    font-size: 9px;
+  }
+
+  .footer-logo,
+  .footer-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    padding: 18px 20px 14px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-logo,
+  .footer-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-nav {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 14px 20px;
+  }
+
+  .footer-nav a {
+    font-size: 9px;
+  }
+
+  .footer-social {
+    margin-top: 2px;
+  }
+
+  .footer-copy {
+    margin-top: 14px;
+    font-size: 8px;
+  }
+
+}
 
 /* =========================================================
    TABLET
