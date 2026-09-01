@@ -60,9 +60,7 @@ a {
 }
 
 
-/* =========================================================
-   HEADER BRAND / LOGO
-   ========================================================= */
+/* BRAND */
 
 .brand {
   display: flex;
@@ -113,9 +111,7 @@ a {
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* NAVIGATION */
 
 .site-header nav {
   display: flex;
@@ -146,9 +142,7 @@ a {
 }
 
 
-/* =========================================================
-   SEARCH
-   ========================================================= */
+/* SEARCH */
 
 .search {
   border: 1px solid #76500d;
@@ -232,9 +226,7 @@ a {
 }
 
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* HERO BUTTON */
 
 .cta {
   display: inline-block;
@@ -260,36 +252,8 @@ a {
   transform: translateY(-1px);
 }
 
-.outline-btn {
-  display: inline-block;
 
-  color: #f58a13;
-
-  border: 1px solid #a65e0b;
-  border-radius: 3px;
-
-  padding: 9px 18px;
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  margin-top: 10px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.outline-btn:hover {
-  background: #f47d0b;
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   HERO ART
-   ========================================================= */
+/* HERO ART */
 
 .hero-art {
   position: absolute;
@@ -340,9 +304,7 @@ a {
 }
 
 
-/* =========================================================
-   HERO DOTS
-   ========================================================= */
+/* HERO DOTS */
 
 .dots {
   position: absolute;
@@ -388,7 +350,7 @@ a {
 
 
 /* =========================================================
-   MAP SECTION
+   MAP
    ========================================================= */
 
 .map-section {
@@ -404,11 +366,6 @@ a {
 
   border-top: 1px solid #171d1e;
 }
-
-
-/* =========================================================
-   TIMELINE STRIP
-   ========================================================= */
 
 .timeline-strip {
   display: flex;
@@ -440,9 +397,7 @@ a {
 }
 
 
-/* =========================================================
-   MAP ART
-   ========================================================= */
+/* MAP ART */
 
 .map-art {
   height: 190px;
@@ -524,6 +479,35 @@ a {
 }
 
 
+/* OUTLINE BUTTON */
+
+.outline-btn {
+  display: inline-block;
+
+  color: #f58a13;
+
+  border: 1px solid #a65e0b;
+  border-radius: 3px;
+
+  padding: 9px 18px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  margin-top: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.outline-btn:hover {
+  background: #f47d0b;
+  color: #ffffff;
+}
+
+
 /* =========================================================
    DARK SECTIONS
    ========================================================= */
@@ -538,7 +522,7 @@ a {
 
 
 /* =========================================================
-   TIMELINE CONTENT
+   TIMELINE
    ========================================================= */
 
 .timeline-content {
@@ -700,9 +684,7 @@ a {
 }
 
 
-/* =========================================================
-   SOURCES
-   ========================================================= */
+/* SOURCES */
 
 .source-flow {
   display: flex;
@@ -736,7 +718,7 @@ a {
 
 
 /* =========================================================
-   TEMPLE ATLAS
+   ATLAS
    ========================================================= */
 
 .atlas {
@@ -1020,35 +1002,15 @@ a {
 
 
 /* =========================================================
-   HAINDAVEEYAM FOUNDATION FOOTER
+   FOOTER
    ========================================================= */
 
 footer {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 16px;
-
-  padding: 28px 20px 22px;
-
   background: #020506;
 
   border-top: 1px solid #1b2021;
 
-  text-align: center;
-}
-
-
-/* FOOTER LOGO */
-
-.footer-logo {
-  width: 150px;
-  height: 85px;
+  padding: 18px 4%;
 
   display: flex;
 
@@ -1056,65 +1018,64 @@ footer {
 
   justify-content: center;
 
-  overflow: hidden;
+  gap: 25px;
+
+  flex-wrap: wrap;
+
+  font-size: 9px;
 }
 
-.footer-logo img {
-  width: 150px;
+.footer-brand {
+  display: flex;
 
-  height: auto;
+  align-items: center;
+}
 
-  display: block;
+.footer-logo {
+  width: 42px;
+
+  height: 42px;
 
   object-fit: contain;
+
+  display: block;
 }
-
-
-/* FOOTER LINKS */
 
 .footer-links {
   display: flex;
 
-  flex-wrap: wrap;
+  align-items: center;
 
   justify-content: center;
 
-  align-items: center;
+  gap: 25px;
 
-  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
   color: #dddddd;
 
   text-decoration: none;
-
-  font-size: 10px;
-
-  letter-spacing: 0.3px;
 }
 
 .footer-links a:hover {
   color: #f47d0b;
 }
 
-
-/* SOCIAL */
-
 .footer-social {
-  display: flex;
-
-  gap: 18px;
-
-  color: #f47d0b;
+  color: #f0800a;
 
   font-size: 12px;
+
+  white-space: nowrap;
 }
 
-
-/* COPYRIGHT */
-
 .copyright {
+  width: 100%;
+
+  text-align: center;
+
   color: #777777;
 
   font-size: 9px;
@@ -1131,7 +1092,6 @@ footer {
 
   .site-header {
     gap: 15px;
-
     padding: 0 3%;
   }
 
@@ -1174,6 +1134,7 @@ footer {
   .genz-title {
     grid-column: span 3;
   }
+
 }
 
 
@@ -1197,7 +1158,6 @@ footer {
 
   .hero-art {
     width: 60%;
-
     opacity: 0.35;
   }
 
@@ -1223,6 +1183,7 @@ footer {
     grid-template-columns:
       repeat(5, 1fr);
   }
+
 }
 
 
@@ -1330,9 +1291,6 @@ footer {
   .hero-copy > small {
     font-size: 10px;
   }
-
-
-  /* HERO ART */
 
   .hero-art {
     width: 100%;
@@ -1652,30 +1610,26 @@ footer {
   }
 
 
-  /* =====================================================
-     FOOTER - MOBILE
-     ===================================================== */
+  /* FOOTER */
 
   footer {
     padding:
-      25px
-      15px
-      20px;
+      20px
+      15px;
 
     gap: 15px;
+
+    flex-direction: column;
   }
 
   .footer-logo {
-    width: 140px;
-    height: 75px;
-  }
+    width: 45px;
 
-  .footer-logo img {
-    width: 140px;
+    height: 45px;
   }
 
   .footer-links {
-    gap: 14px 20px;
+    gap: 12px 18px;
   }
 
   .footer-links a {
@@ -1691,6 +1645,7 @@ footer {
 
     margin-top: 3px;
   }
+
 }
 
 
@@ -1728,4 +1683,5 @@ footer {
   .timeline-content article {
     padding: 14px;
   }
+
 }
