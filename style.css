@@ -296,10 +296,10 @@ a {
 .hero-art {
   position: absolute;
 
-  right: 3%;
+  right: 1%;
   top: 80px;
 
-  width: 58%;
+  width: 62%;
   height: 620px;
 
   background:
@@ -312,7 +312,7 @@ a {
 
   opacity: 0.85;
 
-  overflow: visible;
+  overflow: hidden;
 }
 
 
@@ -1168,10 +1168,18 @@ footer {
     font-size: 42px;
   }
 
-  .hero-art {
-    width: 60%;
-    opacity: 0.35;
-  }
+.hero-art {
+  width: 62%;
+  height: 560px;
+
+  right: 0;
+  top: 75px;
+
+  opacity: 0.55;
+
+  overflow: hidden;
+}
+
 
   .topic-grid {
     grid-template-columns:
