@@ -300,7 +300,7 @@ a {
   top: 80px;
 
   width: 58%;
-  height: 570px;
+  height: 620px;
 
   background:
     radial-gradient(
@@ -312,11 +312,7 @@ a {
 
   opacity: 0.85;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -339,10 +335,10 @@ a {
   position: absolute;
 
   right: 12%;
-  top: 45px;
+  top: 25px;
 
   width: 48%;
-  height: 480px;
+  height: 580px;
 
   border: 45px solid #17130e;
   border-bottom: 0;
@@ -1254,7 +1250,7 @@ footer {
   /* HERO */
 
   .hero {
-    min-height: 620px;
+    min-height: 720px;
 
     padding:
       115px
@@ -1323,16 +1319,6 @@ footer {
     justify-content: center;
 
     overflow: hidden;
-  }
-
-  .hero-art img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-    object-position: center center;
-
-    display: block;
   }
 
   .arch {
