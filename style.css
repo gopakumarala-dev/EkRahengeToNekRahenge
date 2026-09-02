@@ -20,11 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================================================
-   COLOURS
-   ========================================================= */
-
 :root {
     --black: #020607;
     --black-soft: #080b0c;
@@ -32,6 +27,8 @@ body {
     --orange-light: #f6a329;
     --white: #f5f5f5;
     --muted: #b9bec0;
+    --line: #20292b;
+    --line-soft: #182124;
 }
 
 
@@ -42,11 +39,16 @@ body {
 .site-header {
     height: 72px;
     width: 100%;
+
     display: flex;
     align-items: center;
+
     padding: 0 42px;
+
     background: #020303;
+
     border-bottom: 1px solid #171a1b;
+
     position: relative;
     z-index: 50;
 }
@@ -57,83 +59,117 @@ body {
 .brand {
     display: flex;
     align-items: center;
+
     min-width: 370px;
+
+    text-decoration: none;
+    color: #fff;
 }
 
-.brand-logo {
+.site-logo {
     width: 48px;
     height: 48px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    overflow: hidden;
-}
 
-.brand-logo img {
-    width: 100%;
-    height: 100%;
     object-fit: contain;
+
+    background: #fff;
+
+    flex-shrink: 0;
+
+    margin-right: 10px;
 }
 
 .brand-text {
     line-height: 1;
 }
 
-.brand-hindi {
+.brand-text b {
+    display: block;
+
+    color: #f5f5f5;
+
     font-size: 20px;
     font-weight: 700;
+
     white-space: nowrap;
 }
 
-.brand-english {
+.brand-text small {
+    display: block;
+
     margin-top: 5px;
-    font-size: 11px;
-    letter-spacing: .3px;
+
     color: #d7d7d7;
+
+    font-size: 11px;
+
+    letter-spacing: .3px;
 }
 
 
-/* NAVIGATION */
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
 
-.main-nav {
+.site-header nav {
     flex: 1;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     gap: 31px;
 }
 
-.main-nav a {
+.site-header nav a {
     color: #e7e7e7;
+
     text-decoration: none;
+
     font-size: 13px;
+
     font-weight: 600;
+
     transition: color .2s ease;
 }
 
-.main-nav a:hover {
+.site-header nav a:hover {
     color: var(--orange);
 }
 
 
-/* SEARCH */
+/* =========================================================
+   SEARCH
+   ========================================================= */
 
-.search-btn {
+.search {
     height: 42px;
+
     padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: transparent;
+
     border: 1px solid #805500;
+
     border-radius: 7px;
+
     color: #f1f1f1;
+
+    text-decoration: none;
+
     font-size: 12px;
+
     font-weight: 600;
-    cursor: pointer;
+
+    white-space: nowrap;
 }
 
-.search-btn span {
-    margin-right: 8px;
+.search:hover {
     color: var(--orange);
 }
 
@@ -144,8 +180,11 @@ body {
 
 .hero {
     position: relative;
+
     min-height: 645px;
+
     display: flex;
+
     overflow: hidden;
 
     background:
@@ -165,123 +204,167 @@ body {
 
 
 /* =========================================================
-   LEFT HERO CONTENT
+   HERO COPY
    ========================================================= */
 
-.hero-content {
+.hero-copy {
     position: relative;
+
     z-index: 10;
 
     width: 52%;
-    padding-left: 5.7%;
-    padding-top: 67px;
+
+    padding-left: 5.2%;
+
+    padding-top: 115px;
 }
 
-.eyebrow {
+.kicker {
     color: var(--orange);
-    font-size: 13px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
     font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-size: clamp(48px, 4.1vw, 74px);
-    line-height: .98;
-    font-weight: 900;
-    letter-spacing: -2.5px;
-    color: #f5f5f5;
+    margin: 25px 0 15px;
+
+    font-size: 52px;
+
+    line-height: 1.03;
+
+    letter-spacing: -1px;
+
+    font-weight: 800;
+
+    color: #f4f4f4;
 }
 
 .hero h1 span {
     color: var(--orange);
 }
 
-.hero-description {
-    margin-top: 43px;
-    font-size: 17px;
-    line-height: 1.65;
-    color: #e1e4e5;
+.hero p {
+    margin-top: 28px;
+
+    color: #dddddd;
+
+    font-size: 15px;
+
+    line-height: 1.55;
 }
 
-.explore-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.hero-copy > small {
+    display: block;
 
-    margin-top: 34px;
+    margin-top: 15px;
 
-    width: 215px;
-    height: 54px;
+    color: #bbbbbb;
 
-    background: var(--orange);
-    color: #fff;
-
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
+    font-size: 12px;
 }
 
-.explore-btn:hover {
-    transform: translateY(-2px);
-    background: #ff941d;
-}
-
-.evidence-line {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #e1e1e1;
-}
-
-.evidence-line strong {
+.hero-copy > small em {
     color: var(--orange);
-    font-weight: 500;
+
+    font-style: normal;
 }
 
 
 /* =========================================================
-   TEMPLE AREA
+   HERO BUTTON
    ========================================================= */
 
-.temple-area {
-    position: absolute;
-    right: 4.5%;
-    top: 0;
-    width: 47%;
-    height: 100%;
-    display: flex;
+.cta {
+    display: inline-flex;
+
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
+
+    min-height: 54px;
+
+    padding: 0 30px;
+
+    margin-top: 20px;
+
+    background: var(--orange);
+
+    color: #111 !important;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+
+    border: 1px solid var(--orange);
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.cta:hover {
+    background: transparent;
+
+    color: var(--orange) !important;
+
+    transform: translateY(-2px);
 }
 
 
-/* GLOW */
+/* =========================================================
+   HERO ARTWORK
+   ========================================================= */
 
-.temple-glow {
+.hero-art {
     position: absolute;
 
-    width: 510px;
-    height: 470px;
+    right: 1.5%;
+    top: 0;
 
-    right: 6%;
-    bottom: 70px;
+    width: 52%;
+    height: 100%;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   AMBIENT TEMPLE GLOW
+   ========================================================= */
+
+.hero-art::before {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 560px;
+
+    right: 4%;
+    bottom: 5px;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
-            ellipse,
-            rgba(201, 94, 11, .60) 0%,
-            rgba(134, 58, 5, .35) 27%,
-            rgba(75, 34, 7, .14) 52%,
-            transparent 73%
+            ellipse at center,
+            rgba(255, 124, 10, .46) 0%,
+            rgba(186, 75, 4, .30) 25%,
+            rgba(94, 38, 5, .17) 45%,
+            transparent 72%
         );
 
-    filter: blur(15px);
+    filter: blur(24px);
 }
 
 
@@ -290,52 +373,93 @@ body {
    ========================================================= */
 
 .arch {
-    position: relative;
+    position: absolute;
+
+    right: 7%;
+    top: 45px;
 
     width: 500px;
     height: 580px;
 
-    border-radius: 260px 260px 0 0;
-
     border: 30px solid #171411;
+
     border-bottom: 0;
+
+    border-radius: 260px 260px 0 0;
 
     background:
         linear-gradient(
             180deg,
-            rgba(42, 25, 12, .65),
-            rgba(10, 10, 9, .80)
+            rgba(42, 25, 12, .70),
+            rgba(8, 9, 9, .94)
         );
 
     box-shadow:
-        0 0 0 1px rgba(0,0,0,.5),
-        inset 0 0 55px rgba(0,0,0,.7),
-        0 0 90px rgba(116,57,8,.12);
+        0 0 0 1px rgba(0, 0, 0, .7),
+        inset 0 0 50px rgba(0, 0, 0, .82),
+        0 0 90px rgba(116, 57, 8, .18);
 
-    z-index: 3;
+    color: transparent;
+
+    overflow: hidden;
+
+    z-index: 5;
 }
 
 
-/* INNER ARCH */
+/* =========================================================
+   INNER ARCH
+   ========================================================= */
 
-.arch-inner {
+.arch::before {
+    content: "";
+
     position: absolute;
-    inset: 20px;
 
-    border-radius: 220px 220px 0 0;
+    inset: 19px;
 
-    border: 2px solid rgba(111, 63, 22, .35);
+    border: 2px solid rgba(126, 69, 20, .42);
+
     border-bottom: 0;
+
+    border-radius: 225px 225px 0 0;
 
     background:
         radial-gradient(
-            ellipse at center 38%,
-            rgba(151, 70, 7, .45),
-            rgba(35, 20, 9, .28) 45%,
-            rgba(4, 7, 8, .85) 80%
+            ellipse at center 35%,
+            rgba(190, 82, 7, .46) 0%,
+            rgba(112, 45, 5, .32) 26%,
+            rgba(45, 25, 10, .34) 48%,
+            rgba(4, 7, 8, .94) 78%
         );
 
-    overflow: hidden;
+    box-shadow:
+        inset 0 0 45px rgba(0, 0, 0, .78);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   ARCH INNER GOLDEN BORDER
+   ========================================================= */
+
+.arch::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 29px;
+
+    border: 1px solid rgba(185, 100, 26, .30);
+
+    border-bottom: 0;
+
+    border-radius: 215px 215px 0 0;
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
 
@@ -343,7 +467,11 @@ body {
    OM
    ========================================================= */
 
-.om-symbol {
+.arch {
+    font-size: 0;
+}
+
+.arch > .temple {
     position: absolute;
 
     top: 82px;
@@ -351,411 +479,207 @@ body {
 
     transform: translateX(-50%);
 
+    width: 125px;
+    height: 125px;
+
+    z-index: 20;
+
+    font-size: 0;
+
+    color: transparent;
+
+    opacity: 1;
+}
+
+
+/* OM SYMBOL CREATED WITH TEXT */
+
+.arch > .temple::before {
+    content: "ॐ";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
     font-family:
         "Noto Sans Devanagari",
         "Mangal",
-        serif;
+        Arial,
+        sans-serif;
 
-    font-size: 88px;
+    font-size: 105px;
+
     line-height: 1;
 
     color: #ffad31;
 
     text-shadow:
-        0 0 12px rgba(255,142,20,.65),
-        0 0 30px rgba(225,99,5,.40);
-
-    z-index: 20;
+        0 0 10px rgba(255, 145, 25, .95),
+        0 0 24px rgba(255, 121, 8, .72),
+        0 0 48px rgba(214, 83, 0, .48);
 }
 
 
 /* =========================================================
-   TEMPLE
+   TEMPLE BODY
    ========================================================= */
 
-.temple {
+.arch > .temple::after {
+    content: "";
+
     position: absolute;
 
-    width: 355px;
-    height: 310px;
+    width: 330px;
+    height: 205px;
 
     left: 50%;
-    bottom: 5px;
 
-    transform: translateX(-50%);
-
-    z-index: 10;
-}
-
-
-/* =========================================================
-   TEMPLE TOWERS
-   ========================================================= */
-
-.temple-tower {
-    position: absolute;
-    bottom: 89px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #70400e,
-            #b56b1a 48%,
-            #70400e
-        );
-
-    box-shadow:
-        inset 0 0 15px rgba(0,0,0,.5);
-}
-
-
-/* MAIN TOWER */
-
-.main-tower {
-    width: 108px;
-    height: 190px;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    clip-path: polygon(
-        50% 0,
-        68% 12%,
-        72% 23%,
-        82% 34%,
-        84% 47%,
-        93% 60%,
-        100% 100%,
-        0 100%,
-        7% 60%,
-        16% 47%,
-        18% 34%,
-        28% 23%,
-        32% 12%
-    );
-}
-
-
-/* TOWER TOP */
-
-.tower-top {
-    position: absolute;
-
-    width: 24px;
-    height: 22px;
-
-    top: -18px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background: #e69a28;
-}
-
-
-/* TOWER FINIAL */
-
-.tower-finial {
-    position: absolute;
-
-    width: 8px;
-    height: 18px;
-
-    top: -34px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background: #e8a034;
-}
-
-
-/* TOWER DETAILS */
-
-.tower-lines {
-    position: absolute;
-    inset: 30px 15px 10px;
-
-    background:
-        repeating-linear-gradient(
-            0deg,
-            transparent 0 12px,
-            rgba(255,184,69,.18) 13px 15px
-        );
-}
-
-
-/* SIDE TOWERS */
-
-.side-tower {
-    width: 68px;
-    height: 125px;
-    bottom: 89px;
-}
-
-.left-tower {
-    left: 22px;
-}
-
-.right-tower {
-    right: 22px;
-}
-
-.side-top {
-    position: absolute;
-
-    width: 0;
-    height: 0;
-
-    border-left: 34px solid transparent;
-    border-right: 34px solid transparent;
-    border-bottom: 38px solid #b86c1b;
-
-    top: -31px;
-}
-
-.side-body {
-    position: absolute;
-    inset: 25px 8px 0;
-
-    background:
-        repeating-linear-gradient(
-            0deg,
-            #78430f 0 9px,
-            #a55c15 10px 12px
-        );
-}
-
-
-/* =========================================================
-   TEMPLE BASE
-   ========================================================= */
-
-.temple-base {
-    position: absolute;
-
-    left: 25px;
-    right: 25px;
-    bottom: 42px;
-
-    height: 105px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #63370b,
-            #a55d15 25%,
-            #7c430d 50%,
-            #a55d15 75%,
-            #63370b
-        );
-
-    box-shadow:
-        inset 0 0 22px rgba(0,0,0,.55);
-}
-
-
-/* ROOF */
-
-.temple-roof {
-    position: absolute;
-
-    top: -20px;
-    left: -12px;
-
-    width: calc(100% + 24px);
-    height: 28px;
-
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #63370b 0 12px,
-            #b16a1c 13px 18px
-        );
-
-    clip-path: polygon(
-        0 100%,
-        4% 30%,
-        50% 0,
-        96% 30%,
-        100% 100%
-    );
-}
-
-
-/* PILLARS */
-
-.temple-pillars {
-    position: absolute;
-
-    left: 15px;
-    right: 15px;
-    bottom: 14px;
-
-    height: 70px;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-.temple-pillars span {
-    width: 13px;
-    height: 70px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5c330a,
-            #c17820,
-            #63380c
-        );
-
-    box-shadow:
-        0 0 5px rgba(0,0,0,.5);
-}
-
-
-/* DOOR */
-
-.temple-door {
-    position: absolute;
-
-    width: 48px;
-    height: 70px;
-
-    bottom: 0;
-    left: 50%;
+    bottom: -290px;
 
     transform: translateX(-50%);
 
     background:
         linear-gradient(
             90deg,
-            #321b07,
-            #75410d,
-            #321b07
+            #4d2a07 0%,
+            #8d4d0d 12%,
+            #b96b18 30%,
+            #8e4e0d 50%,
+            #b96b18 70%,
+            #8d4d0d 88%,
+            #4d2a07 100%
         );
 
-    border-radius: 25px 25px 0 0;
-
-    border: 2px solid #c17920;
-}
-
-.door-light {
-    position: absolute;
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    left: 50%;
-    top: 34px;
-
-    transform: translateX(-50%);
-
-    background: #ffad32;
-
     box-shadow:
-        0 0 15px #ff8b14,
-        0 0 30px rgba(255,121,0,.8);
+        inset 0 0 22px rgba(0, 0, 0, .55),
+        0 0 12px rgba(194, 100, 18, .15);
 }
 
 
 /* =========================================================
-   STEPS
+   CSS TEMPLE — USING ARCH SHADOW LAYERS
    ========================================================= */
 
-.temple-steps {
-    position: absolute;
+/* Main temple silhouette */
 
-    left: 50%;
-    bottom: 0;
-
-    transform: translateX(-50%);
-
-    width: 180px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
+.arch .temple {
+    overflow: visible;
 }
 
-.temple-steps span {
-    height: 7px;
+.arch .temple::after {
+    box-shadow:
 
-    background:
-        linear-gradient(
-            90deg,
-            #593109,
-            #b46b1b,
-            #593109
-        );
+        /* Main tower */
+        0 -180px 0 -70px #8d4d0d,
 
-    border-top: 1px solid rgba(255,183,73,.15);
-}
+        /* Main tower upper section */
+        0 -205px 0 -78px #a45a10,
 
-.temple-steps span:nth-child(1) {
-    width: 90px;
-}
+        /* Left tower */
+        -105px -125px 0 -105px #8a4a0c,
 
-.temple-steps span:nth-child(2) {
-    width: 120px;
-}
+        /* Right tower */
+        105px -125px 0 -105px #8a4a0c,
 
-.temple-steps span:nth-child(3) {
-    width: 150px;
-}
-
-.temple-steps span:nth-child(4) {
-    width: 180px;
+        /* temple base */
+        0 0 0 0 #8d4d0d;
 }
 
 
 /* =========================================================
-   LAMPS
+   TEMPLE ARCHITECTURAL DETAILS
    ========================================================= */
 
-.lamp {
-    position: absolute;
-
-    bottom: 26px;
-
-    width: 20px;
-    height: 10px;
-
-    background: #7b470f;
-
-    border-radius: 50%;
+.arch .temple {
+    background: transparent;
 }
 
-.lamp-left {
-    left: 5px;
+
+/* Temple main tower */
+
+.arch .temple {
+    --temple-gold: #b66a18;
 }
 
-.lamp-right {
-    right: 5px;
+
+/* Decorative central temple shape */
+
+.arch .temple::before {
+    text-align: center;
 }
 
-.flame {
-    position: absolute;
 
-    width: 8px;
-    height: 15px;
+/* =========================================================
+   TEMPLE FLOOR / STEPS
+   ========================================================= */
 
-    left: 50%;
-    bottom: 5px;
-
-    transform: translateX(-50%);
-
-    background: #ffad31;
-
-    border-radius: 50% 50% 50% 50%;
-
+.arch .temple {
     box-shadow:
-        0 0 10px #ff8500,
-        0 0 25px rgba(255,113,0,.7);
+
+        /* central temple */
+        0 285px 0 -45px #70400c,
+
+        /* roof */
+        0 245px 0 -35px #a35b13,
+
+        /* side wings */
+        -95px 270px 0 -55px #78420b,
+        95px 270px 0 -55px #78420b,
+
+        /* steps */
+        0 315px 0 -18px #a96116,
+        0 327px 0 -12px #8d4d0e,
+        0 339px 0 -7px #b36a1b;
+}
+
+
+/* =========================================================
+   TEMPLE LIGHT
+   ========================================================= */
+
+.arch .temple {
+    filter:
+        drop-shadow(0 0 12px rgba(255, 139, 18, .22));
+}
+
+
+/* =========================================================
+   GOLDEN STAR ABOVE OM
+   ========================================================= */
+
+.arch .temple {
+    isolation: isolate;
+}
+
+.arch .temple span {
+    display: none;
+}
+
+
+/* =========================================================
+   TEMPLE LIGHTS
+   ========================================================= */
+
+.arch .temple {
+    --lamp:
+        radial-gradient(
+            circle,
+            #ffd16a 0%,
+            #ff9a20 35%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   EXTRA ARCH DECORATION
+   ========================================================= */
+
+.arch-inner {
+    display: none;
 }
 
 
@@ -763,32 +687,243 @@ body {
    HERO DOTS
    ========================================================= */
 
-.hero-dots {
+.dots {
     position: absolute;
 
-    right: 22px;
+    right: 2%;
+
     top: 50%;
 
     transform: translateY(-50%);
 
     display: flex;
+
     flex-direction: column;
+
     gap: 14px;
 
     z-index: 30;
 }
 
-.hero-dots span {
+.dots i {
+    display: block;
+
     width: 12px;
     height: 12px;
 
-    border: 1px solid #d9d9d9;
+    border: 1px solid #dddddd;
+
     border-radius: 50%;
+
+    background: transparent;
 }
 
-.hero-dots span.active {
+.dots i.active {
     background: var(--orange);
-    border-color: #fff;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 7px rgba(255, 135, 8, .55);
+}
+
+
+/* =========================================================
+   MAP SECTION
+   ========================================================= */
+
+.map-section {
+    position: relative;
+
+    padding: 80px 4vw 70px;
+
+    background: #061012;
+
+    border-top: 1px solid var(--line-soft);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.map-section h2,
+.dark-section h2,
+.civil h2 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-size: clamp(30px, 4vw, 50px);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TIMELINE STRIP
+   ========================================================= */
+
+.timeline-strip {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 0 20px 12px;
+
+    border-bottom: 2px solid var(--orange);
+
+    color: #cccccc;
+
+    font-size: 13px;
+}
+
+.timeline-strip span {
+    color: var(--orange);
+
+    font-weight: 600;
+}
+
+.timeline-strip i {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MAP ART
+   ========================================================= */
+
+.map-art {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: 360px;
+
+    margin: 35px auto 25px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 133, 0, .18),
+            transparent 50%
+        ),
+        #071214;
+
+    overflow: hidden;
+}
+
+.route {
+    position: absolute;
+
+    color: #eeeeee;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.route small {
+    color: var(--orange);
+
+    font-size: 13px;
+}
+
+.r1 {
+    left: 10%;
+    top: 30%;
+}
+
+.r2 {
+    left: 20%;
+    top: 58%;
+}
+
+.r3 {
+    left: 39%;
+    top: 35%;
+}
+
+.r4 {
+    left: 49%;
+    top: 20%;
+}
+
+.bharat {
+    position: absolute;
+
+    left: 58%;
+    top: 48%;
+
+    font-size: 34px;
+}
+
+.sea {
+    position: absolute;
+
+    right: 8%;
+    top: 44%;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+   ========================================================= */
+
+.outline-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    padding: 14px 28px;
+
+    color: var(--orange) !important;
+
+    border: 1px solid var(--orange);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: .5px;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.outline-btn:hover {
+    background: var(--orange);
+
+    color: #111 !important;
+}
+
+
+/* =========================================================
+   DARK SECTIONS
+   ========================================================= */
+
+.dark-section {
+    padding: 22px 3% 30px;
+
+    background: #04090a;
+
+    text-align: center;
 }
 
 
@@ -796,37 +931,496 @@ body {
    TIMELINE
    ========================================================= */
 
-.timeline-intro {
-    min-height: 170px;
-
-    background: #041014;
-
-    border-top: 1px solid #182326;
-
-    padding: 42px 13% 30px;
+.timeline-section {
+    border-top: 1px solid #11191b;
 }
 
-.timeline-intro h2 {
-    text-align: center;
+.timeline-content {
+    display: grid;
 
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: .3px;
+    grid-template-columns: repeat(4, 1fr);
 
-    margin-bottom: 30px;
+    gap: 10px;
+
+    max-width: 1200px;
+
+    margin: 18px auto 0;
 }
 
-.timeline {
+.timeline-content article {
+    min-height: 145px;
+
+    padding: 18px;
+
+    border: 1px solid #273034;
+
+    background:
+        linear-gradient(
+            #101619,
+            #080b0c
+        );
+
+    text-align: left;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    letter-spacing: .5px;
+}
+
+.timeline-content p {
+    margin: 0;
+
+    color: #bbbbbb;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   HISTORY TOPICS
+   ========================================================= */
+
+.topic-grid {
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+
+    gap: 8px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+.topic-card {
+    min-height: 120px;
+
+    padding: 12px;
+
+    border: 1px solid #273034;
+
+    background:
+        linear-gradient(
+            #101619,
+            #080b0c
+        );
+
     display: flex;
-    justify-content: space-between;
+
+    flex-direction: column;
+
+    justify-content: center;
+
     align-items: center;
 
-    color: #ddd;
-    font-size: 13px;
+    gap: 12px;
+
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease,
+        background .2s ease;
 }
 
-.timeline span:first-child {
+.topic-card:hover {
+    border-color: var(--orange);
+
+    background:
+        linear-gradient(
+            #171c1e,
+            #0b0e0f
+        );
+
+    transform: translateY(-2px);
+}
+
+.topic-card b {
+    font-size: 27px;
+
+    color: #e57d0d;
+}
+
+.topic-card span {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+   ========================================================= */
+
+.two-col {
+    display: grid;
+
+    grid-template-columns: 1fr 1.08fr;
+
+    gap: 18px;
+
+    padding: 0 3% 10px;
+
+    background: #04090a;
+}
+
+.panel {
+    min-height: 245px;
+
+    padding: 18px;
+
+    border: 1px solid #242b2d;
+
+    background: #080e10;
+
+    text-align: center;
+}
+
+.panel h2 {
+    margin: 0 0 14px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   SOURCE FLOW
+   ========================================================= */
+
+.source-flow {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.source-flow span {
+    flex: 1;
+
+    border: 1px solid #252d30;
+
+    padding: 25px 10px;
+
+    font-size: 9px;
+}
+
+.establish {
+    border: 1px solid #6e430c;
+
     color: var(--orange);
+
+    padding: 10px;
+
+    margin: 12px auto;
+
+    max-width: 390px;
+}
+
+
+/* =========================================================
+   ATLAS
+   ========================================================= */
+
+.atlas {
+    text-align: left;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+.atlas > div:first-child {
+    flex: 1;
+}
+
+.atlas strong {
+    display: block;
+
+    color: #f5810c;
+
+    font-size: 27px;
+}
+
+.atlas > div:first-child > small {
+    color: var(--orange);
+}
+
+.atlas ul {
+    list-style: none;
+
+    padding: 4px 0;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.atlas ul li {
+    margin: 2px 0;
+}
+
+
+/* =========================================================
+   MINI MAP
+   ========================================================= */
+
+.mini-map {
+    width: 45%;
+
+    background:
+        radial-gradient(
+            circle,
+            #b96710,
+            #15191a 50%
+        );
+
+    clip-path: polygon(
+        20% 0,
+        100% 15%,
+        90% 100%,
+        0 80%
+    );
+
+    font-size: 80px;
+
+    color: #e98a17;
+
+    text-align: center;
+
+    padding-top: 55px;
+}
+
+
+/* =========================================================
+   GEN Z
+   ========================================================= */
+
+.genz {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        repeat(4, 1fr)
+        1.2fr;
+
+    gap: 8px;
+
+    padding: 8px 3%;
+
+    background: #061011;
+}
+
+.genz > * {
+    border: 1px solid #202a2c;
+
+    padding: 13px;
+
+    min-height: 105px;
+}
+
+.genz-title {
+    font-size: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.genz-title span {
+    color: #f58a0c;
+
+    font-size: 30px;
+}
+
+.genz article b {
+    font-size: 12px;
+}
+
+.genz article p {
+    font-size: 11px;
+
+    color: #bbbbbb;
+}
+
+.genz article a {
+    display: inline-block;
+
+    font-size: 10px;
+
+    color: #f58a0c;
+
+    text-decoration: none;
+
+    border: 1px solid #92500b;
+
+    padding: 5px 10px;
+
+    margin-top: 3px;
+}
+
+.genz article a:hover {
+    background: var(--orange);
+
+    color: #ffffff;
+}
+
+.story-card {
+    background:
+        linear-gradient(
+            135deg,
+            #0c1112,
+            #4a2b11
+        );
+}
+
+.story-card small {
+    display: block;
+
+    color: #999999;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CIVILISATION
+   ========================================================= */
+
+.civil {
+    text-align: center;
+
+    padding: 14px 3% 25px;
+
+    background: #05090a;
+}
+
+.civil-grid {
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    border-bottom: 1px solid #39240d;
+}
+
+.civil-grid span {
+    font-size: 28px;
+
+    color: #ef850d;
+
+    padding: 8px;
+
+    border-right: 1px solid #222;
+
+    min-width: 0;
+}
+
+.civil-grid span:last-child {
+    border-right: 0;
+}
+
+.civil-grid small {
+    display: block;
+
+    color: #eeeeee;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+    min-height: 220px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1fr
+        1.1fr
+        1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 6%;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            #6d3b12,
+            #081011 42%
+        );
+
+    border-top: 1px solid #6b3d0b;
+}
+
+.closing h2 {
+    font-size: 26px;
+
+    line-height: 1.05;
+
+    margin: 0;
+}
+
+.silhouette {
+    font-size: 75px;
+
+    color: #f0800a;
+}
+
+.devanagari {
+    font-size: 42px;
+
+    color: #f0800a;
+
+    line-height: 1;
+}
+
+.devanagari small {
+    display: block;
+
+    color: #eeeeee;
+
+    font-size: 10px;
+
+    margin-top: 8px;
+
+    line-height: 1.4;
+}
+
+.closing-text {
+    font-size: 10px;
+
+    color: #dddddd;
+}
+
+.closing-text em {
+    color: var(--orange);
+
+    font-style: normal;
+
+    font-weight: 700;
 }
 
 
@@ -834,94 +1428,108 @@ body {
    FOOTER
    ========================================================= */
 
-.site-footer {
-    background: #020303;
-
-    min-height: 155px;
-
-    border-top: 1px solid #111718;
-}
-
-.footer-inner {
-    max-width: 1180px;
-
-    margin: auto;
-
-    min-height: 155px;
-
+footer {
     display: flex;
+
     align-items: center;
 
-    gap: 22px;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 18px 4% 22px;
+
+    background: #020506;
+
+    border-top: 1px solid #1b2021;
+
+    font-size: 9px;
+
+    text-align: center;
+
+    position: relative;
 }
 
 
-/* SMALL FOOTER LOGO */
+/* FOOTER LOGO */
+
+.footer-logo-wrap {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
 
 .footer-logo {
-    width: 55px;
-    height: 55px;
+    display: block;
+
+    width: 58px;
+
+    height: 58px;
 
     object-fit: contain;
+}
 
-    background: #fff;
+.footer-logo img {
+    width: 100%;
 
-    flex-shrink: 0;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
 }
 
 
-/* FOOTER LINKS */
+/* FOOTER NAV */
 
-.footer-links {
+.footer-nav {
     display: flex;
+
     align-items: center;
-    gap: 27px;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
 }
 
-.footer-links a {
-    color: #f0f0f0;
+.footer-nav a {
+    color: #dddddd;
 
     text-decoration: none;
+}
 
-    font-size: 11px;
-    font-weight: 600;
+.footer-nav a:hover {
+    color: var(--orange);
+}
+
+
+/* FOOTER ICONS */
+
+.footer-icons {
+    color: var(--orange);
 
     white-space: nowrap;
-}
 
-.footer-links a:hover {
-    color: var(--orange);
-}
-
-
-/* SOCIAL */
-
-.footer-social {
-    display: flex;
-    gap: 13px;
-
-    margin-left: auto;
-
-    color: var(--orange);
-
-    font-size: 11px;
+    letter-spacing: 6px;
 }
 
 
 /* COPYRIGHT */
 
 .copyright {
-    position: absolute;
+    width: 100%;
 
-    margin-top: 115px;
+    text-align: center;
 
-    left: 50%;
-
-    transform: translateX(-50%);
+    color: #777777;
 
     font-size: 9px;
 
-    color: #777;
+    padding-top: 4px;
 }
 
 
@@ -936,19 +1544,24 @@ body {
     }
 
     .brand {
-        min-width: 300px;
+        min-width: 230px;
     }
 
-    .main-nav {
+    .brand-text b {
+        font-size: 16px;
+    }
+
+    .site-header nav {
         gap: 17px;
     }
 
-    .main-nav a {
+    .site-header nav a {
         font-size: 11px;
     }
 
-    .hero-content {
+    .hero-copy {
         width: 53%;
+
         padding-left: 5%;
     }
 
@@ -958,12 +1571,94 @@ body {
 
     .arch {
         width: 420px;
+
         height: 530px;
+
+        right: 3%;
     }
 
-    .temple {
-        transform: translateX(-50%) scale(.88);
-        transform-origin: bottom center;
+    .topic-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .civil-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .genz {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 0 3%;
+    }
+
+    .site-header nav {
+        display: none;
+    }
+
+    .brand {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .hero {
+        min-height: 620px;
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-art {
+        width: 60%;
+
+        opacity: .35;
+    }
+
+    .timeline-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .closing {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .genz {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .genz-title {
+        grid-column: span 2;
+    }
+
+    .civil-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
@@ -972,172 +1667,494 @@ body {
    MOBILE
    ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    body {
+        font-size: 13px;
+    }
+
+
+    /* HEADER */
 
     .site-header {
-        height: auto;
-        min-height: 70px;
-        padding: 12px 18px;
+        height: 70px;
 
-        flex-wrap: wrap;
+        padding: 0 14px;
+
+        gap: 8px;
     }
 
-    .brand {
-        min-width: auto;
-        flex: 1;
-    }
-
-    .brand-hindi {
-        font-size: 15px;
-    }
-
-    .brand-english {
-        font-size: 9px;
-    }
-
-    .brand-logo {
+    .site-logo {
         width: 42px;
         height: 42px;
     }
 
-    .main-nav {
-        order: 3;
-
-        width: 100%;
-
-        overflow-x: auto;
-
-        justify-content: flex-start;
-
-        padding-top: 12px;
-
-        gap: 22px;
+    .brand-text b {
+        font-size: 14px;
     }
 
-    .main-nav a {
-        white-space: nowrap;
+    .brand-text small {
+        font-size: 8px;
+
+        letter-spacing: .6px;
     }
 
-    .search-btn {
-        height: 36px;
+    .search {
+        display: none;
     }
 
+
+    /* HERO */
 
     .hero {
-        min-height: 850px;
-        display: block;
+        min-height: 620px;
+
+        padding:
+            110px
+            20px
+            45px;
     }
 
-    .hero-content {
+    .hero-copy {
         width: 100%;
 
-        padding: 45px 25px 0;
+        padding: 0;
+    }
+
+    .kicker {
+        font-size: 9px;
+
+        letter-spacing: 2px;
     }
 
     .hero h1 {
-        font-size: 44px;
-        letter-spacing: -1.5px;
+        font-size: 32px;
+
+        line-height: 1.06;
+
+        letter-spacing: -.5px;
     }
 
-    .hero-description {
-        font-size: 15px;
-        margin-top: 30px;
+    .hero p {
+        font-size: 14px;
+
+        line-height: 1.5;
     }
 
-    .temple-area {
-        position: absolute;
+    .hero p br {
+        display: none;
+    }
 
+    .hero-art {
         width: 100%;
-        height: 390px;
 
-        right: 0;
-        bottom: 0;
+        height: 400px;
 
-        align-items: flex-end;
+        right: -25%;
+
+        top: 180px;
+
+        opacity: .20;
     }
 
     .arch {
         width: 330px;
+
         height: 380px;
 
+        right: 5%;
+
+        top: 20px;
+
         border-width: 21px;
+
         border-radius: 180px 180px 0 0;
     }
 
-    .arch-inner {
-        inset: 13px;
-        border-radius: 160px 160px 0 0;
+    .arch > .temple {
+        top: 48px;
     }
 
-    .om-symbol {
-        top: 45px;
-        font-size: 62px;
+    .arch > .temple::before {
+        font-size: 65px;
     }
 
-    .temple {
-        transform: translateX(-50%) scale(.70);
-        transform-origin: bottom center;
+    .dots {
+        right: 10px;
+
+        top: 300px;
+
+        gap: 10px;
     }
 
-    .hero-dots {
-        right: 12px;
+    .dots i {
+        width: 8px;
+
+        height: 8px;
     }
 
 
-    .timeline-intro {
-        padding: 35px 20px;
+    /* MAP */
+
+    .map-section {
+        padding:
+            20px
+            15px
+            25px;
     }
 
-    .timeline-intro h2 {
-        font-size: 21px;
+    .map-section h2,
+    .dark-section h2,
+    .civil h2 {
+        font-size: 18px;
+
+        line-height: 1.25;
     }
 
-    .timeline {
+    .timeline-strip {
         overflow-x: auto;
-        gap: 30px;
+
         justify-content: flex-start;
+
+        gap: 18px;
+
+        padding: 0 5px 8px;
+
         white-space: nowrap;
+
+        scrollbar-width: none;
+
+        font-size: 8px;
+    }
+
+    .timeline-strip::-webkit-scrollbar {
+        display: none;
+    }
+
+    .timeline-strip span,
+    .timeline-strip i {
+        flex-shrink: 0;
     }
 
 
-    .site-footer {
-        padding: 25px 20px;
+    /* MAP ART */
+
+    .map-art {
+        height: 160px;
     }
 
-    .footer-inner {
+    .route {
+        font-size: 8px;
+    }
+
+    .route small {
+        font-size: 7px;
+    }
+
+    .bharat {
+        font-size: 14px;
+    }
+
+    .sea {
+        font-size: 9px;
+    }
+
+
+    /* TIMELINE */
+
+    .dark-section {
+        padding:
+            18px
+            12px
+            25px;
+    }
+
+    .timeline-content {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .timeline-content article {
         min-height: auto;
 
+        padding: 16px;
+    }
+
+    .timeline-content h3 {
+        font-size: 12px;
+    }
+
+    .timeline-content p {
+        font-size: 10px;
+    }
+
+
+    /* HISTORY */
+
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 7px;
+    }
+
+    .topic-card {
+        min-height: 105px;
+    }
+
+    .topic-card b {
+        font-size: 24px;
+    }
+
+    .topic-card span {
+        font-size: 9px;
+    }
+
+
+    /* TWO COLUMN */
+
+    .two-col {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding:
+            0
+            12px
+            10px;
+    }
+
+    .panel {
+        padding: 15px;
+
+        min-height: auto;
+    }
+
+    .panel h2 {
+        font-size: 17px;
+    }
+
+
+    /* SOURCES */
+
+    .source-flow {
         flex-wrap: wrap;
 
-        justify-content: center;
+        gap: 5px;
+    }
+
+    .source-flow span {
+        min-width: 28%;
+
+        padding: 15px 5px;
+
+        font-size: 8px;
+    }
+
+    .establish {
+        font-size: 9px;
+    }
+
+
+    /* ATLAS */
+
+    .atlas {
+        min-height: 260px;
+    }
+
+    .atlas p {
+        font-size: 11px;
+    }
+
+    .mini-map {
+        width: 35%;
+
+        min-width: 100px;
+
+        font-size: 50px;
+
+        padding-top: 70px;
+    }
+
+
+    /* GEN Z */
+
+    .genz {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        padding:
+            8px
+            12px;
+    }
+
+    .genz-title {
+        grid-column: auto;
+
+        min-height: 70px;
+    }
+
+    .genz > * {
+        min-height: auto;
+
+        padding: 15px;
+    }
+
+    .genz article p {
+        margin: 7px 0;
+    }
+
+
+    /* CIVILISATION */
+
+    .civil {
+        padding:
+            15px
+            12px
+            25px;
+    }
+
+    .civil-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .civil-grid span {
+        border-bottom: 1px solid #222;
+
+        font-size: 25px;
+    }
+
+    .civil-grid span:nth-child(even) {
+        border-right: 0;
+    }
+
+    .civil-grid small {
+        font-size: 8px;
+    }
+
+
+    /* CLOSING */
+
+    .closing {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding:
+            30px
+            22px;
+    }
+
+    .silhouette {
+        font-size: 55px;
+    }
+
+    .closing h2 {
+        font-size: 25px;
+    }
+
+    .devanagari {
+        font-size: 34px;
+    }
+
+    .closing-text {
+        grid-column: auto;
+
+        font-size: 10px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding:
+            25px
+            15px
+            20px;
     }
 
     .footer-logo {
-        width: 48px;
-        height: 48px;
+        width: 58px;
+
+        height: 58px;
     }
 
-    .footer-links {
-        gap: 15px;
-        flex-wrap: wrap;
+    .footer-nav {
         justify-content: center;
+
+        gap: 12px 20px;
     }
 
-    .footer-social {
-        width: 100%;
-        justify-content: center;
-        margin: 8px 0 0;
+    .footer-nav a {
+        font-size: 9px;
+    }
+
+    .footer-icons {
+        font-size: 11px;
     }
 
     .copyright {
-        position: static;
+        font-size: 8px;
 
-        transform: none;
+        margin-top: 3px;
+    }
+}
 
-        width: 100%;
 
-        margin-top: 12px;
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
 
-        text-align: center;
+@media (max-width: 380px) {
+
+    .site-header {
+        padding: 0 14px;
+    }
+
+    .brand-text b {
+        font-size: 13px;
+    }
+
+    .brand-text small {
+        font-size: 7px;
+    }
+
+    .site-logo {
+        width: 38px;
+
+        height: 38px;
+    }
+
+    .hero {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .topic-card {
+        min-height: 95px;
+    }
+
+    .topic-card b {
+        font-size: 21px;
+    }
+
+    .timeline-content article {
+        padding: 14px;
     }
 }
