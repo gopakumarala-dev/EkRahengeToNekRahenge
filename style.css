@@ -3,6 +3,7 @@
    COMPLETE WEBSITE CSS
    ========================================================= */
 
+
 /* =========================================================
    RESET
    ========================================================= */
@@ -37,21 +38,6 @@ a {
 
 
 /* =========================================================
-   COLOURS
-   ========================================================= */
-
-:root {
-  --black: #020607;
-  --black-soft: #080b0c;
-  --orange: #f47d0b;
-  --orange-light: #f6a329;
-  --white: #f5f5f5;
-  --muted: #b9bec0;
-  --line: #171b1c;
-}
-
-
-/* =========================================================
    HEADER
    ========================================================= */
 
@@ -59,13 +45,11 @@ a {
   height: 78px;
   position: fixed;
   z-index: 1000;
-
   top: 0;
   left: 0;
   right: 0;
 
   background: rgba(2, 3, 3, 0.96);
-
   border-bottom: 1px solid #171b1c;
 
   display: flex;
@@ -77,7 +61,7 @@ a {
 
 
 /* =========================================================
-   HEADER BRAND
+   HEADER BRAND / LOGO
    ========================================================= */
 
 .brand {
@@ -100,8 +84,6 @@ a {
   justify-content: center;
 
   flex-shrink: 0;
-
-  overflow: hidden;
 }
 
 .site-logo {
@@ -109,7 +91,6 @@ a {
   height: 48px;
 
   object-fit: contain;
-
   display: block;
 }
 
@@ -118,23 +99,17 @@ a {
 }
 
 .brand b {
-  display: block;
-
   font-size: 19px;
   line-height: 1.1;
-
+  display: block;
   white-space: nowrap;
 }
 
 .brand small {
-  display: block;
-
-  margin-top: 3px;
-
   font-size: 9px;
   letter-spacing: 1.3px;
-
-  color: #dddddd;
+  display: block;
+  margin-top: 3px;
 }
 
 
@@ -144,19 +119,16 @@ a {
 
 .site-header nav {
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 25px;
-
   flex: 1;
 }
 
 .site-header nav a,
 .search {
   color: #eeeeee;
-
   text-decoration: none;
 
   font-size: 10px;
@@ -170,7 +142,7 @@ a {
 }
 
 .site-header nav a:hover {
-  color: var(--orange);
+  color: #f47d0b;
 }
 
 
@@ -180,7 +152,6 @@ a {
 
 .search {
   border: 1px solid #76500d;
-
   border-radius: 5px;
 
   padding: 8px 13px;
@@ -189,23 +160,21 @@ a {
 }
 
 .search:hover {
-  color: var(--orange);
-
-  border-color: var(--orange);
+  color: #f47d0b;
+  border-color: #f47d0b;
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 .hero {
   min-height: 650px;
 
-  padding: 130px 6% 50px;
+  padding: 145px 6% 55px;
 
   position: relative;
-
   overflow: hidden;
 
   background:
@@ -217,15 +186,9 @@ a {
     );
 }
 
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
 .hero-copy {
   position: relative;
-
-  z-index: 3;
+  z-index: 2;
 
   max-width: 760px;
 }
@@ -234,83 +197,57 @@ a {
   color: #e87b0b;
 
   font-size: 11px;
-
   letter-spacing: 3px;
-
   font-weight: bold;
 }
 
-
-/*
-   IMPORTANT:
-   Reduced from 52px to 46px.
-
-   This brings the heading back much closer
-   to the original screenshot.
-*/
-
 .hero h1 {
-  margin: 25px 0 12px;
-
-  font-size: 46px;
-
-  line-height: 1.04;
-
+  font-size: 52px;
+  line-height: 1.03;
   letter-spacing: -1px;
 
-  font-weight: 700;
+  margin: 25px 0 12px;
 }
 
 .hero h1 span {
   color: #e97909;
 }
 
-
-/* HERO DESCRIPTION */
-
 .hero p {
   font-size: 15px;
-
   color: #dddddd;
-
   margin-bottom: 10px;
 }
 
 .hero-copy > small {
   display: block;
-
   margin-top: 12px;
-
   color: #bbbbbb;
 }
 
 .hero em,
 .closing-text em {
   color: #f38b13;
-
   font-style: normal;
 }
 
 
 /* =========================================================
-   HERO BUTTON
-========================================================= */
+   BUTTONS
+   ========================================================= */
 
 .cta {
   display: inline-block;
 
   background: #f47d0b;
-
   color: #ffffff;
 
   text-decoration: none;
 
   padding: 12px 28px;
-
   margin-top: 12px;
 
   font-size: 12px;
-
   font-weight: bold;
 
   transition:
@@ -320,353 +257,8 @@ a {
 
 .cta:hover {
   background: #ff9125;
-
   transform: translateY(-1px);
 }
-
-
-/* =========================================================
-   HERO ART
-========================================================= */
-
-.hero-art {
-  position: absolute;
-
-  right: 3%;
-
-  top: 80px;
-
-  width: 58%;
-
-  height: 570px;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      #9a5b1c,
-      #21170d 35%,
-      transparent 68%
-    );
-
-  opacity: 0.85;
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   ARCH
-========================================================= */
-
-.arch {
-  position: absolute;
-
-  right: 12%;
-
-  top: 45px;
-
-  width: 48%;
-
-  height: 480px;
-
-  border: 45px solid #17130e;
-
-  border-bottom: 0;
-
-  border-radius: 260px 260px 0 0;
-
-  text-align: center;
-
-  padding-top: 100px;
-
-  font-size: 50px;
-
-  color: #ffad3a;
-}
-
-
-/* =========================================================
-   TEMPLE
-========================================================= */
-
-.temple {
-  font-size: 100px;
-
-  text-shadow:
-    0 0 40px #f5a33b;
-}
-
-
-/* =========================================================
-   HERO DOTS
-========================================================= */
-
-.dots {
-  position: absolute;
-
-  right: 2%;
-
-  top: 230px;
-
-  display: grid;
-
-  gap: 13px;
-}
-
-.dots i {
-  width: 11px;
-  height: 11px;
-
-  border: 1px solid #ffffff;
-
-  border-radius: 50%;
-}
-
-.dots .active {
-  background: #f47d0b;
-}
-
-
-/* =========================================================
-   COMMON SECTIONS
-========================================================= */
-
-.map-section,
-.dark-section,
-.civil,
-.two-col,
-.genz {
-  position: relative;
-}
-
-.map-section h2,
-.dark-section h2,
-.civil h2 {
-  font-size: 21px;
-
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================================================
-   MAP
-========================================================= */
-
-.map-section {
-  padding: 40px 6%;
-
-  background: #061013;
-}
-
-.map-section h2 {
-  text-align: center;
-
-  margin: 0 0 30px;
-}
-
-.timeline-strip {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  margin-bottom: 25px;
-}
-
-.timeline-strip span,
-.timeline-strip i {
-  font-size: 11px;
-
-  font-style: normal;
-}
-
-.timeline-strip span {
-  color: #f47d0b;
-}
-
-
-/* MAP ART */
-
-.map-art {
-  position: relative;
-
-  height: 260px;
-
-  border: 1px solid #182426;
-
-  background:
-    radial-gradient(
-      circle at center,
-      #172426,
-      #061013
-    );
-
-  overflow: hidden;
-}
-
-.route {
-  position: absolute;
-
-  color: #d7d7d7;
-
-  font-size: 11px;
-
-  text-align: center;
-}
-
-.route small {
-  color: #777;
-
-  font-size: 9px;
-}
-
-.r1 {
-  left: 12%;
-  top: 30%;
-}
-
-.r2 {
-  left: 28%;
-  top: 50%;
-}
-
-.r3 {
-  left: 45%;
-  top: 30%;
-}
-
-.r4 {
-  left: 62%;
-  top: 48%;
-}
-
-.bharat {
-  position: absolute;
-
-  left: 50%;
-  top: 45%;
-
-  transform: translate(-50%, -50%);
-
-  color: #f47d0b;
-
-  font-size: 22px;
-}
-
-.sea {
-  position: absolute;
-
-  right: 10%;
-  bottom: 20%;
-
-  color: #47757c;
-
-  font-size: 11px;
-}
-
-
-/* =========================================================
-   TIMELINE
-========================================================= */
-
-.dark-section {
-  padding: 45px 6%;
-
-  background: #05090a;
-}
-
-.dark-section > h2 {
-  margin: 0 0 25px;
-}
-
-.timeline-content {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 15px;
-}
-
-.timeline-content article {
-  min-height: 150px;
-
-  padding: 20px;
-
-  border: 1px solid #1b2224;
-
-  background: #080c0d;
-}
-
-.timeline-content h3 {
-  color: #f47d0b;
-
-  font-size: 14px;
-
-  margin: 0 0 10px;
-}
-
-.timeline-content p {
-  color: #bbbbbb;
-
-  font-size: 12px;
-}
-
-
-/* =========================================================
-   HISTORY TOPICS
-========================================================= */
-
-.topic-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(5, 1fr);
-
-  gap: 10px;
-
-  margin: 25px 0;
-}
-
-.topic-grid article {
-  min-height: 125px;
-
-  border: 1px solid #1b2224;
-
-  background: #080c0d;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  gap: 10px;
-}
-
-.topic-grid b {
-  color: #f47d0b;
-
-  font-size: 30px;
-}
-
-.topic-grid span {
-  font-size: 10px;
-
-  color: #dddddd;
-}
-
-
-/* =========================================================
-   OUTLINE BUTTON
-========================================================= */
 
 .outline-btn {
   display: inline-block;
@@ -674,7 +266,6 @@ a {
   color: #f58a13;
 
   border: 1px solid #a65e0b;
-
   border-radius: 3px;
 
   padding: 9px 18px;
@@ -692,230 +283,629 @@ a {
 
 .outline-btn:hover {
   background: #f47d0b;
-
   color: #ffffff;
 }
 
 
 /* =========================================================
-   TWO COLUMN
-========================================================= */
+   HERO ART
+   ========================================================= */
 
-.two-col {
-  display: grid;
+.hero-art {
+  position: absolute;
 
-  grid-template-columns:
-    1fr 1fr;
+  right: 3%;
+  top: 80px;
 
-  gap: 15px;
+  width: 58%;
+  height: 570px;
 
-  padding: 0 6% 15px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #9a5b1c,
+      #21170d 35%,
+      transparent 68%
+    );
+
+  opacity: 0.85;
 }
 
-.panel {
-  padding: 25px;
+.arch {
+  position: absolute;
 
-  background: #080c0d;
+  right: 12%;
+  top: 45px;
 
-  border: 1px solid #1b2224;
+  width: 48%;
+  height: 480px;
+
+  border: 45px solid #17130e;
+  border-bottom: 0;
+
+  border-radius: 260px 260px 0 0;
+
+  text-align: center;
+  padding-top: 100px;
+
+  font-size: 50px;
+  color: #ffad3a;
 }
 
-.panel h2 {
-  margin-top: 0;
+.temple {
+  font-size: 100px;
 
-  font-size: 21px;
+  text-shadow:
+    0 0 40px #f5a33b;
 }
 
 
 /* =========================================================
-   SOURCE FLOW
-========================================================= */
+   HERO DOTS
+   ========================================================= */
 
-.source-flow {
-  display: flex;
+.dots {
+  position: absolute;
 
-  align-items: stretch;
+  right: 2%;
+  top: 230px;
 
-  gap: 5px;
-
-  margin: 25px 0;
+  display: grid;
+  gap: 13px;
 }
 
-.source-flow span {
-  flex: 1;
+.dots i {
+  width: 11px;
+  height: 11px;
 
-  padding: 20px 8px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
 
-  display: flex;
+.dots .active {
+  background: #f47d0b;
+}
 
-  align-items: center;
 
-  justify-content: center;
+/* =========================================================
+   COMMON SECTIONS
+   ========================================================= */
+
+.map-section,
+.dark-section,
+.civil,
+.two-col,
+.genz {
+  position: relative;
+}
+
+.map-section h2,
+.dark-section h2,
+.civil h2 {
+  font-size: 21px;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MAP SECTION
+   ========================================================= */
+
+.map-section {
+  padding: 18px 4% 28px;
+
+  background:
+    linear-gradient(
+      #061014,
+      #071214
+    );
 
   text-align: center;
 
-  font-size: 10px;
-
-  background: #101617;
-
-  border: 1px solid #202829;
-}
-
-.establish {
-  color: #f47d0b;
-
-  font-size: 11px;
-
-  margin: 20px 0;
+  border-top: 1px solid #171d1e;
 }
 
 
 /* =========================================================
-   TEMPLE ATLAS
-========================================================= */
+   TIMELINE STRIP
+   ========================================================= */
 
-.atlas {
+.timeline-strip {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-  justify-content: space-between;
+  max-width: 900px;
 
-  gap: 25px;
+  margin: 0 auto 10px;
 
-  min-height: 300px;
+  color: #dddddd;
+
+  font-size: 11px;
+
+  border-bottom: 2px solid #8a5314;
+
+  padding-bottom: 8px;
+
+  gap: 10px;
 }
 
-.atlas > div:first-child {
-  flex: 1;
+.timeline-strip span {
+  color: #ff8610;
+  font-weight: bold;
 }
 
-.atlas p {
-  color: #bbbbbb;
+.timeline-strip i {
+  font-style: normal;
+}
+
+
+/* =========================================================
+   MAP ART
+   ========================================================= */
+
+.map-art {
+  height: 190px;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse,
+      #55381e 0,
+      #191713 32%,
+      #071014 70%
+    );
+
+  clip-path:
+    polygon(
+      0 20%,
+      100% 0,
+      96% 100%,
+      4% 95%
+    );
+}
+
+.route {
+  position: absolute;
+
+  color: #dddddd;
+
+  font-weight: bold;
+  font-size: 12px;
+
+  text-shadow: 0 1px 4px #000000;
+}
+
+.route small {
+  color: #e78a27;
+}
+
+.r1 {
+  left: 7%;
+  top: 35%;
+}
+
+.r2 {
+  left: 17%;
+  top: 55%;
+}
+
+.r3 {
+  left: 32%;
+  top: 38%;
+}
+
+.r4 {
+  left: 44%;
+  top: 28%;
+}
+
+.bharat {
+  position: absolute;
+
+  left: 52%;
+  top: 55%;
+
+  font-size: 19px;
+}
+
+.sea {
+  position: absolute;
+
+  right: 15%;
+  bottom: 35%;
 
   font-size: 13px;
 }
 
-.atlas strong {
-  display: block;
 
-  color: #f47d0b;
+/* =========================================================
+   DARK SECTIONS
+   ========================================================= */
 
-  font-size: 40px;
+.dark-section {
+  text-align: center;
 
-  margin-top: 20px;
-}
+  padding: 18px 3% 28px;
 
-.atlas small {
-  color: #888;
-
-  font-size: 9px;
-}
-
-.atlas ul {
-  padding: 0;
-
-  list-style: none;
-
-  line-height: 2;
-
-  color: #cccccc;
-
-  font-size: 10px;
-}
-
-.mini-map {
-  width: 35%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: #f47d0b;
-
-  font-size: 70px;
-
-  background:
-    radial-gradient(
-      circle,
-      #1b2526,
-      #080c0d
-    );
+  background: #04090a;
 }
 
 
 /* =========================================================
-   GEN Z
-========================================================= */
+   TIMELINE CONTENT
+   ========================================================= */
 
-.genz {
+.timeline-content {
+  max-width: 1200px;
+
+  margin: 18px auto 0;
+
   display: grid;
 
   grid-template-columns:
     repeat(4, 1fr);
 
   gap: 10px;
-
-  padding: 15px 6%;
-
-  background: #061013;
 }
 
-.genz-title {
-  background: #f47d0b;
+.timeline-content article {
+  min-height: 150px;
 
-  color: #ffffff;
+  border: 1px solid #273034;
 
-  padding: 25px;
+  background:
+    linear-gradient(
+      #101619,
+      #080b0c
+    );
+
+  padding: 20px;
+
+  text-align: left;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.timeline-content article:hover {
+  border-color: #8b510e;
+  transform: translateY(-2px);
+}
+
+.timeline-content h3 {
+  color: #f0800a;
+
+  font-size: 13px;
+
+  margin: 0 0 10px;
+
+  letter-spacing: 0.7px;
+}
+
+.timeline-content p {
+  color: #bbbbbb;
+
+  font-size: 11px;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   HISTORY TOPICS
+   ========================================================= */
+
+.topic-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(10, 1fr);
+
+  gap: 8px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+.topic-grid article {
+  min-height: 120px;
+
+  border: 1px solid #273034;
+
+  background:
+    linear-gradient(
+      #101619,
+      #080b0c
+    );
 
   display: flex;
 
+  flex-direction: column;
+
+  justify-content: center;
+
   align-items: center;
 
-  justify-content: space-between;
+  gap: 12px;
 
-  min-height: 150px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
-.genz-title b {
-  font-size: 22px;
+.topic-grid article:hover {
+  border-color: #8b510e;
 
-  line-height: 1.1;
+  background:
+    linear-gradient(
+      #151a1b,
+      #0b0e0f
+    );
+}
+
+.topic-grid b {
+  font-size: 27px;
+
+  color: #e57d0d;
+}
+
+.topic-grid span {
+  font-size: 10px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   TWO COLUMN SECTION
+   ========================================================= */
+
+.two-col {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1.08fr;
+
+  gap: 18px;
+
+  padding: 0 3% 10px;
+
+  background: #04090a;
+}
+
+.panel {
+  min-height: 245px;
+
+  border: 1px solid #242b2d;
+
+  background: #080e10;
+
+  padding: 18px;
+
+  text-align: center;
+}
+
+.panel h2 {
+  font-size: 20px;
+
+  margin: 0 0 15px;
+}
+
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+.source-flow {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.source-flow span {
+  border: 1px solid #252d30;
+
+  padding: 25px 10px;
+
+  font-size: 9px;
+
+  flex: 1;
+}
+
+.establish {
+  border: 1px solid #6e430c;
+
+  color: #f18a0b;
+
+  padding: 10px;
+
+  margin: 12px auto;
+
+  max-width: 390px;
+}
+
+
+/* =========================================================
+   TEMPLE ATLAS
+   ========================================================= */
+
+.atlas {
+  text-align: left;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.atlas > div:first-child {
+  flex: 1;
+}
+
+.atlas strong {
+  font-size: 27px;
+
+  color: #f5810c;
+
+  display: block;
+}
+
+.atlas > small {
+  color: #f5810c;
+}
+
+.atlas ul {
+  list-style: none;
+
+  padding: 4px 0;
+
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.atlas li {
+  color: #cccccc;
+}
+
+.mini-map {
+  width: 45%;
+
+  min-width: 160px;
+
+  background:
+    radial-gradient(
+      circle,
+      #b96710,
+      #15191a 50%
+    );
+
+  clip-path:
+    polygon(
+      20% 0,
+      100% 15%,
+      90% 100%,
+      0 80%
+    );
+
+  font-size: 80px;
+
+  color: #e98a17;
+
+  text-align: center;
+
+  padding-top: 55px;
+}
+
+
+/* =========================================================
+   HISTORY FOR GEN Z
+   ========================================================= */
+
+.genz {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr repeat(4, 1fr) 1.2fr;
+
+  gap: 8px;
+
+  padding: 8px 3%;
+
+  background: #061011;
+}
+
+.genz > * {
+  border: 1px solid #202a2c;
+
+  padding: 13px;
+
+  min-height: 105px;
+}
+
+.genz-title {
+  font-size: 17px;
+
+  display: flex;
+
+  justify-content: space-between;
 }
 
 .genz-title span {
-  font-size: 35px;
-}
+  color: #f58a0c;
 
-.genz article {
-  padding: 25px;
-
-  min-height: 150px;
-
-  background: #080c0d;
-
-  border: 1px solid #1b2224;
+  font-size: 30px;
 }
 
 .genz article b {
-  color: #f47d0b;
-
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .genz article p {
-  color: #bbbbbb;
+  font-size: 11px;
 
-  font-size: 12px;
+  color: #bbbbbb;
+}
+
+.genz a {
+  display: inline-block;
+
+  font-size: 10px;
+
+  color: #f58a0c;
+
+  text-decoration: none;
+
+  border: 1px solid #92500b;
+
+  padding: 5px 10px;
+
+  margin-top: 3px;
+}
+
+.genz a:hover {
+  background: #f47d0b;
+
+  color: #ffffff;
+}
+
+.story-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0c1112,
+      #4a2b11
+    );
+}
+
+.story-card small {
+  display: block;
+
+  color: #999999;
+
+  margin-bottom: 8px;
 }
 
 
 /* =========================================================
    CIVILISATION
-========================================================= */
+   ========================================================= */
 
 .civil {
-  padding: 45px 6%;
+  text-align: center;
+
+  padding: 14px 3% 25px;
 
   background: #05090a;
 }
@@ -924,35 +914,35 @@ a {
   display: grid;
 
   grid-template-columns:
-    repeat(5, 1fr);
+    repeat(10, 1fr);
 
-  border-top: 1px solid #222;
-  border-left: 1px solid #222;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  border-bottom: 1px solid #39240d;
 }
 
 .civil-grid span {
-  min-height: 100px;
+  font-size: 28px;
 
-  display: flex;
+  color: #ef850d;
 
-  align-items: center;
-
-  justify-content: center;
-
-  flex-direction: column;
-
-  text-align: center;
+  padding: 8px;
 
   border-right: 1px solid #222;
-  border-bottom: 1px solid #222;
 
-  color: #f47d0b;
+  min-width: 0;
+}
 
-  font-size: 30px;
+.civil-grid span:last-child {
+  border-right: 0;
 }
 
 .civil-grid small {
-  color: #bbbbbb;
+  display: block;
+
+  color: #eeeeee;
 
   font-size: 9px;
 
@@ -961,171 +951,137 @@ a {
 
 
 /* =========================================================
-   CLOSING
-========================================================= */
+   CLOSING SECTION
+   ========================================================= */
 
 .closing {
+  min-height: 220px;
+
   display: grid;
 
   grid-template-columns:
-    1fr 1fr;
+    1.1fr 1fr 1.1fr 1fr;
 
-  gap: 30px;
+  align-items: center;
 
-  padding: 60px 6%;
+  gap: 20px;
+
+  padding: 25px 6%;
 
   background:
     radial-gradient(
-      circle at center,
-      #4c2a10,
-      #05090a 60%
+      circle at 20% 50%,
+      #6d3b12,
+      #081011 42%
     );
-}
 
-.silhouette {
-  color: #f47d0b;
-
-  font-size: 90px;
-
-  text-align: center;
+  border-top: 1px solid #6b3d0b;
 }
 
 .closing h2 {
-  font-size: 38px;
+  font-size: 26px;
+
+  line-height: 1.05;
 
   margin: 0;
 }
 
+.silhouette {
+  font-size: 75px;
+
+  color: #f0800a;
+}
+
 .devanagari {
-  color: #f47d0b;
+  font-size: 42px;
 
-  font-size: 45px;
+  color: #f0800a;
 
-  margin-top: 15px;
+  line-height: 1;
+}
+
+.devanagari small {
+  display: block;
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  margin-top: 8px;
+
+  line-height: 1.4;
 }
 
 .closing-text {
-  margin-top: 25px;
+  font-size: 10px;
 
   color: #dddddd;
-
-  font-size: 15px;
-
-  line-height: 1.65;
 }
 
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
 footer {
-  position: relative;
-
-  min-height: 150px;
-
-  padding: 30px 5vw 22px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 22px;
-
-  background: #030607;
-
-  border-top: 1px solid #171b1c;
-
+  width: 100%;
+  background: #000;
   text-align: center;
+  padding: 28px 20px 20px;
+  box-sizing: border-box;
 }
 
-
-/* FOOTER LOGO */
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
 
 .footer-logo {
-  width: 48px;
-  height: 48px;
-
+  width: 55px;
+  height: auto;
+  display: block;
   object-fit: contain;
-
-  flex-shrink: 0;
+  margin: 0;
 }
 
-
-/* FOOTER NAVIGATION */
-
-.footer-nav {
-  display: flex;
-
-  align-items: center;
-
-  gap: 25px;
-
-  flex-wrap: wrap;
-}
-
-.footer-nav a {
-  color: #dddddd;
-
+.footer-row a {
+  color: #eee;
   text-decoration: none;
-
   font-size: 10px;
-
-  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
-.footer-nav a:hover {
-  color: #f58a13;
-}
-
-
-/* FOOTER ICONS */
-
-.footer-icons {
-  display: flex;
-
-  justify-content: center;
-
-  gap: 14px;
-
+.footer-row a:hover {
   color: #f47d0b;
-
-  font-size: 12px;
-
-  white-space: nowrap;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+  color: #f47d0b;
+  font-size: 11px;
+}
 
-/* COPYRIGHT */
-
-.copyright {
-  position: absolute;
-
-  bottom: 10px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  color: #777777;
-
+.footer-copy {
+  margin: 18px 0 0;
+  color: #777;
   font-size: 9px;
-
-  white-space: nowrap;
 }
 
 
 /* =========================================================
    TABLET
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
   .site-header {
     gap: 15px;
-
     padding: 0 3%;
   }
 
@@ -1134,7 +1090,7 @@ footer {
   }
 
   .brand b {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .site-header nav {
@@ -1143,25 +1099,6 @@ footer {
 
   .site-header nav a {
     font-size: 9px;
-  }
-
-
-  /*
-     Keep the heading controlled.
-  */
-
-  .hero h1 {
-    font-size: 44px;
-  }
-
-  .hero-copy {
-    width: 53%;
-  }
-
-  .arch {
-    width: 420px;
-
-    height: 530px;
   }
 
   .topic-grid {
@@ -1192,48 +1129,30 @@ footer {
 
 /* =========================================================
    TABLET / SMALL LAPTOP
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 900px) {
-
-  .site-header {
-    padding: 0 3%;
-  }
 
   .site-header nav {
     display: none;
   }
 
-  .brand {
-    flex: 1;
-
-    min-width: 0;
-  }
-
-  .hero {
-    min-height: 620px;
-
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  .hero-copy {
-    width: 100%;
+  .site-header {
+    justify-content: space-between;
   }
 
   .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .hero-art {
     width: 60%;
-
     opacity: 0.35;
   }
 
-  .timeline-content {
+  .topic-grid {
     grid-template-columns:
-      repeat(2, 1fr);
+      repeat(5, 1fr);
   }
 
   .two-col {
@@ -1245,12 +1164,7 @@ footer {
       1fr 1fr;
   }
 
-  .genz {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .genz-title {
+  .closing-text {
     grid-column: span 2;
   }
 
@@ -1263,16 +1177,12 @@ footer {
 
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 600px) {
 
   html {
     scroll-padding-top: 70px;
-  }
-
-  body {
-    font-size: 13px;
   }
 
 
@@ -1289,10 +1199,14 @@ footer {
   .brand {
     min-width: 0;
 
-    gap: 7px;
+    gap: 8px;
   }
 
-  .brand-logo,
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+
   .site-logo {
     width: 38px;
     height: 38px;
@@ -1319,19 +1233,21 @@ footer {
     min-height: 620px;
 
     padding:
-      105px
+      115px
       22px
       45px;
+
+    background:
+      radial-gradient(
+        circle at 75% 45%,
+        #5c3a18 0,
+        #19120a 18%,
+        #030607 60%
+      );
   }
 
-  .hero h1 {
-    font-size: 30px;
-
-    line-height: 1.06;
-
-    letter-spacing: -0.5px;
-
-    margin-top: 22px;
+  .hero-copy {
+    max-width: 100%;
   }
 
   .kicker {
@@ -1340,69 +1256,87 @@ footer {
     letter-spacing: 2px;
   }
 
+  .hero h1 {
+    font-size: 32px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.5px;
+
+    margin: 20px 0 12px;
+  }
+
   .hero p {
     font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .hero p br {
+    display: none;
   }
 
   .hero-copy > small {
     font-size: 10px;
   }
 
-  .cta {
-    padding:
-      11px
-      22px;
 
-    font-size: 11px;
-  }
+  /* HERO ART */
 
   .hero-art {
+    width: 100%;
+
+    height: 400px;
+
     right: -20%;
 
-    width: 70%;
+    top: 180px;
 
-    opacity: 0.25;
+    opacity: 0.22;
   }
 
   .arch {
-    width: 330px;
+    right: 5%;
 
-    height: 380px;
+    width: 75%;
 
-    border-width: 21px;
+    height: 330px;
 
-    border-radius:
-      180px
-      180px
-      0
-      0;
+    border-width: 30px;
+
+    padding-top: 65px;
   }
 
   .temple {
-    font-size: 65px;
+    font-size: 75px;
   }
 
   .dots {
-    right: 12px;
+    right: 10px;
+
+    top: 300px;
+
+    gap: 10px;
+  }
+
+  .dots i {
+    width: 8px;
+    height: 8px;
   }
 
 
-  /* MAP */
-
-  .map-section {
-    padding:
-      20px
-      15px
-      25px;
-  }
+  /* SECTION HEADINGS */
 
   .map-section h2,
   .dark-section h2,
   .civil h2 {
-    font-size: 18px;
+    font-size: 17px;
 
     line-height: 1.25;
   }
+
+
+  /* TIMELINE STRIP */
 
   .timeline-strip {
     overflow-x: auto;
@@ -1411,10 +1345,7 @@ footer {
 
     gap: 18px;
 
-    padding:
-      0
-      5px
-      8px;
+    padding: 0 5px 8px;
 
     white-space: nowrap;
 
@@ -1432,16 +1363,22 @@ footer {
     font-size: 8px;
   }
 
+
+  /* MAP */
+
+  .map-section {
+    padding:
+      15px
+      12px
+      25px;
+  }
+
   .map-art {
     height: 160px;
   }
 
   .route {
     font-size: 8px;
-  }
-
-  .route small {
-    font-size: 7px;
   }
 
   .bharat {
@@ -1542,9 +1479,7 @@ footer {
   .source-flow span {
     min-width: 28%;
 
-    padding:
-      15px
-      5px;
+    padding: 15px 5px;
 
     font-size: 8px;
   }
@@ -1666,46 +1601,41 @@ footer {
   }
 
 
-  /* FOOTER */
+  /* =====================================================
+     FOOTER - MOBILE
+     ===================================================== */
 
   footer {
-    flex-direction: column;
-
-    gap: 15px;
-
     padding:
       25px
       15px
       20px;
+
+    gap: 15px;
   }
 
   .footer-logo {
-    width: 58px;
-
-    height: 58px;
+    width: 140px;
+    height: 75px;
   }
 
-  .footer-nav {
-    justify-content: center;
-
-    gap:
-      12px
-      20px;
+  .footer-logo img {
+    width: 140px;
   }
 
-  .footer-nav a {
+  .footer-links {
+    gap: 14px 20px;
+  }
+
+  .footer-links a {
     font-size: 9px;
   }
 
-  .footer-icons {
+  .footer-social {
     font-size: 11px;
   }
 
   .copyright {
-    position: static;
-
-    transform: none;
-
     font-size: 8px;
 
     margin-top: 3px;
@@ -1715,36 +1645,25 @@ footer {
 
 /* =========================================================
    VERY SMALL PHONES
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 380px) {
 
-  .site-header {
-    padding: 0 14px;
-  }
-
-  .brand b {
-    font-size: 13px;
-  }
-
-  .brand small {
-    font-size: 7px;
-  }
-
-  .site-logo {
-    width: 38px;
-
-    height: 38px;
-  }
-
   .hero {
     padding-left: 18px;
-
     padding-right: 18px;
   }
 
   .hero h1 {
     font-size: 28px;
+  }
+
+  .brand b {
+    font-size: 12px;
+  }
+
+  .brand small {
+    font-size: 6px;
   }
 
   .topic-grid article {
