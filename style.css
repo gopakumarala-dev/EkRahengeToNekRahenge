@@ -1,34 +1,53 @@
 /* =========================================================
-   EK RAHENGE • NEK RAHENGE
-   MAIN SITE CSS
+   EK RAHENGE TO NEK RAHENGE
+   COMPLETE WEBSITE CSS
+   ========================================================= */
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
 }
 
 body {
-    background: #020607;
-    color: #f4f4f4;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  background: #05090a;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   COLOURS
+   ========================================================= */
+
 :root {
-    --black: #020607;
-    --black-soft: #080b0c;
-    --orange: #ff8708;
-    --orange-light: #f6a329;
-    --white: #f5f5f5;
-    --muted: #b9bec0;
-    --line: #20292b;
-    --line-soft: #182124;
+  --black: #020607;
+  --black-soft: #080b0c;
+  --orange: #f47d0b;
+  --orange-light: #f6a329;
+  --white: #f5f5f5;
+  --muted: #b9bec0;
+  --line: #171b1c;
 }
 
 
@@ -37,105 +56,121 @@ body {
    ========================================================= */
 
 .site-header {
-    height: 72px;
-    width: 100%;
+  height: 78px;
+  position: fixed;
+  z-index: 1000;
 
-    display: flex;
-    align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
 
-    padding: 0 42px;
+  background: rgba(2, 3, 3, 0.96);
 
-    background: #020303;
+  border-bottom: 1px solid #171b1c;
 
-    border-bottom: 1px solid #171a1b;
+  display: flex;
+  align-items: center;
 
-    position: relative;
-    z-index: 50;
-}
-
-
-/* BRAND */
-
-.brand {
-    display: flex;
-    align-items: center;
-
-    min-width: 370px;
-
-    text-decoration: none;
-    color: #fff;
-}
-
-.site-logo {
-    width: 48px;
-    height: 48px;
-
-    object-fit: contain;
-
-    background: #fff;
-
-    flex-shrink: 0;
-
-    margin-right: 10px;
-}
-
-.brand-text {
-    line-height: 1;
-}
-
-.brand-text b {
-    display: block;
-
-    color: #f5f5f5;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-.brand-text small {
-    display: block;
-
-    margin-top: 5px;
-
-    color: #d7d7d7;
-
-    font-size: 11px;
-
-    letter-spacing: .3px;
+  padding: 0 4%;
+  gap: 30px;
 }
 
 
 /* =========================================================
-   MAIN NAVIGATION
+   HEADER BRAND
+   ========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #eeeeee;
+  text-decoration: none;
+
+  min-width: 260px;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+}
+
+.site-logo {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.brand-text {
+  display: block;
+}
+
+.brand b {
+  display: block;
+
+  font-size: 19px;
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+.brand small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+  letter-spacing: 1.3px;
+
+  color: #dddddd;
+}
+
+
+/* =========================================================
+   NAVIGATION
    ========================================================= */
 
 .site-header nav {
-    flex: 1;
+  display: flex;
 
-    display: flex;
+  align-items: center;
+  justify-content: center;
 
-    justify-content: center;
-    align-items: center;
+  gap: 25px;
 
-    gap: 31px;
+  flex: 1;
 }
 
-.site-header nav a {
-    color: #e7e7e7;
+.site-header nav a,
+.search {
+  color: #eeeeee;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    font-size: 13px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
 
-    font-weight: 600;
+  white-space: nowrap;
 
-    transition: color .2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .site-header nav a:hover {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 
@@ -144,2017 +179,1583 @@ body {
    ========================================================= */
 
 .search {
-    height: 42px;
+  border: 1px solid #76500d;
 
-    padding: 0 17px;
+  border-radius: 5px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 8px 13px;
 
-    background: transparent;
-
-    border: 1px solid #805500;
-
-    border-radius: 7px;
-
-    color: #f1f1f1;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .search:hover {
-    color: var(--orange);
+  color: var(--orange);
+
+  border-color: var(--orange);
 }
 
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero {
-    position: relative;
+  min-height: 650px;
 
-    min-height: 645px;
+  padding: 130px 6% 50px;
 
-    display: flex;
+  position: relative;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 72% 50%,
-            rgba(142, 70, 9, .34) 0%,
-            rgba(76, 38, 9, .20) 22%,
-            rgba(2, 6, 7, 0) 48%
-        ),
-        linear-gradient(
-            110deg,
-            #020607 0%,
-            #030708 50%,
-            #100d08 100%
-        );
+  background:
+    radial-gradient(
+      circle at 75% 48%,
+      #5c3a18 0,
+      #19120a 20%,
+      #030607 55%
+    );
 }
 
 
 /* =========================================================
-   HERO COPY
-   ========================================================= */
+   HERO CONTENT
+========================================================= */
 
 .hero-copy {
-    position: relative;
+  position: relative;
 
-    z-index: 10;
+  z-index: 3;
 
-    width: 52%;
-
-    padding-left: 5.2%;
-
-    padding-top: 115px;
+  max-width: 760px;
 }
 
 .kicker {
-    color: var(--orange);
+  color: #e87b0b;
 
-    font-size: 11px;
+  font-size: 11px;
 
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 
-    font-weight: 700;
+  font-weight: bold;
 }
 
+
+/*
+   IMPORTANT:
+   Reduced from 52px to 46px.
+
+   This brings the heading back much closer
+   to the original screenshot.
+*/
+
 .hero h1 {
-    margin: 25px 0 15px;
+  margin: 25px 0 12px;
 
-    font-size: 52px;
+  font-size: 46px;
 
-    line-height: 1.03;
+  line-height: 1.04;
 
-    letter-spacing: -1px;
+  letter-spacing: -1px;
 
-    font-weight: 800;
-
-    color: #f4f4f4;
+  font-weight: 700;
 }
 
 .hero h1 span {
-    color: var(--orange);
+  color: #e97909;
 }
 
+
+/* HERO DESCRIPTION */
+
 .hero p {
-    margin-top: 28px;
+  font-size: 15px;
 
-    color: #dddddd;
+  color: #dddddd;
 
-    font-size: 15px;
-
-    line-height: 1.55;
+  margin-bottom: 10px;
 }
 
 .hero-copy > small {
-    display: block;
+  display: block;
 
-    margin-top: 15px;
+  margin-top: 12px;
 
-    color: #bbbbbb;
-
-    font-size: 12px;
+  color: #bbbbbb;
 }
 
-.hero-copy > small em {
-    color: var(--orange);
+.hero em,
+.closing-text em {
+  color: #f38b13;
 
-    font-style: normal;
+  font-style: normal;
 }
 
 
 /* =========================================================
    HERO BUTTON
-   ========================================================= */
+========================================================= */
 
 .cta {
-    display: inline-flex;
+  display: inline-block;
 
-    align-items: center;
-    justify-content: center;
+  background: #f47d0b;
 
-    min-height: 54px;
+  color: #ffffff;
 
-    padding: 0 30px;
+  text-decoration: none;
 
-    margin-top: 20px;
+  padding: 12px 28px;
 
-    background: var(--orange);
+  margin-top: 12px;
 
-    color: #111 !important;
+  font-size: 12px;
 
-    text-decoration: none;
+  font-weight: bold;
 
-    font-size: 15px;
-
-    font-weight: 700;
-
-    letter-spacing: .3px;
-
-    border: 1px solid var(--orange);
-
-    transition:
-        background .2s ease,
-        color .2s ease,
-        transform .2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .cta:hover {
-    background: transparent;
+  background: #ff9125;
 
-    color: var(--orange) !important;
-
-    transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 
 /* =========================================================
-   HERO ARTWORK
-   ========================================================= */
+   HERO ART
+========================================================= */
 
 .hero-art {
-    position: absolute;
+  position: absolute;
 
-    right: 1.5%;
-    top: 0;
+  right: 3%;
 
-    width: 52%;
-    height: 100%;
+  top: 80px;
 
-    z-index: 3;
+  width: 58%;
 
-    pointer-events: none;
-}
+  height: 570px;
 
+  background:
+    radial-gradient(
+      ellipse at center,
+      #9a5b1c,
+      #21170d 35%,
+      transparent 68%
+    );
 
-/* =========================================================
-   AMBIENT TEMPLE GLOW
-   ========================================================= */
+  opacity: 0.85;
 
-.hero-art::before {
-    content: "";
-
-    position: absolute;
-
-    width: 620px;
-    height: 560px;
-
-    right: 4%;
-    bottom: 5px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(255, 124, 10, .46) 0%,
-            rgba(186, 75, 4, .30) 25%,
-            rgba(94, 38, 5, .17) 45%,
-            transparent 72%
-        );
-
-    filter: blur(24px);
+  pointer-events: none;
 }
 
 
 /* =========================================================
    ARCH
-   ========================================================= */
+========================================================= */
 
 .arch {
-    position: absolute;
+  position: absolute;
 
-    right: 7%;
-    top: 45px;
+  right: 12%;
 
-    width: 500px;
-    height: 580px;
+  top: 45px;
 
-    border: 30px solid #171411;
+  width: 48%;
 
-    border-bottom: 0;
+  height: 480px;
 
-    border-radius: 260px 260px 0 0;
+  border: 45px solid #17130e;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(42, 25, 12, .70),
-            rgba(8, 9, 9, .94)
-        );
+  border-bottom: 0;
 
-    box-shadow:
-        0 0 0 1px rgba(0, 0, 0, .7),
-        inset 0 0 50px rgba(0, 0, 0, .82),
-        0 0 90px rgba(116, 57, 8, .18);
+  border-radius: 260px 260px 0 0;
 
-    color: transparent;
+  text-align: center;
 
-    overflow: hidden;
+  padding-top: 100px;
 
-    z-index: 5;
+  font-size: 50px;
+
+  color: #ffad3a;
 }
 
 
 /* =========================================================
-   INNER ARCH
-   ========================================================= */
+   TEMPLE
+========================================================= */
 
-.arch::before {
-    content: "";
+.temple {
+  font-size: 100px;
 
-    position: absolute;
-
-    inset: 19px;
-
-    border: 2px solid rgba(126, 69, 20, .42);
-
-    border-bottom: 0;
-
-    border-radius: 225px 225px 0 0;
-
-    background:
-        radial-gradient(
-            ellipse at center 35%,
-            rgba(190, 82, 7, .46) 0%,
-            rgba(112, 45, 5, .32) 26%,
-            rgba(45, 25, 10, .34) 48%,
-            rgba(4, 7, 8, .94) 78%
-        );
-
-    box-shadow:
-        inset 0 0 45px rgba(0, 0, 0, .78);
-
-    z-index: 1;
-}
-
-
-/* =========================================================
-   ARCH INNER GOLDEN BORDER
-   ========================================================= */
-
-.arch::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 29px;
-
-    border: 1px solid rgba(185, 100, 26, .30);
-
-    border-bottom: 0;
-
-    border-radius: 215px 215px 0 0;
-
-    z-index: 2;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   OM
-   ========================================================= */
-
-.arch {
-    font-size: 0;
-}
-
-.arch > .temple {
-    position: absolute;
-
-    top: 82px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 125px;
-    height: 125px;
-
-    z-index: 20;
-
-    font-size: 0;
-
-    color: transparent;
-
-    opacity: 1;
-}
-
-
-/* OM SYMBOL CREATED WITH TEXT */
-
-.arch > .temple::before {
-    content: "ॐ";
-
-    position: absolute;
-
-    left: 50%;
-    top: 0;
-
-    transform: translateX(-50%);
-
-    font-family:
-        "Noto Sans Devanagari",
-        "Mangal",
-        Arial,
-        sans-serif;
-
-    font-size: 105px;
-
-    line-height: 1;
-
-    color: #ffad31;
-
-    text-shadow:
-        0 0 10px rgba(255, 145, 25, .95),
-        0 0 24px rgba(255, 121, 8, .72),
-        0 0 48px rgba(214, 83, 0, .48);
-}
-
-
-/* =========================================================
-   TEMPLE BODY
-   ========================================================= */
-
-.arch > .temple::after {
-    content: "";
-
-    position: absolute;
-
-    width: 330px;
-    height: 205px;
-
-    left: 50%;
-
-    bottom: -290px;
-
-    transform: translateX(-50%);
-
-    background:
-        linear-gradient(
-            90deg,
-            #4d2a07 0%,
-            #8d4d0d 12%,
-            #b96b18 30%,
-            #8e4e0d 50%,
-            #b96b18 70%,
-            #8d4d0d 88%,
-            #4d2a07 100%
-        );
-
-    box-shadow:
-        inset 0 0 22px rgba(0, 0, 0, .55),
-        0 0 12px rgba(194, 100, 18, .15);
-}
-
-
-/* =========================================================
-   CSS TEMPLE — USING ARCH SHADOW LAYERS
-   ========================================================= */
-
-/* Main temple silhouette */
-
-.arch .temple {
-    overflow: visible;
-}
-
-.arch .temple::after {
-    box-shadow:
-
-        /* Main tower */
-        0 -180px 0 -70px #8d4d0d,
-
-        /* Main tower upper section */
-        0 -205px 0 -78px #a45a10,
-
-        /* Left tower */
-        -105px -125px 0 -105px #8a4a0c,
-
-        /* Right tower */
-        105px -125px 0 -105px #8a4a0c,
-
-        /* temple base */
-        0 0 0 0 #8d4d0d;
-}
-
-
-/* =========================================================
-   TEMPLE ARCHITECTURAL DETAILS
-   ========================================================= */
-
-.arch .temple {
-    background: transparent;
-}
-
-
-/* Temple main tower */
-
-.arch .temple {
-    --temple-gold: #b66a18;
-}
-
-
-/* Decorative central temple shape */
-
-.arch .temple::before {
-    text-align: center;
-}
-
-
-/* =========================================================
-   TEMPLE FLOOR / STEPS
-   ========================================================= */
-
-.arch .temple {
-    box-shadow:
-
-        /* central temple */
-        0 285px 0 -45px #70400c,
-
-        /* roof */
-        0 245px 0 -35px #a35b13,
-
-        /* side wings */
-        -95px 270px 0 -55px #78420b,
-        95px 270px 0 -55px #78420b,
-
-        /* steps */
-        0 315px 0 -18px #a96116,
-        0 327px 0 -12px #8d4d0e,
-        0 339px 0 -7px #b36a1b;
-}
-
-
-/* =========================================================
-   TEMPLE LIGHT
-   ========================================================= */
-
-.arch .temple {
-    filter:
-        drop-shadow(0 0 12px rgba(255, 139, 18, .22));
-}
-
-
-/* =========================================================
-   GOLDEN STAR ABOVE OM
-   ========================================================= */
-
-.arch .temple {
-    isolation: isolate;
-}
-
-.arch .temple span {
-    display: none;
-}
-
-
-/* =========================================================
-   TEMPLE LIGHTS
-   ========================================================= */
-
-.arch .temple {
-    --lamp:
-        radial-gradient(
-            circle,
-            #ffd16a 0%,
-            #ff9a20 35%,
-            transparent 70%
-        );
-}
-
-
-/* =========================================================
-   EXTRA ARCH DECORATION
-   ========================================================= */
-
-.arch-inner {
-    display: none;
+  text-shadow:
+    0 0 40px #f5a33b;
 }
 
 
 /* =========================================================
    HERO DOTS
-   ========================================================= */
+========================================================= */
 
 .dots {
-    position: absolute;
+  position: absolute;
 
-    right: 2%;
+  right: 2%;
 
-    top: 50%;
+  top: 230px;
 
-    transform: translateY(-50%);
+  display: grid;
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 14px;
-
-    z-index: 30;
+  gap: 13px;
 }
 
 .dots i {
-    display: block;
+  width: 11px;
+  height: 11px;
 
-    width: 12px;
-    height: 12px;
+  border: 1px solid #ffffff;
 
-    border: 1px solid #dddddd;
-
-    border-radius: 50%;
-
-    background: transparent;
+  border-radius: 50%;
 }
 
-.dots i.active {
-    background: var(--orange);
-
-    border-color: #ffffff;
-
-    box-shadow:
-        0 0 7px rgba(255, 135, 8, .55);
+.dots .active {
+  background: #f47d0b;
 }
 
 
 /* =========================================================
-   MAP SECTION
-   ========================================================= */
+   COMMON SECTIONS
+========================================================= */
 
-.map-section {
-    position: relative;
-
-    padding: 80px 4vw 70px;
-
-    background: #061012;
-
-    border-top: 1px solid var(--line-soft);
-
-    border-bottom: 1px solid var(--line);
+.map-section,
+.dark-section,
+.civil,
+.two-col,
+.genz {
+  position: relative;
 }
 
 .map-section h2,
 .dark-section h2,
 .civil h2 {
-    margin-bottom: 35px;
+  font-size: 21px;
 
-    text-align: center;
-
-    font-size: clamp(30px, 4vw, 50px);
-
-    font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 
 /* =========================================================
-   TIMELINE STRIP
-   ========================================================= */
+   MAP
+========================================================= */
+
+.map-section {
+  padding: 40px 6%;
+
+  background: #061013;
+}
+
+.map-section h2 {
+  text-align: center;
+
+  margin: 0 0 30px;
+}
 
 .timeline-strip {
-    width: 100%;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: space-between;
 
-    justify-content: space-between;
+  gap: 20px;
 
-    gap: 12px;
+  margin-bottom: 25px;
+}
 
-    padding: 0 20px 12px;
+.timeline-strip span,
+.timeline-strip i {
+  font-size: 11px;
 
-    border-bottom: 2px solid var(--orange);
-
-    color: #cccccc;
-
-    font-size: 13px;
+  font-style: normal;
 }
 
 .timeline-strip span {
-    color: var(--orange);
-
-    font-weight: 600;
-}
-
-.timeline-strip i {
-    font-style: italic;
+  color: #f47d0b;
 }
 
 
-/* =========================================================
-   MAP ART
-   ========================================================= */
+/* MAP ART */
 
 .map-art {
-    position: relative;
+  position: relative;
 
-    width: 100%;
+  height: 260px;
 
-    max-width: 1000px;
+  border: 1px solid #182426;
 
-    height: 360px;
+  background:
+    radial-gradient(
+      circle at center,
+      #172426,
+      #061013
+    );
 
-    margin: 35px auto 25px;
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(255, 133, 0, .18),
-            transparent 50%
-        ),
-        #071214;
-
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .route {
-    position: absolute;
+  position: absolute;
 
-    color: #eeeeee;
+  color: #d7d7d7;
 
-    font-size: 18px;
+  font-size: 11px;
 
-    font-weight: 700;
-
-    text-align: center;
+  text-align: center;
 }
 
 .route small {
-    color: var(--orange);
+  color: #777;
 
-    font-size: 13px;
+  font-size: 9px;
 }
 
 .r1 {
-    left: 10%;
-    top: 30%;
+  left: 12%;
+  top: 30%;
 }
 
 .r2 {
-    left: 20%;
-    top: 58%;
+  left: 28%;
+  top: 50%;
 }
 
 .r3 {
-    left: 39%;
-    top: 35%;
+  left: 45%;
+  top: 30%;
 }
 
 .r4 {
-    left: 49%;
-    top: 20%;
+  left: 62%;
+  top: 48%;
 }
 
 .bharat {
-    position: absolute;
+  position: absolute;
 
-    left: 58%;
-    top: 48%;
+  left: 50%;
+  top: 45%;
 
-    font-size: 34px;
+  transform: translate(-50%, -50%);
+
+  color: #f47d0b;
+
+  font-size: 22px;
 }
 
 .sea {
-    position: absolute;
+  position: absolute;
 
-    right: 8%;
-    top: 44%;
+  right: 10%;
+  bottom: 20%;
 
-    font-size: 20px;
-}
+  color: #47757c;
 
-
-/* =========================================================
-   OUTLINE BUTTON
-   ========================================================= */
-
-.outline-btn {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: fit-content;
-
-    margin: 25px auto 0;
-
-    padding: 14px 28px;
-
-    color: var(--orange) !important;
-
-    border: 1px solid var(--orange);
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    letter-spacing: .5px;
-
-    transition:
-        background .2s ease,
-        color .2s ease;
-}
-
-.outline-btn:hover {
-    background: var(--orange);
-
-    color: #111 !important;
-}
-
-
-/* =========================================================
-   DARK SECTIONS
-   ========================================================= */
-
-.dark-section {
-    padding: 22px 3% 30px;
-
-    background: #04090a;
-
-    text-align: center;
+  font-size: 11px;
 }
 
 
 /* =========================================================
    TIMELINE
-   ========================================================= */
+========================================================= */
 
-.timeline-section {
-    border-top: 1px solid #11191b;
+.dark-section {
+  padding: 45px 6%;
+
+  background: #05090a;
+}
+
+.dark-section > h2 {
+  margin: 0 0 25px;
 }
 
 .timeline-content {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 
-    gap: 10px;
-
-    max-width: 1200px;
-
-    margin: 18px auto 0;
+  gap: 15px;
 }
 
 .timeline-content article {
-    min-height: 145px;
+  min-height: 150px;
 
-    padding: 18px;
+  padding: 20px;
 
-    border: 1px solid #273034;
+  border: 1px solid #1b2224;
 
-    background:
-        linear-gradient(
-            #101619,
-            #080b0c
-        );
-
-    text-align: left;
+  background: #080c0d;
 }
 
 .timeline-content h3 {
-    margin: 0 0 10px;
+  color: #f47d0b;
 
-    color: var(--orange);
+  font-size: 14px;
 
-    font-size: 13px;
-
-    letter-spacing: .5px;
+  margin: 0 0 10px;
 }
 
 .timeline-content p {
-    margin: 0;
+  color: #bbbbbb;
 
-    color: #bbbbbb;
-
-    font-size: 11px;
+  font-size: 12px;
 }
 
 
 /* =========================================================
    HISTORY TOPICS
-   ========================================================= */
+========================================================= */
 
 .topic-grid {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(10, 1fr);
+  grid-template-columns:
+    repeat(5, 1fr);
 
-    gap: 8px;
+  gap: 10px;
 
-    max-width: 1400px;
-
-    margin: 0 auto;
+  margin: 25px 0;
 }
 
-.topic-card {
-    min-height: 120px;
+.topic-grid article {
+  min-height: 125px;
 
-    padding: 12px;
+  border: 1px solid #1b2224;
 
-    border: 1px solid #273034;
+  background: #080c0d;
 
-    background:
-        linear-gradient(
-            #101619,
-            #080b0c
-        );
+  display: flex;
 
-    display: flex;
+  flex-direction: column;
 
-    flex-direction: column;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  text-align: center;
 
-    gap: 12px;
-
-    color: #eeeeee;
-
-    text-decoration: none;
-
-    transition:
-        border-color .2s ease,
-        transform .2s ease,
-        background .2s ease;
+  gap: 10px;
 }
 
-.topic-card:hover {
-    border-color: var(--orange);
+.topic-grid b {
+  color: #f47d0b;
 
-    background:
-        linear-gradient(
-            #171c1e,
-            #0b0e0f
-        );
-
-    transform: translateY(-2px);
+  font-size: 30px;
 }
 
-.topic-card b {
-    font-size: 27px;
+.topic-grid span {
+  font-size: 10px;
 
-    color: #e57d0d;
+  color: #dddddd;
 }
 
-.topic-card span {
-    font-size: 10px;
 
-    font-weight: 700;
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
 
-    text-align: center;
+.outline-btn {
+  display: inline-block;
+
+  color: #f58a13;
+
+  border: 1px solid #a65e0b;
+
+  border-radius: 3px;
+
+  padding: 9px 18px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  margin-top: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.outline-btn:hover {
+  background: #f47d0b;
+
+  color: #ffffff;
 }
 
 
 /* =========================================================
    TWO COLUMN
-   ========================================================= */
+========================================================= */
 
 .two-col {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 1fr 1.08fr;
+  grid-template-columns:
+    1fr 1fr;
 
-    gap: 18px;
+  gap: 15px;
 
-    padding: 0 3% 10px;
-
-    background: #04090a;
+  padding: 0 6% 15px;
 }
 
 .panel {
-    min-height: 245px;
+  padding: 25px;
 
-    padding: 18px;
+  background: #080c0d;
 
-    border: 1px solid #242b2d;
-
-    background: #080e10;
-
-    text-align: center;
+  border: 1px solid #1b2224;
 }
 
 .panel h2 {
-    margin: 0 0 14px;
+  margin-top: 0;
 
-    font-size: 20px;
+  font-size: 21px;
 }
 
 
 /* =========================================================
    SOURCE FLOW
-   ========================================================= */
+========================================================= */
 
 .source-flow {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  align-items: stretch;
 
-    gap: 7px;
+  gap: 5px;
+
+  margin: 25px 0;
 }
 
 .source-flow span {
-    flex: 1;
+  flex: 1;
 
-    border: 1px solid #252d30;
+  padding: 20px 8px;
 
-    padding: 25px 10px;
+  display: flex;
 
-    font-size: 9px;
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  background: #101617;
+
+  border: 1px solid #202829;
 }
 
 .establish {
-    border: 1px solid #6e430c;
+  color: #f47d0b;
 
-    color: var(--orange);
+  font-size: 11px;
 
-    padding: 10px;
-
-    margin: 12px auto;
-
-    max-width: 390px;
+  margin: 20px 0;
 }
 
 
 /* =========================================================
-   ATLAS
-   ========================================================= */
+   TEMPLE ATLAS
+========================================================= */
 
 .atlas {
-    text-align: left;
+  display: flex;
 
-    display: flex;
+  justify-content: space-between;
 
-    overflow: hidden;
+  gap: 25px;
+
+  min-height: 300px;
 }
 
 .atlas > div:first-child {
-    flex: 1;
+  flex: 1;
+}
+
+.atlas p {
+  color: #bbbbbb;
+
+  font-size: 13px;
 }
 
 .atlas strong {
-    display: block;
+  display: block;
 
-    color: #f5810c;
+  color: #f47d0b;
 
-    font-size: 27px;
+  font-size: 40px;
+
+  margin-top: 20px;
 }
 
-.atlas > div:first-child > small {
-    color: var(--orange);
+.atlas small {
+  color: #888;
+
+  font-size: 9px;
 }
 
 .atlas ul {
-    list-style: none;
+  padding: 0;
 
-    padding: 4px 0;
+  list-style: none;
 
-    font-size: 10px;
+  line-height: 2;
 
-    line-height: 1.8;
+  color: #cccccc;
+
+  font-size: 10px;
 }
-
-.atlas ul li {
-    margin: 2px 0;
-}
-
-
-/* =========================================================
-   MINI MAP
-   ========================================================= */
 
 .mini-map {
-    width: 45%;
+  width: 35%;
 
-    background:
-        radial-gradient(
-            circle,
-            #b96710,
-            #15191a 50%
-        );
+  display: flex;
 
-    clip-path: polygon(
-        20% 0,
-        100% 15%,
-        90% 100%,
-        0 80%
+  align-items: center;
+
+  justify-content: center;
+
+  color: #f47d0b;
+
+  font-size: 70px;
+
+  background:
+    radial-gradient(
+      circle,
+      #1b2526,
+      #080c0d
     );
-
-    font-size: 80px;
-
-    color: #e98a17;
-
-    text-align: center;
-
-    padding-top: 55px;
 }
 
 
 /* =========================================================
    GEN Z
-   ========================================================= */
+========================================================= */
 
 .genz {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        1.1fr
-        repeat(4, 1fr)
-        1.2fr;
+  grid-template-columns:
+    repeat(4, 1fr);
 
-    gap: 8px;
+  gap: 10px;
 
-    padding: 8px 3%;
+  padding: 15px 6%;
 
-    background: #061011;
-}
-
-.genz > * {
-    border: 1px solid #202a2c;
-
-    padding: 13px;
-
-    min-height: 105px;
+  background: #061013;
 }
 
 .genz-title {
-    font-size: 17px;
+  background: #f47d0b;
 
-    display: flex;
+  color: #ffffff;
 
-    justify-content: space-between;
+  padding: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 150px;
+}
+
+.genz-title b {
+  font-size: 22px;
+
+  line-height: 1.1;
 }
 
 .genz-title span {
-    color: #f58a0c;
+  font-size: 35px;
+}
 
-    font-size: 30px;
+.genz article {
+  padding: 25px;
+
+  min-height: 150px;
+
+  background: #080c0d;
+
+  border: 1px solid #1b2224;
 }
 
 .genz article b {
-    font-size: 12px;
+  color: #f47d0b;
+
+  font-size: 11px;
 }
 
 .genz article p {
-    font-size: 11px;
+  color: #bbbbbb;
 
-    color: #bbbbbb;
-}
-
-.genz article a {
-    display: inline-block;
-
-    font-size: 10px;
-
-    color: #f58a0c;
-
-    text-decoration: none;
-
-    border: 1px solid #92500b;
-
-    padding: 5px 10px;
-
-    margin-top: 3px;
-}
-
-.genz article a:hover {
-    background: var(--orange);
-
-    color: #ffffff;
-}
-
-.story-card {
-    background:
-        linear-gradient(
-            135deg,
-            #0c1112,
-            #4a2b11
-        );
-}
-
-.story-card small {
-    display: block;
-
-    color: #999999;
-
-    margin-bottom: 8px;
+  font-size: 12px;
 }
 
 
 /* =========================================================
    CIVILISATION
-   ========================================================= */
+========================================================= */
 
 .civil {
-    text-align: center;
+  padding: 45px 6%;
 
-    padding: 14px 3% 25px;
-
-    background: #05090a;
+  background: #05090a;
 }
 
 .civil-grid {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(10, 1fr);
+  grid-template-columns:
+    repeat(5, 1fr);
 
-    max-width: 1400px;
-
-    margin: 0 auto;
-
-    border-bottom: 1px solid #39240d;
+  border-top: 1px solid #222;
+  border-left: 1px solid #222;
 }
 
 .civil-grid span {
-    font-size: 28px;
+  min-height: 100px;
 
-    color: #ef850d;
+  display: flex;
 
-    padding: 8px;
+  align-items: center;
 
-    border-right: 1px solid #222;
+  justify-content: center;
 
-    min-width: 0;
-}
+  flex-direction: column;
 
-.civil-grid span:last-child {
-    border-right: 0;
+  text-align: center;
+
+  border-right: 1px solid #222;
+  border-bottom: 1px solid #222;
+
+  color: #f47d0b;
+
+  font-size: 30px;
 }
 
 .civil-grid small {
-    display: block;
+  color: #bbbbbb;
 
-    color: #eeeeee;
+  font-size: 9px;
 
-    font-size: 9px;
-
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 
 /* =========================================================
    CLOSING
-   ========================================================= */
+========================================================= */
 
 .closing {
-    min-height: 220px;
+  display: grid;
 
-    display: grid;
+  grid-template-columns:
+    1fr 1fr;
 
-    grid-template-columns:
-        1.1fr
-        1fr
-        1.1fr
-        1fr;
+  gap: 30px;
 
-    align-items: center;
+  padding: 60px 6%;
 
-    gap: 20px;
-
-    padding: 25px 6%;
-
-    background:
-        radial-gradient(
-            circle at 20% 50%,
-            #6d3b12,
-            #081011 42%
-        );
-
-    border-top: 1px solid #6b3d0b;
-}
-
-.closing h2 {
-    font-size: 26px;
-
-    line-height: 1.05;
-
-    margin: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      #4c2a10,
+      #05090a 60%
+    );
 }
 
 .silhouette {
-    font-size: 75px;
+  color: #f47d0b;
 
-    color: #f0800a;
+  font-size: 90px;
+
+  text-align: center;
+}
+
+.closing h2 {
+  font-size: 38px;
+
+  margin: 0;
 }
 
 .devanagari {
-    font-size: 42px;
+  color: #f47d0b;
 
-    color: #f0800a;
+  font-size: 45px;
 
-    line-height: 1;
-}
-
-.devanagari small {
-    display: block;
-
-    color: #eeeeee;
-
-    font-size: 10px;
-
-    margin-top: 8px;
-
-    line-height: 1.4;
+  margin-top: 15px;
 }
 
 .closing-text {
-    font-size: 10px;
+  margin-top: 25px;
 
-    color: #dddddd;
-}
+  color: #dddddd;
 
-.closing-text em {
-    color: var(--orange);
+  font-size: 15px;
 
-    font-style: normal;
-
-    font-weight: 700;
+  line-height: 1.65;
 }
 
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer {
-    display: flex;
+  position: relative;
 
-    align-items: center;
+  min-height: 150px;
 
-    justify-content: center;
+  padding: 30px 5vw 22px;
 
-    flex-wrap: wrap;
+  display: flex;
 
-    gap: 25px;
+  align-items: center;
 
-    padding: 18px 4% 22px;
+  justify-content: center;
 
-    background: #020506;
+  gap: 22px;
 
-    border-top: 1px solid #1b2021;
+  background: #030607;
 
-    font-size: 9px;
+  border-top: 1px solid #171b1c;
 
-    text-align: center;
-
-    position: relative;
+  text-align: center;
 }
 
 
 /* FOOTER LOGO */
 
-.footer-logo-wrap {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
 .footer-logo {
-    display: block;
+  width: 48px;
+  height: 48px;
 
-    width: 58px;
+  object-fit: contain;
 
-    height: 58px;
-
-    object-fit: contain;
-}
-
-.footer-logo img {
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
+  flex-shrink: 0;
 }
 
 
-/* FOOTER NAV */
+/* FOOTER NAVIGATION */
 
 .footer-nav {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 28px;
+  gap: 25px;
 
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
-    color: #dddddd;
+  color: #dddddd;
 
-    text-decoration: none;
+  text-decoration: none;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
 }
 
 .footer-nav a:hover {
-    color: var(--orange);
+  color: #f58a13;
 }
 
 
 /* FOOTER ICONS */
 
 .footer-icons {
-    color: var(--orange);
+  display: flex;
 
-    white-space: nowrap;
+  justify-content: center;
 
-    letter-spacing: 6px;
+  gap: 14px;
+
+  color: #f47d0b;
+
+  font-size: 12px;
+
+  white-space: nowrap;
 }
 
 
 /* COPYRIGHT */
 
 .copyright {
-    width: 100%;
+  position: absolute;
 
-    text-align: center;
+  bottom: 10px;
 
-    color: #777777;
+  left: 50%;
 
-    font-size: 9px;
+  transform: translateX(-50%);
 
-    padding-top: 4px;
+  color: #777777;
+
+  font-size: 9px;
+
+  white-space: nowrap;
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
-    .site-header {
-        padding: 0 25px;
-    }
+  .site-header {
+    gap: 15px;
 
-    .brand {
-        min-width: 230px;
-    }
+    padding: 0 3%;
+  }
 
-    .brand-text b {
-        font-size: 16px;
-    }
+  .brand {
+    min-width: 230px;
+  }
 
-    .site-header nav {
-        gap: 17px;
-    }
+  .brand b {
+    font-size: 17px;
+  }
 
-    .site-header nav a {
-        font-size: 11px;
-    }
+  .site-header nav {
+    gap: 15px;
+  }
 
-    .hero-copy {
-        width: 53%;
+  .site-header nav a {
+    font-size: 9px;
+  }
 
-        padding-left: 5%;
-    }
 
-    .hero h1 {
-        font-size: 48px;
-    }
+  /*
+     Keep the heading controlled.
+  */
 
-    .arch {
-        width: 420px;
+  .hero h1 {
+    font-size: 44px;
+  }
 
-        height: 530px;
+  .hero-copy {
+    width: 53%;
+  }
 
-        right: 3%;
-    }
+  .arch {
+    width: 420px;
 
-    .topic-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+    height: 530px;
+  }
 
-    .civil-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .topic-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
 
-    .genz {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .civil-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
+  .timeline-content {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .genz {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .genz-title {
+    grid-column: span 3;
+  }
 }
 
 
 /* =========================================================
    TABLET / SMALL LAPTOP
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
-    .site-header {
-        padding: 0 3%;
-    }
+  .site-header {
+    padding: 0 3%;
+  }
 
-    .site-header nav {
-        display: none;
-    }
+  .site-header nav {
+    display: none;
+  }
 
-    .brand {
-        flex: 1;
+  .brand {
+    flex: 1;
 
-        min-width: 0;
-    }
+    min-width: 0;
+  }
 
-    .hero {
-        min-height: 620px;
+  .hero {
+    min-height: 620px;
 
-        padding-left: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
-        padding-right: 5%;
-    }
+  .hero-copy {
+    width: 100%;
+  }
 
-    .hero-copy {
-        width: 100%;
-    }
+  .hero h1 {
+    font-size: 40px;
+  }
 
-    .hero h1 {
-        font-size: 40px;
-    }
+  .hero-art {
+    width: 60%;
 
-    .hero-art {
-        width: 60%;
+    opacity: 0.35;
+  }
 
-        opacity: .35;
-    }
+  .timeline-content {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
 
-    .timeline-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .two-col {
+    grid-template-columns: 1fr;
+  }
 
-    .topic-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .closing {
+    grid-template-columns:
+      1fr 1fr;
+  }
 
-    .two-col {
-        grid-template-columns: 1fr;
-    }
+  .genz {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
 
-    .closing {
-        grid-template-columns: 1fr 1fr;
-    }
+  .genz-title {
+    grid-column: span 2;
+  }
 
-    .genz {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .genz-title {
-        grid-column: span 2;
-    }
-
-    .civil-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .civil-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
 }
 
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-    html {
-        scroll-padding-top: 70px;
-    }
+  html {
+    scroll-padding-top: 70px;
+  }
 
-    body {
-        font-size: 13px;
-    }
+  body {
+    font-size: 13px;
+  }
 
 
-    /* HEADER */
+  /* HEADER */
 
-    .site-header {
-        height: 70px;
+  .site-header {
+    height: 70px;
 
-        padding: 0 14px;
+    padding: 0 15px;
 
-        gap: 8px;
-    }
+    gap: 8px;
+  }
 
-    .site-logo {
-        width: 42px;
-        height: 42px;
-    }
+  .brand {
+    min-width: 0;
 
-    .brand-text b {
-        font-size: 14px;
-    }
+    gap: 7px;
+  }
 
-    .brand-text small {
-        font-size: 8px;
+  .brand-logo,
+  .site-logo {
+    width: 38px;
+    height: 38px;
+  }
 
-        letter-spacing: .6px;
-    }
+  .brand b {
+    font-size: 14px;
+  }
 
-    .search {
-        display: none;
-    }
+  .brand small {
+    font-size: 7px;
 
+    letter-spacing: 0.8px;
+  }
 
-    /* HERO */
+  .search {
+    display: none;
+  }
 
-    .hero {
-        min-height: 620px;
 
-        padding:
-            110px
-            20px
-            45px;
-    }
+  /* HERO */
 
-    .hero-copy {
-        width: 100%;
+  .hero {
+    min-height: 620px;
 
-        padding: 0;
-    }
+    padding:
+      105px
+      22px
+      45px;
+  }
 
-    .kicker {
-        font-size: 9px;
+  .hero h1 {
+    font-size: 30px;
 
-        letter-spacing: 2px;
-    }
+    line-height: 1.06;
 
-    .hero h1 {
-        font-size: 32px;
+    letter-spacing: -0.5px;
 
-        line-height: 1.06;
+    margin-top: 22px;
+  }
 
-        letter-spacing: -.5px;
-    }
+  .kicker {
+    font-size: 9px;
 
-    .hero p {
-        font-size: 14px;
+    letter-spacing: 2px;
+  }
 
-        line-height: 1.5;
-    }
+  .hero p {
+    font-size: 13px;
+  }
 
-    .hero p br {
-        display: none;
-    }
+  .hero-copy > small {
+    font-size: 10px;
+  }
 
-    .hero-art {
-        width: 100%;
+  .cta {
+    padding:
+      11px
+      22px;
 
-        height: 400px;
+    font-size: 11px;
+  }
 
-        right: -25%;
+  .hero-art {
+    right: -20%;
 
-        top: 180px;
+    width: 70%;
 
-        opacity: .20;
-    }
+    opacity: 0.25;
+  }
 
-    .arch {
-        width: 330px;
+  .arch {
+    width: 330px;
 
-        height: 380px;
+    height: 380px;
 
-        right: 5%;
+    border-width: 21px;
 
-        top: 20px;
+    border-radius:
+      180px
+      180px
+      0
+      0;
+  }
 
-        border-width: 21px;
+  .temple {
+    font-size: 65px;
+  }
 
-        border-radius: 180px 180px 0 0;
-    }
+  .dots {
+    right: 12px;
+  }
 
-    .arch > .temple {
-        top: 48px;
-    }
 
-    .arch > .temple::before {
-        font-size: 65px;
-    }
+  /* MAP */
 
-    .dots {
-        right: 10px;
+  .map-section {
+    padding:
+      20px
+      15px
+      25px;
+  }
 
-        top: 300px;
+  .map-section h2,
+  .dark-section h2,
+  .civil h2 {
+    font-size: 18px;
 
-        gap: 10px;
-    }
+    line-height: 1.25;
+  }
 
-    .dots i {
-        width: 8px;
+  .timeline-strip {
+    overflow-x: auto;
 
-        height: 8px;
-    }
+    justify-content: flex-start;
 
+    gap: 18px;
 
-    /* MAP */
+    padding:
+      0
+      5px
+      8px;
 
-    .map-section {
-        padding:
-            20px
-            15px
-            25px;
-    }
+    white-space: nowrap;
 
-    .map-section h2,
-    .dark-section h2,
-    .civil h2 {
-        font-size: 18px;
+    scrollbar-width: none;
+  }
 
-        line-height: 1.25;
-    }
+  .timeline-strip::-webkit-scrollbar {
+    display: none;
+  }
 
-    .timeline-strip {
-        overflow-x: auto;
+  .timeline-strip span,
+  .timeline-strip i {
+    flex-shrink: 0;
 
-        justify-content: flex-start;
+    font-size: 8px;
+  }
 
-        gap: 18px;
+  .map-art {
+    height: 160px;
+  }
 
-        padding: 0 5px 8px;
+  .route {
+    font-size: 8px;
+  }
 
-        white-space: nowrap;
+  .route small {
+    font-size: 7px;
+  }
 
-        scrollbar-width: none;
+  .bharat {
+    font-size: 14px;
+  }
 
-        font-size: 8px;
-    }
+  .sea {
+    font-size: 9px;
+  }
 
-    .timeline-strip::-webkit-scrollbar {
-        display: none;
-    }
 
-    .timeline-strip span,
-    .timeline-strip i {
-        flex-shrink: 0;
-    }
+  /* TIMELINE */
 
+  .dark-section {
+    padding:
+      18px
+      12px
+      25px;
+  }
 
-    /* MAP ART */
+  .timeline-content {
+    grid-template-columns: 1fr;
 
-    .map-art {
-        height: 160px;
-    }
+    gap: 8px;
+  }
 
-    .route {
-        font-size: 8px;
-    }
+  .timeline-content article {
+    min-height: auto;
 
-    .route small {
-        font-size: 7px;
-    }
+    padding: 16px;
+  }
 
-    .bharat {
-        font-size: 14px;
-    }
+  .timeline-content h3 {
+    font-size: 12px;
+  }
 
-    .sea {
-        font-size: 9px;
-    }
+  .timeline-content p {
+    font-size: 10px;
+  }
 
 
-    /* TIMELINE */
+  /* HISTORY */
 
-    .dark-section {
-        padding:
-            18px
-            12px
-            25px;
-    }
+  .topic-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
 
-    .timeline-content {
-        grid-template-columns: 1fr;
+    gap: 7px;
+  }
 
-        gap: 8px;
-    }
+  .topic-grid article {
+    min-height: 105px;
+  }
 
-    .timeline-content article {
-        min-height: auto;
+  .topic-grid b {
+    font-size: 24px;
+  }
 
-        padding: 16px;
-    }
+  .topic-grid span {
+    font-size: 9px;
 
-    .timeline-content h3 {
-        font-size: 12px;
-    }
+    text-align: center;
+  }
 
-    .timeline-content p {
-        font-size: 10px;
-    }
 
+  /* TWO COLUMN */
 
-    /* HISTORY */
+  .two-col {
+    grid-template-columns: 1fr;
 
-    .topic-grid {
-        grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 
-        gap: 7px;
-    }
+    padding:
+      0
+      12px
+      10px;
+  }
 
-    .topic-card {
-        min-height: 105px;
-    }
+  .panel {
+    padding: 15px;
 
-    .topic-card b {
-        font-size: 24px;
-    }
+    min-height: auto;
+  }
 
-    .topic-card span {
-        font-size: 9px;
-    }
+  .panel h2 {
+    font-size: 17px;
+  }
 
 
-    /* TWO COLUMN */
+  /* SOURCES */
 
-    .two-col {
-        grid-template-columns: 1fr;
+  .source-flow {
+    flex-wrap: wrap;
 
-        gap: 10px;
+    gap: 5px;
+  }
 
-        padding:
-            0
-            12px
-            10px;
-    }
+  .source-flow span {
+    min-width: 28%;
 
-    .panel {
-        padding: 15px;
+    padding:
+      15px
+      5px;
 
-        min-height: auto;
-    }
+    font-size: 8px;
+  }
 
-    .panel h2 {
-        font-size: 17px;
-    }
+  .establish {
+    font-size: 9px;
+  }
 
 
-    /* SOURCES */
+  /* ATLAS */
 
-    .source-flow {
-        flex-wrap: wrap;
+  .atlas {
+    min-height: 260px;
+  }
 
-        gap: 5px;
-    }
+  .atlas p {
+    font-size: 11px;
+  }
 
-    .source-flow span {
-        min-width: 28%;
+  .mini-map {
+    width: 35%;
 
-        padding: 15px 5px;
+    min-width: 100px;
 
-        font-size: 8px;
-    }
+    font-size: 50px;
 
-    .establish {
-        font-size: 9px;
-    }
+    padding-top: 70px;
+  }
 
 
-    /* ATLAS */
+  /* GEN Z */
 
-    .atlas {
-        min-height: 260px;
-    }
+  .genz {
+    grid-template-columns: 1fr;
 
-    .atlas p {
-        font-size: 11px;
-    }
+    gap: 7px;
 
-    .mini-map {
-        width: 35%;
+    padding:
+      8px
+      12px;
+  }
 
-        min-width: 100px;
+  .genz-title {
+    grid-column: auto;
 
-        font-size: 50px;
+    min-height: 70px;
+  }
 
-        padding-top: 70px;
-    }
+  .genz > * {
+    min-height: auto;
 
+    padding: 15px;
+  }
 
-    /* GEN Z */
+  .genz article p {
+    margin: 7px 0;
+  }
 
-    .genz {
-        grid-template-columns: 1fr;
 
-        gap: 7px;
+  /* CIVILISATION */
 
-        padding:
-            8px
-            12px;
-    }
+  .civil {
+    padding:
+      15px
+      12px
+      25px;
+  }
 
-    .genz-title {
-        grid-column: auto;
+  .civil-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
 
-        min-height: 70px;
-    }
+  .civil-grid span {
+    border-bottom: 1px solid #222;
 
-    .genz > * {
-        min-height: auto;
+    font-size: 25px;
+  }
 
-        padding: 15px;
-    }
+  .civil-grid span:nth-child(even) {
+    border-right: 0;
+  }
 
-    .genz article p {
-        margin: 7px 0;
-    }
+  .civil-grid small {
+    font-size: 8px;
+  }
 
 
-    /* CIVILISATION */
+  /* CLOSING */
 
-    .civil {
-        padding:
-            15px
-            12px
-            25px;
-    }
+  .closing {
+    min-height: auto;
 
-    .civil-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: 1fr;
 
-    .civil-grid span {
-        border-bottom: 1px solid #222;
+    gap: 15px;
 
-        font-size: 25px;
-    }
+    padding:
+      30px
+      22px;
+  }
 
-    .civil-grid span:nth-child(even) {
-        border-right: 0;
-    }
+  .silhouette {
+    font-size: 55px;
+  }
 
-    .civil-grid small {
-        font-size: 8px;
-    }
+  .closing h2 {
+    font-size: 25px;
+  }
 
+  .devanagari {
+    font-size: 34px;
+  }
 
-    /* CLOSING */
+  .closing-text {
+    grid-column: auto;
 
-    .closing {
-        min-height: auto;
+    font-size: 10px;
+  }
 
-        grid-template-columns: 1fr;
 
-        gap: 15px;
+  /* FOOTER */
 
-        padding:
-            30px
-            22px;
-    }
+  footer {
+    flex-direction: column;
 
-    .silhouette {
-        font-size: 55px;
-    }
+    gap: 15px;
 
-    .closing h2 {
-        font-size: 25px;
-    }
+    padding:
+      25px
+      15px
+      20px;
+  }
 
-    .devanagari {
-        font-size: 34px;
-    }
+  .footer-logo {
+    width: 58px;
 
-    .closing-text {
-        grid-column: auto;
+    height: 58px;
+  }
 
-        font-size: 10px;
-    }
+  .footer-nav {
+    justify-content: center;
 
+    gap:
+      12px
+      20px;
+  }
 
-    /* FOOTER */
+  .footer-nav a {
+    font-size: 9px;
+  }
 
-    footer {
-        flex-direction: column;
+  .footer-icons {
+    font-size: 11px;
+  }
 
-        gap: 15px;
+  .copyright {
+    position: static;
 
-        padding:
-            25px
-            15px
-            20px;
-    }
+    transform: none;
 
-    .footer-logo {
-        width: 58px;
+    font-size: 8px;
 
-        height: 58px;
-    }
-
-    .footer-nav {
-        justify-content: center;
-
-        gap: 12px 20px;
-    }
-
-    .footer-nav a {
-        font-size: 9px;
-    }
-
-    .footer-icons {
-        font-size: 11px;
-    }
-
-    .copyright {
-        font-size: 8px;
-
-        margin-top: 3px;
-    }
+    margin-top: 3px;
+  }
 }
 
 
 /* =========================================================
    VERY SMALL PHONES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
-    .site-header {
-        padding: 0 14px;
-    }
+  .site-header {
+    padding: 0 14px;
+  }
 
-    .brand-text b {
-        font-size: 13px;
-    }
+  .brand b {
+    font-size: 13px;
+  }
 
-    .brand-text small {
-        font-size: 7px;
-    }
+  .brand small {
+    font-size: 7px;
+  }
 
-    .site-logo {
-        width: 38px;
+  .site-logo {
+    width: 38px;
 
-        height: 38px;
-    }
+    height: 38px;
+  }
 
-    .hero {
-        padding-left: 18px;
+  .hero {
+    padding-left: 18px;
 
-        padding-right: 18px;
-    }
+    padding-right: 18px;
+  }
 
-    .hero h1 {
-        font-size: 28px;
-    }
+  .hero h1 {
+    font-size: 28px;
+  }
 
-    .topic-card {
-        min-height: 95px;
-    }
+  .topic-grid article {
+    min-height: 95px;
+  }
 
-    .topic-card b {
-        font-size: 21px;
-    }
+  .topic-grid b {
+    font-size: 21px;
+  }
 
-    .timeline-content article {
-        padding: 14px;
-    }
+  .timeline-content article {
+    padding: 14px;
+  }
 }
