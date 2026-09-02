@@ -1046,54 +1046,58 @@ a {
    FOOTER
    ========================================================= */
 
+footer /* =========================
+   FOOTER
+   ========================= */
+
 footer {
-  width: 100%;
-  background: #000;
-  text-align: center;
-  padding: 28px 20px 20px;
-  box-sizing: border-box;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    padding: 28px 20px 20px;
+    box-sizing: border-box;
 }
 
 .footer-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
 }
 
 .footer-logo {
-  width: 55px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0;
+    width: 55px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0;
 }
 
 .footer-row a {
-  color: #eee;
-  text-decoration: none;
-  font-size: 10px;
-  white-space: nowrap;
+    color: #eee;
+    text-decoration: none;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
 .footer-row a:hover {
-  color: #f47d0b;
+    color: #f47d0b;
 }
 
 .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 18px;
-  color: #f47d0b;
-  font-size: 11px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    color: #f47d0b;
+    font-size: 11px;
 }
 
 .footer-copy {
-  margin: 18px 0 0;
-  color: #777;
-  font-size: 9px;
+    margin: 18px 0 0;
+    color: #777;
+    font-size: 9px;
 }
 
 
