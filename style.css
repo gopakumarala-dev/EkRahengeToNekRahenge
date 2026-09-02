@@ -1018,77 +1018,90 @@ a {
   color: #dddddd;
 }
 
-
-/* =========================
-   FOOTER — FIXED LAYOUT
-   ========================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
-    width: 100%;
-    background: #000;
-    text-align: center;
-    padding: 28px 20px 20px;
-    box-sizing: border-box;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  padding: 28px 20px 20px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* LOGO */
+
 .footer-logo-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 18px;
+  padding: 0;
 }
 
 .footer-logo {
-    display: block;
-    width: 150px;
-    height: auto;
-    max-width: 150px;
-    object-fit: contain;
+  display: block;
+  width: 150px;
+  height: auto;
+  max-width: 150px;
+  margin: 0;
+  object-fit: contain;
 }
 
-footer nav,
+/* FOOTER NAVIGATION */
+
 .footer-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 0 auto 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 auto 18px;
+  padding: 0;
 }
 
-footer nav a,
 .footer-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 400;
+  display: inline-block;
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
 }
 
-footer nav a:hover,
 .footer-nav a:hover {
-    color: #ff7a00;
+  color: #f47d0b;
 }
+
+/* SOCIAL ICONS */
 
 .footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto 18px;
+  padding: 0;
 }
 
 .footer-social a {
-    color: #ff7a00;
-    text-decoration: none;
-    font-size: 13px;
+  color: #f47d0b;
+  text-decoration: none;
+  font-size: 12px;
 }
 
+/* COPYRIGHT */
+
 .footer-copy {
-    margin: 0;
-    color: #777;
-    font-size: 10px;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #777777;
+  font-size: 10px;
+  text-align: center;
 }
 
 
