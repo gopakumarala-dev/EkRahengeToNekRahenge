@@ -1019,109 +1019,59 @@ a {
 }
 
 
-/* =========================================================
-   HAINDAVEEYAM FOUNDATION FOOTER
-   ========================================================= */
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 16px;
-
-  padding: 28px 20px 22px;
-
-  background: #020506;
-
-  border-top: 1px solid #1b2021;
-
-  text-align: center;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    padding: 28px 20px 20px;
+    box-sizing: border-box;
 }
 
-
-/* FOOTER LOGO */
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
 
 .footer-logo {
-  width: 150px;
-  height: 85px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  overflow: hidden;
+    width: 55px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0;
 }
 
-.footer-logo img {
-  width: 150px;
-
-  height: auto;
-
-  display: block;
-
-  object-fit: contain;
+.footer-row a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
-
-/* FOOTER LINKS */
-
-.footer-links {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 28px;
+.footer-row a:hover {
+    color: #f47d0b;
 }
-
-.footer-links a {
-  color: #dddddd;
-
-  text-decoration: none;
-
-  font-size: 10px;
-
-  letter-spacing: 0.3px;
-}
-
-.footer-links a:hover {
-  color: #f47d0b;
-}
-
-
-/* SOCIAL */
 
 .footer-social {
-  display: flex;
-
-  gap: 18px;
-
-  color: #f47d0b;
-
-  font-size: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    color: #f47d0b;
+    font-size: 11px;
 }
 
-
-/* COPYRIGHT */
-
-.copyright {
-  color: #777777;
-
-  font-size: 9px;
-
-  margin-top: 2px;
+.footer-copy {
+    margin: 18px 0 0;
+    color: #777;
+    font-size: 9px;
 }
-
 
 /* =========================================================
    TABLET
