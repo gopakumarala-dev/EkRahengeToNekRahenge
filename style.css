@@ -291,6 +291,8 @@ a {
    HERO ART
    ========================================================= */
 
+/* CORRECTED - keeps the complete temple image visible */
+
 .hero-art {
   position: absolute;
 
@@ -309,7 +311,29 @@ a {
     );
 
   opacity: 0.85;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
+
+
+/* CORRECTED - if the temple picture is an IMG inside hero-art */
+
+.hero-art img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center center;
+
+  display: block;
+}
+
+
+/* Keep the existing CSS arch available */
 
 .arch {
   position: absolute;
@@ -1293,6 +1317,22 @@ footer {
     top: 180px;
 
     opacity: 0.22;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+
+  .hero-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center center;
+
+    display: block;
   }
 
   .arch {
