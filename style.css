@@ -1,150 +1,1487 @@
 /* =========================================================
-   HERO TEMPLE + OM
-   Restore the original temple artwork
-   ========================================================= */
+   EK RAHENGE TO NEK RAHENGE
+   MAIN WEBSITE STYLES
+========================================================= */
 
-.hero-art {
-  position: relative;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  margin: 0;
+  background: #05090a;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  height: 78px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(2, 3, 3, 0.96);
+  border-bottom: 1px solid #171b1c;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4%;
+  gap: 30px;
+}
+
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #eeeeee;
+  text-decoration: none;
+
+  min-width: 250px;
+}
+
+.site-logo {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+  object-position: center;
+
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: block;
+}
+
+.brand-text b {
+  display: block;
+
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.brand-text small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  color: #dddddd;
+}
+
+
+/* NAVIGATION */
+
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 620px;
+
+  gap: 26px;
+
+  flex: 1;
+}
+
+.main-nav a {
+  color: #eeeeee;
+  text-decoration: none;
+
+  font-size: 11px;
+  letter-spacing: 0.4px;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #f58a13;
+}
+
+
+/* SEARCH */
+
+.search {
+  color: #eeeeee;
+  text-decoration: none;
+
+  font-size: 11px;
+
+  border: 1px solid #76500d;
+  border-radius: 5px;
+
+  padding: 8px 13px;
+
+  white-space: nowrap;
+}
+
+.search:hover {
+  color: #f58a13;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  min-height: 650px;
+
+  padding: 130px 6% 50px;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 48%,
+      #5c3a18 0,
+      #19120a 20%,
+      #030607 55%
+    );
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.kicker {
+  color: #e87b0b;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 25px 0 10px;
+
+  font-size: 52px;
+  line-height: 1.03;
+
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  color: #e97909;
+}
+
+.hero p {
+  font-size: 15px;
+
+  max-width: 650px;
+}
+
+.cta {
+  display: inline-block;
+
+  background: #f47d0b;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  padding: 12px 28px;
+  margin-top: 12px;
+
+  font-size: 12px;
+
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #ff922b;
+}
+
+.hero-note {
+  display: block;
+
+  margin-top: 12px;
+}
+
+.hero em,
+.closing-text em {
+  color: #f38b13;
+  font-style: normal;
+}
+
+
+/* HERO ART */
+
+.hero-art {
+  position: absolute;
+
+  right: 3%;
+  top: 80px;
+
+  width: 58%;
+  height: 570px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #9a5b1c,
+      #21170d 35%,
+      transparent 68%
+    );
+
+  opacity: 0.85;
+}
+
+.arch {
+  position: absolute;
+
+  right: 12%;
+  top: 45px;
+
+  width: 48%;
+  height: 480px;
+
+  border: 45px solid #17130e;
+  border-bottom: 0;
+
+  border-radius: 260px 260px 0 0;
+
+  text-align: center;
+
+  padding-top: 100px;
+
+  font-size: 50px;
+  color: #ffad3a;
+}
+
+.temple {
+  font-size: 100px;
+
+  text-shadow: 0 0 40px #f5a33b;
+}
+
+
+/* HERO DOTS */
+
+.dots {
+  position: absolute;
+
+  right: 2%;
+  top: 230px;
+
+  display: grid;
+  gap: 13px;
+}
+
+.dots i {
+  width: 11px;
+  height: 11px;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.dots .active {
+  background: #f47d0b;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADINGS
+========================================================= */
+
+.map-section h2,
+.dark-section h2,
+.civil h2 {
+  font-size: 21px;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-section {
+  padding: 15px 4% 25px;
+
+  background:
+    linear-gradient(
+      #061014,
+      #071214
+    );
+
+  text-align: center;
+
+  border-top: 1px solid #171d1e;
+}
+
+.timeline-strip {
+  display: flex;
+
+  justify-content: space-around;
+
+  max-width: 900px;
+
+  margin: 0 auto 8px;
+
+  color: #dddddd;
+
+  font-size: 11px;
+
+  border-bottom: 2px solid #8a5314;
+
+  padding-bottom: 8px;
+}
+
+.timeline-strip span {
+  color: #ff8610;
+}
+
+.timeline-strip i {
+  font-style: normal;
+}
+
+
+/* MAP ART */
+
+.map-art {
+  height: 190px;
+
+  max-width: 1050px;
+
+  margin: auto;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse,
+      #55381e 0,
+      #191713 32%,
+      #071014 70%
+    );
+
+  clip-path: polygon(
+    0 20%,
+    100% 0,
+    96% 100%,
+    4% 95%
+  );
+}
+
+.route {
+  position: absolute;
+
+  color: #dddddd;
+
+  font-weight: bold;
+
+  font-size: 12px;
+
+  text-shadow: 0 1px 4px #000;
+}
+
+.route small {
+  color: #e78a27;
+}
+
+.r1 {
+  left: 7%;
+  top: 35%;
+}
+
+.r2 {
+  left: 17%;
+  top: 55%;
+}
+
+.r3 {
+  left: 32%;
+  top: 38%;
+}
+
+.r4 {
+  left: 44%;
+  top: 28%;
+}
+
+.bharat {
+  position: absolute;
+
+  left: 52%;
+  top: 55%;
+
+  font-size: 19px;
+}
+
+.sea {
+  position: absolute;
+
+  right: 15%;
+  bottom: 35%;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.outline-btn {
+  display: inline-block;
+
+  color: #f58a13;
+
+  border: 1px solid #a65e0b;
+  border-radius: 3px;
+
+  padding: 9px 18px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  margin-top: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.outline-btn:hover {
+  background: #f58a13;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK SECTIONS
+========================================================= */
+
+.dark-section {
+  text-align: center;
+
+  padding: 10px 2% 25px;
+
+  background: #04090a;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section {
+  border-top: 1px solid #101719;
+}
+
+.timeline-content {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+
+  max-width: 1200px;
+
+  margin: 15px auto 0;
+}
+
+.timeline-content article {
+  min-height: 150px;
+
+  border: 1px solid #273034;
+
+  background:
+    linear-gradient(
+      #101619,
+      #080b0c
+    );
+
+  padding: 20px;
+
+  text-align: left;
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px;
+
+  font-size: 13px;
+
+  color: #f58a13;
+}
+
+.timeline-content p {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: #bbbbbb;
+}
+
+
+/* =========================================================
+   HISTORY TOPIC GRID
+========================================================= */
+
+.topic-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(10, 1fr);
+
+  gap: 8px;
+}
+
+.topic-card {
+  min-height: 120px;
+
+  border: 1px solid #273034;
+
+  background:
+    linear-gradient(
+      #101619,
+      #080b0c
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #eeeeee;
+
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.topic-card:hover {
+  border-color: #9a5a0d;
+
+  background:
+    linear-gradient(
+      #171c1e,
+      #0b0e0f
+    );
+
+  transform: translateY(-2px);
+}
+
+.topic-card b {
+  font-size: 27px;
+
+  color: #e57d0d;
+}
+
+.topic-card span {
+  font-size: 10px;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SOURCES + ATLAS
+========================================================= */
+
+.two-col {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1.08fr;
+
+  gap: 18px;
+
+  padding: 0 3% 10px;
+
+  background: #04090a;
+}
+
+.panel {
+  min-height: 245px;
+
+  border: 1px solid #242b2d;
+
+  background: #080e10;
+
+  padding: 14px;
+
+  text-align: center;
+}
+
+.panel h2 {
+  font-size: 20px;
+
+  margin: 0 0 12px;
+}
+
+
+/* SOURCE FLOW */
+
+.source-flow {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.source-flow span {
+  border: 1px solid #252d30;
+
+  padding: 25px 10px;
+
+  font-size: 9px;
+
+  flex: 1;
+}
+
+.establish {
+  border: 1px solid #6e430c;
+
+  color: #f18a0b;
+
+  padding: 10px;
+
+  margin: 12px auto;
+
+  max-width: 390px;
+}
+
+
+/* ATLAS */
+
+.atlas {
+  text-align: left;
+
+  display: flex;
+
   overflow: hidden;
 }
 
-/* Existing architectural arch */
-.hero-art .arch {
-  position: relative;
-  width: 430px;
-  height: 540px;
-  border: 56px solid rgba(20, 20, 20, 0.92);
-  border-bottom: none;
-  border-radius: 230px 230px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.atlas > div:first-child {
+  flex: 1;
+}
+
+.atlas strong {
+  font-size: 27px;
+
+  color: #f5810c;
+
+  display: block;
+}
+
+.atlas > div:first-child > small {
+  color: #f5810c;
+}
+
+.atlas ul {
+  list-style: none;
+
+  padding: 4px 0;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.atlas ul li {
+  margin: 2px 0;
+}
+
+
+/* MINI MAP */
+
+.mini-map {
+  width: 45%;
+
   background:
     radial-gradient(
-      circle at 50% 45%,
-      rgba(255, 145, 20, 0.35),
-      rgba(255, 145, 20, 0.10) 35%,
-      transparent 65%
+      circle,
+      #b96710,
+      #15191a 50%
     );
-  box-shadow:
-    0 0 80px rgba(255, 130, 10, 0.12),
-    inset 0 0 70px rgba(255, 130, 10, 0.08);
+
+  clip-path: polygon(
+    20% 0,
+    100% 15%,
+    90% 100%,
+    0 80%
+  );
+
+  font-size: 80px;
+
+  color: #e98a17;
+
+  text-align: center;
+
+  padding-top: 55px;
 }
 
-/* Temple itself */
-.temple-symbol {
-  position: relative;
-  width: 180px;
-  height: 330px;
+
+/* =========================================================
+   HISTORY FOR GEN Z
+========================================================= */
+
+.genz {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    repeat(4, 1fr)
+    1.2fr;
+
+  gap: 8px;
+
+  padding: 8px 3%;
+
+  background: #061011;
+}
+
+.genz > * {
+  border: 1px solid #202a2c;
+
+  padding: 13px;
+
+  min-height: 105px;
+}
+
+.genz-title {
+  font-size: 17px;
+
   display: flex;
-  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.genz-title span {
+  color: #f58a0c;
+}
+
+.genz article b {
+  font-size: 12px;
+}
+
+.genz article p {
+  font-size: 11px;
+
+  color: #bbbbbb;
+}
+
+.genz article a {
+  display: inline-block;
+
+  font-size: 10px;
+
+  color: #f58a0c;
+
+  text-decoration: none;
+
+  border: 1px solid #92500b;
+
+  padding: 5px 10px;
+}
+
+.genz article a:hover {
+  background: #f58a0c;
+
+  color: #ffffff;
+}
+
+.story-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0c1112,
+      #4a2b11
+    );
+}
+
+.story-card small {
+  display: block;
+
+  color: #999999;
+
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CIVILISATION
+========================================================= */
+
+.civil {
+  text-align: center;
+
+  padding: 8px 3% 20px;
+
+  background: #05090a;
+}
+
+.civil-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(10, 1fr);
+
+  border-bottom: 1px solid #39240d;
+}
+
+.civil-grid span {
+  font-size: 28px;
+
+  color: #ef850d;
+
+  padding: 8px;
+
+  border-right: 1px solid #222222;
+}
+
+.civil-grid small {
+  display: block;
+
+  color: #eeeeee;
+
+  font-size: 9px;
+
+  margin-top: 3px;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.closing {
+  min-height: 220px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    1fr
+    1.1fr
+    1fr;
+
+  align-items: center;
+
+  padding: 20px 6%;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      #6d3b12,
+      #081011 42%
+    );
+
+  border-top: 1px solid #6b3d0b;
+}
+
+.silhouette {
+  font-size: 75px;
+
+  color: #f0800a;
+}
+
+.closing h2 {
+  font-size: 26px;
+
+  line-height: 1.05;
+}
+
+.devanagari {
+  font-size: 42px;
+
+  color: #f0800a;
+
+  line-height: 1;
+}
+
+.devanagari small {
+  display: block;
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  margin-top: 8px;
+}
+
+.closing-text {
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  display: flex;
+
   align-items: center;
   justify-content: center;
-  color: #111;
-  z-index: 3;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  padding: 18px 4%;
+
+  background: #020506;
+
+  border-top: 1px solid #1b2021;
+
+  font-size: 9px;
 }
 
-/* Temple roof */
-.temple-roof {
-  position: absolute;
-  top: 20px;
-  font-size: 105px;
-  line-height: 1;
-  color: #111;
-  transform: scaleX(1.25);
+
+/* FOOTER LOGO */
+
+.footer-logo-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
-/* Temple body */
-.temple-body {
-  position: absolute;
-  top: 105px;
-  width: 105px;
-  height: 125px;
-  background: #111;
-  font-size: 0;
+.footer-logo {
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
 }
 
-/* Small temple entrance */
-.temple-body::after {
-  content: "";
-  position: absolute;
-  width: 38px;
-  height: 75px;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  background: #080808;
-  border-radius: 22px 22px 0 0;
+
+/* FOOTER LINKS */
+
+.footer-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
 }
 
-/* Temple steps */
-.temple-steps {
-  position: absolute;
-  top: 230px;
-  font-size: 32px;
-  letter-spacing: -5px;
-  color: #111;
+.footer-nav a {
+  color: #dddddd;
+
+  text-decoration: none;
 }
 
-/* Om symbol */
-.om-symbol {
-  position: absolute;
-  top: 135px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 105px;
-  font-weight: 700;
-  line-height: 1;
-  color: #ff7a00;
-  text-shadow:
-    0 0 12px rgba(255, 122, 0, 0.55),
-    0 0 35px rgba(255, 122, 0, 0.28);
-  z-index: 5;
+.footer-nav a:hover {
+  color: #f58a13;
 }
 
-/* Remove the old star/sun symbols if still present */
-.hero-art > .arch > :not(.temple-symbol) {
-  display: none;
+
+/* FOOTER ICONS */
+
+.footer-icons {
+  color: #dddddd;
+
+  white-space: nowrap;
 }
 
-/* Mobile */
-@media (max-width: 800px) {
+
+/* COPYRIGHT */
+
+.copyright {
+  width: 100%;
+
+  text-align: center;
+
+  color: #888888;
+
+  font-size: 9px;
+
+  padding-top: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .site-header {
+    gap: 15px;
+  }
+
+  .brand {
+    min-width: 220px;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .topic-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
+  .civil-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
+  .genz {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    padding: 0 3%;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .brand {
+    flex: 1;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
 
   .hero-art {
-    min-height: 480px;
+    width: 60%;
+
+    opacity: 0.35;
   }
 
-  .hero-art .arch {
-    width: 300px;
-    height: 390px;
-    border-width: 40px;
-    border-radius: 170px 170px 0 0;
+  .timeline-content {
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
-  .temple-symbol {
-    transform: scale(0.78);
+  .topic-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
   }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .closing {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .genz {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .civil-grid {
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+
 }
 
-@media (max-width: 500px) {
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+
+  /* HEADER */
+
+  .site-header {
+    height: 70px;
+
+    padding: 0 14px;
+
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 0;
+
+    gap: 8px;
+  }
+
+  .site-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-text b {
+    font-size: 14px;
+  }
+
+  .brand-text small {
+    font-size: 8px;
+
+    letter-spacing: 0.6px;
+  }
+
+  .search {
+    display: none;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 620px;
+
+    padding:
+      110px
+      20px
+      45px;
+  }
+
+  .kicker {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+
+    line-height: 1.06;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero p br {
+    display: none;
+  }
 
   .hero-art {
-    min-height: 400px;
+    width: 100%;
+
+    right: -25%;
+
+    top: 110px;
+
+    opacity: 0.18;
   }
 
-  .hero-art .arch {
-    width: 250px;
-    height: 330px;
-    border-width: 34px;
-    border-radius: 145px 145px 0 0;
+  .arch {
+    right: 10%;
+
+    width: 55%;
+
+    border-width: 28px;
   }
 
-  .temple-symbol {
-    transform: scale(0.62);
+  .dots {
+    display: none;
   }
+
+
+  /* MAP */
+
+  .map-section {
+    padding:
+      20px
+      15px
+      25px;
+  }
+
+  .map-section h2,
+  .dark-section h2,
+  .civil h2 {
+    font-size: 18px;
+  }
+
+  .timeline-strip {
+    font-size: 8px;
+
+    gap: 4px;
+
+    overflow: hidden;
+  }
+
+  .timeline-strip i,
+  .timeline-strip span {
+    white-space: nowrap;
+  }
+
+  .map-art {
+    height: 160px;
+  }
+
+  .route {
+    font-size: 9px;
+  }
+
+  .bharat {
+    font-size: 15px;
+  }
+
+  .sea {
+    font-size: 9px;
+  }
+
+
+  /* TIMELINE */
+
+  .timeline-content {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .timeline-content article {
+    min-height: auto;
+
+    padding: 16px;
+  }
+
+
+  /* HISTORY */
+
+  .dark-section {
+    padding:
+      15px
+      12px
+      25px;
+  }
+
+  .topic-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 7px;
+  }
+
+  .topic-card {
+    min-height: 105px;
+  }
+
+
+  /* SOURCES */
+
+  .two-col {
+    padding:
+      0
+      12px
+      10px;
+  }
+
+  .source-flow {
+    flex-wrap: wrap;
+  }
+
+  .source-flow span {
+    min-width: 28%;
+
+    padding: 18px 8px;
+  }
+
+
+  /* ATLAS */
+
+  .atlas {
+    flex-direction: column;
+  }
+
+  .mini-map {
+    width: 100%;
+
+    height: 100px;
+
+    padding-top: 15px;
+
+    margin-top: 15px;
+  }
+
+
+  /* GEN Z */
+
+  .genz {
+    grid-template-columns: 1fr;
+
+    padding:
+      8px
+      12px;
+  }
+
+
+  /* CIVILISATION */
+
+  .civil {
+    padding:
+      15px
+      12px
+      25px;
+  }
+
+  .civil-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .civil-grid span {
+    border-bottom: 1px solid #222222;
+  }
+
+
+  /* CLOSING */
+
+  .closing {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    padding:
+      30px
+      20px;
+  }
+
+  .silhouette {
+    font-size: 55px;
+  }
+
+  .closing h2 {
+    font-size: 25px;
+  }
+
+  .devanagari {
+    font-size: 34px;
+  }
+
+
+  /* FOOTER */
+
+  .site-footer {
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding:
+      20px
+      15px;
+  }
+
+  .footer-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .footer-nav {
+    justify-content: center;
+
+    gap: 12px 20px;
+
+    text-align: center;
+  }
+
+  .footer-icons {
+    margin-top: 2px;
+  }
+
+  .copyright {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .brand-text b {
+    font-size: 13px;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+  }
+
+  .site-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .topic-card {
+    min-height: 95px;
+  }
+
+  .topic-card b {
+    font-size: 23px;
+  }
+
 }
