@@ -300,7 +300,7 @@ a {
   top: 80px;
 
   width: 58%;
-  height: 570px;
+  height: 620px;
 
   background:
     radial-gradient(
@@ -312,11 +312,7 @@ a {
 
   opacity: 0.85;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
+  overflow: visible;
 }
 
 
