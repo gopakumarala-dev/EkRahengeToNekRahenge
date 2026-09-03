@@ -1,1 +1,1109 @@
 
+/* =========================================================
+   EK RAHENGE TO NEK RAHENGE
+   HISTORY PAGE
+========================================================= */
+
+:root {
+    --black: #050708;
+    --black-soft: #090d0f;
+    --panel: #0d1214;
+    --panel-light: #111719;
+
+    --orange: #ff7900;
+    --orange-bright: #ff8a00;
+
+    --white: #f4f4f2;
+    --muted: #a6abad;
+    --line: #252c2f;
+
+    --gold: #d69a3a;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.history-header {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5vw;
+
+    background: #030405;
+
+    border-bottom: 1px solid #1b2022;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.history-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-hindi {
+    color: var(--white);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.logo-english {
+    color: #9ca2a4;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    margin-top: 2px;
+}
+
+.history-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.history-nav a {
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #d2d4d5;
+
+    letter-spacing: .5px;
+
+    transition: .25s ease;
+}
+
+.history-nav a:hover,
+.history-nav a.active {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.history-hero {
+    min-height: 88vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050708 0%,
+            #050708 42%,
+            rgba(5,7,8,.78) 65%,
+            rgba(5,7,8,.2) 100%
+        ),
+        url("images/bhimbetka.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(255,121,0,.17),
+            transparent 32%
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    width: min(720px, 90%);
+
+    margin-left: 8vw;
+    padding: 100px 0;
+}
+
+.eyebrow,
+.section-label,
+.banner-label,
+.next-label {
+    color: var(--orange);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero-content h1 {
+    margin-top: 22px;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: .88;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    font-size: .47em;
+
+    letter-spacing: 1px;
+
+    line-height: 1.05;
+
+    margin-top: 15px;
+
+    color: #e7e7e5;
+}
+
+.hero-lead {
+    margin-top: 38px;
+
+    max-width: 620px;
+
+    font-size: 22px;
+
+    line-height: 1.45;
+
+    color: #e2e3e1;
+}
+
+.hero-line {
+    width: 90px;
+    height: 2px;
+
+    background: var(--orange);
+
+    margin: 28px 0;
+}
+
+.hero-text {
+    max-width: 590px;
+
+    color: #aeb3b5;
+
+    font-size: 15px;
+}
+
+.hero-button,
+.next-button {
+    display: inline-block;
+
+    margin-top: 32px;
+
+    padding: 15px 24px;
+
+    background: var(--orange);
+
+    color: #050505;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: .25s ease;
+}
+
+.hero-button:hover,
+.next-button:hover {
+    background: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   VERSE
+========================================================= */
+
+.verse-section {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 30px;
+
+    padding: 120px 10vw;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080b0c,
+            #0d1113
+        );
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.section-number {
+    color: var(--orange);
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.verse-content {
+    max-width: 900px;
+}
+
+.verse-content h2,
+.begin-heading h2,
+.timeline-heading h2,
+.evidence-section h2,
+.next-inner h2 {
+    margin-top: 15px;
+
+    font-size: clamp(38px, 5vw, 70px);
+
+    line-height: .95;
+
+    letter-spacing: -2px;
+}
+
+.sanskrit {
+    margin-top: 50px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    font-family:
+        "Noto Serif Devanagari",
+        "Mangal",
+        serif;
+
+    font-size: clamp(23px, 3vw, 36px);
+
+    line-height: 1.8;
+
+    color: #f0e6d3;
+}
+
+.transliteration {
+    margin-top: 24px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    color: var(--gold);
+}
+
+.verse-divider {
+    width: 55px;
+    height: 2px;
+
+    background: var(--orange);
+
+    margin: 30px 0;
+}
+
+.verse-note {
+    max-width: 700px;
+
+    color: #b2b7b9;
+
+    font-size: 15px;
+}
+
+.source-note {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-left: 2px solid var(--orange);
+
+    background: #0b1012;
+
+    color: #8e9699;
+
+    font-size: 12px;
+}
+
+.source-note strong {
+    color: var(--orange);
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   BEGIN SECTION
+========================================================= */
+
+.begin-section {
+    padding: 130px 10vw;
+}
+
+.begin-heading {
+    max-width: 900px;
+
+    margin-bottom: 75px;
+}
+
+.begin-heading p {
+    margin-top: 25px;
+
+    max-width: 700px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+}
+
+.begin-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.begin-text {
+    max-width: 600px;
+}
+
+.large-text {
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    color: #ededeb;
+
+    margin-bottom: 28px;
+}
+
+.begin-text p:not(.large-text) {
+    color: #9ea5a7;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.evidence-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    border-left: 3px solid var(--orange);
+}
+
+.evidence-title {
+    color: var(--orange);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.evidence-box strong {
+    font-size: 21px;
+}
+
+.evidence-box span:last-child {
+    color: #92999b;
+
+    font-size: 12px;
+}
+
+.begin-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    background: #000;
+}
+
+.begin-image img {
+    width: 100%;
+
+    height: 520px;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: saturate(.7) contrast(1.1);
+
+    transition: transform .7s ease;
+}
+
+.begin-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-caption {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.95)
+        );
+
+    padding-top: 70px;
+}
+
+.image-caption span {
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.image-caption small {
+    color: #c5c8c9;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section {
+    padding: 120px 10vw;
+
+    background: #080b0c;
+
+    border-top: 1px solid var(--line);
+}
+
+.timeline-heading {
+    max-width: 850px;
+
+    margin-bottom: 80px;
+}
+
+.timeline-heading p {
+    margin-top: 22px;
+
+    color: #969ea0;
+}
+
+.timeline {
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 130px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #333a3c;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 110px 40px 1fr;
+
+    gap: 20px;
+
+    position: relative;
+
+    margin-bottom: 60px;
+}
+
+.timeline-date {
+    color: var(--orange);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    padding-top: 8px;
+
+    text-align: right;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    margin: 8px auto 0;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 0 5px #080b0c,
+        0 0 20px rgba(255,121,0,.3);
+}
+
+.timeline-card {
+    padding: 25px 30px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    transition: .3s ease;
+}
+
+.timeline-card:hover {
+    border-color: #4a5255;
+
+    transform: translateX(5px);
+}
+
+.timeline-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.timeline-card p {
+    color: #92999b;
+
+    font-size: 14px;
+}
+
+.timeline-card a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--orange);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.timeline-item.future .timeline-card {
+    border-color: #3c2b18;
+}
+
+
+/* =========================================================
+   CIVILISATION BANNER
+========================================================= */
+
+.civilisation-banner {
+    padding: 110px 10vw;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,121,0,.12),
+            transparent 40%
+        ),
+        #0b0f10;
+
+    border-top: 1px solid #382716;
+    border-bottom: 1px solid #382716;
+}
+
+.banner-inner {
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.banner-inner h2 {
+    margin-top: 15px;
+
+    font-size: clamp(42px, 6vw, 80px);
+
+    line-height: .95;
+}
+
+.banner-inner h2 span {
+    color: var(--orange);
+}
+
+.banner-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 65px;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.banner-grid div {
+    padding: 30px 20px;
+
+    border-right: 1px solid var(--line);
+}
+
+.banner-grid div:last-child {
+    border-right: none;
+}
+
+.banner-grid strong {
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.banner-grid span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #92999b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.evidence-section {
+    padding: 130px 10vw;
+}
+
+.evidence-intro {
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    color: #969ea0;
+
+    font-size: 17px;
+}
+
+.evidence-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 65px;
+}
+
+.evidence-card {
+    min-height: 240px;
+
+    padding: 30px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    transition: .3s ease;
+}
+
+.evidence-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #4a5255;
+}
+
+.evidence-icon {
+    color: var(--orange);
+
+    font-size: 27px;
+
+    margin-bottom: 30px;
+}
+
+.evidence-card h3 {
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+.evidence-card p {
+    margin-top: 15px;
+
+    color: #8f9799;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NEXT CHAPTER
+========================================================= */
+
+.next-section {
+    min-height: 65vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            rgba(4,6,7,.92),
+            rgba(4,6,7,.96)
+        ),
+        url("images/bhimbetka.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.next-inner {
+    max-width: 900px;
+}
+
+.next-inner h2 {
+    margin-top: 15px;
+}
+
+.next-inner p {
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    color: #a1a8aa;
+
+    font-size: 17px;
+}
+
+.next-date {
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.history-footer {
+    padding: 45px 7vw;
+
+    background: #030405;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-footer strong {
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.history-footer span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #737a7c;
+
+    font-size: 10px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #969c9e;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .history-nav {
+        gap: 14px;
+    }
+
+    .history-nav a {
+        font-size: 9px;
+    }
+
+    .begin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .evidence-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .banner-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .banner-grid div:nth-child(2) {
+        border-right: none;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .history-header {
+        height: auto;
+
+        padding: 18px 5vw;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .history-nav {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    .history-hero {
+        min-height: 85vh;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5,7,8,.96),
+                rgba(5,7,8,.78)
+            ),
+            url("images/bhimbetka.jpg");
+
+        background-size: cover;
+    }
+
+    .hero-content {
+        margin-left: 7vw;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+
+    .verse-section {
+        grid-template-columns: 1fr;
+
+        padding: 80px 7vw;
+    }
+
+    .begin-section,
+    .timeline-section,
+    .evidence-section {
+        padding: 90px 7vw;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 15px;
+    }
+
+    .timeline-date {
+        grid-column: 2;
+
+        grid-row: 1;
+
+        text-align: left;
+
+        padding: 0 0 8px;
+    }
+
+    .timeline-dot {
+        grid-column: 1;
+
+        grid-row: 2;
+
+        margin-top: 8px;
+    }
+
+    .timeline-card {
+        grid-column: 2;
+
+        grid-row: 2;
+    }
+
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-grid div {
+        border-right: none;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .banner-grid div:last-child {
+        border-bottom: none;
+    }
+
+    .history-footer {
+        flex-direction: column;
+
+        gap: 25px;
+
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+}
