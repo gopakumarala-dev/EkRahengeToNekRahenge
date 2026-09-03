@@ -1738,3 +1738,20 @@ footer {
     color: inherit;
     text-decoration: none;
 }
+/* =====================================================
+   HISTORY TOPIC CARDS — KEEP ALL 11 ON ONE ROW
+===================================================== */
+
+.dark-section .topic-grid {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dark-section .topic-grid article {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
