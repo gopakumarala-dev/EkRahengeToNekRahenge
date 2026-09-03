@@ -1,28 +1,29 @@
 /* =========================================================
-   EK RAHENGE TO NEK RAHENGE
+   EK RAHENGE • NEK RAHENGE
    HISTORY PAGE
-   DARK CINEMATIC DESIGN
-========================================================= */
+   ========================================================= */
 
+
+/* =========================================================
+   ROOT
+========================================================= */
 
 :root {
 
     --black: #050708;
-    --black-soft: #090d0f;
-
-    --panel: #0d1214;
-    --panel-light: #111719;
+    --black-deep: #020304;
+    --black-soft: #0a0d0f;
 
     --orange: #ff7900;
-    --orange-bright: #ff8a00;
+    --orange-light: #ff9a26;
 
-    --white: #f4f4f2;
+    --gold: #d49a45;
 
-    --muted: #a6abad;
+    --white: #f2f2f0;
+    --muted: #aeb4b6;
+    --muted-dark: #747c7f;
 
-    --line: #252c2f;
-
-    --gold: #d69a3a;
+    --line: #202527;
 }
 
 
@@ -31,14 +32,15 @@
 ========================================================= */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 82px;
 }
 
 
@@ -53,12 +55,28 @@ body {
         Helvetica,
         sans-serif;
 
+    font-size: 15px;
+
     line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
 }
 
 
 a {
+
     color: inherit;
+
     text-decoration: none;
 }
 
@@ -69,7 +87,16 @@ a {
 
 .history-header {
 
-    height: 92px;
+    height: 78px;
+
+    width: 100%;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
 
     display: flex;
 
@@ -77,51 +104,70 @@ a {
 
     justify-content: space-between;
 
-    padding: 0 5vw;
+    padding: 0 4.5vw;
 
-    background: #030405;
+    background:
+        rgba(2,3,3,.96);
 
-    border-bottom: 1px solid #1b2022;
+    border-bottom:
+        1px solid #171b1d;
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+    backdrop-filter:
+        blur(10px);
 }
 
 
+/* =========================================================
+   LOGO
+========================================================= */
+
 .history-logo {
+
+    flex-shrink: 0;
+}
+
+
+.history-logo a {
 
     display: flex;
 
     flex-direction: column;
+
+    gap: 3px;
 }
 
 
 .logo-hindi {
 
-    color: var(--white);
+    color: #f4f4f2;
 
-    font-size: 18px;
+    font-size: 20px;
 
     font-weight: 700;
 
-    letter-spacing: 1px;
+    line-height: 1.1;
+
+    white-space: nowrap;
 }
 
 
 .logo-english {
 
-    color: #9ca2a4;
+    color: #bfc4c5;
 
     font-size: 9px;
 
     letter-spacing: 2px;
 
-    margin-top: 2px;
+    line-height: 1.2;
+
+    white-space: nowrap;
 }
 
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .history-nav {
 
@@ -129,28 +175,61 @@ a {
 
     align-items: center;
 
-    gap: 30px;
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-left: auto;
+
+    margin-right: 1vw;
 }
 
 
 .history-nav a {
 
+    position: relative;
+
+    color: #e5e5e3;
+
     font-size: 11px;
 
     font-weight: 700;
 
-    color: #d2d4d5;
+    letter-spacing: .4px;
 
-    letter-spacing: .5px;
+    white-space: nowrap;
 
-    transition: .25s ease;
+    transition:
+        color .2s ease;
 }
 
 
-.history-nav a:hover,
+.history-nav a:hover {
+
+    color: var(--orange);
+}
+
+
 .history-nav a.active {
 
     color: var(--orange);
+}
+
+
+.history-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -10px;
+
+    height: 2px;
+
+    background: var(--orange);
 }
 
 
@@ -160,50 +239,41 @@ a {
 
 .history-hero {
 
-    min-height: calc(100vh - 92px);
-
     position: relative;
+
+    min-height:
+        calc(100vh - 78px);
+
+    margin-top: 78px;
 
     display: grid;
 
-    grid-template-columns: 48% 52%;
+    grid-template-columns:
+        48% 52%;
 
     overflow: hidden;
-
-    background: #050708;
-}
-
-
-/* Background */
-
-.hero-background {
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 0;
 
     background:
 
         radial-gradient(
-            ellipse at 78% 50%,
-            rgba(255,121,0,.13),
-            transparent 32%
+            circle at 76% 48%,
+            rgba(145,72,12,.30) 0%,
+            rgba(92,45,9,.16) 25%,
+            rgba(5,7,8,0) 58%
         ),
 
         linear-gradient(
-            90deg,
+            110deg,
             #050708 0%,
-            #050708 40%,
-            rgba(5,7,8,.96) 55%,
-            rgba(5,7,8,.72) 72%,
-            rgba(15,9,4,.45) 100%
+            #050708 48%,
+            #0d0a07 100%
         );
 }
 
 
-/* General hero overlay */
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
 
 .hero-overlay {
 
@@ -211,22 +281,22 @@ a {
 
     inset: 0;
 
-    z-index: 1;
-
     pointer-events: none;
 
     background:
 
-        radial-gradient(
-            circle at 80% 50%,
-            rgba(255,121,0,.08),
-            transparent 40%
+        linear-gradient(
+            90deg,
+            rgba(5,7,8,.05),
+            rgba(5,7,8,0)
         );
+
+    z-index: 1;
 }
 
 
 /* =========================================================
-   HERO — LEFT CONTENT
+   HERO LEFT CONTENT
 ========================================================= */
 
 .hero-content {
@@ -235,11 +305,12 @@ a {
 
     z-index: 5;
 
-    width: min(720px, 90%);
+    width: 86%;
 
     margin-left: 8vw;
 
-    padding: 110px 0;
+    padding:
+        110px 0 90px;
 
     display: flex;
 
@@ -248,6 +319,10 @@ a {
     justify-content: center;
 }
 
+
+/* =========================================================
+   EYEBROW / SECTION LABEL
+========================================================= */
 
 .eyebrow,
 .section-label,
@@ -261,20 +336,29 @@ a {
     font-weight: 800;
 
     letter-spacing: 4px;
+
+    line-height: 1.4;
 }
 
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
 
 .hero-content h1 {
 
     margin-top: 22px;
 
-    font-size: clamp(55px, 8vw, 110px);
+    color: var(--white);
 
-    line-height: .88;
+    font-size:
+        clamp(58px, 7.7vw, 112px);
 
     font-weight: 900;
 
-    letter-spacing: -4px;
+    line-height: .88;
+
+    letter-spacing: -5px;
 }
 
 
@@ -282,68 +366,87 @@ a {
 
     display: block;
 
-    font-size: .47em;
+    margin-top: 16px;
+
+    color: #e6e6e4;
+
+    font-size: .46em;
+
+    font-weight: 900;
 
     letter-spacing: 1px;
 
-    line-height: 1.05;
-
-    margin-top: 15px;
-
-    color: #e7e7e5;
+    line-height: 1.06;
 }
 
+
+/* =========================================================
+   HERO LEAD
+========================================================= */
 
 .hero-lead {
 
+    max-width: 640px;
+
     margin-top: 38px;
 
-    max-width: 620px;
+    color: #e0e2e0;
 
-    font-size: 22px;
+    font-size: 21px;
 
-    line-height: 1.45;
-
-    color: #e2e3e1;
+    line-height: 1.5;
 }
 
+
+/* =========================================================
+   ORANGE LINE
+========================================================= */
 
 .hero-line {
 
-    width: 90px;
+    width: 92px;
 
     height: 2px;
 
-    background: var(--orange);
+    margin:
+        28px 0;
 
-    margin: 28px 0;
+    background: var(--orange);
 }
 
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
 
 .hero-text {
 
-    max-width: 590px;
+    max-width: 620px;
 
-    color: #aeb3b5;
+    color: #aeb4b6;
 
     font-size: 15px;
+
+    line-height: 1.7;
 }
 
 
-.hero-button,
-.next-button {
+/* =========================================================
+   HERO BUTTON
+========================================================= */
 
-    display: inline-block;
+.hero-button {
 
     width: fit-content;
 
     margin-top: 32px;
 
-    padding: 15px 24px;
+    padding:
+        15px 24px;
 
     background: var(--orange);
 
-    color: #050505;
+    color: #080808;
 
     font-size: 11px;
 
@@ -351,21 +454,23 @@ a {
 
     letter-spacing: 1px;
 
-    transition: .25s ease;
+    transition:
+        background .25s ease,
+        transform .25s ease;
 }
 
 
-.hero-button:hover,
-.next-button:hover {
+.hero-button:hover {
 
     background: var(--white);
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 
 /* =========================================================
-   HERO — RIGHT MAP
+   HERO RIGHT — MAP
 ========================================================= */
 
 .hero-map {
@@ -374,7 +479,8 @@ a {
 
     z-index: 4;
 
-    min-height: calc(100vh - 92px);
+    min-height:
+        calc(100vh - 78px);
 
     display: flex;
 
@@ -382,25 +488,28 @@ a {
 
     justify-content: center;
 
-    padding: 45px 5vw 45px 15px;
+    padding:
+        35px 3vw 45px 0;
 
     overflow: hidden;
 }
 
 
-/* Orange atmospheric glow */
+/* =========================================================
+   MAP GLOW
+========================================================= */
 
 .map-glow {
 
     position: absolute;
 
-    width: 80%;
+    width: 92%;
 
-    height: 80%;
+    height: 92%;
 
-    left: 10%;
+    left: 4%;
 
-    top: 10%;
+    top: 4%;
 
     border-radius: 50%;
 
@@ -408,18 +517,22 @@ a {
 
         radial-gradient(
             circle,
-            rgba(255,121,0,.18) 0%,
-            rgba(255,121,0,.08) 35%,
-            transparent 72%
+            rgba(255,121,0,.20) 0%,
+            rgba(255,121,0,.10) 30%,
+            rgba(255,121,0,.035) 52%,
+            transparent 74%
         );
 
-    filter: blur(35px);
+    filter:
+        blur(38px);
 
     pointer-events: none;
 }
 
 
-/* Map itself */
+/* =========================================================
+   BHARATVARSHA MAP
+========================================================= */
 
 .hero-map img {
 
@@ -431,32 +544,56 @@ a {
 
     width: 100%;
 
-    max-width: 850px;
+    max-width: 930px;
 
-    max-height: 76vh;
-
-    height: auto;
+    height: 680px;
 
     object-fit: contain;
 
-    opacity: .97;
+    object-position: center center;
+
+    opacity: .98;
 
     filter:
-        brightness(.88)
-        contrast(1.12)
-        saturate(.92);
 
-    transition: transform .5s ease;
+        brightness(.93)
+
+        contrast(1.12)
+
+        saturate(.96)
+
+        drop-shadow(
+            0 0 28px rgba(255,121,0,.14)
+        );
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
 }
 
 
 .hero-map img:hover {
 
-    transform: scale(1.015);
+    transform:
+        scale(1.015);
+
+    filter:
+
+        brightness(1)
+
+        contrast(1.14)
+
+        saturate(1)
+
+        drop-shadow(
+            0 0 35px rgba(255,121,0,.20)
+        );
 }
 
 
-/* Map label */
+/* =========================================================
+   MAP CAPTION
+========================================================= */
 
 .map-caption {
 
@@ -464,13 +601,13 @@ a {
 
     z-index: 5;
 
-    right: 5vw;
+    right: 4vw;
 
-    bottom: 32px;
+    bottom: 25px;
 
     color: var(--orange);
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -481,18 +618,20 @@ a {
 
 
 /* =========================================================
-   VERSE
+   VERSE SECTION
 ========================================================= */
 
 .verse-section {
 
     display: grid;
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns:
+        100px 1fr;
 
     gap: 30px;
 
-    padding: 120px 10vw;
+    padding:
+        120px 10vw;
 
     background:
 
@@ -502,9 +641,11 @@ a {
             #0d1113
         );
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
 
@@ -534,7 +675,12 @@ a {
 
     margin-top: 15px;
 
-    font-size: clamp(38px, 5vw, 70px);
+    color: var(--white);
+
+    font-size:
+        clamp(38px, 5vw, 70px);
+
+    font-weight: 900;
 
     line-height: .95;
 
@@ -542,42 +688,63 @@ a {
 }
 
 
+/* =========================================================
+   SANSKRIT
+========================================================= */
+
 .sanskrit {
 
     margin-top: 50px;
 
-    padding: 35px 0;
+    padding:
+        35px 0;
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
+
+    color: #f0e6d3;
 
     font-family:
         "Noto Serif Devanagari",
         "Mangal",
         serif;
 
-    font-size: clamp(23px, 3vw, 36px);
+    font-size:
+        clamp(23px, 3vw, 36px);
 
     line-height: 1.8;
-
-    color: #f0e6d3;
 }
 
+
+/* =========================================================
+   TRANSLITERATION
+========================================================= */
 
 .transliteration {
 
     margin-top: 24px;
 
-    font-family: Georgia, serif;
+    color: var(--gold);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 17px;
 
     font-style: italic;
 
-    color: var(--gold);
+    line-height: 1.7;
 }
 
+
+/* =========================================================
+   VERSE DIVIDER
+========================================================= */
 
 .verse-divider {
 
@@ -585,9 +752,10 @@ a {
 
     height: 2px;
 
-    background: var(--orange);
+    margin:
+        30px 0;
 
-    margin: 30px 0;
+    background: var(--orange);
 }
 
 
@@ -598,8 +766,14 @@ a {
     color: #b2b7b9;
 
     font-size: 15px;
+
+    line-height: 1.7;
 }
 
+
+/* =========================================================
+   SOURCE NOTE
+========================================================= */
 
 .source-note {
 
@@ -607,13 +781,16 @@ a {
 
     padding: 20px;
 
-    border-left: 2px solid var(--orange);
+    border-left:
+        2px solid var(--orange);
 
     background: #0b1012;
 
     color: #8e9699;
 
     font-size: 12px;
+
+    line-height: 1.7;
 }
 
 
@@ -626,12 +803,15 @@ a {
 
 
 /* =========================================================
-   BEGIN SECTION
+   BEGIN HISTORY
 ========================================================= */
 
 .begin-section {
 
-    padding: 130px 10vw;
+    padding:
+        130px 10vw;
+
+    background: var(--black);
 }
 
 
@@ -643,23 +823,28 @@ a {
 }
 
 
-.begin-heading p {
+.begin-heading > p {
+
+    max-width: 680px;
 
     margin-top: 25px;
 
-    max-width: 700px;
+    color: #aeb4b6;
 
-    color: var(--muted);
-
-    font-size: 18px;
+    font-size: 17px;
 }
 
+
+/* =========================================================
+   BEGIN GRID
+========================================================= */
 
 .begin-grid {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 70px;
 
@@ -669,49 +854,57 @@ a {
 
 .begin-text {
 
-    max-width: 600px;
+    max-width: 700px;
 }
 
 
-.large-text {
+.begin-text p {
 
-    font-size: 28px;
+    margin-bottom: 25px;
 
-    line-height: 1.4;
-
-    color: #ededeb;
-
-    margin-bottom: 28px;
-}
-
-
-.begin-text p:not(.large-text) {
-
-    color: #9ea5a7;
+    color: #aeb4b6;
 
     font-size: 15px;
 
-    margin-bottom: 20px;
+    line-height: 1.8;
 }
 
 
+.begin-text .large-text {
+
+    color: #e4e5e3;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   EVIDENCE BOX
+========================================================= */
+
 .evidence-box {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
 
     margin-top: 35px;
 
     padding: 25px;
 
-    background: var(--panel);
+    border:
+        1px solid var(--line);
 
-    border: 1px solid var(--line);
+    background:
+        linear-gradient(
+            135deg,
+            #0a0e0f,
+            #0e1214
+        );
 
-    border-left: 3px solid var(--orange);
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
 }
 
 
@@ -721,26 +914,32 @@ a {
 
     font-size: 10px;
 
+    font-weight: 900;
+
     letter-spacing: 3px;
 }
 
 
 .evidence-box strong {
 
-    font-size: 21px;
+    color: var(--white);
+
+    font-size: 17px;
 }
 
 
-.evidence-box span:last-child {
+.evidence-box > span:last-child {
 
-    color: #92999b;
+    color: #7f8789;
 
     font-size: 12px;
+
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   BHIMBETKA IMAGE
+   BEGIN IMAGE
 ========================================================= */
 
 .begin-image {
@@ -749,9 +948,10 @@ a {
 
     overflow: hidden;
 
-    border: 1px solid var(--line);
+    border:
+        1px solid #282d2f;
 
-    background: #000;
+    background: #0b0d0e;
 }
 
 
@@ -761,21 +961,24 @@ a {
 
     height: 520px;
 
-    display: block;
-
     object-fit: cover;
 
-    filter:
-        saturate(.7)
-        contrast(1.1);
+    object-position: center;
 
-    transition: transform .7s ease;
+    opacity: .88;
+
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
 }
 
 
 .begin-image:hover img {
 
-    transform: scale(1.04);
+    transform:
+        scale(1.025);
+
+    opacity: 1;
 }
 
 
@@ -783,62 +986,67 @@ a {
 
     position: absolute;
 
-    bottom: 0;
-
     left: 0;
-
     right: 0;
 
-    padding: 22px;
+    bottom: 0;
 
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+    padding:
+        45px 25px 22px;
 
     background:
-
         linear-gradient(
             transparent,
-            rgba(0,0,0,.95)
+            rgba(0,0,0,.92)
         );
-
-    padding-top: 70px;
 }
 
 
 .image-caption span {
 
+    display: block;
+
     color: var(--orange);
 
-    font-size: 13px;
+    font-size: 11px;
 
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 
 .image-caption small {
 
-    color: #c5c8c9;
+    display: block;
+
+    margin-top: 5px;
+
+    color: #d0d2d1;
 
     font-size: 11px;
 }
 
 
 /* =========================================================
-   TIMELINE
+   TIMELINE SECTION
 ========================================================= */
 
 .timeline-section {
 
-    padding: 120px 10vw;
+    padding:
+        130px 10vw;
 
-    background: #080b0c;
+    background:
 
-    border-top: 1px solid var(--line);
+        linear-gradient(
+            180deg,
+            #080b0c,
+            #050708
+        );
+
+    border-top:
+        1px solid var(--line);
 }
 
 
@@ -852,19 +1060,27 @@ a {
 
 .timeline-heading p {
 
-    margin-top: 22px;
+    max-width: 650px;
 
-    color: #969ea0;
+    margin-top: 25px;
+
+    color: #929a9d;
+
+    font-size: 16px;
 }
 
+
+/* =========================================================
+   TIMELINE
+========================================================= */
 
 .timeline {
 
     position: relative;
 
-    max-width: 1000px;
+    max-width: 1100px;
 
-    margin: auto;
+    margin: 0 auto;
 }
 
 
@@ -874,29 +1090,39 @@ a {
 
     position: absolute;
 
-    left: 130px;
-
     top: 0;
-
     bottom: 0;
+
+    left: 50%;
 
     width: 1px;
 
-    background: #333a3c;
+    background:
+        linear-gradient(
+            #5b350e,
+            #25292b,
+            #5b350e
+        );
+
+    transform:
+        translateX(-50%);
 }
 
 
 .timeline-item {
 
-    display: grid;
-
-    grid-template-columns: 110px 40px 1fr;
-
-    gap: 20px;
-
     position: relative;
 
-    margin-bottom: 60px;
+    display: grid;
+
+    grid-template-columns:
+        1fr 70px 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    margin-bottom: 70px;
 }
 
 
@@ -908,9 +1134,7 @@ a {
 
     font-weight: 900;
 
-    letter-spacing: 1px;
-
-    padding-top: 8px;
+    letter-spacing: 2px;
 
     text-align: right;
 }
@@ -918,59 +1142,74 @@ a {
 
 .timeline-dot {
 
-    width: 12px;
+    width: 13px;
 
-    height: 12px;
+    height: 13px;
+
+    justify-self: center;
+
+    border:
+        2px solid var(--orange);
 
     border-radius: 50%;
 
-    background: var(--orange);
-
-    margin: 8px auto 0;
-
-    position: relative;
-
-    z-index: 2;
+    background: var(--black);
 
     box-shadow:
-        0 0 0 5px #080b0c,
-        0 0 20px rgba(255,121,0,.3);
+        0 0 0 6px rgba(255,121,0,.06);
 }
 
 
 .timeline-card {
 
-    padding: 25px 30px;
+    padding:
+        25px 28px;
 
-    background: var(--panel);
+    border:
+        1px solid var(--line);
 
-    border: 1px solid var(--line);
+    background:
+        linear-gradient(
+            135deg,
+            #0a0e0f,
+            #0d1113
+        );
 
-    transition: .3s ease;
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
 }
 
 
 .timeline-card:hover {
 
-    border-color: #4a5255;
+    border-color:
+        #5e3a15;
 
-    transform: translateX(5px);
+    transform:
+        translateY(-3px);
 }
 
 
 .timeline-card h3 {
 
-    font-size: 20px;
+    color: var(--white);
 
-    margin-bottom: 8px;
+    font-size: 16px;
+
+    letter-spacing: 1px;
 }
 
 
 .timeline-card p {
 
-    color: #92999b;
+    margin-top: 12px;
 
-    font-size: 14px;
+    color: #8f9799;
+
+    font-size: 13px;
+
+    line-height: 1.7;
 }
 
 
@@ -986,13 +1225,31 @@ a {
 
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 
+/* =========================================================
+   FUTURE TIMELINE ITEM
+========================================================= */
+
 .timeline-item.future .timeline-card {
 
-    border-color: #3c2b18;
+    border-color:
+        #51300d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #110d08,
+            #0c0f10
+        );
+}
+
+
+.timeline-item.future .timeline-date {
+
+    color: var(--gold);
 }
 
 
@@ -1002,21 +1259,24 @@ a {
 
 .civilisation-banner {
 
-    padding: 110px 10vw;
+    padding:
+        120px 8vw;
 
     background:
 
         radial-gradient(
-            circle at center,
-            rgba(255,121,0,.12),
-            transparent 40%
+            circle at 50% 0%,
+            rgba(121,58,8,.25),
+            transparent 60%
         ),
 
-        #0b0f10;
+        #06090a;
 
-    border-top: 1px solid #382716;
+    border-top:
+        1px solid var(--line);
 
-    border-bottom: 1px solid #382716;
+    border-bottom:
+        1px solid var(--line);
 }
 
 
@@ -1024,19 +1284,20 @@ a {
 
     max-width: 1200px;
 
-    margin: auto;
-
-    text-align: center;
+    margin: 0 auto;
 }
 
 
 .banner-inner h2 {
 
-    margin-top: 15px;
+    margin-top: 18px;
 
-    font-size: clamp(42px, 6vw, 80px);
+    font-size:
+        clamp(42px, 5vw, 72px);
 
     line-height: .95;
+
+    letter-spacing: -2px;
 }
 
 
@@ -1046,6 +1307,10 @@ a {
 }
 
 
+/* =========================================================
+   BANNER GRID
+========================================================= */
+
 .banner-grid {
 
     display: grid;
@@ -1053,19 +1318,25 @@ a {
     grid-template-columns:
         repeat(4, 1fr);
 
-    margin-top: 65px;
+    margin-top: 70px;
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+        1px solid var(--line);
 }
 
 
 .banner-grid div {
 
-    padding: 30px 20px;
+    min-height: 130px;
 
-    border-right: 1px solid var(--line);
+    padding:
+        30px 25px;
+
+    border-right:
+        1px solid var(--line);
 }
 
 
@@ -1081,7 +1352,7 @@ a {
 
     color: var(--orange);
 
-    font-size: 13px;
+    font-size: 12px;
 
     letter-spacing: 2px;
 }
@@ -1091,11 +1362,13 @@ a {
 
     display: block;
 
-    margin-top: 8px;
+    margin-top: 12px;
 
-    color: #92999b;
+    color: #9ba2a4;
 
-    font-size: 11px;
+    font-size: 12px;
+
+    line-height: 1.6;
 }
 
 
@@ -1105,21 +1378,29 @@ a {
 
 .evidence-section {
 
-    padding: 130px 10vw;
+    padding:
+        130px 10vw;
+
+    background:
+        #080b0c;
 }
 
 
 .evidence-intro {
 
-    max-width: 650px;
+    max-width: 700px;
 
-    margin-top: 30px;
+    margin-top: 25px;
 
-    color: #969ea0;
+    color: #9aa1a3;
 
-    font-size: 17px;
+    font-size: 16px;
 }
 
+
+/* =========================================================
+   EVIDENCE GRID
+========================================================= */
 
 .evidence-grid {
 
@@ -1128,7 +1409,7 @@ a {
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 18px;
+    gap: 20px;
 
     margin-top: 65px;
 }
@@ -1136,23 +1417,33 @@ a {
 
 .evidence-card {
 
-    min-height: 240px;
+    min-height: 230px;
 
     padding: 30px;
 
-    background: var(--panel);
+    border:
+        1px solid var(--line);
 
-    border: 1px solid var(--line);
+    background:
+        linear-gradient(
+            145deg,
+            #0a0e0f,
+            #0d1113
+        );
 
-    transition: .3s ease;
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
 }
 
 
 .evidence-card:hover {
 
-    transform: translateY(-5px);
+    border-color:
+        #5a3711;
 
-    border-color: #4a5255;
+    transform:
+        translateY(-3px);
 }
 
 
@@ -1160,13 +1451,15 @@ a {
 
     color: var(--orange);
 
-    font-size: 27px;
+    font-size: 24px;
 
     margin-bottom: 30px;
 }
 
 
 .evidence-card h3 {
+
+    color: var(--white);
 
     font-size: 15px;
 
@@ -1181,6 +1474,8 @@ a {
     color: #8f9799;
 
     font-size: 13px;
+
+    line-height: 1.7;
 }
 
 
@@ -1200,7 +1495,8 @@ a {
 
     text-align: center;
 
-    padding: 100px 20px;
+    padding:
+        100px 20px;
 
     background:
 
@@ -1233,11 +1529,14 @@ a {
 
     max-width: 650px;
 
-    margin: 30px auto;
+    margin:
+        30px auto;
 
     color: #a1a8aa;
 
     font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
@@ -1259,11 +1558,13 @@ a {
 
 .history-footer {
 
-    padding: 45px 7vw;
+    padding:
+        45px 7vw;
 
     background: #030405;
 
-    border-top: 1px solid var(--line);
+    border-top:
+        1px solid var(--line);
 
     display: flex;
 
@@ -1276,6 +1577,8 @@ a {
 .history-footer strong {
 
     display: block;
+
+    color: var(--white);
 
     font-size: 12px;
 
@@ -1320,7 +1623,7 @@ a {
 
 
 /* =========================================================
-   TABLET
+   LARGE TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -1339,7 +1642,8 @@ a {
 
     .history-hero {
 
-        grid-template-columns: 50% 50%;
+        grid-template-columns:
+            48% 52%;
     }
 
 
@@ -1351,7 +1655,19 @@ a {
 
     .hero-map {
 
-        padding-right: 3vw;
+        padding-right: 2vw;
+    }
+
+
+    .hero-map img {
+
+        height: 610px;
+    }
+
+
+    .begin-grid {
+
+        gap: 40px;
     }
 
 
@@ -1378,56 +1694,46 @@ a {
 
 
 /* =========================================================
-   MOBILE
+   TABLET
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
     .history-header {
 
-        height: auto;
+        padding:
+            0 3vw;
+    }
 
-        padding: 18px 5vw;
 
-        align-items: flex-start;
+    .history-logo {
 
-        flex-direction: column;
+        transform:
+            scale(.9);
 
-        gap: 15px;
+        transform-origin:
+            left center;
     }
 
 
     .history-nav {
 
-        width: 100%;
-
-        overflow-x: auto;
-
-        padding-bottom: 5px;
-
-        gap: 18px;
+        gap: 13px;
     }
 
 
     .history-nav a {
 
-        white-space: nowrap;
-
         font-size: 9px;
     }
 
 
-    /* HERO */
-
     .history-hero {
 
+        grid-template-columns:
+            1fr;
+
         min-height: auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        background: #050708;
     }
 
 
@@ -1437,33 +1743,17 @@ a {
 
         margin-left: 7vw;
 
-        padding: 90px 0 50px;
+        padding:
+            95px 0 55px;
     }
 
-
-    .hero-content h1 {
-
-        letter-spacing: -2px;
-
-        font-size: clamp(55px, 16vw, 90px);
-    }
-
-
-    .hero-lead {
-
-        font-size: 19px;
-    }
-
-
-    /* MAP */
 
     .hero-map {
 
-        min-height: 430px;
+        min-height: 600px;
 
-        width: 100%;
-
-        padding: 20px 6vw 55px;
+        padding:
+            20px 5vw 60px;
     }
 
 
@@ -1471,7 +1761,236 @@ a {
 
         width: 100%;
 
-        max-height: 420px;
+        max-width: 850px;
+
+        height: 580px;
+    }
+
+
+    .begin-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .begin-image img {
+
+        height: 480px;
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns:
+            1fr 50px 1fr;
+
+        gap: 18px;
+    }
+
+
+    .evidence-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    html {
+
+        scroll-padding-top: 120px;
+    }
+
+
+    /* HEADER */
+
+    .history-header {
+
+        position: relative;
+
+        height: auto;
+
+        padding:
+            17px 5vw;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .history-logo {
+
+        transform: none;
+    }
+
+
+    .logo-hindi {
+
+        font-size: 18px;
+    }
+
+
+    .logo-english {
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .history-nav {
+
+        width: 100%;
+
+        margin: 0;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+
+        gap: 20px;
+
+        scrollbar-width: none;
+    }
+
+
+    .history-nav::-webkit-scrollbar {
+
+        display: none;
+    }
+
+
+    .history-nav a {
+
+        font-size: 9px;
+
+        flex-shrink: 0;
+    }
+
+
+    .history-nav a.active::after {
+
+        bottom: -7px;
+    }
+
+
+    /* HERO */
+
+    .history-hero {
+
+        margin-top: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: auto;
+
+        background:
+            linear-gradient(
+                180deg,
+                #050708,
+                #080a0b
+            );
+    }
+
+
+    .hero-content {
+
+        width: 86%;
+
+        margin-left: 7vw;
+
+        padding:
+            75px 0 45px;
+    }
+
+
+    .eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero-content h1 {
+
+        margin-top: 18px;
+
+        font-size:
+            clamp(55px, 16vw, 90px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-content h1 span {
+
+        margin-top: 12px;
+
+        font-size: .48em;
+
+        letter-spacing: .5px;
+    }
+
+
+    .hero-lead {
+
+        margin-top: 30px;
+
+        font-size: 18px;
+    }
+
+
+    .hero-text {
+
+        font-size: 14px;
+    }
+
+
+    .hero-button {
+
+        padding:
+            14px 20px;
+    }
+
+
+    /* MAP */
+
+    .hero-map {
+
+        width: 100%;
+
+        min-height: 500px;
+
+        padding:
+            15px 5vw 55px;
+    }
+
+
+    .hero-map img {
+
+        width: 100%;
+
+        height: 500px;
+
+        max-width: none;
+
+        object-fit: contain;
     }
 
 
@@ -1480,6 +1999,8 @@ a {
         right: 6vw;
 
         bottom: 20px;
+
+        font-size: 9px;
     }
 
 
@@ -1487,9 +2008,38 @@ a {
 
     .verse-section {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        padding: 80px 7vw;
+        gap: 25px;
+
+        padding:
+            80px 7vw;
+    }
+
+
+    .verse-content h2,
+    .begin-heading h2,
+    .timeline-heading h2,
+    .evidence-section h2,
+    .next-inner h2 {
+
+        font-size:
+            clamp(36px, 11vw, 55px);
+    }
+
+
+    .sanskrit {
+
+        margin-top: 35px;
+
+        font-size: 22px;
+    }
+
+
+    .transliteration {
+
+        font-size: 15px;
     }
 
 
@@ -1499,32 +2049,58 @@ a {
     .timeline-section,
     .evidence-section {
 
-        padding: 90px 7vw;
+        padding:
+            90px 7vw;
+    }
+
+
+    .begin-heading {
+
+        margin-bottom: 50px;
     }
 
 
     .begin-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 45px;
     }
 
 
+    .begin-image img {
+
+        height: 400px;
+    }
+
+
     /* TIMELINE */
+
+    .timeline {
+
+        padding-left: 0;
+    }
+
 
     .timeline::before {
 
         left: 20px;
+
+        transform: none;
     }
 
 
     .timeline-item {
 
+        display: grid;
+
         grid-template-columns:
             40px 1fr;
 
         gap: 15px;
+
+        margin-bottom: 50px;
     }
 
 
@@ -1536,7 +2112,7 @@ a {
 
         text-align: left;
 
-        padding: 0 0 8px;
+        padding-bottom: 7px;
     }
 
 
@@ -1547,6 +2123,8 @@ a {
         grid-row: 2;
 
         margin-top: 8px;
+
+        justify-self: center;
     }
 
 
@@ -1555,22 +2133,26 @@ a {
         grid-column: 2;
 
         grid-row: 2;
-    }
 
-
-    /* EVIDENCE */
-
-    .evidence-grid {
-
-        grid-template-columns: 1fr;
+        padding: 22px;
     }
 
 
     /* BANNER */
 
+    .civilisation-banner {
+
+        padding:
+            90px 7vw;
+    }
+
+
     .banner-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+
+        margin-top: 50px;
     }
 
 
@@ -1578,7 +2160,8 @@ a {
 
         border-right: none;
 
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+            1px solid var(--line);
     }
 
 
@@ -1588,21 +2171,46 @@ a {
     }
 
 
+    /* EVIDENCE */
+
+    .evidence-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* NEXT */
+
+    .next-section {
+
+        min-height: 55vh;
+
+        padding:
+            80px 7vw;
+    }
+
+
     /* FOOTER */
 
     .history-footer {
 
         flex-direction: column;
 
+        align-items: flex-start;
+
         gap: 25px;
 
-        align-items: flex-start;
+        padding:
+            40px 7vw;
     }
 
 
     .footer-links {
 
         flex-wrap: wrap;
+
+        gap: 18px;
     }
 
 }
