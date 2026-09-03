@@ -1,1 +1,1050 @@
 
+/* =========================================================
+   STORIES.CSS
+   DARK DESIGN SYSTEM
+   Matches the main INDEX page
+   ========================================================= */
+
+:root {
+  --story-bg: #04090a;
+  --story-bg-2: #080d0f;
+  --story-card: #0b1113;
+  --story-card-hover: #101719;
+
+  --story-border: #263238;
+  --story-border-light: #303b3f;
+
+  --story-orange: #ff8a00;
+  --story-orange-dark: #c96b00;
+
+  --story-white: #f4f4f4;
+  --story-muted: #b8bec0;
+
+  --story-blue: #00a9e8;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.story-page *,
+.story-page *::before,
+.story-page *::after {
+  box-sizing: border-box;
+}
+
+.story-page {
+  margin: 0;
+  padding: 0;
+
+  background: var(--story-bg);
+  color: var(--story-white);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  line-height: 1.5;
+}
+
+.story-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.story-page img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.story-header {
+  width: 100%;
+
+  padding: 14px 4%;
+
+  background: #020506;
+
+  border-bottom: 1px solid var(--story-border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.story-brand {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 190px;
+
+  color: var(--story-white);
+}
+
+.story-brand b {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.story-brand small {
+  margin-top: 2px;
+
+  font-size: 8px;
+  letter-spacing: 1.5px;
+
+  color: #858b8d;
+}
+
+.story-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.story-nav a {
+  color: #d9ddde;
+
+  transition: color .2s ease;
+}
+
+.story-nav a:hover {
+  color: var(--story-orange);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.story-hero {
+  min-height: 620px;
+
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+
+  background: var(--story-bg);
+
+  border-bottom: 1px solid var(--story-border);
+}
+
+.story-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 7%;
+}
+
+.story-kicker {
+  margin-bottom: 18px;
+
+  color: var(--story-orange);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.story-hero h1 {
+  margin: 0;
+
+  color: var(--story-white);
+
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 800;
+  line-height: .94;
+
+  letter-spacing: -2px;
+
+  text-transform: uppercase;
+}
+
+.story-hero h1 span {
+  display: block;
+}
+
+.story-hero-intro {
+  max-width: 650px;
+
+  margin: 28px 0 0;
+
+  color: var(--story-muted);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO VISUAL PANEL
+   ========================================================= */
+
+.story-hero-visual {
+  position: relative;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(255, 138, 0, .22),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1517,
+      #05090a
+    );
+
+  border-left: 1px solid var(--story-border);
+}
+
+.story-hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 10%;
+
+  border: 1px solid rgba(255, 138, 0, .35);
+
+  transform: rotate(-3deg);
+}
+
+.story-hero-visual::after {
+  content: "SOMNATH";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, .035);
+
+  font-size: clamp(50px, 8vw, 120px);
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.story-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding: 12px 22px;
+
+  border: 1px solid var(--story-orange);
+
+  color: var(--story-orange);
+
+  background: transparent;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.story-button:hover {
+  background: var(--story-orange);
+  color: #050505;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.story-section {
+  width: 100%;
+
+  padding: 75px 4%;
+
+  background: var(--story-bg);
+}
+
+.story-section-dark {
+  background: #04090a;
+  color: var(--story-white);
+}
+
+.story-section-light {
+  background: #080d0f;
+  color: var(--story-white);
+}
+
+.story-section-inner {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+.story-section-label {
+  margin-bottom: 12px;
+
+  color: var(--story-orange);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.story-section h2 {
+  margin: 0 0 25px;
+
+  color: var(--story-white);
+
+  font-size: clamp(32px, 4.5vw, 62px);
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  text-transform: uppercase;
+}
+
+.story-section p {
+  max-width: 780px;
+
+  margin: 0 0 18px;
+
+  color: var(--story-muted);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   QUESTION BOX
+   ========================================================= */
+
+.question-box {
+  max-width: 1050px;
+
+  margin: 35px auto 0;
+
+  padding: 45px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+}
+
+.question-box:hover {
+  border-color: #3b474b;
+}
+
+.question-mark {
+  margin-bottom: 15px;
+
+  color: var(--story-orange);
+
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.question-box h2 {
+  max-width: 850px;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.story-timeline {
+  position: relative;
+
+  max-width: 1050px;
+
+  margin: 55px auto 0;
+}
+
+.story-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 1px;
+
+  background: var(--story-border);
+
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+
+  width: 50%;
+
+  padding: 20px 55px 55px;
+}
+
+.timeline-item:nth-child(odd) {
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+
+  top: 25px;
+
+  width: 13px;
+  height: 13px;
+
+  border: 2px solid var(--story-orange);
+
+  border-radius: 50%;
+
+  background: var(--story-bg);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -7px;
+}
+
+.timeline-year {
+  margin-bottom: 8px;
+
+  color: var(--story-orange);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.timeline-item h3 {
+  margin: 0 0 8px;
+
+  color: var(--story-white);
+
+  font-size: 21px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.timeline-item p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   EVIDENCE CARDS
+   ========================================================= */
+
+.evidence-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.evidence-card {
+  min-height: 270px;
+
+  padding: 28px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.evidence-card:hover {
+  background: var(--story-card-hover);
+
+  border-color: var(--story-orange);
+
+  transform: translateY(-3px);
+}
+
+.evidence-number {
+  color: #7e878a;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.evidence-icon {
+  margin: 28px 0 16px;
+
+  color: var(--story-orange);
+
+  font-size: 30px;
+}
+
+.evidence-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--story-white);
+
+  font-size: 18px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.evidence-card p {
+  margin: 0;
+
+  color: var(--story-muted);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.evidence-status {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  padding: 5px 9px;
+
+  border: 1px solid #4b3a26;
+
+  color: var(--story-orange);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAJOR HISTORICAL MOMENT
+   ========================================================= */
+
+.story-moment {
+  display: grid;
+
+  grid-template-columns: .75fr 1.25fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  min-height: 440px;
+}
+
+.story-moment-date {
+  color: var(--story-orange);
+
+  font-size: clamp(80px, 11vw, 155px);
+  font-weight: 800;
+
+  line-height: .8;
+
+  letter-spacing: -6px;
+}
+
+.story-moment-content h2 {
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+   ========================================================= */
+
+.story-two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 45px;
+
+  margin-top: 35px;
+}
+
+.story-two-column > div {
+  padding: 30px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+}
+
+.story-two-column h3 {
+  margin: 0 0 12px;
+
+  color: var(--story-white);
+
+  font-size: 18px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.story-two-column p {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SOURCE FLOW
+   ========================================================= */
+
+.source-flow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 40px 0 10px;
+}
+
+.source-flow span {
+  padding: 10px 15px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+
+  color: var(--story-orange);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.source-flow span::after {
+  content: "→";
+
+  margin-left: 12px;
+
+  color: #687174;
+}
+
+.source-flow span:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
+
+/* =========================================================
+   FACT GRID
+   ========================================================= */
+
+.fact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.fact-box {
+  min-height: 220px;
+
+  padding: 30px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+
+  border-top: 2px solid var(--story-orange);
+}
+
+.fact-box-symbol {
+  margin-bottom: 18px;
+
+  color: var(--story-orange);
+
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.fact-box h3 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.fact-box p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   CONCLUSION
+   ========================================================= */
+
+.case-conclusion {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 90px 5%;
+
+  background: #030708;
+
+  border-top: 1px solid var(--story-border);
+  border-bottom: 1px solid var(--story-border);
+
+  text-align: center;
+}
+
+.case-conclusion::before {
+  content: "EVIDENCE";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: rgba(255, 255, 255, .025);
+
+  font-size: clamp(80px, 17vw, 220px);
+  font-weight: 800;
+
+  letter-spacing: 8px;
+
+  white-space: nowrap;
+}
+
+.case-conclusion-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.case-conclusion h2 {
+  margin-bottom: 25px;
+
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: .95;
+}
+
+.case-conclusion p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   NEXT / DEEPER CARDS
+   ========================================================= */
+
+.story-next-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.story-next-card {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px;
+
+  background: var(--story-card);
+
+  border: 1px solid var(--story-border);
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.story-next-card:hover {
+  background: var(--story-card-hover);
+
+  border-color: var(--story-orange);
+}
+
+.story-next-card small {
+  color: #7d8689;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.story-next-card h3 {
+  margin: 15px 0;
+
+  color: var(--story-white);
+
+  font-size: 20px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.story-next-card span {
+  color: var(--story-orange);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.story-footer {
+  padding: 35px 4%;
+
+  background: #020506;
+
+  border-top: 1px solid var(--story-border);
+}
+
+.story-footer-inner {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.story-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.story-footer-links a {
+  color: #9da5a7;
+}
+
+.story-footer-links a:hover {
+  color: var(--story-orange);
+}
+
+.story-footer-copy {
+  color: #60696b;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .story-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .story-nav {
+    justify-content: flex-start;
+  }
+
+  .story-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .story-hero-visual {
+    min-height: 400px;
+
+    border-left: none;
+    border-top: 1px solid var(--story-border);
+  }
+
+  .evidence-grid,
+  .fact-grid,
+  .story-next-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .story-moment {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .story-header {
+    padding: 14px 5%;
+  }
+
+  .story-nav {
+    gap: 12px 15px;
+
+    font-size: 9px;
+  }
+
+  .story-hero-content {
+    padding: 65px 6%;
+  }
+
+  .story-hero h1 {
+    font-size: 48px;
+  }
+
+  .story-section {
+    padding: 60px 5%;
+  }
+
+  .question-box {
+    padding: 28px;
+  }
+
+  .story-two-column,
+  .evidence-grid,
+  .fact-grid,
+  .story-next-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-left: 35px;
+    padding-right: 5px;
+
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 2px;
+    right: auto;
+  }
+
+  .story-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .story-hero h1 {
+    font-size: 40px;
+  }
+
+  .story-hero-visual {
+    min-height: 300px;
+  }
+
+  .story-section h2 {
+    font-size: 35px;
+  }
+
+  .story-moment-date {
+    font-size: 80px;
+  }
+
+}
