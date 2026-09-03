@@ -295,7 +295,7 @@ a {
 .hero-art {
   position: absolute;
 
-  right: 1%;
+  right: -1%;
   top: 80px;
 
   width: 62%;
