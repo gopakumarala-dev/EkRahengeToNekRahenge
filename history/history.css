@@ -1,683 +1,1608 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================================================
+   EK RAHENGE TO NEK RAHENGE
+   HISTORY PAGE
+   DARK CINEMATIC DESIGN
+========================================================= */
 
-    <title>Bharat — A Civilisation Through Time</title>
 
-    <meta name="description"
-        content="Explore the history of Bharat — its civilisation, traditions, knowledge, kingdoms, resistance, colonial experience and continuing cultural memory.">
+:root {
 
-    <link rel="stylesheet" href="history.css">
-</head>
+    --black: #050708;
+    --black-soft: #090d0f;
 
-<body>
+    --panel: #0d1214;
+    --panel-light: #111719;
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    --orange: #ff7900;
+    --orange-bright: #ff8a00;
 
-<header class="history-header">
+    --white: #f4f4f2;
 
-    <div class="history-logo">
-        <a href="../index.html">
-            <span class="logo-hindi">एक रहेंगे • नेक रहेंगे</span>
-            <span class="logo-english">EK RAHENGE TO NEK RAHENGE</span>
-        </a>
-    </div>
+    --muted: #a6abad;
 
-    <nav class="history-nav">
+    --line: #252c2f;
 
-        <a href="../index.html">HOME</a>
+    --gold: #d69a3a;
+}
 
-        <a href="history.html" class="active">HISTORY</a>
 
-        <a href="../civilisation/civilisation.html">
-            CIVILISATION
-        </a>
+/* =========================================================
+   RESET
+========================================================= */
 
-        <a href="../map">
-            MAP
-        </a>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <a href="../index.html#timeline">
-            TIMELINE
-        </a>
 
-        <a href="../sources/sources.html">
-            SOURCES
-        </a>
+html {
+    scroll-behavior: smooth;
+}
 
-        <a href="../stories/stories.html">
-            STORIES
-        </a>
 
-        <a href="../atlas/atlas.html">
-            ATLAS
-        </a>
+body {
 
-    </nav>
+    background: var(--black);
 
-</header>
+    color: var(--white);
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+    line-height: 1.6;
+}
 
-<section class="history-hero">
 
-    <div class="hero-background"></div>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-    <div class="hero-overlay"></div>
 
+/* =========================================================
+   HEADER
+========================================================= */
 
-    <!-- LEFT SIDE -->
+.history-header {
 
-    <div class="hero-content">
+    height: 92px;
 
-        <div class="eyebrow">
-            BHARAT • CIVILISATION • MEMORY
-        </div>
+    display: flex;
 
-        <h1>
-            BHARAT
+    align-items: center;
 
-            <span>
-                A CIVILISATION<br>
-                THROUGH TIME
-            </span>
-        </h1>
+    justify-content: space-between;
 
-        <p class="hero-lead">
-            Not a history that begins in 1947.
-            A civilisation whose story reaches deep into antiquity.
-        </p>
+    padding: 0 5vw;
 
-        <div class="hero-line"></div>
+    background: #030405;
 
-        <p class="hero-text">
-            Before empires rose and fell, before colonial rule,
-            before the modern republic — people lived, created,
-            worshipped, traded, built and remembered across this land.
-        </p>
+    border-bottom: 1px solid #1b2022;
 
-        <a href="#begin" class="hero-button">
-            BEGIN THE JOURNEY →
-        </a>
+    position: sticky;
 
-    </div>
+    top: 0;
 
+    z-index: 1000;
+}
 
-    <!-- RIGHT SIDE : BHARATVARSHA MAP -->
 
-    <div class="hero-map">
+.history-logo {
 
-        <div class="map-glow"></div>
+    display: flex;
 
-        <img
-            src="Bharat1.png"
-            alt="Bharatvarsha civilisational map">
+    flex-direction: column;
+}
 
-        <div class="map-caption">
-            BHARATVARSHA
-        </div>
 
-    </div>
+.logo-hindi {
 
-</section>
+    color: var(--white);
 
+    font-size: 18px;
 
-<!-- =========================================================
-     THE LAND
-========================================================= -->
+    font-weight: 700;
 
-<section class="verse-section">
+    letter-spacing: 1px;
+}
 
-    <div class="section-number">
-        01
-    </div>
 
-    <div class="verse-content">
+.logo-english {
 
-        <div class="section-label">
-            THE LAND
-        </div>
+    color: #9ca2a4;
 
-        <h2>
-            BHARAT — A LAND<br>
-            REMEMBERED
-        </h2>
+    font-size: 9px;
 
-        <div class="sanskrit">
+    letter-spacing: 2px;
 
-            हिमालयात् समारभ्य यावद् इन्दुसरोवरम् ।<br>
-            तं देवनिर्मितं देशं हिन्दुस्थानं प्रचक्षते ॥
+    margin-top: 2px;
+}
 
-        </div>
 
-        <div class="transliteration">
+.history-nav {
 
-            Himālayāt samārabhya yāvad Indu-sarovaram |
-            taṃ deva-nirmitaṃ deśaṃ Hindusthānaṃ pracakṣate ||
+    display: flex;
 
-        </div>
+    align-items: center;
 
-        <div class="verse-divider"></div>
+    gap: 30px;
+}
 
-        <p class="verse-note">
 
-            A traditional Sanskrit description of the sacred
-            geographical imagination of this land.
+.history-nav a {
 
-        </p>
+    font-size: 11px;
 
-        <div class="source-note">
+    font-weight: 700;
 
-            <strong>SOURCE NOTE</strong><br>
+    color: #d2d4d5;
 
-            Textual provenance and dating of this exact verse
-            will be established before final publication.
+    letter-spacing: .5px;
 
-        </div>
+    transition: .25s ease;
+}
 
-    </div>
 
-</section>
+.history-nav a:hover,
+.history-nav a.active {
 
+    color: var(--orange);
+}
 
-<!-- =========================================================
-     BEGIN HISTORY
-========================================================= -->
 
-<section class="begin-section" id="begin">
+/* =========================================================
+   HERO
+========================================================= */
 
-    <div class="section-number">
-        02
-    </div>
+.history-hero {
 
-    <div class="begin-heading">
+    min-height: calc(100vh - 92px);
 
-        <div class="section-label">
-            BEFORE THE EMPIRES
-        </div>
+    position: relative;
 
-        <h2>
-            THE STORY<br>
-            BEGINS DEEPER
-        </h2>
+    display: grid;
 
-        <p>
-            The history of Bharat does not begin with a king,
-            a dynasty or a modern political boundary.
-        </p>
+    grid-template-columns: 48% 52%;
 
-    </div>
+    overflow: hidden;
 
+    background: #050708;
+}
 
-    <div class="begin-grid">
 
-        <div class="begin-text">
+/* Background */
 
-            <p class="large-text">
+.hero-background {
 
-                Long before the great kingdoms of recorded history,
-                human communities were already living across the
-                Indian subcontinent.
+    position: absolute;
 
-            </p>
+    inset: 0;
 
-            <p>
-                They hunted, gathered, created tools, painted rock
-                shelters, cultivated land, domesticated animals,
-                established settlements and developed increasingly
-                complex ways of living.
-            </p>
+    z-index: 0;
 
-            <p>
-                The archaeological record gives us a window into
-                these distant worlds — even where written records
-                do not survive.
-            </p>
+    background:
 
+        radial-gradient(
+            ellipse at 78% 50%,
+            rgba(255,121,0,.13),
+            transparent 32%
+        ),
 
-            <div class="evidence-box">
+        linear-gradient(
+            90deg,
+            #050708 0%,
+            #050708 40%,
+            rgba(5,7,8,.96) 55%,
+            rgba(5,7,8,.72) 72%,
+            rgba(15,9,4,.45) 100%
+        );
+}
 
-                <span class="evidence-title">
-                    EVIDENCE
-                </span>
 
-                <strong>
-                    Archaeology
-                </strong>
+/* General hero overlay */
 
-                <span>
-                    Rock art • settlements • tools • pottery •
-                    burials • architecture • inscriptions
-                </span>
+.hero-overlay {
 
-            </div>
+    position: absolute;
 
-        </div>
+    inset: 0;
 
+    z-index: 1;
 
-        <div class="begin-image">
+    pointer-events: none;
 
-            <img
-                src="images/bhimbetka.jpg"
-                alt="Rock shelters and prehistoric paintings at Bhimbetka">
+    background:
 
-            <div class="image-caption">
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(255,121,0,.08),
+            transparent 40%
+        );
+}
 
-                <span>
-                    BHIMBETKA
-                </span>
 
-                <small>
-                    Rock shelters • Madhya Pradesh
-                </small>
+/* =========================================================
+   HERO — LEFT CONTENT
+========================================================= */
 
-            </div>
+.hero-content {
 
-        </div>
+    position: relative;
 
-    </div>
+    z-index: 5;
 
-</section>
+    width: min(720px, 90%);
 
+    margin-left: 8vw;
 
-<!-- =========================================================
-     TIMELINE
-========================================================= -->
+    padding: 110px 0;
 
-<section class="timeline-section">
+    display: flex;
 
-    <div class="timeline-heading">
+    flex-direction: column;
 
-        <div class="section-label">
-            THE FIRST EVIDENCE
-        </div>
+    justify-content: center;
+}
 
-        <h2>
-            BEFORE WRITTEN HISTORY
-        </h2>
 
-        <p>
-            The archaeological record allows us to travel
-            thousands of years into the past.
-        </p>
+.eyebrow,
+.section-label,
+.banner-label,
+.next-label {
 
-    </div>
+    color: var(--orange);
 
+    font-size: 11px;
 
-    <div class="timeline">
+    font-weight: 800;
 
+    letter-spacing: 4px;
+}
 
-        <div class="timeline-item">
 
-            <div class="timeline-date">
-                DEEP PREHISTORY
-            </div>
+.hero-content h1 {
 
-            <div class="timeline-dot"></div>
+    margin-top: 22px;
 
-            <div class="timeline-card">
+    font-size: clamp(55px, 8vw, 110px);
 
-                <h3>
-                    THE FIRST HUMAN COMMUNITIES
-                </h3>
+    line-height: .88;
 
-                <p>
-                    Stone tools, habitation remains and rock art
-                    reveal long periods of human presence across
-                    the subcontinent.
-                </p>
+    font-weight: 900;
 
-            </div>
+    letter-spacing: -4px;
+}
 
-        </div>
 
+.hero-content h1 span {
 
-        <div class="timeline-item">
+    display: block;
 
-            <div class="timeline-date">
-                c. 7000 BCE
-            </div>
+    font-size: .47em;
 
-            <div class="timeline-dot"></div>
+    letter-spacing: 1px;
 
-            <div class="timeline-card">
+    line-height: 1.05;
 
-                <h3>
-                    EARLY FARMING COMMUNITIES
-                </h3>
+    margin-top: 15px;
 
-                <p>
-                    Communities in the north-west developed
-                    increasingly settled ways of life, agriculture
-                    and animal husbandry.
-                </p>
+    color: #e7e7e5;
+}
 
-            </div>
 
-        </div>
+.hero-lead {
 
+    margin-top: 38px;
 
-        <div class="timeline-item">
+    max-width: 620px;
 
-            <div class="timeline-date">
-                c. 3300 BCE
-            </div>
+    font-size: 22px;
 
-            <div class="timeline-dot"></div>
+    line-height: 1.45;
 
-            <div class="timeline-card">
+    color: #e2e3e1;
+}
 
-                <h3>
-                    EARLY URBAN TRANSFORMATIONS
-                </h3>
 
-                <p>
-                    The settlements of the Indus civilisation
-                    developed into increasingly complex regional
-                    networks.
-                </p>
+.hero-line {
 
-            </div>
+    width: 90px;
 
-        </div>
+    height: 2px;
 
+    background: var(--orange);
 
-        <div class="timeline-item future">
+    margin: 28px 0;
+}
 
-            <div class="timeline-date">
-                NEXT
-            </div>
 
-            <div class="timeline-dot"></div>
+.hero-text {
 
-            <div class="timeline-card">
+    max-width: 590px;
 
-                <h3>
-                    THE SARASVATI–INDUS WORLD
-                </h3>
+    color: #aeb3b5;
 
-                <p>
-                    Cities, trade, engineering, craftsmanship,
-                    water management and the great archaeological
-                    sites of the Harappan world.
-                </p>
+    font-size: 15px;
+}
 
-                <a href="#sarasvati">
-                    EXPLORE →
-                </a>
 
-            </div>
+.hero-button,
+.next-button {
 
-        </div>
+    display: inline-block;
 
-    </div>
+    width: fit-content;
 
-</section>
+    margin-top: 32px;
 
+    padding: 15px 24px;
 
-<!-- =========================================================
-     BHARAT — KNOWLEDGE AND CULTURE
-========================================================= -->
+    background: var(--orange);
 
-<section class="civilisation-banner">
+    color: #050505;
 
-    <div class="banner-inner">
+    font-size: 11px;
 
-        <div class="banner-label">
-            HISTORY IS MORE THAN KINGS
-        </div>
+    font-weight: 900;
 
-        <h2>
-            WHAT DID BHARAT<br>
-            <span>CREATE?</span>
-        </h2>
+    letter-spacing: 1px;
 
+    transition: .25s ease;
+}
 
-        <div class="banner-grid">
 
-            <div>
+.hero-button:hover,
+.next-button:hover {
 
-                <strong>
-                    KNOWLEDGE
-                </strong>
+    background: var(--white);
 
-                <span>
-                    Mathematics • Astronomy • Medicine
-                </span>
+    transform: translateY(-2px);
+}
 
-            </div>
 
+/* =========================================================
+   HERO — RIGHT MAP
+========================================================= */
 
-            <div>
+.hero-map {
 
-                <strong>
-                    DHARMA
-                </strong>
+    position: relative;
 
-                <span>
-                    Philosophy • Ritual • Sacred traditions
-                </span>
+    z-index: 4;
 
-            </div>
+    min-height: calc(100vh - 92px);
 
+    display: flex;
 
-            <div>
+    align-items: center;
 
-                <strong>
-                    CULTURE
-                </strong>
+    justify-content: center;
 
-                <span>
-                    Language • Literature • Music • Art
-                </span>
+    padding: 45px 5vw 45px 15px;
 
-            </div>
+    overflow: hidden;
+}
 
 
-            <div>
+/* Orange atmospheric glow */
 
-                <strong>
-                    COMMERCE
-                </strong>
+.map-glow {
 
-                <span>
-                    Trade • Crafts • Maritime networks
-                </span>
+    position: absolute;
 
-            </div>
+    width: 80%;
 
-        </div>
+    height: 80%;
 
-    </div>
+    left: 10%;
 
-</section>
+    top: 10%;
 
+    border-radius: 50%;
 
-<!-- =========================================================
-     EVIDENCE
-========================================================= -->
+    background:
 
-<section class="evidence-section">
+        radial-gradient(
+            circle,
+            rgba(255,121,0,.18) 0%,
+            rgba(255,121,0,.08) 35%,
+            transparent 72%
+        );
 
-    <div class="section-label">
-        HOW WE RECONSTRUCT THE PAST
-    </div>
+    filter: blur(35px);
 
-    <h2>
-        THE EVIDENCE<br>
-        SPEAKS THROUGH TIME
-    </h2>
+    pointer-events: none;
+}
 
-    <p class="evidence-intro">
 
-        Bharat's past survives through many kinds of evidence.
-        Some speak directly. Others require interpretation.
+/* Map itself */
 
-    </p>
+.hero-map img {
 
+    position: relative;
 
-    <div class="evidence-grid">
+    z-index: 3;
 
+    display: block;
 
-        <div class="evidence-card">
+    width: 100%;
 
-            <div class="evidence-icon">
-                ◈
-            </div>
+    max-width: 850px;
 
-            <h3>
-                ARCHAEOLOGY
-            </h3>
+    max-height: 76vh;
 
-            <p>
-                Excavated settlements, tools, pottery,
-                structures and material remains.
-            </p>
+    height: auto;
 
-        </div>
+    object-fit: contain;
 
+    opacity: .97;
 
-        <div class="evidence-card">
+    filter:
+        brightness(.88)
+        contrast(1.12)
+        saturate(.92);
 
-            <div class="evidence-icon">
-                ॐ
-            </div>
+    transition: transform .5s ease;
+}
 
-            <h3>
-                TEXTS & TRADITIONS
-            </h3>
 
-            <p>
-                Vedas, Itihasa, Puranic traditions,
-                literature and historical memory.
-            </p>
+.hero-map img:hover {
 
-        </div>
+    transform: scale(1.015);
+}
 
 
-        <div class="evidence-card">
+/* Map label */
 
-            <div class="evidence-icon">
-                श
-            </div>
+.map-caption {
 
-            <h3>
-                INSCRIPTIONS
-            </h3>
+    position: absolute;
 
-            <p>
-                Stone inscriptions, copper plates,
-                temple records and royal grants.
-            </p>
+    z-index: 5;
 
-        </div>
+    right: 5vw;
 
+    bottom: 32px;
 
-        <div class="evidence-card">
+    color: var(--orange);
 
-            <div class="evidence-icon">
-                ◉
-            </div>
+    font-size: 11px;
 
-            <h3>
-                ART & ARCHITECTURE
-            </h3>
+    font-weight: 800;
 
-            <p>
-                Temples, sculptures, paintings,
-                monuments and sacred spaces.
-            </p>
+    letter-spacing: 3px;
 
-        </div>
+    text-align: right;
+}
 
-    </div>
 
-</section>
+/* =========================================================
+   VERSE
+========================================================= */
 
+.verse-section {
 
-<!-- =========================================================
-     NEXT CHAPTER
-========================================================= -->
+    display: grid;
 
-<section class="next-section" id="sarasvati">
+    grid-template-columns: 100px 1fr;
 
-    <div class="next-inner">
+    gap: 30px;
 
-        <div class="next-label">
-            CHAPTER 02
-        </div>
+    padding: 120px 10vw;
 
-        <h2>
-            THE SARASVATI–INDUS WORLD
-        </h2>
+    background:
 
-        <p>
-            From early settlements to cities:
-            the archaeological world of Harappa,
-            Dholavira, Rakhigarhi and beyond.
-        </p>
+        linear-gradient(
+            135deg,
+            #080b0c,
+            #0d1113
+        );
 
-        <div class="next-date">
-            c. 3300 — 1900 BCE
-        </div>
+    border-top: 1px solid var(--line);
 
-        <a href="#" class="next-button">
-            ENTER THE NEXT CHAPTER →
-        </a>
+    border-bottom: 1px solid var(--line);
+}
 
-    </div>
 
-</section>
+.section-number {
 
+    color: var(--orange);
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+    font-size: 14px;
 
-<footer class="history-footer">
+    font-weight: 900;
 
-    <div>
+    letter-spacing: 2px;
+}
 
-        <strong>
-            EK RAHENGE TO NEK RAHENGE
-        </strong>
 
-        <span>
-            Bharat • History • Civilisation • Evidence
-        </span>
+.verse-content {
 
-    </div>
+    max-width: 900px;
+}
 
 
-    <div class="footer-links">
+.verse-content h2,
+.begin-heading h2,
+.timeline-heading h2,
+.evidence-section h2,
+.next-inner h2 {
 
-        <a href="../index.html">
-            HOME
-        </a>
+    margin-top: 15px;
 
-        <a href="../sources/sources.html">
-            SOURCES
-        </a>
+    font-size: clamp(38px, 5vw, 70px);
 
-        <a href="../stories/stories.html">
-            STORIES
-        </a>
+    line-height: .95;
 
-        <a href="../contact/contact.html">
-            CONTACT
-        </a>
+    letter-spacing: -2px;
+}
 
-    </div>
 
-</footer>
+.sanskrit {
 
+    margin-top: 50px;
 
-</body>
-</html>
+    padding: 35px 0;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    font-family:
+        "Noto Serif Devanagari",
+        "Mangal",
+        serif;
+
+    font-size: clamp(23px, 3vw, 36px);
+
+    line-height: 1.8;
+
+    color: #f0e6d3;
+}
+
+
+.transliteration {
+
+    margin-top: 24px;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    color: var(--gold);
+}
+
+
+.verse-divider {
+
+    width: 55px;
+
+    height: 2px;
+
+    background: var(--orange);
+
+    margin: 30px 0;
+}
+
+
+.verse-note {
+
+    max-width: 700px;
+
+    color: #b2b7b9;
+
+    font-size: 15px;
+}
+
+
+.source-note {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-left: 2px solid var(--orange);
+
+    background: #0b1012;
+
+    color: #8e9699;
+
+    font-size: 12px;
+}
+
+
+.source-note strong {
+
+    color: var(--orange);
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   BEGIN SECTION
+========================================================= */
+
+.begin-section {
+
+    padding: 130px 10vw;
+}
+
+
+.begin-heading {
+
+    max-width: 900px;
+
+    margin-bottom: 75px;
+}
+
+
+.begin-heading p {
+
+    margin-top: 25px;
+
+    max-width: 700px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+}
+
+
+.begin-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.begin-text {
+
+    max-width: 600px;
+}
+
+
+.large-text {
+
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    color: #ededeb;
+
+    margin-bottom: 28px;
+}
+
+
+.begin-text p:not(.large-text) {
+
+    color: #9ea5a7;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.evidence-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    border-left: 3px solid var(--orange);
+}
+
+
+.evidence-title {
+
+    color: var(--orange);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.evidence-box strong {
+
+    font-size: 21px;
+}
+
+
+.evidence-box span:last-child {
+
+    color: #92999b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BHIMBETKA IMAGE
+========================================================= */
+
+.begin-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    background: #000;
+}
+
+
+.begin-image img {
+
+    width: 100%;
+
+    height: 520px;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        saturate(.7)
+        contrast(1.1);
+
+    transition: transform .7s ease;
+}
+
+
+.begin-image:hover img {
+
+    transform: scale(1.04);
+}
+
+
+.image-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.95)
+        );
+
+    padding-top: 70px;
+}
+
+
+.image-caption span {
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.image-caption small {
+
+    color: #c5c8c9;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section {
+
+    padding: 120px 10vw;
+
+    background: #080b0c;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.timeline-heading {
+
+    max-width: 850px;
+
+    margin-bottom: 80px;
+}
+
+
+.timeline-heading p {
+
+    margin-top: 22px;
+
+    color: #969ea0;
+}
+
+
+.timeline {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 130px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: #333a3c;
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns: 110px 40px 1fr;
+
+    gap: 20px;
+
+    position: relative;
+
+    margin-bottom: 60px;
+}
+
+
+.timeline-date {
+
+    color: var(--orange);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    padding-top: 8px;
+
+    text-align: right;
+}
+
+
+.timeline-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    margin: 8px auto 0;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 0 5px #080b0c,
+        0 0 20px rgba(255,121,0,.3);
+}
+
+
+.timeline-card {
+
+    padding: 25px 30px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    transition: .3s ease;
+}
+
+
+.timeline-card:hover {
+
+    border-color: #4a5255;
+
+    transform: translateX(5px);
+}
+
+
+.timeline-card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.timeline-card p {
+
+    color: #92999b;
+
+    font-size: 14px;
+}
+
+
+.timeline-card a {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--orange);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.timeline-item.future .timeline-card {
+
+    border-color: #3c2b18;
+}
+
+
+/* =========================================================
+   CIVILISATION BANNER
+========================================================= */
+
+.civilisation-banner {
+
+    padding: 110px 10vw;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,121,0,.12),
+            transparent 40%
+        ),
+
+        #0b0f10;
+
+    border-top: 1px solid #382716;
+
+    border-bottom: 1px solid #382716;
+}
+
+
+.banner-inner {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.banner-inner h2 {
+
+    margin-top: 15px;
+
+    font-size: clamp(42px, 6vw, 80px);
+
+    line-height: .95;
+}
+
+
+.banner-inner h2 span {
+
+    color: var(--orange);
+}
+
+
+.banner-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 65px;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.banner-grid div {
+
+    padding: 30px 20px;
+
+    border-right: 1px solid var(--line);
+}
+
+
+.banner-grid div:last-child {
+
+    border-right: none;
+}
+
+
+.banner-grid strong {
+
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+.banner-grid span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #92999b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EVIDENCE SECTION
+========================================================= */
+
+.evidence-section {
+
+    padding: 130px 10vw;
+}
+
+
+.evidence-intro {
+
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    color: #969ea0;
+
+    font-size: 17px;
+}
+
+
+.evidence-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 65px;
+}
+
+
+.evidence-card {
+
+    min-height: 240px;
+
+    padding: 30px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--line);
+
+    transition: .3s ease;
+}
+
+
+.evidence-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #4a5255;
+}
+
+
+.evidence-icon {
+
+    color: var(--orange);
+
+    font-size: 27px;
+
+    margin-bottom: 30px;
+}
+
+
+.evidence-card h3 {
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.evidence-card p {
+
+    margin-top: 15px;
+
+    color: #8f9799;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NEXT CHAPTER
+========================================================= */
+
+.next-section {
+
+    min-height: 65vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(4,6,7,.92),
+            rgba(4,6,7,.96)
+        ),
+
+        url("images/bhimbetka.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.next-inner {
+
+    max-width: 900px;
+}
+
+
+.next-inner h2 {
+
+    margin-top: 15px;
+}
+
+
+.next-inner p {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    color: #a1a8aa;
+
+    font-size: 17px;
+}
+
+
+.next-date {
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.history-footer {
+
+    padding: 45px 7vw;
+
+    background: #030405;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.history-footer strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.history-footer span {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #737a7c;
+
+    font-size: 10px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-links a {
+
+    color: #969c9e;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.footer-links a:hover {
+
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .history-nav {
+
+        gap: 18px;
+    }
+
+
+    .history-nav a {
+
+        font-size: 10px;
+    }
+
+
+    .history-hero {
+
+        grid-template-columns: 50% 50%;
+    }
+
+
+    .hero-content {
+
+        margin-left: 6vw;
+    }
+
+
+    .hero-map {
+
+        padding-right: 3vw;
+    }
+
+
+    .evidence-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .banner-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .banner-grid div:nth-child(2) {
+
+        border-right: none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .history-header {
+
+        height: auto;
+
+        padding: 18px 5vw;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .history-nav {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+
+        gap: 18px;
+    }
+
+
+    .history-nav a {
+
+        white-space: nowrap;
+
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .history-hero {
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        background: #050708;
+    }
+
+
+    .hero-content {
+
+        width: 86%;
+
+        margin-left: 7vw;
+
+        padding: 90px 0 50px;
+    }
+
+
+    .hero-content h1 {
+
+        letter-spacing: -2px;
+
+        font-size: clamp(55px, 16vw, 90px);
+    }
+
+
+    .hero-lead {
+
+        font-size: 19px;
+    }
+
+
+    /* MAP */
+
+    .hero-map {
+
+        min-height: 430px;
+
+        width: 100%;
+
+        padding: 20px 6vw 55px;
+    }
+
+
+    .hero-map img {
+
+        width: 100%;
+
+        max-height: 420px;
+    }
+
+
+    .map-caption {
+
+        right: 6vw;
+
+        bottom: 20px;
+    }
+
+
+    /* VERSE */
+
+    .verse-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 80px 7vw;
+    }
+
+
+    /* BEGIN */
+
+    .begin-section,
+    .timeline-section,
+    .evidence-section {
+
+        padding: 90px 7vw;
+    }
+
+
+    .begin-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline::before {
+
+        left: 20px;
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 15px;
+    }
+
+
+    .timeline-date {
+
+        grid-column: 2;
+
+        grid-row: 1;
+
+        text-align: left;
+
+        padding: 0 0 8px;
+    }
+
+
+    .timeline-dot {
+
+        grid-column: 1;
+
+        grid-row: 2;
+
+        margin-top: 8px;
+    }
+
+
+    .timeline-card {
+
+        grid-column: 2;
+
+        grid-row: 2;
+    }
+
+
+    /* EVIDENCE */
+
+    .evidence-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BANNER */
+
+    .banner-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .banner-grid div {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .banner-grid div:last-child {
+
+        border-bottom: none;
+    }
+
+
+    /* FOOTER */
+
+    .history-footer {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+    }
+
+}
