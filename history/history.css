@@ -1,2237 +1,2216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+/* =========================================================
+   EK RAHENGE • NEK RAHENGE
+   HISTORY PAGE
+   ========================================================= */
 
-    <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+/* =========================================================
+   ROOT
+========================================================= */
 
-    <title>
-        Bharat — A Civilisation Through Time
-    </title>
+:root {
 
-    <meta
-        name="description"
-        content="A journey through the history and civilisation of Bharat — from the deep past to the modern era."
-    >
+    --black: #050708;
+    --black-deep: #020304;
+    --black-soft: #0a0d0f;
 
-    <link
-        rel="stylesheet"
-        href="history.css"
-    >
+    --orange: #ff7900;
+    --orange-light: #ff9a26;
 
-</head>
+    --gold: #d49a45;
 
+    --white: #f2f2f0;
+    --muted: #aeb4b6;
+    --muted-dark: #747c7f;
 
-<body>
+    --line: #202527;
+}
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+/* =========================================================
+   RESET
+========================================================= */
 
-<header class="history-header">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <div class="history-logo">
 
-        <a href="../index.html">
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 82px;
+}
 
-            <span class="logo-hindi">
-                एक रहेंगे • नेक रहेंगे
-            </span>
 
-            <span class="logo-english">
-                EK RAHENGE TO NEK RAHENGE
-            </span>
+body {
 
-        </a>
+    background: var(--black);
 
-    </div>
+    color: var(--white);
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    <nav class="history-nav">
+    font-size: 15px;
 
-        <a href="../index.html">
-            HOME
-        </a>
+    line-height: 1.6;
 
-        <a
-            href="history.html"
-            class="active"
-        >
-            HISTORY
-        </a>
+    overflow-x: hidden;
+}
 
-        <a href="../civilisation/civilisation.html">
-            CIVILISATION
-        </a>
 
-        <a href="../map">
-            MAP
-        </a>
+img {
 
-        <a href="../index.html#timeline">
-            TIMELINE
-        </a>
+    max-width: 100%;
 
-        <a href="../sources/sources.html">
-            SOURCES
-        </a>
+    height: auto;
 
-        <a href="../stories/stories.html">
-            STORIES
-        </a>
+    display: block;
+}
 
-        <a href="../atlas/atlas.html">
-            ATLAS
-        </a>
 
-    </nav>
+a {
 
-</header>
+    color: inherit;
 
+    text-decoration: none;
+}
 
 
-<!-- =========================================================
-     PROLOGUE — BHARAT
-========================================================= -->
+/* =========================================================
+   HEADER
+========================================================= */
 
-<section class="history-hero">
+.history-header {
 
+    height: 78px;
 
-    <!-- LEFT SIDE -->
+    width: 100%;
 
-    <div class="hero-content">
+    position: fixed;
 
-        <div class="eyebrow">
-            BHARAT • CIVILISATION • MEMORY
-        </div>
+    top: 0;
+    left: 0;
 
+    z-index: 1000;
 
-        <h1>
+    display: flex;
 
-            BHARAT
+    align-items: center;
 
-            <span>
-                A CIVILISATION<br>
-                THROUGH TIME
-            </span>
+    justify-content: space-between;
 
-        </h1>
+    padding: 0 4.5vw;
 
+    background:
+        rgba(2,3,3,.96);
 
-        <p class="hero-lead">
+    border-bottom:
+        1px solid #171b1d;
 
-            Before there was a Republic,
-            there was a civilisation.
+    backdrop-filter:
+        blur(10px);
+}
 
-        </p>
 
+/* =========================================================
+   LOGO
+========================================================= */
 
-        <div class="hero-line"></div>
+.history-logo {
 
+    flex-shrink: 0;
+}
 
-        <p class="hero-text">
 
-            Its story reaches far beyond the boundaries
-            and political structures of the modern age.
+.history-logo a {
 
-            Across mountains, rivers, forests, plains and seas,
-            generations lived, created, worshipped, travelled,
-            fought, traded and passed their memories forward.
+    display: flex;
 
-        </p>
+    flex-direction: column;
 
+    gap: 3px;
+}
 
-        <a
-            href="#prologue"
-            class="hero-button"
-        >
-            BEGIN THE JOURNEY →
-        </a>
 
-    </div>
+.logo-hindi {
 
+    color: #f4f4f2;
 
+    font-size: 20px;
 
-    <!-- RIGHT SIDE — BHARATVARSHA MAP -->
+    font-weight: 700;
 
-    <div class="hero-map">
+    line-height: 1.1;
 
-        <div class="map-glow"></div>
+    white-space: nowrap;
+}
 
 
-        <img
-            src="../Bharat1.png"
-            alt="Bharatvarsha civilisational map"
-        >
+.logo-english {
 
+    color: #bfc4c5;
 
-        <div class="map-caption">
-            BHARATVARSHA
-        </div>
+    font-size: 9px;
 
-    </div>
+    letter-spacing: 2px;
 
-</section>
+    line-height: 1.2;
 
+    white-space: nowrap;
+}
 
 
-<!-- =========================================================
-     PROLOGUE
-========================================================= -->
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
-<section
-    class="verse-section"
-    id="prologue"
->
+.history-nav {
 
-    <div class="section-number">
-        00
-    </div>
+    display: flex;
 
+    align-items: center;
 
-    <div class="verse-content">
+    justify-content: center;
 
-        <div class="section-label">
-            PROLOGUE
-        </div>
+    gap: 28px;
 
+    margin-left: auto;
 
-        <h2>
-            BEFORE THE<br>
-            MODERN MAPS
-        </h2>
+    margin-right: 1vw;
+}
 
 
-        <div class="story-opening">
+.history-nav a {
 
-            <p class="story-lead">
+    position: relative;
 
-                Imagine Bharat thousands of years ago.
+    color: #e5e5e3;
 
-            </p>
+    font-size: 11px;
 
+    font-weight: 700;
 
-            <p>
+    letter-spacing: .4px;
 
-                There were no passports.
-                No modern nation-state borders.
-                No political maps resembling those
-                we see today.
+    white-space: nowrap;
 
-            </p>
+    transition:
+        color .2s ease;
+}
 
 
-            <p>
+.history-nav a:hover {
 
-                Yet this vast land was not an empty
-                geographical space.
+    color: var(--orange);
+}
 
-                People lived here.
 
-                They built settlements.
-                They cultivated fields.
-                They travelled along rivers and coasts.
-                They exchanged goods and ideas.
+.history-nav a.active {
 
-            </p>
+    color: var(--orange);
+}
 
 
-            <p>
+.history-nav a.active::after {
 
-                They worshipped.
+    content: "";
 
-                They composed.
+    position: absolute;
 
-                They observed the heavens.
+    left: 0;
+    right: 0;
 
-                They asked questions about life,
-                death, nature and the nature of reality.
+    bottom: -10px;
 
-            </p>
+    height: 2px;
 
+    background: var(--orange);
+}
 
-            <p class="story-emphasis">
 
-                This is where our story begins.
+/* =========================================================
+   HERO
+========================================================= */
 
-            </p>
+.history-hero {
 
-        </div>
+    position: relative;
 
+    min-height:
+        calc(100vh - 78px);
 
-        <div class="story-question">
+    margin-top: 78px;
 
-            <span>
-                THE QUESTION
-            </span>
+    display: grid;
 
-            <strong>
-                How far back can we follow
-                the story of Bharat?
-            </strong>
+    grid-template-columns:
+        48% 52%;
 
-        </div>
+    overflow: hidden;
 
-    </div>
+    background:
 
-</section>
+        radial-gradient(
+            circle at 76% 48%,
+            rgba(145,72,12,.30) 0%,
+            rgba(92,45,9,.16) 25%,
+            rgba(5,7,8,0) 58%
+        ),
 
+        linear-gradient(
+            110deg,
+            #050708 0%,
+            #050708 48%,
+            #0d0a07 100%
+        );
+}
 
 
-<!-- =========================================================
-     CHAPTER 1
-========================================================= -->
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
 
-<section
-    class="story-section"
-    id="chapter-1"
->
+.hero-overlay {
 
-    <div class="chapter-number">
-        01
-    </div>
+    position: absolute;
 
+    inset: 0;
 
-    <div class="chapter-header">
+    pointer-events: none;
 
-        <div class="section-label">
-            CHAPTER ONE
-        </div>
+    background:
 
+        linear-gradient(
+            90deg,
+            rgba(5,7,8,.05),
+            rgba(5,7,8,0)
+        );
 
-        <h2>
-            WHEN THE<br>
-            STORY BEGINS
-        </h2>
+    z-index: 1;
+}
 
 
-        <p>
+/* =========================================================
+   HERO LEFT CONTENT
+========================================================= */
 
-            Long before kingdoms, empires and written chronicles,
-            human beings were already living across the
-            Indian subcontinent.
+.hero-content {
 
-        </p>
+    position: relative;
 
-    </div>
+    z-index: 5;
 
+    width: 86%;
 
-    <div class="story-grid">
+    margin-left: 8vw;
 
+    padding:
+        110px 0 90px;
 
-        <div class="story-text">
+    display: flex;
 
-            <p class="story-lead">
+    flex-direction: column;
 
-                Imagine walking into a rock shelter
-                thousands of years ago.
+    justify-content: center;
+}
 
-            </p>
 
+/* =========================================================
+   EYEBROW / SECTION LABEL
+========================================================= */
 
-            <p>
+.eyebrow,
+.section-label,
+.banner-label,
+.next-label {
 
-                There is no palace.
+    color: var(--orange);
 
-                No inscription.
+    font-size: 11px;
 
-                No royal chronicle.
+    font-weight: 800;
 
-                Instead, there are tools,
-                traces of habitation and paintings
-                left upon the rock.
+    letter-spacing: 4px;
 
-            </p>
+    line-height: 1.4;
+}
 
 
-            <p>
+/* =========================================================
+   HERO HEADING
+========================================================= */
 
-                These fragments may appear small.
+.hero-content h1 {
 
-                But together they tell us something
-                extraordinary:
+    margin-top: 22px;
 
-                <strong>
-                    human communities had already
-                    been living, creating and remembering
-                    across this land for a very long time.
-                </strong>
+    color: var(--white);
 
-            </p>
+    font-size:
+        clamp(58px, 7.7vw, 112px);
 
+    font-weight: 900;
 
-            <p>
+    line-height: .88;
 
-                Archaeology allows us to enter
-                these distant worlds.
+    letter-spacing: -5px;
+}
 
-                It gives us clues where written history
-                has not survived.
 
-            </p>
+.hero-content h1 span {
 
+    display: block;
 
-            <div class="evidence-box">
+    margin-top: 16px;
 
-                <span class="evidence-title">
-                    WHAT SURVIVES?
-                </span>
+    color: #e6e6e4;
 
-                <strong>
-                    Tools • Rock Art • Settlements
-                </strong>
+    font-size: .46em;
 
-                <span>
-                    Pottery • Burials • Structures •
-                    Material remains
-                </span>
+    font-weight: 900;
 
-            </div>
+    letter-spacing: 1px;
 
-        </div>
+    line-height: 1.06;
+}
 
 
-        <div class="story-image-card">
+/* =========================================================
+   HERO LEAD
+========================================================= */
 
-            <img
-                src="images/bhimbetka.jpg"
-                alt="Bhimbetka rock shelters"
-            >
+.hero-lead {
 
+    max-width: 640px;
 
-            <div class="image-caption">
+    margin-top: 38px;
 
-                <span>
-                    BHIMBETKA
-                </span>
+    color: #e0e2e0;
 
-                <small>
-                    Rock shelters • Madhya Pradesh
-                </small>
+    font-size: 21px;
 
-            </div>
+    line-height: 1.5;
+}
 
-        </div>
 
-    </div>
+/* =========================================================
+   ORANGE LINE
+========================================================= */
 
-</section>
+.hero-line {
 
+    width: 92px;
 
+    height: 2px;
 
-<!-- =========================================================
-     CHAPTER 2
-========================================================= -->
+    margin:
+        28px 0;
 
-<section
-    class="story-section alternate"
-    id="chapter-2"
->
+    background: var(--orange);
+}
 
-    <div class="chapter-number">
-        02
-    </div>
 
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
 
-    <div class="chapter-header">
+.hero-text {
 
-        <div class="section-label">
-            CHAPTER TWO
-        </div>
+    max-width: 620px;
 
+    color: #aeb4b6;
 
-        <h2>
-            WHEN PEOPLE<br>
-            BEGAN TO SETTLE
-        </h2>
+    font-size: 15px;
 
+    line-height: 1.7;
+}
 
-        <p>
 
-            The wandering life slowly began to change.
+/* =========================================================
+   HERO BUTTON
+========================================================= */
 
-        </p>
+.hero-button {
 
-    </div>
+    width: fit-content;
 
+    margin-top: 32px;
 
-    <div class="story-wide">
+    padding:
+        15px 24px;
 
+    background: var(--orange);
 
-        <div class="story-text">
+    color: #080808;
 
-            <p class="story-lead">
+    font-size: 11px;
 
-                Seeds were planted.
+    font-weight: 900;
 
-                Animals were domesticated.
+    letter-spacing: 1px;
 
-                Houses became permanent.
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
 
-            </p>
 
+.hero-button:hover {
 
-            <p>
+    background: var(--white);
 
-                In different parts of the subcontinent,
-                communities gradually developed increasingly
-                settled ways of living.
+    transform:
+        translateY(-2px);
+}
 
-            </p>
 
+/* =========================================================
+   HERO RIGHT — MAP
+========================================================= */
 
-            <p>
+.hero-map {
 
-                Agriculture changed the relationship
-                between people and the land.
+    position: relative;
 
-                Villages emerged.
+    z-index: 4;
 
-                Craft traditions developed.
+    min-height:
+        calc(100vh - 78px);
 
-                Communities began producing,
-                storing and exchanging resources.
+    display: flex;
 
-            </p>
+    align-items: center;
 
+    justify-content: center;
 
-            <p>
+    padding:
+        35px 3vw 45px 0;
 
-                The transformation did not happen
-                everywhere at the same time,
-                nor in exactly the same way.
+    overflow: hidden;
+}
 
-                But the direction of change
-                was profound.
 
-            </p>
+/* =========================================================
+   MAP GLOW
+========================================================= */
 
+.map-glow {
 
-            <div class="date-marker">
+    position: absolute;
 
-                <span>
-                    c. 7000 BCE
-                </span>
+    width: 92%;
 
-                <small>
-                    Early farming communities
-                    in the north-western region
-                </small>
+    height: 92%;
 
-            </div>
+    left: 4%;
 
-        </div>
+    top: 4%;
 
+    border-radius: 50%;
 
-        <div class="quote-panel">
+    background:
 
-            <div class="quote-symbol">
-                “
-            </div>
+        radial-gradient(
+            circle,
+            rgba(255,121,0,.20) 0%,
+            rgba(255,121,0,.10) 30%,
+            rgba(255,121,0,.035) 52%,
+            transparent 74%
+        );
 
-            <p>
+    filter:
+        blur(38px);
 
-                From temporary shelters
-                to permanent settlements.
+    pointer-events: none;
+}
 
-                From gathering food
-                to producing it.
 
-                A new chapter
-                was beginning.
+/* =========================================================
+   BHARATVARSHA MAP
+========================================================= */
 
-            </p>
+.hero-map img {
 
-        </div>
+    position: relative;
 
-    </div>
+    z-index: 3;
 
-</section>
+    display: block;
 
+    width: 100%;
 
+    max-width: 930px;
 
-<!-- =========================================================
-     CHAPTER 3 — CITIES
-========================================================= -->
+    height: 680px;
 
-<section
-    class="story-section"
-    id="chapter-3"
->
+    object-fit: contain;
 
-    <div class="chapter-number">
-        03
-    </div>
+    object-position: center center;
 
+    opacity: .98;
 
-    <div class="chapter-header">
+    filter:
 
-        <div class="section-label">
-            CHAPTER THREE
-        </div>
+        brightness(.93)
 
+        contrast(1.12)
 
-        <h2>
-            AND THEN<br>
-            THE CITIES ROSE
-        </h2>
+        saturate(.96)
 
+        drop-shadow(
+            0 0 28px rgba(255,121,0,.14)
+        );
 
-        <p>
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
 
-            Something remarkable happened
-            across the north-western regions.
 
-        </p>
+.hero-map img:hover {
 
-    </div>
+    transform:
+        scale(1.015);
 
+    filter:
 
-    <div class="city-story">
+        brightness(1)
 
+        contrast(1.14)
 
-        <div class="city-intro">
+        saturate(1)
 
-            <p class="story-lead">
+        drop-shadow(
+            0 0 35px rgba(255,121,0,.20)
+        );
+}
 
-                Streets.
 
-                Bricks.
+/* =========================================================
+   MAP CAPTION
+========================================================= */
 
-                Wells.
+.map-caption {
 
-                Drainage.
+    position: absolute;
 
-                Workshops.
+    z-index: 5;
 
-                Weights.
+    right: 4vw;
 
-                Seals.
+    bottom: 25px;
 
-                Trade.
+    color: var(--orange);
 
-            </p>
+    font-size: 10px;
 
+    font-weight: 800;
 
-            <p>
+    letter-spacing: 3px;
 
-                Settlements grew larger and more complex.
+    text-align: right;
+}
 
-                Networks connected communities
-                across enormous distances.
 
-            </p>
+/* =========================================================
+   VERSE SECTION
+========================================================= */
 
+.verse-section {
 
-            <p>
+    display: grid;
 
-                The civilisation we now call
-                the <strong>Indus or Harappan civilisation</strong>
-                left behind one of the most remarkable
-                archaeological records of the ancient world.
+    grid-template-columns:
+        100px 1fr;
 
-            </p>
+    gap: 30px;
 
-        </div>
+    padding:
+        120px 10vw;
 
+    background:
 
-        <div class="city-facts">
+        linear-gradient(
+            135deg,
+            #080b0c,
+            #0d1113
+        );
 
+    border-top:
+        1px solid var(--line);
 
-            <div class="fact-card">
+    border-bottom:
+        1px solid var(--line);
+}
 
-                <span>
-                    CITIES
-                </span>
 
-                <strong>
-                    Planned settlements
-                </strong>
+.section-number {
 
-                <p>
-                    Streets, buildings and
-                    organised urban spaces.
-                </p>
+    color: var(--orange);
 
-            </div>
+    font-size: 14px;
 
+    font-weight: 900;
 
-            <div class="fact-card">
+    letter-spacing: 2px;
+}
 
-                <span>
-                    WATER
-                </span>
 
-                <strong>
-                    Engineering
-                </strong>
+.verse-content {
 
-                <p>
-                    Wells, reservoirs and
-                    sophisticated water systems.
-                </p>
+    max-width: 900px;
+}
 
-            </div>
 
+.verse-content h2,
+.begin-heading h2,
+.timeline-heading h2,
+.evidence-section h2,
+.next-inner h2 {
 
-            <div class="fact-card">
+    margin-top: 15px;
 
-                <span>
-                    TRADE
-                </span>
+    color: var(--white);
 
-                <strong>
-                    Far-reaching networks
-                </strong>
+    font-size:
+        clamp(38px, 5vw, 70px);
 
-                <p>
-                    Goods and materials travelled
-                    across distant regions.
-                </p>
+    font-weight: 900;
 
-            </div>
+    line-height: .95;
 
+    letter-spacing: -2px;
+}
 
-            <div class="fact-card">
 
-                <span>
-                    CRAFT
-                </span>
+/* =========================================================
+   SANSKRIT
+========================================================= */
 
-                <strong>
-                    Skilled production
-                </strong>
+.sanskrit {
 
-                <p>
-                    Beads, pottery, metallurgy,
-                    seals and other crafts.
-                </p>
+    margin-top: 50px;
 
-            </div>
+    padding:
+        35px 0;
 
-        </div>
+    border-top:
+        1px solid var(--line);
 
-    </div>
+    border-bottom:
+        1px solid var(--line);
 
+    color: #f0e6d3;
 
-    <div class="story-question large">
+    font-family:
+        "Noto Serif Devanagari",
+        "Mangal",
+        serif;
 
-        <span>
-            BUT THEN COMES THE MYSTERY
-        </span>
+    font-size:
+        clamp(23px, 3vw, 36px);
 
-        <strong>
+    line-height: 1.8;
+}
 
-            Who were these people?
 
-        </strong>
+/* =========================================================
+   TRANSLITERATION
+========================================================= */
 
-        <p>
+.transliteration {
 
-            What did they speak?
+    margin-top: 24px;
 
-            What did their symbols mean?
+    color: var(--gold);
 
-            How did their civilisation connect
-            with the cultures that followed?
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        </p>
+    font-size: 17px;
 
-    </div>
+    font-style: italic;
 
-</section>
+    line-height: 1.7;
+}
 
 
+/* =========================================================
+   VERSE DIVIDER
+========================================================= */
 
-<!-- =========================================================
-     CHAPTER 4 — SARASVATI–INDUS
-========================================================= -->
+.verse-divider {
 
-<section
-    class="story-section alternate"
-    id="chapter-4"
->
+    width: 55px;
 
-    <div class="chapter-number">
-        04
-    </div>
+    height: 2px;
 
+    margin:
+        30px 0;
 
-    <div class="chapter-header">
+    background: var(--orange);
+}
 
-        <div class="section-label">
-            CHAPTER FOUR
-        </div>
 
+.verse-note {
 
-        <h2>
-            THE RIVERS<br>
-            REMEMBER
-        </h2>
+    max-width: 700px;
 
+    color: #b2b7b9;
 
-        <p>
+    font-size: 15px;
 
-            Civilisations grow around water.
+    line-height: 1.7;
+}
 
-            And the rivers of ancient Bharat
-            became part of its story.
 
-        </p>
+/* =========================================================
+   SOURCE NOTE
+========================================================= */
 
-    </div>
+.source-note {
 
+    margin-top: 30px;
 
-    <div class="river-story">
+    padding: 20px;
 
+    border-left:
+        2px solid var(--orange);
 
-        <div class="river-main">
+    background: #0b1012;
 
-            <p class="story-lead">
+    color: #8e9699;
 
-                Across the north-west,
-                archaeological sites reveal
-                a vast network of settlements.
+    font-size: 12px;
 
-            </p>
+    line-height: 1.7;
+}
 
 
-            <p>
+.source-note strong {
 
-                Some were small villages.
+    color: var(--orange);
 
-                Others became great cities.
+    letter-spacing: 2px;
+}
 
-                Together they reveal a world
-                of agriculture, craftsmanship,
-                trade and urban life.
 
-            </p>
+/* =========================================================
+   BEGIN HISTORY
+========================================================= */
 
+.begin-section {
 
-            <p>
+    padding:
+        130px 10vw;
 
-                The identification, course and historical
-                significance of ancient river systems—
-                including interpretations concerning
-                the Sarasvati—remain subjects of continuing
-                research and debate.
+    background: var(--black);
+}
 
-            </p>
 
+.begin-heading {
 
-            <div class="evidence-box">
+    max-width: 900px;
 
-                <span class="evidence-title">
-                    LOOK FOR THE EVIDENCE
-                </span>
+    margin-bottom: 75px;
+}
 
-                <strong>
-                    Archaeology • Hydrology • Geography
-                </strong>
 
-                <span>
-                    Sites • River courses • Material remains
-                </span>
+.begin-heading > p {
 
-            </div>
+    max-width: 680px;
 
-        </div>
+    margin-top: 25px;
 
+    color: #aeb4b6;
 
-        <div class="river-highlight">
+    font-size: 17px;
+}
 
-            <span>
-                c. 3300–1900 BCE
-            </span>
 
-            <strong>
-                THE URBAN WORLD
-            </strong>
+/* =========================================================
+   BEGIN GRID
+========================================================= */
 
-            <p>
+.begin-grid {
 
-                A civilisation of cities,
-                villages, craftspeople,
-                traders and farmers.
+    display: grid;
 
-            </p>
+    grid-template-columns:
+        1fr 1fr;
 
-        </div>
+    gap: 70px;
 
-    </div>
+    align-items: center;
+}
 
-</section>
 
+.begin-text {
 
+    max-width: 700px;
+}
 
-<!-- =========================================================
-     CHAPTER 5 — VEDIC WORLD
-========================================================= -->
 
-<section
-    class="story-section"
-    id="chapter-5"
->
+.begin-text p {
 
-    <div class="chapter-number">
-        05
-    </div>
+    margin-bottom: 25px;
 
+    color: #aeb4b6;
 
-    <div class="chapter-header">
+    font-size: 15px;
 
-        <div class="section-label">
-            CHAPTER FIVE
-        </div>
+    line-height: 1.8;
+}
 
 
-        <h2>
-            THE WORLD<br>
-            OF THE VEDAS
-        </h2>
+.begin-text .large-text {
 
+    color: #e4e5e3;
 
-        <p>
+    font-size: 21px;
 
-            Then another kind of evidence
-            begins to speak.
+    line-height: 1.55;
+}
 
-        </p>
 
-    </div>
+/* =========================================================
+   EVIDENCE BOX
+========================================================= */
 
+.evidence-box {
 
-    <div class="vedic-story">
+    margin-top: 35px;
 
+    padding: 25px;
 
-        <div class="vedic-opening">
+    border:
+        1px solid var(--line);
 
-            <p class="story-lead">
+    background:
+        linear-gradient(
+            135deg,
+            #0a0e0f,
+            #0e1214
+        );
 
-                Not stone alone.
+    display: flex;
 
-                Not pottery alone.
+    flex-direction: column;
 
-                But words.
+    gap: 8px;
+}
 
-            </p>
 
+.evidence-title {
 
-            <p>
+    color: var(--orange);
 
-                The Vedic corpus preserves some of the
-                oldest layers of Sanskrit literature
-                and a rich world of ritual,
-                philosophy, poetry and ideas.
+    font-size: 10px;
 
-            </p>
+    font-weight: 900;
 
+    letter-spacing: 3px;
+}
 
-            <p>
 
-                The traditions surrounding these texts
-                became deeply connected with the
-                intellectual and religious history
-                of Bharat.
+.evidence-box strong {
 
-            </p>
+    color: var(--white);
 
-        </div>
+    font-size: 17px;
+}
 
 
-        <div class="vedic-pillars">
+.evidence-box > span:last-child {
 
+    color: #7f8789;
 
-            <div>
+    font-size: 12px;
 
-                <strong>
-                    SHRUTI
-                </strong>
+    line-height: 1.6;
+}
 
-                <span>
-                    Sacred textual traditions
-                </span>
 
-            </div>
+/* =========================================================
+   BEGIN IMAGE
+========================================================= */
 
+.begin-image {
 
-            <div>
+    position: relative;
 
-                <strong>
-                    MANTRA
-                </strong>
+    overflow: hidden;
 
-                <span>
-                    Sound, ritual and sacred expression
-                </span>
+    border:
+        1px solid #282d2f;
 
-            </div>
+    background: #0b0d0e;
+}
 
 
-            <div>
+.begin-image img {
 
-                <strong>
-                    DARSHANA
-                </strong>
+    width: 100%;
 
-                <span>
-                    Questions about reality and knowledge
-                </span>
+    height: 520px;
 
-            </div>
+    object-fit: cover;
 
+    object-position: center;
 
-            <div>
+    opacity: .88;
 
-                <strong>
-                    SMRITI
-                </strong>
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+}
 
-                <span>
-                    Remembered traditions and literature
-                </span>
 
-            </div>
+.begin-image:hover img {
 
-        </div>
+    transform:
+        scale(1.025);
 
-    </div>
+    opacity: 1;
+}
 
-</section>
 
+.image-caption {
 
+    position: absolute;
 
-<!-- =========================================================
-     CIVILISATIONAL PAUSE
-========================================================= -->
+    left: 0;
+    right: 0;
 
-<section class="civilisation-banner">
+    bottom: 0;
 
-    <div class="banner-inner">
+    padding:
+        45px 25px 22px;
 
-        <div class="banner-label">
-            THIS IS NOT ONLY A STORY OF KINGS
-        </div>
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.92)
+        );
+}
 
 
-        <h2>
+.image-caption span {
 
-            IT IS THE STORY OF<br>
+    display: block;
 
-            <span>
-                A CIVILISATION
-            </span>
+    color: var(--orange);
 
-        </h2>
+    font-size: 11px;
 
+    font-weight: 900;
 
-        <div class="banner-grid">
+    letter-spacing: 3px;
+}
 
 
-            <div>
+.image-caption small {
 
-                <strong>
-                    KNOWLEDGE
-                </strong>
+    display: block;
 
-                <span>
-                    Mathematics • Astronomy • Medicine
-                </span>
+    margin-top: 5px;
 
-            </div>
+    color: #d0d2d1;
 
+    font-size: 11px;
+}
 
-            <div>
 
-                <strong>
-                    DHARMA
-                </strong>
+/* =========================================================
+   TIMELINE SECTION
+========================================================= */
 
-                <span>
-                    Philosophy • Ritual • Ethics
-                </span>
+.timeline-section {
 
-            </div>
+    padding:
+        130px 10vw;
 
+    background:
 
-            <div>
+        linear-gradient(
+            180deg,
+            #080b0c,
+            #050708
+        );
 
-                <strong>
-                    CULTURE
-                </strong>
+    border-top:
+        1px solid var(--line);
+}
 
-                <span>
-                    Language • Literature • Music • Art
-                </span>
 
-            </div>
+.timeline-heading {
 
+    max-width: 850px;
 
-            <div>
+    margin-bottom: 80px;
+}
 
-                <strong>
-                    COMMERCE
-                </strong>
 
-                <span>
-                    Trade • Crafts • Maritime connections
-                </span>
+.timeline-heading p {
 
-            </div>
+    max-width: 650px;
 
-        </div>
+    margin-top: 25px;
 
-    </div>
+    color: #929a9d;
 
-</section>
+    font-size: 16px;
+}
 
 
+/* =========================================================
+   TIMELINE
+========================================================= */
 
-<!-- =========================================================
-     CHAPTER 6 — MAHAJANAPADAS
-========================================================= -->
+.timeline {
 
-<section
-    class="story-section"
-    id="chapter-6"
->
+    position: relative;
 
-    <div class="chapter-number">
-        06
-    </div>
+    max-width: 1100px;
 
+    margin: 0 auto;
+}
 
-    <div class="chapter-header">
 
-        <div class="section-label">
-            CHAPTER SIX
-        </div>
+.timeline::before {
 
+    content: "";
 
-        <h2>
-            WHEN KINGDOMS<br>
-            BEGAN TO RISE
-        </h2>
+    position: absolute;
 
+    top: 0;
+    bottom: 0;
 
-        <p>
+    left: 50%;
 
-            Villages became towns.
+    width: 1px;
 
-            Towns became cities.
+    background:
+        linear-gradient(
+            #5b350e,
+            #25292b,
+            #5b350e
+        );
 
-            Political power took new forms.
+    transform:
+        translateX(-50%);
+}
 
-        </p>
 
-    </div>
+.timeline-item {
 
+    position: relative;
 
-    <div class="story-grid">
+    display: grid;
 
+    grid-template-columns:
+        1fr 70px 1fr;
 
-        <div class="story-text">
+    gap: 30px;
 
-            <p class="story-lead">
+    align-items: center;
 
-                The age of the Mahajanapadas
-                transformed the political landscape.
+    margin-bottom: 70px;
+}
 
-            </p>
 
+.timeline-date {
 
-            <p>
+    color: var(--orange);
 
-                Powerful states emerged.
+    font-size: 11px;
 
-                Trade expanded.
+    font-weight: 900;
 
-                Cities became centres of wealth,
-                political authority and intellectual activity.
+    letter-spacing: 2px;
 
-            </p>
+    text-align: right;
+}
 
 
-            <p>
+.timeline-dot {
 
-                New philosophical and religious movements
-                also appeared and challenged,
-                debated and interacted with established
-                traditions.
+    width: 13px;
 
-            </p>
+    height: 13px;
 
+    justify-self: center;
 
-            <p>
+    border:
+        2px solid var(--orange);
 
-                Bharat was becoming a world of
-                competing kingdoms, ideas and ambitions.
+    border-radius: 50%;
 
-            </p>
+    background: var(--black);
 
-        </div>
+    box-shadow:
+        0 0 0 6px rgba(255,121,0,.06);
+}
 
 
-        <div class="quote-panel">
+.timeline-card {
 
-            <div class="quote-symbol">
-                ◆
-            </div>
+    padding:
+        25px 28px;
 
-            <p>
+    border:
+        1px solid var(--line);
 
-                Kingdoms would rise.
+    background:
+        linear-gradient(
+            135deg,
+            #0a0e0f,
+            #0d1113
+        );
 
-                Kingdoms would fall.
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
 
-                But the civilisation
-                continued to evolve.
 
-            </p>
+.timeline-card:hover {
 
-        </div>
+    border-color:
+        #5e3a15;
 
-    </div>
+    transform:
+        translateY(-3px);
+}
 
-</section>
 
+.timeline-card h3 {
 
+    color: var(--white);
 
-<!-- =========================================================
-     CHAPTER 7 — EMPIRE
-========================================================= -->
+    font-size: 16px;
 
-<section
-    class="story-section alternate"
-    id="chapter-7"
->
+    letter-spacing: 1px;
+}
 
-    <div class="chapter-number">
-        07
-    </div>
 
+.timeline-card p {
 
-    <div class="chapter-header">
+    margin-top: 12px;
 
-        <div class="section-label">
-            CHAPTER SEVEN
-        </div>
+    color: #8f9799;
 
+    font-size: 13px;
 
-        <h2>
-            EMPIRES<br>
-            RISE
-        </h2>
+    line-height: 1.7;
+}
 
 
-        <p>
+.timeline-card a {
 
-            Political power expanded beyond individual kingdoms.
+    display: inline-block;
 
-        </p>
+    margin-top: 15px;
 
-    </div>
+    color: var(--orange);
 
+    font-size: 10px;
 
-    <div class="empire-story">
+    font-weight: 900;
 
+    letter-spacing: 1px;
+}
 
-        <div class="empire-intro">
 
-            <p class="story-lead">
+/* =========================================================
+   FUTURE TIMELINE ITEM
+========================================================= */
 
-                The Mauryan age brought together
-                vast territories under imperial rule.
+.timeline-item.future .timeline-card {
 
-            </p>
+    border-color:
+        #51300d;
 
+    background:
+        linear-gradient(
+            135deg,
+            #110d08,
+            #0c0f10
+        );
+}
 
-            <p>
 
-                Administration, warfare, diplomacy,
-                roads, trade and political organisation
-                acquired a new scale.
+.timeline-item.future .timeline-date {
 
-            </p>
+    color: var(--gold);
+}
 
 
-            <p>
+/* =========================================================
+   CIVILISATION BANNER
+========================================================= */
 
-                The inscriptions associated with
-                Ashoka provide an important body of
-                primary evidence for the period.
+.civilisation-banner {
 
-            </p>
+    padding:
+        120px 8vw;
 
-        </div>
+    background:
 
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(121,58,8,.25),
+            transparent 60%
+        ),
 
-        <div class="date-marker large">
+        #06090a;
 
-            <span>
-                c. 3rd century BCE
-            </span>
+    border-top:
+        1px solid var(--line);
 
-            <small>
-                An age of empire,
-                inscriptions and transformation
-            </small>
+    border-bottom:
+        1px solid var(--line);
+}
 
-        </div>
 
-    </div>
+.banner-inner {
 
-</section>
+    max-width: 1200px;
 
+    margin: 0 auto;
+}
 
 
-<!-- =========================================================
-     CHAPTER 8 — KNOWLEDGE
-========================================================= -->
+.banner-inner h2 {
 
-<section
-    class="story-section"
-    id="chapter-8"
->
+    margin-top: 18px;
 
-    <div class="chapter-number">
-        08
-    </div>
+    font-size:
+        clamp(42px, 5vw, 72px);
 
+    line-height: .95;
 
-    <div class="chapter-header">
+    letter-spacing: -2px;
+}
 
-        <div class="section-label">
-            CHAPTER EIGHT
-        </div>
 
+.banner-inner h2 span {
 
-        <h2>
-            WHEN KNOWLEDGE<br>
-            TRAVELLED
-        </h2>
+    color: var(--orange);
+}
 
 
-        <p>
+/* =========================================================
+   BANNER GRID
+========================================================= */
 
-            The story of Bharat is also
-            a story of knowledge.
+.banner-grid {
 
-        </p>
+    display: grid;
 
-    </div>
+    grid-template-columns:
+        repeat(4, 1fr);
 
+    margin-top: 70px;
 
-    <div class="knowledge-grid">
+    border-top:
+        1px solid var(--line);
 
+    border-bottom:
+        1px solid var(--line);
+}
 
-        <div class="knowledge-card">
 
-            <span>
-                MATHEMATICS
-            </span>
+.banner-grid div {
 
-            <h3>
-                Numbers & calculation
-            </h3>
+    min-height: 130px;
 
-            <p>
-                Mathematical traditions developed
-                across different periods and regions.
-            </p>
+    padding:
+        30px 25px;
 
-        </div>
+    border-right:
+        1px solid var(--line);
+}
 
 
-        <div class="knowledge-card">
+.banner-grid div:last-child {
 
-            <span>
-                ASTRONOMY
-            </span>
+    border-right: none;
+}
 
-            <h3>
-                Looking to the heavens
-            </h3>
 
-            <p>
-                Astronomical observation and
-                calendrical traditions occupied
-                an important place in Indian thought.
-            </p>
+.banner-grid strong {
 
-        </div>
+    display: block;
 
+    color: var(--orange);
 
-        <div class="knowledge-card">
+    font-size: 12px;
 
-            <span>
-                AYURVEDA
-            </span>
+    letter-spacing: 2px;
+}
 
-            <h3>
-                Knowledge of health
-            </h3>
 
-            <p>
-                Medical traditions developed through
-                texts, practice and transmission.
-            </p>
+.banner-grid span {
 
-        </div>
+    display: block;
 
+    margin-top: 12px;
 
-        <div class="knowledge-card">
+    color: #9ba2a4;
 
-            <span>
-                PHILOSOPHY
-            </span>
+    font-size: 12px;
 
-            <h3>
-                Questions without end
-            </h3>
+    line-height: 1.6;
+}
 
-            <p>
-                What is reality?
-                What is consciousness?
-                What is knowledge?
-            </p>
 
-        </div>
+/* =========================================================
+   EVIDENCE SECTION
+========================================================= */
 
-    </div>
+.evidence-section {
 
-</section>
+    padding:
+        130px 10vw;
 
+    background:
+        #080b0c;
+}
 
 
-<!-- =========================================================
-     CHAPTER 9 — TEMPLES & KINGDOMS
-========================================================= -->
+.evidence-intro {
 
-<section
-    class="story-section alternate"
-    id="chapter-9"
->
+    max-width: 700px;
 
-    <div class="chapter-number">
-        09
-    </div>
+    margin-top: 25px;
 
+    color: #9aa1a3;
 
-    <div class="chapter-header">
+    font-size: 16px;
+}
 
-        <div class="section-label">
-            CHAPTER NINE
-        </div>
 
+/* =========================================================
+   EVIDENCE GRID
+========================================================= */
 
-        <h2>
-            TEMPLES,<br>
-            KINGDOMS & OCEANS
-        </h2>
+.evidence-grid {
 
+    display: grid;
 
-        <p>
+    grid-template-columns:
+        repeat(4, 1fr);
 
-            Across the subcontinent,
-            regional cultures flourished.
+    gap: 20px;
 
-        </p>
+    margin-top: 65px;
+}
 
-    </div>
 
+.evidence-card {
 
-    <div class="story-grid">
+    min-height: 230px;
 
+    padding: 30px;
 
-        <div class="story-text">
+    border:
+        1px solid var(--line);
 
-            <p class="story-lead">
+    background:
+        linear-gradient(
+            145deg,
+            #0a0e0f,
+            #0d1113
+        );
 
-                From the north to the deep south,
-                powerful kingdoms shaped the landscape.
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
 
-            </p>
 
+.evidence-card:hover {
 
-            <p>
+    border-color:
+        #5a3711;
 
-                Temples became centres not merely
-                of worship, but also of art,
-                architecture, learning, economy
-                and community life.
+    transform:
+        translateY(-3px);
+}
 
-            </p>
 
+.evidence-icon {
 
-            <p>
+    color: var(--orange);
 
-                Maritime kingdoms developed connections
-                across the Indian Ocean.
+    font-size: 24px;
 
-                Ships carried merchants,
-                goods, ideas and cultural influences
-                toward distant shores.
+    margin-bottom: 30px;
+}
 
-            </p>
 
+.evidence-card h3 {
 
-            <p class="story-emphasis">
+    color: var(--white);
 
-                Bharat was never isolated.
+    font-size: 15px;
 
-            </p>
+    letter-spacing: 1px;
+}
 
-        </div>
 
+.evidence-card p {
 
-        <div class="quote-panel">
+    margin-top: 15px;
 
-            <div class="quote-symbol">
-                ◈
-            </div>
+    color: #8f9799;
 
-            <p>
+    font-size: 13px;
 
-                From temple towers
-                to ocean-going ships,
-                civilisation travelled
-                in many directions.
+    line-height: 1.7;
+}
 
-            </p>
 
-        </div>
+/* =========================================================
+   NEXT CHAPTER
+========================================================= */
 
-    </div>
+.next-section {
 
-</section>
+    min-height: 65vh;
 
+    display: flex;
 
+    align-items: center;
 
-<!-- =========================================================
-     CHAPTER 10 — INVASIONS & RESISTANCE
-========================================================= -->
+    justify-content: center;
 
-<section
-    class="story-section"
-    id="chapter-10"
->
+    text-align: center;
 
-    <div class="chapter-number">
-        10
-    </div>
+    padding:
+        100px 20px;
 
+    background:
 
-    <div class="chapter-header">
+        linear-gradient(
+            rgba(4,6,7,.92),
+            rgba(4,6,7,.96)
+        ),
 
-        <div class="section-label">
-            CHAPTER TEN
-        </div>
+        url("images/bhimbetka.jpg");
 
+    background-size: cover;
 
-        <h2>
-            WHEN INVADERS<br>
-            CAME
-        </h2>
+    background-position: center;
+}
 
 
-        <p>
+.next-inner {
 
-            The story now becomes darker.
+    max-width: 900px;
+}
 
-        </p>
 
-    </div>
+.next-inner h2 {
 
+    margin-top: 15px;
+}
 
-    <div class="resistance-story">
 
+.next-inner p {
 
-        <div class="resistance-intro">
+    max-width: 650px;
 
-            <p class="story-lead">
+    margin:
+        30px auto;
 
-                Armies crossed frontiers.
+    color: #a1a8aa;
 
-                Kingdoms were attacked.
+    font-size: 17px;
 
-                Cities were conquered.
+    line-height: 1.7;
+}
 
-                Temples were destroyed.
 
-                People were displaced.
+.next-date {
 
-            </p>
+    color: var(--orange);
 
+    font-size: 13px;
 
-            <p>
+    font-weight: 900;
 
-                But conquest was never the whole story.
+    letter-spacing: 3px;
+}
 
-            </p>
 
+/* =========================================================
+   FOOTER
+========================================================= */
 
-            <p>
+.history-footer {
 
-                Across different regions and centuries,
-                communities and kingdoms resisted,
-                adapted and rebuilt.
+    padding:
+        45px 7vw;
 
-            </p>
+    background: #030405;
 
-        </div>
+    border-top:
+        1px solid var(--line);
 
+    display: flex;
 
-        <div class="resistance-box">
+    justify-content: space-between;
 
-            <span>
-                THE OTHER SIDE OF CONQUEST
-            </span>
+    align-items: center;
+}
 
-            <strong>
-                RESISTANCE
-            </strong>
 
-            <p>
+.history-footer strong {
 
-                To understand this period,
-                we must listen not only to the conquerors,
-                but also to the people who resisted them.
+    display: block;
 
-            </p>
+    color: var(--white);
 
-        </div>
+    font-size: 12px;
 
-    </div>
+    letter-spacing: 2px;
+}
 
-</section>
 
+.history-footer span {
 
+    display: block;
 
-<!-- =========================================================
-     CHAPTER 11 — RESISTANCE
-========================================================= -->
+    margin-top: 6px;
 
-<section
-    class="story-section alternate"
-    id="chapter-11"
->
+    color: #737a7c;
 
-    <div class="chapter-number">
-        11
-    </div>
+    font-size: 10px;
+}
 
 
-    <div class="chapter-header">
+.footer-links {
 
-        <div class="section-label">
-            CHAPTER ELEVEN
-        </div>
+    display: flex;
 
+    gap: 25px;
+}
 
-        <h2>
-            A CIVILISATION<br>
-            THAT RESISTED
-        </h2>
 
+.footer-links a {
 
-        <p>
+    color: #969c9e;
 
-            Resistance took many forms.
+    font-size: 10px;
 
-        </p>
+    letter-spacing: 1px;
+}
 
-    </div>
 
+.footer-links a:hover {
 
-    <div class="resistance-grid">
+    color: var(--orange);
+}
 
 
-        <div class="resistance-card">
+/* =========================================================
+   LARGE TABLET
+========================================================= */
 
-            <strong>
-                WARRIORS
-            </strong>
+@media (max-width: 1100px) {
 
-            <p>
-                Kings, chiefs and armies
-                fought for territory and sovereignty.
-            </p>
+    .history-nav {
 
-        </div>
+        gap: 18px;
+    }
 
 
-        <div class="resistance-card">
+    .history-nav a {
 
-            <strong>
-                COMMUNITIES
-            </strong>
+        font-size: 10px;
+    }
 
-            <p>
-                Local communities preserved
-                traditions, languages and institutions.
-            </p>
 
-        </div>
+    .history-hero {
 
+        grid-template-columns:
+            48% 52%;
+    }
 
-        <div class="resistance-card">
 
-            <strong>
-                TEMPLES
-            </strong>
+    .hero-content {
 
-            <p>
-                Sacred institutions were destroyed
-                in some periods and rebuilt in others.
-            </p>
+        margin-left: 6vw;
+    }
 
-        </div>
 
+    .hero-map {
 
-        <div class="resistance-card">
+        padding-right: 2vw;
+    }
 
-            <strong>
-                MEMORY
-            </strong>
 
-            <p>
-                Stories, songs, texts and traditions
-                carried memories across generations.
-            </p>
+    .hero-map img {
 
-        </div>
+        height: 610px;
+    }
 
-    </div>
 
-</section>
+    .begin-grid {
 
+        gap: 40px;
+    }
 
 
-<!-- =========================================================
-     CHAPTER 12 — COLONIAL RULE
-========================================================= -->
+    .evidence-grid {
 
-<section
-    class="story-section"
-    id="chapter-12"
->
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
-    <div class="chapter-number">
-        12
-    </div>
 
+    .banner-grid {
 
-    <div class="chapter-header">
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
-        <div class="section-label">
-            CHAPTER TWELVE
-        </div>
 
+    .banner-grid div:nth-child(2) {
 
-        <h2>
-            EUROPE<br>
-            ARRIVES
-        </h2>
+        border-right: none;
+    }
 
+}
 
-        <p>
 
-            At first they came as traders.
+/* =========================================================
+   TABLET
+========================================================= */
 
-        </p>
+@media (max-width: 850px) {
 
-    </div>
+    .history-header {
 
+        padding:
+            0 3vw;
+    }
 
-    <div class="colonial-story">
 
+    .history-logo {
 
-        <div class="colonial-main">
+        transform:
+            scale(.9);
 
-            <p class="story-lead">
+        transform-origin:
+            left center;
+    }
 
-                Ships crossed the oceans.
 
-                Trading companies established
-                commercial settlements.
+    .history-nav {
 
-            </p>
+        gap: 13px;
+    }
 
 
-            <p>
+    .history-nav a {
 
-                Trade became political influence.
+        font-size: 9px;
+    }
 
-                Political influence became territorial power.
 
-                And eventually,
-                a trading company became
-                the instrument of imperial expansion.
+    .history-hero {
 
-            </p>
+        grid-template-columns:
+            1fr;
 
+        min-height: auto;
+    }
 
-            <p>
 
-                The story of colonial rule cannot be told
-                only through governors and battles.
+    .hero-content {
 
-            </p>
+        width: 86%;
 
+        margin-left: 7vw;
 
-            <p class="story-emphasis">
+        padding:
+            95px 0 55px;
+    }
 
-                We must also ask:
 
-            </p>
+    .hero-map {
 
-        </div>
+        min-height: 600px;
 
+        padding:
+            20px 5vw 60px;
+    }
 
-        <div class="question-stack">
 
-            <div>
-                What happened to the economy?
-            </div>
+    .hero-map img {
 
-            <div>
-                What happened to traditional industries?
-            </div>
+        width: 100%;
 
-            <div>
-                What happened to education?
-            </div>
+        max-width: 850px;
 
-            <div>
-                How did people respond?
-            </div>
+        height: 580px;
+    }
 
-        </div>
 
-    </div>
+    .begin-grid {
 
-</section>
+        grid-template-columns:
+            1fr;
+    }
 
 
+    .begin-image img {
 
-<!-- =========================================================
-     CHAPTER 13 — FREEDOM
-========================================================= -->
+        height: 480px;
+    }
 
-<section
-    class="story-section alternate"
-    id="chapter-13"
->
 
-    <div class="chapter-number">
-        13
-    </div>
+    .timeline-item {
 
+        grid-template-columns:
+            1fr 50px 1fr;
 
-    <div class="chapter-header">
+        gap: 18px;
+    }
 
-        <div class="section-label">
-            CHAPTER THIRTEEN
-        </div>
 
+    .evidence-grid {
 
-        <h2>
-            THE LONG<br>
-            STRUGGLE FOR FREEDOM
-        </h2>
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
+}
 
-        <p>
 
-            The struggle was not one event.
+/* =========================================================
+   MOBILE
+========================================================= */
 
-        </p>
+@media (max-width: 700px) {
 
-    </div>
+    html {
 
+        scroll-padding-top: 120px;
+    }
 
-    <div class="freedom-story">
 
+    /* HEADER */
 
-        <p class="story-lead">
+    .history-header {
 
-            It was a long succession of resistance,
-            reform, rebellion, political organisation,
-            intellectual awakening and sacrifice.
+        position: relative;
 
-        </p>
+        height: auto;
 
+        padding:
+            17px 5vw;
 
-        <div class="freedom-line">
+        flex-direction: column;
 
-            <span>
-                RESISTANCE
-            </span>
+        align-items: flex-start;
 
-            <span>
-                REFORM
-            </span>
+        gap: 15px;
+    }
 
-            <span>
-                AWAKENING
-            </span>
 
-            <span>
-                STRUGGLE
-            </span>
+    .history-logo {
 
-            <span>
-                FREEDOM
-            </span>
+        transform: none;
+    }
 
-        </div>
 
+    .logo-hindi {
 
-        <p>
+        font-size: 18px;
+    }
 
-            Different people imagined freedom
-            in different ways.
 
-            Different movements followed different paths.
+    .logo-english {
 
-            Yet the demand for self-rule
-            became increasingly powerful.
+        font-size: 8px;
 
-        </p>
+        letter-spacing: 1.5px;
+    }
 
-    </div>
 
-</section>
+    .history-nav {
 
+        width: 100%;
 
+        margin: 0;
 
-<!-- =========================================================
-     CHAPTER 14 — 1947
-========================================================= -->
+        justify-content: flex-start;
 
-<section
-    class="story-section independence"
-    id="chapter-14"
->
+        overflow-x: auto;
 
-    <div class="chapter-number">
-        14
-    </div>
+        padding-bottom: 5px;
 
+        gap: 20px;
 
-    <div class="chapter-header">
+        scrollbar-width: none;
+    }
 
-        <div class="section-label">
-            CHAPTER FOURTEEN
-        </div>
 
+    .history-nav::-webkit-scrollbar {
 
-        <h2>
-            1947
-        </h2>
+        display: none;
+    }
 
 
-        <p>
+    .history-nav a {
 
-            Independence came.
+        font-size: 9px;
 
-            But freedom came with enormous human cost.
+        flex-shrink: 0;
+    }
 
-        </p>
 
-    </div>
+    .history-nav a.active::after {
 
+        bottom: -7px;
+    }
 
-    <div class="independence-story">
 
+    /* HERO */
 
-        <div>
+    .history-hero {
 
-            <p class="story-lead">
+        margin-top: 0;
 
-                The British Raj ended.
+        display: flex;
 
-            </p>
+        flex-direction: column;
 
+        min-height: auto;
 
-            <p>
+        background:
+            linear-gradient(
+                180deg,
+                #050708,
+                #080a0b
+            );
+    }
 
-                India became independent.
 
-            </p>
+    .hero-content {
 
+        width: 86%;
 
-            <p>
+        margin-left: 7vw;
 
-                But the subcontinent was also partitioned.
+        padding:
+            75px 0 45px;
+    }
 
-            </p>
 
+    .eyebrow {
 
-            <p>
+        font-size: 9px;
 
-                Millions experienced displacement,
-                uncertainty, violence and loss.
+        letter-spacing: 3px;
+    }
 
-            </p>
 
-        </div>
+    .hero-content h1 {
 
+        margin-top: 18px;
 
-        <div class="independence-box">
+        font-size:
+            clamp(55px, 16vw, 90px);
 
-            <span>
-                15 AUGUST 1947
-            </span>
+        letter-spacing: -3px;
+    }
 
-            <strong>
-                INDEPENDENCE
-            </strong>
 
-            <p>
+    .hero-content h1 span {
 
-                A new political chapter began.
+        margin-top: 12px;
 
-            </p>
+        font-size: .48em;
 
-        </div>
+        letter-spacing: .5px;
+    }
 
-    </div>
 
-</section>
+    .hero-lead {
 
+        margin-top: 30px;
 
+        font-size: 18px;
+    }
 
-<!-- =========================================================
-     EPILOGUE
-========================================================= -->
 
-<section class="next-section">
+    .hero-text {
 
-    <div class="next-inner">
+        font-size: 14px;
+    }
 
 
-        <div class="next-label">
-            EPILOGUE
-        </div>
+    .hero-button {
 
+        padding:
+            14px 20px;
+    }
 
-        <h2>
-            THE STORY<br>
-            DID NOT END IN 1947
-        </h2>
 
+    /* MAP */
 
-        <p>
+    .hero-map {
 
-            A Republic was born.
+        width: 100%;
 
-            But the civilisation whose story we have followed
-            was already ancient.
+        min-height: 500px;
 
-        </p>
+        padding:
+            15px 5vw 55px;
+    }
 
 
-        <p>
+    .hero-map img {
 
-            Its languages survived.
+        width: 100%;
 
-            Its traditions survived.
+        height: 500px;
 
-            Its temples survived.
+        max-width: none;
 
-            Its philosophical questions survived.
+        object-fit: contain;
+    }
 
-            Its memories survived.
 
-        </p>
+    .map-caption {
 
+        right: 6vw;
 
-        <div class="next-date">
+        bottom: 20px;
 
-            THE JOURNEY CONTINUES
+        font-size: 9px;
+    }
 
-        </div>
 
+    /* VERSE */
 
-        <a
-            href="../civilisation/civilisation.html"
-            class="next-button"
-        >
-            EXPLORE BHARAT'S CIVILISATION →
-        </a>
+    .verse-section {
 
-    </div>
+        grid-template-columns:
+            1fr;
 
-</section>
+        gap: 25px;
 
+        padding:
+            80px 7vw;
+    }
 
 
-<!-- =========================================================
-     SOURCES / EVIDENCE
-========================================================= -->
+    .verse-content h2,
+    .begin-heading h2,
+    .timeline-heading h2,
+    .evidence-section h2,
+    .next-inner h2 {
 
-<section class="evidence-section">
+        font-size:
+            clamp(36px, 11vw, 55px);
+    }
 
-    <div class="section-label">
-        HOW WE TELL THE STORY
-    </div>
 
+    .sanskrit {
 
-    <h2>
-        MEMORY,<br>
-        EVIDENCE & HISTORY
-    </h2>
+        margin-top: 35px;
 
+        font-size: 22px;
+    }
 
-    <p class="evidence-intro">
 
-        The history presented here will draw from
-        archaeology, inscriptions, texts, manuscripts,
-        coins, architecture, contemporary accounts
-        and other historical evidence.
+    .transliteration {
 
-    </p>
+        font-size: 15px;
+    }
 
 
-    <div class="evidence-grid">
+    /* BEGIN */
 
+    .begin-section,
+    .timeline-section,
+    .evidence-section {
 
-        <div class="evidence-card">
+        padding:
+            90px 7vw;
+    }
 
-            <div class="evidence-icon">
-                ◈
-            </div>
 
-            <h3>
-                ARCHAEOLOGY
-            </h3>
+    .begin-heading {
 
-            <p>
-                Sites, structures, tools, pottery,
-                burials and material remains.
-            </p>
+        margin-bottom: 50px;
+    }
 
-        </div>
 
+    .begin-grid {
 
-        <div class="evidence-card">
+        grid-template-columns:
+            1fr;
 
-            <div class="evidence-icon">
-                ॐ
-            </div>
+        gap: 45px;
+    }
 
-            <h3>
-                TEXTS
-            </h3>
 
-            <p>
-                Vedic literature, Itihasa, Puranic traditions,
-                regional literature and other textual sources.
-            </p>
+    .begin-image img {
 
-        </div>
+        height: 400px;
+    }
 
 
-        <div class="evidence-card">
+    /* TIMELINE */
 
-            <div class="evidence-icon">
-                श
-            </div>
+    .timeline {
 
-            <h3>
-                INSCRIPTIONS
-            </h3>
+        padding-left: 0;
+    }
 
-            <p>
-                Stone inscriptions, copper plates,
-                grants and other epigraphic records.
-            </p>
 
-        </div>
+    .timeline::before {
 
+        left: 20px;
 
-        <div class="evidence-card">
+        transform: none;
+    }
 
-            <div class="evidence-icon">
-                ◉
-            </div>
 
-            <h3>
-                MONUMENTS
-            </h3>
+    .timeline-item {
 
-            <p>
-                Temples, sculptures, architecture,
-                manuscripts and surviving cultural heritage.
-            </p>
+        display: grid;
 
-        </div>
+        grid-template-columns:
+            40px 1fr;
 
-    </div>
+        gap: 15px;
 
+        margin-bottom: 50px;
+    }
 
-    <div class="source-link">
 
-        <a href="../sources/sources.html">
-            EXPLORE OUR SOURCES →
-        </a>
+    .timeline-date {
 
-    </div>
+        grid-column: 2;
 
-</section>
+        grid-row: 1;
 
+        text-align: left;
 
+        padding-bottom: 7px;
+    }
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
-<footer class="history-footer">
+    .timeline-dot {
 
+        grid-column: 1;
 
-    <div>
+        grid-row: 2;
 
-        <strong>
-            EK RAHENGE TO NEK RAHENGE
-        </strong>
+        margin-top: 8px;
 
-        <span>
-            Bharat • History • Civilisation • Memory
-        </span>
+        justify-self: center;
+    }
 
-    </div>
 
+    .timeline-card {
 
-    <div class="footer-links">
+        grid-column: 2;
 
-        <a href="../index.html">
-            HOME
-        </a>
+        grid-row: 2;
 
-        <a href="../sources/sources.html">
-            SOURCES
-        </a>
+        padding: 22px;
+    }
 
-        <a href="../stories/stories.html">
-            STORIES
-        </a>
 
-        <a href="../contact/contact.html">
-            CONTACT
-        </a>
+    /* BANNER */
 
-    </div>
+    .civilisation-banner {
 
-</footer>
+        padding:
+            90px 7vw;
+    }
 
 
-</body>
-</html>
+    .banner-grid {
+
+        grid-template-columns:
+            1fr;
+
+        margin-top: 50px;
+    }
+
+
+    .banner-grid div {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--line);
+    }
+
+
+    .banner-grid div:last-child {
+
+        border-bottom: none;
+    }
+
+
+    /* EVIDENCE */
+
+    .evidence-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* NEXT */
+
+    .next-section {
+
+        min-height: 55vh;
+
+        padding:
+            80px 7vw;
+    }
+
+
+    /* FOOTER */
+
+    .history-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+        padding:
+            40px 7vw;
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+}
