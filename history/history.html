@@ -1,609 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharat — The Greater History | Ek Rahenge To Nek Rahenge</title>
-<meta name="description" content="An immersive civilisational history of Bharat: people, dharma, knowledge, kingdoms, temples, trade, struggle, resilience and the journey to modern India.">
-<link rel="stylesheet" href="history.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Bharat — The Greater History | Ek Rahenge To Nek Rahenge
+  </title>
+
+  <meta
+    name="description"
+    content="An immersive, dynamic journey through the history and civilisational memory of Bharat."
+  >
+
+  <link rel="stylesheet" href="history.css">
 </head>
+
 <body>
 
-<header class="history-header">
+<header class="site-header">
+
   <a class="brand" href="../index.html">
-    <img src="../haindaveeyam-logo.jpeg" alt="Haindaveeyam Foundation">
-    <span>EK RAHENGE<br><b>TO NEK RAHENGE</b></span>
+
+    <img
+      src="../haindaveeyam-logo.jpeg"
+      alt="Haindaveeyam Foundation"
+    >
+
+    <span>
+      EK RAHENGE<br>
+      <b>TO NEK RAHENGE</b>
+    </span>
+
   </a>
+
   <nav>
-    <a class="active" href="history.html">HISTORY</a>
-    <a href="../civilisation/civilisation.html">CIVILISATION</a>
-    <a href="../map/map.html">MAP</a>
-    <a href="../timeline/timeline.html">TIMELINE</a>
-    <a href="../sources/sources.html">SOURCES</a>
+
+    <a
+      class="active"
+      href="history.html"
+    >
+      HISTORY
+    </a>
+
+    <a href="../civilisation/civilisation.html">
+      CIVILISATION
+    </a>
+
+    <a href="../map/map.html">
+      MAP
+    </a>
+
+    <a href="../timeline/timeline.html">
+      TIMELINE
+    </a>
+
+    <a href="../sources/sources.html">
+      SOURCES
+    </a>
+
   </nav>
+
 </header>
+
 
 <main>
 
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="hero">
+
   <div class="hero-copy">
-    <div class="eyebrow">THE GREATER HISTORY OF BHARAT</div>
-    <h1>BHARAT</h1>
-    <h2>A CIVILISATION<br><span>LIVED THROUGH TIME</span></h2>
-    <p class="hero-lead">
-      This is not the story of a single dynasty, a single language or a single
-      political boundary. It is the story of generations of people who lived,
-      worshipped, questioned, created, traded, fought, adapted and remembered.
+
+    <div class="eyebrow">
+      THE GREATER HISTORY OF BHARAT
+    </div>
+
+    <h1>
+      BHARAT
+    </h1>
+
+    <h2>
+      A CIVILISATION<br>
+      <span>LIVED THROUGH TIME</span>
+    </h2>
+
+    <p>
+
+      A dynamic journey through the people, places, ideas,
+      kingdoms, temples, knowledge traditions, struggles
+      and memories that shaped Bharat across thousands of years.
+
     </p>
+
+
     <div class="hero-mantra">
-      <span>MANY KINGDOMS.</span>
-      <span>MANY LANGUAGES.</span>
-      <span>MANY PHILOSOPHIES.</span>
-      <span>MANY CENTURIES.</span>
-      <strong>ONE EXTRAORDINARY CIVILISATIONAL MEMORY.</strong>
-      <em>ONE SANĀTANA WAY OF LIFE.</em>
+
+      <span>
+        MANY KINGDOMS.
+      </span>
+
+      <span>
+        MANY LANGUAGES.
+      </span>
+
+      <span>
+        MANY PHILOSOPHIES.
+      </span>
+
+      <span>
+        MANY CENTURIES.
+      </span>
+
+      <strong>
+        ONE EXTRAORDINARY CIVILISATIONAL MEMORY.
+      </strong>
+
+      <em>
+        ONE SANĀTANA WAY OF LIFE.
+      </em>
+
     </div>
-    <a class="primary-btn" href="#begin">ENTER THE STORY ↓</a>
+
+
+    <a
+      class="primary-btn"
+      href="#explorer"
+    >
+      ENTER THE HISTORY ↓
+    </a>
+
   </div>
-  <div class="hero-visual">
-    <div class="aura"></div>
-    <img src="../Bharat1.png" alt="Bharatvarsha civilisational map">
-    <div class="map-mark">BHARATVARSHA</div>
-    <div class="map-note">Civilisational memory • changing political geographies • continuing traditions</div>
+
+
+  <div class="hero-map">
+
+    <div class="map-glow"></div>
+
+    <img
+      src="../Bharat1.png"
+      alt="Bharatvarsha civilisational map"
+    >
+
+    <span>
+      BHARATVARSHA
+    </span>
+
+    <small>
+      Civilisational geography • changing political worlds • enduring memory
+    </small>
+
   </div>
+
 </section>
 
-<section id="begin" class="opening">
-  <div class="kicker">THE FIRST QUESTION</div>
-  <div class="opening-grid">
+
+
+<!-- =========================================================
+     HISTORY EXPLORER
+========================================================= -->
+
+<section
+  class="command-bar"
+  id="explorer"
+>
+
+  <div class="command-title">
+
+    <span>
+      HISTORY EXPLORER
+    </span>
+
+    <strong>
+      Read. Explore. Compare. Discover.
+    </strong>
+
+  </div>
+
+
+  <div class="command-controls">
+
+    <label class="search">
+
+      <span>
+        ⌕
+      </span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search people, places, eras, ideas..."
+        autocomplete="off"
+      >
+
+    </label>
+
+
+    <select
+      id="categoryFilter"
+      aria-label="Filter history"
+    >
+
+      <option value="all">
+        All themes
+      </option>
+
+      <option value="ancient">
+        Ancient Bharat
+      </option>
+
+      <option value="dharma">
+        Dharma & Itihāsa
+      </option>
+
+      <option value="knowledge">
+        Knowledge
+      </option>
+
+      <option value="temples">
+        Temples
+      </option>
+
+      <option value="world">
+        Bharat & the World
+      </option>
+
+      <option value="conflict">
+        Conflict & Resistance
+      </option>
+
+      <option value="colonial">
+        Colonial & Freedom
+      </option>
+
+      <option value="modern">
+        Modern Bharat
+      </option>
+
+    </select>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ERA FILTER
+========================================================= -->
+
+<section class="era-strip">
+
+  <button
+    class="era-chip active"
+    data-era="all"
+  >
+    ALL
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="prehistory"
+  >
+    DEEP ANTIQUITY
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="harappan"
+  >
+    HARAPPAN
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="vedic"
+  >
+    VEDIC
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="classical"
+  >
+    CLASSICAL
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="medieval"
+  >
+    MEDIEVAL
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="earlymodern"
+  >
+    EARLY MODERN
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="colonial"
+  >
+    COLONIAL
+  </button>
+
+  <button
+    class="era-chip"
+    data-era="modern"
+  >
+    MODERN
+  </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="featured">
+
+  <div class="section-kicker">
+    THE JOURNEY
+  </div>
+
+
+  <div class="featured-grid">
+
+
+    <div class="featured-copy">
+
+      <h2>
+
+        FROM THE FIRST<br>
+        TRACES TO <span>BHARAT TODAY</span>
+
+      </h2>
+
+
+      <p class="lead">
+
+        The story is organised as a living historical library.
+        Every article connects people, places, dates,
+        evidence, maps and related stories.
+
+      </p>
+
+
+      <p>
+
+        The civilisational narrative is deliberately broad:
+        archaeology and early settlement; the Harappan world;
+        Vedic traditions; Itihāsa; kingdoms and empires;
+        mathematics, medicine, astronomy and philosophy;
+        temples and sacred geography; Indian Ocean connections;
+        political conflicts and resistance; colonial transformation;
+        the freedom struggle; Partition and the Republic.
+
+      </p>
+
+    </div>
+
+
+    <div class="fact-card">
+
+      <span>
+        EDITORIAL PRINCIPLE
+      </span>
+
+      <strong>
+        Pride without blindness.<br>
+        Criticism without contempt.
+      </strong>
+
+      <p>
+
+        Tradition, text, archaeology, inscriptions, coins,
+        architecture and contemporary accounts are presented
+        together. Where evidence is uncertain or debated,
+        the page identifies it.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DYNAMIC ARTICLE LIBRARY
+========================================================= -->
+
+<section class="articles">
+
+  <div class="section-kicker">
+    OPEN THE STORIES
+  </div>
+
+
+  <div
+    class="article-grid"
+    id="cards"
+  ></div>
+
+
+  <div
+    class="empty-state"
+    id="emptyState"
+    hidden
+  >
+    No stories match your search.
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORLD HISTORY
+========================================================= -->
+
+<section class="world-timeline">
+
+  <div class="section-kicker">
+    BHARAT IN WORLD HISTORY
+  </div>
+
+
+  <h2>
+
+    WHILE BHARAT WAS<br>
+    <span>CHANGING...</span>
+
+  </h2>
+
+
+  <div class="world-rows">
+
+
     <div>
-      <div class="chapter-number">00</div>
-      <h2>WHAT MAKES A<br><span>CIVILISATION ENDURE?</span></h2>
-    </div>
-    <article>
-      <p class="opening-lead">
-        A civilisation is more than the boundaries drawn on a political map.
-        It is also memory: the stories a society tells about itself, the places
-        it regards as sacred, the knowledge it transmits, the festivals it
-        celebrates, the duties it teaches and the institutions it builds.
-      </p>
-      <p>
-        The history of Bharat is extraordinarily long and diverse. The political
-        map changed again and again. Kingdoms rose and disappeared. New peoples
-        arrived, settled, traded and fought. Languages changed. New philosophical
-        arguments emerged. Yet many older practices and memories were carried into
-        new ages and given new forms.
-      </p>
-      <p>
-        That continuity is the central thread of this history. We will follow
-        <b>people rather than only rulers</b>; we will examine <b>Dharma rather
-        than only dates</b>; and we will place Bharat within the wider history of
-        Asia, the Indian Ocean and the world.
-      </p>
-      <aside class="lesson">
-        <span>HOW WE READ HISTORY</span>
-        <strong>Tradition • Text • Archaeology • Inscriptions • Coins • Architecture • Contemporary Accounts</strong>
-      </aside>
-    </article>
-  </div>
-</section>
 
-<section class="chapter" id="antiquity">
-  <div class="chapter-head">
+      <b>
+        BRONZE AGE
+      </b>
+
+      <span>
+        Harappan urban world
+      </span>
+
+      <em>
+        Mesopotamia • Egypt • Bronze Age networks
+      </em>
+
+    </div>
+
+
     <div>
-      <span class="kicker">01 / DEEP ANTIQUITY</span>
-      <h2>BEFORE THERE<br><span>WERE KINGDOMS</span></h2>
-    </div>
-    <div class="date-stamp">PREHISTORY → EARLY SETTLEMENTS</div>
-  </div>
-  <div class="chapter-grid">
-    <div class="chapter-image">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20paintings%20at%20bhimbetka%20rock%20shelter.jpg" alt="Bhimbetka rock paintings">
-      <span>BHIMBETKA • CENTRAL INDIA</span>
-    </div>
-    <article class="prose">
-      <h3>THE FIRST PEOPLE LEFT NO ROYAL CHRONICLE.</h3>
-      <p>
-        There was a time when there were no capitals to name, no royal genealogies
-        carved into pillars and no written chronicle to tell us who ruled. Human
-        beings lived with the land itself. They followed animals, gathered food,
-        used stone tools, mastered fire and learned the rhythms of water, seasons
-        and landscape.
-      </p>
-      <p>
-        At Bhimbetka, natural rock shelters in the Vindhyan landscape preserve
-        paintings that appear to span from the Mesolithic period into historical
-        times. UNESCO describes five groups of shelters containing paintings that
-        record aspects of human life across a very long cultural sequence.
-      </p>
-      <p>
-        The paintings are powerful precisely because they are intimate. We see
-        human figures, animals, movement and scenes that suggest collective life.
-        We cannot, however, simply turn every painted figure into a statement about
-        a complete religious system. The disciplined historian asks what the
-        evidence actually permits us to say.
-      </p>
-      <p>
-        Then, gradually, the human relationship with the land changed. In different
-        regions communities experimented with cultivation, animal domestication,
-        pottery and more permanent settlement. This was not one sudden revolution.
-        It was a long process in which knowledge accumulated from generation to
-        generation.
-      </p>
-      <div class="evidence-box">
-        <b>THE EVIDENCE</b>
-        <span>Rock shelters</span><span>Paintings</span><span>Stone tools</span><span>Settlement archaeology</span>
-      </div>
-      <button class="outline" data-modal="bhimbetka">READ THE EVIDENCE</button>
-    </article>
-  </div>
-</section>
 
-<section class="fact-band">
-  <div><strong>BHIMBETKA</strong><span>5 major shelter groups</span></div>
-  <div><strong>ROCK ART</strong><span>Mesolithic → historical periods</span></div>
-  <div><strong>METHOD</strong><span>Evidence before assumption</span></div>
-</section>
+      <b>
+        CLASSICAL AGE
+      </b>
 
-<section class="chapter reverse" id="harappan">
-  <div class="chapter-head">
+      <span>
+        Kingdoms, empires, knowledge
+      </span>
+
+      <em>
+        Mediterranean • Central Asia • China
+      </em>
+
+    </div>
+
+
     <div>
-      <span class="kicker">02 / BRONZE AGE BHARAT</span>
-      <h2>WHEN THE<br><span>CITIES ROSE</span></h2>
-    </div>
-    <div class="date-stamp">c. 3000–1500 BCE</div>
-  </div>
-  <div class="chapter-grid">
-    <div class="chapter-image">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dholavira%20archaeological%20site.jpg" alt="Dholavira archaeological site">
-      <span>DHOLAVIRA • GUJARAT</span>
-    </div>
-    <article class="prose">
-      <h3>IMAGINE A CITY IN A HARSH LANDSCAPE.</h3>
-      <p>
-        Water is scarce. The ground is dry. Yet people choose to build—and build
-        at scale. Dholavira, on Khadir Island in Gujarat, reveals one of the most
-        striking urban traditions of the Harappan world.
-      </p>
-      <p>
-        UNESCO dates Dholavira broadly from about 3000 to 1500 BCE and describes
-        an urban settlement with fortified areas, planned streets, residential
-        sectors, workshops, a cemetery, and an elaborate system of reservoirs and
-        water management. The settlement flourished for more than 1,500 years.
-      </p>
-      <p>
-        Archaeology also reveals craft activity: beads, shell, copper, stone,
-        terracotta, gold and ivory objects. Evidence of exchange connects Dholavira
-        with other Harappan centres and with regions associated with Mesopotamia
-        and the Oman peninsula.
-      </p>
-      <p>
-        Consider what that means. The city was not simply a collection of buildings.
-        People had to organise labour, extract resources, maintain infrastructure,
-        produce goods and move them across distances. There were skills that had
-        to be taught. There were institutions that had to endure. There was a
-        social order capable of coordinating activity.
-      </p>
-      <p>
-        And yet the civilisation retains a profound mystery: its script remains
-        undeciphered. The seals speak in symbols that we can see but cannot yet
-        confidently read. History here is therefore an exercise in both wonder
-        and restraint.
-      </p>
-      <div class="stat-row">
-        <div><b>1,500+</b><small>years of occupation</small></div>
-        <div><b>1,000+</b><small>Harappan sites known</small></div>
-        <div><b>3rd–2nd</b><small>millennium BCE</small></div>
-      </div>
-      <button class="outline" data-modal="dholavira">LOOK CLOSER</button>
-    </article>
-  </div>
-</section>
 
-<section class="chapter dark" id="vedic">
-  <div class="chapter-head">
+      <b>
+        MARITIME CENTURIES
+      </b>
+
+      <span>
+        Ports, merchants and cultural exchange
+      </span>
+
+      <em>
+        Indian Ocean • Southeast Asia
+      </em>
+
+    </div>
+
+
     <div>
-      <span class="kicker">03 / THE VEDIC WORLD</span>
-      <h2>WHEN KNOWLEDGE<br>WAS CARRIED BY <span>MEMORY</span></h2>
+
+      <b>
+        EARLY MODERN
+      </b>
+
+      <span>
+        Regional powers and global commerce
+      </span>
+
+      <em>
+        Ottoman • Safavid • European maritime expansion
+      </em>
+
     </div>
-  </div>
-  <div class="long-columns">
-    <article>
-      <h3>THE WORD BEFORE THE BOOK</h3>
-      <p>
-        One of the most important features of the Vedic tradition is that texts
-        were not dependent upon a manuscript sitting safely on a shelf. They were
-        preserved through human memory, disciplined recitation and teacher–student
-        transmission. The sound, accent and sequence mattered.
-      </p>
-      <p>
-        This creates a different kind of archive. Instead of stone being the main
-        carrier of memory, the human voice became an instrument of preservation.
-        The Vedic chanting tradition is recognised by UNESCO as intangible cultural
-        heritage, highlighting the sophisticated methods used to preserve the texts.
-      </p>
-    </article>
-    <article>
-      <h3>FROM ṚTA TO DHARMA</h3>
-      <p>
-        The Vedic corpus opens a window into ritual, sacred speech, deities,
-        cosmology, social life and ideas about order. Over time, the wider textual
-        tradition develops through the Brahmanas, Aranyakas and Upanishads, where
-        questions of sacrifice, self, knowledge and ultimate reality become
-        increasingly explicit.
-      </p>
-      <p>
-        The history of Sanātana traditions is therefore not a frozen block from a
-        distant age. It is a conversation across generations—absorbing, debating,
-        refining and transforming ideas.
-      </p>
-    </article>
-    <article>
-      <h3>THE CHRONOLOGY QUESTION</h3>
-      <p>
-        Early Indian chronology requires care. Textual layers do not always carry
-        the same date as the surviving manuscripts, and archaeological cultures
-        cannot simply be matched to texts by resemblance alone.
-      </p>
-      <p>
-        A strong civilisational history does not fear such questions. It places
-        the evidence on the table, distinguishes traditional chronology from
-        independently datable evidence and allows the reader to understand where
-        scholarship remains contested.
-      </p>
-    </article>
-  </div>
-  <button class="outline light" data-modal="veda">OPEN THE VEDIC EVIDENCE</button>
-</section>
 
-<section class="feature-full" id="itihasa">
-  <div class="feature-photo">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ramayana%20manuscript.jpg" alt="Ramayana manuscript">
-    <span>ITIHĀSA • TEXT • MEMORY</span>
-  </div>
-  <div class="feature-copy">
-    <span class="kicker">04 / ITIHĀSA</span>
-    <h2>THE STORIES<br>THAT <span>SHAPED BHARAT</span></h2>
-    <p class="lead">
-      The Ramayana and Mahabharata are not marginal stories in the civilisational
-      memory of Bharat. They became vast traditions—recited, translated, performed,
-      sculpted, painted and interpreted across regions and centuries.
-    </p>
-    <p>
-      Rama became an enduring model through which generations explored kingship,
-      duty, exile, fidelity and moral choice. The Mahabharata became a world of
-      competing duties, political ambition, family loyalty, warfare and ethical
-      uncertainty. Within it, the Bhagavad Gita presents a profound conversation
-      about action, knowledge, devotion and duty.
-    </p>
-    <p>
-      A serious historical presentation can hold two truths together: these works
-      possess enormous civilisational and religious authority, and their textual
-      histories, layers, dates and relationship to archaeology are subjects that
-      require careful study.
-    </p>
-    <div class="pull-quote">“A civilisation remembers not only what happened. It remembers what it believes human beings should become.”</div>
-    <button class="outline" data-modal="itihasa">EXPLORE TEXT, TRADITION & EVIDENCE</button>
-  </div>
-</section>
 
-<section class="knowledge" id="knowledge">
-  <span class="kicker">05 / THE INTELLECTUAL JOURNEY</span>
-  <h2>THE QUESTIONS<br><span>BHARAT KEPT ASKING</span></h2>
-  <div class="knowledge-grid">
-    <article><b>PANINI</b><strong>LANGUAGE</strong><p>Grammar became an object of systematic analysis and a model of intellectual precision.</p></article>
-    <article><b>ĀRYABHATA</b><strong>THE SKY</strong><p>Astronomical calculation became a disciplined field of mathematical inquiry.</p></article>
-    <article><b>CHARAKA & SUSHRUTA</b><strong>HEALTH</strong><p>Medical traditions organised observations, diagnoses, treatments and surgical knowledge.</p></article>
-    <article><b>DARŚANA</b><strong>REALITY</strong><p>Indian schools debated knowledge, perception, inference, self, reality and liberation.</p></article>
-  </div>
-  <div class="knowledge-bottom">
-    <p>
-      The point is not to produce a list of claims that “India invented everything.”
-      The point is more interesting: generations of Indian thinkers developed,
-      preserved, challenged and transformed intellectual traditions across many
-      centuries.
-    </p>
-    <button class="outline" data-modal="science">OPEN KNOWLEDGE STORIES</button>
-  </div>
-</section>
-
-<section class="feature-full temple" id="temples">
-  <div class="feature-copy">
-    <span class="kicker">06 / TEMPLE CIVILISATION</span>
-    <h2>WHEN<br>STONE BECAME <span>MEMORY</span></h2>
-    <p class="lead">A temple can be architecture. It can also be ritual, music, sculpture, patronage, inscription, land, community and living memory.</p>
-    <p>
-      The Great Living Chola Temples illustrate this extraordinary convergence.
-      UNESCO describes the Brihadisvara Temple at Thanjavur as the greatest
-      achievement of Chola architects; its vimana rises nearly 60 metres, and the
-      temple includes sculpture, murals and representations connected with dance.
-    </p>
-    <p>
-      UNESCO also notes that these temples remain living places of worship and that
-      traditions established more than a thousand years ago continue daily,
-      weekly and annually.
-    </p>
-    <p>
-      This is a crucial part of the Sanātana story: the past is sometimes not merely
-      remembered—it is <b>practised</b>.
-    </p>
-    <button class="outline" data-modal="temples">SEE THE TEMPLE EVIDENCE</button>
-  </div>
-  <div class="feature-photo">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brihadisvara%20Temple%2C%20Thanjavur%20%2850073712023%29.jpg" alt="Brihadisvara Temple Thanjavur">
-    <span>BRIHADISVARA • THanjAVUR • CONSECRATED c. 1009–1010 CE</span>
-  </div>
-</section>
-
-<section class="world-story" id="world">
-  <div class="world-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ancient%20Indian%20ship%20relief.jpg" alt="Indian maritime history visual"></div>
-  <div class="world-copy">
-    <span class="kicker">07 / BHARAT AND THE WORLD</span>
-    <h2>THE CIVILISATION<br>THAT <span>CROSSED THE SEA</span></h2>
-    <p class="lead">Bharat was not an isolated civilisation waiting behind its mountains.</p>
-    <p>
-      Merchants crossed the Indian Ocean. Crafts and commodities moved between
-      ports. Scholars and religious teachers travelled. Artistic forms were
-      translated into new local traditions. Indian contacts with Southeast Asia,
-      Central Asia, the Persianate world, the Roman world and other regions form
-      part of a much larger international history.
-    </p>
-    <p>
-      This is where the story becomes global. We can place Indian developments
-      alongside events in Mesopotamia, the Mediterranean, China, Central Asia and
-      Southeast Asia—and ask not “who copied whom?” but “how did people connect,
-      adapt and create something new?”
-    </p>
-    <div class="international">
-      <span>BHARAT</span><i>↔</i><span>MESOPOTAMIA</span><i>↔</i><span>ROME</span><i>↔</i><span>CENTRAL ASIA</span><i>↔</i><span>SOUTHEAST ASIA</span>
-    </div>
-  </div>
-</section>
-
-<section class="nalanda section">
-  <div class="kicker">A WORLD OF LEARNING</div>
-  <div class="nalanda-grid">
     <div>
-      <div class="big-stat">800</div>
-      <div class="stat-caption">YEARS OF ORGANIZED KNOWLEDGE TRANSMISSION<br>AT NALANDA, ACCORDING TO UNESCO</div>
+
+      <b>
+        COLONIAL WORLD
+      </b>
+
+      <span>
+        Company power and empire
+      </span>
+
+      <em>
+        Industrial Europe • global commodity networks
+      </em>
+
     </div>
-    <article>
-      <h2>NALANDA:<br><span>WHEN LEARNING TRAVELLED</span></h2>
-      <p>
-        The archaeological site of Nalanda Mahavihara represents a monastic and
-        scholastic institution with remains dating from the 3rd century BCE to the
-        13th century CE. UNESCO describes organised transmission of knowledge there
-        over approximately 800 years and identifies its influence on later
-        institutions in South and Southeast Asia.
-      </p>
-      <p>
-        Its story gives us a wider lesson: intellectual history is also a history
-        of movement. Students travelled. Teachers travelled. Ideas travelled.
-        Texts travelled. A centre of learning became part of an international
-        intellectual network.
-      </p>
-      <button class="outline" data-modal="nalanda">EXPLORE NALANDA</button>
-    </article>
+
+
   </div>
+
 </section>
 
-<section class="conflict" id="conflict">
-  <div class="kicker">08 / WHEN THE POLITICAL WORLD CHANGED</div>
-  <h2>CONQUEST.<br><span>RESISTANCE. RENEWAL.</span></h2>
-  <p class="lead">
-    The medieval history of Bharat was not one uninterrupted empire. It was a
-    landscape of Sultanates, regional kingdoms, confederacies, frontier societies,
-    temple centres, trading cities and communities with different political goals.
-  </p>
-  <div class="conflict-grid">
-    <article>
-      <span>THE RECORD</span>
-      <h3>INVASION & CONQUEST</h3>
-      <p>Where campaigns, battles, political takeovers or temple destruction are evidenced, the story should name the rulers, places, dates and sources rather than rely on generalised slogans.</p>
-    </article>
-    <article>
-      <span>THE RESPONSE</span>
-      <h3>RESISTANCE</h3>
-      <p>Rajput polities, Mewar, Vijayanagara, Ahoms, Deccan powers, Marathas, Sikh traditions and others developed different forms of resistance, adaptation and state-building.</p>
-    </article>
-    <article>
-      <span>THE MIRROR</span>
-      <h3>OUR FAILURES</h3>
-      <p>Rivalry, political fragmentation, social exclusion and strategic mistakes also belong in the story. We study them to understand consequences, not to humiliate our ancestors.</p>
-    </article>
-  </div>
-</section>
 
-<section class="feature-full vijaya" id="vijayanagara">
-  <div class="feature-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Virupaksha%20temple%20hampi.jpg" alt="Virupaksha Temple Hampi"><span>HAMPI • VIJAYANAGARA</span></div>
-  <div class="feature-copy">
-    <span class="kicker">09 / VIJAYANAGARA</span>
-    <h2>A CITY OF<br><span>TEMPLES, MARKETS & EMPIRE</span></h2>
-    <p>
-      Walk through the surviving landscape of Hampi and the political history
-      becomes physical. Temple complexes, markets, gateways, reservoirs,
-      fortifications and monumental architecture reveal a state that invested
-      heavily in religion, commerce, administration and political power.
-    </p>
-    <p>
-      The story of Vijayanagara should include its rise, its networks of exchange,
-      relations with neighbouring powers, foreign descriptions, military
-      organisation, the Battle of Talikota and the destruction and survival of the
-      urban landscape.
-    </p>
-    <p class="large-callout">A city can fall. A civilisation can carry its memory forward.</p>
-  </div>
-</section>
 
-<section class="swarajya section" id="swarajya">
-  <span class="kicker">10 / SWARAJYA</span>
-  <h2>THE RISE OF<br><span>SHIVAJI MAHARAJ</span></h2>
-  <div class="swarajya-grid">
-    <article><b>FORTS</b><p>Strategic geography became an instrument of statecraft. Hill forts, routes and coastal positions supported a distinctive military system.</p></article>
-    <article><b>ADMINISTRATION</b><p>Swarajya was not only battlefield victory. It required revenue, appointments, correspondence, logistics and institutions.</p></article>
-    <article><b>THE NAVY</b><p>The western coast mattered. Maritime power formed part of the broader struggle over commerce and sovereignty.</p></article>
-    <article><b>THE LARGER TRANSFORMATION</b><p>The Maratha story continued beyond Shivaji Maharaj and changed the balance of power across large parts of the subcontinent.</p></article>
-  </div>
-</section>
+<!-- =========================================================
+     CHANGING MAP
+========================================================= -->
 
-<section class="colonial" id="colonial">
-  <div class="colonial-copy">
-    <span class="kicker">11 / THE COLONIAL TURN</span>
-    <h2>WHEN THE<br><span>TRADERS BECAME RULERS</span></h2>
-    <p class="lead">
-      The colonial story is not only the story of battles. It is the story of how
-      political power, taxation, trade, agriculture, industry, law, education and
-      social life were transformed.
-    </p>
-    <div class="colonial-columns">
-      <article><b>POWER</b><p>Company expansion, alliances, battles, treaties and the gradual conversion of commercial presence into territorial rule.</p></article>
-      <article><b>ECONOMY</b><p>Revenue systems, export structures, industry, agriculture and famine must be examined through records and competing economic interpretations.</p></article>
-      <article><b>PEOPLE</b><p>Peasants, craftsmen, soldiers, merchants, reformers, students and communities experienced colonial rule in very different ways.</p></article>
+<section class="map-module">
+
+
+  <div class="map-module-copy">
+
+    <div class="section-kicker">
+      THE CHANGING POLITICAL MAP
     </div>
-    <button class="outline" data-modal="colonial">OPEN COLONIAL EVIDENCE</button>
+
+
+    <h2>
+
+      FROM BHARATVARSHA<br>
+      TO <span>PRESENT-DAY INDIA</span>
+
+    </h2>
+
+
+    <p>
+
+      Civilisational geography and political sovereignty
+      were not identical. Political power changed repeatedly
+      as kingdoms expanded, contracted, disappeared or were
+      reorganised under new political systems.
+
+    </p>
+
+
+    <p>
+
+      This section will grow into a period-by-period exploration
+      of settlement networks, empires, regional kingdoms,
+      colonial territories, Partition and the Republic.
+
+    </p>
+
+
+    <button
+      class="outline-btn"
+      data-modal="map"
+    >
+      OPEN MAP METHODOLOGY
+    </button>
+
   </div>
-  <div class="colonial-visual">
-    <div class="archive-card"><b>ARCHIVE</b><strong>THE COLONIAL AGE</strong><span>Revenue records • maps • correspondence • newspapers • economic data</span></div>
+
+
+  <div class="map-module-art">
+
+    <img
+      src="../Bharat1.png"
+      alt="Bharatvarsha civilisational map"
+    >
+
   </div>
+
 </section>
 
-<section class="freedom section" id="freedom">
-  <span class="kicker">12 / THE LONG STRUGGLE FOR FREEDOM</span>
-  <h2>1947 DID NOT<br><span>HAPPEN IN ONE DAY.</span></h2>
-  <p class="lead">
-    Freedom came after generations of political, social, intellectual and military
-    struggle. The story belongs to many people and many movements.
-  </p>
-  <div class="freedom-grid">
-    <div>REVOLUTIONARIES</div><div>REFORMERS</div><div>WOMEN</div><div>SOLDIERS</div>
-    <div>TRIBAL COMMUNITIES</div><div>STUDENTS</div><div>INA</div><div>MASS MOVEMENTS</div>
+
+
+<!-- =========================================================
+     LESSONS
+========================================================= -->
+
+<section class="mirror">
+
+  <div class="section-kicker">
+    THE LESSON OF HISTORY
   </div>
+
+
+  <h2>
+
+    GLORY WITH<br>
+    <span>THE COURAGE TO LEARN</span>
+
+  </h2>
+
+
   <p>
-    A complete history must allow different streams of the freedom struggle to be
-    seen together rather than treating one narrative as the only narrative.
-  </p>
-</section>
 
-<section class="map-journey" id="map-journey">
-  <div class="map-copy">
-    <span class="kicker">13 / THE CHANGING MAP</span>
-    <h2>FROM<br><span>BHARATVARSHA</span><br>TO PRESENT INDIA</h2>
-    <p>
-      The civilisational geography remembered in texts and traditions and the
-      political boundaries controlled by particular kingdoms were never exactly
-      the same thing. The political map changed repeatedly.
-    </p>
-    <p>
-      Empires expanded and contracted. Regional states rose. New powers arrived.
-      Colonial rule imposed new administrative structures. Partition in 1947
-      created a new international frontier. The Republic then reorganised its own
-      internal states.
-    </p>
-    <div class="map-flow"><b>BHARATVARSHA</b><i>→</i><span>KINGDOMS</span><i>→</i><span>EMPIRES</span><i>→</i><span>COLONIAL RULE</span><i>→</i><span>1947</span><i>→</i><strong>REPUBLIC</strong></div>
-    <button class="outline" data-modal="map">OPEN THE CHANGING-MAP STORY</button>
+    A civilisational history should celebrate what was
+    built and transmitted, while also examining internal
+    rivalry, social exclusion, strategic mistakes and
+    failures of unity where historical evidence supports
+    such analysis.
+
+  </p>
+
+
+  <div class="lesson-grid">
+
+
+    <article>
+
+      <b>
+        UNITY
+      </b>
+
+      <span>
+        Many traditions can share a wider civilisational belonging.
+      </span>
+
+    </article>
+
+
+    <article>
+
+      <b>
+        DIGNITY
+      </b>
+
+      <span>
+        Social cohesion becomes stronger when exclusion is challenged.
+      </span>
+
+    </article>
+
+
+    <article>
+
+      <b>
+        PREPAREDNESS
+      </b>
+
+      <span>
+        History teaches the cost of political and strategic complacency.
+      </span>
+
+    </article>
+
+
+    <article>
+
+      <b>
+        RENEWAL
+      </b>
+
+      <span>
+        Preservation and reform can exist together.
+      </span>
+
+    </article>
+
+
   </div>
-  <div class="map-art"><img src="../Bharat1.png" alt="Bharatvarsha civilisational map"></div>
+
 </section>
 
-<section class="mirror section" id="mirror">
-  <span class="kicker">14 / OUR OWN MIRROR</span>
-  <h2>GLORY WITH<br><span>COURAGE TO LEARN</span></h2>
-  <p class="lead">
-    Admiration for a civilisation should not require blindness to its failures.
-    Criticism should not require contempt for the people who came before us.
-  </p>
-  <div class="mirror-grid">
-    <article><b>DISUNITY</b><p>When rival interests prevented cooperation, what did that cost?</p><strong>LESSON: UNITY WITHOUT UNIFORMITY.</strong></article>
-    <article><b>SOCIAL EXCLUSION</b><p>Where did discrimination weaken solidarity, and who challenged it?</p><strong>LESSON: DIGNITY STRENGTHENS CIVILISATION.</strong></article>
-    <article><b>STRATEGIC FAILURE</b><p>What can military and political history teach about preparedness?</p><strong>LESSON: LEARN BEFORE HISTORY REPEATS.</strong></article>
-    <article><b>RENEWAL</b><p>How did Indian society generate movements of reform from within?</p><strong>LESSON: PRESERVE, REFORM, RENEW.</strong></article>
+
+
+<!-- =========================================================
+     CLOSING
+========================================================= -->
+
+<section class="end-note">
+
+  <div class="ghost">
+    BHARAT
   </div>
+
+
+  <div class="section-kicker">
+    THE JOURNEY CONTINUES
+  </div>
+
+
+  <h2>
+
+    LIVED. EVOLVED.<br>
+    <span>PRESERVED. RENEWED.</span>
+
+  </h2>
+
+
+  <p>
+
+    The next generation should inherit not only a map,
+    but the stories, evidence, questions and responsibilities
+    that come with it.
+
+  </p>
+
 </section>
 
-<section class="ending">
-  <div class="ghost">BHARAT</div>
-  <span class="kicker">THE FINAL QUESTION</span>
-  <h2>THE STORY<br><span>IS NOT OVER.</span></h2>
-  <p>
-    Kingdoms disappeared. Borders moved. Cities were buried. Temples were built,
-    damaged, restored and worshipped in again. Languages evolved. Ideas travelled.
-    Generations changed.
-  </p>
-  <p>
-    Yet the conversation continued.
-  </p>
-  <blockquote>
-    <span>Many kingdoms. Many languages. Many philosophies. Many centuries.</span><br>
-    <strong>One extraordinary civilisational memory.</strong><br>
-    <em>One Sanātana way of life.</em>
-  </blockquote>
-</section>
 
 </main>
 
+
+
 <footer>
-  <b>EK RAHENGE • TO NEK RAHENGE</b>
-  <span>History • Evidence • Civilisation • Haindaveeyam Foundation</span>
+
+  <b>
+    EK RAHENGE • TO NEK RAHENGE
+  </b>
+
+  <span>
+    History • Evidence • Civilisation • Haindaveeyam Foundation
+  </span>
+
 </footer>
 
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="close" aria-label="Close">×</button>
-    <div class="kicker" id="modalKicker">EVIDENCE</div>
-    <h2 id="modalTitle"></h2>
-    <div id="modalBody"></div>
+
+
+<!-- =========================================================
+     FULL SCREEN ARTICLE READER
+========================================================= -->
+
+<div
+  class="reader"
+  id="reader"
+  aria-hidden="true"
+>
+
+
+  <div class="reader-panel">
+
+
+    <button
+      class="reader-close"
+      id="readerClose"
+      aria-label="Close article"
+    >
+      ×
+    </button>
+
+
+    <div class="reader-hero">
+
+
+      <img
+        id="readerImage"
+        alt=""
+      >
+
+
+      <div class="reader-hero-text">
+
+
+        <div
+          class="kicker"
+          id="readerKicker"
+        ></div>
+
+
+        <h2
+          id="readerTitle"
+        ></h2>
+
+
+        <p
+          id="readerDeck"
+        ></p>
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="reader-body">
+
+
+      <aside class="reader-nav">
+
+        <span>
+          IN THIS STORY
+        </span>
+
+
+        <div
+          id="readerToc"
+        ></div>
+
+      </aside>
+
+
+
+      <article
+        id="readerContent"
+        class="reader-content"
+      ></article>
+
+
+    </div>
+
+
   </div>
+
 </div>
 
-<script>
-const modalData={
-bhimbetka:["PRIMARY EVIDENCE • BHIMBETKA","THE FIRST STORIES ON STONE",`
-<p>UNESCO describes Bhimbetka as five groups of natural rock shelters in the foothills of the Vindhyan Mountains, with paintings appearing to begin in the Mesolithic period and continue through the historical period.</p>
-<p>The site is valuable precisely because it lets us study human activity through archaeology and visual evidence rather than royal chronicles. The archaeological record should be read carefully: the paintings reveal aspects of human representation and activity, but their exact meanings and the complete belief systems of their makers cannot simply be reconstructed from the images alone.</p>
-<p><strong>Historical principle:</strong> evidence can be magnificent even when some questions remain unanswered.</p>
-<p class="source-note">Source anchor: UNESCO World Heritage Centre, Rock Shelters of Bhimbetka.</p>`],
-dholavira:["PRIMARY EVIDENCE • DHOLAVIRA","A CITY ENGINEERED AROUND WATER",`
-<p>UNESCO dates Dholavira broadly to c. 3000–1500 BCE and describes a fortified city and cemetery, planned streets and residential areas, reservoirs, drainage, workshops and evidence of craft production.</p>
-<div class="modal-facts"><b>1,500+ YEARS</b><b>1,000+ HARAPPAN SITES KNOWN</b><b>MESOPOTAMIA & OMAN TRADE LINKS</b></div>
-<p>The archaeological evidence includes beads and objects made from copper, shell, stone, semi-precious stones, terracotta, gold and ivory. The location on Khadir Island appears to have been advantageous for access to raw materials and wider exchange networks.</p>
-<p class="source-note">Source anchor: UNESCO World Heritage Centre, Dholavira: a Harappan City.</p>`],
-veda:["TEXT • ORAL TRADITION","THE VEDIC WORLD",`
-<p>The Vedic tradition presents a different kind of archive: knowledge transmitted through disciplined oral practice. UNESCO recognises Vedic chanting as intangible cultural heritage and highlights the sophisticated recitation techniques through which the texts were preserved.</p>
-<p>We will examine Vedic texts, ritual, language, geography and philosophical development, while distinguishing textual tradition from archaeological proof and acknowledging chronology debates.</p>
-<p class="source-note">Source anchor: UNESCO Intangible Cultural Heritage, Tradition of Vedic chanting.</p>`],
-itihasa:["ITIHĀSA • CIVILISATIONAL MEMORY","RAMAYANA AND MAHABHARATA",`
-<p>The Ramayana and Mahabharata became extraordinarily influential across South and Southeast Asia. Their textual traditions contain layers, recensions and regional forms. They are central to Hindu civilisational memory and have shaped ethics, literature, performance, art and sacred geography.</p>
-<p>This project will treat them with respect while distinguishing four questions: what the tradition says, what the surviving texts contain, what archaeology can test independently, and how the traditions influenced societies across centuries.</p>`],
-science:["KNOWLEDGE TRADITIONS","THE INTELLECTUAL JOURNEY",`
-<p>Indian intellectual history cannot be reduced to a trophy list. Its deeper story is the sustained development of methods and questions in grammar, mathematics, astronomy, medicine, logic and philosophy.</p>
-<p>Future article panels will examine individual figures and texts in depth, with dates, surviving works, transmission histories and scholarly debate.</p>`],
-temples:["TEMPLE CIVILISATION","THE TEMPLE AS LIVING MEMORY",`
-<p>UNESCO records the Brihadisvara Temple at Thanjavur as the greatest achievement of Chola architects. The vimana rises to 59.82 metres; the temple contains extensive sculpture and mural painting, and 81 of the 108 karanas associated with Bharatanatyam are carved around the sanctum.</p>
-<p>The Great Living Chola Temples remain living temples. UNESCO notes that worship traditions established more than a thousand years ago continue daily, weekly and annually.</p>
-<p class="source-note">Source anchor: UNESCO World Heritage Centre, Great Living Chola Temples.</p>`],
-nalanda:["WORLD OF LEARNING","NALANDA AND INTERNATIONAL KNOWLEDGE",`
-<p>UNESCO describes Nalanda Mahavihara as an archaeological site containing remains from the 3rd century BCE to the 13th century CE. It identifies organised transmission of knowledge over approximately 800 years and notes architectural and educational influence on later institutions in South and Southeast Asia.</p>
-<p>Nalanda lets us present Bharat as a participant in a larger Asian intellectual network, where students, teachers, ideas and texts moved across regions.</p>
-<p class="source-note">Source anchor: UNESCO World Heritage Centre, Archaeological Site of Nalanda Mahavihara.</p>`],
-map:["HISTORICAL GEOGRAPHY","THE CHANGING MAP OF BHARAT",`
-<p>The map story will deliberately distinguish civilisational geography from political sovereignty. Ancient and medieval kingdoms controlled particular territories for particular periods. Civilisational traditions could extend across political frontiers.</p>
-<p>The production version will use period-specific maps rather than putting modern state borders onto ancient history.</p>`],
-colonial:["COLONIAL HISTORY","WHEN COMMERCE BECAME EMPIRE",`
-<p>The colonial article will combine political, economic and social history. It will examine European commerce, Company expansion, revenue systems, industry, agriculture, famine, education, law and Indian responses.</p>
-<p>Where historians disagree—particularly on large estimates of economic extraction—we will show the calculation, assumptions and competing interpretations rather than presenting one figure as unquestionable.</p>`]
-};
-const modal=document.getElementById("modal");
-document.querySelectorAll("[data-modal]").forEach(btn=>btn.addEventListener("click",()=>{
- const d=modalData[btn.dataset.modal]; if(!d)return;
- document.getElementById("modalKicker").textContent=d[0];
- document.getElementById("modalTitle").textContent=d[1];
- document.getElementById("modalBody").innerHTML=d[2];
- modal.classList.add("open"); document.body.classList.add("locked");
-}));
-function closeModal(){modal.classList.remove("open");document.body.classList.remove("locked")}
-document.querySelector(".close").onclick=closeModal;
-modal.onclick=e=>{if(e.target===modal)closeModal()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
-</script>
+
+
+<!-- =========================================================
+     EVIDENCE MODAL
+========================================================= -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+
+  <div class="modal-box">
+
+
+    <button
+      class="modal-close"
+      id="modalClose"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+
+    <div
+      class="kicker"
+      id="modalKicker"
+    >
+      EVIDENCE
+    </div>
+
+
+    <h2
+      id="modalTitle"
+    ></h2>
+
+
+    <div
+      id="modalBody"
+    ></div>
+
+
+  </div>
+
+</div>
+
+
+
+<script src="history.js"></script>
+
 </body>
 </html>
