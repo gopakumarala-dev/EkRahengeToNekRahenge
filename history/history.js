@@ -1,1731 +1,1246 @@
 /* =========================================================
-   BHARAT HISTORY — DYNAMIC HISTORY ENGINE
-========================================================= */
-
-const stories = [
-
-  /* =======================================================
-     01 — DEEP ANTIQUITY
-  ======================================================= */
-
-  {
-    id: "deep-antiquity",
-    era: "prehistory",
-    category: ["ancient"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20paintings%20at%20bhimbetka%20rock%20shelter.jpg",
-
-    meta:
-      "DEEP ANTIQUITY • BHIMBETKA • EARLY SETTLEMENTS",
-
-    title:
-      "Before There Were Kingdoms",
-
-    deck:
-      "The story begins before dynasties and empires — with human beings learning to live with the land of Bharat.",
-
-    summary:
-      "From prehistoric rock shelters and early tools to agriculture, settlement and the threshold of urban civilisation.",
-
-    sections: [
-
-      [
-        "THE LAND BEFORE THE KINGDOMS",
-
-        `
-        <p class="drop">
-        Long before a king was crowned in Pataliputra, long before temple towers
-        rose above the plains, and long before royal inscriptions preserved the
-        names of rulers, human beings were already living across the landscapes
-        of Bharat.
-        </p>
-
-        <p>
-        They lived in a world without modern roads, electricity or written
-        chronicles. Forests, rivers, rocky uplands, grasslands and seasonal
-        water shaped the rhythm of life.
-        </p>
-
-        <p>
-        Survival demanded knowledge. People had to understand where water could
-        be found, which plants could be eaten, where animals moved, how stone
-        could be shaped and how fire could be controlled.
-        </p>
-
-        <p>
-        These people left few names behind. Yet their lives were not without
-        history. Their history survives in stone tools, occupation deposits,
-        hearths, animal remains, shelters, burials and paintings.
-        </p>
-
-        <p>
-        The first lesson of Bharat's history is therefore simple:
-        <strong>
-        the story of civilisation begins with its people.
-        </strong>
-        </p>
-        `
-      ],
-
-
-      [
-        "BHIMBETKA — WHEN HUMAN HANDS LEFT A MEMORY",
-
-        `
-        <p>
-        In the Vindhyan landscape of central India, sandstone formations created
-        natural shelters that protected generations of human beings.
-        </p>
-
-        <p>
-        At Bhimbetka, these shelters preserve paintings spanning prehistoric
-        and later historical periods. UNESCO recognises the site as an
-        exceptional record of prehistoric human occupation.
-        </p>
-
-        <p>
-        The paintings show human figures and animals and contain scenes of
-        movement and collective activity.
-        </p>
-
-        <p>
-        But the historical discipline here is just as important as the
-        archaeological discovery. We can see a painted animal. We can see
-        human figures. We can recognise visual expression.
-        </p>
-
-        <p>
-        What we cannot automatically do is reconstruct an entire religious,
-        political or social system from one painting.
-        </p>
-
-        <div class="evidence">
-
-          <div>
-            <b>WHAT SURVIVES</b>
-            <span>
-            Rock shelters, paintings, tools and archaeological deposits.
-            </span>
-          </div>
-
-          <div>
-            <b>WHAT WE CAN STUDY</b>
-            <span>
-            Human activity, environment, technology and visual traditions.
-            </span>
-          </div>
-
-          <div>
-            <b>WHAT REMAINS OPEN</b>
-            <span>
-            Exact meaning and precise dating of individual paintings.
-            </span>
-          </div>
-
-        </div>
-        `
-      ],
-
-
-      [
-        "THE DISCOVERY OF BHIMBETKA",
-
-        `
-        <p>
-        The modern archaeological story of Bhimbetka is itself fascinating.
-        Archaeologist V. S. Wakankar recognised the importance of the rock
-        shelters in 1957.
-        </p>
-
-        <p>
-        Later surveys and excavations revealed a much deeper archaeological
-        sequence. The importance of the site lies not simply in one spectacular
-        painting but in evidence showing repeated human use of the landscape
-        across very long periods.
-        </p>
-
-        <p>
-        The landscape was visited, occupied and revisited. The same geological
-        formations could become shelter, workplace, meeting place and canvas
-        for different generations.
-        </p>
-
-        <p>
-        This gives us an important idea for the whole History project:
-        civilisation is not created in a single generation.
-        It accumulates.
-        </p>
-        `
-      ],
-
-
-      [
-        "WHAT DID A PREHISTORIC FAMILY ACTUALLY DO?",
-
-        `
-        <p>
-        Archaeology rarely gives us a diary. Instead it gives fragments from
-        which we reconstruct a plausible human life.
-        </p>
-
-        <p>
-        A hearth may tell us about the control of fire and food preparation.
-        Stone tools reveal technological choices. Animal remains can provide
-        clues about hunting, food processing and environment.
-        </p>
-
-        <p>
-        Imagine a family moving through the landscape with knowledge accumulated
-        over generations.
-        </p>
-
-        <p>
-        Someone knows where water remains after the rains.
-        Someone knows which plants are useful.
-        Someone knows how to shape a stone edge.
-        Children learn by watching, listening, repeating and remembering.
-        </p>
-
-        <p>
-        This is an early form of civilisation:
-        <strong>
-        knowledge becoming inheritance.
-        </strong>
-        </p>
-        `
-      ],
-
-
-      [
-        "FROM MOVEMENT TO SETTLEMENT",
-
-        `
-        <p>
-        The next great transformation did not happen on one particular day.
-        In different regions, communities gradually changed their relationship
-        with plants, animals and place.
-        </p>
-
-        <p>
-        Cultivation became increasingly important in some regions.
-        Animals were domesticated. Pottery and storage changed how resources
-        could be managed.
-        </p>
-
-        <p>
-        Some communities became more permanent.
-        Population patterns changed.
-        New forms of labour and cooperation emerged.
-        </p>
-
-        <p>
-        The transformation was therefore not one sudden revolution.
-        It was a long accumulation of knowledge.
-        </p>
-        `
-      ],
-
-
-      [
-        "MEHRGARH AND THE LONG ROAD TO FARMING",
-
-        `
-        <p>
-        The wider northwest South Asian story provides another important
-        archaeological reference point at Mehrgarh.
-        </p>
-
-        <p>
-        Older popular accounts sometimes assigned extremely early dates to
-        the beginning of settled life at Mehrgarh. Recent radiocarbon research
-        has produced later estimates for Period I, with Bayesian modelling
-        favouring a beginning around the late sixth or early fifth millennium
-        BCE, with substantial uncertainty.
-        </p>
-
-        <p>
-        This is exactly why the History of Bharat should be based on evidence
-        rather than on impressive-sounding numbers.
-        </p>
-
-        <p>
-        When better evidence changes a date, we should change the story.
-        That does not weaken the civilisation. It strengthens the credibility
-        of the historical reconstruction.
-        </p>
-        `
-      ],
-
-
-      [
-        "WHEN VILLAGES BECAME COMPLEX SOCIETIES",
-
-        `
-        <p>
-        As settlements became more permanent, entirely new questions appeared.
-        </p>
-
-        <p>
-        Who stores food?
-        Who makes tools?
-        Who builds houses?
-        Who manages water?
-        Who organises exchange?
-        Who protects the settlement?
-        How are skills taught?
-        </p>
-
-        <p>
-        These questions reveal the beginning of social complexity.
-        Specialists appear.
-        Exchange networks widen.
-        Architecture becomes more deliberate.
-        Collective labour becomes increasingly important.
-        </p>
-
-        <p>
-        The road from village to city is therefore not simply a story of
-        larger buildings.
-        </p>
-
-        <p>
-        It is a story of
-        <strong>
-        organisation, labour, memory, cooperation and institutions.
-        </strong>
-        </p>
-
-        <div class="lesson-box">
-
-          <b>THE NEXT CHAPTER</b>
-
-          <strong>
-          The first great urban world of Bharat — Harappa, Mohenjo-daro,
-          Dholavira, Lothal, Kalibangan, Rakhigarhi and the wider Harappan
-          civilisation.
-          </strong>
-
-        </div>
-        `
-      ],
-
-
-      [
-        "BHARAT IN THE EARLY WORLD",
-
-        `
-        <p>
-        The deep antiquity of Bharat belongs inside world history.
-        Human communities were developing in Africa, western Asia and Europe.
-        Agriculture emerged through complex processes in different regions.
-        Later, early cities arose in Mesopotamia, Egypt and the Indus region.
-        </p>
-
-        <p>
-        Comparison allows us to see both connections and differences.
-        Bharat was not an isolated appendix to a history occurring elsewhere.
-        Its landscapes produced their own adaptations, technologies and
-        communities.
-        </p>
-
-        <p>
-        At the same time, most ancient people left no monument at all.
-        The majority of human lives disappear without a trace.
-        </p>
-
-        <p>
-        That is why the apparently ordinary fragments matter.
-        A stone tool. A hearth. A shelter. A painted wall.
-        </p>
-        `
-      ],
-
-
-      [
-        "WHAT THIS CHAPTER TEACHES US",
-
-        `
-        <div class="evidence">
-
-          <div>
-            <b>PEOPLE</b>
-            <span>
-            Human beings lived and adapted across Bharat long before states.
-            </span>
-          </div>
-
-          <div>
-            <b>MEMORY</b>
-            <span>
-            Material remains preserve fragments of otherwise lost lives.
-            </span>
-          </div>
-
-          <div>
-            <b>CHANGE</b>
-            <span>
-            Settlement, agriculture and craft gradually prepared the way
-            for urban civilisation.
-            </span>
-          </div>
-
-        </div>
-
-        <p>
-        The first chapter therefore ends not with a ruler, but with a transition.
-        Human communities increasingly began shaping permanent places within
-        the landscape.
-        </p>
-
-        <div class="lesson-box">
-
-          <b>LESSON FOR OUR GENERATION</b>
-
-          <strong>
-          Civilisation begins when knowledge becomes inheritance —
-          when one generation leaves something for the next.
-          </strong>
-
-        </div>
-        `
-      ],
-
-
-      [
-        "SOURCES & FURTHER READING",
-
-        `
-        <p class="source">
-        UNESCO World Heritage Centre, Rock Shelters of Bhimbetka.
-        Archaeological Survey of India materials on prehistoric sites.
-        Recent radiocarbon research on Mehrgarh chronology.
-        The production version should retain exact source references,
-        excavation reports and image licences.
-        </p>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     02 — HARAPPAN
-  ======================================================= */
-
-  {
-    id: "harappan",
-    era: "harappan",
-    category: ["ancient"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Dholavira%20archaeological%20site.jpg",
-
-    meta:
-      "BRONZE AGE BHARAT • HARAPPAN WORLD • c. 3000–1500 BCE",
-
-    title:
-      "When the Cities Rose",
-
-    deck:
-      "Harappa, Dholavira and the wider urban world of the third and second millennia BCE.",
-
-    summary:
-      "Planned cities, reservoirs, craft production, long-distance exchange and an undeciphered script open one of the great chapters of early urban history.",
-
-    sections: [
-
-      [
-        "THE CITY IN THE DRY LAND",
-
-        `
-        <p class="drop">
-        Imagine approaching a city where water cannot be taken for granted.
-        Yet people have chosen to build here.
-        </p>
-
-        <p>
-        Dholavira, on Khadir Island in Gujarat, gives us an extraordinary
-        archaeological window into the Harappan world.
-        </p>
-
-        <p>
-        UNESCO dates its occupation broadly to approximately 3000–1500 BCE
-        and describes a fortified urban settlement with planned streets,
-        residential sectors, workshops, a cemetery and sophisticated water
-        management.
-        </p>
-        `
-      ],
-
-
-      [
-        "WATER AS CIVILISATIONAL KNOWLEDGE",
-
-        `
-        <p>
-        In Dholavira, water was not simply discovered.
-        It was captured, stored and managed.
-        </p>
-
-        <p>
-        In an arid environment, reservoirs represent more than engineering.
-        They represent long-term planning, labour and institutional continuity.
-        </p>
-
-        <p>
-        Someone had to build them.
-        Someone had to maintain them.
-        Someone had to teach the next generation how they worked.
-        </p>
-        `
-      ],
-
-
-      [
-        "CRAFT AND TRADE",
-
-        `
-        <p>
-        Archaeological evidence includes objects and craft activity involving
-        copper, shell, stone, terracotta, gold, ivory and semi-precious materials.
-        </p>
-
-        <p>
-        Evidence of exchange connects Dholavira with other Harappan centres
-        and with regions associated with Mesopotamia and the Oman peninsula.
-        </p>
-
-        <p>
-        This means that the Harappan world belonged to a much wider Bronze Age
-        environment.
-        </p>
-        `
-      ],
-
-
-      [
-        "THE SILENT SCRIPT",
-
-        `
-        <p>
-        Harappan symbols survive on seals and other objects.
-        Yet the script remains undeciphered.
-        </p>
-
-        <p>
-        We can catalogue the signs.
-        We can compare their contexts.
-        We can study where they appear.
-        </p>
-
-        <p>
-        But we cannot yet read them with the confidence possible for much
-        later inscriptions.
-        </p>
-
-        <p>
-        This produces one of history's great paradoxes:
-        <strong>
-        the ruins speak, but we cannot yet hear their written voice.
-        </strong>
-        </p>
-        `
-      ],
-
-
-      [
-        "THE PEOPLE BEHIND THE RUINS",
-
-        `
-        <p>
-        A bead workshop means somebody learned the craft.
-        A reservoir means somebody organised labour.
-        A cemetery means families had ways of remembering the dead.
-        </p>
-
-        <p>
-        When we put people back inside archaeology, the Harappan story stops
-        being a catalogue of objects.
-        </p>
-
-        <p>
-        It becomes the story of communities making homes, raising children,
-        producing goods, travelling, exchanging and living across generations.
-        </p>
-
-        <div class="lesson-box">
-          <b>LESSON</b>
-          <strong>
-          A civilisation is not its ruins alone. It is the people whose lives
-          produced those ruins.
-          </strong>
-        </div>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     03 — VEDIC
-  ======================================================= */
-
-  {
-    id: "vedic",
-    era: "vedic",
-    category: ["dharma"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Devanagari%20Rigveda%20manuscript.jpg",
-
-    meta:
-      "VEDIC WORLD • ŚRUTI • DHARMA",
-
-    title:
-      "When Knowledge Was Carried by Memory",
-
-    deck:
-      "The Vedic tradition and the remarkable discipline through which sacred knowledge was transmitted.",
-
-    summary:
-      "The Vedic story opens questions about oral transmission, ritual, Dharma, philosophy, language and chronology.",
-
-    sections: [
-
-      [
-        "THE WORD BEFORE THE BOOK",
-
-        `
-        <p class="drop">
-        Imagine a body of sacred knowledge that must survive without depending
-        upon a manuscript.
-        </p>
-
-        <p>
-        The student sits with the teacher.
-        The sound is repeated.
-        Accent matters.
-        Sequence matters.
-        Pronunciation matters.
-        </p>
-
-        <p>
-        The Vedic tradition provides a remarkable example of disciplined
-        oral transmission.
-        UNESCO recognises Vedic chanting as intangible cultural heritage.
-        </p>
-        `
-      ],
-
-
-      [
-        "ŚRUTI AND TRANSMISSION",
-
-        `
-        <p>
-        The concept of <em>śruti</em>, “that which is heard”, belongs to a
-        distinctive conception of sacred knowledge.
-        </p>
-
-        <p>
-        The Vedic corpus became part of traditions in which careful oral
-        transmission was itself a discipline.
-        </p>
-
-        <p>
-        This also reminds us that the date of a surviving manuscript is not
-        necessarily the date of the tradition it preserves.
-        </p>
-        `
-      ],
-
-
-      [
-        "FROM RITUAL TO PHILOSOPHICAL QUESTION",
-
-        `
-        <p>
-        The Vedic world cannot be reduced to ritual alone.
-        </p>
-
-        <p>
-        Through the wider textual traditions associated with Brahmanas,
-        Aranyakas and Upanishads, questions of sacrifice, order, self,
-        knowledge and ultimate reality became increasingly prominent.
-        </p>
-
-        <p>
-        This is the beginning of a much larger intellectual journey.
-        </p>
-        `
-      ],
-
-
-      [
-        "DHARMA AS A LIVED IDEA",
-
-        `
-        <p>
-        Across later Hindu traditions, <em>Dharma</em> becomes a powerful
-        vocabulary for duty, order, conduct and the right way of living.
-        </p>
-
-        <p>
-        Its meanings vary by text and context. Yet the idea becomes deeply
-        woven into discussions of family, society, kingship, education,
-        ritual and ethical responsibility.
-        </p>
-
-        <div class="lesson-box">
-          <b>LESSON</b>
-          <strong>
-          A living civilisation does not merely preserve knowledge.
-          It teaches people how knowledge should shape life.
-          </strong>
-        </div>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     04 — ITIHASA
-  ======================================================= */
-
-  {
-    id: "itihasa",
-    era: "vedic",
-    category: ["dharma"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Ramayana%20manuscript.jpg",
-
-    meta:
-      "ITIHĀSA • RAMAYANA • MAHABHARATA",
-
-    title:
-      "The Stories That Shaped Bharat",
-
-    deck:
-      "Ramayana, Mahabharata and Bhagavad Gita as civilisational memory.",
-
-    summary:
-      "The epics shaped ideas of Dharma, kingship, devotion, moral struggle, sacred geography and cultural identity.",
-
-    sections: [
-
-      [
-        "A DIFFERENT KIND OF MEMORY",
-
-        `
-        <p class="drop">
-        A civilisation remembers through monuments and inscriptions,
-        but also through stories.
-        </p>
-
-        <p>
-        The Ramayana and Mahabharata became vast traditions transmitted
-        through recitation, manuscripts, performance, sculpture, painting
-        and regional languages.
-        </p>
-        `
-      ],
-
-
-      [
-        "RAMA AND DHARMA",
-
-        `
-        <p>
-        The Ramayana places kingship, duty, exile, family, loyalty and
-        moral choice at the centre of an enduring narrative.
-        </p>
-
-        <p>
-        Its many regional forms demonstrate that continuity did not require
-        every community to tell the story in exactly the same words.
-        </p>
-        `
-      ],
-
-
-      [
-        "THE MAHABHARATA",
-
-        `
-        <p>
-        The Mahabharata creates a world in which Dharma becomes difficult
-        precisely because duties collide.
-        </p>
-
-        <p>
-        Family loyalty, political ambition, justice, violence, friendship
-        and responsibility pull characters in different directions.
-        </p>
-
-        <p>
-        Within this larger epic, the Bhagavad Gita provides a concentrated
-        philosophical dialogue on action, knowledge, devotion and duty.
-        </p>
-        `
-      ],
-
-
-      [
-        "TEXT, TRADITION AND HISTORY",
-
-        `
-        <p>
-        A serious history distinguishes traditional memory from archaeological
-        demonstration.
-        </p>
-
-        <p>
-        That distinction does not diminish the epics.
-        It allows their textual histories, cultural influence and sacred
-        geography to be studied seriously.
-        </p>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     05 — KNOWLEDGE
-  ======================================================= */
-
-  {
-    id: "knowledge",
-    era: "classical",
-    category: ["knowledge"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Nalanda%20Ruins.jpg",
-
-    meta:
-      "JÑĀNA • MATHEMATICS • ASTRONOMY • MEDICINE",
-
-    title:
-      "When Questions Became Disciplines",
-
-    deck:
-      "Grammar, mathematics, astronomy, medicine, logic and philosophy in the intellectual history of Bharat.",
-
-    summary:
-      "The deeper story is not a trophy list of inventions. It is the development of methods, texts and institutions of learning.",
-
-    sections: [
-
-      [
-        "PANINI AND LANGUAGE",
-
-        `
-        <p class="drop">
-        Language is something every society uses.
-        What happens when language itself becomes an object of systematic analysis?
-        </p>
-
-        <p>
-        The grammatical tradition associated with Panini became one of the
-        major monuments of Indian intellectual history.
-        </p>
-        `
-      ],
-
-
-      [
-        "THE SKY AND NUMBER",
-
-        `
-        <p>
-        Aryabhata and later Indian astronomers worked within traditions that
-        treated celestial phenomena as subjects of mathematical calculation.
-        </p>
-
-        <p>
-        Their work belongs to a wider global history of astronomy, while also
-        displaying distinctive developments within Indian mathematics and astronomy.
-        </p>
-        `
-      ],
-
-
-      [
-        "MEDICINE",
-
-        `
-        <p>
-        Texts associated with Charaka and Sushruta became important components
-        of Indian medical history, discussing diagnosis, treatment, surgery and
-        professional practice.
-        </p>
-
-        <p>
-        These traditions should be studied through their actual texts and
-        historical contexts rather than turned into unlimited modern claims.
-        </p>
-        `
-      ],
-
-
-      [
-        "THE CIVILISATION OF ARGUMENT",
-
-        `
-        <p>
-        Indian philosophical traditions included disagreement.
-        Different schools debated perception, inference, language, reality,
-        self and liberation.
-        </p>
-
-        <p>
-        This internal debate is one of the great strengths of the intellectual
-        tradition.
-        </p>
-
-        <div class="lesson-box">
-          <b>LESSON</b>
-          <strong>
-          A civilisation becomes intellectually powerful when it permits
-          knowledge to be questioned, tested and refined.
-          </strong>
-        </div>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     06 — TEMPLES
-  ======================================================= */
-
-  {
-    id: "temples",
-    era: "classical",
-    category: ["temples"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Brihadisvara%20Temple%2C%20Thanjavur%20%2850073712023%29.jpg",
-
-    meta:
-      "TEMPLE CIVILISATION • CHOLA • c. 1009–1010 CE",
-
-    title:
-      "When Stone Became Living Memory",
-
-    deck:
-      "Temple architecture as sacred space, art, inscription, patronage, community and living practice.",
-
-    summary:
-      "The temple connected worship with sculpture, architecture, music, ritual, institutions and collective memory.",
-
-    sections: [
-
-      [
-        "THE TEMPLE WAS NEVER ONLY STONE",
-
-        `
-        <p class="drop">
-        Stand before Brihadisvara at Thanjavur and the scale itself changes
-        the way the past is understood.
-        </p>
-
-        <p>
-        UNESCO recognises the Great Living Chola Temples for their exceptional
-        architectural, sculptural, painting and bronze-casting achievements.
-        </p>
-
-        <p>
-        Brihadisvara was consecrated around 1009–1010 CE and its vimana rises
-        nearly 60 metres.
-        </p>
-        `
-      ],
-
-
-      [
-        "INSCRIPTION AS MEMORY",
-
-        `
-        <p>
-        Temple inscriptions can record donors, endowments, land, administration,
-        services and festivals.
-        </p>
-
-        <p>
-        Architecture therefore becomes an entry point into social and
-        institutional history.
-        </p>
-        `
-      ],
-
-
-      [
-        "A LIVING TRADITION",
-
-        `
-        <p>
-        The Great Living Chola Temples remain living places of worship.
-        UNESCO records continuity of worship traditions established more than
-        a thousand years ago.
-        </p>
-
-        <p>
-        Here the Sanātana story acquires a powerful historical dimension:
-        the past is not simply displayed.
-        <strong>It is practised.</strong>
-        </p>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     07 — WORLD
-  ======================================================= */
-
-  {
-    id: "world",
-    era: "classical",
-    category: ["world"],
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Mahabalipuram.jpg",
-
-    meta:
-      "BHARAT AND THE WORLD • MARITIME HISTORY",
-
-    title:
-      "When Bharat Crossed the Ocean",
-
-    deck:
-      "Merchants, pilgrims, scholars and cultural traditions connected Bharat with the wider Indian Ocean world.",
-
-    summary:
-      "Bharat participated in long-distance exchange while its cultural traditions travelled and were transformed abroad.",
-
-    sections: [
-
-      [
-        "THE OCEAN WAS A HIGHWAY",
-
-        `
-        <p class="drop">
-        For coastal communities, the sea was not simply an edge.
-        It was a route.
-        </p>
-
-        <p>
-        Goods, people and ideas moved across the Arabian Sea and Bay of Bengal.
-        </p>
-        `
-      ],
-
-
-      [
-        "TRADE AND CULTURAL EXCHANGE",
-
-        `
-        <p>
-        Merchants were not the only travellers.
-        Religious teachers, scholars, artisans and pilgrims travelled too.
-        </p>
-
-        <p>
-        Indian scripts, Sanskritic ideas, Hindu and Buddhist traditions and
-        artistic forms became part of the cultural histories of many Asian
-        societies.
-        </p>
-        `
-      ],
-
-
-      [
-        "NALANDA",
-
-        `
-        <p>
-        UNESCO describes Nalanda Mahavihara as a major monastic and scholastic
-        institution whose archaeological history stretches from the 3rd century
-        BCE to the 13th century CE, with roughly eight centuries of organised
-        knowledge transmission.
-        </p>
-        `
-      ]
-
-    ]
-  },
-
-
-  /* =======================================================
-     08 — CHANGING MAP
-  ======================================================= */
-
-  {
-    id: "map",
-    era: "modern",
-    category: ["modern"],
-
-    image:
-      "../Bharat-map-clean.png",
-
-    meta:
-      "HISTORICAL GEOGRAPHY • BHARATVARSHA • CHANGING POLITICAL MAP",
-
-    title:
-      "From Bharatvarsha to Present-Day India",
-
-    deck:
-      "A historical study of changing political geography, civilisational memory, colonial reordering, Partition and the Republic.",
-
-    summary:
-      "The political map changed repeatedly. Civilisational geography and political sovereignty were not identical.",
-
-    sections: [
-
-      [
-        "THE MAP WAS NEVER STATIC",
-
-        `
-        <p class="drop">
-        Across thousands of years, political boundaries moved.
-        Kingdoms expanded and contracted.
-        Empires appeared and disappeared.
-        </p>
-
-        <p>
-        Bharatvarsha belongs to a long textual and cultural tradition,
-        while the territory controlled by particular rulers changed
-        from period to period.
-        </p>
-        `
-      ],
-
-
-      [
-        "CIVILISATION AND POLITICAL POWER",
-
-        `
-        <p>
-        Sacred geography, pilgrimage, language and literary traditions can
-        cross political boundaries.
-        </p>
-
-        <p>
-        A civilisational map and a political map therefore answer different
-        historical questions.
-        </p>
-        `
-      ],
-
-
-      [
-        "COLONIAL REORDERING",
-
-        `
-        <p>
-        European commercial expansion eventually developed into territorial
-        rule. Colonial administration reorganised political geography in
-        new ways.
-        </p>
-        `
-      ],
-
-
-      [
-        "1947 AND THE REPUBLIC",
-
-        `
-        <p>
-        Partition created a new international frontier and caused enormous
-        human displacement.
-        </p>
-
-        <p>
-        The Constitution later established the modern Republic.
-        Article 1 states:
-        “India, that is Bharat, shall be a Union of States.”
-        </p>
-
-        <div class="lesson-box">
-          <b>LESSON</b>
-          <strong>
-          Political borders can change within generations.
-          Civilisational memory survives only when generations deliberately
-          transmit it.
-          </strong>
-        </div>
-        `
-      ]
-
-    ]
-  }
-
-];
+   HAINDAVEEYAM FOUNDATION
+   HISTORY — DYNAMIC ARTICLE ENGINE
+   ========================================================= */
+
+const ARTICLE_INDEX = "data/articles.json";
+
+const state = {
+  articles: [],
+  activeEra: "all",
+  searchTerm: ""
+};
 
 
 /* =========================================================
-   CARD FILTERING
-========================================================= */
+   DOM
+   ========================================================= */
 
-const cards =
-  document.getElementById("cards");
+const cardsContainer = document.getElementById("cards");
+const searchInput = document.getElementById("searchInput");
+const eraButtons = document.querySelectorAll("[data-era]");
 
-const emptyState =
-  document.getElementById("emptyState");
+const reader = document.getElementById("reader");
+const readerImage = document.getElementById("readerImage");
+const readerTitle = document.getElementById("readerTitle");
+const readerDeck = document.getElementById("readerDeck");
+const readerToc = document.getElementById("readerToc");
+const readerContent = document.getElementById("readerContent");
 
-const searchInput =
-  document.getElementById("searchInput");
-
-const categoryFilter =
-  document.getElementById("categoryFilter");
-
-const eraChips =
-  document.querySelectorAll(".era-chip");
-
-
-function cardMatches(story){
-
-  const query =
-    searchInput.value
-      .trim()
-      .toLowerCase();
-
-  const category =
-    categoryFilter.value;
-
-  const activeEra =
-    document
-      .querySelector(".era-chip.active")
-      ?.dataset.era || "all";
-
-
-  const haystack = [
-
-    story.title,
-    story.meta,
-    story.deck,
-    story.summary,
-    story.id,
-    ...(story.category || [])
-
-  ]
-  .join(" ")
-  .toLowerCase();
-
-
-  const queryOK =
-    !query ||
-    haystack.includes(query);
-
-
-  const categoryOK =
-    category === "all" ||
-    (story.category || [])
-      .includes(category);
-
-
-  const eraOK =
-    activeEra === "all" ||
-    story.era === activeEra;
-
-
-  return (
-    queryOK &&
-    categoryOK &&
-    eraOK
-  );
-
-}
+const modal = document.getElementById("modal");
 
 
 /* =========================================================
-   RENDER CARDS
-========================================================= */
+   INITIALISE
+   ========================================================= */
 
-function renderCards(){
+document.addEventListener("DOMContentLoaded", async () => {
+  setupSearch();
+  setupEraFilters();
+  setupKeyboardControls();
 
-  const visible =
-    stories.filter(cardMatches);
-
-
-  cards.innerHTML =
-    visible.map(story => `
-
-      <article class="story-card">
-
-        <img
-          src="${story.image}"
-          alt="${story.title}"
-          loading="lazy"
-          onerror="this.style.opacity='.25'"
-        >
-
-        <div class="story-card-body">
-
-          <div class="meta">
-            ${story.meta}
-          </div>
-
-          <h3>
-            ${story.title}
-          </h3>
-
-          <p>
-            ${story.summary}
-          </p>
-
-          <button
-            class="open-story"
-            data-story="${story.id}"
-          >
-            READ THE FULL STORY →
-          </button>
-
-        </div>
-
-      </article>
-
-    `)
-    .join("");
-
-
-  emptyState.hidden =
-    visible.length !== 0;
-
-
-  document
-    .querySelectorAll(".open-story")
-    .forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          openReader(
-            button.dataset.story
-          );
-
-        }
-      );
-
-    });
-
-}
-
-
-searchInput.addEventListener(
-  "input",
-  renderCards
-);
-
-categoryFilter.addEventListener(
-  "change",
-  renderCards
-);
-
-
-eraChips.forEach(chip => {
-
-  chip.addEventListener(
-    "click",
-    () => {
-
-      eraChips.forEach(
-        item =>
-          item.classList.remove("active")
-      );
-
-      chip.classList.add("active");
-
-      renderCards();
-
-    }
-  );
-
+  await loadArticleIndex();
 });
 
 
-renderCards();
-
-
 /* =========================================================
-   FULL SCREEN ARTICLE READER
-========================================================= */
+   LOAD ARTICLE INDEX
+   ========================================================= */
 
-const reader =
-  document.getElementById("reader");
-
-const readerImage =
-  document.getElementById("readerImage");
-
-const readerKicker =
-  document.getElementById("readerKicker");
-
-const readerTitle =
-  document.getElementById("readerTitle");
-
-const readerDeck =
-  document.getElementById("readerDeck");
-
-const readerToc =
-  document.getElementById("readerToc");
-
-const readerContent =
-  document.getElementById("readerContent");
-
-
-function openReader(id){
-
-  const story =
-    stories.find(
-      item => item.id === id
-    );
-
-  if(!story) return;
-
-
-  readerImage.src =
-    story.image;
-
-  readerImage.alt =
-    story.title;
-
-
-  readerKicker.textContent =
-    story.meta;
-
-
-  readerTitle.textContent =
-    story.title;
-
-
-  readerDeck.textContent =
-    story.deck;
-
-
-  readerToc.innerHTML =
-    story.sections
-      .map(
-        (section,index) => `
-
-          <button
-            data-index="${index}"
-          >
-
-            ${String(index+1).padStart(2,"0")}
-            •
-            ${section[0]}
-
-          </button>
-
-        `
-      )
-      .join("");
-
-
-  readerContent.innerHTML =
-    story.sections
-      .map(
-        (section,index) => `
-
-          <section
-            id="reader-sec-${index}"
-          >
-
-            <h3>
-              ${section[0]}
-            </h3>
-
-            ${section[1]}
-
-          </section>
-
-        `
-      )
-      .join("");
-
-
-  reader.classList.add(
-    "open"
-  );
-
-
-  reader.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-
-  document.body.classList.add(
-    "locked"
-  );
-
-
-  reader.scrollTop = 0;
-
-
-  readerToc
-    .querySelectorAll("button")
-    .forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          const target =
-            document.getElementById(
-              `reader-sec-${button.dataset.index}`
-            );
-
-
-          if(target){
-
-            target.scrollIntoView({
-
-              behavior:"smooth",
-
-              block:"start"
-
-            });
-
-          }
-
-        }
-      );
-
+async function loadArticleIndex() {
+  try {
+    const response = await fetch(ARTICLE_INDEX, {
+      cache: "no-store"
     });
 
-}
-
-
-function closeReader(){
-
-  reader.classList.remove(
-    "open"
-  );
-
-  reader.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-  document.body.classList.remove(
-    "locked"
-  );
-
-}
-
-
-document
-  .getElementById("readerClose")
-  .addEventListener(
-    "click",
-    closeReader
-  );
-
-
-reader.addEventListener(
-  "click",
-  event => {
-
-    if(
-      event.target === reader
-    ){
-
-      closeReader();
-
+    if (!response.ok) {
+      throw new Error(`Unable to load ${ARTICLE_INDEX}`);
     }
 
+    const data = await response.json();
+
+    state.articles = Array.isArray(data.articles)
+      ? data.articles
+      : [];
+
+    renderCards();
+
+  } catch (error) {
+    console.error("History index error:", error);
+
+    if (cardsContainer) {
+      cardsContainer.innerHTML = `
+        <div class="empty-state">
+          <p>History content could not be loaded.</p>
+          <small>Please check the article data files.</small>
+        </div>
+      `;
+    }
   }
-);
+}
 
 
 /* =========================================================
-   MAP / EVIDENCE MODAL
-========================================================= */
+   RENDER ARTICLE CARDS
+   ========================================================= */
 
-const modal =
-  document.getElementById("modal");
+function renderCards() {
+  if (!cardsContainer) return;
 
-const modalKicker =
-  document.getElementById("modalKicker");
+  const filteredArticles = state.articles.filter(article => {
+    const matchesEra =
+      state.activeEra === "all" ||
+      article.era === state.activeEra;
 
-const modalTitle =
-  document.getElementById("modalTitle");
+    const searchableText = [
+      article.title,
+      article.subtitle,
+      article.period,
+      article.category,
+      article.era
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
 
-const modalBody =
-  document.getElementById("modalBody");
+    const matchesSearch =
+      !state.searchTerm ||
+      searchableText.includes(state.searchTerm);
+
+    return matchesEra && matchesSearch;
+  });
+
+  if (!filteredArticles.length) {
+    cardsContainer.innerHTML = `
+      <div class="empty-state">
+        <p>No historical articles match your search.</p>
+      </div>
+    `;
+    return;
+  }
+
+  cardsContainer.innerHTML = filteredArticles
+    .map(article => createArticleCard(article))
+    .join("");
+
+  document
+    .querySelectorAll("[data-article-id]")
+    .forEach(card => {
+      card.addEventListener("click", () => {
+        openArticle(card.dataset.articleId);
+      });
+    });
+}
 
 
-const modalData = {
+/* =========================================================
+   ARTICLE CARD
+   ========================================================= */
 
-  map: [
+function createArticleCard(article) {
+  const image = getArticleImage(article);
 
-    "HISTORICAL GEOGRAPHY",
+  return `
+    <article
+      class="article-card"
+      data-article-id="${escapeHtml(article.id)}"
+      tabindex="0"
+      role="button"
+      aria-label="Read ${escapeHtml(article.title)}"
+    >
 
-    "HOW THE CHANGING MAP WILL WORK",
+      <div class="article-card-image">
+        <img
+          src="${escapeHtml(image)}"
+          alt="${escapeHtml(article.title)}"
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+        >
 
-    `
-      <p>
-      The historical map will eventually contain separate layers.
-      </p>
+        <span class="article-card-era">
+          ${escapeHtml(formatEra(article.era))}
+        </span>
+      </div>
 
-      <div class="evidence">
+      <div class="article-card-body">
 
-        <div>
+        <div class="article-card-period">
+          ${escapeHtml(article.period || "")}
+        </div>
 
-          <b>POLITICAL</b>
+        <h3>
+          ${escapeHtml(article.title)}
+        </h3>
 
-          <span>
-          Territory controlled by a particular power
-          during a particular period.
-          </span>
+        <p>
+          ${escapeHtml(article.subtitle || "")}
+        </p>
+
+        <span class="article-card-read">
+          READ RESEARCH ARTICLE →
+        </span>
+
+      </div>
+
+    </article>
+  `;
+}
+
+
+/* =========================================================
+   OPEN ARTICLE
+   ========================================================= */
+
+async function openArticle(articleId) {
+  const articleIndex = state.articles.find(
+    article => article.id === articleId
+  );
+
+  if (!articleIndex) {
+    console.error("Article not found:", articleId);
+    return;
+  }
+
+  try {
+    showReaderLoading(articleIndex);
+
+    const articlePath =
+      `articles/${encodeURIComponent(articleId)}/article.json`;
+
+    const response = await fetch(articlePath, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`Unable to load ${articlePath}`);
+    }
+
+    const article = await response.json();
+
+    renderArticle(article);
+
+  } catch (error) {
+    console.error("Article loading error:", error);
+
+    showReaderError(
+      "This research article could not be loaded."
+    );
+  }
+}
+
+
+/* =========================================================
+   READER LOADING
+   ========================================================= */
+
+function showReaderLoading(article) {
+  if (!reader) return;
+
+  reader.classList.add("open");
+
+  document.body.classList.add("reader-open");
+
+  if (readerTitle) {
+    readerTitle.textContent = article.title || "";
+  }
+
+  if (readerDeck) {
+    readerDeck.textContent = article.subtitle || "";
+  }
+
+  if (readerImage) {
+    const image = getArticleImage(article);
+
+    readerImage.src = image;
+    readerImage.alt = article.title || "";
+  }
+
+  if (readerToc) {
+    readerToc.innerHTML = "";
+  }
+
+  if (readerContent) {
+    readerContent.innerHTML = `
+      <div class="reader-loading">
+        <div class="loader"></div>
+        <p>Loading research article…</p>
+      </div>
+    `;
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   RENDER FULL ARTICLE
+   ========================================================= */
+
+function renderArticle(article) {
+  if (!reader) return;
+
+  reader.classList.add("open");
+  document.body.classList.add("reader-open");
+
+  if (readerTitle) {
+    readerTitle.textContent = article.title || "";
+  }
+
+  if (readerDeck) {
+    readerDeck.textContent = article.subtitle || "";
+  }
+
+  if (readerImage) {
+    const image = getArticleImage(article);
+
+    readerImage.src = image;
+    readerImage.alt = article.title || "";
+
+    readerImage.onerror = () => {
+      readerImage.style.display = "none";
+    };
+  }
+
+  buildTableOfContents(article);
+  buildArticleContent(article);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   TABLE OF CONTENTS
+   ========================================================= */
+
+function buildTableOfContents(article) {
+  if (!readerToc) return;
+
+  const sections = Array.isArray(article.sections)
+    ? article.sections
+    : [];
+
+  readerToc.innerHTML = sections
+    .map((section, index) => `
+      <a
+        href="#section-${escapeHtml(section.id || `section-${index}`)}"
+        class="toc-link"
+      >
+        ${escapeHtml(section.title || `Section ${index + 1}`)}
+      </a>
+    `)
+    .join("");
+
+  readerToc
+    .querySelectorAll("a")
+    .forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+
+        const targetId =
+          link.getAttribute("href").substring(1);
+
+        const target =
+          document.getElementById(targetId);
+
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+}
+
+
+/* =========================================================
+   ARTICLE BODY
+   ========================================================= */
+
+function buildArticleContent(article) {
+  if (!readerContent) return;
+
+  const html = [];
+
+  /* -------------------------
+     Abstract
+     ------------------------- */
+
+  if (article.abstract) {
+    html.push(`
+      <section class="research-abstract">
+
+        <div class="article-section-label">
+          ABSTRACT
+        </div>
+
+        <p class="abstract-text">
+          ${formatParagraph(article.abstract)}
+        </p>
+
+      </section>
+    `);
+  }
+
+
+  /* -------------------------
+     Keywords
+     ------------------------- */
+
+  if (
+    Array.isArray(article.keywords) &&
+    article.keywords.length
+  ) {
+    html.push(`
+      <section class="article-keywords">
+
+        <div class="article-section-label">
+          KEYWORDS
+        </div>
+
+        <div class="keyword-list">
+
+          ${article.keywords
+            .map(keyword => `
+              <span class="keyword">
+                ${escapeHtml(keyword)}
+              </span>
+            `)
+            .join("")}
 
         </div>
 
+      </section>
+    `);
+  }
 
-        <div>
 
-          <b>CIVILISATIONAL</b>
+  /* -------------------------
+     Main sections
+     ------------------------- */
 
-          <span>
-          Sacred geography, texts and long-term
-          cultural connections.
-          </span>
+  const sections = Array.isArray(article.sections)
+    ? article.sections
+    : [];
+
+  sections.forEach((section, index) => {
+    html.push(
+      renderSection(section, index)
+    );
+  });
+
+
+  /* -------------------------
+     Chronology
+     ------------------------- */
+
+  if (
+    Array.isArray(article.chronology) &&
+    article.chronology.length
+  ) {
+    html.push(
+      renderChronology(article.chronology)
+    );
+  }
+
+
+  /* -------------------------
+     Major sites
+     ------------------------- */
+
+  if (
+    Array.isArray(article.majorSites) &&
+    article.majorSites.length
+  ) {
+    html.push(
+      renderMajorSites(article.majorSites)
+    );
+  }
+
+
+  /* -------------------------
+     Evidence categories
+     ------------------------- */
+
+  if (
+    Array.isArray(article.evidenceCategories) &&
+    article.evidenceCategories.length
+  ) {
+    html.push(
+      renderEvidenceCategories(article.evidenceCategories)
+    );
+  }
+
+
+  /* -------------------------
+     Research questions
+     ------------------------- */
+
+  if (
+    Array.isArray(article.researchQuestions) &&
+    article.researchQuestions.length
+  ) {
+    html.push(`
+      <section class="research-extra">
+
+        <div class="article-section-label">
+          RESEARCH QUESTIONS
+        </div>
+
+        <div class="question-list">
+
+          ${article.researchQuestions
+            .map(question => `
+              <div class="question-item">
+                ${escapeHtml(question)}
+              </div>
+            `)
+            .join("")}
 
         </div>
 
+      </section>
+    `);
+  }
 
-        <div>
 
-          <b>NETWORKS</b>
+  /* -------------------------
+     Scholarly cautions
+     ------------------------- */
 
-          <span>
-          Trade, pilgrimage and intellectual routes.
-          </span>
+  if (
+    Array.isArray(article.scholarlyCautions) &&
+    article.scholarlyCautions.length
+  ) {
+    html.push(`
+      <section class="research-extra">
+
+        <div class="article-section-label">
+          SCHOLARLY CAUTIONS
+        </div>
+
+        <div class="caution-box">
+
+          ${article.scholarlyCautions
+            .map(caution => `
+              <p>
+                ${escapeHtml(caution)}
+              </p>
+            `)
+            .join("")}
+
+        </div>
+
+      </section>
+    `);
+  }
+
+
+  /* -------------------------
+     Sources
+     ------------------------- */
+
+  if (
+    Array.isArray(article.sources) &&
+    article.sources.length
+  ) {
+    html.push(
+      renderSources(article.sources)
+    );
+  }
+
+
+  /* -------------------------
+     Bibliography
+     ------------------------- */
+
+  if (
+    Array.isArray(article.bibliography) &&
+    article.bibliography.length
+  ) {
+    html.push(
+      renderBibliography(article.bibliography)
+    );
+  }
+
+
+  /* -------------------------
+     Final note
+     ------------------------- */
+
+  if (article.finalNote) {
+    html.push(`
+      <section class="article-final-note">
+
+        <div class="article-section-label">
+          RESEARCH NOTE
+        </div>
+
+        <p>
+          ${formatParagraph(article.finalNote)}
+        </p>
+
+      </section>
+    `);
+  }
+
+
+  readerContent.innerHTML = html.join("");
+}
+
+
+/* =========================================================
+   RENDER SECTION
+   ========================================================= */
+
+function renderSection(section, index) {
+  const sectionId =
+    section.id || `section-${index}`;
+
+  const typeClass =
+    section.type
+      ? `section-type-${section.type}`
+      : "";
+
+  let html = `
+    <section
+      id="section-${escapeHtml(sectionId)}"
+      class="article-section ${typeClass}"
+    >
+
+      <div class="article-section-heading">
+
+        <span class="section-number">
+          ${String(index + 1).padStart(2, "0")}
+        </span>
+
+        <h2>
+          ${escapeHtml(section.title || "")}
+        </h2>
+
+      </div>
+  `;
+
+
+  /* Date */
+
+  if (section.date) {
+    html += `
+      <div class="section-date">
+        ${escapeHtml(section.date)}
+      </div>
+    `;
+  }
+
+
+  /* Paragraphs */
+
+  if (Array.isArray(section.content)) {
+    html += section.content
+      .map(paragraph => `
+        <p>
+          ${formatParagraph(paragraph)}
+        </p>
+      `)
+      .join("");
+  }
+
+
+  /* Evidence */
+
+  if (
+    Array.isArray(section.evidence) &&
+    section.evidence.length
+  ) {
+    html += `
+      <div class="evidence-panel">
+
+        <div class="article-section-label">
+          EVIDENCE
+        </div>
+
+        <div class="evidence-list">
+
+          ${section.evidence
+            .map(item => `
+              <span>
+                ${escapeHtml(item)}
+              </span>
+            `)
+            .join("")}
 
         </div>
 
       </div>
+    `;
+  }
 
 
-      <p>
-      This allows the visitor to understand the changing
-      political map without projecting modern borders
-      backward onto every period.
-      </p>
-    `
+  /* Questions */
 
-  ]
+  if (
+    Array.isArray(section.questions) &&
+    section.questions.length
+  ) {
+    html += `
+      <div class="question-panel">
 
-};
+        <div class="article-section-label">
+          KEY QUESTIONS
+        </div>
 
+        ${section.questions
+          .map(question => `
+            <p>
+              ${escapeHtml(question)}
+            </p>
+          `)
+          .join("")}
 
-document
-  .querySelectorAll(
-    "[data-modal]"
-  )
-  .forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        const data =
-          modalData[
-            button.dataset.modal
-          ];
-
-        if(!data) return;
+      </div>
+    `;
+  }
 
 
-        modalKicker.textContent =
-          data[0];
+  /* Source */
+
+  if (section.source) {
+    html += `
+      <div class="inline-source">
+
+        <span class="article-section-label">
+          SOURCE
+        </span>
+
+        <a
+          href="${escapeHtml(section.source.url || "#")}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${escapeHtml(section.source.title || "Source")}
+        </a>
+
+        ${
+          section.source.organization
+            ? `<span>
+                — ${escapeHtml(section.source.organization)}
+              </span>`
+            : ""
+        }
+
+      </div>
+    `;
+  }
 
 
-        modalTitle.textContent =
-          data[1];
+  html += `
+    </section>
+  `;
 
-
-        modalBody.innerHTML =
-          data[2];
-
-
-        modal.classList.add(
-          "open"
-        );
-
-
-        document.body.classList.add(
-          "locked"
-        );
-
-      }
-    );
-
-  });
-
-
-function closeModal(){
-
-  modal.classList.remove(
-    "open"
-  );
-
-  document.body.classList.remove(
-    "locked"
-  );
-
+  return html;
 }
 
 
-document
-  .getElementById("modalClose")
-  .addEventListener(
-    "click",
-    closeModal
-  );
+/* =========================================================
+   CHRONOLOGY
+   ========================================================= */
+
+function renderChronology(items) {
+  return `
+    <section class="article-extra chronology">
+
+      <div class="article-section-label">
+        CHRONOLOGY
+      </div>
+
+      <h2>
+        Historical Timeline
+      </h2>
+
+      <div class="chronology-list">
+
+        ${items
+          .map(item => `
+            <div class="chronology-item">
+
+              <div class="chronology-date">
+                ${escapeHtml(item.date || "")}
+              </div>
+
+              <div class="chronology-event">
+                <strong>
+                  ${escapeHtml(item.period || "")}
+                </strong>
+
+                <p>
+                  ${escapeHtml(item.significance || item.event || "")}
+                </p>
+              </div>
+
+            </div>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
 
 
-modal.addEventListener(
-  "click",
-  event => {
+/* =========================================================
+   MAJOR SITES
+   ========================================================= */
 
-    if(
-      event.target === modal
-    ){
+function renderMajorSites(sites) {
+  return `
+    <section class="article-extra">
 
-      closeModal();
+      <div class="article-section-label">
+        MAJOR SITES
+      </div>
 
-    }
+      <h2>
+        Archaeological Sites
+      </h2>
 
-  }
-);
+      <div class="sites-grid">
+
+        ${sites
+          .map(site => `
+            <article class="site-card">
+
+              <h3>
+                ${escapeHtml(site.name || "")}
+              </h3>
+
+              <div class="site-location">
+                ${escapeHtml(site.location || "")}
+              </div>
+
+              <p>
+                ${escapeHtml(site.importance || "")}
+              </p>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
 
 
-document.addEventListener(
-  "keydown",
-  event => {
+/* =========================================================
+   EVIDENCE CATEGORIES
+   ========================================================= */
 
-    if(event.key === "Escape"){
+function renderEvidenceCategories(items) {
+  return `
+    <section class="article-extra">
 
+      <div class="article-section-label">
+        EVIDENCE
+      </div>
+
+      <h2>
+        Archaeological Evidence Base
+      </h2>
+
+      <div class="evidence-category-grid">
+
+        ${items
+          .map(item => `
+            <article class="evidence-category">
+
+              <h3>
+                ${escapeHtml(item.category || "")}
+              </h3>
+
+              <p>
+                ${escapeHtml(item.examples || "")}
+              </p>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+function renderSources(sources) {
+  return `
+    <section class="article-extra sources-section">
+
+      <div class="article-section-label">
+        SOURCES
+      </div>
+
+      <h2>
+        Primary and Research Sources
+      </h2>
+
+      <div class="source-list">
+
+        ${sources
+          .map((source, index) => `
+            <article class="source-item">
+
+              <div class="source-number">
+                ${String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div class="source-details">
+
+                <h3>
+                  ${escapeHtml(source.title || "")}
+                </h3>
+
+                ${
+                  source.organization
+                    ? `<p class="source-organisation">
+                        ${escapeHtml(source.organization)}
+                      </p>`
+                    : ""
+                }
+
+                ${
+                  source.type
+                    ? `<p class="source-type">
+                        ${escapeHtml(source.type)}
+                      </p>`
+                    : ""
+                }
+
+                ${
+                  source.url
+                    ? `<a
+                        href="${escapeHtml(source.url)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        VIEW SOURCE →
+                      </a>`
+                    : ""
+                }
+
+              </div>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   BIBLIOGRAPHY
+   ========================================================= */
+
+function renderBibliography(items) {
+  return `
+    <section class="article-extra bibliography-section">
+
+      <div class="article-section-label">
+        BIBLIOGRAPHY
+      </div>
+
+      <h2>
+        Further Academic Reading
+      </h2>
+
+      <div class="bibliography-list">
+
+        ${items
+          .map((item, index) => `
+            <div class="bibliography-item">
+
+              <span class="bibliography-number">
+                ${index + 1}.
+              </span>
+
+              <div>
+
+                ${
+                  item.author
+                    ? `<strong>
+                        ${escapeHtml(item.author)}
+                      </strong>`
+                    : ""
+                }
+
+                ${
+                  item.title
+                    ? `<span>
+                        — ${escapeHtml(item.title)}
+                      </span>`
+                    : ""
+                }
+
+                ${
+                  item.type
+                    ? `<small>
+                        ${escapeHtml(item.type)}
+                      </small>`
+                    : ""
+                }
+
+              </div>
+
+            </div>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function setupSearch() {
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", event => {
+    state.searchTerm =
+      event.target.value.trim().toLowerCase();
+
+    renderCards();
+  });
+}
+
+
+/* =========================================================
+   ERA FILTERS
+   ========================================================= */
+
+function setupEraFilters() {
+  eraButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      state.activeEra =
+        button.dataset.era || "all";
+
+      eraButtons.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      renderCards();
+
+    });
+
+  });
+}
+
+
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
+
+function setupKeyboardControls() {
+
+  document.addEventListener("keydown", event => {
+
+    /* Escape closes reader */
+
+    if (event.key === "Escape") {
       closeReader();
-
       closeModal();
-
     }
 
+
+    /* Enter activates article cards */
+
+    if (
+      event.key === "Enter" &&
+      document.activeElement?.dataset?.articleId
+    ) {
+      openArticle(
+        document.activeElement.dataset.articleId
+      );
+    }
+
+  });
+}
+
+
+/* =========================================================
+   CLOSE ARTICLE READER
+   ========================================================= */
+
+function closeReader() {
+  if (!reader) return;
+
+  reader.classList.remove("open");
+
+  document.body.classList.remove("reader-open");
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+   ========================================================= */
+
+function closeModal() {
+  if (!modal) return;
+
+  modal.classList.remove("open");
+}
+
+
+/* =========================================================
+   READER ERROR
+   ========================================================= */
+
+function showReaderError(message) {
+  if (!readerContent) return;
+
+  readerContent.innerHTML = `
+    <div class="reader-error">
+
+      <div class="article-section-label">
+        ERROR
+      </div>
+
+      <h2>
+        Unable to load article
+      </h2>
+
+      <p>
+        ${escapeHtml(message)}
+      </p>
+
+    </div>
+  `;
+}
+
+
+/* =========================================================
+   IMAGE HANDLING
+   ========================================================= */
+
+function getArticleImage(article) {
+
+  /*
+    The JSON can eventually specify its own image.
+
+    Example:
+    "heroImage": "../images/harappan-hero.jpg"
+
+    Because article JSON files are inside:
+    history/articles/<article-id>/
+
+    the path is relative to that JSON location.
+
+    However, HTML cannot directly use that relative path
+    because the HTML page is one level higher.
+
+    Therefore we convert it to a web path.
+  */
+
+  if (article.heroImage) {
+
+    const cleanPath =
+      article.heroImage
+        .replace(/^(\.\.\/)+/, "");
+
+    return `articles/${article.id}/${cleanPath}`;
   }
-);
+
+  return "../Bharat-map-clean.png";
+}
+
+
+/* =========================================================
+   ERA DISPLAY
+   ========================================================= */
+
+function formatEra(era) {
+
+  const names = {
+    prehistory: "DEEP ANTIQUITY",
+    harappan: "HARAPPAN",
+    vedic: "VEDIC",
+    classical: "CLASSICAL",
+    medieval: "MEDIEVAL",
+    earlymodern: "EARLY MODERN",
+    colonial: "COLONIAL",
+    modern: "MODERN"
+  };
+
+  return names[era] || String(era || "").toUpperCase();
+}
+
+
+/* =========================================================
+   TEXT FORMATTER
+   ========================================================= */
+
+function formatParagraph(text) {
+
+  if (text === null || text === undefined) {
+    return "";
+  }
+
+  /*
+    Convert line breaks safely while keeping the
+    historical text readable.
+  */
+
+  return escapeHtml(String(text))
+    .replace(/\n/g, "<br>");
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+   ========================================================= */
+
+function escapeHtml(value) {
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   GLOBAL ACCESS
+   ========================================================= */
+
+window.HistoryApp = {
+  openArticle,
+  closeReader,
+  loadArticleIndex,
+  renderCards
+};
