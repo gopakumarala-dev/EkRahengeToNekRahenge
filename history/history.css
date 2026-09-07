@@ -1751,3 +1751,37 @@ footer b{
   }
 
 }
+/* =========================================================
+   CLICKABLE ARTICLE CARDS
+   ========================================================= */
+
+.article-card {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.article-card:focus-visible {
+  outline: 2px solid #d8892f;
+  outline-offset: 4px;
+}
+
+.article-card-read {
+  cursor: pointer;
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    letter-spacing 0.2s ease;
+}
+
+.article-card:hover .article-card-read {
+  transform: translateX(5px);
+  letter-spacing: 0.04em;
+}
