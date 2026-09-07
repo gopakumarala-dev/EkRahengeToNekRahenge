@@ -1,1023 +1,1731 @@
+/* =========================================================
+   BHARAT HISTORY — DYNAMIC HISTORY ENGINE
+========================================================= */
 
 const stories = [
+
+  /* =======================================================
+     01 — DEEP ANTIQUITY
+  ======================================================= */
+
   {
     id: "deep-antiquity",
     era: "prehistory",
     category: ["ancient"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20paintings%20at%20bhimbetka%20rock%20shelter.jpg",
-    meta: "DEEP ANTIQUITY • BHIMBETKA",
-    title: "Before There Were Kingdoms",
+
+    meta:
+      "DEEP ANTIQUITY • BHIMBETKA • EARLY SETTLEMENTS",
+
+    title:
+      "Before There Were Kingdoms",
+
     deck:
-      "The first traces of human life are older than every dynasty, every temple and every political map that would come later.",
+      "The story begins before dynasties and empires — with human beings learning to live with the land of Bharat.",
+
     summary:
-      "Bhimbetka opens the story through rock shelters, paintings and archaeology. It is a beginning made not by kings, but by people living with the land.",
+      "From prehistoric rock shelters and early tools to agriculture, settlement and the threshold of urban civilisation.",
+
     sections: [
+
       [
-        "THE FIRST PEOPLE LEFT NO ROYAL CHRONICLE",
+        "THE LAND BEFORE THE KINGDOMS",
+
         `
         <p class="drop">
-        There was a time when there was no Delhi, no Varanasi, no Pataliputra,
-        no Mauryan emperor and no written chronicle telling us who ruled.
-        There was only the land — and the human beings learning how to live within it.
+        Long before a king was crowned in Pataliputra, long before temple towers
+        rose above the plains, and long before royal inscriptions preserved the
+        names of rulers, human beings were already living across the landscapes
+        of Bharat.
         </p>
 
         <p>
-        Across the landscapes of Bharat, communities hunted, gathered, moved with
-        seasons, mastered fire, fashioned stone tools and learned the changing
-        rhythms of rivers, forests and open country.
+        They lived in a world without modern roads, electricity or written
+        chronicles. Forests, rivers, rocky uplands, grasslands and seasonal
+        water shaped the rhythm of life.
         </p>
 
         <p>
-        At Bhimbetka, natural rock shelters preserve paintings spanning prehistoric
-        and historical periods. UNESCO describes five groups of shelters containing
-        paintings that record a very long sequence of human activity.
+        Survival demanded knowledge. People had to understand where water could
+        be found, which plants could be eaten, where animals moved, how stone
+        could be shaped and how fire could be controlled.
+        </p>
+
+        <p>
+        These people left few names behind. Yet their lives were not without
+        history. Their history survives in stone tools, occupation deposits,
+        hearths, animal remains, shelters, burials and paintings.
+        </p>
+
+        <p>
+        The first lesson of Bharat's history is therefore simple:
+        <strong>
+        the story of civilisation begins with its people.
+        </strong>
         </p>
         `
       ],
+
 
       [
-        "THE FIRST STORIES ON STONE",
+        "BHIMBETKA — WHEN HUMAN HANDS LEFT A MEMORY",
+
         `
         <p>
-        The power of a rock painting is its intimacy. We do not know the name of the
-        person who created it. We do not know the exact language that person spoke.
-        We cannot safely reconstruct an entire religious system from a single painted
-        figure.
+        In the Vindhyan landscape of central India, sandstone formations created
+        natural shelters that protected generations of human beings.
         </p>
 
         <p>
-        But we can recognise an unmistakably human act: the decision to place an
-        image on a surface so that it could outlive the moment.
+        At Bhimbetka, these shelters preserve paintings spanning prehistoric
+        and later historical periods. UNESCO recognises the site as an
+        exceptional record of prehistoric human occupation.
         </p>
 
         <p>
-        This is where historical discipline becomes important. A painting can
-        demonstrate representation and provide clues about animals, movement and
-        social activity. It cannot, by itself, answer every question about belief,
-        kinship or political organisation.
+        The paintings show human figures and animals and contain scenes of
+        movement and collective activity.
+        </p>
+
+        <p>
+        But the historical discipline here is just as important as the
+        archaeological discovery. We can see a painted animal. We can see
+        human figures. We can recognise visual expression.
+        </p>
+
+        <p>
+        What we cannot automatically do is reconstruct an entire religious,
+        political or social system from one painting.
+        </p>
+
+        <div class="evidence">
+
+          <div>
+            <b>WHAT SURVIVES</b>
+            <span>
+            Rock shelters, paintings, tools and archaeological deposits.
+            </span>
+          </div>
+
+          <div>
+            <b>WHAT WE CAN STUDY</b>
+            <span>
+            Human activity, environment, technology and visual traditions.
+            </span>
+          </div>
+
+          <div>
+            <b>WHAT REMAINS OPEN</b>
+            <span>
+            Exact meaning and precise dating of individual paintings.
+            </span>
+          </div>
+
+        </div>
+        `
+      ],
+
+
+      [
+        "THE DISCOVERY OF BHIMBETKA",
+
+        `
+        <p>
+        The modern archaeological story of Bhimbetka is itself fascinating.
+        Archaeologist V. S. Wakankar recognised the importance of the rock
+        shelters in 1957.
+        </p>
+
+        <p>
+        Later surveys and excavations revealed a much deeper archaeological
+        sequence. The importance of the site lies not simply in one spectacular
+        painting but in evidence showing repeated human use of the landscape
+        across very long periods.
+        </p>
+
+        <p>
+        The landscape was visited, occupied and revisited. The same geological
+        formations could become shelter, workplace, meeting place and canvas
+        for different generations.
+        </p>
+
+        <p>
+        This gives us an important idea for the whole History project:
+        civilisation is not created in a single generation.
+        It accumulates.
         </p>
         `
       ],
+
+
+      [
+        "WHAT DID A PREHISTORIC FAMILY ACTUALLY DO?",
+
+        `
+        <p>
+        Archaeology rarely gives us a diary. Instead it gives fragments from
+        which we reconstruct a plausible human life.
+        </p>
+
+        <p>
+        A hearth may tell us about the control of fire and food preparation.
+        Stone tools reveal technological choices. Animal remains can provide
+        clues about hunting, food processing and environment.
+        </p>
+
+        <p>
+        Imagine a family moving through the landscape with knowledge accumulated
+        over generations.
+        </p>
+
+        <p>
+        Someone knows where water remains after the rains.
+        Someone knows which plants are useful.
+        Someone knows how to shape a stone edge.
+        Children learn by watching, listening, repeating and remembering.
+        </p>
+
+        <p>
+        This is an early form of civilisation:
+        <strong>
+        knowledge becoming inheritance.
+        </strong>
+        </p>
+        `
+      ],
+
 
       [
         "FROM MOVEMENT TO SETTLEMENT",
+
         `
         <p>
-        Over very long periods, communities in different regions experimented with
-        new relationships to plants, animals and place.
+        The next great transformation did not happen on one particular day.
+        In different regions, communities gradually changed their relationship
+        with plants, animals and place.
         </p>
 
         <p>
-        Agriculture and animal domestication changed the rhythm of life. Pottery
-        and storage made it possible to preserve resources. Some settlements became
-        more permanent.
+        Cultivation became increasingly important in some regions.
+        Animals were domesticated. Pottery and storage changed how resources
+        could be managed.
         </p>
 
         <p>
-        The transformation was not one single event. It was a gradual accumulation
-        of skills and decisions. Each generation inherited knowledge and changed it.
+        Some communities became more permanent.
+        Population patterns changed.
+        New forms of labour and cooperation emerged.
+        </p>
+
+        <p>
+        The transformation was therefore not one sudden revolution.
+        It was a long accumulation of knowledge.
         </p>
         `
       ],
 
+
       [
-        "WHAT WE KNOW • WHAT WE DO NOT",
+        "MEHRGARH AND THE LONG ROAD TO FARMING",
+
         `
-        <div class="evidence">
-          <div><b>WE KNOW</b><span>Rock shelters and prehistoric occupation</span></div>
-          <div><b>WE KNOW</b><span>Paintings spanning multiple periods</span></div>
-          <div><b>WE MUST BE CAREFUL</b><span>Exact meaning of individual images</span></div>
-        </div>
+        <p>
+        The wider northwest South Asian story provides another important
+        archaeological reference point at Mehrgarh.
+        </p>
 
         <p>
-        The deeper lesson is methodological. A civilisational history becomes
-        stronger, not weaker, when it states what the evidence cannot yet establish.
+        Older popular accounts sometimes assigned extremely early dates to
+        the beginning of settled life at Mehrgarh. Recent radiocarbon research
+        has produced later estimates for Period I, with Bayesian modelling
+        favouring a beginning around the late sixth or early fifth millennium
+        BCE, with substantial uncertainty.
+        </p>
+
+        <p>
+        This is exactly why the History of Bharat should be based on evidence
+        rather than on impressive-sounding numbers.
+        </p>
+
+        <p>
+        When better evidence changes a date, we should change the story.
+        That does not weaken the civilisation. It strengthens the credibility
+        of the historical reconstruction.
+        </p>
+        `
+      ],
+
+
+      [
+        "WHEN VILLAGES BECAME COMPLEX SOCIETIES",
+
+        `
+        <p>
+        As settlements became more permanent, entirely new questions appeared.
+        </p>
+
+        <p>
+        Who stores food?
+        Who makes tools?
+        Who builds houses?
+        Who manages water?
+        Who organises exchange?
+        Who protects the settlement?
+        How are skills taught?
+        </p>
+
+        <p>
+        These questions reveal the beginning of social complexity.
+        Specialists appear.
+        Exchange networks widen.
+        Architecture becomes more deliberate.
+        Collective labour becomes increasingly important.
+        </p>
+
+        <p>
+        The road from village to city is therefore not simply a story of
+        larger buildings.
+        </p>
+
+        <p>
+        It is a story of
+        <strong>
+        organisation, labour, memory, cooperation and institutions.
+        </strong>
         </p>
 
         <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
+
+          <b>THE NEXT CHAPTER</b>
+
           <strong>
-          The first chapters of Bharat begin with human beings learning from their
-          environment and passing knowledge forward.
+          The first great urban world of Bharat — Harappa, Mohenjo-daro,
+          Dholavira, Lothal, Kalibangan, Rakhigarhi and the wider Harappan
+          civilisation.
           </strong>
+
         </div>
         `
       ],
 
+
+      [
+        "BHARAT IN THE EARLY WORLD",
+
+        `
+        <p>
+        The deep antiquity of Bharat belongs inside world history.
+        Human communities were developing in Africa, western Asia and Europe.
+        Agriculture emerged through complex processes in different regions.
+        Later, early cities arose in Mesopotamia, Egypt and the Indus region.
+        </p>
+
+        <p>
+        Comparison allows us to see both connections and differences.
+        Bharat was not an isolated appendix to a history occurring elsewhere.
+        Its landscapes produced their own adaptations, technologies and
+        communities.
+        </p>
+
+        <p>
+        At the same time, most ancient people left no monument at all.
+        The majority of human lives disappear without a trace.
+        </p>
+
+        <p>
+        That is why the apparently ordinary fragments matter.
+        A stone tool. A hearth. A shelter. A painted wall.
+        </p>
+        `
+      ],
+
+
+      [
+        "WHAT THIS CHAPTER TEACHES US",
+
+        `
+        <div class="evidence">
+
+          <div>
+            <b>PEOPLE</b>
+            <span>
+            Human beings lived and adapted across Bharat long before states.
+            </span>
+          </div>
+
+          <div>
+            <b>MEMORY</b>
+            <span>
+            Material remains preserve fragments of otherwise lost lives.
+            </span>
+          </div>
+
+          <div>
+            <b>CHANGE</b>
+            <span>
+            Settlement, agriculture and craft gradually prepared the way
+            for urban civilisation.
+            </span>
+          </div>
+
+        </div>
+
+        <p>
+        The first chapter therefore ends not with a ruler, but with a transition.
+        Human communities increasingly began shaping permanent places within
+        the landscape.
+        </p>
+
+        <div class="lesson-box">
+
+          <b>LESSON FOR OUR GENERATION</b>
+
+          <strong>
+          Civilisation begins when knowledge becomes inheritance —
+          when one generation leaves something for the next.
+          </strong>
+
+        </div>
+        `
+      ],
+
+
       [
         "SOURCES & FURTHER READING",
+
         `
         <p class="source">
-        Primary institutional anchor: UNESCO World Heritage Centre,
-        Rock Shelters of Bhimbetka. Additional research should use Archaeological
-        Survey of India material and archaeological publications.
+        UNESCO World Heritage Centre, Rock Shelters of Bhimbetka.
+        Archaeological Survey of India materials on prehistoric sites.
+        Recent radiocarbon research on Mehrgarh chronology.
+        The production version should retain exact source references,
+        excavation reports and image licences.
         </p>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     02 — HARAPPAN
+  ======================================================= */
 
   {
     id: "harappan",
     era: "harappan",
     category: ["ancient"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Dholavira%20archaeological%20site.jpg",
-    meta: "BRONZE AGE BHARAT • c. 3000–1500 BCE",
-    title: "When the Cities Rose",
+
+    meta:
+      "BRONZE AGE BHARAT • HARAPPAN WORLD • c. 3000–1500 BCE",
+
+    title:
+      "When the Cities Rose",
+
     deck:
-      "A civilisation of planned settlements, craft, long-distance exchange and extraordinary water management.",
+      "Harappa, Dholavira and the wider urban world of the third and second millennia BCE.",
+
     summary:
-      "Dholavira, Harappa and other sites reveal an urban world whose surviving streets and reservoirs invite us to reconstruct the lives of people who built them.",
+      "Planned cities, reservoirs, craft production, long-distance exchange and an undeciphered script open one of the great chapters of early urban history.",
+
     sections: [
+
       [
         "THE CITY IN THE DRY LAND",
+
         `
         <p class="drop">
-        Imagine approaching a settlement in a landscape where water cannot be
-        taken for granted. There is no electric pump and no concrete pipeline.
-        Yet people choose to build a city here — and to engineer the landscape
-        around them.
+        Imagine approaching a city where water cannot be taken for granted.
+        Yet people have chosen to build here.
         </p>
 
         <p>
-        Dholavira, on Khadir Island in Gujarat, is one of the most striking
-        archaeological windows into the Harappan world.
-        UNESCO places its occupation broadly between about 3000 and 1500 BCE.
+        Dholavira, on Khadir Island in Gujarat, gives us an extraordinary
+        archaeological window into the Harappan world.
         </p>
 
         <p>
-        The city included fortified areas, planned streets, residential sectors,
-        workshops, a cemetery and an elaborate system of reservoirs and water
+        UNESCO dates its occupation broadly to approximately 3000–1500 BCE
+        and describes a fortified urban settlement with planned streets,
+        residential sectors, workshops, a cemetery and sophisticated water
         management.
         </p>
         `
       ],
 
+
       [
         "WATER AS CIVILISATIONAL KNOWLEDGE",
+
         `
         <p>
-        In Dholavira, water was not merely something people found. It was something
-        they captured, stored and managed.
+        In Dholavira, water was not simply discovered.
+        It was captured, stored and managed.
         </p>
 
         <p>
-        In an arid environment, the organisation of water reveals a society capable
-        of long-term planning.
+        In an arid environment, reservoirs represent more than engineering.
+        They represent long-term planning, labour and institutional continuity.
         </p>
 
         <p>
-        Reservoirs require labour. Labour requires organisation. Maintenance
-        requires continuity. Continuity requires skills to be transmitted.
-        Behind the surviving stone is therefore an unseen human system.
-        </p>
-        `
-      ],
-
-      [
-        "CRAFT, TRADE AND THE WIDER WORLD",
-        `
-        <p>
-        Archaeology reveals craft activity involving copper, shell, stone,
-        terracotta, gold, ivory and semi-precious materials.
-        </p>
-
-        <p>
-        Evidence of exchange connects Dholavira with other Harappan centres and
-        regions associated with Mesopotamia and the Oman peninsula.
-        </p>
-
-        <p>
-        Bharat's early urban world therefore belonged to a wider Bronze Age
-        environment rather than existing as an isolated island.
+        Someone had to build them.
+        Someone had to maintain them.
+        Someone had to teach the next generation how they worked.
         </p>
         `
       ],
 
+
       [
-        "THE PEOPLE BEHIND THE ARCHAEOLOGY",
+        "CRAFT AND TRADE",
+
         `
         <p>
-        Every archaeological category hides a human story. A “bead workshop”
-        means somebody learned the craft. A “drainage system” means somebody
-        maintained it. A cemetery means families faced death and remembered
-        the dead.
+        Archaeological evidence includes objects and craft activity involving
+        copper, shell, stone, terracotta, gold, ivory and semi-precious materials.
         </p>
 
         <p>
-        When we put people back inside the archaeology, Harappan history becomes
-        more than a list of technical achievements. It becomes the history of
-        communities making homes, producing goods and organising life over
-        generations.
+        Evidence of exchange connects Dholavira with other Harappan centres
+        and with regions associated with Mesopotamia and the Oman peninsula.
+        </p>
+
+        <p>
+        This means that the Harappan world belonged to a much wider Bronze Age
+        environment.
         </p>
         `
       ],
 
+
       [
-        "THE GREAT SILENCE OF THE SEALS",
+        "THE SILENT SCRIPT",
+
         `
         <p>
-        The civilisation left signs and symbols on seals and objects, but the
-        script has not been securely deciphered.
+        Harappan symbols survive on seals and other objects.
+        Yet the script remains undeciphered.
         </p>
 
         <p>
-        We can study where signs occur and compare their forms, but we cannot yet
-        read them with the confidence possible for a later inscription such as
-        an Ashokan edict.
+        We can catalogue the signs.
+        We can compare their contexts.
+        We can study where they appear.
         </p>
 
         <p>
-        This creates a remarkable paradox: we can reconstruct much of the material
-        world while still being unable to hear the civilisation in its own written
-        voice.
+        But we cannot yet read them with the confidence possible for much
+        later inscriptions.
+        </p>
+
+        <p>
+        This produces one of history's great paradoxes:
+        <strong>
+        the ruins speak, but we cannot yet hear their written voice.
+        </strong>
         </p>
         `
       ],
 
+
       [
-        "DECLINE, TRANSFORMATION, SURVIVAL",
+        "THE PEOPLE BEHIND THE RUINS",
+
         `
         <p>
-        The transformation of Harappan urbanism was not simply a story of one city
-        being destroyed and another replacing it. Archaeological evidence points
-        to changing settlement patterns across a very large region.
+        A bead workshop means somebody learned the craft.
+        A reservoir means somebody organised labour.
+        A cemetery means families had ways of remembering the dead.
         </p>
 
         <p>
-        Scholars investigate climate shifts, changing river systems, economic
-        transformations and other interacting factors.
+        When we put people back inside archaeology, the Harappan story stops
+        being a catalogue of objects.
+        </p>
+
+        <p>
+        It becomes the story of communities making homes, raising children,
+        producing goods, travelling, exchanging and living across generations.
         </p>
 
         <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
+          <b>LESSON</b>
           <strong>
-          A society becomes resilient when knowledge, infrastructure and institutions
-          can adapt to the environment.
+          A civilisation is not its ruins alone. It is the people whose lives
+          produced those ruins.
           </strong>
         </div>
         `
-      ],
-
-      [
-        "SOURCES & FURTHER READING",
-        `
-        <p class="source">
-        Institutional anchor: UNESCO World Heritage Centre,
-        Dholavira: a Harappan City. Further research should use ASI excavation
-        reports and archaeological scholarship.
-        </p>
-        `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     03 — VEDIC
+  ======================================================= */
 
   {
     id: "vedic",
     era: "vedic",
     category: ["dharma"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Devanagari%20Rigveda%20manuscript.jpg",
-    meta: "VEDIC WORLD • TEXT • ORAL TRADITION",
-    title: "When Knowledge Was Carried by Memory",
+
+    meta:
+      "VEDIC WORLD • ŚRUTI • DHARMA",
+
+    title:
+      "When Knowledge Was Carried by Memory",
+
     deck:
-      "A civilisational tradition in which sound, recitation, ritual and disciplined transmission became a technology of memory.",
+      "The Vedic tradition and the remarkable discipline through which sacred knowledge was transmitted.",
+
     summary:
-      "The Vedic story is not only about ancient texts. It is about how knowledge was transmitted, debated and transformed across generations.",
+      "The Vedic story opens questions about oral transmission, ritual, Dharma, philosophy, language and chronology.",
+
     sections: [
+
       [
         "THE WORD BEFORE THE BOOK",
+
         `
         <p class="drop">
-        Imagine a body of knowledge that must survive without depending on a manuscript.
-        The student sits with the teacher. The sound is repeated. Accent matters.
-        Sequence matters. Pronunciation matters.
+        Imagine a body of sacred knowledge that must survive without depending
+        upon a manuscript.
         </p>
 
         <p>
-        The Vedic tradition provides an extraordinary example of this kind of
-        oral transmission. UNESCO recognises Vedic chanting as intangible cultural
-        heritage and highlights sophisticated methods of recitation.
+        The student sits with the teacher.
+        The sound is repeated.
+        Accent matters.
+        Sequence matters.
+        Pronunciation matters.
+        </p>
+
+        <p>
+        The Vedic tradition provides a remarkable example of disciplined
+        oral transmission.
+        UNESCO recognises Vedic chanting as intangible cultural heritage.
         </p>
         `
       ],
 
+
       [
         "ŚRUTI AND TRANSMISSION",
+
         `
         <p>
-        The idea of <em>śruti</em> — that which is heard — belongs to a distinctive
-        conception of sacred knowledge.
+        The concept of <em>śruti</em>, “that which is heard”, belongs to a
+        distinctive conception of sacred knowledge.
         </p>
 
         <p>
         The Vedic corpus became part of traditions in which careful oral
-        transmission was itself a form of discipline.
+        transmission was itself a discipline.
         </p>
 
         <p>
-        Textual layers, oral preservation and later manuscripts must therefore
-        be distinguished when discussing chronology.
+        This also reminds us that the date of a surviving manuscript is not
+        necessarily the date of the tradition it preserves.
         </p>
         `
       ],
+
 
       [
         "FROM RITUAL TO PHILOSOPHICAL QUESTION",
+
         `
         <p>
-        The Vedic world cannot be reduced to ritual alone. Through the wider
-        traditions of the Brahmanas, Aranyakas and Upanishads, questions about
-        sacrifice, order, self, knowledge and ultimate reality become increasingly
-        prominent.
+        The Vedic world cannot be reduced to ritual alone.
         </p>
 
         <p>
-        The civilisation preserved inherited forms while repeatedly asking deeper
-        questions about the meaning of action, existence and knowledge.
+        Through the wider textual traditions associated with Brahmanas,
+        Aranyakas and Upanishads, questions of sacrifice, order, self,
+        knowledge and ultimate reality became increasingly prominent.
+        </p>
+
+        <p>
+        This is the beginning of a much larger intellectual journey.
         </p>
         `
       ],
+
 
       [
         "DHARMA AS A LIVED IDEA",
+
         `
         <p>
-        Across later Hindu traditions, <em>dharma</em> becomes a powerful vocabulary
-        for duty, order, conduct and the right way of living. Its meanings are not
-        identical in every text or period, but its importance to Indian ethical
-        and social thought is unmistakable.
+        Across later Hindu traditions, <em>Dharma</em> becomes a powerful
+        vocabulary for duty, order, conduct and the right way of living.
         </p>
 
         <p>
-        For the history of Sanātana life, this is crucial: ideas about duty,
-        family, learning, ritual and community could be woven into everyday life.
-        </p>
-        `
-      ],
-
-      [
-        "THE CHRONOLOGY QUESTION",
-        `
-        <p>
-        Early Indian chronology involves genuine scholarly disagreement.
-        Textual traditions were transmitted orally; manuscripts may be much later
-        than the traditions they preserve; archaeology and language provide
-        different kinds of evidence.
-        </p>
-
-        <p>
-        A strong civilisational history does not fear such questions. It puts the
-        evidence on the table while respecting tradition and identifying uncertainty.
+        Its meanings vary by text and context. Yet the idea becomes deeply
+        woven into discussions of family, society, kingship, education,
+        ritual and ethical responsibility.
         </p>
 
         <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
+          <b>LESSON</b>
           <strong>
-          A civilisation survives when it teaches its children not only what to
-          remember, but how to remember.
+          A living civilisation does not merely preserve knowledge.
+          It teaches people how knowledge should shape life.
           </strong>
         </div>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     04 — ITIHASA
+  ======================================================= */
 
   {
     id: "itihasa",
     era: "vedic",
     category: ["dharma"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ramayana%20manuscript.jpg",
-    meta: "ITIHĀSA • RAMAYANA • MAHABHARATA",
-    title: "The Stories That Shaped Bharat",
+
+    meta:
+      "ITIHĀSA • RAMAYANA • MAHABHARATA",
+
+    title:
+      "The Stories That Shaped Bharat",
+
     deck:
-      "How Ramayana, Mahabharata and Bhagavad Gita became civilisational memory across languages, regions and centuries.",
+      "Ramayana, Mahabharata and Bhagavad Gita as civilisational memory.",
+
     summary:
-      "These traditions shaped ideas of duty, kingship, virtue, devotion, moral struggle, sacred geography and cultural identity.",
+      "The epics shaped ideas of Dharma, kingship, devotion, moral struggle, sacred geography and cultural identity.",
+
     sections: [
+
       [
         "A DIFFERENT KIND OF MEMORY",
+
         `
         <p class="drop">
-        A civilisation remembers in more than one way. It preserves inscriptions,
-        coins and buildings — but it also preserves stories.
+        A civilisation remembers through monuments and inscriptions,
+        but also through stories.
         </p>
 
         <p>
-        The Ramayana and Mahabharata became vast cultural traditions transmitted
-        through recitation, manuscripts, performance, temple art and regional
-        languages.
+        The Ramayana and Mahabharata became vast traditions transmitted
+        through recitation, manuscripts, performance, sculpture, painting
+        and regional languages.
         </p>
         `
       ],
 
+
       [
-        "RAMA AND THE IDEAL OF DUTY",
+        "RAMA AND DHARMA",
+
         `
         <p>
-        The Ramayana places duty, kingship, exile, loyalty, family and moral choice
-        at the centre of a narrative whose forms multiplied across regions.
+        The Ramayana places kingship, duty, exile, family, loyalty and
+        moral choice at the centre of an enduring narrative.
         </p>
 
         <p>
-        The endurance of Rama's story is itself historical evidence of a deep
-        cultural transmission across generations.
+        Its many regional forms demonstrate that continuity did not require
+        every community to tell the story in exactly the same words.
         </p>
         `
       ],
 
+
       [
-        "THE MAHABHARATA AND THE PROBLEM OF DHARMA",
+        "THE MAHABHARATA",
+
         `
         <p>
-        The Mahabharata creates a world in which duty is difficult because duties
-        collide. Family loyalty, political ambition, justice, violence and
-        responsibility pull characters in different directions.
+        The Mahabharata creates a world in which Dharma becomes difficult
+        precisely because duties collide.
         </p>
 
         <p>
-        Within the epic, the Bhagavad Gita presents a profound conversation on
-        action, knowledge, devotion and duty.
+        Family loyalty, political ambition, justice, violence, friendship
+        and responsibility pull characters in different directions.
+        </p>
+
+        <p>
+        Within this larger epic, the Bhagavad Gita provides a concentrated
+        philosophical dialogue on action, knowledge, devotion and duty.
         </p>
         `
       ],
 
-      [
-        "TEXT, TRADITION AND ARCHAEOLOGY",
-        `
-        <p>
-        A responsible history distinguishes what the texts say from what archaeology
-        independently demonstrates.
-        </p>
-
-        <p>
-        That distinction does not diminish the epics. It allows us to examine their
-        textual history, geographic imagination, cultural diffusion and historical
-        memory with intellectual seriousness.
-        </p>
-        `
-      ],
 
       [
-        "THE STORIES TRAVELLED",
+        "TEXT, TRADITION AND HISTORY",
+
         `
         <p>
-        Ramayana traditions spread far beyond the Indian subcontinent. Across
-        Southeast Asia, local societies adapted epic narratives into literature,
-        theatre, sculpture and political culture.
+        A serious history distinguishes traditional memory from archaeological
+        demonstration.
         </p>
 
-        <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
-          <strong>
-          Civilisational continuity can live through stories that are retold,
-          adapted and recognised across generations.
-          </strong>
-        </div>
+        <p>
+        That distinction does not diminish the epics.
+        It allows their textual histories, cultural influence and sacred
+        geography to be studied seriously.
+        </p>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     05 — KNOWLEDGE
+  ======================================================= */
 
   {
     id: "knowledge",
     era: "classical",
     category: ["knowledge"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Nalanda%20Ruins.jpg",
-    meta: "JÑĀNA • MATHEMATICS • ASTRONOMY • MEDICINE",
-    title: "When Questions Became Disciplines",
+
+    meta:
+      "JÑĀNA • MATHEMATICS • ASTRONOMY • MEDICINE",
+
+    title:
+      "When Questions Became Disciplines",
+
     deck:
-      "A long intellectual journey through grammar, mathematics, astronomy, medicine, logic and philosophy.",
+      "Grammar, mathematics, astronomy, medicine, logic and philosophy in the intellectual history of Bharat.",
+
     summary:
-      "The story is not a trophy list of inventions. It is a history of people developing methods, preserving knowledge, arguing over ideas and teaching the next generation.",
+      "The deeper story is not a trophy list of inventions. It is the development of methods, texts and institutions of learning.",
+
     sections: [
+
       [
-        "PANINI AND THE ANALYSIS OF LANGUAGE",
+        "PANINI AND LANGUAGE",
+
         `
         <p class="drop">
-        Language is something every society uses. But what happens when scholars
-        make language itself an object of systematic analysis?
+        Language is something every society uses.
+        What happens when language itself becomes an object of systematic analysis?
         </p>
 
         <p>
-        The grammatical tradition associated with Panini became one of the great
-        monuments of linguistic thought, with an extraordinary emphasis on formal
-        analysis.
-        </p>
-        `
-      ],
-
-      [
-        "LOOKING AT THE SKY",
-        `
-        <p>
-        Aryabhata and later Indian astronomers worked within mathematical traditions
-        that treated celestial phenomena as subjects of calculation.
-        </p>
-
-        <p>
-        Their works belong to a larger global history of astronomy in which
-        different civilisations measured and interpreted the sky.
+        The grammatical tradition associated with Panini became one of the
+        major monuments of Indian intellectual history.
         </p>
         `
       ],
 
+
       [
-        "MEDICINE AS KNOWLEDGE",
+        "THE SKY AND NUMBER",
+
         `
         <p>
-        Texts associated with Charaka and Sushruta became important parts of the
-        history of Indian medicine. They contain discussions of diagnosis,
-        treatment, anatomy, surgery and professional conduct.
+        Aryabhata and later Indian astronomers worked within traditions that
+        treated celestial phenomena as subjects of mathematical calculation.
         </p>
 
         <p>
-        These traditions should be studied historically rather than converted
-        into blanket claims that every modern practice already existed unchanged.
+        Their work belongs to a wider global history of astronomy, while also
+        displaying distinctive developments within Indian mathematics and astronomy.
         </p>
         `
       ],
 
+
       [
-        "ARGUMENT, LOGIC AND PHILOSOPHY",
+        "MEDICINE",
+
         `
         <p>
-        Indian intellectual history contains multiple schools that disagreed with
-        one another on perception, inference, language, reality, self and liberation.
+        Texts associated with Charaka and Sushruta became important components
+        of Indian medical history, discussing diagnosis, treatment, surgery and
+        professional practice.
         </p>
 
         <p>
-        That internal debate is a strength: knowledge grows through argument,
-        criticism and refinement.
+        These traditions should be studied through their actual texts and
+        historical contexts rather than turned into unlimited modern claims.
+        </p>
+        `
+      ],
+
+
+      [
+        "THE CIVILISATION OF ARGUMENT",
+
+        `
+        <p>
+        Indian philosophical traditions included disagreement.
+        Different schools debated perception, inference, language, reality,
+        self and liberation.
+        </p>
+
+        <p>
+        This internal debate is one of the great strengths of the intellectual
+        tradition.
         </p>
 
         <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
+          <b>LESSON</b>
           <strong>
-          Knowledge grows when a civilisation rewards learning, argument, teaching
-          and the courage to question.
+          A civilisation becomes intellectually powerful when it permits
+          knowledge to be questioned, tested and refined.
           </strong>
         </div>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     06 — TEMPLES
+  ======================================================= */
 
   {
     id: "temples",
     era: "classical",
     category: ["temples"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Brihadisvara%20Temple%2C%20Thanjavur%20%2850073712023%29.jpg",
-    meta: "TEMPLE CIVILISATION • CHOLA",
-    title: "When Stone Became Living Memory",
+
+    meta:
+      "TEMPLE CIVILISATION • CHOLA • c. 1009–1010 CE",
+
+    title:
+      "When Stone Became Living Memory",
+
     deck:
       "Temple architecture as sacred space, art, inscription, patronage, community and living practice.",
+
     summary:
-      "The temple story connects worship with architecture, sculpture, music, ritual, economy and collective memory.",
+      "The temple connected worship with sculpture, architecture, music, ritual, institutions and collective memory.",
+
     sections: [
+
       [
         "THE TEMPLE WAS NEVER ONLY STONE",
+
         `
         <p class="drop">
-        Walk toward the Brihadisvara Temple at Thanjavur and the scale itself
-        changes the way the past is understood.
+        Stand before Brihadisvara at Thanjavur and the scale itself changes
+        the way the past is understood.
         </p>
 
         <p>
-        UNESCO recognises the Great Living Chola Temples for outstanding architectural,
-        sculptural, painting and bronze-casting achievements.
+        UNESCO recognises the Great Living Chola Temples for their exceptional
+        architectural, sculptural, painting and bronze-casting achievements.
         </p>
 
         <p>
-        Brihadisvara was consecrated around 1009–1010 CE. Its vimana rises nearly
-        60 metres, while its walls preserve extensive sculpture and inscriptions.
+        Brihadisvara was consecrated around 1009–1010 CE and its vimana rises
+        nearly 60 metres.
         </p>
         `
       ],
+
 
       [
         "INSCRIPTION AS MEMORY",
+
         `
         <p>
-        Temple inscriptions can record donors, endowments, administration, land,
-        festivals, services and other details of institutional life.
+        Temple inscriptions can record donors, endowments, land, administration,
+        services and festivals.
         </p>
 
         <p>
-        They allow historians to move from architecture into the social world
-        that supported it.
+        Architecture therefore becomes an entry point into social and
+        institutional history.
         </p>
         `
       ],
 
+
       [
         "A LIVING TRADITION",
+
         `
         <p>
         The Great Living Chola Temples remain living places of worship.
-        UNESCO notes that traditions of worship established more than a thousand
-        years ago continue to be practised.
+        UNESCO records continuity of worship traditions established more than
+        a thousand years ago.
         </p>
 
         <p>
-        This gives us an important key to Sanātana continuity: the past is sometimes
-        not merely remembered in a museum. It is enacted in living practice.
+        Here the Sanātana story acquires a powerful historical dimension:
+        the past is not simply displayed.
+        <strong>It is practised.</strong>
         </p>
-
-        <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
-          <strong>
-          Preservation is strongest when heritage remains meaningful to the
-          people who inherit it.
-          </strong>
-        </div>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     07 — WORLD
+  ======================================================= */
 
   {
     id: "world",
     era: "classical",
     category: ["world"],
+
     image:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Mahabalipuram.jpg",
-    meta: "BHARAT AND THE WORLD • MARITIME HISTORY",
-    title: "When Bharat Crossed the Ocean",
+
+    meta:
+      "BHARAT AND THE WORLD • MARITIME HISTORY",
+
+    title:
+      "When Bharat Crossed the Ocean",
+
     deck:
-      "Merchants, pilgrims, scholars and artistic traditions connected Bharat with the wider Indian Ocean and Asian worlds.",
+      "Merchants, pilgrims, scholars and cultural traditions connected Bharat with the wider Indian Ocean world.",
+
     summary:
-      "Bharat was not isolated. Ports and networks participated in long-distance exchange, while Indian cultural traditions travelled and were transformed abroad.",
+      "Bharat participated in long-distance exchange while its cultural traditions travelled and were transformed abroad.",
+
     sections: [
+
       [
         "THE OCEAN WAS A HIGHWAY",
+
         `
         <p class="drop">
-        For communities living along India's long coastline, the sea was not simply
-        an edge. It was a route.
+        For coastal communities, the sea was not simply an edge.
+        It was a route.
         </p>
 
         <p>
         Goods, people and ideas moved across the Arabian Sea and Bay of Bengal.
-        Archaeological evidence from different periods shows connections between
-        Indian ports and wider networks.
         </p>
         `
       ],
 
+
       [
-        "FROM TRADE TO CULTURAL EXCHANGE",
+        "TRADE AND CULTURAL EXCHANGE",
+
         `
         <p>
-        Merchants were not the only travellers. Religious teachers, scholars,
-        artisans and pilgrims also moved.
+        Merchants were not the only travellers.
+        Religious teachers, scholars, artisans and pilgrims travelled too.
         </p>
 
         <p>
         Indian scripts, Sanskritic ideas, Hindu and Buddhist traditions and
-        architectural forms became part of the cultural histories of many Asian
+        artistic forms became part of the cultural histories of many Asian
         societies.
-        </p>
-
-        <p>
-        Cultural transmission should not automatically be described as political
-        conquest. Exchange and local adaptation were equally important.
         </p>
         `
       ],
 
+
       [
-        "NALANDA AND THE INTELLECTUAL WORLD",
+        "NALANDA",
+
         `
         <p>
-        UNESCO describes Nalanda Mahavihara as a monastic and scholastic institution
-        with an archaeological history stretching from the 3rd century BCE to the
-        13th century CE and identifies roughly eight centuries of organised
+        UNESCO describes Nalanda Mahavihara as a major monastic and scholastic
+        institution whose archaeological history stretches from the 3rd century
+        BCE to the 13th century CE, with roughly eight centuries of organised
         knowledge transmission.
-        </p>
-
-        <p>
-        Students, teachers, texts and ideas travelled across a wider Asian world.
         </p>
         `
       ]
+
     ]
   },
+
+
+  /* =======================================================
+     08 — CHANGING MAP
+  ======================================================= */
 
   {
     id: "map",
     era: "modern",
     category: ["modern"],
-    image: "../Bharat1.png",
-    meta: "HISTORICAL GEOGRAPHY • THE CHANGING MAP",
-    title: "From Bharatvarsha to Present-Day India",
+
+    image:
+      "../Bharat-map-clean.png",
+
+    meta:
+      "HISTORICAL GEOGRAPHY • BHARATVARSHA • CHANGING POLITICAL MAP",
+
+    title:
+      "From Bharatvarsha to Present-Day India",
+
     deck:
-      "A study of changing political geography, civilisational memory, colonial reordering, Partition and the Republic.",
+      "A historical study of changing political geography, civilisational memory, colonial reordering, Partition and the Republic.",
+
     summary:
-      "The political map changed repeatedly. Civilisational geography and political sovereignty were not always identical.",
+      "The political map changed repeatedly. Civilisational geography and political sovereignty were not identical.",
+
     sections: [
+
       [
         "THE MAP WAS NEVER STATIC",
+
         `
         <p class="drop">
-        Across thousands of years, political boundaries moved. Kingdoms expanded
-        and contracted. Empires appeared and disappeared. Regional powers developed
-        their own political worlds.
+        Across thousands of years, political boundaries moved.
+        Kingdoms expanded and contracted.
+        Empires appeared and disappeared.
         </p>
 
         <p>
-        Bharatvarsha belongs to a long textual and cultural tradition, but it should
-        not be confused with one uninterrupted political state possessing one fixed
-        boundary throughout history.
-        </p>
-        `
-      ],
-
-      [
-        "CIVILISATION AND POLITICAL SOVEREIGNTY",
-        `
-        <p>
-        Sacred geography, pilgrimage, language and literary traditions can cross
-        political boundaries.
-        </p>
-
-        <p>
-        Our map system therefore needs separate layers for civilisational geography,
-        political control, trade networks and sacred geography.
+        Bharatvarsha belongs to a long textual and cultural tradition,
+        while the territory controlled by particular rulers changed
+        from period to period.
         </p>
         `
       ],
 
+
       [
-        "COLONIAL REORDERING AND PARTITION",
+        "CIVILISATION AND POLITICAL POWER",
+
         `
         <p>
-        European commercial expansion eventually became territorial rule.
-        Colonial administration reorganised political geography in new ways.
+        Sacred geography, pilgrimage, language and literary traditions can
+        cross political boundaries.
         </p>
 
         <p>
-        In 1947, Partition created an international frontier and displaced millions
-        of people. The Republic later reorganised its internal states.
+        A civilisational map and a political map therefore answer different
+        historical questions.
         </p>
         `
       ],
 
+
       [
-        "THE MODERN CONSTITUTIONAL ENDPOINT",
+        "COLONIAL REORDERING",
+
         `
         <p>
-        Article 1 of the Constitution states:
+        European commercial expansion eventually developed into territorial
+        rule. Colonial administration reorganised political geography in
+        new ways.
+        </p>
+        `
+      ],
+
+
+      [
+        "1947 AND THE REPUBLIC",
+
+        `
+        <p>
+        Partition created a new international frontier and caused enormous
+        human displacement.
+        </p>
+
+        <p>
+        The Constitution later established the modern Republic.
+        Article 1 states:
         “India, that is Bharat, shall be a Union of States.”
         </p>
 
-        <p>
-        The constitutional phrase describes the structure of the Republic.
-        The civilisational history of Bharat is much older than that constitutional
-        framework.
-        </p>
-
         <div class="lesson-box">
-          <b>LESSON FOR OUR GENERATION</b>
+          <b>LESSON</b>
           <strong>
-          Political borders can change rapidly. Civilisational memory survives
-          when it is transmitted deliberately and intelligently.
+          Political borders can change within generations.
+          Civilisational memory survives only when generations deliberately
+          transmit it.
           </strong>
         </div>
         `
       ]
+
     ]
   }
+
 ];
 
-const cards = document.getElementById("cards");
-const emptyState = document.getElementById("emptyState");
-const searchInput = document.getElementById("searchInput");
-const categoryFilter = document.getElementById("categoryFilter");
-const eraChips = document.querySelectorAll(".era-chip");
 
-function cardMatches(story) {
-  const query = searchInput.value.trim().toLowerCase();
-  const category = categoryFilter.value;
-  const era =
-    document.querySelector(".era-chip.active")?.dataset.era || "all";
+/* =========================================================
+   CARD FILTERING
+========================================================= */
+
+const cards =
+  document.getElementById("cards");
+
+const emptyState =
+  document.getElementById("emptyState");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const categoryFilter =
+  document.getElementById("categoryFilter");
+
+const eraChips =
+  document.querySelectorAll(".era-chip");
+
+
+function cardMatches(story){
+
+  const query =
+    searchInput.value
+      .trim()
+      .toLowerCase();
+
+  const category =
+    categoryFilter.value;
+
+  const activeEra =
+    document
+      .querySelector(".era-chip.active")
+      ?.dataset.era || "all";
+
 
   const haystack = [
+
     story.title,
     story.meta,
     story.deck,
     story.summary,
     story.id,
     ...(story.category || [])
+
   ]
-    .join(" ")
-    .toLowerCase();
+  .join(" ")
+  .toLowerCase();
 
-  const queryOK = !query || haystack.includes(query);
+
+  const queryOK =
+    !query ||
+    haystack.includes(query);
+
+
   const categoryOK =
-    category === "all" || (story.category || []).includes(category);
-  const eraOK = era === "all" || story.era === era;
+    category === "all" ||
+    (story.category || [])
+      .includes(category);
 
-  return queryOK && categoryOK && eraOK;
+
+  const eraOK =
+    activeEra === "all" ||
+    story.era === activeEra;
+
+
+  return (
+    queryOK &&
+    categoryOK &&
+    eraOK
+  );
+
 }
 
-function renderCards() {
-  const visible = stories.filter(cardMatches);
 
-  cards.innerHTML = visible
-    .map(
-      story => `
+/* =========================================================
+   RENDER CARDS
+========================================================= */
+
+function renderCards(){
+
+  const visible =
+    stories.filter(cardMatches);
+
+
+  cards.innerHTML =
+    visible.map(story => `
+
       <article class="story-card">
-        <img src="${story.image}" alt="${story.title}" loading="lazy">
+
+        <img
+          src="${story.image}"
+          alt="${story.title}"
+          loading="lazy"
+          onerror="this.style.opacity='.25'"
+        >
+
         <div class="story-card-body">
-          <div class="meta">${story.meta}</div>
-          <h3>${story.title}</h3>
-          <p>${story.summary}</p>
-          <button class="open-story" data-story="${story.id}">
+
+          <div class="meta">
+            ${story.meta}
+          </div>
+
+          <h3>
+            ${story.title}
+          </h3>
+
+          <p>
+            ${story.summary}
+          </p>
+
+          <button
+            class="open-story"
+            data-story="${story.id}"
+          >
             READ THE FULL STORY →
           </button>
+
         </div>
+
       </article>
-    `
-    )
+
+    `)
     .join("");
 
-  emptyState.hidden = visible.length !== 0;
 
-  document.querySelectorAll(".open-story").forEach(button => {
-    button.addEventListener("click", () =>
-      openReader(button.dataset.story)
-    );
-  });
+  emptyState.hidden =
+    visible.length !== 0;
+
+
+  document
+    .querySelectorAll(".open-story")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          openReader(
+            button.dataset.story
+          );
+
+        }
+      );
+
+    });
+
 }
 
-searchInput.addEventListener("input", renderCards);
-categoryFilter.addEventListener("change", renderCards);
+
+searchInput.addEventListener(
+  "input",
+  renderCards
+);
+
+categoryFilter.addEventListener(
+  "change",
+  renderCards
+);
+
 
 eraChips.forEach(chip => {
-  chip.addEventListener("click", () => {
-    eraChips.forEach(item => item.classList.remove("active"));
-    chip.classList.add("active");
-    renderCards();
-  });
+
+  chip.addEventListener(
+    "click",
+    () => {
+
+      eraChips.forEach(
+        item =>
+          item.classList.remove("active")
+      );
+
+      chip.classList.add("active");
+
+      renderCards();
+
+    }
+  );
+
 });
+
 
 renderCards();
 
-const reader = document.getElementById("reader");
-const readerImage = document.getElementById("readerImage");
-const readerKicker = document.getElementById("readerKicker");
-const readerTitle = document.getElementById("readerTitle");
-const readerDeck = document.getElementById("readerDeck");
-const readerToc = document.getElementById("readerToc");
-const readerContent = document.getElementById("readerContent");
 
-function openReader(id) {
-  const story = stories.find(item => item.id === id);
+/* =========================================================
+   FULL SCREEN ARTICLE READER
+========================================================= */
 
-  if (!story) return;
+const reader =
+  document.getElementById("reader");
 
-  readerImage.src = story.image;
-  readerImage.alt = story.title;
+const readerImage =
+  document.getElementById("readerImage");
 
-  readerKicker.textContent = story.meta;
-  readerTitle.textContent = story.title;
-  readerDeck.textContent = story.deck;
+const readerKicker =
+  document.getElementById("readerKicker");
 
-  readerToc.innerHTML = story.sections
-    .map(
-      (section, index) => `
-      <button data-index="${index}">
-        ${String(index + 1).padStart(2, "0")} • ${section[0]}
-      </button>
-    `
-    )
-    .join("");
+const readerTitle =
+  document.getElementById("readerTitle");
 
-  readerContent.innerHTML = story.sections
-    .map(
-      (section, index) => `
-      <section id="reader-sec-${index}">
-        <h3>${section[0]}</h3>
-        ${section[1]}
-      </section>
-    `
-    )
-    .join("");
+const readerDeck =
+  document.getElementById("readerDeck");
 
-  reader.classList.add("open");
-  reader.setAttribute("aria-hidden", "false");
-  document.body.classList.add("locked");
+const readerToc =
+  document.getElementById("readerToc");
+
+const readerContent =
+  document.getElementById("readerContent");
+
+
+function openReader(id){
+
+  const story =
+    stories.find(
+      item => item.id === id
+    );
+
+  if(!story) return;
+
+
+  readerImage.src =
+    story.image;
+
+  readerImage.alt =
+    story.title;
+
+
+  readerKicker.textContent =
+    story.meta;
+
+
+  readerTitle.textContent =
+    story.title;
+
+
+  readerDeck.textContent =
+    story.deck;
+
+
+  readerToc.innerHTML =
+    story.sections
+      .map(
+        (section,index) => `
+
+          <button
+            data-index="${index}"
+          >
+
+            ${String(index+1).padStart(2,"0")}
+            •
+            ${section[0]}
+
+          </button>
+
+        `
+      )
+      .join("");
+
+
+  readerContent.innerHTML =
+    story.sections
+      .map(
+        (section,index) => `
+
+          <section
+            id="reader-sec-${index}"
+          >
+
+            <h3>
+              ${section[0]}
+            </h3>
+
+            ${section[1]}
+
+          </section>
+
+        `
+      )
+      .join("");
+
+
+  reader.classList.add(
+    "open"
+  );
+
+
+  reader.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+
+  document.body.classList.add(
+    "locked"
+  );
+
+
   reader.scrollTop = 0;
 
-  readerToc.querySelectorAll("button").forEach(button => {
-    button.addEventListener("click", () => {
-      const target = document.getElementById(
-        `reader-sec-${button.dataset.index}`
+
+  readerToc
+    .querySelectorAll("button")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const target =
+            document.getElementById(
+              `reader-sec-${button.dataset.index}`
+            );
+
+
+          if(target){
+
+            target.scrollIntoView({
+
+              behavior:"smooth",
+
+              block:"start"
+
+            });
+
+          }
+
+        }
       );
 
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
     });
-  });
+
 }
 
-function closeReader() {
-  reader.classList.remove("open");
-  reader.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("locked");
+
+function closeReader(){
+
+  reader.classList.remove(
+    "open"
+  );
+
+  reader.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.classList.remove(
+    "locked"
+  );
+
 }
+
 
 document
   .getElementById("readerClose")
-  .addEventListener("click", closeReader);
+  .addEventListener(
+    "click",
+    closeReader
+  );
 
-reader.addEventListener("click", event => {
-  if (event.target === reader) {
-    closeReader();
+
+reader.addEventListener(
+  "click",
+  event => {
+
+    if(
+      event.target === reader
+    ){
+
+      closeReader();
+
+    }
+
   }
-});
+);
 
-const modal = document.getElementById("modal");
-const modalKicker = document.getElementById("modalKicker");
-const modalTitle = document.getElementById("modalTitle");
-const modalBody = document.getElementById("modalBody");
+
+/* =========================================================
+   MAP / EVIDENCE MODAL
+========================================================= */
+
+const modal =
+  document.getElementById("modal");
+
+const modalKicker =
+  document.getElementById("modalKicker");
+
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const modalBody =
+  document.getElementById("modalBody");
+
 
 const modalData = {
+
   map: [
+
     "HISTORICAL GEOGRAPHY",
-    "HOW THE MAP MODULE WILL WORK",
+
+    "HOW THE CHANGING MAP WILL WORK",
+
     `
-    <p>
-    The production map should separate four layers.
-    </p>
+      <p>
+      The historical map will eventually contain separate layers.
+      </p>
 
-    <div class="evidence">
-      <div>
-        <b>POLITICAL</b>
-        <span>Territory controlled by a specific power in a specific period.</span>
+      <div class="evidence">
+
+        <div>
+
+          <b>POLITICAL</b>
+
+          <span>
+          Territory controlled by a particular power
+          during a particular period.
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <b>CIVILISATIONAL</b>
+
+          <span>
+          Sacred geography, texts and long-term
+          cultural connections.
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <b>NETWORKS</b>
+
+          <span>
+          Trade, pilgrimage and intellectual routes.
+          </span>
+
+        </div>
+
       </div>
 
-      <div>
-        <b>CIVILISATIONAL</b>
-        <span>Texts, sacred geography and long-term cultural connections.</span>
-      </div>
 
-      <div>
-        <b>NETWORKS</b>
-        <span>Trade, pilgrimage and intellectual routes.</span>
-      </div>
-    </div>
-
-    <p>
-    This prevents modern political borders from being projected backward onto
-    ancient history while still allowing the visitor to understand the long story
-    of Bharatvarsha.
-    </p>
+      <p>
+      This allows the visitor to understand the changing
+      political map without projecting modern borders
+      backward onto every period.
+      </p>
     `
+
   ]
+
 };
 
-document.querySelectorAll("[data-modal]").forEach(button => {
-  button.addEventListener("click", () => {
-    const data = modalData[button.dataset.modal];
 
-    if (!data) return;
+document
+  .querySelectorAll(
+    "[data-modal]"
+  )
+  .forEach(button => {
 
-    modalKicker.textContent = data[0];
-    modalTitle.textContent = data[1];
-    modalBody.innerHTML = data[2];
+    button.addEventListener(
+      "click",
+      () => {
 
-    modal.classList.add("open");
-    document.body.classList.add("locked");
+        const data =
+          modalData[
+            button.dataset.modal
+          ];
+
+        if(!data) return;
+
+
+        modalKicker.textContent =
+          data[0];
+
+
+        modalTitle.textContent =
+          data[1];
+
+
+        modalBody.innerHTML =
+          data[2];
+
+
+        modal.classList.add(
+          "open"
+        );
+
+
+        document.body.classList.add(
+          "locked"
+        );
+
+      }
+    );
+
   });
-});
 
-function closeModal() {
-  modal.classList.remove("open");
-  document.body.classList.remove("locked");
+
+function closeModal(){
+
+  modal.classList.remove(
+    "open"
+  );
+
+  document.body.classList.remove(
+    "locked"
+  );
+
 }
 
-document.getElementById("modalClose").addEventListener("click", closeModal);
 
-modal.addEventListener("click", event => {
-  if (event.target === modal) {
-    closeModal();
-  }
-});
+document
+  .getElementById("modalClose")
+  .addEventListener(
+    "click",
+    closeModal
+  );
 
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeReader();
-    closeModal();
+
+modal.addEventListener(
+  "click",
+  event => {
+
+    if(
+      event.target === modal
+    ){
+
+      closeModal();
+
+    }
+
   }
-});
+);
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(event.key === "Escape"){
+
+      closeReader();
+
+      closeModal();
+
+    }
+
+  }
+);
