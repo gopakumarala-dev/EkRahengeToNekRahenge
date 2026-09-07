@@ -1,1 +1,77 @@
 
+{
+  "articles": [
+    {
+      "id": "deep-antiquity",
+      "title": "Before There Were Kingdoms",
+      "subtitle": "The Deep Antiquity of Bharat",
+      "era": "prehistory",
+      "period": "Deep Antiquity",
+      "category": "ancient",
+      "status": "published"
+    },
+    {
+      "id": "harappan",
+      "title": "When the Cities Rose",
+      "subtitle": "The Harappan World",
+      "era": "harappan",
+      "period": "c. 3rd–2nd millennium BCE",
+      "category": "ancient",
+      "status": "published"
+    },
+    {
+      "id": "vedic",
+      "title": "When Knowledge Was Carried by Memory",
+      "subtitle": "The Vedic World",
+      "era": "vedic",
+      "period": "Early Indian textual traditions",
+      "category": "dharma",
+      "status": "published"
+    },
+    {
+      "id": "itihasa",
+      "title": "The Stories That Shaped Bharat",
+      "subtitle": "Ramayana • Mahabharata • Bhagavad Gita",
+      "era": "vedic",
+      "period": "Itihāsa traditions",
+      "category": "dharma",
+      "status": "published"
+    },
+    {
+      "id": "knowledge",
+      "title": "When Questions Became Disciplines",
+      "subtitle": "Mathematics • Astronomy • Medicine • Philosophy",
+      "era": "classical",
+      "period": "Classical and later knowledge traditions",
+      "category": "knowledge",
+      "status": "published"
+    },
+    {
+      "id": "temples",
+      "title": "When Stone Became Living Memory",
+      "subtitle": "The Temple Civilisation",
+      "era": "classical",
+      "period": "Temple traditions across centuries",
+      "category": "temples",
+      "status": "published"
+    },
+    {
+      "id": "world",
+      "title": "When Bharat Crossed the Ocean",
+      "subtitle": "Bharat and the Wider World",
+      "era": "classical",
+      "period": "Indian Ocean and Asian connections",
+      "category": "world",
+      "status": "published"
+    },
+    {
+      "id": "map",
+      "title": "From Bharatvarsha to Present-Day India",
+      "subtitle": "The Changing Political Geography",
+      "era": "modern",
+      "period": "Ancient to modern",
+      "category": "modern",
+      "status": "published"
+    }
+  ]
+}
