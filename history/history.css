@@ -1785,3 +1785,15 @@ footer b{
   transform: translateX(5px);
   letter-spacing: 0.04em;
 }
+.article-card-read {
+  color: #d8892f;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.article-card:hover .article-card-read {
+  color: #f0a04b;
+  transform: translateX(5px);
+  letter-spacing: 0.04em;
+}
