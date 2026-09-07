@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupSearch();
   setupEraFilters();
   setupKeyboardControls();
+  setupReaderCloseButton();
 
   await loadArticleIndex();
 });
-
 
 /* =========================================================
    LOAD ARTICLE INDEX
@@ -1096,11 +1096,23 @@ function setupKeyboardControls() {
    ========================================================= */
 
 function closeReader() {
+
   if (!reader) return;
 
   reader.classList.remove("open");
 
   document.body.classList.remove("reader-open");
+
+  /*
+    Return the reader to the top for the next article.
+  */
+
+  reader.scrollTop = 0;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 
 
@@ -1244,3 +1256,35 @@ window.HistoryApp = {
   loadArticleIndex,
   renderCards
 };
+/* =========================================================
+   READER CLOSE BUTTON
+   ========================================================= */
+
+function setupReaderCloseButton() {
+
+  if (!reader) return;
+
+  /*
+    Find the reader's close button.
+    This supports the existing design even if the
+    button does not yet have a dedicated ID.
+  */
+
+  const closeButton =
+    reader.querySelector(".reader-close") ||
+    reader.querySelector("[data-close-reader]") ||
+    Array.from(reader.querySelectorAll("button"))
+      .find(button => button.textContent.trim() === "×");
+
+  if (!closeButton) {
+    console.warn("History reader close button not found.");
+    return;
+  }
+
+  closeButton.addEventListener("click", event => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    closeReader();
+  });
+}
