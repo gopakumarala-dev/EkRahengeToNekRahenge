@@ -1,1 +1,695 @@
 
+{
+  "id": "map",
+  "era": "MODERN",
+  "category": "Ancient to modern",
+  "title": "From Bharatvarsha to Present-Day India",
+  "subtitle": "The Changing Political Geography",
+  "description": "A research study of the changing political geography of Bharat: Bhāratavarṣa and sacred geography, ancient empires and regional kingdoms, Sultanates and Vijayanagara, Mughal and Maratha power, colonial cartography, Partition, integration of princely states, the Constitution, linguistic reorganisation and the continuing formation of the Republic.",
+  "readLabel": "READ RESEARCH ARTICLE →",
+  "heroImage": "../images/map-hero.jpg",
+  "openingQuote": {
+    "sanskrit": "उत्तरं यत्समुद्रस्य हिमाद्रेश्चैव दक्षिणम् । वर्षं तद् भारतं नाम भारती यत्र सन्ततिः ॥",
+    "translation": "The land north of the ocean and south of the Himalaya is called Bharata, where the descendants of Bharata dwell.",
+    "source": "Viṣṇu Purāṇa 2.3.1",
+    "significance": "A classic textual formulation of Bhāratavarṣa; it should be studied as a historical civilisational-geographical concept rather than mechanically equated with the modern constitutional territory."
+  },
+  "abstract": "The political geography of Bharat has never been static. The subcontinent has been divided among many kingdoms, consolidated under large empires, reorganised by colonial administration, partitioned in 1947 and repeatedly redrawn within the constitutional framework of the Republic. Yet political boundaries are only one layer of geography. Alongside kingdoms and provinces existed sacred routes, pilgrimage networks, temple institutions, languages, commercial corridors, literary traditions and memories that connected regions across dynastic frontiers. This article distinguishes civilisational geography from political sovereignty and follows the transformation from Bhāratavarṣa through ancient imperial and regional formations, Sultanates, Vijayanagara, Mughal and Maratha power, British rule, Partition, integration of princely states and the constitutional Republic.",
+  "sections": [
+    {
+      "number": 1,
+      "title": "A Civilisation Is Not the Same Thing as a State",
+      "content": [
+        "The first distinction necessary for understanding the political geography of Bharat is between civilisation and state. A state has a government, territory, institutions and mechanisms of coercion. A civilisation can persist across many states through shared memories, sacred geography, languages, intellectual traditions, pilgrimage networks, stories and social institutions. Bhāratavarṣa belongs first to the history of civilisational geography. Its meaning changed across texts and historical periods, and it should not be projected backward as though it were always identical to the territory of the modern Republic of India."
+      ]
+    },
+    {
+      "number": 2,
+      "title": "What Did Bhāratavarṣa Mean?",
+      "content": [
+        "The Sanskrit expression Bhāratavarṣa appears in Purāṇic and other textual traditions as a geographical and cultural designation. The concept was not frozen. Different texts describe its extent and boundaries differently. The historical question is therefore how Indian intellectual traditions imagined the land, its peoples, sacred places and political regions at different moments. This allows civilisational continuity to be studied without pretending that ancient boundaries were identical to modern international frontiers."
+      ]
+    },
+    {
+      "number": 3,
+      "title": "The Himalaya and the Ocean",
+      "content": [
+        "Indian geographical imagination frequently used the Himalaya and the surrounding seas as major spatial markers. The land between these natural features could be conceived as a distinctive cultural world even when no single monarch controlled it. Pilgrimage, sacred rivers, teachers, texts and commercial routes reinforced this geography."
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Mahājanapadas: Many States Within One Civilisational Space",
+      "content": [
+        "By the first millennium BCE, northern India contained numerous mahājanapadas and smaller political communities. Kosala, Magadha, Vatsa, Avanti, Kuru, Panchala, Gandhara and others had distinct political histories. Political plurality did not prevent common intellectual and religious traditions from crossing boundaries."
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Magadha and the First Great Imperial Expansion",
+      "content": [
+        "Magadha gradually became the dominant power of northern India. The Nanda and Maurya formations created an imperial scale of political control far larger than the earlier mahājanapadas. The Mauryan achievement under Chandragupta Maurya and his successors demonstrates that periods of consolidation could encompass very large portions of the subcontinent, but such consolidation was historically contingent rather than permanent."
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Aśoka and the Geography of Empire",
+      "content": [
+        "Aśoka's inscriptions are among the strongest primary sources for reconstructing Mauryan political geography. Rock and Pillar Edicts survive across a wide area and provide a geographical footprint of imperial communication and authority. The inscriptions also reveal limits: political reach was not identical to every region of the subcontinent, and territories beyond direct administration are sometimes distinguished."
+      ]
+    },
+    {
+      "number": 7,
+      "title": "After the Mauryas: Fragmentation Without Civilisational Disappearance",
+      "content": [
+        "The Mauryan Empire did not create a permanent unitary state. After its decline, political authority became distributed among Śuṅgas, Indo-Greeks, Śakas, Sātavāhanas, Kuṣāṇas and numerous regional powers. Yet the post-Mauryan period also witnessed intense circulation of coins, artistic forms, religious institutions and commercial networks."
+      ]
+    },
+    {
+      "number": 8,
+      "title": "The Gupta Age and the Idea of Political Supremacy",
+      "content": [
+        "The Gupta rulers created another major north Indian imperial formation. Samudragupta's Allahabad Pillar inscription records campaigns, tributary rulers, frontier states and forest regions rather than presenting the entire subcontinent as uniformly annexed. It reveals layered sovereignty: direct rule in some regions, subordinate rulers elsewhere and diplomatic relationships beyond the imperial core."
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Regional Kingdoms Were Not Historical Failure",
+      "content": [
+        "After the Guptas, powerful regional states emerged across the subcontinent: Pallavas, Chalukyas, Rashtrakutas, Palas, Pratiharas, Cholas, Pandyas, Cheras and many others. These kingdoms developed distinctive political institutions, temple networks, literary cultures and commercial systems. Regional identity was not necessarily opposition to a larger Bharat."
+      ]
+    },
+    {
+      "number": 10,
+      "title": "The Sacred Geography of Bharat",
+      "content": [
+        "Pilgrimage was one of the most durable forms of integration. Kashi, Prayaga, Gaya, Mathura, Ayodhya, Kurukshetra, Puri, Rameswaram, Ujjain, Dvaraka and Kanchipuram formed networks extending across political boundaries. Rivers, mountains, temples and narratives transformed physical space into sacred space."
+      ]
+    },
+    {
+      "number": 11,
+      "title": "The Temple Network and Regional Power",
+      "content": [
+        "Temples were deeply regional institutions, but many were also nodes in wider networks of pilgrimage, scholarship, patronage and exchange. Temple inscriptions provide evidence of land grants, taxation, merchants, irrigation, political authority and local society. Political geography can therefore be reconstructed from institutional landscapes as well as royal chronicles."
+      ]
+    },
+    {
+      "number": 12,
+      "title": "The Chola Expansion Across the Seas",
+      "content": [
+        "The Cholas demonstrate that Indian political geography could extend beyond the subcontinent without becoming a permanent territorial empire over all of Southeast Asia. Rajaraja I and Rajendra I created a powerful south Indian state, and Chola expeditions reached across the Bay of Bengal. Overseas expedition, commercial influence, cultural connection and permanent territorial sovereignty must nevertheless be distinguished."
+      ]
+    },
+    {
+      "number": 13,
+      "title": "The Delhi Sultanate and a New Imperial Geography",
+      "content": [
+        "From the thirteenth century, the Delhi Sultanate established political formations whose centres of power were in northern India but whose authority expanded and contracted dramatically. New political elites interacted with established kingdoms, temples, agrarian institutions, merchants and local landed groups. The resulting geography was layered and contested."
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Vijayanagara and the Southern Counterweight",
+      "content": [
+        "Vijayanagara became one of the major political formations of southern India. Its rulers controlled extensive territories at different times, while its capital became a centre of monumental architecture, commerce and religious patronage. Its political world included Kannada, Telugu, Tamil and Sanskrit traditions and interacted with neighbouring Muslim and Hindu states."
+      ]
+    },
+    {
+      "number": 15,
+      "title": "The Mughal Imperium and the Question of 'India'",
+      "content": [
+        "The Mughal Empire created one of the largest early modern imperial formations in South Asia. Under Akbar and his successors, imperial institutions, revenue administration and military organisation extended across much of the subcontinent. Yet Mughal sovereignty was not uniform: frontier zones, autonomous chiefs, regional powers and shifting alliances remained important."
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Marathas, Sikhs and the Reconfiguration of Power",
+      "content": [
+        "The eighteenth century witnessed a major redistribution of political power. The Marathas developed a wide confederated sphere of influence; the Sikh misls and later Sikh Empire transformed the northwest; Mysore, Hyderabad, Awadh, Bengal and other powers asserted substantial autonomy. This was not merely an empty interval between Mughal and British rule but an age of political experimentation."
+      ]
+    },
+    {
+      "number": 17,
+      "title": "The East India Company Changes the Map",
+      "content": [
+        "The East India Company began as a commercial corporation but, through military victories, revenue settlements, alliances and annexations, became a territorial power. Bengal, Mysore, Maratha territories and many other regions were progressively incorporated into British-controlled systems. The crucial change was the construction of a new political and fiscal architecture."
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Doctrine, Annexation and Paramountcy",
+      "content": [
+        "British expansion used conquest, treaties, subsidiary alliances, the Doctrine of Lapse and other forms of intervention. Alongside directly ruled provinces remained numerous princely states under British paramountcy. British India was therefore never one uniform administrative territory."
+      ]
+    },
+    {
+      "number": 19,
+      "title": "The 1857 Uprising and the End of Company Rule",
+      "content": [
+        "The uprising of 1857 spread across substantial parts of north and central India and involved soldiers, rulers, landed groups and civilians with varied motives. After 1858, the British Crown assumed direct rule over the territories formerly administered by the Company while retaining the princely-state system."
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Colonial Cartography and the Modern Map",
+      "content": [
+        "Modern surveying, census operations, railways, postal systems and administrative boundaries gave the subcontinent an increasingly standardised bureaucratic geography. Colonial mapping did not invent Indian geographical consciousness, but it transformed the way territory was measured, classified and governed."
+      ]
+    },
+    {
+      "number": 21,
+      "title": "The Freedom Movement and the Political Meaning of India",
+      "content": [
+        "The freedom movement increasingly demanded political sovereignty for the people of India. Different organisations developed different visions of the future. The word India acquired a modern constitutional and national meaning while older terms such as Bharat and Hindustan continued to carry cultural and historical meanings."
+      ]
+    },
+    {
+      "number": 22,
+      "title": "The 1947 Partition",
+      "content": [
+        "Independence in 1947 came with Partition. The boundary divided Punjab and Bengal and produced one of the largest forced migrations of the twentieth century. Partition changed the political map profoundly, but it did not erase older cultural geography, family networks, languages, pilgrimage traditions and memories."
+      ]
+    },
+    {
+      "number": 23,
+      "title": "The Princely States and the Problem of Accession",
+      "content": [
+        "At independence, the princely states faced a new constitutional situation. Their rulers had to determine their relationship with the successor dominions. The accession and integration process transformed a fragmented inheritance into a functioning Union. Hyderabad, Junagadh, Kashmir and other cases followed different paths and require separate historical treatment."
+      ]
+    },
+    {
+      "number": 24,
+      "title": "The Constitution: India, That Is Bharat",
+      "content": [
+        "The Constitution gave the modern state its definitive constitutional identity. Article 1 declares: 'India, that is Bharat, shall be a Union of States.' The wording places the two names together within the constitutional identity of the Republic. The modern state is thus connected to an older historical vocabulary without claiming that its present borders are ancient."
+      ]
+    },
+    {
+      "number": 25,
+      "title": "The Union and Its Territory",
+      "content": [
+        "The Constitution provides Parliament with power to admit or establish states and to alter the area, boundaries or names of existing states. Internal political geography is constitutionally capable of change without requiring the creation of a new country. The modern Indian map is therefore a political creation that can evolve."
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Linguistic Reorganisation and the Great Internal Redrawing",
+      "content": [
+        "The first decades of the Republic demonstrated that political unity did not require identical regional boundaries. The demand for states organised around linguistic identities became a major constitutional challenge. The States Reorganisation Act of 1956 reorganised boundaries on broadly linguistic lines, and later changes continued the process."
+      ]
+    },
+    {
+      "number": 27,
+      "title": "The Northeast and the Limits of One Template",
+      "content": [
+        "The northeastern region followed a different historical trajectory. Frontier administration, tribal societies, linguistic diversity, migration and post-independence security concerns shaped a series of state formations including Nagaland, Meghalaya, Manipur, Tripura, Mizoram and Arunachal Pradesh. Indian political geography developed through multiple principles rather than one template."
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Goa, Sikkim and the Continuing Formation of the Union",
+      "content": [
+        "The political map continued to change after the first great reorganisation. Goa became a state in 1987 after the end of Portuguese rule and its period as a Union Territory. Sikkim became a full state in 1975 through a constitutional process. The modern map is therefore a historical process rather than a single event."
+      ]
+    },
+    {
+      "number": 29,
+      "title": "The States Created in 2000 and After",
+      "content": [
+        "In 2000, Chhattisgarh was created from Madhya Pradesh, Uttarakhand from Uttar Pradesh and Jharkhand from Bihar. Telangana followed in 2014 after the reorganisation of Andhra Pradesh. These changes show that the Union can accommodate regional administration while retaining constitutional unity."
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Jammu and Kashmir: A Distinct Constitutional History",
+      "content": [
+        "Jammu and Kashmir occupies a particularly complex place in modern political geography because of its history of accession, conflict, constitutional arrangements and international dispute. Its internal administrative structure changed substantially in 2019 when the former state was reorganised into the Union Territories of Jammu and Kashmir and Ladakh. Civilisational geography, accession, constitutional history and international dispute must be distinguished."
+      ]
+    },
+    {
+      "number": 31,
+      "title": "What the Modern Map Does Not Tell Us",
+      "content": [
+        "A political map cannot show pilgrimage routes, literary traditions, family networks, temple networks, shared epics, philosophical traditions or centuries of migration. The modern map is indispensable for law and administration, but it is not a complete map of civilisation. Historical geography requires several layers."
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Bharat, Akhand Bharat and Historical Responsibility",
+      "content": [
+        "The expression Akhand Bharat is used in different modern political and cultural contexts and requires careful definition. As a civilisational idea it can refer to a memory of interconnected regions of the subcontinent and neighbouring cultural zones. As a proposal for present political borders it becomes a modern geopolitical claim. Scholarship must distinguish historical description from contemporary political aspiration."
+      ]
+    },
+    {
+      "number": 33,
+      "title": "The Strategic Lesson: Unity Without Uniformity",
+      "content": [
+        "The history of Bharat reveals repeated tension between unity and fragmentation. Political rivalry, succession disputes, regional competition and failures of coordination sometimes weakened states. At other times, regional diversity produced extraordinary cultural, economic and intellectual vitality. The deeper lesson is that a civilisation requires mechanisms of cooperation capable of surviving changes of dynasty, language and regional power."
+      ]
+    },
+    {
+      "number": 34,
+      "title": "From a Civilisational Map to a Constitutional Union",
+      "content": [
+        "The present Republic is neither simply the continuation of one ancient empire nor an entirely new creation unrelated to the past. It is a modern constitutional state situated within a much older civilisational landscape. Continuity lies in memories, names, sacred geographies, languages, institutions and intellectual traditions; discontinuity lies in sovereignty, constitutional law, citizenship and international borders."
+      ]
+    },
+    {
+      "number": 35,
+      "title": "The Map Is Never the Whole Story",
+      "content": [
+        "From Bhāratavarṣa to the Republic of India, political geography has changed repeatedly. Kingdoms rose and fell, empires expanded and contracted, colonial rule transformed administration, Partition created an international frontier, and the Republic repeatedly reorganised internal boundaries. Yet civilisational memory proved resilient. The map changed constantly; the capacity to recreate relationships across changing political boundaries endured."
+      ]
+    }
+  ],
+  "chronology": [
+    {
+      "date": "c. 1st millennium BCE",
+      "period": "Mahājanapada age",
+      "significance": "Multiple political communities develop across northern India while wider religious, commercial and intellectual networks cross their boundaries."
+    },
+    {
+      "date": "c. 322–185 BCE",
+      "period": "Mauryan Empire",
+      "significance": "A major imperial formation creates an unprecedented scale of political consolidation across much of the subcontinent."
+    },
+    {
+      "date": "3rd century BCE",
+      "period": "Aśokan inscriptions",
+      "significance": "Edicts distributed across a wide geography provide direct evidence for imperial communication and authority."
+    },
+    {
+      "date": "c. 4th–6th centuries CE",
+      "period": "Gupta imperial age",
+      "significance": "Northern imperial power expands while inscriptions reveal layered relationships with regional and frontier powers."
+    },
+    {
+      "date": "c. 7th–13th centuries",
+      "period": "Regional imperial formations",
+      "significance": "Pallava, Chalukya, Rashtrakuta, Pala, Pratihara, Chola and other powers create overlapping political and cultural geographies."
+    },
+    {
+      "date": "13th–16th centuries",
+      "period": "Delhi Sultanate and regional states",
+      "significance": "New imperial formations emerge alongside Rajput, southern and other regional powers."
+    },
+    {
+      "date": "14th–16th centuries",
+      "period": "Vijayanagara",
+      "significance": "A major southern imperial formation develops around a multilingual and religiously diverse political world."
+    },
+    {
+      "date": "16th–18th centuries",
+      "period": "Mughal and regional imperial formations",
+      "significance": "Mughal power reaches much of the subcontinent while regional states retain substantial autonomy and later expand."
+    },
+    {
+      "date": "18th century",
+      "period": "Maratha, Sikh and other regional powers",
+      "significance": "Political authority is redistributed among several Indian powers during transformation of the early modern order."
+    },
+    {
+      "date": "18th–19th centuries",
+      "period": "Company expansion",
+      "significance": "The East India Company develops from a commercial corporation into a territorial and fiscal power."
+    },
+    {
+      "date": "1858",
+      "period": "Beginning of Crown rule",
+      "significance": "British Crown rule replaces Company rule while retaining princely-state arrangements."
+    },
+    {
+      "date": "1947",
+      "period": "Independence and Partition",
+      "significance": "British India is partitioned and the political map of South Asia is fundamentally altered."
+    },
+    {
+      "date": "1947–1950",
+      "period": "Integration and constitutional transition",
+      "significance": "Princely states are integrated into the new Union while the Constituent Assembly frames the Constitution."
+    },
+    {
+      "date": "1956",
+      "period": "States Reorganisation Act",
+      "significance": "India's internal state boundaries are extensively reorganised, particularly on linguistic and administrative principles."
+    },
+    {
+      "date": "1975–2014",
+      "period": "Continuing state formation",
+      "significance": "Sikkim, Goa and later Chhattisgarh, Jharkhand, Uttarakhand and Telangana illustrate continuing constitutional reorganisation."
+    },
+    {
+      "date": "2019",
+      "period": "Jammu and Kashmir reorganisation",
+      "significance": "The former state is reorganised into the Union Territories of Jammu and Kashmir and Ladakh."
+    }
+  ],
+  "primaryTexts": [
+    "Viṣṇu Purāṇa 2.3.1",
+    "Mahābhārata geographical passages",
+    "Aśokan Rock and Pillar Edicts",
+    "Allahabad Pillar inscription of Samudragupta",
+    "Chola inscriptions",
+    "Akbarnāma and Āʾīn-i Akbarī",
+    "British administrative records",
+    "Indian Independence Act 1947",
+    "Constitution of India, Part I and First Schedule",
+    "States Reorganisation Act 1956"
+  ],
+  "importantPassages": [
+    {
+      "text": "उत्तरं यत्समुद्रस्य हिमाद्रेश्चैव दक्षिणम् । वर्षं तद् भारतं नाम भारती यत्र सन्ततिः ॥",
+      "translation": "The land north of the ocean and south of the Himalaya is called Bharata, where the descendants of Bharata dwell.",
+      "source": "Viṣṇu Purāṇa 2.3.1",
+      "significance": "Important for the textual history of Bhāratavarṣa."
+    },
+    {
+      "text": "India, that is Bharat, shall be a Union of States.",
+      "translation": "The constitutional name of the modern Union.",
+      "source": "Constitution of India, Article 1",
+      "significance": "Connects the modern constitutional state with the historical name Bharat."
+    },
+    {
+      "text": "Parliament may by law ... alter the boundaries of any State.",
+      "translation": "Constitutional authority for changing internal state boundaries.",
+      "source": "Constitution of India, Article 3",
+      "significance": "Demonstrates that India's internal political geography can evolve constitutionally."
+    }
+  ],
+  "majorFigures": [
+    {
+      "name": "Chandragupta Maurya",
+      "field": "Imperial state formation",
+      "significance": "Founder of the Mauryan imperial formation."
+    },
+    {
+      "name": "Aśoka",
+      "field": "Imperial administration and inscriptions",
+      "significance": "His edicts provide extensive primary evidence for Mauryan political geography."
+    },
+    {
+      "name": "Samudragupta",
+      "field": "Gupta imperial history",
+      "significance": "His Allahabad Pillar inscription records campaigns and relationships with regional powers."
+    },
+    {
+      "name": "Rajaraja Chola I",
+      "field": "South Indian imperial history",
+      "significance": "Expanded Chola power across southern India and developed a major maritime state."
+    },
+    {
+      "name": "Rajendra Chola I",
+      "field": "Maritime and imperial history",
+      "significance": "Extended Chola military and commercial reach across the Bay of Bengal."
+    },
+    {
+      "name": "Akbar",
+      "field": "Mughal imperial history",
+      "significance": "Expanded and institutionalised Mughal rule across a large part of northern and central India."
+    },
+    {
+      "name": "Shivaji Maharaj",
+      "field": "Maratha state formation",
+      "significance": "Established a powerful Maratha polity and distinctive statecraft."
+    },
+    {
+      "name": "Ranjit Singh",
+      "field": "Sikh state formation",
+      "significance": "Built the Sikh Empire in northwestern India."
+    },
+    {
+      "name": "Sardar Vallabhbhai Patel",
+      "field": "Integration of princely states",
+      "significance": "Central political figure in integration of princely states."
+    },
+    {
+      "name": "B. R. Ambedkar",
+      "field": "Constitutional history",
+      "significance": "Chairman of the Drafting Committee and major constitutional thinker."
+    }
+  ],
+  "majorSites": [
+    {
+      "name": "Pataliputra",
+      "region": "Bihar",
+      "importance": "Major imperial capital associated with Mauryan and Gupta political worlds."
+    },
+    {
+      "name": "Prayagraj / Allahabad Pillar",
+      "region": "Uttar Pradesh",
+      "importance": "Site of the major Gupta inscription of Samudragupta."
+    },
+    {
+      "name": "Ujjain",
+      "region": "Madhya Pradesh",
+      "importance": "Long-standing political, commercial and sacred centre."
+    },
+    {
+      "name": "Kanchipuram",
+      "region": "Tamil Nadu",
+      "importance": "Major Pallava and later sacred and intellectual centre."
+    },
+    {
+      "name": "Hampi",
+      "region": "Karnataka",
+      "importance": "Capital of Vijayanagara and major archaeological record of early modern southern India."
+    },
+    {
+      "name": "Delhi",
+      "region": "Delhi",
+      "importance": "Repeated imperial capital and major centre of Sultanate, Mughal and British political power."
+    },
+    {
+      "name": "Raigad",
+      "region": "Maharashtra",
+      "importance": "Important capital and symbolic centre of the Maratha state under Shivaji Maharaj."
+    },
+    {
+      "name": "Lahore",
+      "region": "Punjab region",
+      "importance": "Major political centre under Mughal and Sikh rule, now outside the Republic of India."
+    },
+    {
+      "name": "Kolkata",
+      "region": "West Bengal",
+      "importance": "Major capital and administrative centre during British expansion."
+    },
+    {
+      "name": "New Delhi",
+      "region": "Delhi",
+      "importance": "Imperial and later constitutional capital of India."
+    },
+    {
+      "name": "Hyderabad",
+      "region": "Telangana",
+      "importance": "Major princely state whose integration became a defining event in consolidation of the Union."
+    }
+  ],
+  "evidenceCategories": [
+    {
+      "category": "Texts",
+      "examples": "Purāṇas, epics, inscriptions, chronicles, administrative records and constitutional documents."
+    },
+    {
+      "category": "Inscriptions",
+      "examples": "Aśokan edicts, Gupta inscriptions, temple records and royal grants."
+    },
+    {
+      "category": "Coins",
+      "examples": "Numismatic evidence for rulers, political authority and economic circulation."
+    },
+    {
+      "category": "Archaeology",
+      "examples": "Capitals, fortifications, temples, urban settlements, roads and administrative centres."
+    },
+    {
+      "category": "Cartography",
+      "examples": "Colonial surveys, maps, cadastral records and modern constitutional maps."
+    },
+    {
+      "category": "Administrative records",
+      "examples": "Revenue settlements, district records, princely-state documents and legislation."
+    },
+    {
+      "category": "Sacred geography",
+      "examples": "Pilgrimage networks, temple circuits, rivers and tīrthas."
+    },
+    {
+      "category": "Linguistic geography",
+      "examples": "Languages, scripts and literary regions as evidence for regional identities."
+    }
+  ],
+  "researchQuestions": [
+    "How did the meaning of Bhāratavarṣa change across textual traditions?",
+    "How should civilisational geography be distinguished from imperial sovereignty?",
+    "What can Aśokan inscriptions reveal about Mauryan administrative limits?",
+    "How should layered sovereignty in Gupta inscriptions be mapped?",
+    "How did pilgrimage create connections across political boundaries?",
+    "How did temple institutions influence regional political geography?",
+    "How should Chola maritime expansion be distinguished from territorial empire?",
+    "How did the Delhi Sultanate interact with pre-existing political structures?",
+    "How did Vijayanagara combine regional identities within imperial institutions?",
+    "How did Mughal sovereignty vary between imperial core and frontier?",
+    "How did Maratha and Sikh state formation alter the eighteenth-century map?",
+    "How did British cartography transform older spatial concepts?",
+    "How did colonial boundaries influence post-independence state formation?",
+    "How were princely states integrated into the Indian Union?",
+    "Why did linguistic reorganisation strengthen rather than destroy the Union?",
+    "How should Akhand Bharat be studied historically without confusing civilisational memory with a present territorial programme?"
+  ],
+  "scholarlyCautions": [
+    "Do not project present Indian boundaries backward onto every ancient text.",
+    "Do not equate Bhāratavarṣa automatically with a single ancient sovereign state.",
+    "Distinguish direct administration, tributary relationships, alliance, cultural influence and military expedition.",
+    "Do not describe political fragmentation as civilisational collapse.",
+    "Do not treat colonial maps as neutral descriptions without considering their administrative purpose.",
+    "Do not reduce Partition to a single cause.",
+    "Do not treat all princely states as identical in legal or political status.",
+    "Distinguish the historical concept of Bharat from modern political projects using terms such as Akhand Bharat.",
+    "Separate constitutional facts from political opinion."
+  ],
+  "scholars": [
+    {
+      "name": "B. D. Chattopadhyaya",
+      "field": "Early Indian history and historical geography",
+      "relevance": "Important work on Bhāratavarṣa, regional identities and Indian spatial concepts."
+    },
+    {
+      "name": "Upinder Singh",
+      "field": "Ancient Indian history",
+      "relevance": "Research on political institutions, inscriptions, archaeology and changing geography."
+    },
+    {
+      "name": "Romila Thapar",
+      "field": "Ancient Indian historiography",
+      "relevance": "Major scholarship on early political formations and historical concepts."
+    },
+    {
+      "name": "R. S. Sharma",
+      "field": "Early medieval Indian history",
+      "relevance": "Influential studies of state formation, economy and political structures."
+    },
+    {
+      "name": "Hermann Kulke",
+      "field": "Indian state formation",
+      "relevance": "Important work on regional states, temple-centred polities and political integration."
+    },
+    {
+      "name": "Sanjay Subrahmanyam",
+      "field": "Early modern South Asia",
+      "relevance": "Important scholarship on early modern political formations and connected histories."
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Concept of Bhāratavarṣa and Its Historiographical Implications",
+      "url": "https://www.jstor.org/stable/jj.18252860.4",
+      "note": "B. D. Chattopadhyaya examines Bhāratavarṣa as a historical concept."
+    },
+    {
+      "title": "Constitution of India — Part I: The Union and Its Territory",
+      "url": "https://www.mea.gov.in/Images/pdf1/Part1.pdf",
+      "note": "Official constitutional text containing Articles 1–4."
+    },
+    {
+      "title": "States Reorganisation Act, 1956",
+      "url": "https://www.indiacode.nic.in/indiacode/handle/123456789/1680?view_type=browse",
+      "note": "Official India Code record."
+    },
+    {
+      "title": "States Reorganisation and Administrative Reorganisation",
+      "url": "https://www.mha.gov.in/sites/default/files/2022-08/CCSAP-REPORT-060111%5B1%5D.pdf",
+      "note": "Government of India material on the 1956 reorganisation and later state formation."
+    },
+    {
+      "title": "Partition of British India",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/partition-of-british-india/",
+      "note": "National Archives material and primary-source collections concerning Partition."
+    },
+    {
+      "title": "The Constitution of India",
+      "url": "https://nationalarchives.nic.in/en/constitution-india",
+      "note": "National Archives of India official constitutional resource."
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "Chattopadhyaya, B. D. The Concept of Bhāratavarṣa and Other Essays."
+    },
+    {
+      "title": "Singh, Upinder. A History of Ancient and Early Medieval India."
+    },
+    {
+      "title": "Thapar, Romila. Early India: From the Origins to AD 1300."
+    },
+    {
+      "title": "Sharma, R. S. India's Ancient Past."
+    },
+    {
+      "title": "Kulke, Hermann and Dietmar Rothermund. A History of India."
+    },
+    {
+      "title": "Stein, Burton. A History of India."
+    },
+    {
+      "title": "Subrahmanyam, Sanjay. Courtly Encounters."
+    },
+    {
+      "title": "Constitution of India, Government of India."
+    },
+    {
+      "title": "India Code. States Reorganisation Act, 1956."
+    }
+  ],
+  "imagePlan": [
+    {
+      "subject": "Ancient Bhāratavarṣa textual geography",
+      "purpose": "Visualise the distinction between civilisational geography and modern political borders."
+    },
+    {
+      "subject": "Mauryan political map",
+      "purpose": "Show the extent and limits of Mauryan imperial power using inscriptional evidence."
+    },
+    {
+      "subject": "Aśokan edicts map",
+      "purpose": "Plot inscription locations to demonstrate the geographical footprint of Mauryan communication."
+    },
+    {
+      "subject": "Gupta political geography",
+      "purpose": "Show layered sovereignty rather than a uniformly controlled territory."
+    },
+    {
+      "subject": "Sacred geography of Bharat",
+      "purpose": "Connect major pilgrimage centres across regional political boundaries."
+    },
+    {
+      "subject": "Medieval regional kingdoms",
+      "purpose": "Show the plurality of major political formations."
+    },
+    {
+      "subject": "Vijayanagara and neighbouring states",
+      "purpose": "Show southern political geography in the early modern period."
+    },
+    {
+      "subject": "Mughal and regional powers",
+      "purpose": "Show changing eighteenth-century political authority."
+    },
+    {
+      "subject": "British India and princely states",
+      "purpose": "Distinguish directly ruled territories from princely states."
+    },
+    {
+      "subject": "1947 Partition map",
+      "purpose": "Show the dramatic political transformation at independence."
+    },
+    {
+      "subject": "1956 States Reorganisation",
+      "purpose": "Show constitutional redrawing of internal state boundaries."
+    },
+    {
+      "subject": "Present-day India",
+      "purpose": "Conclude with modern constitutional geography."
+    }
+  ],
+  "finalNote": "The map of Bharat has changed many times. That is not an argument for forgetting the past; it is an argument for understanding it properly. Bhāratavarṣa was a historical geographical concept whose meanings developed across texts and centuries. Empires created large political formations, but regional kingdoms remained powerful. Colonial rule transformed territory through surveys, provinces and princely-state arrangements. Partition created an international boundary that divided long-connected regions. The Republic then demonstrated that internal political geography could change through constitutional means. The modern Union is therefore neither an ancient empire frozen in time nor a civilisation without historical continuity. It is a modern constitutional state standing within an older civilisational landscape."
+}
