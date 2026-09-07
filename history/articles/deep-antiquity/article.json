@@ -1,1 +1,208 @@
 
+{
+  "id": "deep-antiquity",
+  "title": "Before There Were Kingdoms",
+  "subtitle": "The Deep Antiquity of Bharat",
+  "era": "prehistory",
+  "period": "Deep Antiquity",
+  "category": "ancient",
+  "status": "published",
+
+  "heroImage": "../images/deep-antiquity-hero.jpg",
+
+  "intro": "Long before the names of dynasties were written on inscriptions, before imperial capitals rose beside great rivers, human beings were already living, moving, hunting, making tools, creating images and adapting to the landscapes of Bharat. The history of Bharat therefore does not begin with a king, a kingdom or a written chronicle. It begins with human presence.",
+
+  "sections": [
+    {
+      "id": "beginning",
+      "title": "The Story Begins Before Written History",
+      "type": "story",
+      "content": [
+        "When we speak of the ancient history of Bharat, it is tempting to begin with the first known kingdom or the first surviving manuscript. Archaeology tells us that the story begins much earlier.",
+        "Across the Indian subcontinent, archaeological sites, stone tools, habitation remains, rock shelters and artistic traditions reveal a very long history of human occupation. These discoveries do not give us a single uninterrupted story. Instead, they give us fragments—different communities living in different environments at different times.",
+        "This is the first lesson of deep antiquity: history does not begin when people begin writing about themselves. Human history is already taking place before written records appear."
+      ]
+    },
+
+    {
+      "id": "bhimbetka",
+      "title": "Bhimbetka: Memory Preserved in Stone",
+      "type": "evidence",
+      "date": "Prehistoric periods to historical times",
+      "content": [
+        "Among the most remarkable archaeological landscapes of Bharat are the rock shelters of Bhimbetka in present-day Madhya Pradesh.",
+        "The shelters preserve evidence of human occupation over a very long span of time. UNESCO describes Bhimbetka as an exceptional record of human occupation and cultural evolution, with paintings belonging to several periods from the Mesolithic into later historical phases.",
+        "The paintings include human figures, animals, hunting scenes and other forms of activity. They allow us to see prehistoric people not simply as makers of stone tools, but as communities capable of representation, communication and symbolic expression.",
+        "The exact date of every painting cannot always be established with certainty. Some images were produced over very different periods, and identifying the age of a particular painting can be difficult. What is securely established is the extraordinary continuity of human presence represented by the wider archaeological landscape."
+      ],
+      "evidence": [
+        "Rock shelters",
+        "Stone tools",
+        "Prehistoric paintings",
+        "Archaeological occupation layers"
+      ],
+      "source": {
+        "title": "Rock Shelters of Bhimbetka",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/925"
+      }
+    },
+
+    {
+      "id": "transition",
+      "title": "From Foraging to Settled Life",
+      "type": "story",
+      "content": [
+        "For thousands of years, human communities survived through combinations of hunting, gathering, fishing and early forms of plant and animal management. Over time, some communities began adopting more settled ways of living.",
+        "This transformation was not a single event and it did not happen everywhere at the same time. Different regions followed different paths. Some communities remained mobile for long periods while others increasingly depended on cultivation, herding and permanent settlements.",
+        "The emergence of agriculture changed human life profoundly. Food production could support larger populations, more permanent settlements and increasing social organisation. It also created new challenges: ownership, storage, cooperation, conflict and the management of water and land."
+      ]
+    },
+
+    {
+      "id": "mehrgarh",
+      "title": "Mehrgarh and the Early Village World",
+      "type": "evidence",
+      "date": "6th–5th millennium BCE and later phases",
+      "content": [
+        "Mehrgarh, in the broader northwestern zone of the subcontinent, provides important evidence for early village communities and the development of agriculture and settled life.",
+        "The archaeological record includes evidence connected with farming, herding, craft production and settlement. It forms part of the long developmental background from which later Bronze Age societies of the region emerged.",
+        "Older popular accounts sometimes assign extremely early dates to the beginning of Mehrgarh. More recent scientific work has refined the chronology, and the exact dating of the earliest phase remains a subject of archaeological investigation. The important point is not an exaggerated single date, but the existence of a long process of technological, agricultural and social development in the northwestern subcontinent."
+      ],
+      "evidence": [
+        "Settlement remains",
+        "Agricultural evidence",
+        "Animal domestication",
+        "Craft production",
+        "Burial evidence"
+      ],
+      "source": {
+        "title": "Recent radiocarbon research on the chronology of Mehrgarh",
+        "organization": "National Library of Medicine / PMC",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12000376/"
+      }
+    },
+
+    {
+      "id": "landscape",
+      "title": "A Civilisation Shaped by Landscape",
+      "type": "story",
+      "content": [
+        "Bharat was never a single ecological zone. It contained mountains, river plains, forests, plateaus, deserts, coastlines and vast monsoon regions.",
+        "The Himalayas formed a dramatic northern wall. Great river systems sustained agricultural communities. Peninsular India developed its own networks of rivers, uplands and coastal settlements. The monsoon connected distant regions through a recurring rhythm of rain and agriculture.",
+        "This diversity shaped the character of Indian civilisation. Communities developed different food systems, technologies, languages and social practices while remaining connected through migration, exchange, pilgrimage, trade and cultural transmission.",
+        "The idea of Bharat as a civilisational space therefore cannot be reduced to one political capital or one dynasty. Its deeper history is the history of many communities interacting across a large and diverse land."
+      ]
+    },
+
+    {
+      "id": "technology",
+      "title": "The Human Ability to Adapt",
+      "type": "evidence",
+      "content": [
+        "Stone technology is one of the clearest archaeological windows into deep antiquity. Tools reveal how people responded to changing environments and available resources.",
+        "Across different prehistoric periods, humans developed increasingly varied tool traditions. These included cutting implements, scrapers, points and other forms suited to different tasks.",
+        "Such evidence reminds us that technological intelligence is not a modern invention. The ability to observe a material, understand its properties, modify it and use it for a purpose is one of the oldest characteristics of human civilisation."
+      ],
+      "evidence": [
+        "Stone tools",
+        "Tool-making traditions",
+        "Habitation evidence",
+        "Environmental adaptation"
+      ]
+    },
+
+    {
+      "id": "continuity",
+      "title": "What We Can—and Cannot—Claim",
+      "type": "question",
+      "content": [
+        "The deep past invites powerful questions, but it also requires discipline.",
+        "Archaeology can establish human presence, technology, settlement patterns, diet, burial practices, environmental adaptation and artistic production. It can sometimes establish chronology with considerable precision.",
+        "It cannot automatically tell us the names of prehistoric communities, the language they spoke, the beliefs they held or the exact meaning of every symbol they produced.",
+        "This distinction matters. Civilisational pride should rest on evidence rather than exaggeration. Bharat's ancient heritage does not need invented dates or unsupported claims to become significant. The archaeological record is already extraordinary."
+      ]
+    },
+
+    {
+      "id": "toward-harappan",
+      "title": "The Road Toward the First Cities",
+      "type": "transition",
+      "content": [
+        "Over thousands of years, settlement, farming, craft production and exchange became increasingly complex.",
+        "In the northwestern regions of the subcontinent, this long development eventually contributed to the emergence of the Bronze Age urban world conventionally called the Indus or Harappan civilisation.",
+        "The transformation from village communities to large planned settlements was enormous. It required organisation, specialised labour, long-distance exchange and sophisticated knowledge of materials, water and construction.",
+        "The next chapter begins here: when the settlements of the subcontinent became cities."
+      ]
+    }
+  ],
+
+  "timeline": [
+    {
+      "date": "Deep Prehistory",
+      "event": "Human communities occupy diverse environments across the Indian subcontinent."
+    },
+    {
+      "date": "Prehistoric periods",
+      "event": "Stone tool traditions develop across different regions."
+    },
+    {
+      "date": "Mesolithic and later periods",
+      "event": "Rock art traditions flourish at sites including Bhimbetka."
+    },
+    {
+      "date": "6th–5th millennium BCE",
+      "event": "Early settled agricultural communities are established in parts of the northwestern subcontinent, including Mehrgarh."
+    },
+    {
+      "date": "Later 4th–3rd millennium BCE",
+      "event": "Regional cultures develop toward increasingly complex settlements and the Harappan urban tradition."
+    }
+  ],
+
+  "keyQuestions": [
+    "How long have humans lived in the Indian subcontinent?",
+    "What can archaeology tell us about prehistoric communities?",
+    "How did agriculture and settled life change society?",
+    "How should we distinguish archaeological evidence from later historical interpretation?",
+    "What developments eventually made urban civilisation possible?"
+  ],
+
+  "lessons": [
+    {
+      "title": "Civilisation begins with people",
+      "text": "The story of Bharat begins with human communities, not merely with kings and empires."
+    },
+    {
+      "title": "Evidence matters",
+      "text": "A strong civilisational history is strongest when archaeology, science and historical interpretation are clearly distinguished."
+    },
+    {
+      "title": "Diversity is ancient",
+      "text": "The subcontinent's geographical and cultural diversity existed long before modern political boundaries."
+    },
+    {
+      "title": "Complexity took time",
+      "text": "Cities, states and institutions were the result of long processes of experimentation, adaptation and cooperation."
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Rock Shelters of Bhimbetka",
+      "organization": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/925"
+    },
+    {
+      "title": "Recent research on the chronology of Mehrgarh",
+      "organization": "National Library of Medicine / PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12000376/"
+    }
+  ],
+
+  "furtherReading": [
+    "UNESCO World Heritage Centre — Rock Shelters of Bhimbetka",
+    "Archaeological Survey of India — Prehistoric and archaeological research",
+    "Scientific studies of South Asian prehistoric chronology and archaeology"
+  ]
+}
