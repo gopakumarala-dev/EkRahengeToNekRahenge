@@ -1,1799 +1,1523 @@
-/* =========================================================
-   BHARAT HISTORY — DYNAMIC HISTORY PLATFORM
-   Matches the current history.html + history.js
-========================================================= */
-
-:root{
-  --bg:#050708;
-  --bg-deep:#020303;
-  --panel:#080b0c;
-  --panel-soft:#0c1012;
-  --panel-warm:#110d08;
-  --orange:#ff7900;
-  --orange-light:#ff9b32;
-  --gold:#d7a25a;
-  --white:#f2f2ee;
-  --text:#c8cdcd;
-  --muted:#a6aeb0;
-  --dim:#788184;
-  --line:#252b2d;
-  --line-soft:#1a1f21;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-html,
-body{
-  margin:0;
-  padding:0;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-body{
-  background:var(--bg);
-  color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:15px;
-  line-height:1.72;
-}
-
-body.locked{
-  overflow:hidden;
-}
-
-img{
-  max-width:100%;
-}
-
-button,
-input,
-select{
-  font:inherit;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:100;
-  height:78px;
-  padding:0 4.5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  background:rgba(3,5,6,.96);
-  border-bottom:1px solid #202527;
-
-  backdrop-filter:blur(14px);
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:11px;
-
-  font-size:10px;
-  line-height:1.1;
-  letter-spacing:1.5px;
-}
-
-.brand img{
-  width:43px;
-  height:43px;
-  border-radius:50%;
-  object-fit:cover;
-}
-
-.brand b{
-  color:var(--orange);
-}
-
-.site-header nav{
-  display:flex;
-  align-items:center;
-  gap:25px;
-}
-
-.site-header nav a{
-  color:#969d9f;
-  font-size:10px;
-  letter-spacing:1.7px;
-  transition:.2s ease;
-}
-
-.site-header nav a:hover,
-.site-header nav a.active{
-  color:var(--orange);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-  min-height:100vh;
-  padding:145px 6.5% 65px;
-
-  display:grid;
-  grid-template-columns:47% 53%;
-  align-items:center;
-
-  position:relative;
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle at 78% 45%,
-      rgba(145,64,10,.24),
-      transparent 35%
-    ),
-    linear-gradient(
-      115deg,
-      #030506 0%,
-      #070a0b 52%,
-      #090b0c 100%
-    );
-}
-
-.hero:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.34),
-      transparent 55%
-    );
-
-  pointer-events:none;
-}
-
-.hero-copy{
-  position:relative;
-  z-index:3;
-
-  max-width:740px;
-}
-
-.eyebrow{
-  color:var(--orange);
-
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:2.9px;
-}
-
-.hero h1{
-  margin:18px 0 10px;
-
-  font-size:82px;
-  line-height:.84;
-  letter-spacing:-5px;
-  font-weight:800;
-}
-
-.hero h2{
-  margin:0 0 25px;
-
-  font-size:36px;
-  line-height:1;
-  letter-spacing:-1.5px;
-  font-weight:700;
-}
-
-.hero h2 span{
-  color:var(--orange);
-}
-
-.hero-copy > p{
-  max-width:700px;
-
-  color:#c1c7c8;
-  font-size:17px;
-}
-
-.hero-mantra{
-  display:grid;
-  gap:2px;
-
-  margin:28px 0;
-
-  color:#b8bec0;
-  font-size:12px;
-  letter-spacing:1.7px;
-}
-
-.hero-mantra strong{
-  margin-top:8px;
-
-  color:#f0f1ed;
-  font-size:14px;
-}
-
-.hero-mantra em{
-  color:var(--orange);
-  font-style:normal;
-  font-weight:700;
-  letter-spacing:2px;
-}
-
-.primary-btn,
-.outline-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:13px 19px;
-
-  border:1px solid var(--orange);
-
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:1.8px;
-
-  cursor:pointer;
-
-  transition:
-    background .22s ease,
-    color .22s ease,
-    transform .22s ease;
-}
-
-.primary-btn{
-  background:var(--orange);
-  color:#090909;
-}
-
-.primary-btn:hover{
-  background:var(--orange-light);
-  transform:translateY(-2px);
-}
-
-.outline-btn{
-  background:transparent;
-  color:var(--orange);
-}
-
-.outline-btn:hover{
-  background:var(--orange);
-  color:#090909;
-}
-
-
-/* =========================================================
-   HERO MAP
-========================================================= */
-
-.hero-map{
-  min-width:0;
-  height:min(720px,78vh);
+<!DOCTYPE html>
+<html lang="en">
 
-  position:relative;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
+<head>
 
-  z-index:2;
-}
+  <meta charset="UTF-8">
 
-.hero-map img{
-  width:100%;
-  height:100%;
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  object-fit:contain;
+  <title>
+    Bharat — The Greater History | Ek Rahenge To Nek Rahenge
+  </title>
 
-  position:relative;
-  z-index:2;
+  <meta
+    name="description"
+    content="The greater history of Bharat — people, Dharma, knowledge, kingdoms, temples, trade, resistance, freedom and the continuing Sanātana civilisational journey."
+  >
 
-  filter:
-    drop-shadow(
-      0 25px 65px rgba(255,100,0,.13)
-    );
-}
+  <link
+    rel="stylesheet"
+    href="history.css"
+  >
 
-.map-glow{
-  position:absolute;
+</head>
 
-  width:560px;
-  height:560px;
 
-  border-radius:50%;
+<body>
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,100,0,.14),
-      transparent 68%
-    );
 
-  filter:blur(18px);
-}
+<!-- ==========================================================
+     HEADER
+========================================================== -->
 
-.hero-map > span{
-  position:absolute;
-  right:4%;
-  bottom:13%;
-  z-index:3;
+<header class="site-header">
 
-  color:var(--gold);
+  <a
+    class="brand"
+    href="../index.html"
+  >
 
-  font-size:11px;
-  letter-spacing:4px;
-}
+    <img
+      src="../haindaveeyam-logo.jpeg"
+      alt="Haindaveeyam Foundation"
+    >
 
-.hero-map > small{
-  position:absolute;
-  right:4%;
-  bottom:7%;
-  z-index:3;
+    <span>
+      EK RAHENGE<br>
+      <b>TO NEK RAHENGE</b>
+    </span>
 
-  max-width:310px;
+  </a>
 
-  text-align:right;
 
-  color:#737b7d;
+  <nav>
 
-  font-size:9px;
-}
+    <a
+      href="../index.html"
+    >
+      HOME
+    </a>
 
+    <a
+      class="active"
+      href="history.html"
+    >
+      HISTORY
+    </a>
 
-/* =========================================================
-   COMMAND BAR
-========================================================= */
+    <a
+      href="../civilisation/civilisation.html"
+    >
+      CIVILISATION
+    </a>
 
-.command-bar{
-  position:sticky;
-  top:78px;
-  z-index:45;
+    <a
+      href="../map/map.html"
+    >
+      MAP
+    </a>
 
-  padding:17px 7%;
+    <a
+      href="../timeline/timeline.html"
+    >
+      TIMELINE
+    </a>
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+    <a
+      href="../sources/sources.html"
+    >
+      SOURCES
+    </a>
 
-  background:rgba(8,11,12,.96);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+  </nav>
 
-  backdrop-filter:blur(12px);
-}
+</header>
 
-.command-title span{
-  display:block;
 
-  color:var(--orange);
 
-  font-size:9px;
-  letter-spacing:2px;
-}
+<main>
 
-.command-title strong{
-  display:block;
 
-  margin-top:3px;
+<!-- ==========================================================
+     HERO
+========================================================== -->
 
-  color:#d5d9d8;
-  font-size:15px;
-}
+<section class="hero">
 
-.command-controls{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
+  <div class="hero-copy">
 
-.search{
-  width:330px;
-  height:40px;
+    <div class="eyebrow">
+      BHARAT • HISTORY • CIVILISATION • MEMORY
+    </div>
 
-  display:flex;
-  align-items:center;
 
-  padding:0 12px;
+    <h1>
+      BHARAT
+    </h1>
 
-  background:#050708;
-  border:1px solid #343a3c;
 
-  color:#727a7c;
-}
+    <h2>
+      THE STORY OF A<br>
+      <span>CIVILISATION</span>
+    </h2>
 
-.search span{
-  margin-right:8px;
-  font-size:17px;
-}
 
-.search input{
-  width:100%;
-  min-width:0;
+    <p class="hero-lead">
 
-  background:transparent;
-  border:0;
-  outline:0;
+      Not a history that begins in 1947.
 
-  color:#eceeed;
+      A journey through the people, traditions,
+      ideas, kingdoms, temples, knowledge systems,
+      struggles and memories that shaped Bharat
+      across thousands of years.
 
-  font-size:12px;
-}
+    </p>
 
-.search input::placeholder{
-  color:#697173;
-}
 
-.command-controls select{
-  height:40px;
+    <div class="hero-mantra">
 
-  padding:0 10px;
+      <span>
+        MANY KINGDOMS.
+      </span>
 
-  background:#050708;
-  border:1px solid #343a3c;
+      <span>
+        MANY LANGUAGES.
+      </span>
 
-  color:#aaa;
+      <span>
+        MANY PHILOSOPHIES.
+      </span>
 
-  font-size:10px;
-  letter-spacing:.7px;
+      <span>
+        MANY CENTURIES.
+      </span>
 
-  outline:0;
-}
+      <strong>
+        ONE EXTRAORDINARY CIVILISATIONAL MEMORY.
+      </strong>
 
+      <em>
+        ONE SANĀTANA WAY OF LIFE.
+      </em>
 
-/* =========================================================
-   ERA FILTER
-========================================================= */
+    </div>
 
-.era-strip{
-  display:flex;
-  gap:7px;
 
-  padding:15px 7%;
+    <a
+      class="primary-btn"
+      href="#history-explorer"
+    >
+      ENTER THE JOURNEY ↓
+    </a>
 
-  overflow-x:auto;
+  </div>
 
-  background:#060809;
 
-  border-bottom:1px solid var(--line);
 
-  scrollbar-width:thin;
-}
+  <!-- ========================================================
+       BHARATVARSHA MAP — HERO
+  ========================================================= -->
 
-.era-chip{
-  flex:0 0 auto;
+  <div class="hero-map">
 
-  padding:8px 12px;
+    <div class="map-glow"></div>
 
-  background:#090c0d;
 
-  border:1px solid #343a3c;
+    <img
+      src="Bharat-map-clean.png"
+      alt="Bharatvarsha civilisational map"
+    >
 
-  color:#8f9799;
 
-  font-size:9px;
-  letter-spacing:1.2px;
+    <span>
+      BHARATVARSHA
+    </span>
 
-  cursor:pointer;
 
-  transition:.2s ease;
-}
+    <small>
+      Civilisational geography • changing political worlds • enduring memory
+    </small>
 
-.era-chip:hover,
-.era-chip.active{
-  background:#130d08;
-  border-color:#70421c;
-  color:var(--orange);
-}
+  </div>
 
+</section>
 
-/* =========================================================
-   FEATURED INTRO
-========================================================= */
 
-.featured{
-  padding:110px 7%;
 
-  background:#080b0c;
+<!-- ==========================================================
+     INTRODUCTION
+========================================================== -->
 
-  border-top:1px solid var(--line);
-}
+<section class="featured">
 
-.section-kicker{
-  color:var(--orange);
+  <div class="section-kicker">
+    THE FIRST QUESTION
+  </div>
 
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:2.8px;
-}
 
-.featured-grid{
-  margin-top:32px;
+  <div class="featured-grid">
 
-  display:grid;
-  grid-template-columns:58% 42%;
 
-  gap:6%;
-}
+    <div class="featured-copy">
 
-.featured-copy h2{
-  margin:0;
+      <h2>
 
-  font-size:51px;
-  line-height:1;
-  letter-spacing:-2px;
-}
+        HOW DO YOU TELL<br>
+        A HISTORY SPANNING<br>
+        <span>THOUSANDS OF YEARS?</span>
 
-.featured-copy h2 span{
-  color:var(--orange);
-}
+      </h2>
 
-.featured-copy p{
-  max-width:850px;
 
-  color:var(--muted);
-}
+      <p class="lead">
 
-.featured-copy .lead{
-  color:#d5d9d8;
-  font-size:20px;
-  line-height:1.5;
-}
+        Not as a list of dates.
+        Not as a parade of rulers.
+        And not as a story that begins with
+        the creation of the modern Republic.
 
-.fact-card{
-  align-self:start;
+      </p>
 
-  padding:28px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,121,0,.08),
-      transparent
-    );
+      <p>
 
-  border-left:2px solid var(--orange);
-}
+        The story begins with the land and the people.
 
-.fact-card > span{
-  display:block;
+        It moves through prehistoric communities,
+        early settlements, cities and kingdoms;
+        through Vedic traditions and Itihāsa;
+        through philosophy, mathematics, medicine,
+        astronomy, literature and art;
 
-  color:var(--orange);
+        through temples, pilgrimage and trade;
 
-  font-size:9px;
-  letter-spacing:2px;
-}
+        through encounters, conflicts, resistance
+        and renewal;
 
-.fact-card > strong{
-  display:block;
+        through colonial rule and the long struggle
+        for freedom;
 
-  margin:10px 0 15px;
+        and finally into independent India.
 
-  font-size:25px;
-  line-height:1.18;
-}
+      </p>
 
-.fact-card > p{
-  margin:0;
 
-  color:#858e90;
-  font-size:13px;
-}
+      <p>
 
+        Throughout the journey we ask another question:
 
-/* =========================================================
-   ARTICLE LIBRARY
-========================================================= */
+        <strong>
+          What did people actually do, believe,
+          build, preserve and pass to the next generation?
+        </strong>
 
-.articles{
-  padding:110px 7%;
+      </p>
 
-  background:#050708;
+    </div>
 
-  border-top:1px solid var(--line);
-}
 
-.library-title{
-  margin:14px 0 12px;
+    <div class="fact-card">
 
-  font-size:48px;
-  line-height:1;
-  letter-spacing:-2px;
-}
+      <span>
+        HOW WE READ THE PAST
+      </span>
 
-.library-title span{
-  color:var(--orange);
-}
 
-.library-intro{
-  max-width:850px;
+      <strong>
 
-  color:#9ba3a5;
+        TRADITION<br>
+        TEXT<br>
+        ARCHAEOLOGY<br>
+        INSCRIPTION<br>
+        COIN<br>
+        MONUMENT
 
-  font-size:16px;
-}
+      </strong>
 
-.article-grid{
-  margin-top:38px;
 
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+      <p>
 
-  gap:15px;
-}
+        A civilisational history becomes stronger
+        when its stories are placed beside the evidence
+        that allows them to be examined.
 
-.story-card{
-  min-width:0;
+      </p>
 
-  min-height:410px;
+    </div>
 
-  display:flex;
-  flex-direction:column;
+  </div>
 
-  overflow:hidden;
+</section>
 
-  background:#080b0c;
 
-  border:1px solid var(--line);
 
-  transition:
-    transform .25s ease,
-    border-color .25s ease;
-}
+<!-- ==========================================================
+     HISTORY EXPLORER
+========================================================== -->
 
-.story-card:hover{
-  transform:translateY(-4px);
-  border-color:#4c321d;
-}
+<section
+  class="command-bar"
+  id="history-explorer"
+>
 
-.story-card > img{
-  width:100%;
-  height:205px;
+  <div class="command-title">
 
-  display:block;
+    <span>
+      HISTORY EXPLORER
+    </span>
 
-  object-fit:cover;
+    <strong>
+      Search the living library of Bharat's history.
+    </strong>
 
-  filter:saturate(.78);
+  </div>
 
-  transition:
-    transform .35s ease,
-    filter .35s ease;
-}
 
-.story-card:hover > img{
-  transform:scale(1.035);
-  filter:saturate(.94);
-}
+  <div class="command-controls">
 
-.story-card-body{
-  flex:1;
 
-  padding:25px;
+    <label class="search">
 
-  display:flex;
-  flex-direction:column;
-}
+      <span>
+        ⌕
+      </span>
 
-.story-card .meta{
-  color:var(--orange);
 
-  font-size:9px;
-  letter-spacing:1.6px;
-}
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search people, places, kingdoms, ideas..."
+        autocomplete="off"
+      >
 
-.story-card h3{
-  margin:10px 0 12px;
+    </label>
 
-  font-size:24px;
-  line-height:1.08;
-  letter-spacing:-.5px;
-}
 
-.story-card p{
-  margin:0;
+    <select
+      id="categoryFilter"
+      aria-label="Filter history"
+    >
 
-  color:#8c9597;
+      <option value="all">
+        ALL THEMES
+      </option>
 
-  font-size:12px;
-}
+      <option value="ancient">
+        ANCIENT BHARAT
+      </option>
 
-.open-story{
-  margin-top:auto;
-  padding:22px 0 0;
+      <option value="dharma">
+        DHARMA & ITIHĀSA
+      </option>
 
-  background:none;
+      <option value="knowledge">
+        KNOWLEDGE
+      </option>
 
-  border:0;
+      <option value="temples">
+        TEMPLES
+      </option>
 
-  color:var(--orange);
+      <option value="world">
+        BHARAT & THE WORLD
+      </option>
 
-  text-align:left;
+      <option value="conflict">
+        CONFLICT & RESISTANCE
+      </option>
 
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:1.6px;
+      <option value="colonial">
+        COLONIAL & FREEDOM
+      </option>
 
-  cursor:pointer;
-}
+      <option value="modern">
+        MODERN BHARAT
+      </option>
 
-.open-story:hover{
-  color:var(--orange-light);
-}
+    </select>
 
-.empty-state{
-  padding:60px;
+  </div>
 
-  text-align:center;
+</section>
 
-  color:#737b7d;
-}
 
 
-/* =========================================================
-   WORLD HISTORY
-========================================================= */
+<!-- ==========================================================
+     ERA FILTER
+========================================================== -->
 
-.world-timeline{
-  padding:110px 7%;
+<section class="era-strip">
 
-  background:#080b0c;
+  <button
+    class="era-chip active"
+    data-era="all"
+  >
+    ALL
+  </button>
 
-  border-top:1px solid var(--line);
-}
 
-.world-timeline h2{
-  margin:15px 0 38px;
+  <button
+    class="era-chip"
+    data-era="prehistory"
+  >
+    DEEP ANTIQUITY
+  </button>
 
-  font-size:51px;
-  line-height:1;
-  letter-spacing:-2px;
-}
 
-.world-timeline h2 span{
-  color:var(--orange);
-}
+  <button
+    class="era-chip"
+    data-era="harappan"
+  >
+    HARAPPAN
+  </button>
 
-.world-rows{
-  border-top:1px solid var(--line);
-}
 
-.world-rows > div{
-  min-height:92px;
+  <button
+    class="era-chip"
+    data-era="vedic"
+  >
+    VEDIC
+  </button>
 
-  display:grid;
-  grid-template-columns:22% 36% 42%;
-  align-items:center;
 
-  padding:18px 0;
+  <button
+    class="era-chip"
+    data-era="classical"
+  >
+    CLASSICAL
+  </button>
 
-  border-bottom:1px solid var(--line);
-}
 
-.world-rows b{
-  color:var(--orange);
+  <button
+    class="era-chip"
+    data-era="medieval"
+  >
+    MEDIEVAL
+  </button>
 
-  font-size:10px;
-  letter-spacing:1.5px;
-}
 
-.world-rows span{
-  color:#d2d6d5;
+  <button
+    class="era-chip"
+    data-era="earlymodern"
+  >
+    EARLY MODERN
+  </button>
 
-  font-size:16px;
-}
 
-.world-rows em{
-  color:#737c7e;
+  <button
+    class="era-chip"
+    data-era="colonial"
+  >
+    COLONIAL
+  </button>
 
-  font-size:11px;
-  font-style:normal;
 
-  text-align:right;
-}
+  <button
+    class="era-chip"
+    data-era="modern"
+  >
+    MODERN
+  </button>
 
+</section>
 
-/* =========================================================
-   MAP MODULE
-========================================================= */
 
-.map-module{
-  min-height:680px;
 
-  display:grid;
-  grid-template-columns:56% 44%;
+<!-- ==========================================================
+     ARTICLE LIBRARY
+========================================================== -->
 
-  background:#040506;
+<section class="articles">
 
-  border-top:1px solid var(--line);
-}
+  <div class="section-kicker">
+    THE GREAT JOURNEY
+  </div>
 
-.map-module-copy{
-  padding:105px 11%;
 
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
+  <h2 class="library-title">
 
-.map-module-copy h2{
-  margin:15px 0 25px;
+    OPEN THE STORIES.<br>
+    <span>FOLLOW THE EVIDENCE.</span>
 
-  font-size:52px;
-  line-height:1;
-  letter-spacing:-2px;
-}
+  </h2>
 
-.map-module-copy h2 span{
-  color:var(--orange);
-}
 
-.map-module-copy p{
-  max-width:770px;
+  <p class="library-intro">
 
-  color:#abb3b4;
-}
+    Each story opens as a full-screen historical article.
 
-.map-module-art{
-  min-width:0;
-  min-height:680px;
+    Follow the narrative, inspect the evidence
+    and move deeper into related people,
+    places and events.
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  </p>
 
-  padding:35px;
 
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(110,48,8,.14),
-      transparent 66%
-    );
-}
+  <div
+    class="article-grid"
+    id="cards"
+  ></div>
 
-.map-module-art img{
-  width:100%;
-  height:600px;
 
-  object-fit:contain;
+  <div
+    class="empty-state"
+    id="emptyState"
+    hidden
+  >
+    No stories match your search.
+  </div>
 
-  filter:drop-shadow(
-    0 20px 50px rgba(255,100,0,.12)
-  );
-}
+</section>
 
 
-/* =========================================================
-   LESSONS / MIRROR
-========================================================= */
 
-.mirror{
-  padding:110px 7%;
+<!-- ==========================================================
+     BHARAT IN WORLD HISTORY
+========================================================== -->
 
-  background:#0a0d0f;
+<section class="world-timeline">
 
-  border-top:1px solid var(--line);
+  <div class="section-kicker">
+    BHARAT IN WORLD HISTORY
+  </div>
 
-  text-align:center;
-}
 
-.mirror h2{
-  margin:15px 0 22px;
+  <h2>
 
-  font-size:51px;
-  line-height:1;
-  letter-spacing:-2px;
-}
+    WHILE BHARAT WAS<br>
+    <span>CHANGING...</span>
 
-.mirror h2 span{
-  color:var(--orange);
-}
+  </h2>
 
-.mirror > p{
-  max-width:850px;
 
-  margin:0 auto;
+  <div class="world-rows">
 
-  color:#aeb5b6;
 
-  font-size:17px;
-}
+    <div>
 
-.lesson-grid{
-  margin-top:43px;
+      <b>
+        BRONZE AGE
+      </b>
 
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+      <span>
+        Harappan urban world
+      </span>
 
-  gap:14px;
+      <em>
+        Mesopotamia • Egypt • Bronze Age networks
+      </em>
 
-  text-align:left;
-}
+    </div>
 
-.lesson-grid article{
-  min-height:175px;
 
-  padding:25px;
+    <div>
 
-  background:#07090a;
+      <b>
+        CLASSICAL AGE
+      </b>
 
-  border:1px solid #292f31;
+      <span>
+        Kingdoms, empires and knowledge
+      </span>
 
-  border-top:2px solid var(--orange);
-}
+      <em>
+        Mediterranean • Central Asia • China
+      </em>
 
-.lesson-grid b{
-  display:block;
+    </div>
 
-  color:var(--orange);
 
-  font-size:10px;
-  letter-spacing:1.7px;
-}
+    <div>
 
-.lesson-grid span{
-  display:block;
+      <b>
+        MARITIME CENTURIES
+      </b>
 
-  margin-top:12px;
+      <span>
+        Ports, merchants and cultural exchange
+      </span>
 
-  color:#858e90;
+      <em>
+        Indian Ocean • Southeast Asia
+      </em>
 
-  font-size:12px;
-}
+    </div>
 
 
-/* =========================================================
-   END
-========================================================= */
+    <div>
 
-.end-note{
-  min-height:650px;
+      <b>
+        EARLY MODERN
+      </b>
 
-  padding:110px 7%;
+      <span>
+        Regional powers and global commerce
+      </span>
 
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+      <em>
+        Ottoman • Safavid • European maritime expansion
+      </em>
 
-  background:#020303;
+    </div>
 
-  border-top:1px solid var(--line);
 
-  text-align:center;
-}
+    <div>
 
-.ghost{
-  color:#111719;
+      <b>
+        COLONIAL WORLD
+      </b>
 
-  font-size:145px;
-  font-weight:800;
+      <span>
+        Company power and empire
+      </span>
 
-  line-height:.7;
+      <em>
+        Industrial Europe • global commodity networks
+      </em>
 
-  letter-spacing:-9px;
-}
+    </div>
 
-.end-note h2{
-  margin:45px 0 25px;
+  </div>
 
-  font-size:60px;
-  line-height:1;
-  letter-spacing:-2px;
-}
+</section>
 
-.end-note h2 span{
-  color:var(--orange);
-}
 
-.end-note p{
-  max-width:730px;
 
-  color:#858d8f;
-}
+<!-- ==========================================================
+     THE DARK CHAPTERS
+========================================================== -->
 
+<section
+  class="dark-chapters"
+  id="dark-chapters"
+>
 
-/* =========================================================
-   FOOTER
-========================================================= */
+  <div class="dark-chapters-inner">
 
-footer{
-  padding:28px 7%;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    <div class="dark-chapters-heading">
 
-  background:#020303;
+      <div class="dark-chapters-kicker">
+        THE DARK CHAPTERS
+      </div>
 
-  border-top:1px solid var(--line);
 
-  color:#6d7577;
+      <h2>
 
-  font-size:10px;
-  letter-spacing:1px;
-}
+        WHEN BHARAT FACED<br>
+        <span>INVASION, CONQUEST &amp; CAPTIVITY</span>
 
-footer b{
-  color:#aab1b2;
-}
+      </h2>
 
 
-/* =========================================================
-   FULL ARTICLE READER
-========================================================= */
+      <p class="dark-chapters-intro">
 
-.reader{
-  position:fixed;
-  inset:0;
+        A civilisation must remember not only what it created,
+        but also what it endured.
 
-  z-index:200;
+      </p>
 
-  display:none;
+    </div>
 
-  overflow:auto;
 
-  background:rgba(0,0,0,.87);
 
-  backdrop-filter:blur(9px);
-}
+    <div class="dark-chapters-statement">
 
-.reader.open{
-  display:block;
-}
+      <p>
 
-.reader-panel{
-  min-height:100vh;
+        The history of Bharat contains centuries of invasion,
+        warfare, conquest, captivity and resistance.
 
-  background:#080b0c;
-}
+        Kingdoms fell. Cities were attacked.
+        Temples were destroyed.
 
-.reader-close{
-  position:fixed;
-  top:16px;
-  right:22px;
+        Men were killed or taken captive.
 
-  z-index:210;
+        Women and children could become prisoners of war,
+        slaves or victims of sexual violence.
 
-  width:46px;
-  height:46px;
+      </p>
 
-  border:1px solid #454a4b;
 
-  background:rgba(0,0,0,.65);
+      <p>
 
-  color:#eee;
+        For the communities that experienced these events,
+        these were not merely changes of dynasty.
 
-  font-size:28px;
+        They were human catastrophes — the loss of fathers,
+        husbands, sons, homes, temples, freedom and,
+        sometimes, life itself.
 
-  cursor:pointer;
-}
+      </p>
 
-.reader-hero{
-  min-height:560px;
 
-  position:relative;
+      <p class="dark-chapters-emphasis">
 
-  display:flex;
-  align-items:flex-end;
+        These chapters belong to the history of Bharat too.
 
-  overflow:hidden;
-}
+        They must neither be erased nor romanticised.
 
-.reader-hero > img{
-  position:absolute;
-  inset:0;
+        <strong>
+          They must be remembered.
+        </strong>
 
-  width:100%;
-  height:100%;
+      </p>
 
-  object-fit:cover;
+    </div>
 
-  filter:
-    brightness(.38)
-    saturate(.72);
-}
 
-.reader-hero:after{
-  content:"";
 
-  position:absolute;
-  inset:0;
+    <div class="dark-chapters-grid">
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      #080b0c
-    );
-}
 
-.reader-hero-text{
-  width:min(1120px,86%);
+      <article class="dark-chapter-card">
 
-  position:relative;
-  z-index:2;
+        <span class="dark-chapter-number">
+          01
+        </span>
 
-  margin:0 auto;
+        <span class="dark-chapter-era">
+          THE FRONTIER
+        </span>
 
-  padding:100px 0 60px;
-}
+        <h3>
+          The Frontier Breaks
+        </h3>
 
-.reader-hero-text h2{
-  max-width:920px;
+        <p>
 
-  margin:14px 0 20px;
+          The Arab conquest of Sindh and the beginning
+          of sustained Islamic political expansion into
+          the Indian subcontinent.
 
-  font-size:64px;
-  line-height:.98;
-  letter-spacing:-2px;
-}
+        </p>
 
-.reader-hero-text p{
-  max-width:850px;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  color:#c7cccb;
+      </article>
 
-  font-size:17px;
-}
 
-.reader-body{
-  width:min(1180px,86%);
 
-  margin:0 auto;
+      <article class="dark-chapter-card">
 
-  padding:65px 0 120px;
+        <span class="dark-chapter-number">
+          02
+        </span>
 
-  display:grid;
-  grid-template-columns:220px minmax(0,1fr);
+        <span class="dark-chapter-era">
+          GHAZNAVIDS
+        </span>
 
-  gap:60px;
-}
+        <h3>
+          Mahmud of Ghazni
+        </h3>
 
-.reader-nav{
-  position:sticky;
-  top:25px;
+        <p>
 
-  align-self:start;
+          Raids, warfare, wealth, temples and the political
+          world of the Ghaznavid campaigns in Bharat.
 
-  height:max-content;
+        </p>
 
-  border-left:1px solid #353b3d;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  padding-left:16px;
-}
+      </article>
 
-.reader-nav > span{
-  display:block;
 
-  margin-bottom:13px;
 
-  color:var(--orange);
+      <article class="dark-chapter-card">
 
-  font-size:9px;
-  letter-spacing:2px;
-}
+        <span class="dark-chapter-number">
+          03
+        </span>
 
-.reader-nav button{
-  display:block;
+        <span class="dark-chapter-era">
+          THE FRONTIER ROUTE
+        </span>
 
-  width:100%;
+        <h3>
+          Hindu Kush
+        </h3>
 
-  padding:7px 0;
+        <p>
 
-  border:0;
+          The mountain frontier, the movement of captives
+          and the historical memory surrounding the name
+          Hindu Kush.
 
-  background:none;
+        </p>
 
-  color:#7d8688;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  text-align:left;
+      </article>
 
-  font-size:10px;
 
-  cursor:pointer;
-}
 
-.reader-nav button:hover{
-  color:#eee;
-}
+      <article class="dark-chapter-card">
 
-.reader-content{
-  min-width:0;
-}
+        <span class="dark-chapter-number">
+          04
+        </span>
 
-.reader-content section{
-  scroll-margin-top:30px;
-}
+        <span class="dark-chapter-era">
+          GHURIDS
+        </span>
 
-.reader-content h3{
-  margin:45px 0 15px;
+        <h3>
+          Muhammad of Ghor
+        </h3>
 
-  font-size:29px;
-  line-height:1.12;
-}
+        <p>
 
-.reader-content h3:first-child{
-  margin-top:0;
-}
+          The Ghurid advance into northern India and the
+          campaigns that changed the political balance
+          of Bharat.
 
-.reader-content h4{
-  margin:35px 0 10px;
+        </p>
 
-  color:var(--orange);
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  font-size:15px;
-  letter-spacing:1.5px;
-}
+      </article>
 
-.reader-content p{
-  max-width:820px;
 
-  color:#adb5b6;
 
-  font-size:17px;
-}
+      <article class="dark-chapter-card">
 
-.reader-content .drop{
-  border-left:2px solid var(--orange);
+        <span class="dark-chapter-number">
+          05
+        </span>
 
-  padding-left:19px;
+        <span class="dark-chapter-era">
+          TARAIN
+        </span>
 
-  color:#dfe2df;
+        <h3>
+          Prithviraj Chauhan
+        </h3>
 
-  font-size:23px;
-  line-height:1.55;
-}
+        <p>
 
-.reader-content .evidence{
-  margin:30px 0;
+          The two Battles of Tarain, the defeat of 1192
+          and the heroic traditions that grew around
+          Prithviraj.
 
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+        </p>
 
-  gap:10px;
-}
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-.reader-content .evidence > div{
-  padding:18px;
+      </article>
 
-  background:#060808;
 
-  border:1px solid #2d3335;
-}
 
-.reader-content .evidence b{
-  display:block;
+      <article class="dark-chapter-card">
 
-  color:var(--orange);
+        <span class="dark-chapter-number">
+          06
+        </span>
 
-  font-size:9px;
-  letter-spacing:1.6px;
-}
+        <span class="dark-chapter-era">
+          THE HUMAN COST
+        </span>
 
-.reader-content .evidence span{
-  display:block;
+        <h3>
+          When a Fort Fell
+        </h3>
 
-  margin-top:6px;
+        <p>
 
-  color:#828b8d;
+          What military defeat could mean for ordinary people:
+          death, captivity, displacement and the destruction
+          of communities.
 
-  font-size:11px;
-}
+        </p>
 
-.reader-content .lesson-box{
-  margin:35px 0;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  padding:25px;
+      </article>
 
-  border:1px solid #49301b;
 
-  background:
-    linear-gradient(
-      120deg,
-      rgba(255,121,0,.07),
-      transparent
-    );
-}
 
-.reader-content .lesson-box b{
-  display:block;
+      <article class="dark-chapter-card">
 
-  color:var(--orange);
+        <span class="dark-chapter-number">
+          07
+        </span>
 
-  font-size:9px;
-  letter-spacing:2px;
-}
+        <span class="dark-chapter-era">
+          CAPTIVITY
+        </span>
 
-.reader-content .lesson-box strong{
-  display:block;
+        <h3>
+          Women, Children &amp; Enslavement
+        </h3>
 
-  margin-top:8px;
+        <p>
 
-  color:#e4e6e4;
+          The human experience of captivity, separation from
+          families, enslavement and sexual exploitation in
+          the context of medieval warfare.
 
-  font-size:19px;
-  line-height:1.4;
-}
+        </p>
 
-.reader-content .source{
-  margin-top:45px;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  padding-top:16px;
+      </article>
 
-  border-top:1px solid var(--line);
 
-  color:#737b7d!important;
 
-  font-size:10px!important;
-}
+      <article class="dark-chapter-card dark-chapter-card-featured">
 
+        <span class="dark-chapter-number">
+          08
+        </span>
 
-/* =========================================================
-   MODAL
-========================================================= */
+        <span class="dark-chapter-era">
+          THE BESIEGED
+        </span>
 
-.modal{
-  position:fixed;
-  inset:0;
+        <h3>
+          Jauhar — The Last Choice
+        </h3>
 
-  z-index:220;
+        <p>
 
-  display:none;
+          The women of besieged forts, the fear of captivity
+          and the extraordinary acts of sacrifice remembered
+          in Rajput history.
 
-  align-items:center;
-  justify-content:center;
+        </p>
 
-  padding:25px;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  background:rgba(0,0,0,.82);
+      </article>
 
-  backdrop-filter:blur(8px);
-}
 
-.modal.open{
-  display:flex;
-}
 
-.modal-box{
-  position:relative;
+      <article class="dark-chapter-card">
 
-  width:min(820px,100%);
-  max-height:88vh;
+        <span class="dark-chapter-number">
+          09
+        </span>
 
-  overflow:auto;
+        <span class="dark-chapter-era">
+          MEWAR
+        </span>
 
-  padding:50px;
+        <h3>
+          Chittorgarh
+        </h3>
 
-  background:#090c0d;
+        <p>
 
-  border:1px solid #4b321e;
+          The sieges of Chittor, resistance, sacrifice and
+          the distinction between historical evidence and
+          later heroic tradition.
 
-  box-shadow:
-    0 30px 100px rgba(0,0,0,.7);
-}
+        </p>
 
-.modal-close{
-  position:absolute;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  top:8px;
-  right:15px;
+      </article>
 
-  background:none;
-  border:0;
 
-  color:#aaa;
 
-  font-size:34px;
+      <article class="dark-chapter-card">
 
-  cursor:pointer;
-}
+        <span class="dark-chapter-number">
+          10
+        </span>
 
-.modal-box h2{
-  margin:12px 0 27px;
+        <span class="dark-chapter-era">
+          RESISTANCE
+        </span>
 
-  font-size:40px;
-  line-height:1;
-  letter-spacing:-1px;
-}
+        <h3>
+          Those Who Fought Back
+        </h3>
 
-.modal-box p{
-  color:#adb5b6;
-}
+        <p>
 
-.modal-box .evidence{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+          Mewar, Vijayanagara, the Marathas, the Sikhs and
+          other centres of resistance against expanding powers.
 
-  margin:25px 0;
-}
+        </p>
 
-.modal-box .evidence > div{
-  padding:17px;
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  border:1px solid #313739;
+      </article>
 
-  background:#060808;
-}
 
-.modal-box .evidence b{
-  display:block;
 
-  color:var(--orange);
+      <article class="dark-chapter-card">
 
-  font-size:9px;
-  letter-spacing:1.5px;
-}
+        <span class="dark-chapter-number">
+          11
+        </span>
 
-.modal-box .evidence span{
-  display:block;
+        <span class="dark-chapter-era">
+          MUGHAL AGE
+        </span>
 
-  margin-top:6px;
+        <h3>
+          Conquest, Power &amp; Conflict
+        </h3>
 
-  color:#818a8c;
+        <p>
 
-  font-size:11px;
-}
+          The Mughal period examined ruler by ruler, including
+          conquest, accommodation, religious policy and resistance.
 
+        </p>
 
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================= */
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-@media(max-width:1100px){
+      </article>
 
-  .site-header nav{
-    gap:13px;
-  }
 
-  .hero{
-    grid-template-columns:1fr;
-  }
 
-  .hero-map{
-    position:absolute;
+      <article class="dark-chapter-card">
 
-    top:120px;
-    right:-8%;
+        <span class="dark-chapter-number">
+          12
+        </span>
 
-    width:62%;
-    height:620px;
+        <span class="dark-chapter-era">
+          SURVIVAL
+        </span>
 
-    opacity:.28;
-  }
+        <h3>
+          A Civilisation That Survived
+        </h3>
 
-  .featured-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
+        <p>
 
-  .article-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
+          How Bharat's languages, traditions, sacred geography,
+          institutions and collective memory endured through
+          centuries of political upheaval.
 
-  .lesson-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
+        </p>
 
-  .map-module{
-    grid-template-columns:1fr;
-  }
+        <span class="dark-chapter-link">
+          EXPLORE →
+        </span>
 
-  .map-module-art{
-    min-height:520px;
-  }
+      </article>
 
-  .map-module-art img{
-    height:480px;
-  }
 
-  .reader-body{
-    grid-template-columns:1fr;
-  }
+    </div>
 
-  .reader-nav{
-    position:relative;
-    top:auto;
 
-    border-left:0;
-    border-bottom:1px solid var(--line);
 
-    padding:0 0 11px;
-  }
+    <div class="dark-chapters-closing">
 
-  .reader-nav > span{
-    display:none;
-  }
+      <div class="dark-chapters-closing-line"></div>
 
-  .reader-nav > div{
-    display:flex;
-    gap:8px;
-    overflow-x:auto;
-  }
 
-  .reader-nav button{
-    width:auto;
-    flex:0 0 auto;
+      <p>
 
-    padding:7px 9px;
+        Kingdoms could be conquered.
+        Cities could burn.
+        Temples could fall.
+        People could be enslaved.
 
-    border:1px solid #303638;
-  }
+      </p>
 
-  .world-rows > div{
-    grid-template-columns:25% 35% 40%;
-  }
 
-}
+      <h3>
+        But Bharat's civilisation endured.
+      </h3>
 
+    </div>
 
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
+  </div>
 
-@media(max-width:700px){
+</section>
 
-  .site-header{
-    height:70px;
 
-    padding:0 4%;
-  }
 
-  .brand span{
-    display:none;
-  }
+<!-- ==========================================================
+     CHANGING MAP
+========================================================== -->
 
-  .site-header nav{
-    gap:8px;
-  }
+<section class="map-module">
 
-  .site-header nav a{
-    font-size:7px;
-    letter-spacing:1px;
-  }
 
-  .hero{
-    min-height:850px;
+  <div class="map-module-copy">
 
-    padding:115px 7% 50px;
-  }
+    <div class="section-kicker">
+      THE CHANGING MAP
+    </div>
 
-  .hero h1{
-    font-size:60px;
-  }
 
-  .hero h2{
-    font-size:28px;
-  }
+    <h2>
 
-  .hero-map{
-    top:300px;
-    right:-27%;
+      FROM BHARATVARSHA<br>
+      TO <span>PRESENT-DAY INDIA</span>
 
-    width:105%;
-    height:490px;
+    </h2>
 
-    opacity:.2;
-  }
 
-  .hero-map > span,
-  .hero-map > small{
-    display:none;
-  }
+    <p>
 
-  .command-bar{
-    top:70px;
+      The political geography of the subcontinent
+      changed repeatedly.
 
-    display:block;
+      Kingdoms expanded and contracted.
+      Empires rose and disappeared.
+      New political powers emerged.
+      Colonial rule imposed new administrative
+      structures.
 
-    padding:15px 7%;
-  }
+      Partition created a new international frontier.
 
-  .command-controls{
-    display:block;
+    </p>
 
-    margin-top:12px;
-  }
 
-  .search{
-    width:100%;
-  }
+    <p>
 
-  .command-controls select{
-    width:100%;
+      At the same time, civilisational memory could
+      travel across political boundaries through
+      sacred geography, pilgrimage, language,
+      literature, trade and tradition.
 
-    margin-top:8px;
-  }
+    </p>
 
-  .featured,
-  .articles,
-  .world-timeline,
-  .mirror{
-    padding:80px 7%;
-  }
 
-  .featured-copy h2,
-  .library-title,
-  .world-timeline h2,
-  .mirror h2,
-  .map-module-copy h2{
-    font-size:36px;
-  }
+    <button
+      class="outline-btn"
+      data-modal="map"
+    >
+      EXPLORE THE MAP STORY
+    </button>
 
-  .article-grid{
-    grid-template-columns:1fr;
-  }
+  </div>
 
-  .story-card{
-    min-height:350px;
-  }
 
-  .story-card > img{
-    height:190px;
-  }
 
-  .world-rows > div{
-    display:block;
+  <!-- ========================================================
+       BHARATVARSHA MAP — SECOND APPEARANCE
+  ========================================================= -->
 
-    padding:20px 0;
-  }
+  <div class="map-module-art">
 
-  .world-rows span,
-  .world-rows em{
-    display:block;
+    <img
+      src="Bharat-map-clean.png"
+      alt="Bharatvarsha civilisational map"
+    >
 
-    margin-top:6px;
+  </div>
 
-    text-align:left;
-  }
+</section>
 
-  .lesson-grid{
-    grid-template-columns:1fr;
-  }
 
-  .map-module-copy{
-    padding:75px 8%;
-  }
 
-  .map-module-art{
-    min-height:390px;
+<!-- ==========================================================
+     CIVILISATIONAL LESSON
+========================================================== -->
 
-    padding:20px;
-  }
+<section class="mirror">
 
-  .map-module-art img{
-    height:350px;
-  }
+  <div class="section-kicker">
+    THE LESSON OF HISTORY
+  </div>
 
-  .end-note{
-    min-height:600px;
 
-    padding:90px 7%;
-  }
+  <h2>
 
-  .ghost{
-    font-size:72px;
-    letter-spacing:-5px;
-  }
+    GLORY WITH<br>
+    <span>THE COURAGE TO LEARN</span>
 
-  .end-note h2{
-    font-size:42px;
-  }
+  </h2>
 
-  .reader-hero{
-    min-height:560px;
-  }
 
-  .reader-hero-text{
-    width:86%;
-    padding-bottom:45px;
-  }
+  <p>
 
-  .reader-hero-text h2{
-    font-size:42px;
-  }
+    We celebrate achievement because it deserves
+    to be remembered.
 
-  .reader-body{
-    width:86%;
-    padding-top:45px;
-  }
+    We examine failure because the next generation
+    deserves to learn from it.
 
-  .reader-content p{
-    font-size:16px;
-  }
+  </p>
 
-  .reader-content .drop{
-    font-size:20px;
-  }
 
-  .reader-content .evidence,
-  .modal-box .evidence{
-    grid-template-columns:1fr;
-  }
+  <div class="lesson-grid">
 
-  .modal-box{
-    padding:35px 25px;
-  }
 
-  .modal-box h2{
-    font-size:30px;
-  }
+    <article>
 
-  footer{
-    display:block;
-  }
+      <b>
+        UNITY
+      </b>
 
-  footer span{
-    display:block;
-    margin-top:10px;
-  }
+      <span>
 
-}
-/* =========================================================
-   CLICKABLE ARTICLE CARDS
-   ========================================================= */
+        Diversity need not destroy a larger sense
+        of civilisational belonging.
 
-.article-card {
-  cursor: pointer;
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
+      </span>
 
-.article-card:hover {
-  transform: translateY(-5px);
-  cursor: pointer;
-}
+    </article>
 
-.article-card:focus-visible {
-  outline: 2px solid #d8892f;
-  outline-offset: 4px;
-}
 
-.article-card-read {
-  cursor: pointer;
-  display: inline-block;
-  transition:
-    transform 0.2s ease,
-    letter-spacing 0.2s ease;
-}
+    <article>
 
-.article-card:hover .article-card-read {
-  transform: translateX(5px);
-  letter-spacing: 0.04em;
-}
-.article-card-read {
-  color: #d8892f;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, letter-spacing 0.2s ease;
-}
+      <b>
+        DIGNITY
+      </b>
 
-.article-card:hover .article-card-read {
-  color: #f0a04b;
-  transform: translateX(5px);
-  letter-spacing: 0.04em;
-}
+      <span>
+
+        A society becomes stronger when social
+        exclusion and discrimination are challenged.
+
+      </span>
+
+    </article>
+
+
+    <article>
+
+      <b>
+        PREPAREDNESS
+      </b>
+
+      <span>
+
+        Political complacency and strategic mistakes
+        can carry consequences across generations.
+
+      </span>
+
+    </article>
+
+
+    <article>
+
+      <b>
+        RENEWAL
+      </b>
+
+      <span>
+
+        Preserving a civilisation and reforming it
+        are not contradictory tasks.
+
+      </span>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     CLOSING
+========================================================== -->
+
+<section class="end-note">
+
+  <div class="ghost">
+    BHARAT
+  </div>
+
+
+  <div class="section-kicker">
+    THE JOURNEY CONTINUES
+  </div>
+
+
+  <h2>
+
+    LIVED. EVOLVED.<br>
+    <span>PRESERVED. RENEWED.</span>
+
+  </h2>
+
+
+  <p>
+
+    The story handed to the next generation is not
+    only a story of territory.
+
+    It is a story of memory, responsibility,
+    knowledge and Dharma.
+
+  </p>
+
+
+  <blockquote>
+
+    <span>
+      Many kingdoms. Many languages.
+      Many philosophies. Many centuries.
+    </span>
+
+    <strong>
+      One extraordinary civilisational memory.
+    </strong>
+
+    <em>
+      One Sanātana way of life.
+    </em>
+
+  </blockquote>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer>
+
+  <b>
+    EK RAHENGE • TO NEK RAHENGE
+  </b>
+
+
+  <span>
+    History • Evidence • Civilisation •
+    Haindaveeyam Foundation
+  </span>
+
+</footer>
+
+
+
+<!-- ==========================================================
+     FULL ARTICLE READER
+========================================================== -->
+
+<div
+  class="reader"
+  id="reader"
+  aria-hidden="true"
+>
+
+  <div class="reader-panel">
+
+
+    <button
+      class="reader-close"
+      id="readerClose"
+      aria-label="Close article"
+    >
+      ×
+    </button>
+
+
+    <div class="reader-hero">
+
+
+      <img
+        id="readerImage"
+        alt=""
+      >
+
+
+      <div class="reader-hero-text">
+
+
+        <div
+          class="kicker"
+          id="readerKicker"
+        ></div>
+
+
+        <h2
+          id="readerTitle"
+        ></h2>
+
+
+        <p
+          id="readerDeck"
+        ></p>
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="reader-body">
+
+
+      <aside class="reader-nav">
+
+        <span>
+          IN THIS STORY
+        </span>
+
+
+        <div
+          id="readerToc"
+        ></div>
+
+      </aside>
+
+
+
+      <article
+        id="readerContent"
+        class="reader-content"
+      ></article>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ==========================================================
+     EVIDENCE / MAP MODAL
+========================================================== -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <div class="modal-box">
+
+
+    <button
+      class="modal-close"
+      id="modalClose"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+
+    <div
+      class="kicker"
+      id="modalKicker"
+    >
+      HISTORICAL GEOGRAPHY
+    </div>
+
+
+    <h2
+      id="modalTitle"
+    ></h2>
+
+
+    <div
+      id="modalBody"
+    ></div>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- ==========================================================
+     DYNAMIC HISTORY ENGINE
+========================================================== -->
+
+<script src="history.js"></script>
+
+
+</body>
+
+</html>
