@@ -1,4 +1,3 @@
-
 {
   "articles": [
     {
@@ -56,13 +55,22 @@
       "status": "published"
     },
     {
-     "id": "maritime",
-  "title": "When Bharat Crossed the Ocean",
-  "subtitle": "Bharat and the Wider World",
-  "era": "classical",
-  "period": "Indian Ocean and Asian connections",
-  "category": "maritime",
-  "status": "published"
+      "id": "maritime",
+      "title": "When Bharat Crossed the Ocean",
+      "subtitle": "Bharat and the Wider World",
+      "era": "classical",
+      "period": "Indian Ocean and Asian connections",
+      "category": "maritime",
+      "status": "published"
+    },
+    {
+      "id": "frontier-breaks",
+      "title": "The Frontier Breaks",
+      "subtitle": "The Arab Conquest of Sindh",
+      "era": "medieval",
+      "period": "711–715 CE",
+      "category": "dark-chapters",
+      "status": "published"
     },
     {
       "id": "map",
