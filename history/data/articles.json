@@ -56,13 +56,13 @@
       "status": "published"
     },
     {
-      "id": "world",
-      "title": "When Bharat Crossed the Ocean",
-      "subtitle": "Bharat and the Wider World",
-      "era": "classical",
-      "period": "Indian Ocean and Asian connections",
-      "category": "maritime",
-      "status": "published"
+     "id": "maritime",
+  "title": "When Bharat Crossed the Ocean",
+  "subtitle": "Bharat and the Wider World",
+  "era": "classical",
+  "period": "Indian Ocean and Asian connections",
+  "category": "maritime",
+  "status": "published"
     },
     {
       "id": "map",
