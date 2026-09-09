@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupEraFilters();
   setupKeyboardControls();
   setupReaderCloseButton();
+  setupDarkChapterCards();
 
   await loadArticleIndex();
 });
@@ -172,7 +173,7 @@ function renderCards() {
     .map(article => createArticleCard(article))
     .join("");
 
-  document
+  cardsContainer
     .querySelectorAll("[data-article-id]")
     .forEach(card => {
       card.addEventListener("click", () => {
