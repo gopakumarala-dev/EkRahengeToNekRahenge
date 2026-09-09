@@ -73,14 +73,24 @@
       "section": "dark-chapters",
       "status": "published"
     },
-    {
-      "id": "map",
-      "title": "From Bharatvarsha to Present-Day India",
-      "subtitle": "The Changing Political Geography",
-      "era": "modern",
-      "period": "Ancient to modern",
-      "category": "modern",
-      "status": "published"
-    }
+  {
+  "id": "map",
+  "title": "From Bharatvarsha to Present-Day India",
+  "subtitle": "The Changing Political Geography",
+  "era": "modern",
+  "period": "Ancient to modern",
+  "category": "modern",
+  "status": "published"
+},
+{
+  "id": "mahmud-of-ghazni",
+  "title": "Mahmud of Ghazni",
+  "subtitle": "The Sultan Who Came Again and Again",
+  "era": "medieval",
+  "period": "998–1030 CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published"
+}
   ]
 }
