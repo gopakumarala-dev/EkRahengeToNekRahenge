@@ -88,6 +88,18 @@ function renderCards() {
   if (!cardsContainer) return;
 
   const filteredArticles = state.articles.filter(article => {
+
+    /*
+      Dark Chapters articles are registered in the article index
+      so they can be opened by the dedicated Dark Chapters section.
+
+      They must NOT appear in the normal History article grid.
+    */
+
+    if (article.section === "dark-chapters") {
+      return false;
+    }
+
     const matchesEra =
       state.activeEra === "all" ||
       article.era === state.activeEra;
