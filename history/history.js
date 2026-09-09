@@ -34,6 +34,13 @@ const modal = document.getElementById("modal");
    INITIALISE
    ========================================================= */
 
+document.addEventListener("click", event => {
+  const subject = event.target.closest("[data-dark-subject-id]");
+  if (!subject) return;
+  event.preventDefault();
+  openArticle(subject.dataset.darkSubjectId);
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   setupSearch();
   setupEraFilters();
@@ -675,6 +682,14 @@ function buildArticleContent(article) {
 
 
   /* -------------------------
+     Dark Chapter article series
+     ------------------------- */
+
+  if (Array.isArray(article.chapterArticles) && article.chapterArticles.length) {
+    html.push(renderDarkChapterSeries(article.chapterArticles));
+  }
+
+  /* -------------------------
      Final note
      ------------------------- */
 
@@ -699,7 +714,7 @@ function buildArticleContent(article) {
 }
 
 
-/* =========================================================
+function renderDarkChapterSeries(items) {\n  return `\n    <section class="dark-chapter-series" id="chapter-series">\n      <div class="dark-chapter-series-head">\n        <div class="article-section-label">EXPLORE THIS CHAPTER</div>\n        <h3>Every incident becomes a detailed historical article.</h3>\n        <p>Chapter pages provide the civilisational narrative. Individual subjects will carry the detailed chronology, people, battles, human cost, evidence and sources for that incident.</p>\n      </div>\n      <div class="dark-chapter-series-grid">\n        ${items.map(item => {\n          const published = item.status === "published";\n          const tag = published ? `<span class="dark-subject-status">READ ARTICLE →</span>` : `<span class="dark-subject-status">DETAILED ARTICLE TO FOLLOW</span>`;\n          return published\n            ? `<a class="dark-subject-card" href="#" data-dark-subject-id="${escapeHtml(item.id)}">\n                 <span class="dark-subject-number">${escapeHtml(item.number)}</span>\n                 <h4>${escapeHtml(item.title)}</h4>\n                 <p>${escapeHtml(item.summary || "")}</p>${tag}\n               </a>`\n            : `<div class="dark-subject-card is-planned">\n                 <span class="dark-subject-number">${escapeHtml(item.number)}</span>\n                 <h4>${escapeHtml(item.title)}</h4>\n                 <p>${escapeHtml(item.summary || "")}</p>${tag}\n               </div>`;\n        }).join("")}\n      </div>\n    </section>\n  `;\n}\n\n/* =========================================================
    RENDER SECTION
    ========================================================= */
 
