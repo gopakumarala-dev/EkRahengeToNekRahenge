@@ -64,22 +64,13 @@
       "status": "published"
     },
     {
-  "id": "frontier-breaks",
-  "title": "The Frontier Breaks",
-  "subtitle": "The Arab Conquest of Sindh",
-  "era": "medieval",
-  "period": "711–715 CE",
-  "category": "dark-chapters",
-  "section": "dark-chapters",
-  "status": "published"
-},
-    {
       "id": "frontier-breaks",
       "title": "The Frontier Breaks",
       "subtitle": "The Arab Conquest of Sindh",
       "era": "medieval",
       "period": "711–715 CE",
       "category": "dark-chapters",
+      "section": "dark-chapters",
       "status": "published"
     },
     {
