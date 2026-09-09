@@ -1797,3 +1797,10 @@ footer b{
   transform: translateX(5px);
   letter-spacing: 0.04em;
 }
+/* =========================================================
+   CLICKABLE DARK CHAPTERS
+   ========================================================= */
+
+.dark-chapter-card[data-article-id] {
+  cursor: pointer;
+}
