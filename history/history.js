@@ -78,7 +78,44 @@ async function loadArticleIndex() {
     }
   }
 }
+/* =========================================================
+   DARK CHAPTERS
+   STATIC CARD CLICK HANDLER
+   ========================================================= */
 
+function setupDarkChapterCards() {
+
+  const darkChapterCards =
+    document.querySelectorAll(
+      ".dark-chapter-card[data-article-id]"
+    );
+
+  console.log(
+    "Dark Chapter cards found:",
+    darkChapterCards.length
+  );
+
+  darkChapterCards.forEach(card => {
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+
+      const articleId =
+        this.getAttribute("data-article-id");
+
+      console.log(
+        "Dark Chapter clicked:",
+        articleId
+      );
+
+      openArticle(articleId);
+
+    });
+
+  });
+
+}
 
 /* =========================================================
    RENDER ARTICLE CARDS
@@ -204,42 +241,96 @@ function createArticleCard(article) {
    ========================================================= */
 
 async function openArticle(articleId) {
-  const articleIndex = state.articles.find(
-    article => article.id === articleId
-  );
 
-  if (!articleIndex) {
-    console.error("Article not found:", articleId);
+  console.log("Opening article:", articleId);
+
+  if (!articleId) {
+    console.error("No article ID supplied.");
     return;
   }
 
   try {
-    showReaderLoading(articleIndex);
+
+    /*
+      Open the reader immediately.
+      This does NOT depend on data/articles.json.
+    */
+
+    if (reader) {
+      reader.classList.add("open");
+      reader.setAttribute("aria-hidden", "false");
+    }
+
+    document.body.classList.add("reader-open");
+
+    /*
+      Show loading state
+    */
+
+    if (readerContent) {
+      readerContent.innerHTML = `
+        <div class="reader-loading">
+          <div class="loader"></div>
+          <p>Loading research article…</p>
+        </div>
+      `;
+    }
+
+    /*
+      Clear previous table of contents
+    */
+
+    if (readerToc) {
+      readerToc.innerHTML = "";
+    }
+
+    /*
+      Load article directly from its folder.
+    */
 
     const articlePath =
       `articles/${encodeURIComponent(articleId)}/article.json`;
+
+    console.log("Loading:", articlePath);
 
     const response = await fetch(articlePath, {
       cache: "no-store"
     });
 
     if (!response.ok) {
-      throw new Error(`Unable to load ${articlePath}`);
+      throw new Error(
+        `Unable to load ${articlePath} (${response.status})`
+      );
     }
 
     const article = await response.json();
 
+    console.log("Article loaded:", article);
+
+    /*
+      Render article
+    */
+
     renderArticle(article);
 
+    /*
+      Move page to top
+    */
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
   } catch (error) {
+
     console.error("Article loading error:", error);
 
     showReaderError(
-      "This research article could not be loaded."
+      `This research article could not be loaded.`
     );
   }
 }
-
 
 /* =========================================================
    READER LOADING
