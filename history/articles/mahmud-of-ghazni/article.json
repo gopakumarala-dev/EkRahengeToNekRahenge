@@ -1,1 +1,561 @@
 
+{
+  "id": "mahmud-of-ghazni",
+  "title": "Mahmud of Ghazni",
+  "subtitle": "The Sultan Who Came Again and Again",
+  "era": "medieval",
+  "period": "998–1030 CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 02",
+    "title": "MAHMUD OF GHAZNI",
+    "subtitle": "The Sultan Who Came Again and Again",
+    "period": "998–1030 CE",
+    "summary": "Over more than two decades, Mahmud of Ghazni led repeated military expeditions into the Indian subcontinent. His campaigns brought defeat to frontier kingdoms, immense quantities of wealth and captives to Ghazni, and the destruction and plunder of important temples and religious centres. His victories were celebrated in the Islamic world as those of a ghazi, while the wealth extracted from India helped sustain the powerful Ghaznavid military state."
+  },
+
+  "introduction": {
+    "title": "THE SULTAN FROM GHAZNI",
+    "paragraphs": [
+      "Mahmud of Ghazni was one of the most powerful rulers of the early eleventh century. From his capital at Ghazni, in present-day Afghanistan, he built a military empire extending across large parts of eastern Iran, Afghanistan and north-western India.",
+      "His name became closely associated with repeated campaigns into Bharat. These expeditions did not amount to a single conquest of India. They were a series of military campaigns undertaken over many years, reaching deep into the north Indian plains and as far west as Somnath in present-day Gujarat.",
+      "The campaigns had several dimensions. Mahmud sought wealth, political advantage, military prestige and the resources needed to sustain his state. At the same time, his court presented him as a champion of Islam and a ghazi who defeated non-Muslim rulers and attacked major religious centres.",
+      "The result was devastating for many of the communities and institutions caught in the path of his armies. Temples were plundered, treasures were carried away, prisoners and captives were taken, and political centres were defeated.",
+      "Yet Mahmud did not establish a permanent empire over most of the territories he raided. His lasting Indian possession was concentrated in the north-west, especially the Punjab. The later Ghurid conquests would take the process of permanent Muslim political expansion much further."
+    ]
+  },
+
+  "sections": [
+    {
+      "id": "who-was-mahmud",
+      "title": "1. WHO WAS MAHMUD?",
+      "type": "historical",
+      "content": [
+        "Mahmud was the son of Sebuktegin, the Turkic military ruler who established the foundations of the Ghaznavid state at Ghazni.",
+        "After Sebuktegin's death, Mahmud secured control of Ghazni and subsequently expanded his authority across Khurasan and the former eastern territories of the weakening Samanid state.",
+        "He ruled from 998 until his death in 1030. During this period he transformed Ghazni into the centre of a powerful military empire.",
+        "His armies were built around highly trained Turkish military contingents, slave soldiers, professional troops and additional forces recruited from across the eastern Islamic world.",
+        "The cost of maintaining such a military machine was enormous. Indian campaigns became an important source of wealth for the Ghaznavid state."
+      ],
+      "historical_note": "Encyclopaedia Iranica describes Mahmud's state as a highly militarised empire whose standing army required substantial and continuing revenues. Indian spoils, including temple treasures and captives, formed an important part of this resource base."
+    },
+
+    {
+      "id": "frontier",
+      "title": "2. THE FRONTIER — THE HINDU SHAHIS",
+      "type": "historical",
+      "content": [
+        "Before Mahmud reached the great cities of the Gangetic plain, his state confronted the Hindu Shahi kingdom controlling important parts of the north-western frontier.",
+        "The Hindu Shahis occupied a strategically vital zone between the Afghan highlands and the plains of northern India. Their territories included important routes through which armies could move between Afghanistan and the Indian plains.",
+        "The conflict between the Ghaznavids and the Hindu Shahis therefore became more than a series of isolated raids. It was a struggle for control of a frontier that connected Central Asia, Afghanistan and Bharat.",
+        "Jayapala, the Shahi ruler, fought against Sebuktegin and later against Mahmud. His defeat weakened the old frontier power and opened the way for repeated Ghaznavid incursions.",
+        "Anandapala and later Shahi rulers continued the struggle, but the military pressure from Ghazni eventually forced the Hindu Shahi state into retreat."
+      ],
+      "lesson": "The north-western frontier was not an empty passage. It was defended by established kingdoms. But repeated military pressure, political fragmentation and the ability of Ghazni to field experienced armies gradually altered the balance."
+    },
+
+    {
+      "id": "first-campaigns",
+      "title": "3. THE FIRST CAMPAIGNS",
+      "type": "campaign",
+      "content": [
+        "Mahmud's Indian campaigns began soon after he consolidated power in Ghazni.",
+        "The earliest operations were directed toward the north-western frontier and the territories controlled by the Hindu Shahis.",
+        "In 1001, Mahmud defeated Jayapala in a major confrontation near Peshawar. The defeat marked an important stage in the weakening of Shahi power.",
+        "Jayapala was eventually succeeded by Anandapala, who continued resistance against the Ghaznavids.",
+        "The campaigns that followed gradually pushed Ghaznavid influence deeper into the Punjab."
+      ],
+      "historical_note": "The exact chronology and details of individual early expeditions vary among the surviving medieval narratives. The broader pattern of repeated Ghaznavid military intervention in the north-west is well established."
+    },
+
+    {
+      "id": "resistance",
+      "title": "4. THE RESISTANCE OF ANANDAPALA",
+      "type": "resistance",
+      "content": [
+        "The defeat of Jayapala did not mean that resistance ended.",
+        "Anandapala attempted to build a wider coalition against Mahmud. The political landscape of northern India consisted of multiple kingdoms, each with its own interests and rivalries.",
+        "Coalitions could be formed when a common threat became sufficiently serious, but maintaining unity across different rulers was difficult.",
+        "Mahmud's military experience, mobility and ability to concentrate forces gave him a significant advantage against divided opponents.",
+        "The struggle demonstrated a recurring problem that would appear repeatedly in later centuries: individual kingdoms could fight fiercely, but coordinated and sustained frontier defence was much harder to maintain."
+      ],
+      "lesson": "Bharat's weakness was not a lack of courage. It was the difficulty of converting the military strength of many kingdoms into a permanent, coordinated strategic system."
+    },
+
+    {
+      "id": "temple-raids",
+      "title": "5. TEMPLES AS TARGETS",
+      "type": "analysis",
+      "content": [
+        "The temples of early medieval Bharat were not merely places of private worship. Major temples could possess substantial endowments, precious metals, jewellery, land revenues and accumulated offerings.",
+        "For a conquering army, such institutions could therefore represent both religious and material targets.",
+        "Mahmud's campaigns repeatedly attacked important temples and religious centres. Their treasures could be seized and transported back to Ghazni.",
+        "The destruction or desecration of temples also had political meaning. Major temples were connected to royal patronage, local identity and the legitimacy of ruling houses.",
+        "Attacking such a centre could therefore weaken both the material resources and symbolic authority of a defeated kingdom."
+      ],
+      "historical_note": "Encyclopaedia Iranica states that spoils from Hindu temples were used to finance the Ghaznavid military machine and building projects at Ghazni. It also notes archaeological evidence of Indian spolia at Ghazni."
+    },
+
+    {
+      "id": "thanesar",
+      "title": "6. THANESAR",
+      "type": "campaign",
+      "period": "1011 CE",
+      "content": [
+        "Thanesar was one of the important religious centres of northern India.",
+        "Mahmud's attack on Thanesar became part of his growing reputation as a ruler who targeted major Hindu religious institutions.",
+        "The campaign was significant not simply because treasure was taken. The destruction and seizure of religious objects carried a powerful symbolic message.",
+        "In the political culture of the period, defeating the sacred centre of an enemy could be presented as proof of the conqueror's superiority."
+      ],
+      "historical_note": "The surviving Ghaznavid historical tradition presents Mahmud's campaigns against Hindu religious centres within a strongly Islamic ideological framework. Modern historians also emphasise the economic value of the plunder."
+    },
+
+    {
+      "id": "mathura",
+      "title": "7. MATHURA — THE CITY OF TEMPLES",
+      "type": "campaign",
+      "period": "1018 CE",
+      "content": [
+        "In 1018 Mahmud launched one of his most important campaigns into the Gangetic plain.",
+        "His army moved toward Mathura, one of the great sacred centres of northern India and a city associated with the worship of Krishna.",
+        "The city contained wealthy temples and religious establishments that had accumulated offerings and patronage over generations.",
+        "The account of the campaign by al-Utbi describes the magnificence of Mathura's religious buildings and records their destruction and plunder.",
+        "The campaign demonstrated how far a Ghaznavid army could penetrate into the heart of northern India."
+      ],
+      "human_cost": [
+        "The military defeat of a major urban and religious centre brought destruction, displacement and the seizure of wealth.",
+        "Captives were among the spoils taken in Ghaznavid campaigns.",
+        "The surviving sources do not justify inventing a precise casualty figure for Mathura."
+      ],
+      "evidence_warning": "Later accounts sometimes expand the scale of destruction with dramatic details. The article distinguishes the documented destruction and plunder from later embellishment."
+    },
+
+    {
+      "id": "kanauj",
+      "title": "8. KANAUJ — THE GREAT CITY",
+      "type": "campaign",
+      "period": "1018–1019 CE",
+      "content": [
+        "From Mathura, Mahmud's forces advanced toward Kanauj.",
+        "Kanauj had long been one of the great political centres of northern India. Control of Kanauj carried enormous prestige because of the city's historical importance.",
+        "The ruling power was unable to stop Mahmud's advance.",
+        "The campaign resulted in the seizure of substantial wealth and further demonstrated the vulnerability of the major political centres of the Gangetic plain to a highly mobile invading army.",
+        "Mahmud returned to Ghazni rather than attempting to establish permanent rule over the entire region."
+      ],
+      "strategic_significance": "The campaign showed that a powerful army based outside the Gangetic plain could penetrate deep into northern India, defeat or intimidate major rulers, extract wealth and withdraw."
+    },
+
+    {
+      "id": "repeated-raids",
+      "title": "9. THE CAMPAIGNS CONTINUE",
+      "type": "campaign",
+      "content": [
+        "Mahmud did not make a single invasion and disappear. He returned repeatedly.",
+        "His expeditions reached different parts of north-western and northern India, including regions around the Punjab, the Ganges-Yamuna Doab and central India.",
+        "The campaigns varied in their immediate objectives. Some were directed against rulers, some against fortified positions, and others against wealthy religious centres.",
+        "This repeated warfare placed enormous pressure on the kingdoms lying along the routes from the north-west into the plains.",
+        "It also created a cycle in which the wealth taken from one campaign helped finance the military capacity required for the next."
+      ]
+    },
+
+    {
+      "id": "gwalior-kalinjar",
+      "title": "10. GWALIOR AND KALINJAR",
+      "type": "campaign",
+      "period": "1022–1023 CE",
+      "content": [
+        "Mahmud's later Indian expeditions extended toward central India.",
+        "Gwalior and Kalinjar represented important fortified political centres.",
+        "The campaigns demonstrated that the Ghaznavid military threat could reach beyond the immediate Punjab frontier.",
+        "However, these expeditions did not result in permanent Ghaznavid occupation of the central Indian kingdoms."
+      ],
+      "lesson": "Military penetration and permanent political conquest were two different achievements. Mahmud was exceptionally successful at the first; he did not attempt the second across most of the territories he raided."
+    },
+
+    {
+      "id": "somnath",
+      "title": "11. SOMNATH — 1025–1026",
+      "type": "campaign",
+      "period": "1025–1026 CE",
+      "featured": true,
+      "content": [
+        "The most famous of Mahmud's Indian expeditions was his campaign against Somnath in Gujarat.",
+        "Somnath was a major Shaiva pilgrimage centre associated with the famous temple of Shiva.",
+        "Mahmud's army undertook a difficult march across the western Indian landscape before reaching the shrine.",
+        "The temple was defended, but the defenders were defeated and the shrine was plundered.",
+        "The destruction of Somnath became one of the most celebrated episodes in later accounts of Mahmud's career."
+      ],
+      "religious_significance": "For Mahmud's court and later Muslim chroniclers, the destruction of the temple strengthened his image as a victorious ghazi. The religious dimension was therefore real and important in the presentation of the campaign.",
+      "economic_significance": "At the same time, Somnath contained substantial accumulated wealth. The seizure of that wealth served the material interests of the Ghaznavid state.",
+      "evidence_note": "Contemporary and near-contemporary Islamic historical traditions provide evidence for the attack and plunder. Later popular stories about the exact quantity of treasure or the dramatic manner in which the temple image was destroyed should not automatically be treated as contemporary fact.",
+      "source_note": "Encyclopaedia Iranica identifies the Somnath expedition of 1025–1026 as the culmination of Mahmud's Indian campaigns and describes it as producing an immense haul of treasure."
+    },
+
+    {
+      "id": "human-cost",
+      "title": "12. THE HUMAN COST",
+      "type": "human_cost",
+      "content": [
+        "The history of military conquest cannot be reduced to the names of kings and the movement of armies.",
+        "Behind each campaign were ordinary people: farmers, merchants, craftsmen, temple servants, soldiers, families and inhabitants of captured settlements.",
+        "Military defeat could mean death in battle, destruction of property, loss of political protection, displacement and captivity.",
+        "The Ghaznavid campaigns also generated large numbers of captives. Some were enslaved or incorporated into military and domestic systems.",
+        "The seizure of people was not an incidental feature of medieval warfare. Captives could themselves become valuable war booty."
+      ],
+      "evidence_standard": "The existence of captives and slave soldiers is well established in the Ghaznavid system. Exact totals for individual campaigns are much less secure and should not be invented."
+    },
+
+    {
+      "id": "slavery",
+      "title": "13. CAPTIVES AND ENSLAVEMENT",
+      "type": "human_cost",
+      "content": [
+        "The Ghaznavid military state itself depended heavily on military slavery and captive populations.",
+        "Indian captives could become part of the wider slave economy generated by warfare.",
+        "Enslavement meant the loss of freedom, family separation and removal from one's original community.",
+        "Some enslaved people were eventually incorporated into military institutions. Others could be used in domestic or administrative roles.",
+        "This aspect of the campaigns must be included when describing their human cost."
+      ],
+      "historical_note": "Encyclopaedia Iranica explicitly refers to Indian captives among the spoils generated by Mahmud's campaigns and notes the presence of Indian slave troops in the Ghaznavid military system."
+    },
+
+    {
+      "id": "religion-and-wealth",
+      "title": "14. RELIGION AND WEALTH — BOTH MATTER",
+      "type": "analysis",
+      "content": [
+        "A serious historical account should avoid two opposite simplifications.",
+        "The first is to claim that Mahmud's campaigns were nothing more than religious wars. The second is to claim that religion had nothing to do with them.",
+        "Mahmud cultivated the image of the victorious ghazi. His court celebrated victories over non-Muslim rulers and the destruction of major Hindu religious centres.",
+        "At the same time, the Ghaznavid state had enormous financial requirements. Its armies, administration, court and monumental construction depended upon large revenues.",
+        "Indian campaigns supplied wealth, tribute, temple treasures and captives.",
+        "Religion and material interest therefore operated together rather than necessarily excluding one another."
+      ],
+      "core_point": "Mahmud's religious ideology helped legitimise and glorify his campaigns, while the wealth extracted from India helped make those campaigns and his wider state possible."
+    },
+
+    {
+      "id": "ghazi-image",
+      "title": "15. THE GHAZI IMAGE",
+      "type": "ideology",
+      "content": [
+        "Mahmud became famous across the Islamic world as a champion of Islam and a ghazi.",
+        "His court poets and chroniclers celebrated victories over the 'infidels' and the destruction of Hindu religious symbols.",
+        "This image was politically useful. Military success could be translated into religious prestige and legitimacy.",
+        "The celebration of temple destruction was therefore not merely a modern interpretation. It was part of the political and literary presentation of Mahmud's victories in his own historical tradition.",
+        "At the same time, his state did not pursue the permanent conversion of the entire population of the territories he raided. In many places, local rulers remained in place after paying tribute or accepting his authority."
+      ]
+    },
+
+    {
+      "id": "why-no-permanent-conquest",
+      "title": "16. WHY DID MAHMUD NOT CONQUER ALL OF BHARAT?",
+      "type": "analysis",
+      "content": [
+        "Mahmud repeatedly demonstrated that his armies could penetrate deep into northern India. Yet he did not attempt to occupy and administer most of the territories he raided.",
+        "Distance from Ghazni was a major problem. Every additional territory required troops, supplies, fortifications and administrators.",
+        "The kingdoms of northern and central India were numerous and politically resilient. Permanent occupation would have required a much larger army than the force necessary for a raid.",
+        "The economic model of extracting wealth and returning to Ghazni could therefore be more practical than permanent annexation.",
+        "The exception was the north-western frontier, where Ghaznavid control became permanent enough to establish a lasting foothold in the Punjab."
+      ],
+      "historical_note": "Encyclopaedia Iranica explicitly states that permanent occupation of most of the territories raided by Mahmud was neither envisaged nor feasible, while a permanent Muslim foothold was established in the western Punjab."
+    },
+
+    {
+      "id": "punjab",
+      "title": "17. THE LASTING FOOTHOLD — PUNJAB",
+      "type": "historical",
+      "content": [
+        "Although Mahmud did not build a vast Indian empire, his campaigns changed the political geography of the north-west.",
+        "By the end of his reign, the Ghaznavids possessed a permanent foothold in the Punjab.",
+        "Lahore eventually became a major centre of Ghaznavid authority in India.",
+        "This foothold mattered enormously for the future. The north-western gateway remained connected to the political world of Afghanistan and Central Asia.",
+        "Later Ghurid rulers would use this broader strategic environment to push much farther into northern India."
+      ]
+    },
+
+    {
+      "id": "why-bharat-was-vulnerable",
+      "title": "18. WHY WAS BHARAT VULNERABLE?",
+      "type": "analysis",
+      "content": [
+        "Mahmud's success cannot be explained only by the strength of his armies. The political structure of northern India also mattered.",
+        "There was no single permanent authority responsible for defending the entire north-western frontier.",
+        "Indian kingdoms possessed powerful armies and fought with courage, but their political interests were often local or dynastic.",
+        "Rivalries between kingdoms could prevent the creation of lasting strategic coalitions.",
+        "A kingdom might regard another Indian kingdom as a greater immediate rival than a distant power advancing through the frontier.",
+        "This fragmentation did not mean that Bharat lacked military strength. It meant that military strength was difficult to coordinate across political boundaries."
+      ],
+      "lesson": "A civilisation can possess enormous wealth, population and military traditions while remaining strategically vulnerable if its political powers cannot coordinate against repeated external threats."
+    },
+
+    {
+      "id": "internal-divisions",
+      "title": "19. THE HARD LESSON — DISUNITY",
+      "type": "lessons",
+      "content": [
+        "The lesson of Mahmud's campaigns is not that the people of Bharat were weak or cowardly.",
+        "The lesson is that courage at the level of individual kingdoms cannot replace strategic unity.",
+        "The repeated frontier attacks should have encouraged stronger systems of intelligence, frontier fortification, military coordination and rapid mobilisation.",
+        "Instead, political rivalry and changing alliances repeatedly complicated collective resistance.",
+        "The historical lesson is therefore constructive: internal divisions must never be allowed to make the civilisation strategically defenceless."
+      ]
+    },
+
+    {
+      "id": "not-the-end",
+      "title": "20. MAHMUD DID NOT END BHARAT",
+      "type": "civilisational",
+      "content": [
+        "Mahmud caused immense destruction, but his victories did not erase Bharat.",
+        "The temples he attacked were part of a much larger religious and cultural network spread across the subcontinent.",
+        "Kingdoms were defeated, but new kingdoms rose.",
+        "Cities were plundered, but economic and cultural life continued elsewhere.",
+        "Political dynasties changed, but Sanskritic, regional and temple traditions survived.",
+        "The story of Mahmud is therefore one chapter in a much longer history of invasion, resistance, adaptation and renewal."
+      ],
+      "emphasis": "The attacker could carry away gold. He could destroy a temple. He could defeat a king. He could carry people into captivity. But he could not carry away the civilisation itself."
+    },
+
+    {
+      "id": "historical-perspective",
+      "title": "21. WHAT MAHMUD'S CAMPAIGNS CHANGED",
+      "type": "historical",
+      "content": [
+        "The campaigns weakened several north-western and northern Indian powers.",
+        "They transferred enormous wealth from Indian centres to Ghazni.",
+        "They strengthened the military and political resources of the Ghaznavid state.",
+        "They established a durable Ghaznavid presence in the Punjab.",
+        "They also created a historical memory of repeated invasions from the north-west that would become even more important in later centuries."
+      ]
+    },
+
+    {
+      "id": "evidence-and-historiography",
+      "title": "22. EVIDENCE & HISTORIOGRAPHY",
+      "type": "sources",
+      "content": [
+        "The history of Mahmud of Ghazni is unusually rich in medieval Islamic narrative sources but must still be handled carefully.",
+        "One of the most important early sources is Abu Nasr Muhammad al-Utbi's Tarikh-i Yamini, a court history written in the Ghaznavid political environment.",
+        "Other Persian historical works, including those associated with Gardizi and later historians, preserve additional information about the Ghaznavid rulers.",
+        "The sources were written from particular political and cultural perspectives. They frequently celebrated the ruler's victories and religious credentials.",
+        "Modern historians therefore compare these narratives with archaeology, inscriptions, numismatic evidence and other historical material.",
+        "Later Persian and Indo-Persian chronicles may preserve useful traditions while also introducing material that must be separated from earlier evidence.",
+        "Popular modern narratives frequently exaggerate casualty figures or repeat dramatic stories without establishing their source. Such claims should not be treated as established history merely because they are widely circulated."
+      ],
+      "method": [
+        "Primary or near-contemporary evidence should be identified first.",
+        "Later literary traditions should be clearly labelled as later.",
+        "Modern scholarly interpretations should be distinguished from what the medieval sources directly state.",
+        "Where exact numbers cannot be established, the article should say so rather than inventing precision."
+      ]
+    },
+
+    {
+      "id": "civilisational-reading",
+      "title": "23. A BHARAT-CENTRED READING",
+      "type": "civilisational",
+      "content": [
+        "From the perspective of Bharat's civilisational history, Mahmud's campaigns were not merely episodes in the biography of a foreign ruler.",
+        "They were encounters between a powerful Central Asian-Afghan military state and a politically fragmented but culturally immense civilisation.",
+        "The invasions exposed weaknesses in frontier defence and political coordination.",
+        "They also demonstrated the extraordinary material wealth accumulated by Indian kingdoms and religious institutions.",
+        "The destruction of individual centres was real. So was the suffering of the people caught in war.",
+        "But destruction at individual locations did not mean the destruction of the civilisation as a whole.",
+        "Bharat's civilisational traditions survived through temples, communities, learning, regional kingdoms, philosophical traditions, literature, pilgrimage networks and social memory."
+      ]
+    },
+
+    {
+      "id": "lessons-for-today",
+      "title": "24. LESSONS FOR THE FUTURE",
+      "type": "lessons",
+      "content": [
+        "History should not be studied merely to remember the names of invaders.",
+        "The deeper lesson is to understand why a civilisation can repeatedly suffer external attacks despite possessing immense resources.",
+        "Unity does not mean eliminating political diversity. It means recognising when a common strategic threat requires cooperation.",
+        "Frontier defence, intelligence, military preparedness, economic resilience and political coordination are essential to civilisational security.",
+        "Internal rivalries should never become an invitation to external powers.",
+        "The memory of the past should therefore produce vigilance and constructive unity rather than hatred toward people who live today."
+      ]
+    },
+
+    {
+      "id": "conclusion",
+      "title": "25. CONCLUSION — THE RAIDER WHO COULD NOT ERASE A CIVILISATION",
+      "type": "conclusion",
+      "content": [
+        "Mahmud of Ghazni was one of the most successful military raiders of the early medieval period.",
+        "He defeated powerful rulers, penetrated deep into northern India, plundered wealthy cities and temples, seized captives and returned enormous resources to Ghazni.",
+        "His court celebrated these victories in religious language, presenting him as a ghazi. His state simultaneously depended upon the wealth extracted through warfare.",
+        "Yet his achievements had limits. He did not permanently conquer most of the territories he raided. His enduring Indian foothold remained concentrated in the north-west and Punjab.",
+        "The greater historical significance of his campaigns lies in what they revealed: the enormous wealth of Bharat, the strategic vulnerability of its north-western frontier, the consequences of political fragmentation and the resilience of the civilisation that endured the attacks.",
+        "Mahmud could defeat kings.",
+        "He could plunder cities.",
+        "He could destroy temples.",
+        "He could carry away wealth and captives.",
+        "But he could not erase Bharat."
+      ]
+    }
+  ],
+
+  "timeline": [
+    {
+      "year": "998 CE",
+      "event": "Mahmud establishes himself as ruler of the Ghaznavid state."
+    },
+    {
+      "year": "1001 CE",
+      "event": "Mahmud defeats Jayapala of the Hindu Shahi kingdom in the north-western frontier region."
+    },
+    {
+      "year": "Early 11th century",
+      "event": "Repeated Ghaznavid campaigns weaken the Hindu Shahi position and expand Ghaznavid influence in the Punjab."
+    },
+    {
+      "year": "1011 CE",
+      "event": "Mahmud campaigns against Thanesar, an important Hindu religious centre."
+    },
+    {
+      "year": "1018 CE",
+      "event": "Mahmud launches a major expedition toward Mathura and Kanauj."
+    },
+    {
+      "year": "1018–1019 CE",
+      "event": "Mathura and Kanauj are attacked and substantial wealth is taken."
+    },
+    {
+      "year": "1022–1023 CE",
+      "event": "Later campaigns extend toward central Indian political centres including Gwalior and Kalinjar."
+    },
+    {
+      "year": "1025–1026 CE",
+      "event": "Mahmud conducts his famous campaign against Somnath in Gujarat."
+    },
+    {
+      "year": "1030 CE",
+      "event": "Mahmud dies after a reign of approximately thirty-two years."
+    }
+  ],
+
+  "key_questions": [
+    {
+      "question": "Was Mahmud's purpose only religious?",
+      "answer": "No single motive explains all his campaigns. Religious ideology and the ghazi image were important, while wealth, captives, military finance and political power were also central."
+    },
+    {
+      "question": "Did Mahmud conquer all of northern India?",
+      "answer": "No. He conducted deep military expeditions but did not permanently occupy most of the territories he raided."
+    },
+    {
+      "question": "Why were temples targeted?",
+      "answer": "Major temples could contain substantial accumulated wealth and were also politically and symbolically important institutions. Their destruction could therefore have both material and ideological significance."
+    },
+    {
+      "question": "Did Mahmud take captives?",
+      "answer": "Yes. Captives formed part of the spoils associated with Ghaznavid warfare. Exact totals for individual campaigns are often uncertain."
+    },
+    {
+      "question": "What was Mahmud's lasting territorial achievement in Bharat?",
+      "answer": "The Ghaznavids established a permanent foothold in the Punjab and north-western India."
+    },
+    {
+      "question": "Did Mahmud destroy Bharat's civilisation?",
+      "answer": "No. His campaigns caused severe destruction in particular places and communities, but Bharat's wider civilisation survived and continued to evolve."
+    }
+  ],
+
+  "lessons": [
+    "Political fragmentation can turn a wealthy and powerful civilisation into a strategically vulnerable one.",
+    "Frontier defence requires sustained institutions rather than temporary coalitions.",
+    "Military courage must be combined with intelligence, logistics and coordination.",
+    "Religious and cultural institutions can become targets during political warfare.",
+    "Historical memory should distinguish documented events from later legends.",
+    "The survival of a civilisation depends on its ability to adapt after political catastrophe.",
+    "Internal rivalry should never become a permanent strategic weakness."
+  ],
+
+  "evidence_standard": {
+    "primary_and_near_contemporary": [
+      "Al-Utbi, Tarikh-i Yamini",
+      "Ghaznavid-period historical traditions",
+      "Coins and inscriptions",
+      "Archaeological evidence from Ghazni and relevant Indian sites"
+    ],
+    "later_sources": [
+      "Gardizi",
+      "Ibn al-Athir",
+      "Later Indo-Persian chronicles",
+      "Later regional traditions concerning Mahmud and Somnath"
+    ],
+    "modern_scholarship": [
+      "Encyclopaedia Iranica",
+      "Modern scholarship on the Ghaznavids and medieval Indian political history"
+    ],
+    "editorial_rule": "Where the evidence is uncertain, this article does not convert later tradition or popular claims into established fact."
+  },
+
+  "sources": [
+    {
+      "title": "Mahmud b. Sebuktegin",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/"
+    },
+    {
+      "title": "Ghaznavids",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/ghaznavids/"
+    },
+    {
+      "title": "India v. Political and Cultural Relations: Medieval Period to the 13th Century",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/india-v-relations-medieval-period-to-the-13th-century/"
+    },
+    {
+      "title": "Tarikh-i Yamini",
+      "author": "Abu Nasr al-Utbi",
+      "type": "near-contemporary Ghaznavid court history"
+    },
+    {
+      "title": "Tarikh al-Hind",
+      "author": "Abu Rayhan al-Biruni",
+      "type": "near-contemporary intellectual source"
+    }
+  ],
+
+  "further_reading": [
+    "Encyclopaedia Iranica — Mahmud b. Sebuktegin",
+    "Encyclopaedia Iranica — Ghaznavids",
+    "Encyclopaedia Iranica — India: Medieval Political and Cultural Relations",
+    "Al-Utbi — Tarikh-i Yamini",
+    "Al-Biruni — Kitab al-Hind"
+  ],
+
+  "tags": [
+    "Mahmud of Ghazni",
+    "Ghaznavids",
+    "Hindu Shahi",
+    "Jayapala",
+    "Anandapala",
+    "Mathura",
+    "Kanauj",
+    "Thanesar",
+    "Gwalior",
+    "Kalinjar",
+    "Somnath",
+    "temple destruction",
+    "captivity",
+    "enslavement",
+    "medieval Bharat",
+    "Islamic invasions",
+    "frontier",
+    "resistance",
+    "civilisational survival"
+  ]
+}
