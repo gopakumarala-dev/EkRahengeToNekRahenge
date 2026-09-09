@@ -2222,3 +2222,131 @@ footer b{
   }
 
 }
+/* =========================================================
+   CURRENT HISTORY.HTML COMPATIBILITY LAYER
+   This section styles the current history.html class names.
+   Keep the existing rules above; these rules intentionally
+   override only the older selector names where necessary.
+========================================================= */
+
+.history-header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  height:78px; padding:0 4.5%; display:flex; align-items:center;
+  justify-content:space-between; background:rgba(3,5,6,.96);
+  border-bottom:1px solid #202527; backdrop-filter:blur(14px);
+}
+.history-header nav{display:flex;align-items:center;gap:25px}
+.history-header nav a{color:#969d9f;font-size:10px;letter-spacing:1.7px;transition:.2s ease}
+.history-header nav a:hover,.history-header nav a.active{color:var(--orange)}
+
+.hero{
+  min-height:100vh; padding:145px 6.5% 70px; display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(420px,1fr); gap:3%;
+  align-items:center; position:relative; overflow:hidden;
+}
+.hero-copy{max-width:760px}
+.hero-lead{max-width:720px;color:#c1c7c8;font-size:17px;line-height:1.75}
+.hero-visual{min-width:0;height:min(700px,78vh);position:relative;display:flex;align-items:center;justify-content:center}
+.hero-visual img{width:100%;height:100%;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 25px 65px rgba(255,100,0,.13))}
+.aura{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,100,0,.14),transparent 68%);filter:blur(18px)}
+.map-mark{position:absolute;right:4%;bottom:13%;z-index:3;color:var(--gold);font-size:11px;letter-spacing:4px}
+.map-note{position:absolute;right:4%;bottom:7%;z-index:3;max-width:310px;text-align:right;color:#737b7d;font-size:9px}
+
+.opening,.chapter,.feature-full,.knowledge,.world-story,.nalanda,.conflict,.swarajya,.colonial,.freedom,.map-journey,.mirror,.ending,.dynamic-library{border-top:1px solid var(--line)}
+.opening{padding:105px 7%;background:#080b0c}
+.opening-grid{display:grid;grid-template-columns:170px minmax(0,1fr);gap:55px;align-items:start;margin-top:35px}
+.opening-grid article,.opening-grid .prose{max-width:900px}
+.chapter{padding:110px 7%;background:#060809}
+.chapter.dark{background:#030405}
+.chapter-head{max-width:1050px;margin:0 auto 42px}
+.chapter-head h2,.feature-copy h2,.world-copy h2,.colonial-copy h2,.freedom h2,.mirror h2{margin:12px 0 20px;font-size:clamp(38px,5vw,62px);line-height:.98;letter-spacing:-2px}
+.chapter-head h2 span,.feature-copy h2 span,.world-copy h2 span,.colonial-copy h2 span,.freedom h2 span,.mirror h2 span{color:var(--orange)}
+.chapter-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.chapter.reverse .chapter-grid{direction:rtl}
+.chapter.reverse .chapter-grid > *{direction:ltr}
+.chapter-image{min-height:420px;overflow:hidden;background:#090c0d;border:1px solid var(--line)}
+.chapter-image img{width:100%;height:100%;min-height:420px;display:block;object-fit:cover}
+.prose{color:#adb5b6;font-size:16px;line-height:1.85}
+.prose p{margin:0 0 20px}
+.evidence-box{margin-top:28px;padding:20px;border-left:2px solid var(--orange);background:rgba(255,121,0,.045)}
+.fact-band{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact-band > *{padding:30px 7%;background:#080b0c}
+.long-columns{max-width:1250px;margin:auto;columns:2;column-gap:60px;color:#aeb5b6;font-size:16px;line-height:1.85}
+.long-columns p{break-inside:avoid}
+
+.feature-full{display:grid;grid-template-columns:1fr 1fr;min-height:650px;background:#080b0c}
+.feature-full.reverse{grid-template-columns:1fr 1fr}
+.feature-photo{position:relative;min-height:620px;overflow:hidden;background:#050708}
+.feature-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.feature-photo > span{position:absolute;left:7%;bottom:25px;color:var(--gold);font-size:10px;letter-spacing:2px;background:rgba(0,0,0,.6);padding:7px 10px}
+.feature-copy{padding:90px 10%;display:flex;flex-direction:column;justify-content:center}
+.feature-copy p,.world-copy p,.colonial-copy p,.freedom p{color:#adb5b6;font-size:16px;line-height:1.8;max-width:720px}
+.large-callout,.pull-quote{margin-top:25px;padding:24px 0 0;border-top:1px solid #49301b;color:#e0ddd4;font-size:22px;line-height:1.5}
+
+.knowledge{padding:110px 7%;background:#050708}
+.knowledge-grid{max-width:1250px;margin:38px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.knowledge-grid article,.knowledge-bottom > *{padding:28px;background:#090c0d;border:1px solid #292f31}
+.knowledge-grid h3{margin:0 0 12px;font-size:22px}
+.knowledge-grid p,.knowledge-bottom p{margin:0;color:#858e90;font-size:13px;line-height:1.7}
+.knowledge-bottom{max-width:1250px;margin:14px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.world-story{display:grid;grid-template-columns:1fr 1fr;min-height:650px;background:#090c0d}
+.world-photo{min-height:620px;overflow:hidden}.world-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.world-copy{padding:90px 10%;display:flex;flex-direction:column;justify-content:center}
+.international{margin-top:25px;padding:20px;border-left:2px solid var(--orange);background:rgba(255,121,0,.045);color:#c8cdcd}
+
+.nalanda{padding:110px 7%;background:#07090a}
+.nalanda-grid{max-width:1250px;margin:35px auto 0;display:grid;grid-template-columns:280px 1fr;gap:55px;align-items:start}
+.big-stat{font-size:110px;line-height:.8;font-weight:800;color:var(--orange);letter-spacing:-7px}
+.stat-caption{color:#8d9698;font-size:10px;letter-spacing:1.5px;line-height:1.7}
+
+.conflict{padding:110px 7%;background:#080b0c}
+.conflict > .lead{max-width:850px;color:#adb5b6;font-size:18px;line-height:1.75}
+.conflict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px}
+.conflict-grid article{padding:30px;background:#07090a;border:1px solid #292f31;border-top:2px solid var(--orange)}
+.conflict-grid span{color:var(--orange);font-size:9px;letter-spacing:1.7px;font-weight:700}
+.conflict-grid h3{margin:12px 0;font-size:22px}.conflict-grid p{margin:0;color:#858e90;font-size:13px;line-height:1.7}
+
+.swarajya{padding:110px 7%;background:#060809}
+.swarajya-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+.swarajya-grid article{padding:28px;background:#090c0d;border:1px solid #292f31;border-top:2px solid var(--orange)}
+.swarajya-grid b,.colonial-columns b{color:var(--orange);font-size:10px;letter-spacing:1.7px}.swarajya-grid p,.colonial-columns p{color:#858e90;font-size:13px;line-height:1.7}
+
+.colonial{padding:110px 7%;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;background:#080b0c}
+.colonial-copy .lead{font-size:19px;max-width:850px}
+.colonial-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:38px}
+.colonial-columns article{padding:22px;background:#07090a;border:1px solid #292f31}
+.colonial-visual{display:flex;align-items:center;justify-content:center;padding:40px;background:radial-gradient(circle,rgba(110,48,8,.16),transparent 70%)}
+.archive-card{width:100%;padding:40px;background:#0b0d0e;border:1px solid #49301b;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.archive-card b{color:var(--orange);font-size:10px;letter-spacing:2px}.archive-card strong{display:block;margin:15px 0;font-size:30px}.archive-card span{color:#858e90;font-size:12px}
+
+.freedom{padding:110px 7%;background:#050708}.freedom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px}.freedom-grid article{padding:28px;background:#090c0d;border:1px solid #292f31}.freedom-grid b{color:var(--orange);font-size:10px;letter-spacing:1.7px}.freedom-grid p{font-size:13px}
+
+.map-journey{display:grid;grid-template-columns:1fr 1fr;min-height:650px;background:#040506}
+.map-copy{padding:100px 10%;display:flex;flex-direction:column;justify-content:center}.map-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px;color:#9ba3a5;font-size:11px;letter-spacing:1px}.map-flow b,.map-flow strong{color:var(--orange)}.map-flow i{color:#70421c;font-style:normal}
+.map-art{display:flex;align-items:center;justify-content:center;padding:45px;background:radial-gradient(circle,rgba(110,48,8,.14),transparent 68%)}.map-art img{width:100%;height:560px;object-fit:contain;filter:drop-shadow(0 20px 50px rgba(255,100,0,.12))}
+
+.mirror{padding:110px 7%;background:#0a0d0f;text-align:center}.mirror-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:43px;text-align:left}.mirror-grid article{padding:25px;background:#07090a;border:1px solid #292f31;border-top:2px solid var(--orange)}.mirror-grid b{color:var(--orange);font-size:10px;letter-spacing:1.7px}.mirror-grid p{color:#858e90;font-size:12px}
+.ending{min-height:650px;padding:110px 7%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#020303}.ending .ghost{color:#111719;font-size:145px;font-weight:800;line-height:.7;letter-spacing:-9px}.ending h2{font-size:60px;line-height:1;margin:45px 0 25px}.ending h2 span{color:var(--orange)}.ending p{max-width:730px;color:#858d8f}
+
+.dynamic-library{padding:110px 7%;background:#050708}.library-head{display:flex;justify-content:space-between;align-items:end;gap:30px}.library-head h2{margin:12px 0;font-size:50px;line-height:1}.library-head h2 span{color:var(--orange)}.library-tools{display:flex;gap:10px}.library-tools input,.library-tools select{height:42px;padding:0 12px;background:#090c0d;border:1px solid #343a3c;color:#ddd;outline:none}.library-tools input{width:300px}.library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:38px}.archive-card,.article-card{min-width:0}
+
+/* Current HTML uses .section in a few places; do not let it inherit old layouts. */
+.section{width:auto;max-width:none;margin:0}
+
+@media(max-width:1100px){
+  .hero{grid-template-columns:1fr}.hero-visual{position:absolute;right:-8%;top:110px;width:62%;height:620px;opacity:.28}
+  .chapter-grid,.feature-full,.world-story,.map-journey,.colonial{grid-template-columns:1fr}
+  .chapter.reverse .chapter-grid{direction:ltr}
+  .conflict-grid,.swarajya-grid,.knowledge-grid,.freedom-grid,.mirror-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .colonial-visual{min-height:400px}.library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .library-head{display:block}.library-tools{margin-top:20px}
+}
+@media(max-width:700px){
+  .history-header{height:70px;padding:0 4%}.history-header .brand span{display:none}.history-header nav{gap:8px}.history-header nav a{font-size:7px;letter-spacing:1px}
+  .hero{min-height:850px;padding:115px 7% 50px}.hero h1{font-size:60px}.hero h2{font-size:28px}.hero-visual{top:300px;right:-27%;width:105%;height:490px;opacity:.2}.map-mark,.map-note{display:none}
+  .opening,.chapter,.knowledge,.feature-copy,.world-copy,.nalanda,.conflict,.swarajya,.colonial,.freedom,.map-copy,.mirror,.dynamic-library{padding:80px 7%}
+  .opening-grid,.nalanda-grid{grid-template-columns:1fr;gap:30px}.chapter-image,.chapter-image img{min-height:300px}.long-columns{columns:1}
+  .feature-photo,.world-photo{min-height:380px}.conflict-grid,.swarajya-grid,.knowledge-grid,.knowledge-bottom,.colonial-columns,.freedom-grid,.mirror-grid,.library-grid,.fact-band{grid-template-columns:1fr}
+  .library-tools{display:block}.library-tools input,.library-tools select{width:100%;margin-top:8px}.library-head h2{font-size:36px}.ending{min-height:600px;padding:90px 7%}.ending .ghost{font-size:72px;letter-spacing:-5px}.ending h2{font-size:42px}.map-art{min-height:390px;padding:20px}.map-art img{height:350px}
+}
