@@ -1,1697 +1,968 @@
 /* =========================================================
-   BHARAT HISTORY — EARLIER DESIGN
-   Ek Rahenge To Nek Rahenge
-   Dynamic History Platform
+   EK RAHENGE TO NEK RAHENGE
+   HISTORY PAGE — NEW CINEMATIC DESIGN
+   Replace ONLY history.css
    ========================================================= */
 
-:root {
-  --bg: #050708;
-  --bg-soft: #080b0c;
-  --bg-panel: #0c1011;
-
-  --text: #e7e9e9;
-  --muted: #969d9f;
-  --muted-2: #737b7d;
-
-  --orange: #ff7900;
-  --orange-soft: #d95f00;
-  --gold: #d7a25a;
-
-  --line: #202527;
-  --line-soft: rgba(215,162,90,.18);
-
-  --white: #f2f3f1;
+:root{
+  --bg:#050606;
+  --bg2:#090b0b;
+  --panel:#0d1010;
+  --panel2:#111414;
+  --text:#e8e3d8;
+  --muted:#99978f;
+  --dim:#686b65;
+  --line:rgba(215,190,145,.14);
+  --line2:rgba(215,190,145,.28);
+  --saffron:#df6817;
+  --saffron-soft:#b94d13;
+  --gold:#c9a15b;
+  --max:1240px;
 }
 
-/* =========================================================
-   RESET
-   ========================================================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:rgba(223,104,23,.35);color:#fff}
 
-* {
-  box-sizing: border-box;
+/* ================= HEADER ================= */
+
+.site-header,
+.history-header{
+  position:fixed;
+  z-index:1000;
+  top:0;left:0;right:0;
+  height:72px;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(5,6,6,.88);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(15px);
 }
 
-html {
-  scroll-behavior: smooth;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
 }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+.brand img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
 }
-
-img {
-  max-width: 100%;
-  display: block;
+.brand span{
+  color:#9b9a93;
+  font-size:9px;
+  line-height:1.2;
+  letter-spacing:2px;
 }
+.brand b{color:var(--saffron)}
 
-a {
-  color: inherit;
-  text-decoration: none;
+.site-header nav,
+.history-header nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
 }
-
-button,
-input,
-select {
-  font: inherit;
+.site-header nav a,
+.history-header nav a{
+  color:#7f817c;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  transition:.25s ease;
 }
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.history-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 78px;
-  padding: 0 4.5%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  z-index: 1000;
-
-  background: rgba(3,5,6,.96);
-  border-bottom: 1px solid var(--line);
-
-  backdrop-filter: blur(14px);
-}
-
-.history-header .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.history-header .brand img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-}
-
-.history-header .brand span {
-  color: #aaa;
-  font-size: 9px;
-  line-height: 1.3;
-  letter-spacing: 2px;
-}
-
-.history-header .brand b {
-  color: var(--orange);
-}
-
-.history-header nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.history-header nav a {
-  color: #969d9f;
-  font-size: 10px;
-  letter-spacing: 1.7px;
-  transition: .25s ease;
-}
-
+.site-header nav a:hover,
+.site-header nav a.active,
 .history-header nav a:hover,
-.history-header nav a.active {
-  color: var(--orange);
+.history-header nav a.active{color:#ee9952}
+
+.search{
+  color:#8c8d87;
+  font-size:8px;
+  letter-spacing:1.5px;
 }
 
+/* ================= COMMON ================= */
 
-/* =========================================================
-   HERO
-   ========================================================= */
+main{overflow:hidden}
+section{position:relative}
+.kicker,
+.section-label,
+.section-kicker,
+.eyebrow,
+.article-section-label{
+  color:var(--saffron);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+h1,h2,h3,h4{
+  margin-top:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:600;
+}
+p{color:var(--muted)}
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  padding:12px 19px;
+  border:1px solid rgba(223,104,23,.55);
+  color:#ed9952;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  transition:.25s ease;
+}
+.primary-btn:hover{
+  background:var(--saffron);
+  border-color:var(--saffron);
+  color:#090909;
+  transform:translateY(-2px);
+}
 
-.hero {
-  min-height: 100vh;
+/* ================= HERO ================= */
 
-  padding: 145px 6.5% 70px;
-
-  display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(420px,1fr);
-  gap: 3%;
-
-  align-items: center;
-
-  position: relative;
-  overflow: hidden;
-
+.hero{
+  min-height:100vh;
+  padding:130px 7% 70px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(400px,.9fr);
+  gap:5%;
+  align-items:center;
   background:
-    radial-gradient(
-      circle at 78% 45%,
-      rgba(255,100,0,.12),
-      transparent 35%
-    ),
-    linear-gradient(
-      180deg,
-      #050708 0%,
-      #070a0b 100%
-    );
+    radial-gradient(circle at 75% 45%,rgba(181,63,10,.16),transparent 32%),
+    linear-gradient(180deg,#050606,#080a0a);
+}
+.hero-copy{max-width:720px;z-index:2}
+.eyebrow{margin-bottom:20px}
+.hero h1{
+  margin:0;
+  color:#eee9df;
+  font-size:clamp(78px,12vw,165px);
+  line-height:.78;
+  letter-spacing:-8px;
+}
+.hero h2{
+  margin:32px 0 22px;
+  color:#dcd7cd;
+  font-size:clamp(32px,4vw,57px);
+  line-height:.98;
+  letter-spacing:-1.5px;
+}
+.hero h2 span{color:var(--saffron)}
+.hero p,
+.hero-lead{
+  max-width:650px;
+  font-size:16px;
+  line-height:1.85;
+}
+.hero-mantra{
+  margin:30px 0 32px;
+  padding-left:18px;
+  border-left:1px solid var(--saffron);
+  display:grid;
+  gap:2px;
+}
+.hero-mantra span{
+  color:#747670;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2.5px;
+}
+.hero-mantra strong{
+  margin-top:8px;
+  color:#d0cbc0;
+  font-size:10px;
+  letter-spacing:1.8px;
+}
+.hero-mantra em{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:14px;
 }
 
-.hero::before {
-  content: "THE GREATER HISTORY OF BHARAT";
-
-  position: absolute;
-  top: 105px;
-  left: 6.5%;
-
-  color: rgba(215,162,90,.45);
-
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 4px;
+.hero-map,
+.hero-visual{
+  min-height:600px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.map-glow,
+.hero-visual .aura{
+  position:absolute;
+  width:570px;
+  height:570px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(207,78,12,.18),transparent 67%);
+  filter:blur(8px);
+}
+.hero-map img,
+.hero-visual img{
+  position:relative;
+  z-index:2;
+  width:min(100%,650px);
+  max-height:650px;
+  object-fit:contain;
+  filter:drop-shadow(0 25px 65px rgba(0,0,0,.7));
+}
+.hero-map>span,
+.map-mark{
+  position:absolute;
+  z-index:3;
+  right:3%;
+  bottom:15%;
+  color:var(--gold);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:3px;
+}
+.hero-map small,
+.map-note{
+  position:absolute;
+  z-index:3;
+  right:3%;
+  bottom:8%;
+  max-width:330px;
+  color:#696b65;
+  text-align:right;
+  font-size:8px;
 }
 
-.hero-copy {
-  max-width: 760px;
+/* ================= HISTORY EXPLORER ================= */
+
+.command-bar{
+  padding:25px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  background:#0b0d0d;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.command-title span{
+  display:block;
+  color:var(--saffron);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.command-title strong{
+  color:#aaa9a2;
+  font-size:11px;
+  font-weight:500;
+}
+.command-bar nav,
+.command-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.command-bar a{
+  color:#777a74;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.command-bar a:hover{color:#e6954d}
+
+/* ================= INTRO ================= */
+
+.history-intro,
+.opening{
+  padding:105px 7%;
+  background:#080a0a;
+  border-bottom:1px solid var(--line);
+}
+.history-intro>*,
+.opening>*{
+  max-width:var(--max);
+  margin-left:auto;
+  margin-right:auto;
+}
+.history-intro h2,
+.opening h2{
+  margin-top:15px;
+  color:#ddd8ce;
+  font-size:clamp(43px,5.5vw,72px);
+  line-height:.95;
+}
+.history-intro p,
+.opening p{
+  max-width:800px;
+  line-height:1.9;
+}
+.principle-box{
+  max-width:800px!important;
+  margin-top:35px!important;
+  padding:22px 25px;
+  border-left:2px solid var(--saffron);
+  background:rgba(255,255,255,.018);
+}
+.principle-box strong{
+  display:block;
+  color:var(--gold);
+  font-size:9px;
+  letter-spacing:2px;
+}
+.principle-box span{
+  display:block;
+  margin-top:6px;
+  color:#898b85;
+  font-size:13px;
 }
 
-.hero .eyebrow {
-  color: var(--orange);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 22px;
-}
+/* ================= ERA / FEATURE SECTIONS ================= */
 
-.hero h1 {
-  margin: 0;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(90px, 12vw, 180px);
-  line-height: .82;
-  letter-spacing: -8px;
-  font-weight: 700;
-}
-
-.hero h2 {
-  margin: 30px 0 25px;
-
-  color: #d7d9d8;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 4vw, 58px);
-  line-height: 1.02;
-  letter-spacing: -2px;
-}
-
-.hero h2 span {
-  color: var(--orange);
-}
-
-.hero-copy > p {
-  max-width: 700px;
-
-  color: #aeb5b6;
-
-  font-size: 17px;
-  line-height: 1.75;
-}
-
-.hero-mantra {
-  margin: 38px 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
-  border-left: 1px solid var(--orange);
-  padding-left: 18px;
-}
-
-.hero-mantra span {
-  color: #727a7c;
-
-  font-size: 9px;
-  letter-spacing: 3px;
-}
-
-.hero-mantra strong {
-  margin-top: 8px;
-
-  color: #d5d7d6;
-
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-.hero-mantra em {
-  color: var(--gold);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.primary-btn {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 14px 22px;
-
-  border: 1px solid rgba(255,121,0,.5);
-
-  color: var(--orange);
-
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  transition: .25s ease;
-}
-
-.primary-btn:hover {
-  background: var(--orange);
-  color: #080808;
-}
-
-
-/* =========================================================
-   HERO MAP
-   ========================================================= */
-
-.hero-map {
-  min-width: 0;
-  height: min(700px,78vh);
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-map img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-
-  position: relative;
-  z-index: 2;
-
-  filter:
-    drop-shadow(
-      0 25px 65px rgba(255,100,0,.13)
-    );
-}
-
-.map-glow {
-  position: absolute;
-
-  width: 560px;
-  height: 560px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,100,0,.16),
-      transparent 68%
-    );
-
-  filter: blur(18px);
-}
-
-.hero-map > span {
-  position: absolute;
-
-  right: 4%;
-  bottom: 13%;
-
-  z-index: 3;
-
-  color: var(--gold);
-
-  font-size: 11px;
-  letter-spacing: 4px;
-}
-
-.hero-map small {
-  position: absolute;
-
-  right: 4%;
-  bottom: 7%;
-
-  max-width: 310px;
-
-  text-align: right;
-
-  color: var(--muted-2);
-
-  font-size: 9px;
-}
-
-
-/* =========================================================
-   COMMON SECTION
-   ========================================================= */
-
-.opening,
-.chapter,
 .feature-full,
-.knowledge,
-.world-story,
-.nalanda,
-.conflict,
-.swarajya,
-.colonial,
-.freedom,
-.map-journey,
-.mirror,
-.ending,
-.dynamic-library {
-  border-top: 1px solid var(--line);
+.world-story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:620px;
+  border-bottom:1px solid var(--line);
+}
+.feature-photo,
+.world-photo{
+  min-height:620px;
+  overflow:hidden;
+  position:relative;
+  background:#101212;
+}
+.feature-photo img,
+.world-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s ease;
+}
+.feature-full:hover .feature-photo img,
+.world-story:hover .world-photo img{transform:scale(1.035)}
+.feature-copy,
+.world-copy{
+  padding:85px 9%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#090b0b;
+}
+.feature-copy h2,
+.world-copy h2{
+  margin:15px 0 22px;
+  color:#ddd8ce;
+  font-size:clamp(40px,5vw,68px);
+  line-height:.97;
+}
+.feature-copy p,
+.world-copy p{
+  max-width:650px;
+  line-height:1.85;
+}
+.outline{
+  display:inline-block;
+  width:max-content;
+  margin-top:14px;
+  padding:10px 17px;
+  border:1px solid var(--line2);
+  color:#c7a366;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.outline:hover{
+  border-color:var(--saffron);
+  color:#fff;
+}
+.international{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+  color:#b38d51;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.international i{color:#4f524d;font-style:normal}
+
+/* ================= NALANDA ================= */
+
+.nalanda{
+  padding:110px 7%;
+  background:#0a0c0c;
+  border-bottom:1px solid var(--line);
+}
+.nalanda-grid{
+  max-width:var(--max);
+  margin:55px auto 0;
+  display:grid;
+  grid-template-columns:.75fr 1.5fr;
+  gap:90px;
+  align-items:center;
+}
+.big-stat{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:clamp(95px,12vw,170px);
+  line-height:.8;
+  letter-spacing:-8px;
+}
+.stat-caption{
+  margin-top:25px;
+  color:#686b65;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.nalanda article h2{
+  color:#ddd8ce;
+  font-size:clamp(40px,5vw,66px);
+  line-height:1;
+}
+.nalanda article p{line-height:1.9}
+
+/* ================= CONFLICT / KINGDOMS ================= */
+
+.conflict{
+  padding:110px 7%;
+  background:#080909;
+  border-bottom:1px solid var(--line);
+}
+.conflict>h2{
+  max-width:var(--max);
+  margin:15px auto 0;
+  color:#ddd8ce;
+  font-size:clamp(43px,5.5vw,72px);
+  line-height:.95;
+}
+.conflict-grid{
+  max-width:var(--max);
+  margin:50px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.conflict-grid article{
+  padding:36px 30px;
+  min-height:260px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#0b0d0d;
+  transition:.25s ease;
+}
+.conflict-grid article:hover{
+  background:#101212;
+  border-color:rgba(223,104,23,.3);
+}
+.conflict-grid h3{
+  margin:13px 0;
+  color:var(--gold);
+  font-size:25px;
+}
+.conflict-grid p{font-size:13px;line-height:1.8}
+
+/* ================= TIMELINE ================= */
+
+.world-timeline,
+.timeline{
+  padding:105px 7%;
+  background:#080a0a;
+  border-bottom:1px solid var(--line);
+}
+.world-timeline h2,
+.timeline h2{
+  max-width:var(--max);
+  margin:15px auto 0;
+  color:#ddd8ce;
+  font-size:clamp(42px,5vw,68px);
+  line-height:.95;
+}
+.world-rows,
+.timeline-rows{
+  max-width:var(--max);
+  margin:50px auto 0;
+  border-top:1px solid var(--line);
+}
+.world-rows>div,
+.timeline-rows>div{
+  display:grid;
+  grid-template-columns:190px 1fr 1fr;
+  gap:30px;
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+}
+.world-rows b,
+.timeline-rows b{color:var(--gold);font-size:9px;letter-spacing:2px}
+.world-rows span,
+.timeline-rows span{color:#bbb8af;font-size:14px}
+.world-rows em,
+.timeline-rows em{
+  color:#696c66;
+  font-size:11px;
+  text-align:right;
+  font-style:normal;
 }
 
+/* ================= ARTICLE LIBRARY ================= */
 
-/* =========================================================
-   OPENING
-   ========================================================= */
-
-.opening {
-  padding: 105px 7%;
-  background: var(--bg-soft);
+.articles,
+.article-library{
+  padding:110px 7%;
+  background:#060808;
+  border-bottom:1px solid var(--line);
+}
+.articles>*,
+.article-library>*{
+  max-width:var(--max);
+  margin-left:auto;
+  margin-right:auto;
+}
+.library-title,
+.articles h2{
+  margin-top:15px;
+  color:#ddd8ce;
+  font-size:clamp(44px,6vw,78px);
+  line-height:.92;
+}
+.library-title span,
+.articles h2 span{color:var(--saffron)}
+.library-intro{max-width:750px;line-height:1.8}
+.article-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.article-card{
+  min-height:390px;
+  background:#0b0e0e;
+  border:1px solid var(--line);
+  overflow:hidden;
+  cursor:pointer;
+  transition:.28s ease;
+}
+.article-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(223,104,23,.45);
+}
+.article-card-image{
+  height:200px;
+  overflow:hidden;
+  background:#101313;
+}
+.article-card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s ease;
+}
+.article-card:hover .article-card-image img{transform:scale(1.05)}
+.article-card-body{padding:24px}
+.article-card h3{
+  color:#ddd8ce;
+  font-size:26px;
+  line-height:1.05;
+}
+.article-card p{font-size:13px;line-height:1.7}
+.article-card-read{
+  color:#c47a3d;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
-.opening-grid {
-  display: grid;
-  grid-template-columns: 170px minmax(0,1fr);
-  gap: 55px;
-}
+/* ================= DARK CHAPTERS ================= */
 
-.opening-label {
-  color: var(--orange);
-
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.opening h2 {
-  margin: 0 0 28px;
-
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(38px,5vw,70px);
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-.opening p {
-  max-width: 850px;
-
-  color: #a4abad;
-
-  font-size: 16px;
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   CHAPTER
-   ========================================================= */
-
-.chapter {
-  padding: 110px 7%;
-  background: #060809;
-}
-
-.chapter-head {
-  max-width: 900px;
-  margin-bottom: 55px;
-}
-
-.chapter-head .eyebrow {
-  color: var(--orange);
-  font-size: 9px;
-  letter-spacing: 3px;
-}
-
-.chapter-head h2 {
-  margin: 16px 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(42px,5vw,72px);
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-.chapter-head p {
-  color: var(--muted);
-  max-width: 720px;
-}
-
-.chapter-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.chapter-image {
-  min-height: 480px;
-  overflow: hidden;
-}
-
-.chapter-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 480px;
-  object-fit: cover;
-}
-
-.chapter-copy h3 {
-  color: var(--gold);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
-}
-
-.chapter-copy p {
-  color: #a8afb0;
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   FULL FEATURE
-   ========================================================= */
-
-.feature-full {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 620px;
-
-  background: #090b0c;
-}
-
-.feature-photo {
-  min-height: 620px;
-}
-
-.feature-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.feature-copy {
-  padding: 90px 8%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature-copy h2 {
-  margin: 15px 0 25px;
-
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px,4.5vw,68px);
-  line-height: 1;
-}
-
-.feature-copy p {
-  color: #a6adae;
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   KNOWLEDGE
-   ========================================================= */
-
-.knowledge {
-  padding: 110px 7%;
-  background: #07090a;
-}
-
-.knowledge h2,
-.world-copy h2,
-.nalanda h2,
-.conflict h2,
-.swarajya h2,
-.colonial h2,
-.freedom h2,
-.mirror h2 {
-  margin: 0 0 25px;
-
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px,5vw,68px);
-  line-height: 1;
-}
-
-.knowledge-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 1px;
-
-  margin-top: 55px;
-
-  border: 1px solid var(--line);
-}
-
-.knowledge-card {
-  padding: 38px 32px;
-  background: #090c0d;
-}
-
-.knowledge-card + .knowledge-card {
-  border-left: 1px solid var(--line);
-}
-
-.knowledge-card h3 {
-  color: var(--gold);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 27px;
-}
-
-.knowledge-card p {
-  color: #929a9c;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   WORLD STORY
-   ========================================================= */
-
-.world-story {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 650px;
-
-  background: #050708;
-}
-
-.world-photo {
-  min-height: 650px;
-}
-
-.world-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.world-copy {
-  padding: 95px 8%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.world-copy p {
-  color: #9ca4a6;
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   WORLD TIMELINE
-   ========================================================= */
-
-.world-timeline {
-  padding: 80px 7%;
-  background: #080a0b;
-}
-
-.world-rows {
-  border-top: 1px solid var(--line);
-}
-
-.world-rows > div {
-  display: grid;
-  grid-template-columns: 150px 1fr 120px;
-
-  padding: 20px 0;
-
-  border-bottom: 1px solid var(--line);
-}
-
-.world-rows span {
-  color: var(--gold);
-  font-size: 12px;
-}
-
-.world-rows strong {
-  color: #d4d7d7;
-  font-size: 14px;
-}
-
-.world-rows em {
-  color: #777f81;
-  font-size: 11px;
-  text-align: right;
-}
-
-
-/* =========================================================
-   NALANDA
-   ========================================================= */
-
-.nalanda {
-  padding: 110px 7%;
-  background: #07090a;
-}
-
-.nalanda-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.nalanda p {
-  color: #9da5a7;
-  line-height: 1.85;
-}
-
-.nalanda-image img {
-  width: 100%;
-  height: 540px;
-  object-fit: cover;
-}
-
-
-/* =========================================================
-   CONFLICT
-   ========================================================= */
-
-.conflict {
-  padding: 110px 7%;
-  background: #080909;
-}
-
-.conflict-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-
-  border: 1px solid var(--line);
-}
-
-.conflict-card {
-  padding: 45px;
-  background: #0b0d0e;
-}
-
-.conflict-card h3 {
-  color: var(--orange);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-}
-
-.conflict-card p {
-  color: #979fa1;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   SWARAJYA
-   ========================================================= */
-
-.swarajya {
-  padding: 120px 7%;
-
+.dark-chapters{
+  padding:120px 7%;
   background:
-    linear-gradient(
-      rgba(5,7,8,.72),
-      rgba(5,7,8,.92)
-    ),
-    #080a0b;
+    radial-gradient(circle at 50% 0,rgba(135,42,11,.15),transparent 40%),
+    #050606;
+  border-top:1px solid rgba(185,65,20,.25);
+  border-bottom:1px solid rgba(185,65,20,.2);
+}
+.dark-chapters-inner{max-width:var(--max);margin:auto}
+.dark-chapters-heading h2{
+  margin:16px 0 20px;
+  color:#ddd6ca;
+  font-size:clamp(46px,6vw,82px);
+  line-height:.93;
+}
+.dark-chapters-heading h2 span{color:#a94b22}
+.dark-chapters-intro{
+  max-width:760px;
+  color:#89867f;
+  font-size:16px;
+}
+.dark-chapters-statement{
+  max-width:850px;
+  margin:45px 0 60px;
+  padding-left:24px;
+  border-left:1px solid rgba(185,65,20,.55);
+}
+.dark-chapters-statement p{line-height:1.85}
+.dark-chapters-emphasis strong{
+  display:block;
+  margin-top:10px;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:19px;
+}
+.dark-chapters-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(201,161,91,.16);
+  border-left:1px solid rgba(201,161,91,.16);
+}
+.dark-chapter-card{
+  position:relative;
+  min-height:315px;
+  padding:32px 30px 60px;
+  background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(0,0,0,.18));
+  border-right:1px solid rgba(201,161,91,.16);
+  border-bottom:1px solid rgba(201,161,91,.16);
+  cursor:pointer;
+  transition:.28s ease;
+}
+.dark-chapter-card:hover{
+  transform:translateY(-4px);
+  background:linear-gradient(145deg,rgba(158,53,39,.13),rgba(0,0,0,.25));
+  border-color:rgba(201,161,91,.42);
+}
+.dark-chapter-number{
+  display:block;
+  color:rgba(201,161,91,.5);
+  font-family:Georgia,serif;
+  font-size:50px;
+  line-height:1;
+  margin-bottom:18px;
+}
+.dark-chapter-era{
+  color:#706d66;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2.5px;
+}
+.dark-chapter-card h3{
+  margin:12px 0;
+  color:#d8d2c7;
+  font-size:28px;
+  line-height:1.05;
+}
+.dark-chapter-card p{
+  color:#817e77;
+  font-size:13px;
+  line-height:1.7;
+}
+.dark-chapter-link{
+  position:absolute;
+  left:30px;
+  bottom:24px;
+  color:#b96631;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.dark-chapter-card:hover .dark-chapter-link{
+  color:#e19a5b;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.dark-chapters-closing{
+  max-width:800px;
+  margin:70px auto 0;
+  text-align:center;
+}
+.dark-chapters-closing-line{
+  width:60px;
+  height:1px;
+  margin:0 auto 25px;
+  background:rgba(201,161,91,.45);
+}
+.dark-chapters-closing p{font-size:14px;color:#777972}
+
+/* ================= DARK SUBJECT SERIES ================= */
+
+.dark-chapter-series{
+  margin-top:3rem;
+  padding:2rem;
+  border:1px solid rgba(180,40,30,.28);
+  background:linear-gradient(180deg,rgba(20,16,14,.96),rgba(8,8,8,.98));
+}
+.dark-chapter-series-head{margin-bottom:1.5rem}
+.dark-chapter-series-head h3{
+  margin:.45rem 0;
+  color:#ddd8ce;
+}
+.dark-chapter-series-head p{max-width:760px;opacity:.78}
+.dark-chapter-series-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:.85rem;
+}
+.dark-subject-card{
+  display:block;
+  padding:1rem 1.05rem;
+  border:1px solid rgba(255,255,255,.09);
+  background:#111;
+  transition:.18s ease;
+}
+.dark-subject-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(190,50,35,.6);
+  background:#171311;
+}
+.dark-subject-number{
+  display:block;
+  color:var(--gold);
+  font-size:.68rem;
+  letter-spacing:.12em;
+  margin-bottom:.35rem;
+}
+.dark-subject-card h4{margin:0 0 .4rem;color:#ddd8ce}
+.dark-subject-card p{margin:0;font-size:.82rem;opacity:.68;line-height:1.5}
+.dark-subject-status{
+  display:inline-block;
+  margin-top:.7rem;
+  color:#9b7770;
+  font-size:.63rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
 }
 
-.swarajya-grid {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 70px;
-  align-items: center;
+/* ================= MAP / REFLECTION / END ================= */
+
+.map-journey{
+  padding:110px 7%;
+  background:#080a0a;
+  border-bottom:1px solid var(--line);
 }
-
-.swarajya-image img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
+.map-journey>*{max-width:var(--max);margin-left:auto;margin-right:auto}
+.map-journey h2,
+.mirror h2{
+  color:#ddd8ce;
+  font-size:clamp(43px,5vw,70px);
+  line-height:.96;
 }
-
-.swarajya-copy p {
-  color: #a2aaac;
-  line-height: 1.9;
+.map-journey p,
+.mirror p{line-height:1.85}
+.map-art{
+  min-height:450px;
+  margin-top:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--line);
+  background:radial-gradient(circle,rgba(201,161,91,.07),transparent 60%);
 }
+.map-art img{max-height:420px;object-fit:contain}
 
-
-/* =========================================================
-   COLONIAL
-   ========================================================= */
-
-.colonial {
-  padding: 115px 7%;
-  background: #080909;
+.mirror{
+  padding:110px 7%;
+  background:#070909;
+  border-bottom:1px solid var(--line);
 }
-
-.colonial-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+.mirror-grid{
+  max-width:var(--max);
+  margin:45px auto 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  border:1px solid var(--line);
 }
-
-.colonial-copy p {
-  color: #9da4a6;
-  line-height: 1.85;
+.mirror-card{
+  padding:38px;
+  background:#0b0d0d;
 }
+.mirror-card h3{color:var(--gold)}
 
-.colonial-facts {
-  border-top: 1px solid var(--line);
-}
-
-.colonial-facts > div {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.colonial-facts strong {
-  display: block;
-  color: var(--gold);
-  margin-bottom: 5px;
-}
-
-.colonial-facts span {
-  color: #858d8f;
-  font-size: 13px;
-}
-
-
-/* =========================================================
-   FREEDOM
-   ========================================================= */
-
-.freedom {
-  padding: 120px 7%;
-  background: #060809;
-}
-
-.freedom-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-}
-
-.freedom-card {
-  padding: 45px;
-  border: 1px solid var(--line);
-  background: #090c0d;
-}
-
-.freedom-card h3 {
-  color: var(--gold);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-}
-
-.freedom-card p {
-  color: #969ea0;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   MAP JOURNEY
-   ========================================================= */
-
-.map-journey {
-  padding: 110px 7%;
-  background: #07090a;
-}
-
-.map-copy {
-  max-width: 850px;
-  margin-bottom: 50px;
-}
-
-.map-copy p {
-  color: #9ca4a6;
-}
-
-.map-art {
-  min-height: 500px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--line);
-
+.ending{
+  min-height:620px;
+  padding:110px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
   background:
-    radial-gradient(
-      circle,
-      rgba(255,121,0,.08),
-      transparent 65%
-    );
+    radial-gradient(circle,rgba(160,55,15,.13),transparent 55%),
+    #050606;
 }
-
-.map-art img {
-  width: 90%;
-  height: 460px;
-  object-fit: contain;
+.ending-content{max-width:900px}
+.ending h2{
+  color:#ddd8ce;
+  font-size:clamp(45px,6vw,84px);
+  line-height:.95;
 }
+.ending p{max-width:720px;margin:25px auto;line-height:1.8}
 
+/* ================= ARTICLE READER ================= */
 
-/* =========================================================
-   MIRROR
-   ========================================================= */
-
-.mirror {
-  padding: 110px 7%;
-  background: #080a0b;
+#reader{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:#050606;
+  overflow-y:auto;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:.28s ease;
 }
-
-.mirror-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-
-  border: 1px solid var(--line);
+#reader.open{
+  opacity:1;
+  visibility:visible;
+  transform:none;
 }
-
-.mirror-card {
-  padding: 45px;
-  background: #0a0d0e;
+.reader-top,
+.reader-header{
+  position:sticky;
+  top:0;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 5%;
+  background:rgba(5,6,6,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(14px);
 }
-
-.mirror-card h3 {
-  color: var(--orange);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
+#readerClose,
+.reader-close{
+  border:1px solid var(--line2);
+  background:transparent;
+  color:#aaa;
+  padding:9px 13px;
+  font-size:10px;
 }
-
-.mirror-card p {
-  color: #969ea0;
-  line-height: 1.8;
+#readerClose:hover,
+.reader-close:hover{
+  color:#fff;
+  border-color:var(--saffron);
 }
-
-
-/* =========================================================
-   ENDING
-   ========================================================= */
-
-.ending {
-  min-height: 650px;
-
-  padding: 100px 7%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  position: relative;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255,100,0,.13),
-      transparent 55%
-    ),
-    #050708;
+.reader-body,
+.reader-content{
+  width:min(850px,88%);
+  margin:auto;
+  padding:70px 0 120px;
 }
-
-.ending .ghost {
-  position: absolute;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(90px,15vw,220px);
-
-  color: rgba(255,255,255,.025);
-
-  white-space: nowrap;
+.reader-body p,
+.reader-content p{
+  color:#aaa9a2;
+  font-size:17px;
+  line-height:1.95;
 }
-
-.ending-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 950px;
-}
-
-.ending h2 {
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(40px,5vw,70px);
-
-  line-height: 1.05;
-}
-
-.ending p {
-  color: #858d8f;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   DYNAMIC ARTICLE LIBRARY
-   ========================================================= */
-
-.dynamic-library {
-  padding: 100px 7%;
-  background: #07090a;
-}
-
-.library-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 30px;
-
-  margin-bottom: 40px;
-}
-
-.library-head h2 {
-  margin: 0;
-
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 55px;
-}
-
-.library-head p {
-  color: #777f81;
-}
-
-.library-tools {
-  display: flex;
-  gap: 10px;
-}
-
-.library-tools input,
-.library-tools select {
-  background: #0c1011;
-  border: 1px solid var(--line);
-
-  color: #ccc;
-
-  padding: 12px 14px;
-
-  outline: none;
-}
-
-.library-tools input:focus,
-.library-tools select:focus {
-  border-color: var(--orange);
-}
-
-.library-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
-}
-
-.article-card {
-  min-height: 230px;
-
-  padding: 30px;
-
-  border: 1px solid var(--line);
-
-  background: #090c0d;
-
-  cursor: pointer;
-
-  transition:
-    transform .25s ease,
-    border-color .25s ease,
-    background .25s ease;
-}
-
-.article-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,121,0,.45);
-  background: #0c1011;
-}
-
-.article-card .era {
-  color: var(--orange);
-
-  font-size: 8px;
-  letter-spacing: 2px;
-}
-
-.article-card h3 {
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 26px;
-}
-
-.article-card p {
-  color: #848d8f;
-
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   DARK CHAPTERS
-   ========================================================= */
-
-.dark-chapters {
-  padding: 105px 0 115px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(120,30,0,.13),
-      transparent 45%
-    ),
-    #050607;
-
-  border-top: 1px solid #29201b;
-}
-
-.dark-chapters-inner {
-  width: min(1200px,92%);
-  margin: auto;
-}
-
-.dark-chapters-heading {
-  max-width: 900px;
-}
-
-.dark-chapters-heading .eyebrow {
-  color: #b56a2b;
-
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 4px;
-}
-
-.dark-chapters-heading h2 {
-  margin: 18px 0;
-
-  color: #d9d3ca;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(45px,6vw,78px);
-
-  line-height: .98;
-  letter-spacing: -2px;
-}
-
-.dark-chapters-heading h2 span {
-  color: #b65c24;
-}
-
-.dark-chapters-intro {
-  max-width: 700px;
-
-  color: #8f8a83;
-
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   DARK CHAPTER STATEMENT
-   ========================================================= */
-
-.dark-chapters-statement {
-  max-width: 920px;
-
-  margin: 50px 0 65px;
-
-  padding-left: 30px;
-
-  border-left: 1px solid rgba(181,106,43,.55);
-}
-
-.dark-chapters-statement p {
-  color: #96918a;
-
-  font-size: 15px;
-  line-height: 1.9;
-
-  margin: 0 0 22px;
-}
-
-.dark-chapters-emphasis {
-  color: #bdb5aa !important;
-}
-
-.dark-chapters-emphasis strong {
-  display: block;
-
-  margin-top: 12px;
-
-  color: #d6a25e;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 19px;
-}
-
-
-/* =========================================================
-   DARK CHAPTER GRID
-   ========================================================= */
-
-.dark-chapters-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-
-  border-top: 1px solid rgba(215,162,90,.18);
-  border-left: 1px solid rgba(215,162,90,.18);
-}
-
-.dark-chapter-card {
-  min-height: 300px;
-
-  padding: 32px 30px;
-
-  position: relative;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.025),
-      rgba(0,0,0,.10)
-    );
-
-  border-right: 1px solid rgba(215,162,90,.18);
-  border-bottom: 1px solid rgba(215,162,90,.18);
-
-  cursor: pointer;
-
-  transition:
-    background .3s ease,
-    border-color .3s ease,
-    transform .3s ease;
-}
-
-.dark-chapter-card:hover {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,100,0,.08),
-      rgba(0,0,0,.18)
-    );
-
-  border-color: rgba(215,162,90,.4);
-
-  transform: translateY(-3px);
-}
-
-.dark-chapter-number {
-  display: block;
-
-  margin-bottom: 16px;
-
-  color: rgba(215,162,90,.55);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 52px;
-  line-height: 1;
-}
-
-.dark-chapter-era {
-  color: #766e65;
-
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-}
-
-.dark-chapter-card h3 {
-  margin: 12px 0 16px;
-
-  color: #d9d3ca;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 29px;
-  line-height: 1.1;
-}
-
-.dark-chapter-card p {
-  margin: 0;
-
-  color: #858078;
-
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.dark-chapter-link {
-  position: absolute;
-
-  left: 30px;
-  bottom: 25px;
-
-  color: #b46b32;
-
-  font-size: 8px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-
-/* =========================================================
-   FEATURED DARK CHAPTER
-   ========================================================= */
-
-.dark-chapter-card-featured {
-  grid-column: span 2;
-
-  min-height: 340px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(105,38,8,.22),
-      rgba(5,6,7,.92)
-    );
-}
-
-.dark-chapter-card-featured::after {
-  content: "FIRST RECORDED CAMPAIGN";
-
-  position: absolute;
-
-  top: 28px;
-  right: 25px;
-
-  color: rgba(215,162,90,.32);
-
-  font-size: 8px;
-  font-weight: 700;
-
-  letter-spacing: .16em;
-}
-
-
-/* =========================================================
-   DARK CHAPTER CLOSING
-   ========================================================= */
-
-.dark-chapters-closing {
-  max-width: 850px;
-
-  margin: 80px auto 0;
-
-  text-align: center;
-}
-
-.dark-chapters-closing-line {
-  width: 70px;
-  height: 1px;
-
-  margin: 0 auto 30px;
-
-  background: rgba(215,162,90,.45);
-}
-
-.dark-chapters-closing p {
-  margin: 0;
-
-  color: #8e8d88;
-
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.dark-chapters-closing strong {
-  display: block;
-
-  margin-top: 15px;
-
-  color: #d2cec4;
-
-  font-size: 19px;
-  line-height: 1.5;
-}
-
-
-/* =========================================================
-   ARTICLE READER
-   ========================================================= */
-
-.article-reader {
-  position: fixed;
-  inset: 0;
-
-  z-index: 2000;
-
-  background: #050708;
-
-  overflow-y: auto;
-}
-
-.reader-hero {
-  min-height: 560px;
-
-  display: flex;
-  align-items: end;
-
-  padding: 80px 7%;
-
-  position: relative;
-
-  background:
-    linear-gradient(
-      rgba(0,0,0,.25),
-      rgba(0,0,0,.92)
-    );
-}
-
-.reader-hero-text {
-  max-width: 900px;
-}
-
-.reader-hero-text .eyebrow {
-  color: var(--orange);
-
-  font-size: 9px;
-  letter-spacing: 3px;
-}
-
-.reader-hero-text h2 {
-  margin: 15px 0;
-
-  color: #e2e3e2;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(45px,6vw,82px);
-
-  line-height: .98;
-}
-
-.reader-body {
-  width: min(820px,86%);
-
-  margin: auto;
-
-  padding: 80px 0 120px;
-}
-
-.reader-body p {
-  color: #b0b5b5;
-
-  font-size: 17px;
-  line-height: 1.95;
-}
-
 .reader-body h2,
-.reader-body h3 {
-  color: #ddd;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  line-height: 1.1;
+.reader-content h2{
+  color:#ded9ce;
+  font-size:38px;
+  margin-top:60px;
+}
+.reader-body h3,
+.reader-content h3{
+  color:#ded9ce;
+  font-size:27px;
+  margin-top:45px;
 }
 
-.reader-body h2 {
-  font-size: 38px;
-  margin-top: 65px;
-}
+/* ================= RESPONSIVE ================= */
 
-.reader-body h3 {
-  font-size: 27px;
-  margin-top: 45px;
-}
-
-.reader-body blockquote {
-  margin: 40px 0;
-
-  padding: 25px 30px;
-
-  border-left: 2px solid var(--orange);
-
-  color: #c8c0b5;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 20px;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width:1100px) {
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-map {
-    height: 520px;
-  }
-
-  .feature-full,
-  .world-story {
-    grid-template-columns: 1fr;
-  }
-
-  .chapter-grid,
-  .nalanda-grid,
-  .swarajya-grid,
-  .colonial-columns,
-  .freedom-grid,
-  .mirror-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .knowledge-grid,
-  .library-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .dark-chapters-grid {
-    grid-template-columns: repeat(2,minmax(0,1fr));
-  }
-}
-
-
-@media (max-width:700px) {
-
-  .history-header {
-    height: 68px;
-    padding: 0 4%;
-  }
-
-  .history-header .brand span {
-    display: none;
-  }
-
-  .history-header nav {
-    gap: 8px;
-  }
-
-  .history-header nav a {
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-
-  .hero {
-    min-height: 850px;
-
-    padding: 115px 7% 50px;
-
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 60px;
-    letter-spacing: -4px;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero-visual,
-  .hero-map {
-    height: 490px;
-
-    margin-top: 20px;
-
-    opacity: .2;
-  }
-
-  .hero::before {
-    top: 90px;
-    left: 7%;
-  }
-
-  .opening,
-  .chapter,
-  .knowledge,
-  .feature-copy,
-  .world-copy,
-  .nalanda,
-  .conflict,
-  .swarajya,
-  .colonial,
-  .freedom,
-  .map-journey,
-  .mirror,
-  .dynamic-library {
-    padding: 80px 7%;
-  }
-
-  .opening-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .chapter-grid {
-    gap: 35px;
-  }
-
-  .chapter-image,
-  .chapter-image img {
-    min-height: 300px;
-  }
-
-  .feature-photo,
-  .world-photo {
-    min-height: 380px;
-  }
-
-  .knowledge-grid,
+@media(max-width:1050px){
+  .hero{grid-template-columns:1fr}
+  .hero-map,.hero-visual{min-height:480px}
+  .feature-full,.world-story{grid-template-columns:1fr}
+  .feature-photo,.world-photo{min-height:470px}
+  .nalanda-grid{grid-template-columns:1fr}
   .conflict-grid,
-  .swarajya-grid,
-  .freedom-grid,
-  .mirror-grid,
-  .colonial-columns,
-  .library-grid {
-    grid-template-columns: 1fr;
+  .article-grid,
+  .dark-chapters-grid{grid-template-columns:repeat(2,1fr)}
+  .mirror-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:720px){
+  .site-header,.history-header{
+    height:64px;
+    padding:0 4%;
+  }
+  .brand span{display:none}
+  .site-header nav,.history-header nav{gap:9px}
+  .site-header nav a,.history-header nav a{
+    font-size:7px;
+    letter-spacing:1px;
+  }
+  .search{display:none}
+
+  .hero{
+    min-height:900px;
+    padding:105px 7% 45px;
+  }
+  .hero h1{font-size:64px;letter-spacing:-4px}
+  .hero h2{font-size:29px}
+  .hero-map,.hero-visual{min-height:400px}
+  .hero-map img,.hero-visual img{max-height:400px}
+  .map-glow,.hero-visual .aura{width:350px;height:350px}
+
+  .command-bar{
+    display:block;
+    padding:20px 7%;
+  }
+  .command-bar nav,.command-links{margin-top:12px;gap:12px}
+
+  .history-intro,.opening,.nalanda,.conflict,
+  .world-timeline,.articles,.article-library,
+  .dark-chapters,.map-journey,.mirror{
+    padding:78px 7%;
   }
 
-  .knowledge-card + .knowledge-card {
-    border-left: 0;
-    border-top: 1px solid var(--line);
+  .history-intro h2,
+  .opening h2,
+  .conflict>h2,
+  .library-title,
+  .articles h2{font-size:42px}
+
+  .feature-photo,.world-photo{min-height:350px}
+  .feature-copy,.world-copy{padding:62px 7%}
+  .big-stat{font-size:100px}
+
+  .conflict-grid,
+  .article-grid,
+  .dark-chapters-grid{grid-template-columns:1fr}
+
+  .dark-chapter-card{min-height:285px}
+
+  .world-rows>div,
+  .timeline-rows>div{
+    display:block;
+    padding:20px 0;
+  }
+  .world-rows span,.world-rows em,
+  .timeline-rows span,.timeline-rows em{
+    display:block;
+    margin-top:6px;
+    text-align:left;
   }
 
-  .world-rows > div {
-    display: block;
-    padding: 24px 0;
-  }
+  .map-art{min-height:320px}
+  .map-art img{max-height:300px}
 
-  .world-rows span,
-  .world-rows em {
-    display: block;
-    text-align: left;
-    margin-top: 7px;
+  .reader-body,.reader-content{
+    width:88%;
+    padding:55px 0 90px;
   }
-
-  .map-art {
-    min-height: 390px;
-  }
-
-  .map-art img {
-    height: 350px;
-  }
-
-  .ending {
-    min-height: 600px;
-    padding: 90px 7%;
-  }
-
-  .ending .ghost {
-    font-size: 72px;
-    letter-spacing: -5px;
-  }
-
-  .dark-chapters {
-    padding: 75px 0 80px;
-  }
-
-  .dark-chapters-inner {
-    width: 90%;
-  }
-
-  .dark-chapters-heading h2 {
-    font-size: 42px;
-  }
-
-  .dark-chapters-statement {
-    margin: 35px 0 50px;
-    padding-left: 20px;
-  }
-
-  .dark-chapters-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .dark-chapter-card,
-  .dark-chapter-card-featured {
-    grid-column: span 1;
-    min-height: 270px;
-  }
-
-  .dark-chapter-card h3 {
-    font-size: 26px;
-  }
-
-  .library-head {
-    display: block;
-  }
-
-  .library-tools {
-    margin-top: 20px;
-    display: block;
-  }
-
-  .library-tools input,
-  .library-tools select {
-    width: 100%;
-    margin-top: 8px;
-  }
-
-  .reader-body {
-    width: 86%;
-    padding-top: 55px;
-  }
+  .reader-body p,.reader-content p{font-size:16px}
 }
