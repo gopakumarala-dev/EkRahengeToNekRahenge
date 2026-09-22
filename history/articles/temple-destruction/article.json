@@ -1,0 +1,111 @@
+{
+  "id": "temple-destruction",
+  "title": "Temples Under Attack",
+  "subtitle": "Sacred places, political symbols and targets of conquest",
+  "era": "medieval",
+  "period": "8th–16th centuries CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 06",
+    "title": "TEMPLES UNDER ATTACK",
+    "subtitle": "Sacred Places and the Politics of Conquest",
+    "period": "8th–16th centuries CE",
+    "summary": "Major temples could embody religion, wealth, political legitimacy and community identity. Their destruction or plunder during conquest therefore carried material and symbolic consequences."
+  },
+  "abstract": "This article studies temple destruction as a historical phenomenon rather than a slogan. It examines religious symbolism, political legitimacy, accumulated wealth, military finance and the specific evidence available for individual episodes.",
+  "keywords": [
+    "temples",
+    "iconoclasm",
+    "plunder",
+    "Hindu institutions",
+    "political legitimacy",
+    "Ghaznavids",
+    "Delhi Sultanate"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "THE TEMPLE WAS AN INSTITUTION",
+      "type": "historical",
+      "content": [
+        "A major temple could control land, receive donations, employ priests and artisans, sponsor festivals, preserve records and serve as a centre of local identity.",
+        "Consequently, a victorious army could treat a temple as both a sacred symbol and an economic asset."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "WHY A CONQUEROR MIGHT TARGET A TEMPLE",
+      "type": "historical",
+      "content": [
+        "Several motives could overlap. Religious iconoclasm could be significant where a ruler's own inscriptions or court chronicles celebrated the destruction of non-Islamic religious symbols.",
+        "Political symbolism also mattered. Destroying or appropriating the temple associated with a defeated ruler could communicate that the old political order had been defeated.",
+        "Treasury wealth provided a practical incentive. These motives should be investigated together rather than artificially separated."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "CASE STUDIES",
+      "type": "historical",
+      "content": [
+        "Mahmud of Ghazni's campaigns provide some of the earliest famous examples in the Indo-Persian historical record, including Mathura, Thanesar and Somnath.",
+        "Later Sultanate campaigns produced additional episodes in which temples were destroyed, converted, appropriated or protected depending on the political circumstances.",
+        "The correct method is case-by-case: identify the ruler, date, place, source and purpose of the action."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "NOT EVERY TEMPLE SURVIVED OR FELL FOR THE SAME REASON",
+      "type": "historiography",
+      "content": [
+        "Political alliances could lead Muslim rulers to protect temples or grant local elites privileges. Other rulers attacked temples for religious or political reasons.",
+        "A serious Hindu history should therefore document both destruction and survival. Survival itself can reveal political calculations, local resistance and the resilience of Hindu institutions."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "THE MEMORY OF SACRED LOSS",
+      "type": "historical",
+      "content": [
+        "For communities, the destruction of a temple was not simply the loss of architecture. It could mean the destruction of images, ritual continuity, patronage networks and collective memory.",
+        "The rebuilding of temples across Indian history is therefore part of the story of civilisational resilience."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "A RESEARCH METHOD FOR STUDENTS",
+      "type": "method",
+      "content": [
+        "For every claimed temple destruction, record: the earliest source; the date of that source; the political context; archaeological evidence; later retellings; and the degree of certainty.",
+        "This method allows a strongly Hindu-centred history to remain evidence-driven and useful to students and researchers."
+      ]
+    }
+  ],
+  "researchQuestions": [
+    "Which temple destructions are directly documented by near-contemporary sources?",
+    "How often did rulers use temple destruction as political symbolism?",
+    "What archaeological evidence survives?",
+    "How did Hindu communities rebuild or relocate sacred institutions?"
+  ],
+  "sources": [
+    {
+      "title": "Mahmud b. Sebuktegin",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/"
+    },
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    }
+  ]
+}
