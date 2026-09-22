@@ -8,7 +8,8 @@ const ARTICLE_INDEX = "data/articles.json";
 const state = {
   articles: [],
   activeEra: "all",
-  searchTerm: ""
+  searchTerm: "",
+  activeCategory: "all"
 };
 
 
@@ -18,6 +19,7 @@ const state = {
 
 const cardsContainer = document.getElementById("cards");
 const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
 const eraButtons = document.querySelectorAll("[data-era]");
 
 const reader = document.getElementById("reader");
@@ -37,6 +39,7 @@ const modal = document.getElementById("modal");
 document.addEventListener("DOMContentLoaded", async () => {
   setupSearch();
   setupEraFilters();
+  setupCategoryFilter();
   setupKeyboardControls();
   setupReaderCloseButton();
 
@@ -104,6 +107,11 @@ function renderCards() {
       state.activeEra === "all" ||
       article.era === state.activeEra;
 
+    const matchesCategory =
+      state.activeCategory === "all" ||
+      article.category === state.activeCategory ||
+      article.section === state.activeCategory;
+
     const searchableText = [
       article.title,
       article.subtitle,
@@ -119,7 +127,7 @@ function renderCards() {
       !state.searchTerm ||
       searchableText.includes(state.searchTerm);
 
-    return matchesEra && matchesSearch;
+    return matchesEra && matchesCategory && matchesSearch;
   });
 
   if (!filteredArticles.length) {
@@ -1111,6 +1119,20 @@ function setupEraFilters() {
 
   });
 }
+
+/* =========================================================
+   CATEGORY FILTER
+   ========================================================= */
+
+function setupCategoryFilter() {
+  if (!categoryFilter) return;
+
+  categoryFilter.addEventListener("change", event => {
+    state.activeCategory = event.target.value || "all";
+    renderCards();
+  });
+}
+
 
 
 /* =========================================================
