@@ -1,0 +1,123 @@
+{
+  "id": "captivity-slavery",
+  "title": "Captivity, Enslavement and the Human Cost of Conquest",
+  "subtitle": "When defeated populations became prisoners, servants and commodities",
+  "era": "medieval",
+  "period": "8th–16th centuries CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 03",
+    "title": "CAPTIVITY & SLAVERY",
+    "subtitle": "The Human Cost of Conquest",
+    "period": "8th–16th centuries CE",
+    "summary": "Warfare in medieval South Asia could produce prisoners, enslaved people and forced displacement. This article examines the evidence for captives, women and children, slave markets and the wider Central Asian slave economy."
+  },
+  "abstract": "The human cost of conquest is often reduced to numbers of armies and battles. This article places captives at the centre of the story, examining enslavement, family separation, the treatment of women and children, and the movement of Indian captives into wider markets.",
+  "keywords": [
+    "captivity",
+    "slavery",
+    "women",
+    "children",
+    "slave trade",
+    "Central Asia",
+    "Ghazni",
+    "Delhi Sultanate"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "CAPTIVES AS SPOILS OF WAR",
+      "type": "historical",
+      "content": [
+        "Medieval warfare frequently treated prisoners as part of the spoils of victory. In South Asia, Persian and Arabic chronicles describe captives being taken during campaigns, especially after the fall of fortified settlements and the defeat of armies.",
+        "The consequences for a defeated population could extend far beyond the battlefield. Men could be killed or enslaved; women and children could be separated from their families; skilled people could be transported and incorporated into households or courts."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "WOMEN AND CHILDREN",
+      "type": "social history",
+      "content": [
+        "Women and children were particularly vulnerable after the fall of a city or kingdom. The historical vocabulary of medieval chronicles sometimes records women and children among captives, while the wider Islamic world possessed established legal and commercial institutions for slavery and concubinage.",
+        "A responsible history must distinguish what a particular source actually records from general assumptions. Where a chronicle records captives, we should name the campaign, source and approximate chronology rather than turning every invasion into an unsupported universal claim.",
+        "The moral reality remains stark: captivity meant loss of freedom, family separation and the destruction of personal agency."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "THE MARKETS",
+      "type": "economic history",
+      "content": [
+        "Indian captives entered wider networks connecting the subcontinent with Afghanistan, Khurasan and Central Asia. Scholarship on the Central Asian slave trade demonstrates that Indians became part of these commercial networks.",
+        "Ghazni was particularly important because it was both a political centre and a military economy closely connected to the frontier. Medieval sources also describe large numbers of captives after particular campaigns.",
+        "The famous claim that all Indian captives were transported specifically to Baghdad should not be stated as a universal rule. Baghdad was a major centre of the wider Islamic world, but the destination of a particular group of captives requires evidence for that particular route."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "SLAVERY AND CONVERSION",
+      "type": "religious-social history",
+      "content": [
+        "Enslavement and religious identity could intersect. A captive converted to Islam did not automatically cease to be enslaved; conversely, not every conversion in a conquered territory was forced.",
+        "The historical record therefore needs case-by-case examination: forced conversion, voluntary conversion, political accommodation, economic incentives and conversion within slavery are distinct phenomena.",
+        "This distinction does not erase documented coercion. It prevents the historical record from being simplified beyond what the sources permit."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "THE SCALE OF THE HUMAN TRAGEDY",
+      "type": "historiography",
+      "content": [
+        "Medieval chroniclers sometimes provide enormous numbers for captives and casualties. Such figures must be tested against logistics, population estimates and the purpose of the chronicler.",
+        "The existence of uncertainty about numbers does not mean the underlying phenomenon was imaginary. Captivity and enslavement are documented features of medieval warfare, and the Central Asian slave trade provides a broader context for understanding what happened to some Indian captives."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "WHY THIS HISTORY MATTERS",
+      "type": "memory",
+      "content": [
+        "Students should encounter medieval history not only through rulers and monuments but also through the lives of people who lost freedom during conquest.",
+        "Remembering victims is not a demand for hatred toward people living today. It is an insistence that historical suffering should remain visible.",
+        "A civilisational history of Bharat should preserve the memory of those who endured invasion, captivity and displacement alongside the stories of kings who resisted."
+      ]
+    }
+  ],
+  "researchQuestions": [
+    "What do Persian chronicles actually say about captives in specific campaigns?",
+    "Which Indian captives can be traced into Central Asian records?",
+    "How did slavery differ between military, domestic and concubine contexts?",
+    "How reliable are the numerical claims of medieval chroniclers?"
+  ],
+  "scholarlyCautions": [
+    "Avoid treating a general institution as proof of a particular event without a source for that event.",
+    "Do not use modern racial categories for medieval Turkic, Afghan, Persian or Indian populations.",
+    "Distinguish documented captivity from later literary elaboration."
+  ],
+  "sources": [
+    {
+      "title": "Hindus Beyond the Hindu Kush: Indians in the Central Asian Slave Trade",
+      "author": "Scott C. Levi",
+      "publisher": "Journal of the Royal Asiatic Society / Cambridge Core",
+      "type": "modern scholarship",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/hindus-beyond-the-hindu-kush-indians-in-the-central-asian-slave-trade/00516BAA0BCD78AD19407E2996F49FAF"
+    },
+    {
+      "title": "Barda / Slavery in the Islamic world",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "reference scholarship"
+    },
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    }
+  ],
+  "bibliography": [
+    "Scott C. Levi, studies on Indians in the Central Asian slave trade.",
+    "Peter Jackson, The Delhi Sultanate: A Political and Military History."
+  ]
+}
