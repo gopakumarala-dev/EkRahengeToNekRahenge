@@ -1,0 +1,134 @@
+{
+  "id": "medieval-invasions-overview",
+  "title": "The Invasions from the North-West",
+  "subtitle": "Ghaznavids, Ghurids and the transformation of northern India",
+  "era": "medieval",
+  "period": "8th–13th centuries CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 07",
+    "title": "THE NORTH-WESTERN INVASIONS",
+    "subtitle": "From Frontier Raids to Permanent Rule",
+    "period": "8th–13th centuries CE",
+    "summary": "A chronological overview of the military and political expansion from the north-west into northern India, from frontier warfare to the establishment of the Delhi Sultanate."
+  },
+  "abstract": "This overview provides the framework for studying the medieval invasion period as a sequence of changing political and military systems rather than a single undifferentiated event.",
+  "keywords": [
+    "Ghaznavids",
+    "Ghurids",
+    "Delhi Sultanate",
+    "invasions",
+    "frontier",
+    "Punjab",
+    "Tarain"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "THE FIRST PHASE — FRONTIER CONQUEST",
+      "type": "historical",
+      "content": [
+        "The north-western frontier had long been contested. Arab expansion into Sindh in the eighth century created an early Islamic political foothold, while later Turkic powers emerged from Afghanistan and Central Asia.",
+        "The Hindu Shahi kingdom became one of the principal powers confronting the Ghaznavids."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "THE GHAZNAVID SYSTEM",
+      "type": "historical",
+      "content": [
+        "Mahmud of Ghazni transformed repeated Indian campaigning into a major component of Ghaznavid state power. Wealth, captives, political prestige and religious legitimacy reinforced one another.",
+        "The campaigns were devastating in particular places, but they were not equivalent to the permanent occupation of all northern India."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "THE GHURID TURN",
+      "type": "historical",
+      "content": [
+        "The Ghurids altered the strategic pattern by seeking durable political control. Muhammad of Ghor's campaigns against the Rajput powers eventually produced the decisive battles of Tarain.",
+        "The victory of 1192 created the conditions for the expansion of Ghurid authority in Delhi and the later consolidation of the Delhi Sultanate."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "WHAT CHANGED FOR HINDU SOCIETY?",
+      "type": "historical",
+      "content": [
+        "The consequences differed across regions. Some rulers became tributaries or allies; others were displaced. Temples could be destroyed, taxed, appropriated or protected depending on political circumstances. Captivity and enslavement accompanied some campaigns.",
+        "The historical experience was therefore uneven but profoundly important for political, social and religious history."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "THE LONGER CONSEQUENCE",
+      "type": "historical",
+      "content": [
+        "The establishment of durable Muslim-ruled states in northern India created a new political order. Yet Hindu kingdoms, institutions and cultural traditions continued to exist and in many regions flourished.",
+        "The result was not the replacement of one civilisation by another, but a prolonged and often violent interaction between political traditions, religions and cultures."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "READING THE PERIOD WITHOUT FORGETTING BHARAT",
+      "type": "method",
+      "content": [
+        "A Hindu-centred history should not hide the violence of conquest. Nor should it turn every medieval Muslim into a caricature or every political event into a religious war.",
+        "The most useful approach is to name rulers, armies, institutions and events precisely; document the suffering; honour resistance; and study the internal weaknesses that made repeated invasions possible."
+      ]
+    }
+  ],
+  "chronology": [
+    {
+      "date": "711 CE",
+      "event": "Arab conquest of Sindh under Muhammad ibn Qasim."
+    },
+    {
+      "date": "10th–11th c.",
+      "event": "Ghaznavid expansion from Afghanistan into the Punjab and northern India."
+    },
+    {
+      "date": "1025–26",
+      "event": "Mahmud of Ghazni's Somnath campaign."
+    },
+    {
+      "date": "1191",
+      "event": "First Battle of Tarain."
+    },
+    {
+      "date": "1192",
+      "event": "Second Battle of Tarain."
+    },
+    {
+      "date": "1206",
+      "event": "Death of Muhammad of Ghor and consolidation of the Delhi Sultanate's early political order."
+    }
+  ],
+  "researchQuestions": [
+    "When did raiding become permanent political expansion?",
+    "How did the Punjab function as a strategic bridge?",
+    "How did Hindu political institutions adapt after 1192?"
+  ],
+  "sources": [
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "Mahmud b. Sebuktegin",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/"
+    }
+  ]
+}
