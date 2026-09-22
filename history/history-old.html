@@ -1,931 +1,1343 @@
-<!doctype html>
-<html lang="en">
+/* =========================================================
+   HAINDAVEEYAM FOUNDATION
+   HISTORY — DYNAMIC ARTICLE ENGINE
+   ========================================================= */
 
-<head>
+const ARTICLE_INDEX = "data/articles.json";
 
-  <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
-  <title>History | Ek Rahenge To Nek Rahenge</title>
-
-  <meta
-    name="description"
-    content="Explore the history of Bharat through invasions, resistance, kingdoms, society, knowledge, trade and colonial rule."
-  >
-
-  <link rel="stylesheet" href="../style.css">
-
-</head>
+const state = {
+  articles: [],
+  activeEra: "all",
+  searchTerm: ""
+};
 
 
-<body>
+/* =========================================================
+   DOM
+   ========================================================= */
+
+const cardsContainer = document.getElementById("cards");
+const searchInput = document.getElementById("searchInput");
+const eraButtons = document.querySelectorAll("[data-era]");
+
+const reader = document.getElementById("reader");
+const readerImage = document.getElementById("readerImage");
+const readerTitle = document.getElementById("readerTitle");
+const readerDeck = document.getElementById("readerDeck");
+const readerToc = document.getElementById("readerToc");
+const readerContent = document.getElementById("readerContent");
+
+const modal = document.getElementById("modal");
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+/* =========================================================
+   INITIALISE
+   ========================================================= */
 
-<header class="site-header">
+document.addEventListener("DOMContentLoaded", async () => {
+  setupSearch();
+  setupEraFilters();
+  setupKeyboardControls();
+  setupReaderCloseButton();
 
+  await loadArticleIndex();
+});
 
-  <a class="brand" href="../index.html">
+/* =========================================================
+   LOAD ARTICLE INDEX
+   ========================================================= */
 
-    <span class="brand-logo">
+async function loadArticleIndex() {
+  try {
+    const response = await fetch(ARTICLE_INDEX, {
+      cache: "no-store"
+    });
 
-      <img
-        src="../haindaveeyam-logo.jpeg"
-        alt="Haindaveeyam Foundation"
-        class="site-logo"
-      >
+    if (!response.ok) {
+      throw new Error(`Unable to load ${ARTICLE_INDEX}`);
+    }
 
-    </span>
+    const data = await response.json();
 
+    state.articles = Array.isArray(data.articles)
+      ? data.articles
+      : [];
 
-    <span class="brand-text">
+    renderCards();
 
-      <b>
-        एक रहेंगे • नेक रहेंगे
-      </b>
+  } catch (error) {
+    console.error("History index error:", error);
 
-      <small>
-        EK RAHENGE TO NEK RAHENGE
-      </small>
-
-    </span>
-
-  </a>
-
-
-  <nav>
-
-    <a href="../index.html">
-      HOME
-    </a>
-
-    <a href="history.html">
-      HISTORY
-    </a>
-
-    <a href="../civilisation.html">
-      CIVILISATION
-    </a>
-
-    <a href="/map">
-      MAP
-    </a>
-
-    <a href="../index.html#timeline">
-      TIMELINE
-    </a>
-
-    <a href="../index.html#sources">
-      SOURCES
-    </a>
-
-    <a href="../index.html#stories">
-      STORIES
-    </a>
-
-    <a href="../index.html#atlas">
-      ATLAS
-    </a>
-
-  </nav>
+    if (cardsContainer) {
+      cardsContainer.innerHTML = `
+        <div class="empty-state">
+          <p>History content could not be loaded.</p>
+          <small>Please check the article data files.</small>
+        </div>
+      `;
+    }
+  }
+}
 
 
-  <a class="search" href="../index.html#sources">
+/* =========================================================
+   RENDER ARTICLE CARDS
+   ========================================================= */
 
-    ⌕ &nbsp; SEARCH
+function renderCards() {
+  if (!cardsContainer) return;
 
-  </a>
+  const filteredArticles = state.articles.filter(article => {
+
+    /*
+      Dark Chapters articles are registered in the article index
+      so they can be opened by the dedicated Dark Chapters section.
+
+      They must NOT appear in the normal History article grid.
+    */
+
+    if (article.section === "dark-chapters") {
+      return false;
+    }
+
+    const matchesEra =
+      state.activeEra === "all" ||
+      article.era === state.activeEra;
+
+    const searchableText = [
+      article.title,
+      article.subtitle,
+      article.period,
+      article.category,
+      article.era
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    const matchesSearch =
+      !state.searchTerm ||
+      searchableText.includes(state.searchTerm);
+
+    return matchesEra && matchesSearch;
+  });
+
+  if (!filteredArticles.length) {
+    cardsContainer.innerHTML = `
+      <div class="empty-state">
+        <p>No historical articles match your search.</p>
+      </div>
+    `;
+    return;
+  }
+
+  cardsContainer.innerHTML = filteredArticles
+    .map(article => createArticleCard(article))
+    .join("");
+
+  /*
+     Article clicks are handled globally below.
+     Do not attach individual listeners here because the
+     Dark Chapters cards are static HTML outside #cards.
+  */
+}
 
 
-</header>
+/* =========================================================
+   ARTICLE CLICK HANDLER
+
+   Handles BOTH:
+   - dynamically generated History cards
+   - static Dark Chapters cards
+
+   This deliberately uses event delegation so a click does not
+   depend on renderCards() or data/articles.json loading first.
+   ========================================================= */
+
+document.addEventListener("click", event => {
+
+  const card = event.target.closest("[data-article-id]");
+
+  if (!card) return;
+
+  const articleId = card.dataset.articleId;
+
+  if (!articleId) return;
+
+  event.preventDefault();
+
+  openArticle(articleId);
+});
 
 
+/* =========================================================
+   ARTICLE CARD
+   ========================================================= */
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
+function createArticleCard(article) {
+  const image = getArticleImage(article);
 
-<main>
+  return `
+    <article
+      class="article-card"
+      data-article-id="${escapeHtml(article.id)}"
+      tabindex="0"
+      role="button"
+      aria-label="Read ${escapeHtml(article.title)}"
+    >
 
+      <div class="article-card-image">
+        <img
+          src="${escapeHtml(image)}"
+          alt="${escapeHtml(article.title)}"
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+        >
 
-  <!-- ===================================================
-       HERO
-  =================================================== -->
+        <span class="article-card-era">
+          ${escapeHtml(formatEra(article.era))}
+        </span>
+      </div>
 
-  <section class="history-page-hero">
+      <div class="article-card-body">
 
+        <div class="article-card-period">
+          ${escapeHtml(article.period || "")}
+        </div>
 
-    <div class="history-page-copy">
+        <h3>
+          ${escapeHtml(article.title)}
+        </h3>
 
+        <p>
+          ${escapeHtml(article.subtitle || "")}
+        </p>
 
-      <div class="kicker">
-
-        HISTORY • BHARAT • EVIDENCE
+        <span class="article-card-read">
+          READ RESEARCH ARTICLE →
+        </span>
 
       </div>
 
+    </article>
+  `;
+}
 
-      <h1>
 
-        HISTORY
-        <span>
-          IS NOT A COMFORT ZONE.
-        </span>
+/* =========================================================
+   OPEN ARTICLE
+   ========================================================= */
 
-      </h1>
+async function openArticle(articleId) {
 
+  if (!articleId) {
+    console.error("No article ID supplied.");
+    return;
+  }
 
-      <p>
+  /*
+     The article index is useful for the normal History grid,
+     but Dark Chapters are static HTML cards and must not depend
+     on the index being loaded successfully.
+  */
+  const articleIndex = state.articles.find(
+    article => article.id === articleId
+  ) || {
+    id: articleId,
+    title: articleId,
+    subtitle: "",
+    era: "medieval",
+    period: ""
+  };
 
-        Explore the history of Bharat through documented
-        evidence, historical sources, chronology, conflict,
-        resistance, kingdoms, society, knowledge and culture.
+  try {
+    console.log("Opening article:", articleId);
 
-      </p>
+    showReaderLoading(articleIndex);
 
+    const articlePath =
+      `articles/${encodeURIComponent(articleId)}/article.json`;
 
-      <p class="evidence-note">
+    const response = await fetch(articlePath, {
+      cache: "no-store"
+    });
 
-        No blind belief.
-        No selective memory.
-        <em>
-          Follow the evidence.
-        </em>
+    if (!response.ok) {
+      throw new Error(
+        `Unable to load ${articlePath} (${response.status})`
+      );
+    }
 
-      </p>
+    const article = await response.json();
 
+    renderArticle(article);
 
-    </div>
+  } catch (error) {
+    console.error("Article loading error:", error);
 
+    showReaderError(
+      "This research article could not be loaded."
+    );
+  }
+}
 
-  </section>
 
+/* =========================================================
+   READER LOADING
+   ========================================================= */
 
+function showReaderLoading(article) {
+  if (!reader) return;
+
+  reader.classList.add("open");
 
-  <!-- ===================================================
-       INTRODUCTION
-  =================================================== -->
+  document.body.classList.add("reader-open");
+
+  if (readerTitle) {
+    readerTitle.textContent = article.title || "";
+  }
+
+  if (readerDeck) {
+    readerDeck.textContent = article.subtitle || "";
+  }
+
+  if (readerImage) {
+    const image = getArticleImage(article);
 
-  <section class="history-intro">
+    readerImage.src = image;
+    readerImage.alt = article.title || "";
+  }
+
+  if (readerToc) {
+    readerToc.innerHTML = "";
+  }
+
+  if (readerContent) {
+    readerContent.innerHTML = `
+      <div class="reader-loading">
+        <div class="loader"></div>
+        <p>Loading research article…</p>
+      </div>
+    `;
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
 
-    <div class="section-label">
+/* =========================================================
+   RENDER FULL ARTICLE
+   ========================================================= */
 
-      01 &nbsp; HISTORY
+function renderArticle(article) {
+  if (!reader) return;
 
-    </div>
+  reader.classList.add("open");
+  document.body.classList.add("reader-open");
 
+  if (readerTitle) {
+    readerTitle.textContent = article.title || "";
+  }
 
-    <h2>
+  if (readerDeck) {
+    readerDeck.textContent = article.subtitle || "";
+  }
 
-      UNDERSTANDING THE HISTORY OF BHARAT
+  if (readerImage) {
+    const image = getArticleImage(article);
 
-    </h2>
+    readerImage.src = image;
+    readerImage.alt = article.title || "";
 
+    readerImage.onerror = () => {
+      readerImage.style.display = "none";
+    };
+  }
 
-    <p>
+  buildTableOfContents(article);
+  buildArticleContent(article);
 
-      The history of Bharat includes periods of
-      civilisation, migration, warfare, invasion,
-      resistance, political transformation, trade,
-      scholarship and cultural development.
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
-    </p>
 
+/* =========================================================
+   TABLE OF CONTENTS
+   ========================================================= */
 
-    <p>
+function buildTableOfContents(article) {
+  if (!readerToc) return;
 
-      Our approach is to examine historical claims through
-      sources, chronology and context rather than relying
-      only on inherited narratives or assumptions.
+  const sections = Array.isArray(article.sections)
+    ? article.sections
+    : [];
 
-    </p>
+  readerToc.innerHTML = sections
+    .map((section, index) => `
+      <a
+        href="#section-${escapeHtml(section.id || `section-${index}`)}"
+        class="toc-link"
+      >
+        ${escapeHtml(section.title || `Section ${index + 1}`)}
+      </a>
+    `)
+    .join("");
 
+  readerToc
+    .querySelectorAll("a")
+    .forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
 
-    <div class="principle-box">
+        const targetId =
+          link.getAttribute("href").substring(1);
 
+        const target =
+          document.getElementById(targetId);
 
-      <strong>
-        OUR APPROACH
-      </strong>
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+}
 
 
-      <span>
+/* =========================================================
+   ARTICLE BODY
+   ========================================================= */
 
-        Every major historical claim should be connected
-        to evidence, identified sources and historical
-        context.
+function buildArticleContent(article) {
+  if (!readerContent) return;
 
-      </span>
+  const html = [];
 
+  /* -------------------------
+     Abstract
+     ------------------------- */
 
-    </div>
+  if (article.abstract) {
+    html.push(`
+      <section class="research-abstract">
 
-
-  </section>
-
-
-
-  <!-- ===================================================
-       HISTORY TOPICS
-  =================================================== -->
-
-  <section class="invasion-timeline">
-
-
-    <div class="section-label">
-
-      02 &nbsp; HISTORY TOPICS
-
-    </div>
-
-
-    <h2>
-
-      EXPLORE THE HISTORY
-
-    </h2>
-
-
-    <div class="invasion-list">
-
-
-
-      <!-- INVASIONS -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          01
-
+        <div class="article-section-label">
+          ABSTRACT
         </div>
 
-
-        <div class="invasion-body">
-
-
-          <h3>
-            INVASIONS
-          </h3>
-
-
-          <p>
-
-            Explore invasions, military campaigns,
-            conflicts and political upheavals that
-            affected the civilisation of Bharat.
-
-          </p>
-
-
-          <a
-            class="outline-btn"
-            href="invasions.html"
-          >
-            EXPLORE →
-          </a>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- TEMPLE DESTRUCTION -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          02
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            TEMPLE DESTRUCTION
-          </h3>
-
-
-          <p>
-
-            Examine historical records concerning
-            temples, destruction, reconstruction and
-            the evidence surrounding individual sites.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- CAPTIVITY -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          03
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            CAPTIVITY & SLAVERY
-          </h3>
-
-
-          <p>
-
-            Examine historical evidence concerning
-            captivity, slavery, forced displacement
-            and related systems.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- RESISTANCE -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          04
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            RESISTANCE
-          </h3>
-
-
-          <p>
-
-            Explore resistance movements, military
-            campaigns, regional powers and individuals
-            who challenged expanding states.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- KINGDOMS -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          05
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            KINGDOMS
-          </h3>
-
-
-          <p>
-
-            Study the kingdoms, dynasties and political
-            institutions that shaped different periods
-            of Bharat's history.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- INTERNAL DIVISIONS -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          06
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            INTERNAL DIVISIONS
-          </h3>
-
-
-          <p>
-
-            Examine political, social and regional
-            divisions and their historical consequences.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- WOMEN -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          07
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            WOMEN
-          </h3>
-
-
-          <p>
-
-            Explore the lives, achievements, roles
-            and historical experiences of women in
-            different periods.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- KNOWLEDGE -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          08
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            KNOWLEDGE
-          </h3>
-
-
-          <p>
-
-            Explore scholarship, mathematics, science,
-            medicine, philosophy and institutions of
-            learning.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- TRADE -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          09
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            TRADE
-          </h3>
-
-
-          <p>
-
-            Examine trade networks, maritime connections,
-            commerce and the economic history of Bharat.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-
-      <!-- COLONIAL RULE -->
-
-      <article class="invasion-card">
-
-
-        <div class="invasion-date">
-
-          10
-
-        </div>
-
-
-        <div class="invasion-body">
-
-
-          <h3>
-            COLONIAL RULE
-          </h3>
-
-
-          <p>
-
-            Study the expansion of European colonial
-            power, administration, economic changes
-            and resistance.
-
-          </p>
-
-
-          <span class="card-meta">
-
-            DOCUMENTATION TO BE ADDED
-
-          </span>
-
-
-        </div>
-
-
-      </article>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- ===================================================
-       EVIDENCE
-  =================================================== -->
-
-  <section class="evidence-section">
-
-
-    <div class="section-label">
-
-      03 &nbsp; EVIDENCE
-
-    </div>
-
-
-    <h2>
-
-      HOW DO WE ESTABLISH WHAT HAPPENED?
-
-    </h2>
-
-
-    <div class="evidence-grid">
-
-
-      <article>
-
-        <b>
-          01
-        </b>
-
-        <h3>
-          PRIMARY SOURCES
-        </h3>
-
-        <p>
-
-          Inscriptions, chronicles, administrative
-          records, archaeological evidence and
-          contemporary accounts.
-
+        <p class="abstract-text">
+          ${formatParagraph(article.abstract)}
         </p>
 
-      </article>
+      </section>
+    `);
+  }
 
 
-      <article>
+  /* -------------------------
+     Keywords
+     ------------------------- */
 
-        <b>
-          02
-        </b>
+  if (
+    Array.isArray(article.keywords) &&
+    article.keywords.length
+  ) {
+    html.push(`
+      <section class="article-keywords">
 
-        <h3>
-          TRANSLATIONS
-        </h3>
+        <div class="article-section-label">
+          KEYWORDS
+        </div>
+
+        <div class="keyword-list">
+
+          ${article.keywords
+            .map(keyword => `
+              <span class="keyword">
+                ${escapeHtml(keyword)}
+              </span>
+            `)
+            .join("")}
+
+        </div>
+
+      </section>
+    `);
+  }
+
+
+  /* -------------------------
+     Main sections
+     ------------------------- */
+
+  const sections = Array.isArray(article.sections)
+    ? article.sections
+    : [];
+
+  sections.forEach((section, index) => {
+    html.push(
+      renderSection(section, index)
+    );
+  });
+
+
+  /* -------------------------
+     Chronology
+     ------------------------- */
+
+  if (
+    Array.isArray(article.chronology) &&
+    article.chronology.length
+  ) {
+    html.push(
+      renderChronology(article.chronology)
+    );
+  }
+
+
+  /* -------------------------
+     Major sites
+     ------------------------- */
+
+  if (
+    Array.isArray(article.majorSites) &&
+    article.majorSites.length
+  ) {
+    html.push(
+      renderMajorSites(article.majorSites)
+    );
+  }
+
+
+  /* -------------------------
+     Evidence categories
+     ------------------------- */
+
+  if (
+    Array.isArray(article.evidenceCategories) &&
+    article.evidenceCategories.length
+  ) {
+    html.push(
+      renderEvidenceCategories(article.evidenceCategories)
+    );
+  }
+
+
+  /* -------------------------
+     Research questions
+     ------------------------- */
+
+  if (
+    Array.isArray(article.researchQuestions) &&
+    article.researchQuestions.length
+  ) {
+    html.push(`
+      <section class="research-extra">
+
+        <div class="article-section-label">
+          RESEARCH QUESTIONS
+        </div>
+
+        <div class="question-list">
+
+          ${article.researchQuestions
+            .map(question => `
+              <div class="question-item">
+                ${escapeHtml(question)}
+              </div>
+            `)
+            .join("")}
+
+        </div>
+
+      </section>
+    `);
+  }
+
+
+  /* -------------------------
+     Scholarly cautions
+     ------------------------- */
+
+  if (
+    Array.isArray(article.scholarlyCautions) &&
+    article.scholarlyCautions.length
+  ) {
+    html.push(`
+      <section class="research-extra">
+
+        <div class="article-section-label">
+          SCHOLARLY CAUTIONS
+        </div>
+
+        <div class="caution-box">
+
+          ${article.scholarlyCautions
+            .map(caution => `
+              <p>
+                ${escapeHtml(caution)}
+              </p>
+            `)
+            .join("")}
+
+        </div>
+
+      </section>
+    `);
+  }
+
+
+  /* -------------------------
+     Sources
+     ------------------------- */
+
+  if (
+    Array.isArray(article.sources) &&
+    article.sources.length
+  ) {
+    html.push(
+      renderSources(article.sources)
+    );
+  }
+
+
+  /* -------------------------
+     Bibliography
+     ------------------------- */
+
+  if (
+    Array.isArray(article.bibliography) &&
+    article.bibliography.length
+  ) {
+    html.push(
+      renderBibliography(article.bibliography)
+    );
+  }
+
+
+  /* -------------------------
+     Final note
+     ------------------------- */
+
+  if (article.finalNote) {
+    html.push(`
+      <section class="article-final-note">
+
+        <div class="article-section-label">
+          RESEARCH NOTE
+        </div>
 
         <p>
-
-          Where original texts are not available to
-          modern readers, translations must be examined
-          carefully.
-
+          ${formatParagraph(article.finalNote)}
         </p>
 
-      </article>
+      </section>
+    `);
+  }
 
 
-      <article>
-
-        <b>
-          03
-        </b>
-
-        <h3>
-          CONTEXT
-        </h3>
-
-        <p>
-
-          Claims should be considered within their
-          political, social and geographical context.
-
-        </p>
-
-      </article>
+  readerContent.innerHTML = html.join("");
+}
 
 
-      <article>
+/* =========================================================
+   RENDER SECTION
+   ========================================================= */
 
-        <b>
-          04
-        </b>
+function renderSection(section, index) {
+  const sectionId =
+    section.id || `section-${index}`;
 
-        <h3>
-          SCHOLARSHIP
-        </h3>
+  const typeClass =
+    section.type
+      ? `section-type-${section.type}`
+      : "";
 
-        <p>
-
-          Different scholarly interpretations should
-          be identified rather than silently presented
-          as fact.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- ===================================================
-       CLOSING
-  =================================================== -->
-
-  <section class="history-closing">
-
-
-    <h2>
-
-      REMEMBER.<br>
-      UNDERSTAND.<br>
-      LEARN.
-
-    </h2>
-
-
-    <div class="devanagari">
-
-      एक रहेंगे<br>
-      नेक रहेंगे
-
-      <small>
-
-        EK RAHENGE TO NEK RAHENGE
-
-      </small>
-
-    </div>
-
-
-    <p>
-
-      Our purpose is not to create hatred.
-      <br>
-      It is to create clarity.
-      <br><br>
-
-      <em>
-        FOLLOW THE EVIDENCE.
-      </em>
-
-    </p>
-
-
-  </section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-
-  <div class="footer-brand">
-
-
-    <img
-      src="../haindaveeyam-logo.jpeg"
-      alt="Haindaveeyam Foundation"
-      class="footer-logo"
+  let html = `
+    <section
+      id="section-${escapeHtml(sectionId)}"
+      class="article-section ${typeClass}"
     >
 
+      <div class="article-section-heading">
 
-  </div>
+        <span class="section-number">
+          ${String(index + 1).padStart(2, "0")}
+        </span>
 
+        <h2>
+          ${escapeHtml(section.title || "")}
+        </h2>
 
-  <div class="footer-links">
-
-
-    <a href="../index.html">
-      HOME
-    </a>
-
-
-    <a href="history.html">
-      HISTORY
-    </a>
+      </div>
+  `;
 
 
-    <a href="../index.html#sources">
-      SOURCES
-    </a>
+  /* Date */
+
+  if (section.date) {
+    html += `
+      <div class="section-date">
+        ${escapeHtml(section.date)}
+      </div>
+    `;
+  }
 
 
-    <a href="#">
-      RESEARCH POLICY
-    </a>
+  /* Paragraphs */
+
+  if (Array.isArray(section.content)) {
+    html += section.content
+      .map(paragraph => `
+        <p>
+          ${formatParagraph(paragraph)}
+        </p>
+      `)
+      .join("");
+  }
 
 
-    <a href="#">
-      CONTACT
-    </a>
+  /* Evidence */
+
+  if (
+    Array.isArray(section.evidence) &&
+    section.evidence.length
+  ) {
+    html += `
+      <div class="evidence-panel">
+
+        <div class="article-section-label">
+          EVIDENCE
+        </div>
+
+        <div class="evidence-list">
+
+          ${section.evidence
+            .map(item => `
+              <span>
+                ${escapeHtml(item)}
+              </span>
+            `)
+            .join("")}
+
+        </div>
+
+      </div>
+    `;
+  }
 
 
-  </div>
+  /* Questions */
+
+  if (
+    Array.isArray(section.questions) &&
+    section.questions.length
+  ) {
+    html += `
+      <div class="question-panel">
+
+        <div class="article-section-label">
+          KEY QUESTIONS
+        </div>
+
+        ${section.questions
+          .map(question => `
+            <p>
+              ${escapeHtml(question)}
+            </p>
+          `)
+          .join("")}
+
+      </div>
+    `;
+  }
 
 
-  <div class="footer-social">
+  /* Source */
 
-    ◉　◎　♥
+  if (section.source) {
+    html += `
+      <div class="inline-source">
 
-  </div>
+        <span class="article-section-label">
+          SOURCE
+        </span>
+
+        <a
+          href="${escapeHtml(section.source.url || "#")}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${escapeHtml(section.source.title || "Source")}
+        </a>
+
+        ${
+          section.source.organization
+            ? `<span>
+                — ${escapeHtml(section.source.organization)}
+              </span>`
+            : ""
+        }
+
+      </div>
+    `;
+  }
 
 
-  <div class="copyright">
+  html += `
+    </section>
+  `;
 
-    © Haindaveeyam Foundation
-
-  </div>
-
-
-</footer>
+  return html;
+}
 
 
-</body>
+/* =========================================================
+   CHRONOLOGY
+   ========================================================= */
 
-</html>
+function renderChronology(items) {
+  return `
+    <section class="article-extra chronology">
+
+      <div class="article-section-label">
+        CHRONOLOGY
+      </div>
+
+      <h2>
+        Historical Timeline
+      </h2>
+
+      <div class="chronology-list">
+
+        ${items
+          .map(item => `
+            <div class="chronology-item">
+
+              <div class="chronology-date">
+                ${escapeHtml(item.date || "")}
+              </div>
+
+              <div class="chronology-event">
+                <strong>
+                  ${escapeHtml(item.period || "")}
+                </strong>
+
+                <p>
+                  ${escapeHtml(item.significance || item.event || "")}
+                </p>
+              </div>
+
+            </div>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   MAJOR SITES
+   ========================================================= */
+
+function renderMajorSites(sites) {
+  return `
+    <section class="article-extra">
+
+      <div class="article-section-label">
+        MAJOR SITES
+      </div>
+
+      <h2>
+        Archaeological Sites
+      </h2>
+
+      <div class="sites-grid">
+
+        ${sites
+          .map(site => `
+            <article class="site-card">
+
+              <h3>
+                ${escapeHtml(site.name || "")}
+              </h3>
+
+              <div class="site-location">
+                ${escapeHtml(site.location || "")}
+              </div>
+
+              <p>
+                ${escapeHtml(site.importance || "")}
+              </p>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   EVIDENCE CATEGORIES
+   ========================================================= */
+
+function renderEvidenceCategories(items) {
+  return `
+    <section class="article-extra">
+
+      <div class="article-section-label">
+        EVIDENCE
+      </div>
+
+      <h2>
+        Archaeological Evidence Base
+      </h2>
+
+      <div class="evidence-category-grid">
+
+        ${items
+          .map(item => `
+            <article class="evidence-category">
+
+              <h3>
+                ${escapeHtml(item.category || "")}
+              </h3>
+
+              <p>
+                ${escapeHtml(item.examples || "")}
+              </p>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+function renderSources(sources) {
+  return `
+    <section class="article-extra sources-section">
+
+      <div class="article-section-label">
+        SOURCES
+      </div>
+
+      <h2>
+        Primary and Research Sources
+      </h2>
+
+      <div class="source-list">
+
+        ${sources
+          .map((source, index) => `
+            <article class="source-item">
+
+              <div class="source-number">
+                ${String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div class="source-details">
+
+                <h3>
+                  ${escapeHtml(source.title || "")}
+                </h3>
+
+                ${
+                  source.organization
+                    ? `<p class="source-organisation">
+                        ${escapeHtml(source.organization)}
+                      </p>`
+                    : ""
+                }
+
+                ${
+                  source.type
+                    ? `<p class="source-type">
+                        ${escapeHtml(source.type)}
+                      </p>`
+                    : ""
+                }
+
+                ${
+                  source.url
+                    ? `<a
+                        href="${escapeHtml(source.url)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        VIEW SOURCE →
+                      </a>`
+                    : ""
+                }
+
+              </div>
+
+            </article>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   BIBLIOGRAPHY
+   ========================================================= */
+
+function renderBibliography(items) {
+  return `
+    <section class="article-extra bibliography-section">
+
+      <div class="article-section-label">
+        BIBLIOGRAPHY
+      </div>
+
+      <h2>
+        Further Academic Reading
+      </h2>
+
+      <div class="bibliography-list">
+
+        ${items
+          .map((item, index) => `
+            <div class="bibliography-item">
+
+              <span class="bibliography-number">
+                ${index + 1}.
+              </span>
+
+              <div>
+
+                ${
+                  item.author
+                    ? `<strong>
+                        ${escapeHtml(item.author)}
+                      </strong>`
+                    : ""
+                }
+
+                ${
+                  item.title
+                    ? `<span>
+                        — ${escapeHtml(item.title)}
+                      </span>`
+                    : ""
+                }
+
+                ${
+                  item.type
+                    ? `<small>
+                        ${escapeHtml(item.type)}
+                      </small>`
+                    : ""
+                }
+
+              </div>
+
+            </div>
+          `)
+          .join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function setupSearch() {
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", event => {
+    state.searchTerm =
+      event.target.value.trim().toLowerCase();
+
+    renderCards();
+  });
+}
+
+
+/* =========================================================
+   ERA FILTERS
+   ========================================================= */
+
+function setupEraFilters() {
+  eraButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      state.activeEra =
+        button.dataset.era || "all";
+
+      eraButtons.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      renderCards();
+
+    });
+
+  });
+}
+
+
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
+
+function setupKeyboardControls() {
+
+  document.addEventListener("keydown", event => {
+
+    /* Escape closes reader */
+
+    if (event.key === "Escape") {
+      closeReader();
+      closeModal();
+    }
+
+
+    /* Enter activates article cards */
+
+    if (
+      event.key === "Enter" &&
+      document.activeElement?.dataset?.articleId
+    ) {
+      openArticle(
+        document.activeElement.dataset.articleId
+      );
+    }
+
+  });
+}
+
+
+/* =========================================================
+   CLOSE ARTICLE READER
+   ========================================================= */
+
+function closeReader() {
+
+  if (!reader) return;
+
+  reader.classList.remove("open");
+
+  document.body.classList.remove("reader-open");
+
+  /*
+    Return the reader to the top for the next article.
+  */
+
+  reader.scrollTop = 0;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+   ========================================================= */
+
+function closeModal() {
+  if (!modal) return;
+
+  modal.classList.remove("open");
+}
+
+
+/* =========================================================
+   READER ERROR
+   ========================================================= */
+
+function showReaderError(message) {
+  if (!readerContent) return;
+
+  readerContent.innerHTML = `
+    <div class="reader-error">
+
+      <div class="article-section-label">
+        ERROR
+      </div>
+
+      <h2>
+        Unable to load article
+      </h2>
+
+      <p>
+        ${escapeHtml(message)}
+      </p>
+
+    </div>
+  `;
+}
+
+
+/* =========================================================
+   IMAGE HANDLING
+   ========================================================= */
+
+function getArticleImage(article) {
+
+  /*
+    The JSON can eventually specify its own image.
+
+    Example:
+    "heroImage": "../images/harappan-hero.jpg"
+
+    Because article JSON files are inside:
+    history/articles/<article-id>/
+
+    the path is relative to that JSON location.
+
+    However, HTML cannot directly use that relative path
+    because the HTML page is one level higher.
+
+    Therefore we convert it to a web path.
+  */
+
+  if (article.heroImage) {
+
+    const cleanPath =
+      article.heroImage
+        .replace(/^(\.\.\/)+/, "");
+
+    return `articles/${article.id}/${cleanPath}`;
+  }
+
+  return "../Bharat-map-clean.png";
+}
+
+
+/* =========================================================
+   ERA DISPLAY
+   ========================================================= */
+
+function formatEra(era) {
+
+  const names = {
+    prehistory: "DEEP ANTIQUITY",
+    harappan: "HARAPPAN",
+    vedic: "VEDIC",
+    classical: "CLASSICAL",
+    medieval: "MEDIEVAL",
+    earlymodern: "EARLY MODERN",
+    colonial: "COLONIAL",
+    modern: "MODERN"
+  };
+
+  return names[era] || String(era || "").toUpperCase();
+}
+
+
+/* =========================================================
+   TEXT FORMATTER
+   ========================================================= */
+
+function formatParagraph(text) {
+
+  if (text === null || text === undefined) {
+    return "";
+  }
+
+  /*
+    Convert line breaks safely while keeping the
+    historical text readable.
+  */
+
+  return escapeHtml(String(text))
+    .replace(/\n/g, "<br>");
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+   ========================================================= */
+
+function escapeHtml(value) {
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   GLOBAL ACCESS
+   ========================================================= */
+
+window.HistoryApp = {
+  openArticle,
+  closeReader,
+  loadArticleIndex,
+  renderCards
+};
+/* =========================================================
+   READER CLOSE BUTTON
+   ========================================================= */
+
+function setupReaderCloseButton() {
+
+  if (!reader) return;
+
+  /*
+    Find the reader's close button.
+    This supports the existing design even if the
+    button does not yet have a dedicated ID.
+  */
+
+  const closeButton =
+    reader.querySelector(".reader-close") ||
+    reader.querySelector("[data-close-reader]") ||
+    Array.from(reader.querySelectorAll("button"))
+      .find(button => button.textContent.trim() === "×");
+
+  if (!closeButton) {
+    console.warn("History reader close button not found.");
+    return;
+  }
+
+  closeButton.addEventListener("click", event => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    closeReader();
+  });
+}
