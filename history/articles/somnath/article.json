@@ -1,0 +1,130 @@
+{
+  "id": "somnath",
+  "title": "Somnath — The Temple, the Campaign and the Plunder",
+  "subtitle": "Mahmud of Ghazni's most enduringly remembered Indian expedition",
+  "era": "medieval",
+  "period": "1025–1026 CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 04",
+    "title": "SOMNATH",
+    "subtitle": "The Temple, the Campaign and the Plunder",
+    "period": "1025–1026 CE",
+    "summary": "The Somnath expedition became one of the most enduring memories of Mahmud of Ghazni's campaigns in Bharat. The episode combines military logistics, temple wealth, religious symbolism, plunder and later historical memory."
+  },
+  "abstract": "Somnath was both a major sacred centre and a wealthy institution. Mahmud's 1025–26 campaign against the shrine became a defining episode in the history and memory of medieval Hindu-Muslim conflict.",
+  "keywords": [
+    "Somnath",
+    "Mahmud of Ghazni",
+    "temple destruction",
+    "plunder",
+    "Gujarat",
+    "Ghaznavids"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "WHY SOMNATH MATTERED",
+      "type": "historical",
+      "content": [
+        "Somnath was a major Shaiva sacred centre on the western coast of Gujarat. Temples in early medieval Bharat were not merely private places of worship; major shrines could possess land, donations, treasuries, ritual establishments and political prestige.",
+        "Attacking such a centre could therefore have multiple consequences: religious humiliation, political symbolism and the acquisition of wealth."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "THE MARCH TO GUJARAT",
+      "type": "historical",
+      "content": [
+        "Mahmud's expedition of 1025–26 was ambitious. The route to Somnath required the army to operate far from Ghazni and across difficult terrain.",
+        "The campaign demonstrates the reach of the Ghaznavid military system and the strategic importance attached to high-value targets."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "THE ATTACK",
+      "type": "campaign",
+      "content": [
+        "The medieval Persian historical tradition describes the assault on Somnath, the defeat of its defenders and the seizure of the temple's wealth.",
+        "The destruction of the image and the removal of valuable objects became central to the Islamic courtly presentation of Mahmud's victory. At the same time, the economic value of the booty was enormously important to a militarised state."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "RELIGION AND WEALTH",
+      "type": "analysis",
+      "content": [
+        "It is too simple to force every campaign into a single category. Mahmud's state required enormous resources, and his court cultivated the image of the victorious ghazi. The two dimensions could reinforce each other.",
+        "Somnath therefore needs to be understood simultaneously as a religious confrontation, a political victory and an episode of extraction."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "THE MEMORY OF SOMNATH",
+      "type": "memory",
+      "content": [
+        "Somnath became much more than a single eleventh-century event. Its memory was preserved in later Hindu traditions and was repeatedly reinterpreted in Persian, colonial and modern Indian historiography.",
+        "The reconstruction of Somnath in independent India transformed the shrine into a symbol of civilisational continuity: destruction was remembered, but so was rebuilding."
+      ],
+      "lesson": "A civilisation can preserve memory of destruction without allowing destruction to become the final chapter."
+    },
+    {
+      "id": "s6",
+      "title": "WHAT STUDENTS SHOULD ASK",
+      "type": "historiography",
+      "content": [
+        "Which parts of the story come from near-contemporary Persian sources? Which details appear only in later accounts? What can archaeology establish? How did later political movements reinterpret Somnath?",
+        "These questions do not weaken the story. They turn it into a serious historical investigation."
+      ]
+    }
+  ],
+  "chronology": [
+    {
+      "date": "1025 CE",
+      "event": "Mahmud begins the expedition toward the western coast."
+    },
+    {
+      "date": "1025–26 CE",
+      "event": "Ghaznavid forces attack and plunder Somnath."
+    },
+    {
+      "date": "Later centuries",
+      "event": "Somnath becomes a powerful symbol in regional and national historical memory."
+    },
+    {
+      "date": "20th century",
+      "event": "The Somnath temple is reconstructed after independence."
+    }
+  ],
+  "researchQuestions": [
+    "What do the earliest Persian accounts say about Somnath?",
+    "How much booty was actually taken, and how reliable are the numerical estimates?",
+    "How did the meaning of Somnath change in later historiography?"
+  ],
+  "sources": [
+    {
+      "title": "Mahmud b. Sebuktegin",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/"
+    },
+    {
+      "title": "Tarikh-i Yamini",
+      "author": "Al-Utbi",
+      "type": "near-contemporary Ghaznavid court history"
+    },
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    }
+  ],
+  "bibliography": [
+    "Encyclopaedia Iranica, Mahmud b. Sebuktegin.",
+    "Al-Utbi, Tarikh-i Yamini.",
+    "Cynthia Talbot, The Last Hindu Emperor."
+  ]
+}
