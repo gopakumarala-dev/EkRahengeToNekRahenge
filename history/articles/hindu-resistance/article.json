@@ -1,1 +1,102 @@
 
+{
+  "id": "hindu-resistance",
+  "title": "Resistance and Survival",
+  "subtitle": "The kingdoms and communities that refused to disappear",
+  "era": "medieval",
+  "period": "8th–17th centuries CE",
+  "category": "resistance",
+  "section": "resistance",
+  "status": "published",
+  "hero": {
+    "eyebrow": "RESISTANCE · 01",
+    "title": "RESISTANCE & SURVIVAL",
+    "subtitle": "The Civilisation That Refused to Disappear",
+    "period": "8th–17th centuries CE",
+    "summary": "The history of medieval Bharat is not only a history of conquest. It is also a history of resistance, adaptation, political recovery and cultural survival."
+  },
+  "abstract": "Conquest never erased the civilisation of Bharat. Rajput kingdoms, southern powers, the Ahoms, Vijayanagara and later the Marathas demonstrate different forms of military and political resistance.",
+  "keywords": [
+    "resistance",
+    "Rajputs",
+    "Vijayanagara",
+    "Ahoms",
+    "Marathas",
+    "Hindu kingdoms",
+    "civilisational survival"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "RESISTANCE BEGAN AT THE FRONTIER",
+      "type": "historical",
+      "content": [
+        "The Hindu Shahi rulers and later frontier powers fought repeatedly to contain Ghaznavid expansion. Their defeats were severe, but they demonstrate that invasion was contested rather than passively accepted."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "RAJPUT RESISTANCE",
+      "type": "historical",
+      "content": [
+        "Rajput polities repeatedly contested the expansion of the Delhi Sultanate. Their political fragmentation was a weakness, but their military culture also generated sustained resistance across Rajasthan and neighbouring regions.",
+        "Prithviraj Chauhan became the most famous literary symbol of this resistance, especially through the *Prithviraj Raso* tradition."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "VIJAYANAGARA",
+      "type": "historical",
+      "content": [
+        "The Vijayanagara Empire became one of the most important political powers of southern India. Its rulers presented themselves as protectors of dharma and built a powerful state centred on military organisation, temple patronage and economic networks.",
+        "Its history demonstrates that the medieval period cannot be reduced to a single north Indian narrative."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "THE AHOMS",
+      "type": "historical",
+      "content": [
+        "In the north-east, the Ahom kingdom developed a durable political and military system and resisted Mughal expansion for generations.",
+        "Their history is a powerful reminder that regional state formation and geography could produce very different outcomes from those in the Gangetic plain."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "THE MARATHA ASCENDANCY",
+      "type": "historical",
+      "content": [
+        "The rise of the Marathas created another major centre of political resistance and eventually challenged Mughal power on a subcontinental scale.",
+        "The story of Shivaji and the Maratha state belongs to the longer history of political recovery and the reassertion of indigenous power."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "SURVIVAL IS ALSO VICTORY",
+      "type": "civilisational",
+      "content": [
+        "The civilisation of Bharat survived conquest because communities rebuilt institutions, preserved languages and texts, maintained pilgrimage networks, protected temples, created new states and transmitted cultural memory.",
+        "The historical lesson is not that Bharat was never defeated. It is that defeat did not become disappearance."
+      ]
+    }
+  ],
+  "researchQuestions": [
+    "How did different Indian states adapt their military systems?",
+    "What institutions enabled cultural continuity under political domination?",
+    "How did temple patronage and pilgrimage networks preserve identity?"
+  ],
+  "sources": [
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    }
+  ]
+}
