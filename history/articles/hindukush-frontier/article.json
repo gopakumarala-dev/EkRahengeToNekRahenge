@@ -1,1 +1,145 @@
-
+{
+  "id": "hindukush-frontier",
+  "title": "The Hindukush Frontier",
+  "subtitle": "Mountains, Passes and the Gateway into Bharat",
+  "era": "medieval",
+  "period": "7th–13th centuries CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 01",
+    "title": "THE HINDUKUSH FRONTIER",
+    "subtitle": "Mountains, Passes and the Gateway into Bharat",
+    "period": "7th–13th centuries CE",
+    "summary": "The north-western mountain frontier was a strategic zone connecting the Indian subcontinent with Afghanistan, Iran and Central Asia. Its passes repeatedly shaped the military history of Bharat."
+  },
+  "abstract": "This article examines the north-western frontier as geography, strategic system and historical memory. It follows the routes linking the Hindu Kush, Afghanistan and the Punjab and explains why frontier defence became one of the central strategic problems of medieval Bharat.",
+  "keywords": [
+    "Hindukush",
+    "Khyber Pass",
+    "Punjab",
+    "Ghazni",
+    "Ghur",
+    "frontier defence",
+    "Central Asia",
+    "Bharat"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "THE MOUNTAINS WERE NOT THE END OF BHARAT",
+      "type": "historical",
+      "content": [
+        "The north-western mountains formed a formidable but permeable frontier. Valleys and passes connected the highlands of Afghanistan with the plains of the Punjab and, beyond them, the great political centres of northern India.",
+        "The geography mattered because an army did not need to cross an entire mountain range. It needed only to control a practicable route, establish supplies and move through a corridor at the right season.",
+        "For the kingdoms of the Punjab and north-western India, frontier security was therefore a permanent strategic requirement rather than a single battle."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "THE PASSES",
+      "type": "historical",
+      "content": [
+        "The Khyber and other passes connected the political worlds of Afghanistan and the Indian plains. Routes through the frontier were used by traders, pilgrims, migrants and armies.",
+        "The same geography that enabled cultural exchange also made repeated military incursions possible. Once a power based west of the mountains acquired secure bases in Afghanistan and Punjab, the distance to the plains became considerably shorter.",
+        "The frontier must therefore be understood as a zone of interaction as well as invasion."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "FROM GHAZNI TO THE PUNJAB",
+      "type": "historical",
+      "content": [
+        "The Ghaznavids turned the north-western frontier into the base for repeated campaigns into Bharat. The weakening of the Hindu Shahi kingdom opened important approaches from Afghanistan toward the Punjab.",
+        "Mahmud of Ghazni's campaigns demonstrate how military power based at Ghazni could repeatedly penetrate the plains, defeat frontier rulers and return with booty and captives.",
+        "The Ghaznavid foothold in Punjab later became strategically important for the Ghurids."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "FROM GHAZ TO DELHI",
+      "type": "historical",
+      "content": [
+        "The Ghurid expansion represented a different stage. Muhammad of Ghor and his commanders were not merely raiding deep into India and returning immediately to Ghazni. They sought durable political control.",
+        "The battles of Tarain in 1191 and 1192 therefore have to be understood within a much longer frontier process: control of Afghanistan and Punjab created the strategic platform from which the Ghurids could challenge the Rajput powers of northern India."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "WHY FRONTIER DEFENCE FAILED REPEATEDLY",
+      "type": "analysis",
+      "content": [
+        "Bharat possessed powerful armies and warrior traditions, but political authority was divided among numerous kingdoms. Coalitions could form, yet maintaining permanent coordinated frontier defence was difficult.",
+        "Distance, logistics, rival dynastic interests and the ability of mobile cavalry forces to choose the timing of campaigns all affected the balance.",
+        "The lesson is not that Bharat lacked courage. The historical problem was strategic coordination."
+      ],
+      "lesson": "A civilisation with enormous resources still requires permanent frontier institutions, intelligence, logistics and political coordination."
+    },
+    {
+      "id": "s6",
+      "title": "THE FRONTIER AS CIVILISATIONAL MEMORY",
+      "type": "historical",
+      "content": [
+        "For later generations, the north-west became remembered as the direction from which successive conquerors entered the subcontinent. That memory appears in chronicles, heroic literature, regional traditions and modern historical writing.",
+        "The purpose of remembering the frontier is not to turn geography into a source of hatred toward people living today. It is to understand how geography, state formation and military organisation shaped the historical experience of Bharat."
+      ]
+    }
+  ],
+  "chronology": [
+    {
+      "date": "8th–10th c.",
+      "event": "Hindu Shahi and other frontier powers control important north-western routes."
+    },
+    {
+      "date": "10th–11th c.",
+      "event": "Ghaznavid power expands from Afghanistan into the Punjab and launches repeated Indian campaigns."
+    },
+    {
+      "date": "12th c.",
+      "event": "Ghurid power expands through Afghanistan and Punjab toward Delhi and Ajmer."
+    },
+    {
+      "date": "1191",
+      "event": "First Battle of Tarain: Muhammad of Ghor is defeated by Prithviraj Chauhan."
+    },
+    {
+      "date": "1192",
+      "event": "Second Battle of Tarain: Ghurid victory transforms the political balance of northern India."
+    }
+  ],
+  "researchQuestions": [
+    "How did geography influence the frequency and direction of invasions?",
+    "Why did frontier coalitions prove difficult to sustain?",
+    "How did control of Punjab alter the strategic balance?"
+  ],
+  "scholarlyCautions": [
+    "The popular explanation of the name 'Hindukush' should not be presented as settled etymology without discussing competing linguistic explanations.",
+    "Not every movement across the frontier was an invasion; the same routes supported commerce, pilgrimage and cultural exchange."
+  ],
+  "sources": [
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "Mahmud b. Sebuktegin",
+      "publisher": "Encyclopaedia Iranica",
+      "type": "modern scholarly reference",
+      "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/"
+    }
+  ],
+  "bibliography": [
+    "Cynthia Talbot, The Last Hindu Emperor: Prithviraj Chauhan and the Indian Past, 1200–2000.",
+    "Peter Jackson, The Delhi Sultanate: A Political and Military History.",
+    "Satish Chandra, Medieval India: From Sultanat to the Mughals."
+  ]
+}
