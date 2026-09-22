@@ -34,19 +34,11 @@ const modal = document.getElementById("modal");
    INITIALISE
    ========================================================= */
 
-document.addEventListener("click", event => {
-  const subject = event.target.closest("[data-dark-subject-id]");
-  if (!subject) return;
-  event.preventDefault();
-  openArticle(subject.dataset.darkSubjectId);
-});
-
 document.addEventListener("DOMContentLoaded", async () => {
   setupSearch();
   setupEraFilters();
   setupKeyboardControls();
   setupReaderCloseButton();
-  setupDarkChapterCards();
 
   await loadArticleIndex();
 });
@@ -86,44 +78,7 @@ async function loadArticleIndex() {
     }
   }
 }
-/* =========================================================
-   DARK CHAPTERS
-   STATIC CARD CLICK HANDLER
-   ========================================================= */
 
-function setupDarkChapterCards() {
-
-  const darkChapterCards =
-    document.querySelectorAll(
-      ".dark-chapter-card[data-article-id]"
-    );
-
-  console.log(
-    "Dark Chapter cards found:",
-    darkChapterCards.length
-  );
-
-  darkChapterCards.forEach(card => {
-
-    card.style.cursor = "pointer";
-
-    card.addEventListener("click", function () {
-
-      const articleId =
-        this.getAttribute("data-article-id");
-
-      console.log(
-        "Dark Chapter clicked:",
-        articleId
-      );
-
-      openArticle(articleId);
-
-    });
-
-  });
-
-}
 
 /* =========================================================
    RENDER ARTICLE CARDS
@@ -180,14 +135,39 @@ function renderCards() {
     .map(article => createArticleCard(article))
     .join("");
 
-  cardsContainer
-    .querySelectorAll("[data-article-id]")
-    .forEach(card => {
-      card.addEventListener("click", () => {
-        openArticle(card.dataset.articleId);
-      });
-    });
+  /*
+     Article clicks are handled globally below.
+     Do not attach individual listeners here because the
+     Dark Chapters cards are static HTML outside #cards.
+  */
 }
+
+
+/* =========================================================
+   ARTICLE CLICK HANDLER
+
+   Handles BOTH:
+   - dynamically generated History cards
+   - static Dark Chapters cards
+
+   This deliberately uses event delegation so a click does not
+   depend on renderCards() or data/articles.json loading first.
+   ========================================================= */
+
+document.addEventListener("click", event => {
+
+  const card = event.target.closest("[data-article-id]");
+
+  if (!card) return;
+
+  const articleId = card.dataset.articleId;
+
+  if (!articleId) return;
+
+  event.preventDefault();
+
+  openArticle(articleId);
+});
 
 
 /* =========================================================
@@ -250,56 +230,33 @@ function createArticleCard(article) {
 
 async function openArticle(articleId) {
 
-  console.log("Opening article:", articleId);
-
   if (!articleId) {
     console.error("No article ID supplied.");
     return;
   }
 
+  /*
+     The article index is useful for the normal History grid,
+     but Dark Chapters are static HTML cards and must not depend
+     on the index being loaded successfully.
+  */
+  const articleIndex = state.articles.find(
+    article => article.id === articleId
+  ) || {
+    id: articleId,
+    title: articleId,
+    subtitle: "",
+    era: "medieval",
+    period: ""
+  };
+
   try {
+    console.log("Opening article:", articleId);
 
-    /*
-      Open the reader immediately.
-      This does NOT depend on data/articles.json.
-    */
-
-    if (reader) {
-      reader.classList.add("open");
-      reader.setAttribute("aria-hidden", "false");
-    }
-
-    document.body.classList.add("reader-open");
-
-    /*
-      Show loading state
-    */
-
-    if (readerContent) {
-      readerContent.innerHTML = `
-        <div class="reader-loading">
-          <div class="loader"></div>
-          <p>Loading research article…</p>
-        </div>
-      `;
-    }
-
-    /*
-      Clear previous table of contents
-    */
-
-    if (readerToc) {
-      readerToc.innerHTML = "";
-    }
-
-    /*
-      Load article directly from its folder.
-    */
+    showReaderLoading(articleIndex);
 
     const articlePath =
       `articles/${encodeURIComponent(articleId)}/article.json`;
-
-    console.log("Loading:", articlePath);
 
     const response = await fetch(articlePath, {
       cache: "no-store"
@@ -313,32 +270,17 @@ async function openArticle(articleId) {
 
     const article = await response.json();
 
-    console.log("Article loaded:", article);
-
-    /*
-      Render article
-    */
-
     renderArticle(article);
 
-    /*
-      Move page to top
-    */
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
   } catch (error) {
-
     console.error("Article loading error:", error);
 
     showReaderError(
-      `This research article could not be loaded.`
+      "This research article could not be loaded."
     );
   }
 }
+
 
 /* =========================================================
    READER LOADING
@@ -682,14 +624,6 @@ function buildArticleContent(article) {
 
 
   /* -------------------------
-     Dark Chapter article series
-     ------------------------- */
-
-  if (Array.isArray(article.chapterArticles) && article.chapterArticles.length) {
-    html.push(renderDarkChapterSeries(article.chapterArticles));
-  }
-
-  /* -------------------------
      Final note
      ------------------------- */
 
@@ -713,35 +647,6 @@ function buildArticleContent(article) {
   readerContent.innerHTML = html.join("");
 }
 
-
-function renderDarkChapterSeries(items) {
-  return `
-    <section class="dark-chapter-series" id="chapter-series">
-      <div class="dark-chapter-series-head">
-        <div class="article-section-label">EXPLORE THIS CHAPTER</div>
-        <h3>Every incident becomes a detailed historical article.</h3>
-        <p>Chapter pages provide the civilisational narrative. Individual subjects will carry the detailed chronology, people, battles, human cost, evidence and sources for that incident.</p>
-      </div>
-      <div class="dark-chapter-series-grid">
-        ${items.map(item => {
-          const published = item.status === "published";
-          const tag = published ? `<span class="dark-subject-status">READ ARTICLE →</span>` : `<span class="dark-subject-status">DETAILED ARTICLE TO FOLLOW</span>`;
-          return published
-            ? `<a class="dark-subject-card" href="#" data-dark-subject-id="${escapeHtml(item.id)}">
-                 <span class="dark-subject-number">${escapeHtml(item.number)}</span>
-                 <h4>${escapeHtml(item.title)}</h4>
-                 <p>${escapeHtml(item.summary || "")}</p>${tag}
-               </a>`
-            : `<div class="dark-subject-card is-planned">
-                 <span class="dark-subject-number">${escapeHtml(item.number)}</span>
-                 <h4>${escapeHtml(item.title)}</h4>
-                 <p>${escapeHtml(item.summary || "")}</p>${tag}
-               </div>`;
-        }).join("")}
-      </div>
-    </section>
-  `;
-}
 
 /* =========================================================
    RENDER SECTION
