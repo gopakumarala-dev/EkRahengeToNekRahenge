@@ -1,0 +1,118 @@
+{
+  "id": "nalanda-destruction",
+  "title": "Nalanda — The Long Life and Violent End of a Great Centre of Learning",
+  "subtitle": "A study of the university, its decline and the Bakhtiyar Khalji tradition",
+  "era": "medieval",
+  "period": "5th–13th centuries CE",
+  "category": "dark-chapters",
+  "section": "dark-chapters",
+  "status": "published",
+  "hero": {
+    "eyebrow": "DARK CHAPTERS · 05",
+    "title": "NALANDA",
+    "subtitle": "Knowledge, Destruction and Memory",
+    "period": "5th–13th centuries CE",
+    "summary": "Nalanda was one of the great Buddhist monastic and intellectual centres of South Asia. Its decline and destruction are associated in later tradition with the campaigns of Bakhtiyar Khalji, but the chronology and evidentiary basis deserve careful examination."
+  },
+  "abstract": "Nalanda represents both the intellectual achievements of ancient Bharat and the vulnerability of institutions during periods of military upheaval. This article distinguishes archaeological evidence, Tibetan traditions and later historical claims concerning the destruction of the monastery.",
+  "keywords": [
+    "Nalanda",
+    "Bakhtiyar Khalji",
+    "Buddhist university",
+    "education",
+    "library",
+    "Bihar",
+    "Turko-Afghan conquest"
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "A GREAT CENTRE OF LEARNING",
+      "type": "historical",
+      "content": [
+        "Nalanda developed into an extraordinary monastic and scholastic institution. Students and teachers from different parts of Asia were drawn to its intellectual environment.",
+        "Its importance was not simply architectural. Nalanda represented a network of learning, debate, manuscript production and transmission of Buddhist philosophy and related disciplines."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "THE LIBRARIES AND THE INTELLECTUAL WORLD",
+      "type": "historical",
+      "content": [
+        "Later accounts associate Nalanda with extensive manuscript collections. The larger point is that a major residential scholastic institution depended on a fragile ecosystem: buildings, manuscripts, teachers, students, patrons and political protection.",
+        "When political conditions deteriorated, the survival of such an institution became uncertain."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "BAKHTIYAR KHALJI AND THE CONQUEST OF BIHAR",
+      "type": "historical",
+      "content": [
+        "The military expansion of the Ghurid-era Turkish forces into Bihar and Bengal is associated with Muhammad Bakhtiyar Khalji. Later Tibetan and Indo-Persian traditions connect his campaigns with the destruction of Buddhist monastic centres.",
+        "The exact chronology of individual attacks and the degree to which Nalanda was destroyed in a single event remain subjects of historical investigation."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "THE 1193 DATE",
+      "type": "historiography",
+      "content": [
+        "The often-repeated date 1193 CE should be treated as a specific historical claim rather than as an unquestionable fact. Students should ask which source gives the date, when that source was written, and whether archaeological evidence independently confirms the sequence.",
+        "The broader historical conclusion—that the great Buddhist scholastic institutions of Bihar declined amid the political and military transformations of the late twelfth and early thirteenth centuries—is much more secure than any single-day destruction narrative."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "WHAT WAS LOST?",
+      "type": "historical",
+      "content": [
+        "The destruction or abandonment of a major centre of learning has consequences that extend beyond buildings. Manuscripts can disappear, scholarly lineages can break, teachers can disperse and intellectual traditions can migrate.",
+        "The Nalanda story therefore belongs in a history of civilisational loss as well as in a history of education."
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "THE LESSON FOR BHARAT",
+      "type": "lesson",
+      "content": [
+        "A civilisation's intellectual institutions require protection, patronage and continuity. Political instability can destroy institutions even when their intellectual traditions are powerful.",
+        "Nalanda should therefore be remembered not only as a tragedy of destruction but also as evidence of the extraordinary scholarly civilisation that Bharat created."
+      ],
+      "lesson": "Protect knowledge institutions. Political freedom, cultural confidence and intellectual continuity reinforce one another."
+    }
+  ],
+  "researchQuestions": [
+    "What are the earliest sources connecting Bakhtiyar Khalji to Buddhist monastic destruction?",
+    "What can archaeology establish independently of later chronicles?",
+    "How did Buddhist scholarly traditions survive outside Bihar after the decline of Nalanda?"
+  ],
+  "scholarlyCautions": [
+    "Do not state 1193 CE as an independently proven exact date without identifying the source.",
+    "Do not claim that every manuscript at Nalanda was destroyed in one fire without evidence.",
+    "Distinguish Nalanda from Vikramashila, Odantapuri and other Bihar institutions."
+  ],
+  "sources": [
+    {
+      "title": "Nalanda Mahavihara",
+      "publisher": "UNESCO World Heritage Centre",
+      "type": "institutional/archaeological reference",
+      "url": "https://whc.unesco.org/en/list/1502/"
+    },
+    {
+      "title": "The Last Hindu Emperor",
+      "author": "Cynthia Talbot",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    },
+    {
+      "title": "The Delhi Sultanate",
+      "author": "Peter Jackson",
+      "publisher": "Cambridge University Press",
+      "type": "modern scholarship"
+    }
+  ],
+  "bibliography": [
+    "UNESCO, Nalanda Mahavihara archaeological and heritage documentation.",
+    "Peter Jackson, The Delhi Sultanate."
+  ]
+}
