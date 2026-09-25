@@ -249,31 +249,55 @@ function createArticleCard(article) {
 
 async function openArticle(articleId) {
 
-  console.log("=================================");
-  console.log("SOMNATH / ARTICLE CLICK");
-  console.log("Article ID:", articleId);
-  console.log("Current URL:", window.location.href);
-
   if (!articleId) {
     console.error("No article ID supplied.");
     return;
   }
 
-  /* ---------------------------------------------------------
-     OPEN THE READER IMMEDIATELY
-     --------------------------------------------------------- */
+  const articleIndex = state.articles.find(
+    article => article.id === articleId
+  ) || {
+    id: articleId,
+    title: articleId,
+    subtitle: "",
+    era: "medieval",
+    period: ""
+  };
 
-  if (!reader) {
-    console.error("ERROR: #reader element was NOT found in HTML.");
-    return;
+  try {
+    console.log("Opening article:", articleId);
+
+    showReaderLoading(articleIndex);
+
+    const articlePath =
+      `history/articles/${encodeURIComponent(articleId)}/article.json`;
+
+    console.log("Fetching article:", articlePath);
+
+    const response = await fetch(articlePath, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Unable to load ${articlePath} (${response.status})`
+      );
+    }
+
+    const article = await response.json();
+
+    console.log("Article loaded:", article);
+
+    renderArticle(article);
+
+  } catch (error) {
+    console.error("Article loading error:", error);
+
+    showReaderError(
+      "This research article could not be loaded."
+    );
   }
-
-  reader.classList.add("open");
-  reader.setAttribute("aria-hidden", "false");
-
-  document.body.classList.add("reader-open");
-
-  console.log("Reader opened.");
+}
 
   /* ---------------------------------------------------------
      SHOW LOADING MESSAGE
