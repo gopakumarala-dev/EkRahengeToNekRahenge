@@ -46,6 +46,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadArticleIndex();
 });
 
+console.log("EK RAHENGE HISTORY.JS LOADED");
+
+document.addEventListener("click", function (event) {
+    const somnathCard = event.target.closest('[data-article-id="somnath"]');
+
+    if (!somnathCard) return;
+
+    console.log("SOMNATH CARD CLICKED");
+
+    openArticle("somnath");
+});
 
 /* =========================================================
    LOAD ARTICLE INDEX
