@@ -68,39 +68,49 @@
   },
 
   "images": [
-    {
-      "id": "somnath-present",
-      "src": "images/somnath/somnath-temple-present.jpg",
-      "alt": "Somnath Temple on the coast of Gujarat",
-      "caption": "The present Somnath Temple at Prabhas Patan, Gujarat.",
-      "credit": "Use a properly licensed or government-sourced image.",
-      "position": "hero"
-    },
-    {
-      "id": "somnath-historical",
-      "src": "images/somnath/somnath-historical-ruins.jpg",
-      "alt": "Historical view of the Somnath site",
-      "caption": "A historical view associated with the Somnath site before the modern reconstruction.",
-      "credit": "Use a public-domain or appropriately licensed archival image.",
-      "position": "section"
-    },
-    {
-      "id": "mahmud-ghazni",
-      "src": "images/somnath/mahmud-of-ghazni.jpg",
-      "alt": "Artistic representation of Mahmud of Ghazni",
-      "caption": "Mahmud of Ghazni, whose 1025–1026 campaign against Somnath became one of the most remembered episodes of medieval Indian history.",
-      "credit": "Use an appropriately licensed historical illustration.",
-      "position": "section"
-    },
-    {
-      "id": "somnath-reconstruction",
-      "src": "images/somnath/somnath-reconstruction.jpg",
-      "alt": "Modern reconstruction of Somnath Temple",
-      "caption": "The reconstructed Somnath Temple, completed in the early years after Indian Independence.",
-      "credit": "Use a government or appropriately licensed image.",
-      "position": "section"
-    }
-  ],
+  {
+    "id": "somnath-front",
+    "src": "images/somnath-temple-front-view.jpg",
+    "alt": "Somnath Temple facing the Arabian Sea",
+    "caption": "The present Somnath Temple at Prabhas Patan, Gujarat, standing beside the Arabian Sea.",
+    "position": "hero"
+  },
+  {
+    "id": "somnath-aerial",
+    "src": "images/somnath-temple-aerial-view.jpg",
+    "alt": "Aerial view of Somnath Temple and the Arabian Sea",
+    "caption": "An aerial view of the Somnath Temple complex and its setting on the western coast of Gujarat.",
+    "position": "section"
+  },
+  {
+    "id": "somnath-coast-aerial",
+    "src": "images/somnath-temple-coast-aerial.jpg",
+    "alt": "Aerial view of Somnath Temple beside the coast",
+    "caption": "Somnath viewed from above, showing the temple, surrounding gardens and the Arabian Sea.",
+    "position": "section"
+  },
+  {
+    "id": "somnath-sunset",
+    "src": "images/somnath-temple-sunset-aerial.jpg",
+    "alt": "Somnath Temple at sunset",
+    "caption": "Somnath Temple overlooking the Arabian Sea at sunset.",
+    "position": "section"
+  },
+  {
+    "id": "somnath-sea",
+    "src": "images/somnath-temple-by-the-arabian-sea.jpg",
+    "alt": "Somnath Temple beside the Arabian Sea",
+    "caption": "The Somnath Temple rising beside the Arabian Sea.",
+    "position": "section"
+  },
+  {
+    "id": "somnath-ruins",
+    "src": "images/somnath-historic-ruins-archival.jpg",
+    "alt": "Archival photograph associated with the historic Somnath site",
+    "caption": "An archival photograph associated with the historic Somnath site.",
+    "position": "historical"
+  }
+],
 
   "sections": [
 
