@@ -243,45 +243,84 @@ function createArticleCard(article) {
   `;
 }
 
-
 /* =========================================================
    OPEN ARTICLE
    ========================================================= */
 
 async function openArticle(articleId) {
 
+  console.log("=================================");
+  console.log("SOMNATH / ARTICLE CLICK");
+  console.log("Article ID:", articleId);
+  console.log("Current URL:", window.location.href);
+
   if (!articleId) {
     console.error("No article ID supplied.");
     return;
   }
 
-  /*
-     The article index is useful for the normal History grid,
-     but Dark Chapters are static HTML cards and must not depend
-     on the index being loaded successfully.
-  */
+  /* ---------------------------------------------------------
+     OPEN THE READER IMMEDIATELY
+     --------------------------------------------------------- */
 
-  const articleIndex = state.articles.find(
-    article => article.id === articleId
-  ) || {
-    id: articleId,
-    title: articleId,
-    subtitle: "",
-    era: "medieval",
-    period: ""
-  };
+  if (!reader) {
+    console.error("ERROR: #reader element was NOT found in HTML.");
+    return;
+  }
+
+  reader.classList.add("open");
+  reader.setAttribute("aria-hidden", "false");
+
+  document.body.classList.add("reader-open");
+
+  console.log("Reader opened.");
+
+  /* ---------------------------------------------------------
+     SHOW LOADING MESSAGE
+     --------------------------------------------------------- */
+
+  if (readerTitle) {
+    readerTitle.textContent =
+      articleId === "somnath"
+        ? "SOMNATH"
+        : articleId;
+  }
+
+  if (readerDeck) {
+    readerDeck.textContent =
+      "Loading research article…";
+  }
+
+  if (readerContent) {
+    readerContent.innerHTML = `
+      <div class="reader-loading">
+        <div class="loader"></div>
+        <p>Loading research article…</p>
+      </div>
+    `;
+  }
+
+  if (readerToc) {
+    readerToc.innerHTML = "";
+  }
+
+  /* ---------------------------------------------------------
+     EXPLICIT HISTORY ARTICLE PATH
+     --------------------------------------------------------- */
+
+  const articlePath =
+    `/history/articles/${encodeURIComponent(articleId)}/article.json`;
+
+  console.log("Loading article from:");
+  console.log(articlePath);
 
   try {
-    console.log("Opening article:", articleId);
-
-    showReaderLoading(articleIndex);
-
-    const articlePath =
-      `articles/${encodeURIComponent(articleId)}/article.json`;
 
     const response = await fetch(articlePath, {
       cache: "no-store"
     });
+
+    console.log("HTTP status:", response.status);
 
     if (!response.ok) {
       throw new Error(
@@ -291,18 +330,38 @@ async function openArticle(articleId) {
 
     const article = await response.json();
 
+    console.log("ARTICLE LOADED SUCCESSFULLY:");
+    console.log(article);
+
     renderArticle(article);
 
   } catch (error) {
-    console.error("Article loading error:", error);
 
-    showReaderError(
-      "This research article could not be loaded."
+    console.error(
+      "ARTICLE LOADING ERROR:",
+      error
     );
+
+    if (readerContent) {
+      readerContent.innerHTML = `
+        <div class="reader-error">
+          <h3>ARTICLE LOADING ERROR</h3>
+          <p>
+            The Somnath article could not be loaded.
+          </p>
+          <p>
+            <small>${escapeHtml(error.message)}</small>
+          </p>
+        </div>
+      `;
+    }
   }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
-
-
 /* =========================================================
    READER LOADING
    ========================================================= */
