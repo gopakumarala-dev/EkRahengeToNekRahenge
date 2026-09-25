@@ -1,21 +1,62 @@
 /* =========================================================
    EK RAHENGE TO NEK RAHENGE
    HISTORY — DYNAMIC ARTICLE ENGINE
+   VERSION 2 — COMPLETE
    ========================================================= */
 
-const ARTICLE_INDEX = "data/articles.json";
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+/*
+   Your repository structure is:
+
+   history/
+      history.js
+      articles/
+         somnath/
+            article.json
+         mahmud-of-ghazni/
+            article.json
+         hindu-kush-frontier/
+            article.json
+         prithviraj-chauhan/
+            article.json
+         captivity-enslavement/
+            article.json
+         nalanda/
+            article.json
+         temple-destruction/
+            article.json
+         invasions-from-the-north-west/
+            article.json
+
+   Therefore the article JSON base path is:
+*/
+
+const ARTICLE_BASE_PATH = "./articles";
+
+/*
+   Article index.
+*/
+const ARTICLE_INDEX = "./data/articles.json";
+
+
+/* =========================================================
+   APPLICATION STATE
+   ========================================================= */
 
 const state = {
-  articles: [],
-  activeEra: "all",
-  activeCategory: "all",
-  searchTerm: "",
-  currentArticle: null
+    articles: [],
+    activeEra: "all",
+    activeCategory: "all",
+    searchTerm: ""
 };
 
 
 /* =========================================================
-   DOM REFERENCES
+   DOM ELEMENTS
    ========================================================= */
 
 let cardsContainer;
@@ -29,120 +70,120 @@ let readerTitle;
 let readerDeck;
 let readerToc;
 let readerContent;
-let readerClose;
 
-let modal;
+let readerClose;
 
 
 /* =========================================================
    INITIALISE
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  cacheDOM();
+    console.log("====================================");
+    console.log("EK RAHENGE HISTORY.JS STARTED");
+    console.log("====================================");
 
-  console.log("EK RAHENGE HISTORY.JS LOADED");
+    /*
+       Get DOM elements AFTER the page has loaded.
+    */
 
-  setupSearch();
-  setupEraFilters();
-  setupCategoryFilter();
-  setupKeyboardControls();
-  setupReaderCloseButton();
-  setupArticleClickHandler();
+    cardsContainer = document.getElementById("cards");
+    searchInput = document.getElementById("searchInput");
+    categoryFilter = document.getElementById("categoryFilter");
+    eraButtons = document.querySelectorAll("[data-era]");
 
-  loadArticleIndex();
+    reader = document.getElementById("reader");
+    readerImage = document.getElementById("readerImage");
+    readerTitle = document.getElementById("readerTitle");
+    readerDeck = document.getElementById("readerDeck");
+    readerToc = document.getElementById("readerToc");
+    readerContent = document.getElementById("readerContent");
+
+    /*
+       Try several common close-button selectors.
+    */
+
+    readerClose =
+        document.getElementById("readerClose") ||
+        document.querySelector("[data-reader-close]") ||
+        document.querySelector(".reader-close");
+
+    console.log("cards:", cardsContainer);
+    console.log("reader:", reader);
+    console.log("readerContent:", readerContent);
+
+
+    /*
+       Setup controls.
+    */
+
+    setupSearch();
+    setupEraFilters();
+    setupCategoryFilter();
+    setupKeyboardControls();
+    setupReaderCloseButton();
+
+
+    /*
+       IMPORTANT:
+       There is ONLY ONE article click handler.
+       Do NOT create another Somnath-specific listener.
+    */
+
+    setupArticleClickHandler();
+
+
+    /*
+       Load article index.
+    */
+
+    loadArticleIndex();
 
 });
-
-
-/* =========================================================
-   CACHE DOM
-   ========================================================= */
-
-function cacheDOM() {
-
-  cardsContainer = document.getElementById("cards");
-
-  searchInput = document.getElementById("searchInput");
-
-  categoryFilter = document.getElementById("categoryFilter");
-
-  eraButtons = document.querySelectorAll("[data-era]");
-
-  reader = document.getElementById("reader");
-
-  readerImage = document.getElementById("readerImage");
-
-  readerTitle = document.getElementById("readerTitle");
-
-  readerDeck = document.getElementById("readerDeck");
-
-  readerToc = document.getElementById("readerToc");
-
-  readerContent = document.getElementById("readerContent");
-
-  readerClose = document.querySelector(
-    "[data-reader-close], #readerClose, .reader-close"
-  );
-
-  modal = document.getElementById("modal");
-}
 
 
 /* =========================================================
    ARTICLE CLICK HANDLER
    ========================================================= */
 
-/*
-   ONE global click handler only.
-
-   This is important.
-
-   Previous versions had multiple click handlers, including a
-   separate Somnath handler. That is unnecessary and can create
-   conflicts.
-
-   Every article card should have:
-
-       data-article-id="somnath"
-
-   or
-
-       data-article-id="mahmud-of-ghazni"
-
-   etc.
-*/
-
 function setupArticleClickHandler() {
 
-  document.addEventListener("click", event => {
+    document.addEventListener("click", function (event) {
 
-    const card = event.target.closest("[data-article-id]");
+        /*
+           Look for any element/card carrying:
 
-    if (!card) {
-      return;
-    }
+           data-article-id="somnath"
 
-    const articleId = card.getAttribute("data-article-id");
+           or
 
-    if (!articleId) {
-      return;
-    }
+           data-article-id="mahmud-of-ghazni"
+        */
 
-    /*
-       If the click is already on a normal hyperlink, allow the
-       hyperlink unless it is explicitly an article card.
-    */
+        const card = event.target.closest("[data-article-id]");
 
-    event.preventDefault();
-    event.stopPropagation();
+        if (!card) {
+            return;
+        }
 
-    console.log("ARTICLE CARD CLICKED:", articleId);
+        const articleId = card.getAttribute("data-article-id");
 
-    openArticle(articleId);
+        if (!articleId) {
+            return;
+        }
 
-  });
+        console.log("====================================");
+        console.log("ARTICLE CARD CLICKED");
+        console.log("ARTICLE ID:", articleId);
+        console.log("====================================");
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        openArticle(articleId);
+
+    });
 
 }
 
@@ -153,73 +194,72 @@ function setupArticleClickHandler() {
 
 async function loadArticleIndex() {
 
-  try {
+    try {
 
-    console.log("Loading article index:", ARTICLE_INDEX);
+        console.log("Loading article index:");
+        console.log(ARTICLE_INDEX);
 
-    const response = await fetch(
-      ARTICLE_INDEX,
-      {
-        cache: "no-store"
-      }
-    );
+        const response = await fetch(
+            ARTICLE_INDEX + "?v=" + Date.now(),
+            {
+                cache: "no-store"
+            }
+        );
 
-    if (!response.ok) {
+        if (!response.ok) {
 
-      throw new Error(
-        `Unable to load ${ARTICLE_INDEX} (${response.status})`
-      );
+            throw new Error(
+                "Article index HTTP error: " +
+                response.status
+            );
 
-    }
+        }
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (Array.isArray(data)) {
+        if (Array.isArray(data)) {
 
-      state.articles = data;
+            state.articles = data;
 
-    } else if (Array.isArray(data.articles)) {
+        } else if (Array.isArray(data.articles)) {
 
-      state.articles = data.articles;
+            state.articles = data.articles;
 
-    } else {
+        } else {
 
-      state.articles = [];
+            state.articles = [];
 
-    }
+        }
 
-    console.log(
-      "History articles loaded:",
-      state.articles.length
-    );
+        console.log(
+            "Article index loaded:",
+            state.articles.length,
+            "articles"
+        );
 
-    renderCards();
-
-  }
-
-  catch (error) {
-
-    console.error(
-      "History index error:",
-      error
-    );
-
-    /*
-       IMPORTANT:
-
-       Static cards can still open even if the index fails.
-       Therefore we do NOT destroy the existing cards.
-    */
-
-    if (cardsContainer) {
-
-      console.warn(
-        "Article index unavailable. Existing static cards remain usable."
-      );
+        renderCards();
 
     }
 
-  }
+    catch (error) {
+
+        console.error(
+            "ARTICLE INDEX ERROR:",
+            error
+        );
+
+        /*
+           IMPORTANT:
+           We do NOT stop the page from working.
+
+           Static cards such as Somnath can still open directly.
+        */
+
+        state.articles = [];
+
+        renderCards();
+
+    }
 
 }
 
@@ -230,98 +270,101 @@ async function loadArticleIndex() {
 
 function renderCards() {
 
-  if (!cardsContainer) {
-    return;
-  }
+    if (!cardsContainer) {
 
-  /*
-     If the page uses static cards instead of dynamically
-     generated cards, don't erase them when there is no index.
-  */
+        console.warn(
+            "#cards was not found. Static cards will remain untouched."
+        );
 
-  if (!state.articles.length) {
+        return;
 
-    console.warn(
-      "No articles found in article index."
-    );
-
-    return;
-
-  }
-
-
-  const filteredArticles = state.articles.filter(article => {
-
-    /*
-       Dark Chapters can have their own static cards.
-       Do not duplicate them in the normal History grid.
-    */
-
-    if (article.section === "dark-chapters") {
-      return false;
     }
 
 
-    const matchesEra =
-      state.activeEra === "all" ||
-      article.era === state.activeEra;
+    /*
+       Filter articles.
+    */
+
+    const filteredArticles = state.articles.filter(function (article) {
+
+        /*
+           Dark Chapters are displayed separately.
+        */
+
+        if (
+            article.section === "dark-chapters" ||
+            article.category === "dark-chapters"
+        ) {
+
+            return false;
+
+        }
 
 
-    const matchesCategory =
-      state.activeCategory === "all" ||
-      article.category === state.activeCategory ||
-      article.section === state.activeCategory;
+        const matchesEra =
+            state.activeEra === "all" ||
+            article.era === state.activeEra;
 
 
-    const searchableText = [
-
-      article.id,
-      article.title,
-      article.subtitle,
-      article.period,
-      article.category,
-      article.section,
-      article.era
-
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
+        const matchesCategory =
+            state.activeCategory === "all" ||
+            article.category === state.activeCategory ||
+            article.section === state.activeCategory;
 
 
-    const matchesSearch =
-      !state.searchTerm ||
-      searchableText.includes(
-        state.searchTerm.toLowerCase()
-      );
+        const searchableText = [
+
+            article.title,
+            article.subtitle,
+            article.period,
+            article.category,
+            article.era
+
+        ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
 
-    return (
-      matchesEra &&
-      matchesCategory &&
-      matchesSearch
-    );
-
-  });
+        const matchesSearch =
+            !state.searchTerm ||
+            searchableText.includes(state.searchTerm);
 
 
-  if (!filteredArticles.length) {
+        return (
+            matchesEra &&
+            matchesCategory &&
+            matchesSearch
+        );
 
-    cardsContainer.innerHTML = `
-      <div class="empty-state">
-        <p>No historical articles match your search.</p>
-      </div>
-    `;
-
-    return;
-
-  }
+    });
 
 
-  cardsContainer.innerHTML =
-    filteredArticles
-      .map(createArticleCard)
-      .join("");
+    /*
+       No results.
+    */
+
+    if (!filteredArticles.length) {
+
+        cardsContainer.innerHTML = `
+            <div class="empty-state">
+                <p>No historical articles match your search.</p>
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    /*
+       Render.
+    */
+
+    cardsContainer.innerHTML =
+        filteredArticles
+            .map(createArticleCard)
+            .join("");
 
 }
 
@@ -332,60 +375,59 @@ function renderCards() {
 
 function createArticleCard(article) {
 
-  const image = getArticleImage(article);
+    const image = getArticleImage(article);
 
-  return `
 
-    <article
-      class="article-card"
-      data-article-id="${escapeHtml(article.id)}"
-      tabindex="0"
-      role="button"
-      aria-label="Read ${escapeHtml(article.title || article.id)}"
-    >
-
-      <div class="article-card-image">
-
-        <img
-          src="${escapeHtml(image)}"
-          alt="${escapeHtml(article.title || "")}"
-          loading="lazy"
-          onerror="
-            this.style.display='none';
-            this.parentElement.classList.add('image-missing');
-          "
+    return `
+        <article
+            class="article-card"
+            data-article-id="${escapeHtml(article.id)}"
+            tabindex="0"
+            role="button"
+            aria-label="Read ${escapeHtml(article.title || "")}"
         >
 
-        <span class="article-card-era">
-          ${escapeHtml(formatEra(article.era))}
-        </span>
+            <div class="article-card-image">
 
-      </div>
+                <img
+                    src="${escapeHtml(image)}"
+                    alt="${escapeHtml(article.title || "")}"
+                    loading="lazy"
+                    onerror="
+                        this.style.display='none';
+                        this.parentElement.classList.add('image-missing');
+                    "
+                >
+
+                <span class="article-card-era">
+                    ${escapeHtml(formatEra(article.era))}
+                </span>
+
+            </div>
 
 
-      <div class="article-card-body">
+            <div class="article-card-body">
 
-        <div class="article-card-period">
-          ${escapeHtml(article.period || "")}
-        </div>
+                <div class="article-card-period">
+                    ${escapeHtml(article.period || "")}
+                </div>
 
-        <h3>
-          ${escapeHtml(article.title || "")}
-        </h3>
+                <h3>
+                    ${escapeHtml(article.title || "")}
+                </h3>
 
-        <p>
-          ${escapeHtml(article.subtitle || "")}
-        </p>
+                <p>
+                    ${escapeHtml(article.subtitle || "")}
+                </p>
 
-        <span class="article-card-read">
-          READ RESEARCH ARTICLE →
-        </span>
+                <span class="article-card-read">
+                    READ RESEARCH ARTICLE →
+                </span>
 
-      </div>
+            </div>
 
-    </article>
-
-  `;
+        </article>
+    `;
 
 }
 
@@ -396,151 +438,146 @@ function createArticleCard(article) {
 
 async function openArticle(articleId) {
 
-  if (!articleId) {
+    if (!articleId) {
 
-    console.error(
-      "openArticle(): No article ID supplied."
-    );
+        console.error(
+            "openArticle() called without article ID"
+        );
 
-    return;
-
-  }
-
-
-  console.log(
-    "Opening article:",
-    articleId
-  );
-
-
-  /*
-     Find article information in the index if available.
-  */
-
-  const indexedArticle =
-    state.articles.find(
-      article =>
-        String(article.id).toLowerCase() ===
-        String(articleId).toLowerCase()
-    );
-
-
-  const loadingArticle =
-    indexedArticle ||
-    {
-      id: articleId,
-      title: formatArticleTitle(articleId),
-      subtitle: "",
-      era: "medieval",
-      period: ""
-    };
-
-
-  /*
-     Show reader immediately.
-  */
-
-  showReaderLoading(loadingArticle);
-
-
-  /*
-     IMPORTANT PATH
-
-     Your repository structure is:
-
-       history/
-         articles/
-           somnath/
-             article.json
-
-     Therefore, from history.html/history.js:
-
-       articles/somnath/article.json
-
-     is correct.
-  */
-
-  const articlePath =
-    `articles/${encodeURIComponent(articleId)}/article.json`;
-
-
-  console.log(
-    "Fetching article:",
-    articlePath
-  );
-
-
-  try {
-
-    const response = await fetch(
-      articlePath,
-      {
-        cache: "no-store"
-      }
-    );
-
-
-    if (!response.ok) {
-
-      throw new Error(
-        `HTTP ${response.status} while loading ${articlePath}`
-      );
+        return;
 
     }
 
 
-    const article = await response.json();
+    console.log("------------------------------------");
+    console.log("OPENING ARTICLE");
+    console.log("ID:", articleId);
+    console.log("------------------------------------");
 
 
-    if (!article || typeof article !== "object") {
+    /*
+       Find article information in index if available.
+    */
 
-      throw new Error(
-        "Article JSON is empty or invalid."
-      );
+    let articleIndex =
+        state.articles.find(function (article) {
+            return article.id === articleId;
+        });
+
+
+    /*
+       If the article isn't in the index, create a basic
+       temporary object.
+
+       This is especially important for Dark Chapters.
+    */
+
+    if (!articleIndex) {
+
+        articleIndex = {
+            id: articleId,
+            title: formatTitle(articleId),
+            subtitle: "",
+            era: "medieval",
+            period: ""
+        };
 
     }
 
 
-    state.currentArticle = article;
+    /*
+       Open reader immediately.
+    */
+
+    showReaderLoading(articleIndex);
 
 
-    console.log(
-      "Article loaded successfully:",
-      article.id
-    );
+    /*
+       THIS IS THE IMPORTANT PATH.
+
+       For Somnath:
+
+       ./articles/somnath/article.json
+
+       Since history.js is inside /history/,
+       this resolves to:
+
+       /history/articles/somnath/article.json
+    */
+
+    const articlePath =
+        ARTICLE_BASE_PATH +
+        "/" +
+        encodeURIComponent(articleId) +
+        "/article.json";
 
 
-    renderArticle(article);
-
-  }
-
-  catch (error) {
-
-    console.error(
-      "ARTICLE LOAD ERROR:",
-      error
-    );
+    console.log("FETCHING ARTICLE:");
+    console.log(articlePath);
 
 
-    showReaderError(
-      `
-        <h2>Unable to open this article</h2>
+    try {
 
-        <p>
-          The article file could not be loaded.
-        </p>
+        const response = await fetch(
+            articlePath + "?v=" + Date.now(),
+            {
+                method: "GET",
+                cache: "no-store",
+                headers: {
+                    "Accept": "application/json"
+                }
+            }
+        );
 
-        <p class="reader-error-path">
-          ${escapeHtml(articlePath)}
-        </p>
 
-        <p>
-          Please check that the article exists at this exact path.
-        </p>
-      `
-    );
+        console.log(
+            "ARTICLE RESPONSE:",
+            response.status,
+            response.statusText
+        );
 
-  }
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status +
+                " while loading " +
+                articlePath
+            );
+
+        }
+
+
+        const article = await response.json();
+
+
+        console.log(
+            "ARTICLE JSON SUCCESS:",
+            article.id
+        );
+
+
+        renderArticle(article);
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "ARTICLE LOADING FAILED:",
+            error
+        );
+
+
+        showReaderError(
+            "Unable to load this research article.",
+            error,
+            articlePath
+        );
+
+    }
 
 }
 
@@ -551,81 +588,83 @@ async function openArticle(articleId) {
 
 function showReaderLoading(article) {
 
-  if (!reader) {
+    if (!reader) {
 
-    console.error(
-      "Reader element #reader was not found."
-    );
+        console.error(
+            "CRITICAL: #reader does not exist in HTML."
+        );
 
-    return;
+        return;
 
-  }
-
-
-  reader.classList.add("open");
-
-  document.body.classList.add("reader-open");
+    }
 
 
-  if (readerTitle) {
+    reader.classList.add("open");
 
-    readerTitle.textContent =
-      article.title || "";
-
-  }
+    document.body.classList.add("reader-open");
 
 
-  if (readerDeck) {
+    if (readerTitle) {
 
-    readerDeck.textContent =
-      article.subtitle || "";
+        readerTitle.textContent =
+            article.title || "";
 
-  }
-
-
-  if (readerImage) {
-
-    const image =
-      getArticleImage(article);
+    }
 
 
-    readerImage.style.display = "";
+    if (readerDeck) {
 
-    readerImage.src = image;
+        readerDeck.textContent =
+            article.subtitle || "";
 
-    readerImage.alt =
-      article.title || "";
-
-  }
+    }
 
 
-  if (readerToc) {
+    if (readerImage) {
 
-    readerToc.innerHTML = "";
+        const image =
+            getArticleImage(article);
 
-  }
+        readerImage.style.display = "";
 
+        readerImage.src = image;
 
-  if (readerContent) {
+        readerImage.alt =
+            article.title || "";
 
-    readerContent.innerHTML = `
-
-      <div class="reader-loading">
-
-        <div class="loader"></div>
-
-        <p>
-          Loading research article…
-        </p>
-
-      </div>
-
-    `;
-
-  }
+    }
 
 
-  document.body.style.overflow = "hidden";
+    if (readerToc) {
+
+        readerToc.innerHTML = "";
+
+    }
+
+
+    if (readerContent) {
+
+        readerContent.innerHTML = `
+
+            <div class="reader-loading">
+
+                <div class="loader"></div>
+
+                <p>
+                    Loading research article…
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
@@ -636,105 +675,93 @@ function showReaderLoading(article) {
 
 function renderArticle(article) {
 
-  if (!reader) {
+    if (!reader) {
 
-    console.error(
-      "#reader element not found."
-    );
+        console.error(
+            "#reader does not exist."
+        );
 
-    return;
+        return;
 
-  }
-
-
-  reader.classList.add("open");
-
-  document.body.classList.add("reader-open");
-
-  document.body.style.overflow = "hidden";
+    }
 
 
-  /*
-     TITLE
-  */
+    reader.classList.add("open");
 
-  if (readerTitle) {
-
-    readerTitle.textContent =
-      article.title || "";
-
-  }
+    document.body.classList.add("reader-open");
 
 
-  /*
-     SUBTITLE / DECK
-  */
+    /*
+       TITLE
+    */
 
-  if (readerDeck) {
+    if (readerTitle) {
 
-    readerDeck.textContent =
-      article.subtitle || "";
+        readerTitle.textContent =
+            article.title || "";
 
-  }
-
-
-  /*
-     HERO IMAGE
-  */
-
-  if (readerImage) {
-
-    const image =
-      getArticleImage(article);
+    }
 
 
-    readerImage.style.display = "";
+    /*
+       SUBTITLE
+    */
 
-    readerImage.src = image;
+    if (readerDeck) {
 
-    readerImage.alt =
-      article.title || "";
+        readerDeck.textContent =
+            article.subtitle || "";
 
-
-    readerImage.onerror = () => {
-
-      readerImage.style.display =
-        "none";
-
-    };
-
-  }
+    }
 
 
-  /*
-     TABLE OF CONTENTS
-  */
+    /*
+       IMAGE
+    */
 
-  buildTableOfContents(article);
+    if (readerImage) {
+
+        const image =
+            getArticleImage(article);
+
+        readerImage.style.display = "";
+
+        readerImage.src = image;
+
+        readerImage.alt =
+            article.title || "";
+
+        readerImage.onerror = function () {
+
+            this.style.display = "none";
+
+        };
+
+    }
 
 
-  /*
-     MAIN ARTICLE CONTENT
-  */
+    /*
+       TABLE OF CONTENTS
+    */
 
-  buildArticleContent(article);
-
-
-  /*
-     Start reader at the top.
-  */
-
-  if (reader) {
-
-    reader.scrollTop = 0;
-
-  }
+    buildTableOfContents(article);
 
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+    /*
+       ARTICLE BODY
+    */
+
+    buildArticleContent(article);
+
+
+    /*
+       Bring reader to top.
+    */
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
@@ -745,79 +772,67 @@ function renderArticle(article) {
 
 function buildTableOfContents(article) {
 
-  if (!readerToc) {
-    return;
-  }
+    if (!readerToc) {
 
-
-  readerToc.innerHTML = "";
-
-
-  if (
-    !Array.isArray(article.sections) ||
-    !article.sections.length
-  ) {
-
-    return;
-
-  }
-
-
-  const fragment =
-    document.createDocumentFragment();
-
-
-  article.sections.forEach(
-    (section, index) => {
-
-      const id =
-        section.id ||
-        `section-${index + 1}`;
-
-
-      const button =
-        document.createElement("button");
-
-
-      button.type = "button";
-
-      button.className =
-        "reader-toc-item";
-
-
-      button.textContent =
-        section.title ||
-        `Section ${index + 1}`;
-
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          const target =
-            document.getElementById(id);
-
-
-          if (target) {
-
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-
-          }
-
-        }
-      );
-
-
-      fragment.appendChild(button);
+        return;
 
     }
-  );
 
 
-  readerToc.appendChild(fragment);
+    readerToc.innerHTML = "";
+
+
+    if (
+        !Array.isArray(article.sections) ||
+        !article.sections.length
+    ) {
+
+        return;
+
+    }
+
+
+    article.sections.forEach(function (section, index) {
+
+        const button =
+            document.createElement("button");
+
+        button.type = "button";
+
+        button.className =
+            "reader-toc-item";
+
+        button.textContent =
+            section.title ||
+            ("Section " + (index + 1));
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const target =
+                    document.getElementById(
+                        "article-section-" + index
+                    );
+
+
+                if (target) {
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+
+        readerToc.appendChild(button);
+
+    });
 
 }
 
@@ -828,498 +843,485 @@ function buildTableOfContents(article) {
 
 function buildArticleContent(article) {
 
-  if (!readerContent) {
-    return;
-  }
+    if (!readerContent) {
+
+        console.error(
+            "#readerContent does not exist."
+        );
+
+        return;
+
+    }
 
 
-  let html = "";
+    let html = "";
 
 
-  /*
-     ABSTRACT
-  */
+    /*
+       ABSTRACT
+    */
 
-  if (article.abstract) {
-
-    html += `
-
-      <section class="reader-abstract">
-
-        <p>
-          ${formatText(article.abstract)}
-        </p>
-
-      </section>
-
-    `;
-
-  }
-
-
-  /*
-     SECTIONS
-  */
-
-  if (
-    Array.isArray(article.sections) &&
-    article.sections.length
-  ) {
-
-    article.sections.forEach(
-      (section, index) => {
-
-        const sectionId =
-          section.id ||
-          `section-${index + 1}`;
-
+    if (article.abstract) {
 
         html += `
 
-          <section
-            id="${escapeHtml(sectionId)}"
-            class="reader-section reader-section-${escapeHtml(section.type || "historical")}"
-          >
-
-            <h2>
-              ${escapeHtml(
-                section.title ||
-                `Section ${index + 1}`
-              )}
-            </h2>
-
-        `;
-
-
-        /*
-           Section content can contain multiple
-           paragraphs.
-        */
-
-        if (
-          Array.isArray(section.content)
-        ) {
-
-          section.content.forEach(
-            paragraph => {
-
-              if (!paragraph) {
-                return;
-              }
-
-
-              html += `
+            <div class="article-abstract">
 
                 <p>
-                  ${formatText(paragraph)}
+                    ${formatText(article.abstract)}
                 </p>
 
-              `;
+            </div>
+
+        `;
+
+    }
+
+
+    /*
+       SECTIONS
+    */
+
+    if (
+        Array.isArray(article.sections) &&
+        article.sections.length
+    ) {
+
+
+        article.sections.forEach(
+            function (section, index) {
+
+
+                html += `
+
+                    <section
+                        id="article-section-${index}"
+                        class="reader-section"
+                    >
+
+                        <h2>
+                            ${escapeHtml(
+                                section.title || ""
+                            )}
+                        </h2>
+
+                `;
+
+
+                /*
+                   Section content.
+                */
+
+                if (
+                    Array.isArray(section.content)
+                ) {
+
+
+                    section.content.forEach(
+                        function (paragraph) {
+
+                            html += `
+
+                                <p>
+                                    ${formatText(
+                                        paragraph
+                                    )}
+                                </p>
+
+                            `;
+
+                        }
+                    );
+
+                }
+
+
+                /*
+                   Optional section lesson.
+                */
+
+                if (section.lesson) {
+
+                    html += `
+
+                        <div class="article-lesson">
+
+                            <strong>
+                                HISTORICAL LESSON
+                            </strong>
+
+                            <p>
+                                ${formatText(
+                                    section.lesson
+                                )}
+                            </p>
+
+                        </div>
+
+                    `;
+
+                }
+
+
+                html += `
+                    </section>
+                `;
 
             }
-          );
+        );
 
-        }
+    }
 
 
-        /*
-           Lesson / takeaway
-        */
+    /*
+       CHRONOLOGY
+    */
 
-        if (section.lesson) {
-
-          html += `
-
-            <aside class="reader-lesson">
-
-              <strong>
-                LESSON
-              </strong>
-
-              <p>
-                ${formatText(section.lesson)}
-              </p>
-
-            </aside>
-
-          `;
-
-        }
+    if (
+        Array.isArray(article.chronology) &&
+        article.chronology.length
+    ) {
 
 
         html += `
 
-          </section>
+            <section
+                class="reader-section article-chronology"
+            >
+
+                <h2>
+                    CHRONOLOGY
+                </h2>
 
         `;
 
-      }
-    );
 
-  }
+        article.chronology.forEach(
+            function (item) {
 
+                html += `
 
-  /*
-     CHRONOLOGY
-  */
+                    <div class="chronology-item">
 
-  if (
-    Array.isArray(article.chronology) &&
-    article.chronology.length
-  ) {
+                        <div class="chronology-date">
+                            ${escapeHtml(
+                                item.date || ""
+                            )}
+                        </div>
 
-    html += `
+                        <div class="chronology-event">
+                            ${formatText(
+                                item.event || ""
+                            )}
+                        </div>
 
-      <section
-        id="chronology"
-        class="reader-section reader-chronology"
-      >
+                    </div>
 
-        <h2>
-          CHRONOLOGY
-        </h2>
+                `;
 
-        <div class="chronology-list">
-
-    `;
+            }
+        );
 
 
-    article.chronology.forEach(
-      item => {
+        html += `
+            </section>
+        `;
+
+    }
+
+
+    /*
+       RESEARCH QUESTIONS
+    */
+
+    if (
+        Array.isArray(article.researchQuestions) &&
+        article.researchQuestions.length
+    ) {
+
 
         html += `
 
-          <div class="chronology-item">
+            <section
+                class="reader-section research-questions"
+            >
 
-            <div class="chronology-date">
-              ${escapeHtml(item.date || "")}
-            </div>
+                <h2>
+                    QUESTIONS FOR FURTHER RESEARCH
+                </h2>
 
-            <div class="chronology-event">
-              ${formatText(item.event || "")}
-            </div>
-
-          </div>
-
+                <ol>
         `;
 
-      }
-    );
 
+        article.researchQuestions.forEach(
+            function (question) {
 
-    html += `
+                html += `
 
-        </div>
+                    <li>
+                        ${formatText(question)}
+                    </li>
 
-      </section>
+                `;
 
-    `;
+            }
+        );
 
-  }
-
-
-  /*
-     RESEARCH QUESTIONS
-  */
-
-  if (
-    Array.isArray(article.researchQuestions) &&
-    article.researchQuestions.length
-  ) {
-
-    html += `
-
-      <section
-        id="research-questions"
-        class="reader-section reader-research"
-      >
-
-        <h2>
-          QUESTIONS FOR FURTHER RESEARCH
-        </h2>
-
-        <ol>
-
-    `;
-
-
-    article.researchQuestions.forEach(
-      question => {
 
         html += `
 
-          <li>
-            ${formatText(question)}
-          </li>
+                </ol>
+
+            </section>
 
         `;
 
-      }
-    );
+    }
 
 
-    html += `
+    /*
+       SOURCES
+    */
 
-        </ol>
+    if (
+        Array.isArray(article.sources) &&
+        article.sources.length
+    ) {
 
-      </section>
-
-    `;
-
-  }
-
-
-  /*
-     SOURCES
-  */
-
-  if (
-    Array.isArray(article.sources) &&
-    article.sources.length
-  ) {
-
-    html += `
-
-      <section
-        id="sources"
-        class="reader-section reader-sources"
-      >
-
-        <h2>
-          SOURCES
-        </h2>
-
-        <div class="source-list">
-
-    `;
-
-
-    article.sources.forEach(
-      source => {
-
-        html += buildSourceHTML(source);
-
-      }
-    );
-
-
-    html += `
-
-        </div>
-
-      </section>
-
-    `;
-
-  }
-
-
-  /*
-     BIBLIOGRAPHY
-  */
-
-  if (
-    Array.isArray(article.bibliography) &&
-    article.bibliography.length
-  ) {
-
-    html += `
-
-      <section
-        id="bibliography"
-        class="reader-section reader-bibliography"
-      >
-
-        <h2>
-          BIBLIOGRAPHY
-        </h2>
-
-        <ul>
-
-    `;
-
-
-    article.bibliography.forEach(
-      item => {
 
         html += `
 
-          <li>
-            ${formatText(item)}
-          </li>
+            <section
+                class="reader-section article-sources"
+            >
+
+                <h2>
+                    SOURCES
+                </h2>
+
+                <div class="source-list">
+        `;
+
+
+        article.sources.forEach(
+            function (source) {
+
+                html += `
+
+                    <div class="source-item">
+
+                        <strong>
+                            ${escapeHtml(
+                                source.title || ""
+                            )}
+                        </strong>
+
+                `;
+
+
+                if (source.author) {
+
+                    html += `
+
+                        <span>
+                            ${escapeHtml(
+                                source.author
+                            )}
+                        </span>
+
+                    `;
+
+                }
+
+
+                if (source.publisher) {
+
+                    html += `
+
+                        <span>
+                            ${escapeHtml(
+                                source.publisher
+                            )}
+                        </span>
+
+                    `;
+
+                }
+
+
+                if (source.type) {
+
+                    html += `
+
+                        <small>
+                            ${escapeHtml(
+                                source.type
+                            )}
+                        </small>
+
+                    `;
+
+                }
+
+
+                if (source.url) {
+
+                    html += `
+
+                        <a
+                            href="${escapeHtml(
+                                source.url
+                            )}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SOURCE →
+                        </a>
+
+                    `;
+
+                }
+
+
+                html += `
+
+                    </div>
+
+                `;
+
+            }
+        );
+
+
+        html += `
+
+                </div>
+
+            </section>
 
         `;
 
-      }
-    );
+    }
 
 
-    html += `
+    /*
+       BIBLIOGRAPHY
+    */
 
-        </ul>
-
-      </section>
-
-    `;
-
-  }
-
-
-  /*
-     If absolutely nothing was available.
-  */
-
-  if (!html.trim()) {
-
-    html = `
-
-      <section class="reader-section">
-
-        <p>
-          No article content is available.
-        </p>
-
-      </section>
-
-    `;
-
-  }
+    if (
+        Array.isArray(article.bibliography) &&
+        article.bibliography.length
+    ) {
 
 
-  readerContent.innerHTML =
-    html;
+        html += `
+
+            <section
+                class="reader-section article-bibliography"
+            >
+
+                <h2>
+                    BIBLIOGRAPHY
+                </h2>
+
+                <ul>
+        `;
+
+
+        article.bibliography.forEach(
+            function (item) {
+
+                html += `
+
+                    <li>
+                        ${formatText(item)}
+                    </li>
+
+                `;
+
+            }
+        );
+
+
+        html += `
+
+                </ul>
+
+            </section>
+
+        `;
+
+    }
+
+
+    /*
+       Put everything into reader.
+    */
+
+    readerContent.innerHTML = html;
 
 }
 
 
 /* =========================================================
-   SOURCE HTML
+   SHOW READER ERROR
    ========================================================= */
 
-function buildSourceHTML(source) {
+function showReaderError(message, error, path) {
 
-  if (!source) {
-    return "";
-  }
+    if (!readerContent) {
 
+        return;
 
-  if (typeof source === "string") {
-
-    return `
-
-      <div class="source-item">
-
-        <p>
-          ${formatText(source)}
-        </p>
-
-      </div>
-
-    `;
-
-  }
+    }
 
 
-  const title =
-    source.title || "Source";
+    console.error(
+        "READER ERROR:",
+        error
+    );
 
-
-  const author =
-    source.author || "";
-
-
-  const publisher =
-    source.publisher || "";
-
-
-  const type =
-    source.type || "";
-
-
-  let sourceMeta = [
-
-    author,
-    publisher,
-    type
-
-  ]
-    .filter(Boolean)
-    .join(" · ");
-
-
-  let titleHTML =
-    escapeHtml(title);
-
-
-  if (source.url) {
-
-    titleHTML = `
-
-      <a
-        href="${escapeHtml(source.url)}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ${escapeHtml(title)}
-      </a>
-
-    `;
-
-  }
-
-
-  return `
-
-    <div class="source-item">
-
-      <h3>
-        ${titleHTML}
-      </h3>
-
-      ${
-        sourceMeta
-          ? `<p>${escapeHtml(sourceMeta)}</p>`
-          : ""
-      }
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
-   READER ERROR
-   ========================================================= */
-
-function showReaderError(message) {
-
-  if (!reader) {
-    return;
-  }
-
-
-  reader.classList.add("open");
-
-  document.body.classList.add("reader-open");
-
-  document.body.style.overflow = "hidden";
-
-
-  if (readerContent) {
 
     readerContent.innerHTML = `
 
-      <div class="reader-error">
+        <div class="reader-error">
 
-        ${message}
+            <h2>
+                ARTICLE COULD NOT BE LOADED
+            </h2>
 
-      </div>
+            <p>
+                ${escapeHtml(message)}
+            </p>
+
+            <p>
+                Please check the article file and path.
+            </p>
+
+            <details>
+
+                <summary>
+                    Technical information
+                </summary>
+
+                <pre>${escapeHtml(
+                    String(error)
+                )}</pre>
+
+                <p>
+                    Requested:
+                </p>
+
+                <code>
+                    ${escapeHtml(path || "")}
+                </code>
+
+            </details>
+
+        </div>
 
     `;
-
-  }
 
 }
 
@@ -1328,121 +1330,129 @@ function showReaderError(message) {
    CLOSE READER
    ========================================================= */
 
-function closeReader() {
-
-  if (!reader) {
-    return;
-  }
-
-
-  reader.classList.remove("open");
-
-  document.body.classList.remove(
-    "reader-open"
-  );
-
-  document.body.style.overflow = "";
-
-
-  state.currentArticle = null;
-
-}
-
-
-/* =========================================================
-   READER CLOSE BUTTON
-   ========================================================= */
-
 function setupReaderCloseButton() {
 
-  if (!readerClose) {
-    return;
-  }
+    if (!readerClose) {
 
+        console.warn(
+            "Reader close button not found."
+        );
 
-  readerClose.addEventListener(
-    "click",
-    event => {
-
-      event.preventDefault();
-
-      closeReader();
+        return;
 
     }
-  );
+
+
+    readerClose.addEventListener(
+        "click",
+        closeReader
+    );
 
 }
 
 
 /* =========================================================
-   KEYBOARD CONTROLS
+   CLOSE READER FUNCTION
+   ========================================================= */
+
+function closeReader() {
+
+    if (reader) {
+
+        reader.classList.remove("open");
+
+    }
+
+    document.body.classList.remove(
+        "reader-open"
+    );
+
+}
+
+
+/* =========================================================
+   CLICK BACKDROP TO CLOSE
+   ========================================================= */
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        if (!reader) {
+
+            return;
+
+        }
+
+
+        /*
+           Only close when clicking the reader backdrop
+           itself, not its contents.
+        */
+
+        if (
+            event.target === reader
+        ) {
+
+            closeReader();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESC KEY
    ========================================================= */
 
 function setupKeyboardControls() {
 
-  document.addEventListener(
-    "keydown",
-    event => {
+    document.addEventListener(
+        "keydown",
+        function (event) {
 
-      /*
-         ESC closes reader.
-      */
+            /*
+               ESC closes reader.
+            */
 
-      if (
-        event.key === "Escape" &&
-        reader &&
-        reader.classList.contains("open")
-      ) {
+            if (
+                event.key === "Escape"
+            ) {
 
-        closeReader();
+                closeReader();
 
-        return;
-
-      }
+            }
 
 
-      /*
-         ENTER / SPACE opens focused article card.
-      */
+            /*
+               ENTER opens focused article card.
+            */
 
-      if (
-        event.key === "Enter" ||
-        event.key === " "
-      ) {
+            if (
+                event.key === "Enter" &&
+                document.activeElement &&
+                document.activeElement.matches(
+                    "[data-article-id]"
+                )
+            ) {
 
-        const active =
-          document.activeElement;
-
-
-        if (
-          active &&
-          active.matches &&
-          active.matches(
-            "[data-article-id]"
-          )
-        ) {
-
-          event.preventDefault();
+                const articleId =
+                    document.activeElement.getAttribute(
+                        "data-article-id"
+                    );
 
 
-          const articleId =
-            active.getAttribute(
-              "data-article-id"
-            );
+                if (articleId) {
 
+                    openArticle(articleId);
 
-          if (articleId) {
+                }
 
-            openArticle(articleId);
-
-          }
+            }
 
         }
-
-      }
-
-    }
-  );
+    );
 
 }
 
@@ -1453,25 +1463,27 @@ function setupKeyboardControls() {
 
 function setupSearch() {
 
-  if (!searchInput) {
-    return;
-  }
+    if (!searchInput) {
 
-
-  searchInput.addEventListener(
-    "input",
-    () => {
-
-      state.searchTerm =
-        searchInput.value
-          .trim()
-          .toLowerCase();
-
-
-      renderCards();
+        return;
 
     }
-  );
+
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            state.searchTerm =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            renderCards();
+
+        }
+    );
 
 }
 
@@ -1482,42 +1494,48 @@ function setupSearch() {
 
 function setupEraFilters() {
 
-  if (!eraButtons || !eraButtons.length) {
-    return;
-  }
+    if (!eraButtons || !eraButtons.length) {
 
-
-  eraButtons.forEach(
-    button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          state.activeEra =
-            button.dataset.era ||
-            "all";
-
-
-          eraButtons.forEach(
-            item => {
-
-              item.classList.toggle(
-                "active",
-                item === button
-              );
-
-            }
-          );
-
-
-          renderCards();
-
-        }
-      );
+        return;
 
     }
-  );
+
+
+    eraButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    state.activeEra =
+                        button.dataset.era ||
+                        "all";
+
+
+                    eraButtons.forEach(
+                        function (item) {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    renderCards();
+
+                }
+            );
+
+        }
+    );
 
 }
 
@@ -1528,125 +1546,102 @@ function setupEraFilters() {
 
 function setupCategoryFilter() {
 
-  if (!categoryFilter) {
-    return;
-  }
+    if (!categoryFilter) {
 
-
-  categoryFilter.addEventListener(
-    "change",
-    () => {
-
-      state.activeCategory =
-        categoryFilter.value ||
-        "all";
-
-
-      renderCards();
+        return;
 
     }
-  );
+
+
+    categoryFilter.addEventListener(
+        "change",
+        function () {
+
+            state.activeCategory =
+                categoryFilter.value ||
+                "all";
+
+
+            renderCards();
+
+        }
+    );
 
 }
 
 
 /* =========================================================
-   IMAGE RESOLUTION
+   ARTICLE IMAGE
    ========================================================= */
 
 function getArticleImage(article) {
 
-  /*
-     If the JSON explicitly specifies an image,
-     use it.
-  */
+    /*
+       If the JSON specifies an image, use it.
+    */
 
-  if (
-    article &&
-    article.image
-  ) {
+    if (article.image) {
 
-    return article.image;
+        return article.image;
 
-  }
+    }
 
 
-  if (
-    article &&
-    article.hero &&
-    article.hero.image
-  ) {
+    if (
+        article.hero &&
+        article.hero.image
+    ) {
 
-    return article.hero.image;
+        return article.hero.image;
 
-  }
-
-
-  /*
-     Optional common image locations.
-  */
-
-  if (
-    article &&
-    article.images &&
-    article.images.hero
-  ) {
-
-    return article.images.hero;
-
-  }
+    }
 
 
-  /*
-     Default transparent placeholder.
+    /*
+       No image.
 
-     This prevents broken-image icons from interfering
-     with the article reader.
-  */
+       Return transparent placeholder so broken-image
+       icons do not appear.
+    */
 
-  return "assets/images/history-placeholder.jpg";
+    return "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 
 }
 
 
 /* =========================================================
-   ERA FORMAT
+   FORMAT ERA
    ========================================================= */
 
 function formatEra(era) {
 
-  if (!era) {
-    return "";
-  }
+    if (!era) {
+
+        return "";
+
+    }
 
 
-  const value =
-    String(era)
-      .replace(/-/g, " ")
-      .trim();
-
-
-  return value.toUpperCase();
+    return String(era)
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, function (letter) {
+            return letter.toUpperCase();
+        });
 
 }
 
 
 /* =========================================================
-   ARTICLE TITLE FROM ID
+   FORMAT ARTICLE TITLE
    ========================================================= */
 
-function formatArticleTitle(id) {
+function formatTitle(id) {
 
-  if (!id) {
-    return "Historical Article";
-  }
-
-
-  return String(id)
-    .replace(/[-_]+/g, " ")
-    .replace(/\b\w/g, char =>
-      char.toUpperCase()
-    );
+    return String(id)
+        .replace(/[-_]/g, " ")
+        .replace(/\b\w/g, function (letter) {
+            return letter.toUpperCase();
+        });
 
 }
 
@@ -1655,56 +1650,35 @@ function formatArticleTitle(id) {
    TEXT FORMATTER
    ========================================================= */
 
-/*
-   Converts normal text to safe HTML.
-
-   Also recognises:
-      **bold**
-      *italic*
-
-   This allows article JSON to contain richer prose without
-   allowing arbitrary HTML.
-*/
-
 function formatText(text) {
 
-  if (
-    text === null ||
-    text === undefined
-  ) {
+    if (text === null || text === undefined) {
 
-    return "";
+        return "";
 
-  }
+    }
 
 
-  let value =
-    escapeHtml(String(text));
+    /*
+       First escape HTML for safety.
+    */
+
+    let value =
+        escapeHtml(String(text));
 
 
-  /*
-     Bold
-  */
+    /*
+       Convert line breaks.
+    */
 
-  value =
-    value.replace(
-      /\*\*(.*?)\*\*/g,
-      "<strong>$1</strong>"
-    );
-
-
-  /*
-     Italic
-  */
-
-  value =
-    value.replace(
-      /(^|[^\*])\*([^*\n]+)\*(?!\*)/g,
-      "$1<em>$2</em>"
-    );
+    value =
+        value.replace(
+            /\n/g,
+            "<br>"
+        );
 
 
-  return value;
+    return value;
 
 }
 
@@ -1715,140 +1689,41 @@ function formatText(text) {
 
 function escapeHtml(value) {
 
-  if (
-    value === null ||
-    value === undefined
-  ) {
+    if (
+        value === null ||
+        value === undefined
+    ) {
 
-    return "";
-
-  }
-
-
-  return String(value)
-
-    .replace(
-      /&/g,
-      "&amp;"
-    )
-
-    .replace(
-      /</g,
-      "&lt;"
-    )
-
-    .replace(
-      />/g,
-      "&gt;"
-    )
-
-    .replace(
-      /"/g,
-      "&quot;"
-    )
-
-    .replace(
-      /'/g,
-      "&#039;"
-    );
-
-}
-
-
-/* =========================================================
-   BACKDROP CLICK
-   ========================================================= */
-
-/*
-   If #reader itself acts as the overlay/backdrop,
-   clicking outside the reader article closes it.
-
-   This is deliberately defensive because the exact HTML
-   structure can vary.
-*/
-
-if (document.readyState !== "loading") {
-
-  setupReaderBackdrop();
-
-} else {
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    setupReaderBackdrop
-  );
-
-}
-
-
-function setupReaderBackdrop() {
-
-  const readerElement =
-    document.getElementById("reader");
-
-
-  if (!readerElement) {
-    return;
-  }
-
-
-  readerElement.addEventListener(
-    "click",
-    event => {
-
-      /*
-         Only close when the actual backdrop is clicked.
-      */
-
-      if (
-        event.target === readerElement
-      ) {
-
-        closeReader();
-
-      }
+        return "";
 
     }
-  );
+
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
 }
 
 
 /* =========================================================
-   OPTIONAL MODAL SUPPORT
+   DEBUG INFORMATION
    ========================================================= */
-
-function closeModal() {
-
-  if (!modal) {
-    return;
-  }
-
-
-  modal.classList.remove("open");
-
-}
-
-
-/* =========================================================
-   DEBUG HELPERS
-   ========================================================= */
-
-window.HistoryEngine = {
-
-  openArticle,
-
-  closeReader,
-
-  renderCards,
-
-  loadArticleIndex,
-
-  getState: () => state
-
-};
-
 
 console.log(
-  "History article engine ready."
+    "EK RAHENGE HISTORY ENGINE READY"
+);
+
+console.log(
+    "Article base path:",
+    ARTICLE_BASE_PATH
+);
+
+console.log(
+    "Somnath test path:",
+    ARTICLE_BASE_PATH +
+    "/somnath/article.json"
 );
