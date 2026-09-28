@@ -1577,37 +1577,116 @@ function setupCategoryFilter() {
 function getArticleImage(article) {
 
     /*
-       If the JSON specifies an image, use it.
-    */
+     * =========================================================
+     * ARTICLE IMAGE PATH HANDLER
+     * =========================================================
+     *
+     * Article structure:
+     *
+     * history/
+     *   history.js
+     *   articles/
+     *     somnath/
+     *       article.json
+     *       images/
+     *         somnath-temple-front-view.jpg
+     *
+     * JSON:
+     *
+     * "image": "images/somnath-temple-front-view.jpg"
+     *
+     * Therefore the browser must load:
+     *
+     * ./articles/somnath/images/somnath-temple-front-view.jpg
+     *
+     * =========================================================
+     */
 
+    let imagePath = "";
+
+    /*
+     * First priority:
+     * article.image
+     */
     if (article.image) {
 
-        return article.image;
+        imagePath = article.image;
 
     }
 
-
-    if (
+    /*
+     * Second priority:
+     * article.hero.image
+     */
+    else if (
         article.hero &&
         article.hero.image
     ) {
 
-        return article.hero.image;
+        imagePath = article.hero.image;
+
+    }
+
+    /*
+     * No image specified.
+     */
+    else {
+
+        return "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 
     }
 
 
     /*
-       No image.
+     * If the JSON already contains an absolute URL,
+     * do not modify it.
+     */
+    if (
+        imagePath.startsWith("http://") ||
+        imagePath.startsWith("https://") ||
+        imagePath.startsWith("data:")
+    ) {
 
-       Return transparent placeholder so broken-image
-       icons do not appear.
-    */
+        return imagePath;
 
-    return "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+    }
+
+
+    /*
+     * Remove ./ or ../ from the beginning.
+     */
+    imagePath = imagePath.replace(/^(\.\.\/)+/, "");
+    imagePath = imagePath.replace(/^(\.\/)+/, "");
+
+
+    /*
+     * If the path already starts with articles/,
+     * use it directly.
+     */
+    if (imagePath.startsWith("articles/")) {
+
+        return "./" + imagePath;
+
+    }
+
+
+    /*
+     * Normal case:
+     *
+     * images/somnath-temple-front-view.jpg
+     *
+     * becomes:
+     *
+     * ./articles/somnath/images/somnath-temple-front-view.jpg
+     */
+    return (
+        "./articles/" +
+        encodeURIComponent(article.id) +
+        "/" +
+        imagePath
+    );
 
 }
-
 
 /* =========================================================
    FORMAT ERA
