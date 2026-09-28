@@ -7,17 +7,15 @@
   "category": "dark-chapters",
   "section": "dark-chapters",
   "status": "published",
-
   "hero": {
     "eyebrow": "DARK CHAPTERS · 04",
     "title": "SOMNATH",
     "subtitle": "A Thousand Years of Destruction, Resistance and Reconstruction",
     "period": "1026 CE – 1951 CE",
-    "summary": "Somnath is not merely the story of a temple that was attacked. It is the story of a sacred Hindu centre that survived repeated violence, destruction, plunder and political upheaval, and of generations who repeatedly restored worship at the site."
+    "summary": "Somnath is not merely the story of a temple that was attacked. It is the story of a sacred Hindu centre that survived repeated violence, destruction, plunder and political upheaval, and of generations who repeatedly restored worship at the site.",
+    "image": "somnath-front"
   },
-
   "abstract": "On the western coast of Saurashtra stands Somnath, one of the most revered Shaiva pilgrimage centres of Bharat and traditionally regarded as the first among the twelve Jyotirlingas of Lord Shiva. Its history combines sacred tradition, pilgrimage, temple patronage, political power, invasion, destruction, plunder, resistance and reconstruction. The attack of Mahmud of Ghazni in 1025–1026 CE became the most famous episode in Somnath's history, but it was not the final chapter. The temple and its sacred memory survived later assaults and repeated political upheavals. The modern reconstruction after Independence transformed Somnath once again into a powerful symbol of cultural continuity.",
-
   "seo": {
     "title": "Somnath Temple History | Mahmud of Ghazni, Destruction, Resistance & Reconstruction",
     "description": "An in-depth history of Somnath Temple: its importance in Hinduism, the Jyotirlinga tradition, Mahmud of Ghazni's 1025–1026 campaign, destruction and plunder, later attacks, Hindu resistance, reconstruction and the revival of Somnath after Indian Independence.",
@@ -46,7 +44,12 @@
       "Somnath reconstruction 1951",
       "Rajendra Prasad Somnath",
       "Ahilyabai Holkar Somnath",
-      "Dark Chapters Indian History"
+      "Dark Chapters Indian History",
+      "Somnath Temple images",
+      "Somnath Temple aerial view",
+      "Somnath Temple ruins",
+      "Somnath Temple Arabian Sea",
+      "Somnath Temple historical ruins"
     ],
     "tags": [
       "Somnath",
@@ -63,62 +66,70 @@
       "Resistance",
       "Cultural Continuity",
       "Dark Chapters",
-      "Indian History"
+      "Indian History",
+      "Somnath Temple Images",
+      "Somnath Aerial View",
+      "Somnath Ruins",
+      "Arabian Sea",
+      "Somnath Temple History"
     ]
   },
-
   "images": [
-  {
-    "id": "somnath-front",
-    "src": "images/somnath-temple-front-view.jpg",
-    "alt": "Somnath Temple facing the Arabian Sea",
-    "caption": "The present Somnath Temple at Prabhas Patan, Gujarat, standing beside the Arabian Sea.",
-    "position": "hero"
-  },
-  {
-    "id": "somnath-aerial",
-    "src": "images/somnath-temple-aerial-view.jpg",
-    "alt": "Aerial view of Somnath Temple and the Arabian Sea",
-    "caption": "An aerial view of the Somnath Temple complex and its setting on the western coast of Gujarat.",
-    "position": "section"
-  },
-  {
-    "id": "somnath-coast-aerial",
-    "src": "images/somnath-temple-coast-aerial.jpg",
-    "alt": "Aerial view of Somnath Temple beside the coast",
-    "caption": "Somnath viewed from above, showing the temple, surrounding gardens and the Arabian Sea.",
-    "position": "section"
-  },
-  {
-    "id": "somnath-sunset",
-    "src": "images/somnath-temple-sunset-aerial.jpg",
-    "alt": "Somnath Temple at sunset",
-    "caption": "Somnath Temple overlooking the Arabian Sea at sunset.",
-    "position": "section"
-  },
-  {
-    "id": "somnath-sea",
-    "src": "images/somnath-temple-by-the-arabian-sea.jpg",
-    "alt": "Somnath Temple beside the Arabian Sea",
-    "caption": "The Somnath Temple rising beside the Arabian Sea.",
-    "position": "section"
-  },
-  {
-    "id": "somnath-ruins",
-    "src": "images/somnath-historic-ruins-archival.jpg",
-    "alt": "Archival photograph associated with the historic Somnath site",
-    "caption": "An archival photograph associated with the historic Somnath site.",
-    "position": "historical"
-  }
-],
-
+    {
+      "id": "somnath-front",
+      "src": "images/somnath-temple-front-view.jpg",
+      "alt": "Somnath Temple facing the Arabian Sea at Prabhas Patan",
+      "caption": "The present Somnath Temple standing beside the Arabian Sea at Prabhas Patan, Gujarat.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "hero"
+    },
+    {
+      "id": "somnath-aerial",
+      "src": "images/somnath-temple-aerial-view.jpg",
+      "alt": "Aerial view of Somnath Temple and the surrounding coastline",
+      "caption": "Aerial view showing the Somnath Temple, its sacred precinct and the Arabian Sea.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-coast-aerial",
+      "src": "images/somnath-temple-coast-aerial.jpg",
+      "alt": "Aerial view of Somnath Temple complex from the coast",
+      "caption": "Somnath seen from above, showing the temple complex and its coastal setting.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-arabian-sea",
+      "src": "images/somnath-temple-by-the-arabian-sea.jpg",
+      "alt": "Somnath Temple beside the Arabian Sea",
+      "caption": "The Somnath Temple beside the Arabian Sea, emphasizing the shrine’s distinctive coastal setting.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-archival-ruins",
+      "src": "images/somnath-historic-ruins-archival.jpg",
+      "alt": "Archival photograph of the historic Somnath ruins",
+      "caption": "An archival photograph showing the ruined remains associated with the historic Somnath site.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-sunset-aerial",
+      "src": "images/somnath-temple-sunset-aerial.jpg",
+      "alt": "Somnath Temple seen from above at sunset",
+      "caption": "Somnath at sunset, with the temple, pilgrimage precinct and Arabian Sea forming a single sacred landscape.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    }
+  ],
   "sections": [
-
     {
       "id": "s1",
       "title": "THE SACRED SOMNATH",
       "type": "historical",
-      "image": "somnath-present",
+      "image": "somnath-aerial",
       "content": [
         "To understand why Somnath became such a powerful symbol, one must begin with what Somnath meant to Hindus before the armies of medieval conquerors reached its shores.",
         "Somnath is located at Prabhas Patan on the western coast of Saurashtra in Gujarat. The site is associated with the sacred Prabhas Tirtha and with the confluence traditionally identified as the Triveni Sangam of the Hiran, Kapila and Sarasvati rivers.",
@@ -128,7 +139,6 @@
       ],
       "lesson": "When a sacred centre is destroyed, the damage is not confined to architecture. A temple can embody memory, ritual, community, patronage and an entire sacred geography."
     },
-
     {
       "id": "s2",
       "title": "PRABHAS — THE SACRED LANDSCAPE",
@@ -139,9 +149,9 @@
         "The name Somnath itself means Lord of the Moon. Hindu tradition connects the name with Soma, the Moon God, and his worship of Shiva at this sacred place.",
         "Such traditions should be understood as religious and civilisational memory rather than treated as modern archaeological claims. Their importance lies in the fact that generations of Hindus regarded the site as sacred long before the medieval conflicts that later transformed its historical memory.",
         "The sacred geography of Somnath therefore predates the political states that later fought over Gujarat. Kingdoms changed. Dynasties changed. Political borders changed. The tirtha remained."
-      ]
+      ],
+      "image": "somnath-coast-aerial"
     },
-
     {
       "id": "s3",
       "title": "THE TEMPLE AND THE WORLD OF PILGRIMAGE",
@@ -152,9 +162,9 @@
         "Somnath's location on the western coast also placed it within a wider network of movement involving pilgrims, merchants and political powers.",
         "The wealth associated with major temples consequently made them attractive targets during periods of warfare. But wealth was only one dimension. Destroying a famous shrine could also carry immense symbolic value because the temple represented the prestige and sacred authority of the society that maintained it.",
         "This is one reason the destruction of a major temple could cause psychological and cultural trauma far beyond the physical destruction of its walls."
-      ]
+      ],
+      "image": "somnath-arabian-sea"
     },
-
     {
       "id": "s4",
       "title": "MAHMUD OF GHAZNI — THE ROAD TO SOMNATH",
@@ -168,7 +178,6 @@
         "The significance of the campaign lies not only in what Mahmud carried away, but also in what the destruction represented to the people whose sacred centre was attacked."
       ]
     },
-
     {
       "id": "s5",
       "title": "1025–1026 — THE ASSAULT ON SOMNATH",
@@ -180,9 +189,9 @@
         "The exact numerical details given by medieval and later writers must be treated cautiously. Large casualty and booty figures appear in different traditions, but they cannot all be treated as precise modern demographic statistics.",
         "That caution does not erase the central event. The temple was attacked, its wealth was taken and its sacred image was destroyed. The event left a deep mark on the historical memory of Somnath."
       ],
-      "lesson": "Questioning exaggerated numbers is not the same as denying the destruction. A serious history distinguishes between what is securely established and what remains uncertain."
+      "lesson": "Questioning exaggerated numbers is not the same as denying the destruction. A serious history distinguishes between what is securely established and what remains uncertain.",
+      "image": "somnath-archival-ruins"
     },
-
     {
       "id": "s6",
       "title": "THE HUMAN COST OF THE FALL",
@@ -196,7 +205,6 @@
         "The historical record therefore needs to preserve the human dimension: Somnath was not simply a treasure house that changed hands. It was a living sacred institution whose destruction was experienced by a living society."
       ]
     },
-
     {
       "id": "s7",
       "title": "THE DESECRATION OF A SACRED SYMBOL",
@@ -209,7 +217,6 @@
         "Somnath consequently became a memory of desecration as well as a memory of resistance."
       ]
     },
-
     {
       "id": "s8",
       "title": "WHAT WAS LOST?",
@@ -222,7 +229,6 @@
         "This is why the destruction of temples has such a prominent place in Hindu historical memory. The wound is simultaneously religious, cultural, social and architectural."
       ]
     },
-
     {
       "id": "s9",
       "title": "THE TEMPLE ROSE AGAIN",
@@ -235,7 +241,6 @@
         "A destroyed temple can be rebuilt because the sacred geography survives in memory, ritual and community."
       ]
     },
-
     {
       "id": "s10",
       "title": "1299 — ANOTHER ATTACK",
@@ -248,7 +253,6 @@
         "For the Hindu communities connected with Somnath, rebuilding was not simply an architectural exercise. It meant restoring worship and reasserting the sacred character of the place."
       ]
     },
-
     {
       "id": "s11",
       "title": "THE FOURTEENTH CENTURY — DESTRUCTION AND RESTORATION",
@@ -258,9 +262,9 @@
         "The Government of Gujarat records another destruction of Somnath in 1395 under Zafar Khan, then associated with the Delhi Sultanate and later the founder of the Gujarat Sultanate.",
         "Later traditions and historical accounts describe further conflicts affecting the shrine in the fifteenth and seventeenth centuries. The precise chronology of every episode differs among sources, which is why this article distinguishes securely recorded episodes from later traditions.",
         "The larger pattern, however, is clear: Somnath repeatedly disappeared as a political structure and repeatedly returned as a living Hindu place of worship."
-      ]
+      ],
+      "image": "somnath-archival-ruins"
     },
-
     {
       "id": "s12",
       "title": "A TEMPLE CAN BE DESTROYED — A TIRTHA CAN SURVIVE",
@@ -275,7 +279,6 @@
       ],
       "lesson": "The history of Somnath is not only a history of what invaders destroyed. It is equally a history of what generations of Hindus refused to surrender."
     },
-
     {
       "id": "s13",
       "title": "AHILYABAI HOLKAR AND THE CONTINUITY OF WORSHIP",
@@ -288,7 +291,6 @@
         "The restoration of sacred sites by Hindu rulers and patrons created a bridge between the ancient pilgrimage tradition and the modern era."
       ]
     },
-
     {
       "id": "s14",
       "title": "THE SUFFERING OF HINDU SOCIETY — BEYOND THE STONES",
@@ -302,7 +304,6 @@
         "A responsible history should therefore give victims a voice without manufacturing evidence."
       ]
     },
-
     {
       "id": "s15",
       "title": "THE MEMORY OF THE DESTRUCTION",
@@ -312,14 +313,14 @@
         "For Hindus, remembering Somnath became part of remembering the endurance of Sanatana Dharma through periods of political domination and cultural disruption.",
         "Different generations interpreted the episode differently. Persian court historians celebrated military victory. Colonial historians incorporated Somnath into competing narratives of Indian history. Modern Indian political movements later gave the shrine additional meanings connected with cultural recovery and national identity.",
         "The existence of different layers of memory does not make the original event meaningless. Instead, it demonstrates how historical events continue to shape societies long after the armies have disappeared."
-      ]
+      ],
+      "image": "somnath-sunset-aerial"
     },
-
     {
       "id": "s16",
       "title": "1947 — THE DECISION TO REBUILD",
       "type": "modern-history",
-      "image": "somnath-reconstruction",
+      "image": "somnath-front",
       "content": [
         "The next great turning point came with Indian Independence.",
         "On 12 November 1947, Sardar Vallabhbhai Patel visited the ruins of Somnath. The Government of Gujarat records that Patel supported the reconstruction of the temple and that the Somnath Trust was established to oversee the project.",
@@ -328,7 +329,6 @@
         "The project also demonstrated that reconstruction could be achieved through public participation, traditional craftsmanship and modern national institutions."
       ]
     },
-
     {
       "id": "s17",
       "title": "1951 — THE RETURN OF SOMNATH",
@@ -340,9 +340,9 @@
         "After centuries in which Somnath had repeatedly been attacked, destroyed and rebuilt, the reopening of the temple in independent India became a powerful statement of continuity.",
         "The Government of India describes the 1951 reopening as a major milestone in the restoration of Somnath, while the Ministry of Culture presents the temple today as a living symbol of spiritual continuity and cultural resilience."
       ],
-      "lesson": "The rebuilding of Somnath transformed remembrance into renewal."
+      "lesson": "The rebuilding of Somnath transformed remembrance into renewal.",
+      "image": "somnath-front"
     },
-
     {
       "id": "s18",
       "title": "SOMNATH — DESTRUCTION WAS NOT THE FINAL CHAPTER",
@@ -357,9 +357,9 @@
         "The lesson of Somnath is therefore not simply that a temple was destroyed.",
         "The deeper lesson is that destruction did not have the final word."
       ],
-      "lesson": "Somnath stands as a reminder that civilisations survive not merely through monuments, but through memory, faith, courage and the determination of successive generations to rebuild."
+      "lesson": "Somnath stands as a reminder that civilisations survive not merely through monuments, but through memory, faith, courage and the determination of successive generations to rebuild.",
+      "image": "somnath-sunset-aerial"
     },
-
     {
       "id": "s19",
       "title": "WHAT IS ESTABLISHED — AND WHAT REMAINS DEBATED?",
@@ -374,7 +374,6 @@
         "Historical honesty does not weaken the case for remembering Hindu suffering. It strengthens it."
       ]
     },
-
     {
       "id": "s20",
       "title": "THE QUESTIONS WE SHOULD NOT AVOID",
@@ -391,9 +390,7 @@
         "How should modern India remember historical suffering without turning historical memory into hatred against people living today?"
       ]
     }
-
   ],
-
   "chronology": [
     {
       "date": "Ancient period",
@@ -440,7 +437,6 @@
       "event": "India marks 1,000 years since the 1026 attack and 75 years since the 1951 consecration."
     }
   ],
-
   "researchQuestions": [
     "What do the earliest Persian accounts say about the Somnath campaign?",
     "How reliable are the casualty figures given in medieval and later accounts?",
@@ -452,7 +448,6 @@
     "What was the political and cultural significance of the 1947–1951 reconstruction?",
     "How should Somnath be remembered in contemporary India?"
   ],
-
   "sources": [
     {
       "title": "History — District Gir Somnath",
@@ -502,7 +497,6 @@
       "type": "modern scholarship"
     }
   ],
-
   "bibliography": [
     "Al-Utbi, Tarikh-i Yamini.",
     "Encyclopaedia Iranica, Mahmud b. Sebuktegin.",
@@ -511,6 +505,13 @@
     "Government of India, Ministry of Culture — Somnath Swabhiman Parv.",
     "Government of India, Press Information Bureau — Somnath historical and commemorative material."
   ],
-
-  "editorialNote": "This article intentionally presents Somnath from a Hindu civilisational and memory-centred perspective. It records destruction, religious desecration, plunder, human suffering and resistance without inventing casualty figures or presenting disputed claims as established facts. Where historical details remain contested, the article identifies the uncertainty so that the central historical experience is preserved without compromising evidentiary standards."
+  "editorialNote": "This article intentionally presents Somnath from a Hindu civilisational and memory-centred perspective. It records destruction, religious desecration, plunder, human suffering and resistance without inventing casualty figures or presenting disputed claims as established facts. Where historical details remain contested, the article identifies the uncertainty so that the central historical experience is preserved without compromising evidentiary standards.",
+  "gallery": [
+    "somnath-front",
+    "somnath-aerial",
+    "somnath-coast-aerial",
+    "somnath-arabian-sea",
+    "somnath-archival-ruins",
+    "somnath-sunset-aerial"
+  ]
 }
