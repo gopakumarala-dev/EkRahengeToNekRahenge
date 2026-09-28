@@ -844,18 +844,13 @@ function buildTableOfContents(article) {
 function buildArticleContent(article) {
 
     if (!readerContent) {
-
         console.error(
             "#readerContent does not exist."
         );
-
         return;
-
     }
 
-
     let html = "";
-
 
     /*
        ABSTRACT
@@ -864,17 +859,12 @@ function buildArticleContent(article) {
     if (article.abstract) {
 
         html += `
-
             <div class="article-abstract">
-
                 <p>
                     ${formatText(article.abstract)}
                 </p>
-
             </div>
-
         `;
-
     }
 
 
@@ -887,13 +877,10 @@ function buildArticleContent(article) {
         article.sections.length
     ) {
 
-
         article.sections.forEach(
             function (section, index) {
 
-
                 html += `
-
                     <section
                         id="article-section-${index}"
                         class="reader-section"
@@ -904,46 +891,119 @@ function buildArticleContent(article) {
                                 section.title || ""
                             )}
                         </h2>
-
                 `;
 
 
                 /*
-                   Section content.
+                   SECTION IMAGE
+
+                   Example in article.json:
+
+                   "image": "somnath-historic-ruins"
+
+                   or
+
+                   "image": "images/somnath-historic-ruins-archival.jpg"
+                */
+
+                if (section.image) {
+
+                    const sectionImage =
+                        imageUrl(
+                            article,
+                            section.image
+                        );
+
+                    if (sectionImage) {
+
+                        html += `
+                            <figure
+                                class="article-section-image"
+                                style="
+                                    margin:32px 0 36px;
+                                    text-align:center;
+                                "
+                            >
+
+                                <img
+                                    src="${escapeHtml(sectionImage)}"
+                                    alt="${escapeHtml(
+                                        section.imageAlt ||
+                                        section.title ||
+                                        article.title ||
+                                        ""
+                                    )}"
+                                    loading="lazy"
+                                    style="
+                                        width:100%;
+                                        max-width:1100px;
+                                        height:auto;
+                                        display:block;
+                                        margin:0 auto;
+                                        border-radius:8px;
+                                    "
+                                    onerror="
+                                        this.parentElement.style.display='none';
+                                    "
+                                >
+
+                                ${
+                                    section.imageCaption
+                                    ? `
+                                        <figcaption
+                                            style="
+                                                margin-top:10px;
+                                                font-size:13px;
+                                                line-height:1.5;
+                                                color:#9da3a5;
+                                                text-align:left;
+                                            "
+                                        >
+                                            ${formatText(
+                                                section.imageCaption
+                                            )}
+                                        </figcaption>
+                                    `
+                                    : ""
+                                }
+
+                            </figure>
+                        `;
+                    }
+                }
+
+
+                /*
+                   SECTION CONTENT
                 */
 
                 if (
                     Array.isArray(section.content)
                 ) {
 
-
                     section.content.forEach(
                         function (paragraph) {
 
                             html += `
-
                                 <p>
                                     ${formatText(
                                         paragraph
                                     )}
                                 </p>
-
                             `;
 
                         }
                     );
-
                 }
 
 
                 /*
-                   Optional section lesson.
+                   OPTIONAL SECTION LESSON
                 */
 
                 if (section.lesson) {
 
                     html += `
-
                         <div class="article-lesson">
 
                             <strong>
@@ -957,9 +1017,7 @@ function buildArticleContent(article) {
                             </p>
 
                         </div>
-
                     `;
-
                 }
 
 
@@ -969,7 +1027,6 @@ function buildArticleContent(article) {
 
             }
         );
-
     }
 
 
@@ -982,9 +1039,7 @@ function buildArticleContent(article) {
         article.chronology.length
     ) {
 
-
         html += `
-
             <section
                 class="reader-section article-chronology"
             >
@@ -992,15 +1047,12 @@ function buildArticleContent(article) {
                 <h2>
                     CHRONOLOGY
                 </h2>
-
         `;
-
 
         article.chronology.forEach(
             function (item) {
 
                 html += `
-
                     <div class="chronology-item">
 
                         <div class="chronology-date">
@@ -1016,17 +1068,14 @@ function buildArticleContent(article) {
                         </div>
 
                     </div>
-
                 `;
 
             }
         );
 
-
         html += `
             </section>
         `;
-
     }
 
 
@@ -1039,9 +1088,7 @@ function buildArticleContent(article) {
         article.researchQuestions.length
     ) {
 
-
         html += `
-
             <section
                 class="reader-section research-questions"
             >
@@ -1053,30 +1100,23 @@ function buildArticleContent(article) {
                 <ol>
         `;
 
-
         article.researchQuestions.forEach(
             function (question) {
 
                 html += `
-
                     <li>
                         ${formatText(question)}
                     </li>
-
                 `;
 
             }
         );
 
-
         html += `
-
                 </ol>
 
             </section>
-
         `;
-
     }
 
 
@@ -1089,9 +1129,7 @@ function buildArticleContent(article) {
         article.sources.length
     ) {
 
-
         html += `
-
             <section
                 class="reader-section article-sources"
             >
@@ -1103,12 +1141,10 @@ function buildArticleContent(article) {
                 <div class="source-list">
         `;
 
-
         article.sources.forEach(
             function (source) {
 
                 html += `
-
                     <div class="source-item">
 
                         <strong>
@@ -1116,59 +1152,44 @@ function buildArticleContent(article) {
                                 source.title || ""
                             )}
                         </strong>
-
                 `;
-
 
                 if (source.author) {
 
                     html += `
-
                         <span>
                             ${escapeHtml(
                                 source.author
                             )}
                         </span>
-
                     `;
-
                 }
-
 
                 if (source.publisher) {
 
                     html += `
-
                         <span>
                             ${escapeHtml(
                                 source.publisher
                             )}
                         </span>
-
                     `;
-
                 }
-
 
                 if (source.type) {
 
                     html += `
-
                         <small>
                             ${escapeHtml(
                                 source.type
                             )}
                         </small>
-
                     `;
-
                 }
-
 
                 if (source.url) {
 
                     html += `
-
                         <a
                             href="${escapeHtml(
                                 source.url
@@ -1178,30 +1199,20 @@ function buildArticleContent(article) {
                         >
                             SOURCE →
                         </a>
-
                     `;
-
                 }
 
-
                 html += `
-
                     </div>
-
                 `;
-
             }
         );
 
-
         html += `
-
                 </div>
 
             </section>
-
         `;
-
     }
 
 
@@ -1214,9 +1225,7 @@ function buildArticleContent(article) {
         article.bibliography.length
     ) {
 
-
         html += `
-
             <section
                 class="reader-section article-bibliography"
             >
@@ -1228,42 +1237,33 @@ function buildArticleContent(article) {
                 <ul>
         `;
 
-
         article.bibliography.forEach(
             function (item) {
 
                 html += `
-
                     <li>
                         ${formatText(item)}
                     </li>
-
                 `;
 
             }
         );
 
-
         html += `
-
                 </ul>
 
             </section>
-
         `;
-
     }
 
 
     /*
-       Put everything into reader.
+       PUT EVERYTHING INTO READER
     */
 
     readerContent.innerHTML = html;
 
 }
-
-
 /* =========================================================
    SHOW READER ERROR
    ========================================================= */
