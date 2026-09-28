@@ -1574,120 +1574,200 @@ function setupCategoryFilter() {
    ARTICLE IMAGE
    ========================================================= */
 
-function getArticleImage(article) {
+/* =========================================================
+   IMAGE HANDLING
+   ========================================================= */
 
-    /*
-     * =========================================================
-     * ARTICLE IMAGE PATH HANDLER
-     * =========================================================
-     *
-     * Article structure:
-     *
-     * history/
-     *   history.js
-     *   articles/
-     *     somnath/
-     *       article.json
-     *       images/
-     *         somnath-temple-front-view.jpg
-     *
-     * JSON:
-     *
-     * "image": "images/somnath-temple-front-view.jpg"
-     *
-     * Therefore the browser must load:
-     *
-     * ./articles/somnath/images/somnath-temple-front-view.jpg
-     *
-     * =========================================================
-     */
+function resolveArticleImage(article, imageRef) {
 
-    let imagePath = "";
+  if (!article || !imageRef) return null;
 
-    /*
-     * First priority:
-     * article.image
-     */
-    if (article.image) {
+  /* Direct URL */
+  if (/^(https?:|data:)/i.test(imageRef)) {
+    return {
+      src: imageRef
+    };
+  }
 
-        imagePath = article.image;
+  /* Find image by ID in article.images */
+  if (Array.isArray(article.images)) {
 
-    }
-
-    /*
-     * Second priority:
-     * article.hero.image
-     */
-    else if (
-        article.hero &&
-        article.hero.image
-    ) {
-
-        imagePath = article.hero.image;
-
-    }
-
-    /*
-     * No image specified.
-     */
-    else {
-
-        return "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-
-    }
-
-
-    /*
-     * If the JSON already contains an absolute URL,
-     * do not modify it.
-     */
-    if (
-        imagePath.startsWith("http://") ||
-        imagePath.startsWith("https://") ||
-        imagePath.startsWith("data:")
-    ) {
-
-        return imagePath;
-
-    }
-
-
-    /*
-     * Remove ./ or ../ from the beginning.
-     */
-    imagePath = imagePath.replace(/^(\.\.\/)+/, "");
-    imagePath = imagePath.replace(/^(\.\/)+/, "");
-
-
-    /*
-     * If the path already starts with articles/,
-     * use it directly.
-     */
-    if (imagePath.startsWith("articles/")) {
-
-        return "./" + imagePath;
-
-    }
-
-
-    /*
-     * Normal case:
-     *
-     * images/somnath-temple-front-view.jpg
-     *
-     * becomes:
-     *
-     * ./articles/somnath/images/somnath-temple-front-view.jpg
-     */
-    return (
-        "./articles/" +
-        encodeURIComponent(article.id) +
-        "/" +
-        imagePath
+    let image = article.images.find(
+      item => item && item.id === imageRef
     );
 
+    /*
+      Compatibility aliases for Somnath.
+    */
+    if (!image) {
+
+      const aliases = {
+        "somnath-present": "somnath-front",
+        "somnath-historical": "somnath-ruins",
+        "somnath-ruins": "somnath-historic-ruins"
+      };
+
+      const alias = aliases[imageRef];
+
+      if (alias) {
+        image = article.images.find(
+          item => item && item.id === alias
+        );
+      }
+    }
+
+    if (image && image.src) {
+      return image;
+    }
+  }
+
+  /*
+    If the JSON directly contains a filename/path,
+    use it as supplied.
+  */
+  let cleanPath = String(imageRef)
+    .replace(/^(\.\.\/)+/, "")
+    .replace(/^(\.\/)+/, "");
+
+  if (cleanPath.startsWith("/")) {
+    return {
+      src: cleanPath
+    };
+  }
+
+  return {
+    src: cleanPath
+  };
 }
 
+
+/* =========================================================
+   BUILD IMAGE URL
+   ========================================================= */
+
+function imageUrl(article, imageRef) {
+
+  if (!article || !imageRef) {
+    return "";
+  }
+
+  const image = resolveArticleImage(
+    article,
+    imageRef
+  );
+
+  if (!image || !image.src) {
+    return "";
+  }
+
+  const src = image.src;
+
+  /*
+    Absolute URL
+  */
+  if (/^(https?:|data:)/i.test(src)) {
+    return src;
+  }
+
+  /*
+    Already root-relative
+  */
+  if (src.startsWith("/")) {
+    return src;
+  }
+
+  /*
+    Somnath and all other article images are stored as:
+
+    /history/articles/ARTICLE-ID/images/FILENAME
+  */
+  return `/history/articles/${encodeURIComponent(article.id)}/${src}`;
+}
+
+
+/* =========================================================
+   GET ARTICLE HERO IMAGE
+   ========================================================= */
+
+function getArticleImage(article) {
+
+  if (!article) {
+    return "/history/Bharat-map-clean.png";
+  }
+
+  /*
+    Preferred modern format:
+
+    "hero": {
+      "image": "somnath-front"
+    }
+  */
+  let imageRef =
+    article?.hero?.image ||
+    article?.heroImage ||
+    article?.image;
+
+  if (imageRef) {
+
+    const url = imageUrl(
+      article,
+      imageRef
+    );
+
+    if (url) {
+      return url;
+    }
+  }
+
+  /*
+    If no explicit hero exists,
+    find an image marked as hero.
+  */
+  if (
+    Array.isArray(article.images) &&
+    article.images.length
+  ) {
+
+    const heroImage =
+      article.images.find(
+        image =>
+          image &&
+          (
+            image.position === "hero" ||
+            image.role === "hero"
+          )
+      );
+
+    if (heroImage) {
+
+      const url = imageUrl(
+        article,
+        heroImage.id || heroImage.src
+      );
+
+      if (url) {
+        return url;
+      }
+    }
+
+    /*
+      Last fallback:
+      use the first image.
+    */
+    const firstImage = article.images[0];
+
+    const url = imageUrl(
+      article,
+      firstImage.id || firstImage.src
+    );
+
+    if (url) {
+      return url;
+    }
+  }
+
+  return "/history/Bharat-map-clean.png";
+}
 /* =========================================================
    FORMAT ERA
    ========================================================= */
