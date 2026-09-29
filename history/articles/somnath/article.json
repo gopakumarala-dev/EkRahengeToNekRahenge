@@ -122,6 +122,86 @@
       "caption": "Somnath at sunset, with the temple, pilgrimage precinct and Arabian Sea forming a single sacred landscape.",
       "credit": "Use according to the licence/permission applicable to the uploaded image.",
       "position": "section"
+    },
+    {
+      "id": "mahmud-ghazni-at-somnath",
+      "src": "images/mahmud-ghazni-at-somnath.jpg.jpg",
+      "alt": "Historical artistic depiction associated with Mahmud of Ghazni at Somnath",
+      "caption": "A historical artistic depiction associated with Mahmud of Ghazni and the Somnath campaign.",
+      "credit": "Verify image provenance and licence/permission before publication.",
+      "position": "section"
+    },
+    {
+      "id": "mahmud-ghazni-somnath-manuscript",
+      "src": "images/mahmud-ghazni-somnath-manuscript-miniature.jpg.png",
+      "alt": "Manuscript miniature associated with Mahmud of Ghazni and Somnath",
+      "caption": "A manuscript-style historical depiction associated with the Somnath campaign of Mahmud of Ghazni.",
+      "credit": "Verify manuscript/image provenance and licence/permission before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-city-entrance-gate",
+      "src": "images/somnath-temple-city-entrance-gate.jpg",
+      "alt": "Entrance gateway associated with the Somnath temple precinct",
+      "caption": "An entrance gateway associated with the Somnath pilgrimage area.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-entrance-gate",
+      "src": "images/somnath-temple-entrance-gate.jpg",
+      "alt": "Entrance gate of the Somnath Temple",
+      "caption": "The entrance gateway of the Somnath Temple complex.",
+      "credit": "Use according to the licence/permission applicable to the uploaded image.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-interior-archival",
+      "src": "images/somnath-temple-interior-archival.jpg",
+      "alt": "Archival view of the interior associated with Somnath",
+      "caption": "An archival interior view associated with the historic Somnath site.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-ornate-door-archival",
+      "src": "images/somnath-temple-ornate-door-archival.jpg",
+      "alt": "Archival view of an ornate temple doorway associated with Somnath",
+      "caption": "An archival view of an ornate doorway associated with the Somnath temple tradition.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-ruins-1869-1895",
+      "src": "images/somnath-temple-ruins-1869-1895-archival.jpg",
+      "alt": "Archival photograph of Somnath ruins from the nineteenth century",
+      "caption": "An archival nineteenth-century view of the Somnath ruins.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-ruins-1869",
+      "src": "images/somnath-temple-ruins-1869.png",
+      "alt": "Historical image of Somnath Temple ruins from 1869",
+      "caption": "A historical image documenting the Somnath ruins in 1869.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "somnath-ruins-interior-archival",
+      "src": "images/somnath-temple-ruins-interior-archival.jpg",
+      "alt": "Archival interior view of Somnath ruins",
+      "caption": "An archival interior view of the ruined Somnath site.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
+    },
+    {
+      "id": "temple-of-sun-prabhas-patan",
+      "src": "images/temple-of-the-sun-prabhas-patan-archival.jpg",
+      "alt": "Archival image associated with the Temple of the Sun at Prabhas Patan",
+      "caption": "An archival image associated with the sacred architectural landscape of Prabhas Patan.",
+      "credit": "Verify archival/public-domain or other applicable image rights before publication.",
+      "position": "section"
     }
   ],
   "sections": [
@@ -150,7 +230,7 @@
         "Such traditions should be understood as religious and civilisational memory rather than treated as modern archaeological claims. Their importance lies in the fact that generations of Hindus regarded the site as sacred long before the medieval conflicts that later transformed its historical memory.",
         "The sacred geography of Somnath therefore predates the political states that later fought over Gujarat. Kingdoms changed. Dynasties changed. Political borders changed. The tirtha remained."
       ],
-      "image": "somnath-coast-aerial"
+      "image": "temple-of-sun-prabhas-patan"
     },
     {
       "id": "s3",
@@ -169,7 +249,7 @@
       "id": "s4",
       "title": "MAHMUD OF GHAZNI — THE ROAD TO SOMNATH",
       "type": "campaign",
-      "image": "mahmud-ghazni",
+      "image": "mahmud-ghazni-at-somnath",
       "content": [
         "Mahmud of Ghazni ruled the Ghaznavid state centred on Ghazni, in present-day Afghanistan. During his reign he conducted repeated military expeditions into northern and western parts of the Indian subcontinent.",
         "His 1025–1026 expedition toward Gujarat was exceptionally ambitious. The army had to cross difficult terrain and operate far from its political centre in Ghazni.",
@@ -190,7 +270,7 @@
         "That caution does not erase the central event. The temple was attacked, its wealth was taken and its sacred image was destroyed. The event left a deep mark on the historical memory of Somnath."
       ],
       "lesson": "Questioning exaggerated numbers is not the same as denying the destruction. A serious history distinguishes between what is securely established and what remains uncertain.",
-      "image": "somnath-archival-ruins"
+      "image": "mahmud-ghazni-somnath-manuscript"
     },
     {
       "id": "s6",
@@ -215,7 +295,8 @@
         "Medieval Islamic court traditions could present the destruction of Hindu images and temples as signs of victory over religious opponents. Such accounts must be read critically because court chroniclers had political reasons to magnify the achievements of their patrons.",
         "At the same time, the religious symbolism of temple destruction should not be removed from the historical narrative merely because it is uncomfortable. The destruction of a major Hindu shrine had a religious meaning to both the attackers who celebrated the victory and the Hindus who experienced the loss.",
         "Somnath consequently became a memory of desecration as well as a memory of resistance."
-      ]
+      ],
+      "image": "somnath-ornate-door-archival"
     },
     {
       "id": "s8",
@@ -227,7 +308,8 @@
         "When a major shrine is destroyed, a part of that accumulated material culture disappears with it.",
         "The loss also includes the disruption of ritual continuity. Priests lose their institution. Pilgrims lose their destination. Artists and craftsmen lose patronage. Communities lose a place around which festivals and religious gatherings were organised.",
         "This is why the destruction of temples has such a prominent place in Hindu historical memory. The wound is simultaneously religious, cultural, social and architectural."
-      ]
+      ],
+      "image": "somnath-interior-archival"
     },
     {
       "id": "s9",
@@ -239,7 +321,8 @@
         "The Government of Gujarat records that Kumarapala rebuilt Somnath in the twelfth century and that a later inscription describes the temple as being rebuilt in excellent stone. It also records the rebuilding after the 1299 destruction.",
         "The rebuilding of Somnath demonstrates an important feature of Hindu civilisation: the sacred identity of a tirtha does not necessarily disappear when its physical structure is destroyed.",
         "A destroyed temple can be rebuilt because the sacred geography survives in memory, ritual and community."
-      ]
+      ],
+      "image": "somnath-ruins-1869-1895"
     },
     {
       "id": "s10",
@@ -251,7 +334,8 @@
         "The temple was subsequently rebuilt. Government records associate the reconstruction with Mahipala I, the Chudasama ruler of Saurashtra, and record the later installation of the linga by his son Khengara.",
         "The cycle is significant: destruction was followed by restoration.",
         "For the Hindu communities connected with Somnath, rebuilding was not simply an architectural exercise. It meant restoring worship and reasserting the sacred character of the place."
-      ]
+      ],
+      "image": "somnath-ruins-1869"
     },
     {
       "id": "s11",
@@ -263,7 +347,7 @@
         "Later traditions and historical accounts describe further conflicts affecting the shrine in the fifteenth and seventeenth centuries. The precise chronology of every episode differs among sources, which is why this article distinguishes securely recorded episodes from later traditions.",
         "The larger pattern, however, is clear: Somnath repeatedly disappeared as a political structure and repeatedly returned as a living Hindu place of worship."
       ],
-      "image": "somnath-archival-ruins"
+      "image": "somnath-ruins-interior-archival"
     },
     {
       "id": "s12",
@@ -289,7 +373,8 @@
         "Government of India material on Somnath records her role in establishing a new temple at Somnath after another period of destruction.",
         "Her work is important because it demonstrates that the memory of Somnath had survived far beyond the medieval dynasties that had originally controlled Gujarat.",
         "The restoration of sacred sites by Hindu rulers and patrons created a bridge between the ancient pilgrimage tradition and the modern era."
-      ]
+      ],
+      "image": "somnath-entrance-gate"
     },
     {
       "id": "s14",
@@ -320,7 +405,7 @@
       "id": "s16",
       "title": "1947 — THE DECISION TO REBUILD",
       "type": "modern-history",
-      "image": "somnath-front",
+      "image": "somnath-ruins-1869-1895",
       "content": [
         "The next great turning point came with Indian Independence.",
         "On 12 November 1947, Sardar Vallabhbhai Patel visited the ruins of Somnath. The Government of Gujarat records that Patel supported the reconstruction of the temple and that the Somnath Trust was established to oversee the project.",
@@ -341,7 +426,7 @@
         "The Government of India describes the 1951 reopening as a major milestone in the restoration of Somnath, while the Ministry of Culture presents the temple today as a living symbol of spiritual continuity and cultural resilience."
       ],
       "lesson": "The rebuilding of Somnath transformed remembrance into renewal.",
-      "image": "somnath-front"
+      "image": "somnath-city-entrance-gate"
     },
     {
       "id": "s18",
@@ -512,6 +597,16 @@
     "somnath-coast-aerial",
     "somnath-arabian-sea",
     "somnath-archival-ruins",
-    "somnath-sunset-aerial"
+    "somnath-sunset-aerial",
+    "mahmud-ghazni-at-somnath",
+    "mahmud-ghazni-somnath-manuscript",
+    "somnath-city-entrance-gate",
+    "somnath-entrance-gate",
+    "somnath-interior-archival",
+    "somnath-ornate-door-archival",
+    "somnath-ruins-1869-1895",
+    "somnath-ruins-1869",
+    "somnath-ruins-interior-archival",
+    "temple-of-sun-prabhas-patan"
   ]
 }
