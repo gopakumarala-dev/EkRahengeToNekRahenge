@@ -6,9 +6,6 @@
     "enabled": true
   },
   "assets": {
-    "directory": ".",
-    "exclude": [
-      ".git/**"
-    ]
+    "directory": "."
   }
 }
