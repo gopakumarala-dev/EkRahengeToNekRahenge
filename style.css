@@ -17,39 +17,14 @@ html {
   scroll-padding-top: 82px;
 }
 
-:root {
-  --font-sans:
-    "Inter",
-    "Noto Sans Devanagari",
-    "Noto Sans",
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-
-  --font-devanagari:
-    "Noto Sans Devanagari",
-    "Noto Sans",
-    "Inter",
-    "Segoe UI",
-    sans-serif;
-}
-
 body {
   margin: 0;
   background: #05090a;
   color: #eeeeee;
-
-  font-family: var(--font-sans);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.55;
-
   overflow-x: hidden;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -62,93 +37,86 @@ a {
 }
 
 
-/* =====================================================
-   SITE HEADER
-===================================================== */
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 
 .site-header {
-  height: 70px;
-  min-height: 70px;
-  padding: 0 42px;
+  height: 78px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(2, 3, 3, 0.96);
+  border-bottom: 1px solid #171b1c;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
-  background: #030506;
-  border-bottom: 1px solid #171b1d;
-
-  box-sizing: border-box;
-
-  position: relative;
-  z-index: 100;
-
-  white-space: nowrap;
+  padding: 0 4%;
+  gap: 30px;
 }
 
 
-/* BRAND */
+/* =========================================================
+   HEADER BRAND / LOGO
+   ========================================================= */
 
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
 
-  flex: 0 0 auto;
-
+  color: #eeeeee;
   text-decoration: none;
-  color: inherit;
+
+  min-width: 260px;
 }
 
-
 .brand-logo {
+  width: 48px;
+  height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+  flex-shrink: 0;
+}
 
 .site-logo {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
 
   object-fit: contain;
+  display: block;
 }
-
 
 .brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
 }
 
-
-.brand-text b {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1.05;
-  font-weight: 700;
-
-  color: #f2f2f2;
+.brand b {
+  font-size: 19px;
+  line-height: 1.1;
+  display: block;
+  white-space: nowrap;
 }
 
-
-.brand-text small {
-  margin-top: 4px;
-
-  font-family: Arial, Helvetica, sans-serif;
+.brand small {
   font-size: 9px;
-  line-height: 1;
-
-  letter-spacing: 0.5px;
-
-  color: #d5d5d5;
+  letter-spacing: 1.3px;
+  display: block;
+  margin-top: 3px;
 }
 
 
-/* =====================================================
-   MAIN NAVIGATION
-===================================================== */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 .site-header nav {
   display: flex;
@@ -156,83 +124,45 @@ a {
   justify-content: center;
 
   gap: 25px;
-
-  flex: 1 1 auto;
-  min-width: 0;
-
-  margin: 0 30px;
-
-  white-space: nowrap;
+  flex: 1;
 }
 
-
-.site-header nav a {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 0;
-
-  border: none;
-  background: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 1;
-
-  font-weight: 700;
-  letter-spacing: 0.15px;
-
-  color: #e8e8e8;
-
+.site-header nav a,
+.search {
+  color: #eeeeee;
   text-decoration: none;
+
+  font-size: 10px;
+  letter-spacing: 0.5px;
 
   white-space: nowrap;
 
   transition:
     color 0.2s ease,
-    opacity 0.2s ease;
+    border-color 0.2s ease;
 }
-
 
 .site-header nav a:hover {
-  color: #ff8500;
+  color: #f47d0b;
 }
 
 
-/* =====================================================
+/* =========================================================
    SEARCH
-===================================================== */
+   ========================================================= */
 
-.site-header .search {
-  flex: 0 0 auto;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 34px;
-  padding: 0 16px;
-
-  border: 1px solid #8b5a00;
+.search {
+  border: 1px solid #76500d;
   border-radius: 5px;
 
-  background: transparent;
+  padding: 8px 13px;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-
-  color: #eeeeee;
-
-  text-decoration: none;
-
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-
-.site-header .search:hover {
-  color: #ff8500;
-  border-color: #ff8500;
+.search:hover {
+  color: #f47d0b;
+  border-color: #f47d0b;
 }
 
 
