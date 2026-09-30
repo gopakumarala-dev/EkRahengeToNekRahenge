@@ -62,21 +62,129 @@ a {
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* =====================================================
+   SITE HEADER
+===================================================== */
+
+.site-header {
+  height: 70px;
+  min-height: 70px;
+  padding: 0 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #030506;
+  border-bottom: 1px solid #171b1d;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 100;
+
+  white-space: nowrap;
+}
+
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex: 0 0 auto;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.site-logo {
+  width: 46px;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.brand-text b {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.05;
+  font-weight: 700;
+
+  color: #f2f2f2;
+}
+
+
+.brand-text small {
+  margin-top: 4px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  line-height: 1;
+
+  letter-spacing: 0.5px;
+
+  color: #d5d5d5;
+}
+
+
+/* =====================================================
+   MAIN NAVIGATION
+===================================================== */
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  flex: 1 1 auto;
+  min-width: 0;
+
+  margin: 0 30px;
+
+  white-space: nowrap;
+}
 
 
 .site-header nav a {
-  color: var(--text, #eeeeee);
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 
-  font-family: var(--font-sans);
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
-  font-weight: 600;
-
-  letter-spacing: 0.35px;
   line-height: 1;
+
+  font-weight: 700;
+  letter-spacing: 0.15px;
+
+  color: #e8e8e8;
+
+  text-decoration: none;
 
   white-space: nowrap;
 
@@ -86,117 +194,45 @@ a {
 }
 
 
-/* =========================================================
-   HEADER BRAND / LOGO
-   ========================================================= */
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: #eeeeee;
-  text-decoration: none;
-
-  min-width: 260px;
-}
-
-.brand-logo {
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-}
-
-.site-logo {
-  width: 48px;
-  height: 48px;
-
-  object-fit: contain;
-  display: block;
-}
-
-.brand-text {
-  display: block;
-}
-
-.brand b {
-  font-size: 19px;
-  line-height: 1.1;
-  display: block;
-  white-space: nowrap;
-}
-
-.brand small {
-  font-size: 9px;
-  letter-spacing: 1.3px;
-  display: block;
-  margin-top: 3px;
+.site-header nav a:hover {
+  color: #ff8500;
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* =====================================================
+   SEARCH
+===================================================== */
 
-.site-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.site-header .search {
+  flex: 0 0 auto;
 
-  gap: 25px;
-  flex: 1;
-}
-
-.site-header nav a,
-.search {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  height: 34px;
+  padding: 0 16px;
 
-  color: var(--text, #eeeeee);
+  border: 1px solid #8b5a00;
+  border-radius: 5px;
+
+  background: transparent;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #eeeeee;
+
   text-decoration: none;
 
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 600;
-
-  letter-spacing: 0.5px;
-  line-height: 1;
-
-  border: 1px solid #76500d;
-  border-radius: 5px;
-
-  padding: 9px 13px;
-}
-
-.site-header nav a:hover {
-  color: #f47d0b;
+  white-space: nowrap;
 }
 
 
-/* =========================================================
-   SEARCH
-   ========================================================= */
-
-.search {
-  border: 1px solid #76500d;
-  border-radius: 5px;
-
-  padding: 8px 13px;
-
-  flex-shrink: 0;
-}
-
-.search:hover {
-  color: #f47d0b;
-  border-color: #f47d0b;
+.site-header .search:hover {
+  color: #ff8500;
+  border-color: #ff8500;
 }
 
 
