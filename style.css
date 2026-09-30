@@ -1775,306 +1775,337 @@ footer {
   text-decoration: none;
 }
 /* =====================================================
-   BHARAT — GEOGRAPHICAL & CULTURAL REACH
+   BHARAT — CULTURAL & GEOGRAPHICAL REACH
 ===================================================== */
 
-.map-section {
-  padding: 70px 6vw 80px;
-  background: #061014;
-  text-align: center;
+.reach-section {
+  width: 100%;
+  padding: 70px 5vw 75px;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(180, 95, 20, 0.12),
+      transparent 38%
+    ),
+    #061014;
   overflow: hidden;
 }
 
-.map-heading {
+
+/* HEADER */
+
+.reach-header {
   max-width: 1050px;
-  margin: 0 auto 55px;
+  margin: 0 auto 48px;
+  text-align: center;
 }
 
-.map-heading h2 {
-  margin: 0 0 14px;
-  font-size: clamp(28px, 3vw, 42px);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+.reach-kicker {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #e87516;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-.map-heading p {
-  max-width: 900px;
-  margin: 0 auto;
-  color: #d5d9da;
+.reach-header h2 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #f4f1e9;
+}
+
+.reach-header p {
+  max-width: 850px;
+  margin: 20px auto 0;
+  color: #b9c1c4;
   font-size: 15px;
   line-height: 1.7;
 }
 
 
-/* -----------------------------------------------------
-   HORIZONTAL GEOGRAPHICAL FLOW
------------------------------------------------------ */
+/* =====================================================
+   GEOGRAPHICAL BELT
+===================================================== */
 
 .reach-map {
-  width: min(1500px, 100%);
+  max-width: 1450px;
   margin: 0 auto;
+
   display: flex;
   align-items: stretch;
-  justify-content: center;
-  gap: 10px;
+  gap: 8px;
+
+  overflow-x: auto;
+  padding: 10px 4px 20px;
+
+  scrollbar-width: thin;
+}
+
+
+/* EACH GEOGRAPHICAL ZONE */
+
+.reach-zone {
+  flex: 0 0 190px;
+
+  border: 1px solid rgba(150, 170, 175, 0.22);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 27, 30, 0.96),
+      rgba(7, 13, 16, 0.96)
+    );
+
+  padding: 16px 12px 14px;
+
   position: relative;
 }
 
 
-/* connecting line */
+/* ORANGE TOP LINE */
 
-.reach-map::before {
+.reach-zone::before {
   content: "";
   position: absolute;
-  left: 2%;
-  right: 2%;
-  top: 50%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(235, 125, 10, 0.55),
-    rgba(235, 125, 10, 0.9),
-    rgba(235, 125, 10, 0.55),
-    transparent
-  );
-  z-index: 0;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 2px;
+
+  background: #d96b0b;
 }
 
 
-/* -----------------------------------------------------
-   INDIVIDUAL REGION
------------------------------------------------------ */
+/* ZONE TITLE */
+
+.zone-title {
+  text-align: center;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  color: #e87516;
+
+  margin-bottom: 16px;
+}
+
+
+/* ITEMS */
+
+.reach-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+/* CARD */
 
 .reach-card {
-  position: relative;
-  z-index: 1;
+  min-height: 105px;
 
-  flex: 1 1 0;
+  padding: 14px 10px;
 
-  min-height: 170px;
+  border: 1px solid rgba(140, 160, 165, 0.16);
 
-  padding: 25px 16px;
+  background: rgba(255,255,255,0.025);
+
+  text-align: center;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.reach-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(232,117,22,0.7);
+
+  background: rgba(232,117,22,0.06);
+}
+
+
+.reach-card h3 {
+  margin: 0 0 7px;
+
+  font-size: 17px;
+  letter-spacing: .5px;
+
+  color: #f3f1eb;
+}
+
+
+.reach-card strong {
+  display: block;
+
+  color: #e87516;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  margin-bottom: 6px;
+}
+
+
+.reach-card small {
+  display: block;
+
+  color: #aeb8bb;
+
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   CENTRE — BHĀRATAVARṢA
+===================================================== */
+
+.reach-centre {
+  flex-basis: 250px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.centre-card {
+  flex: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(17, 24, 27, 0.98),
-      rgba(5, 11, 14, 0.98)
-    );
+  text-align: center;
 
-  border: 1px solid #293338;
+  padding: 25px 18px;
 
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
-}
-
-.reach-card:hover {
-  transform: translateY(-6px);
-  border-color: #d9780b;
+  border: 1px solid rgba(232,117,22,0.65);
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(35, 27, 18, 0.98),
-      rgba(8, 13, 15, 0.98)
+    radial-gradient(
+      circle,
+      rgba(232,117,22,0.17),
+      rgba(232,117,22,0.02) 70%
     );
 }
 
 
-/* direction */
+.centre-card span {
+  font-size: 9px;
 
-.reach-card .direction {
-  display: block;
-  margin-bottom: 14px;
+  letter-spacing: 2px;
 
-  color: #e8790b;
+  color: #e87516;
 
-  font-size: 10px;
   font-weight: 800;
 
-  letter-spacing: 0.18em;
+  margin-bottom: 13px;
 }
 
 
-/* historical name */
+.centre-card h3 {
+  margin: 0;
 
-.reach-card h3 {
-  margin: 0 0 8px;
+  font-size: 26px;
 
-  color: #f3f4f4;
+  color: #ffffff;
 
-  font-size: 17px;
-  font-weight: 800;
-
-  letter-spacing: 0.03em;
+  letter-spacing: 1px;
 }
 
 
-/* geographic description */
+.centre-card p {
+  max-width: 190px;
 
-.reach-card strong {
-  display: block;
+  margin: 12px 0;
 
-  color: #e8790b;
+  color: #c1c8ca;
 
   font-size: 12px;
-  font-weight: 700;
 
-  line-height: 1.4;
-}
-
-
-/* modern reference */
-
-.reach-card small {
-  display: block;
-
-  margin-top: 8px;
-
-  color: #aeb7ba;
-
-  font-size: 11px;
   line-height: 1.5;
 }
 
 
-/* -----------------------------------------------------
-   BHARAT — CENTRAL CORE
------------------------------------------------------ */
+.centre-card small {
+  color: #e87516;
 
-.reach-card.reach-core {
-  flex: 1.35 1 0;
-
-  min-height: 205px;
-
-  border-color: #c66a0a;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(196, 102, 12, 0.32),
-      rgba(15, 20, 22, 0.98) 68%
-    );
-
-  box-shadow:
-    0 0 45px rgba(193, 101, 10, 0.16);
-}
-
-.reach-core .direction {
-  color: #f59a32;
-}
-
-.reach-core h3 {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-.reach-core strong {
-  font-size: 13px;
-}
-
-
-/* -----------------------------------------------------
-   SOUTHEAST ASIA
------------------------------------------------------ */
-
-.reach-card.reach-east {
-  flex: 1.25 1 0;
-}
-
-.reach-east h3 {
-  color: #f3f4f4;
-}
-
-
-/* -----------------------------------------------------
-   NOTE
------------------------------------------------------ */
-
-.map-note {
-  max-width: 1000px;
-
-  margin: 35px auto 30px;
-
-  color: #899396;
-
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.map-note strong {
-  color: #d9780b;
-}
-
-
-/* -----------------------------------------------------
-   BUTTON
------------------------------------------------------ */
-
-.map-section .outline-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 10px;
-
-  min-width: 160px;
-  padding: 12px 22px;
-
-  border: 1px solid #d9780b;
-
-  color: #f2f2f2;
-
-  text-decoration: none;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-.map-section .outline-btn:hover {
-  background: #d9780b;
-  color: #050809;
+  font-size: 10px;
 }
 
 
 /* =====================================================
-   TABLET
+   SOUTHEAST ASIA
 ===================================================== */
 
-@media (max-width: 1200px) {
+.reach-southeast {
+  flex-basis: 220px;
+}
 
-  .reach-map {
-    flex-wrap: wrap;
-  }
 
-  .reach-map::before {
-    display: none;
-  }
+/* =====================================================
+   NOTE
+===================================================== */
 
-  .reach-card {
-    flex: 1 1 calc(25% - 10px);
-    min-width: 190px;
-  }
+.reach-note {
+  max-width: 900px;
 
-  .reach-card.reach-core {
-    flex: 1 1 calc(50% - 10px);
-  }
+  margin: 25px auto 30px;
 
+  text-align: center;
+
+  color: #8f9b9f;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+.reach-note strong {
+  color: #e87516;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.reach-section .outline-btn {
+  display: block;
+
+  width: fit-content;
+
+  margin: 25px auto 0;
+
+  padding: 12px 22px;
+
+  border: 1px solid #d96b0b;
+
+  color: #f1eee7;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  transition: .2s ease;
+}
+
+
+.reach-section .outline-btn:hover {
+  background: #d96b0b;
+  color: #071014;
 }
 
 
@@ -2084,50 +2115,28 @@ footer {
 
 @media (max-width: 700px) {
 
-  .map-section {
-    padding: 50px 20px 60px;
+  .reach-section {
+    padding: 50px 18px 60px;
   }
 
-  .map-heading {
-    margin-bottom: 35px;
+  .reach-header h2 {
+    font-size: 31px;
   }
 
-  .map-heading h2 {
-    font-size: 27px;
-  }
-
-  .map-heading p {
-    font-size: 14px;
+  .reach-header p {
+    font-size: 13px;
   }
 
   .reach-map {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    justify-content: flex-start;
   }
 
-  .reach-card,
-  .reach-card.reach-core,
-  .reach-card.reach-east {
-    min-height: 150px;
-    flex: none;
+  .reach-zone {
+    flex-basis: 175px;
   }
 
-  .reach-card.reach-core {
-    grid-column: 1 / -1;
-    min-height: 190px;
-  }
-
-  .reach-card h3 {
-    font-size: 15px;
-  }
-
-  .reach-card strong {
-    font-size: 11px;
-  }
-
-  .reach-card small {
-    font-size: 10px;
+  .reach-centre {
+    flex-basis: 220px;
   }
 
 }
