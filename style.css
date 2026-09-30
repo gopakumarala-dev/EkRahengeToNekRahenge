@@ -1774,3 +1774,360 @@ footer {
   color: inherit;
   text-decoration: none;
 }
+/* =====================================================
+   BHARAT — GEOGRAPHICAL & CULTURAL REACH
+===================================================== */
+
+.map-section {
+  padding: 70px 6vw 80px;
+  background: #061014;
+  text-align: center;
+  overflow: hidden;
+}
+
+.map-heading {
+  max-width: 1050px;
+  margin: 0 auto 55px;
+}
+
+.map-heading h2 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.map-heading p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #d5d9da;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* -----------------------------------------------------
+   HORIZONTAL GEOGRAPHICAL FLOW
+----------------------------------------------------- */
+
+.reach-map {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+
+/* connecting line */
+
+.reach-map::before {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 125, 10, 0.55),
+    rgba(235, 125, 10, 0.9),
+    rgba(235, 125, 10, 0.55),
+    transparent
+  );
+  z-index: 0;
+}
+
+
+/* -----------------------------------------------------
+   INDIVIDUAL REGION
+----------------------------------------------------- */
+
+.reach-card {
+  position: relative;
+  z-index: 1;
+
+  flex: 1 1 0;
+
+  min-height: 170px;
+
+  padding: 25px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(17, 24, 27, 0.98),
+      rgba(5, 11, 14, 0.98)
+    );
+
+  border: 1px solid #293338;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.reach-card:hover {
+  transform: translateY(-6px);
+  border-color: #d9780b;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(35, 27, 18, 0.98),
+      rgba(8, 13, 15, 0.98)
+    );
+}
+
+
+/* direction */
+
+.reach-card .direction {
+  display: block;
+  margin-bottom: 14px;
+
+  color: #e8790b;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* historical name */
+
+.reach-card h3 {
+  margin: 0 0 8px;
+
+  color: #f3f4f4;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* geographic description */
+
+.reach-card strong {
+  display: block;
+
+  color: #e8790b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* modern reference */
+
+.reach-card small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #aeb7ba;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------------------------------
+   BHARAT — CENTRAL CORE
+----------------------------------------------------- */
+
+.reach-card.reach-core {
+  flex: 1.35 1 0;
+
+  min-height: 205px;
+
+  border-color: #c66a0a;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(196, 102, 12, 0.32),
+      rgba(15, 20, 22, 0.98) 68%
+    );
+
+  box-shadow:
+    0 0 45px rgba(193, 101, 10, 0.16);
+}
+
+.reach-core .direction {
+  color: #f59a32;
+}
+
+.reach-core h3 {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.reach-core strong {
+  font-size: 13px;
+}
+
+
+/* -----------------------------------------------------
+   SOUTHEAST ASIA
+----------------------------------------------------- */
+
+.reach-card.reach-east {
+  flex: 1.25 1 0;
+}
+
+.reach-east h3 {
+  color: #f3f4f4;
+}
+
+
+/* -----------------------------------------------------
+   NOTE
+----------------------------------------------------- */
+
+.map-note {
+  max-width: 1000px;
+
+  margin: 35px auto 30px;
+
+  color: #899396;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.map-note strong {
+  color: #d9780b;
+}
+
+
+/* -----------------------------------------------------
+   BUTTON
+----------------------------------------------------- */
+
+.map-section .outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+
+  min-width: 160px;
+  padding: 12px 22px;
+
+  border: 1px solid #d9780b;
+
+  color: #f2f2f2;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.map-section .outline-btn:hover {
+  background: #d9780b;
+  color: #050809;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .reach-map {
+    flex-wrap: wrap;
+  }
+
+  .reach-map::before {
+    display: none;
+  }
+
+  .reach-card {
+    flex: 1 1 calc(25% - 10px);
+    min-width: 190px;
+  }
+
+  .reach-card.reach-core {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .map-section {
+    padding: 50px 20px 60px;
+  }
+
+  .map-heading {
+    margin-bottom: 35px;
+  }
+
+  .map-heading h2 {
+    font-size: 27px;
+  }
+
+  .map-heading p {
+    font-size: 14px;
+  }
+
+  .reach-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .reach-card,
+  .reach-card.reach-core,
+  .reach-card.reach-east {
+    min-height: 150px;
+    flex: none;
+  }
+
+  .reach-card.reach-core {
+    grid-column: 1 / -1;
+    min-height: 190px;
+  }
+
+  .reach-card h3 {
+    font-size: 15px;
+  }
+
+  .reach-card strong {
+    font-size: 11px;
+  }
+
+  .reach-card small {
+    font-size: 10px;
+  }
+
+}
