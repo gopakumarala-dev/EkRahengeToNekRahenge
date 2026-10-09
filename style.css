@@ -412,141 +412,80 @@ a {
 
 
 /* =========================================================
-   MAP SECTION
+   VERSION 2 — CULTURAL & GEOGRAPHICAL REACH IMAGE
    ========================================================= */
 
 .map-section {
-  padding: 18px 4% 28px;
-
-  background:
-    linear-gradient(
-      #061014,
-      #071214
-    );
-
-  text-align: center;
-
-  border-top: 1px solid #171d1e;
-}
-
-
-/* =========================================================
-   TIMELINE STRIP
-   ========================================================= */
-
-.timeline-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  max-width: 900px;
-
-  margin: 0 auto 10px;
-
-  color: #dddddd;
-
-  font-size: 11px;
-
-  border-bottom: 2px solid #8a5314;
-
-  padding-bottom: 8px;
-
-  gap: 10px;
-}
-
-.timeline-strip span {
-  color: #ff8610;
-  font-weight: bold;
-}
-
-.timeline-strip i {
-  font-style: normal;
-}
-
-
-/* =========================================================
-   MAP ART
-   ========================================================= */
-
-.map-art {
-  height: 190px;
-
-  max-width: 1050px;
-
-  margin: 0 auto;
-
   position: relative;
-
+  padding: 58px clamp(18px, 4vw, 64px) 48px;
   background:
-    radial-gradient(
-      ellipse,
-      #55381e 0,
-      #191713 32%,
-      #071014 70%
-    );
-
-  clip-path:
-    polygon(
-      0 20%,
-      100% 0,
-      96% 100%,
-      4% 95%
-    );
+    radial-gradient(ellipse at 50% 35%, rgba(109, 65, 20, 0.16), transparent 58%),
+    linear-gradient(180deg, #071012 0%, #05090a 100%);
+  text-align: center;
+  border-top: 1px solid #202729;
+  overflow: hidden;
 }
 
-.route {
-  position: absolute;
-
-  color: #dddddd;
-
-  font-weight: bold;
-  font-size: 12px;
-
-  text-shadow: 0 1px 4px #000000;
+.reach-heading {
+  max-width: 1050px;
+  margin: 0 auto 28px;
 }
 
-.route small {
-  color: #e78a27;
+.reach-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #f58a13;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
-.r1 {
-  left: 7%;
-  top: 35%;
+.reach-heading h2 {
+  margin: 0;
+  color: #f2e8d1;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(23px, 2.4vw, 36px);
+  line-height: 1.18;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
-.r2 {
-  left: 17%;
-  top: 55%;
-}
-
-.r3 {
-  left: 32%;
-  top: 38%;
-}
-
-.r4 {
-  left: 44%;
-  top: 28%;
-}
-
-.bharat {
-  position: absolute;
-
-  left: 52%;
-  top: 55%;
-
-  font-size: 19px;
-}
-
-.sea {
-  position: absolute;
-
-  right: 15%;
-  bottom: 35%;
-
+.reach-heading p {
+  max-width: 760px;
+  margin: 13px auto 0;
+  color: #bfc4c3;
   font-size: 13px;
+  line-height: 1.7;
 }
 
+.bharat-reach-figure {
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bharat-reach-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border: 1px solid rgba(218, 142, 45, 0.24);
+  background: #050707;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+}
+
+.bharat-reach-figure figcaption {
+  max-width: 1000px;
+  margin: 13px auto 0;
+  color: #9fa8a8;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.reach-section > .outline-btn {
+  margin-top: 23px;
+}
 
 /* =========================================================
    DARK SECTIONS
@@ -2139,4 +2078,41 @@ footer {
     flex-basis: 220px;
   }
 
+}
+
+
+/* VERSION 2 — reach section responsive refinements */
+@media (max-width: 600px) {
+  .map-section.reach-section {
+    padding: 36px 12px 30px;
+  }
+
+  .reach-heading {
+    margin-bottom: 19px;
+  }
+
+  .reach-kicker {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .reach-heading h2 {
+    font-size: clamp(21px, 6vw, 29px);
+    line-height: 1.2;
+  }
+
+  .reach-heading p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .bharat-reach-image {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .bharat-reach-figure figcaption {
+    padding: 0 5px;
+    font-size: 10px;
+  }
 }
